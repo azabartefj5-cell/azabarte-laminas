@@ -17,12 +17,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
 const opt = (name, def) => { const i = args.indexOf('--' + name); return i >= 0 ? args[i + 1] : def; };
 const URL_WEB = opt('url', 'https://azabarte.com/');
 const HTML = opt('html', null);
-const SALIDA = opt('salida', path.join(path.dirname(new URL(import.meta.url).pathname), 'textos.json'));
+const SALIDA = opt('salida', path.join(path.dirname(fileURLToPath(import.meta.url)), 'textos.json'));
 
 async function leeHtml() {
   if (HTML) return { html: fs.readFileSync(HTML, 'utf8'), origen: URL_WEB };
@@ -39,6 +40,11 @@ function scriptPorId(html, id) {
 
 function datosApp(html) {
   const code = scriptPorId(html, 'app-data');
+  // Los datos son JSON tras «window.APP_DATA =» (le sigue window.APP_ASSETS). Se leen como JSON:
+  // un «;» seguido de salto de línea no puede estar dentro de una cadena JSON. Si falla, se evalúan.
+  const cuerpo = code.replace(/^\s*window\.APP_DATA\s*=\s*/, '');
+  const fin = cuerpo.search(/;+[ \t]*\r?\n/);
+  try { return JSON.parse((fin >= 0 ? cuerpo.slice(0, fin) : cuerpo).replace(/[\s;]+$/, '')); } catch (e) { /* sigue abajo */ }
   const ctx = { window: {} };
   vm.runInNewContext(code, ctx, { timeout: 20000 });
   const D = ctx.window.APP_DATA || ctx.APP_DATA;
@@ -51,7 +57,7 @@ function funcionesTexto(html) {
   const m = /\/\*VZ-TEXTO-INICIO\*\/([\s\S]*?)\/\*VZ-TEXTO-FIN\*\//.exec(code);
   if (!m) throw new Error('El script de la página no tiene el bloque VZ-TEXTO');
   const ctx = {};
-  vm.runInNewContext(m[1] + '\n;this.F={vzLimpia,vzBloquesCapitulo,vzBloquesRelato,vzTextoCanonico};', ctx);
+  vm.runInNewContext(m[1] + '\n;this.F={vzLimpia,vzBloquesCapitulo,vzBloquesRelato,vzTextoCanonico};', ctx, { timeout: 5000 });
   return ctx.F;
 }
 
@@ -91,6 +97,10 @@ const { html, origen } = await leeHtml();
 const D = datosApp(html);
 const F = funcionesTexto(html);
 const lista = pistas(D, F);
+// Freno: si la página no es la edición narrativa o llega incompleta, no se escribe nada. Así la
+// locución no se pone a grabar otra edición ni la poda borra las grabaciones buenas.
+if (D._edicion !== 'narrativa') throw new Error(`La página no es la edición narrativa (edición «${D._edicion}»)`);
+if (!lista.some((t) => t.tipo === 'cap')) throw new Error('La página no trae capítulos narrativos');
 const doc = {
   origen,
   edicion: D._edicion || null,

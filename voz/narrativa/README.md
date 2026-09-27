@@ -49,10 +49,13 @@ capítulo vuelve a sonar con la voz del navegador hasta que la ejecución diaria
 
 - Voz prediseñada **Charon** (grave, informativa). Es estable en el tiempo: las voces diseñadas a medida caducan.
   Otras candidatas: Orus, Iapetus, Rasalgethi, Sadaltager; femeninas, Gacrux y Sulafat. Se cambia en el campo
-  «voz» al lanzar la Action o con la variable de repositorio `VOZ_NOMBRE`. Cambiarla relocuta todo.
+  «voz» al lanzar la Action a mano o con la variable de repositorio `VOZ_NOMBRE`. La voz elegida queda anotada
+  en `audio.json` y las ejecuciones siguientes la conservan. Cambiarla relocuta todo.
 - La dirección (acento castellano peninsular, tono de narrador de documental, ritmo pausado) está en
   `ESTILO_BASE` dentro de `locutar.py`. Cambiarla también relocuta todo.
-- Cada bloque se comprueba por su duración: si la voz se come texto o añade silencios, se repite.
+- Cada bloque se comprueba por su duración, contando los años como palabras: si la voz se come texto o añade
+  silencios, se repite, y nunca se publica una toma muda. Un bloque que no sale deja su pista pendiente y se
+  sigue con las demás.
 - Es voz sintética: el reproductor lo indica («voz sintética (IA)») y cada MP3 lo lleva en sus metadatos.
 - Las voces famosas de ElevenReader, como la de Burt Reynolds, son solo para uso personal dentro de su app y no se
   pueden publicar. Por eso se usa una voz de Google con licencia para publicar.
@@ -69,7 +72,12 @@ python voz/narrativa/locutar.py --motor prueba --salida /tmp/prueba # sin clave:
 ```
 
 Opciones útiles: `--voz`, `--hilos` (peticiones a la vez, 4 por defecto), `--rpm` (tope de peticiones por
-minuto), `--forzar`, `--max-pistas`, `--podar`.
+minuto), `--forzar`, `--max-pistas`, `--podar` (quita las pistas que ya no están en la web; se frena si serían
+muchas, salvo con `--forzar-poda`).
+
+Salvaguardas: el extractor y el generador se niegan a trabajar si la página no es la edición narrativa o llega
+sin capítulos. Así un despliegue equivocado de la web no borra las grabaciones. Si la subida falla, la Action
+deja el audio generado como artefacto descargable durante 30 días.
 
 ## Parche de la web
 
