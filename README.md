@@ -7,3 +7,6 @@ apellido Azabarte. La web las carga desde jsDelivr:
     https://cdn.jsdelivr.net/gh/<usuario>/azabarte-laminas@<commit>/img/monumentos/<id>.mp4
 
 Este repositorio solo aloja los vídeos; el sitio vive en https://azabarte-kappa.vercel.app.
+
+En `parches/` se guardan los cambios de código de la web que se aplican sobre la carpeta
+local desde la que se despliega (ver `parches/README.md`).
