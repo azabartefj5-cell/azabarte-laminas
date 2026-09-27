@@ -1,0 +1,129 @@
+# Locuta la edición narrativa de azabarte.com con la voz de Google (Gemini TTS) y publica el audio.
+#
+# Necesita UNO de estos secretos del repositorio (Settings → Secrets and variables → Actions):
+#   GEMINI_API_KEY      clave de la API de Gemini (Google AI Studio). Con la capa gratuita va más despacio:
+#                       lo que no quepa en la cuota del día se termina en las ejecuciones siguientes.
+#   OPENROUTER_API_KEY  clave de OpenRouter; usa el mismo modelo (google/gemini-3.8-flash-tts) con su crédito.
+# Sin secreto, la ejecución termina enseguida con un aviso y no cambia nada.
+#
+# Cada ejecución lee la web publicada, locuta solo las pistas nuevas o cuyo texto ha cambiado, guarda los MP3
+# en voz/narrativa/mp3, fija en audio.json la dirección del CDN (jsDelivr, clavada al commit) y purga la
+# caché del manifiesto. La web lo consulta al cargar, así que no hace falta volver a desplegarla.
+name: Locutar la edición narrativa
+
+on:
+  workflow_dispatch:
+    inputs:
+      solo:
+        description: 'Solo estas pistas, separadas por comas (vacío = todo lo pendiente). Ej.: cap:sabemos,pj:P001'
+        required: false
+        default: ''
+      max_pistas:
+        description: 'Máximo de pistas en esta ejecución (0 = sin límite)'
+        required: false
+        default: '0'
+      voz:
+        description: 'Voz de Google (Charon, Orus, Iapetus, Rasalgethi, Sadaltager; femeninas: Gacrux, Sulafat). Cambiarla regenera todo.'
+        required: false
+        default: ''
+      forzar:
+        description: 'Regenerar aunque el texto no haya cambiado'
+        type: boolean
+        default: false
+  schedule:
+    # A diario: continúa lo que quedara por cuota y relocuta los textos que se hayan editado en la web.
+    - cron: '23 3 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voz-narrativa
+  cancel-in-progress: false
+
+jobs:
+  locutar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      VOZ_NOMBRE: ${{ inputs.voz || vars.VOZ_NOMBRE || 'Charon' }}
+      VOZ_RPM: ${{ vars.VOZ_RPM || '0' }}
+      VOZ_HILOS: ${{ vars.VOZ_HILOS || '4' }}
+      WEB_URL: ${{ vars.WEB_URL || 'https://azabarte.com/' }}
+    steps:
+      - name: Elegir motor
+        id: motor
+        run: |
+          if [ -n "$GEMINI_API_KEY" ]; then echo "motor=gemini" >> "$GITHUB_OUTPUT"
+          elif [ -n "$OPENROUTER_API_KEY" ]; then echo "motor=openrouter" >> "$GITHUB_OUTPUT"
+          else
+            echo "motor=" >> "$GITHUB_OUTPUT"
+            echo "::warning title=Falta la clave de voz::Añada el secreto GEMINI_API_KEY u OPENROUTER_API_KEY en Settings → Secrets and variables → Actions."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.motor.outputs.motor != ''
+
+      - uses: actions/setup-node@v4
+        if: steps.motor.outputs.motor != ''
+        with:
+          node-version: '22'
+
+      - uses: actions/setup-python@v5
+        if: steps.motor.outputs.motor != ''
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        if: steps.motor.outputs.motor != ''
+        run: pip install -r voz/narrativa/requirements.txt
+
+      # Bloques sueltos de una pista a medias (si la cuota se acabó en mitad de un capítulo).
+      - name: Recuperar los bloques ya locutados
+        if: steps.motor.outputs.motor != ''
+        uses: actions/cache/restore@v4
+        with:
+          path: voz/narrativa/.cache
+          key: voz-bloques-${{ github.run_id }}
+          restore-keys: voz-bloques-
+
+      - name: Extraer los textos de la web publicada
+        if: steps.motor.outputs.motor != ''
+        run: node voz/narrativa/extraer_textos.mjs --url "$WEB_URL"
+
+      - name: Locutar lo pendiente
+        if: steps.motor.outputs.motor != ''
+        run: >-
+          python voz/narrativa/locutar.py
+          --motor "${{ steps.motor.outputs.motor }}"
+          --solo "${{ inputs.solo }}"
+          --max-pistas "${{ inputs.max_pistas || '0' }}"
+          --limite-minutos 300
+          --podar
+          ${{ inputs.forzar && '--forzar' || '' }}
+
+      - name: Publicar el audio
+        if: always() && steps.motor.outputs.motor != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A voz/narrativa
+          if git diff --cached --quiet; then echo "Nada nuevo que publicar."; exit 0; fi
+          git commit -m "Voz narrativa: locuciones con Gemini TTS ($(date -u +%F))"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push
+          SHA=$(git rev-parse HEAD)
+          python voz/narrativa/locutar.py --fijar-base "https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${SHA}/voz/narrativa"
+          git add voz/narrativa/audio.json
+          git commit -m "Voz narrativa: el manifiesto apunta al CDN en ${SHA:0:7}"
+          git push
+          curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${GITHUB_REF_NAME}/voz/narrativa/audio.json" || echo "No se ha podido purgar la caché de jsDelivr; se renovará sola."
+
+      - name: Guardar los bloques de la pista a medias
+        if: always() && steps.motor.outputs.motor != ''
+        uses: actions/cache/save@v4
+        with:
+          path: voz/narrativa/.cache
+          key: voz-bloques-${{ github.run_id }}

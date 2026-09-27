@@ -1,0 +1,84 @@
+--- a/public/app.js	2026-09-27 22:42:16.757088142 +0000
++++ b/public/app.js	2026-09-27 22:42:16.759392680 +0000
+@@ -6181,6 +6181,21 @@
+ 
+ var VZ=(function(){
+   var A=D.audio||{},PISTAS=A.pistas||{},BASE=String(A.base||'').replace(/\/+$/,'');
++  /* Manifiesto vivo (27-09-2026). Las locuciones con la voz de Google (Gemini TTS) se generan y publican en el
++     repositorio azabarte-laminas (voz/narrativa/audio.json, mismo esquema que D.audio) y se sirven por jsDelivr.
++     Se consulta al cargar la página: una pista nueva o regenerada suena sin volver a desplegar la web.
++     Para cada clave hay hasta dos candidatas (la embebida en D.audio y la del manifiesto vivo); al abrir se usa
++     la que tenga la huella del texto actual. D.config.audioManifiesto permite otra URL, o '' para no consultarlo. */
++  var VIVO_URL=(typeof CFG.audioManifiesto==='string')?CFG.audioManifiesto:'https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@main/voz/narrativa/audio.json';
++  var VIVAS={};
++  function conBase(p,b){if(!p||!p.src)return null;var q={};for(var k in p)q[k]=p[k];q.base=String(p.base||b||'').replace(/\/+$/,'');return q.base?q:null}
++  function candidatas(clave){return [conBase(PISTAS[clave],BASE),VIVAS[clave]||null].filter(Boolean)}
++  var vivoListo=(VIVO_URL&&window.fetch)?fetch(VIVO_URL,{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(m){
++      if(!m||!m.pistas)return;var b=String(m.base||'').replace(/\/+$/,'');
++      Object.keys(m.pistas).forEach(function(k){var q=conBase(m.pistas[k],b);if(q)VIVAS[k]=q});
++      try{var p=pistaDeRuta(route());if(p&&(synth||candidatas(p.clave).length))ponBoton(p);pintaBoton()}catch(e){}
++    }).catch(function(){}):Promise.resolve();
++  function esperaVivo(ms){return Promise.race([vivoListo,new Promise(function(res){setTimeout(res,ms)})])}
+   var synth=('speechSynthesis' in window&&'SpeechSynthesisUtterance' in window)?window.speechSynthesis:null;
+   var VELS=[0.8,0.9,1,1.1,1.25,1.5];
+   var CPS=15.5; /* caracteres por segundo de una locución en castellano a 1× (estimación para el «≈ N min») */
+@@ -6263,7 +6278,7 @@
+ 
+   /* ---------- motor (a): pista pregrabada ---------- */
+   function motorAudio(pista,alFallar){
+-    var au=new Audio();au.preload='auto';au.src=BASE+'/'+pista.src;
++    var au=new Audio();au.preload='auto';au.src=pista.base+'/'+pista.src;
+     var marcas=pista.marcas||[],dur=+pista.dur||0,vivo=true;
+     au.playbackRate=st.vel;
+     au.addEventListener('loadedmetadata',function(){if(isFinite(au.duration)&&au.duration>0)dur=au.duration;pinta()});
+@@ -6275,7 +6290,7 @@
+     au.addEventListener('ended',function(){fin()});
+     au.addEventListener('error',function(){if(vivo){vivo=false;alFallar()}});
+     return {tipo:'audio',_au:au,
+-      play:function(){var p=au.play();if(p&&p.catch)p.catch(function(){})},
++      play:function(){var p=au.play();if(p&&p.catch)p.catch(function(e){if(vivo&&e&&e.name==='NotAllowedError'){st.tocando=false;nota('Pulse ▶ para empezar a escuchar la grabación.');pinta()}})},
+       pause:function(){au.pause()},
+       ir:function(i){i=Math.max(0,Math.min(marcas.length-1,i));au.currentTime=marcas[i]||0;st.idx=i;marca(i,true);pinta()},
+       frac:function(f){if(dur){au.currentTime=f*dur}},
+@@ -6383,7 +6398,7 @@
+     var n=st.bloques.length,i=Math.min(st.idx+1,n);
+     var txt;
+     if(st.preparando)txt='Preparando la lectura…';
+-    else if(st.motor&&st.motor.tipo==='audio'){var tm=st.motor.tiempo();txt=(tm&&tm.dur?mmss(tm.t)+' / '+mmss(tm.dur):'')+' · '+i+' de '+n}
++    else if(st.motor&&st.motor.tipo==='audio'){var tm=st.motor.tiempo();txt=(tm&&tm.dur?mmss(tm.t)+' / '+mmss(tm.dur):'')+' · '+i+' de '+n+' · voz sintética (IA)'}
+     else txt='Párrafo '+i+' de '+n+' · ≈ '+minutos(st.total-(st.cum[st.idx]||0),st.vel)+(st.motor&&st.motor.tipo==='voz'?' · voz del navegador':'');
+     estado(txt);r.setAttribute('aria-valuetext','Párrafo '+i+' de '+n);
+     pintaBoton();
+@@ -6422,7 +6437,7 @@
+     st.cum=[];st.total=0;p.bloques.forEach(function(b){st.cum.push(st.total);st.total+=b.x.length+1});
+     document.body.classList.add('vz-abierto');ui.hidden=false;nota('');qs('#vz-voces').hidden=true;
+     pinta();
+-    var pista=PISTAS[p.clave];
++    var cands=candidatas(p.clave);
+     var listo=function(motor){
+       if(!st.abierto||st.clave!==p.clave)return;
+       st.motor=motor;st.preparando=false;
+@@ -6432,9 +6447,11 @@
+       if(autoplay)motor.play();
+     };
+     var conVoz=function(){if(synth){listo(motorVoz())}else{st.preparando=false;st.motor=null;nota('Este navegador no permite la lectura en voz alta y no hay grabación disponible para este texto.');pinta()}};
+-    if(pista&&pista.src&&BASE){
+-      huella(vzTextoCanonico(p.bloques)).then(function(h){
+-        if(h&&pista.huella&&h===pista.huella){listo(motorAudio(pista,function(){
++    if(cands.length||VIVO_URL){
++      /* se espera al manifiesto vivo solo si aún no ha llegado (un momento como mucho) */
++      Promise.all([huella(vzTextoCanonico(p.bloques)),esperaVivo(cands.length?1200:2500)]).then(function(res){
++        var h=res[0];var pista=h?candidatas(p.clave).filter(function(c){return c.huella===h})[0]:null;
++        if(pista){listo(motorAudio(pista,function(){
+           /* la grabación no carga: seguimos con la voz del navegador desde el mismo párrafo */
+           var i=st.idx;if(st.motor)st.motor.destruir();st.motor=null;
+           if(synth){var m=motorVoz();st.motor=m;m.ir(i);nota('No se ha podido cargar la grabación; se sigue con la voz del navegador.');if(st.tocando)m.play()}
+@@ -6495,7 +6512,7 @@
+     var p=pistaDeRuta(r);
+     if(st.abierto&&(!p||p.clave!==st.clave))cerrar(true);
+     if(!p)return;
+-    if(!synth&&!(PISTAS[p.clave]&&PISTAS[p.clave].src&&BASE))return;
++    if(!synth&&!candidatas(p.clave).length)return;
+     ponBoton(p);
+     if(st.abierto&&p.clave===st.clave){st.els=mapea(p.tipo,st.bloques);marca(st.idx,false)}
+   });

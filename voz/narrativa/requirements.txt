@@ -1,0 +1,2 @@
+google-genai>=2.24.0
+imageio-ffmpeg>=0.5
