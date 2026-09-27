@@ -1,0 +1,152 @@
+--- a/public/app.js
++++ b/public/app.js
+@@ -6181,6 +6181,28 @@
+ 
+ var VZ=(function(){
+   var A=D.audio||{},PISTAS=A.pistas||{},BASE=String(A.base||'').replace(/\/+$/,'');
++  /* Manifiesto vivo (27-09-2026). Las locuciones con la voz de Google (Gemini TTS) se generan y publican en el
++     repositorio azabarte-laminas (voz/narrativa/audio.json, mismo esquema que D.audio) y se sirven por jsDelivr.
++     Se consulta al cargar la página: una pista nueva o regenerada suena sin volver a desplegar la web.
++     Para cada clave hay hasta dos candidatas (la embebida en D.audio y la del manifiesto vivo); al abrir se usa
++     la que tenga la huella del texto actual. D.config.audioManifiesto permite otra URL, o '' para no consultarlo. */
++  var VIVO_URL=(typeof CFG.audioManifiesto==='string')?CFG.audioManifiesto:'https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@main/voz/narrativa/audio.json';
++  var VIVAS={},HUELLAS={},vivoHecho=!(VIVO_URL&&window.fetch);
++  function conBase(p,b){if(!p||!p.src)return null;var q={};for(var k in p)q[k]=p[k];q.base=String(p.base||b||'').replace(/\/+$/,'');return q.base?q:null}
++  function candidatas(clave){return [conBase(PISTAS[clave],BASE),VIVAS[clave]||null].filter(Boolean)}
++  var vivoListo=vivoHecho?Promise.resolve():(function(){
++    var ctl=window.AbortController?new AbortController():null,tope=setTimeout(function(){if(ctl)ctl.abort()},4000);
++    return fetch(VIVO_URL,ctl?{cache:'no-cache',signal:ctl.signal}:{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(m){
++      if(!m||!m.pistas)return;var b=String(m.base||'').replace(/\/+$/,'');
++      Object.keys(m.pistas).forEach(function(k){var q=conBase(m.pistas[k],b);if(q)VIVAS[k]=q});
++      try{var p=pistaDeRuta(route());if(p&&(synth||candidatas(p.clave).length)){ponBoton(p);preparaHuella(p)}pintaBoton()}catch(e){}
++    }).catch(function(){}).then(function(){clearTimeout(tope);vivoHecho=true});
++  })();
++  /* Si el manifiesto tarda, se espera una vez como mucho; después ya no se hace esperar a nadie. */
++  function esperaVivo(ms){if(vivoHecho)return Promise.resolve();return Promise.race([vivoListo,new Promise(function(res){setTimeout(function(){vivoHecho=true;res()},ms)})])}
++  /* Huella del texto de cada pista, calculada al poner el botón: así el clic decide el motor al momento
++     y el play() queda dentro del gesto del usuario (Safari en iPhone no suena si se llama después). */
++  function preparaHuella(p){if(HUELLAS[p.clave]!==undefined)return;HUELLAS[p.clave]=null;huella(vzTextoCanonico(p.bloques)).then(function(h){HUELLAS[p.clave]=h||''})}
+   var synth=('speechSynthesis' in window&&'SpeechSynthesisUtterance' in window)?window.speechSynthesis:null;
+   var VELS=[0.8,0.9,1,1.1,1.25,1.5];
+   var CPS=15.5; /* caracteres por segundo de una locución en castellano a 1× (estimación para el «≈ N min») */
+@@ -6263,19 +6285,19 @@
+ 
+   /* ---------- motor (a): pista pregrabada ---------- */
+   function motorAudio(pista,alFallar){
+-    var au=new Audio();au.preload='auto';au.src=BASE+'/'+pista.src;
++    var au=new Audio();au.preload='auto';au.src=pista.base+'/'+pista.src;
+     var marcas=pista.marcas||[],dur=+pista.dur||0,vivo=true;
+     au.playbackRate=st.vel;
+     au.addEventListener('loadedmetadata',function(){if(isFinite(au.duration)&&au.duration>0)dur=au.duration;pinta()});
+     au.addEventListener('timeupdate',function(){if(!vivo)return;var t=au.currentTime,i=0;for(var k=0;k<marcas.length;k++){if(marcas[k]<=t+0.05)i=k}
+       if(i!==st.idx){st.idx=i;marca(i,true)}st.frac=dur?Math.min(1,t/dur):0;guardaPos(i,t,st.frac);pinta()});
+-    au.addEventListener('play',function(){st.tocando=true;pinta()});
++    au.addEventListener('play',function(){st.tocando=true;quitaNotaPulse();pinta()});
+     au.addEventListener('pause',function(){st.tocando=false;pinta();guardaPos(st.idx,au.currentTime,st.frac,true)});
+     au.addEventListener('waiting',function(){estado('Cargando la grabación…')});
+     au.addEventListener('ended',function(){fin()});
+     au.addEventListener('error',function(){if(vivo){vivo=false;alFallar()}});
+     return {tipo:'audio',_au:au,
+-      play:function(){var p=au.play();if(p&&p.catch)p.catch(function(){})},
++      play:function(){var p=au.play();if(p&&p.catch)p.catch(function(e){if(vivo&&e&&e.name==='NotAllowedError'){st.tocando=false;nota('Pulse ▶ para empezar a escuchar la grabación.');pinta()}})},
+       pause:function(){au.pause()},
+       ir:function(i){i=Math.max(0,Math.min(marcas.length-1,i));au.currentTime=marcas[i]||0;st.idx=i;marca(i,true);pinta()},
+       frac:function(f){if(dur){au.currentTime=f*dur}},
+@@ -6307,7 +6329,7 @@
+       var u=new SpeechSynthesisUtterance(chunks[ci]);
+       voz=eligeVoz();if(voz){u.voice=voz;u.lang=voz.lang||'es-ES'}else u.lang='es-ES';
+       u.rate=st.vel;u.pitch=1;
+-      u.onstart=function(){if(g!==gen)return;st.tocando=true;pinta()};
++      u.onstart=function(){if(g!==gen)return;st.tocando=true;quitaNotaPulse();pinta()};
+       u.onboundary=function(e){if(g!==gen)return;progresoVoz(offset+(e.charIndex||0))};
+       u.onend=function(){if(g!==gen)return;offset+=chunks[ci].length+1;ci++;progresoVoz(offset);guardaPos(st.idx,0,st.frac);habla(g)};
+       u.onerror=function(e){if(g!==gen)return;var k=e&&e.error;if(k==='interrupted'||k==='canceled')return;
+@@ -6371,6 +6393,7 @@
+     ui=d;return d;
+   }
+   function nota(t){var n=qs('#vz-nota');if(!n)return;n.hidden=!t;n.textContent=t||''}
++  function quitaNotaPulse(){var n=qs('#vz-nota');if(n&&/^Pulse ▶/.test(n.textContent))nota('')}
+   function estado(t){var e=qs('#vz-estado');if(e)e.textContent=t}
+   function pinta(){
+     if(!ui||!st.abierto)return;
+@@ -6383,7 +6406,7 @@
+     var n=st.bloques.length,i=Math.min(st.idx+1,n);
+     var txt;
+     if(st.preparando)txt='Preparando la lectura…';
+-    else if(st.motor&&st.motor.tipo==='audio'){var tm=st.motor.tiempo();txt=(tm&&tm.dur?mmss(tm.t)+' / '+mmss(tm.dur):'')+' · '+i+' de '+n}
++    else if(st.motor&&st.motor.tipo==='audio'){var tm=st.motor.tiempo();txt=(tm&&tm.dur?mmss(tm.t)+' / '+mmss(tm.dur):'')+' · '+i+' de '+n+' · voz sintética (IA)'}
+     else txt='Párrafo '+i+' de '+n+' · ≈ '+minutos(st.total-(st.cum[st.idx]||0),st.vel)+(st.motor&&st.motor.tipo==='voz'?' · voz del navegador':'');
+     estado(txt);r.setAttribute('aria-valuetext','Párrafo '+i+' de '+n);
+     pintaBoton();
+@@ -6422,31 +6445,44 @@
+     st.cum=[];st.total=0;p.bloques.forEach(function(b){st.cum.push(st.total);st.total+=b.x.length+1});
+     document.body.classList.add('vz-abierto');ui.hidden=false;nota('');qs('#vz-voces').hidden=true;
+     pinta();
+-    var pista=PISTAS[p.clave];
++    var cands=candidatas(p.clave);
++    var gen=st.gen=(st.gen||0)+1,tarde=false;
+     var listo=function(motor){
+-      if(!st.abierto||st.clave!==p.clave)return;
++      if(gen!==st.gen||!st.abierto||st.clave!==p.clave){motor.destruir();return}
+       st.motor=motor;st.preparando=false;
+       var pos=posGuardada(p.clave);if(pos&&pos.i>0&&pos.i<p.bloques.length){motor.reanudar(pos);st.idx=pos.i;st.frac=pos.f||0}
+       marca(st.idx,false);pinta();
+       if(motor.tipo==='voz'){llenaVoces();var av=avisoVoz(eligeVoz());if(av)nota(av)}
+-      if(autoplay)motor.play();
++      if(autoplay){motor.play();if(tarde&&motor.tipo==='voz')vigilaArranque(motor)}
+     };
+     var conVoz=function(){if(synth){listo(motorVoz())}else{st.preparando=false;st.motor=null;nota('Este navegador no permite la lectura en voz alta y no hay grabación disponible para este texto.');pinta()}};
+-    if(pista&&pista.src&&BASE){
+-      huella(vzTextoCanonico(p.bloques)).then(function(h){
+-        if(h&&pista.huella&&h===pista.huella){listo(motorAudio(pista,function(){
++    var elige=function(h){return h?candidatas(p.clave).filter(function(c){return c.huella===h})[0]||null:null};
++    var arrancaCon=function(pista){
++        if(pista){listo(motorAudio(pista,function(){
+           /* la grabación no carga: seguimos con la voz del navegador desde el mismo párrafo */
++          if(gen!==st.gen)return;
+           var i=st.idx;if(st.motor)st.motor.destruir();st.motor=null;
+           if(synth){var m=motorVoz();st.motor=m;m.ir(i);nota('No se ha podido cargar la grabación; se sigue con la voz del navegador.');if(st.tocando)m.play()}
+           else nota('No se ha podido cargar la grabación.');
+           pinta()}))}
+         else conVoz();
++    };
++    var hSabida=HUELLAS[p.clave];
++    if(typeof hSabida==='string'&&vivoHecho){arrancaCon(elige(hSabida))}  /* lo normal: decisión dentro del clic */
++    else if(cands.length||!vivoHecho){
++      /* primer clic muy temprano: se espera la huella y, como mucho un momento, el manifiesto vivo */
++      tarde=true;
++      Promise.all([hSabida?Promise.resolve(hSabida):huella(vzTextoCanonico(p.bloques)),esperaVivo(cands.length?1200:2500)]).then(function(res){
++        if(gen!==st.gen||!st.abierto)return;
++        if(res[0])HUELLAS[p.clave]=res[0];
++        arrancaCon(elige(res[0]));
+       });
+     }else conVoz();
+     if(synth&&synth.addEventListener&&!abrir._voces){abrir._voces=true;synth.addEventListener('voiceschanged',function(){if(st.abierto&&st.motor&&st.motor.tipo==='voz'){llenaVoces();nota(avisoVoz(eligeVoz()))}})}
+   }
+   function cerrar(silencio){
+     if(!st.abierto)return;
++    st.gen=(st.gen||0)+1;
+     if(st.motor){if(st.tocando)guardaPos(st.idx,(st.motor.tiempo()||{}).t||0,st.frac,true);st.motor.destruir()}
+     st.motor=null;st.tocando=false;st.abierto=false;var clave=st.clave;st.clave=null;
+     qsa('.vz-on').forEach(function(el){el.classList.remove('vz-on')});
+@@ -6456,6 +6492,9 @@
+     return clave;
+   }
+   function alternar(){if(!st.motor)return;if(st.tocando)st.motor.pause();else st.motor.play()}
++  /* Tras una espera, Safari en iPhone descarta en silencio la primera locución del navegador: si no ha
++     empezado ni está en cola, se deja en pausa y se pide pulsar ▶ (ese toque sí la arranca). */
++  function vigilaArranque(m){setTimeout(function(){if(st.motor===m&&st.tocando&&synth&&!synth.speaking&&!synth.pending){m.pause();nota('Pulse ▶ para empezar la lectura.')}},1800)}
+   function anterior(){if(!st.motor)return;st.motor.ir(Math.max(0,st.idx-1))}
+   function siguiente(){if(!st.motor)return;if(st.idx+1>=st.bloques.length){fin();return}st.motor.ir(st.idx+1)}
+   function fin(){
+@@ -6495,8 +6534,8 @@
+     var p=pistaDeRuta(r);
+     if(st.abierto&&(!p||p.clave!==st.clave))cerrar(true);
+     if(!p)return;
+-    if(!synth&&!(PISTAS[p.clave]&&PISTAS[p.clave].src&&BASE))return;
+-    ponBoton(p);
++    if(!synth&&!candidatas(p.clave).length)return;
++    ponBoton(p);preparaHuella(p);
+     if(st.abierto&&p.clave===st.clave){st.els=mapea(p.tipo,st.bloques);marca(st.idx,false)}
+   });
+ 

@@ -1,0 +1,706 @@
+#!/usr/bin/env python3
+"""Locuta la edición narrativa de azabarte.com con la voz de Google (Gemini TTS).
+
+Lee textos.json (lo produce extraer_textos.mjs a partir de la web publicada) y, para cada pista
+cuyo texto haya cambiado desde la última grabación, pide a Gemini la locución bloque a bloque
+(título, entradilla, títulos de sección y párrafos), une los bloques con pausas, guarda un MP3 y
+anota en audio.json el instante en que empieza cada bloque. El reproductor de la web usa esas
+«marcas» para resaltar el párrafo que se está oyendo y desplazar la página con la lectura, igual
+que hace con la voz del navegador.
+
+Motores:
+  gemini      API de Gemini de Google (variable GEMINI_API_KEY). Modelo gemini-3.8-flash-tts.
+  openrouter  El mismo modelo a través de OpenRouter (variable OPENROUTER_API_KEY).
+  prueba      Sin red ni clave: genera un tono por bloque con la duración estimada. Solo sirve
+              para probar la cadena completa y el reproductor.
+
+Uso típico:
+  python locutar.py --motor gemini                 # locuta lo que falte o haya cambiado
+  python locutar.py --motor gemini --solo cap:sabemos
+  python locutar.py --fijar-base https://cdn.jsdelivr.net/gh/USUARIO/azabarte-laminas@COMMIT/voz/narrativa
+
+El resultado (mp3/*.mp3 y audio.json) sigue el esquema D.audio de la web (datos/censo/audio.json):
+  {"base": "...", "voz": {...}, "pistas": {"cap:sabemos": {"src": "mp3/cap-sabemos.mp3",
+   "huella": "<sha256 del texto>", "marcas": [0.3, 2.9, ...], "dur": 512.4}}}
+
+Códigos de salida: 0 bien (también si se acabó la cuota del día: se sigue otro día); 1 alguna pista
+ha fallado; 2 error que impide seguir (clave, modelo, crédito); 3 los textos no son la edición narrativa.
+"""
+from __future__ import annotations
+
+import argparse
+import array
+import base64
+import datetime as _dt
+import hashlib
+import json
+import math
+import os
+import re
+import shutil
+import struct
+import subprocess
+import sys
+import threading
+import time
+import urllib.error
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+
+AQUI = Path(__file__).resolve().parent
+RATE = 24000  # Gemini TTS entrega PCM de 16 bits, mono, 24 kHz
+
+MODELO = "gemini-3.8-flash-tts"
+VOZ = "Charon"  # voz prediseñada de Google: grave, informativa; estable en el tiempo
+KBPS = 64
+
+# Dirección de la locución. Gemini 3.8 separa el texto (se lee literal) de la interpretación
+# (speech_metadata.style). El acento se pide aquí porque las voces prediseñadas son multilingües.
+ESTILO_BASE = (
+    "AUDIO PROFILE: Documentary and audiobook narrator from Spain reading a family history "
+    "about the Azabarte surname (Las Pedroñeras, Cuenca, and Álava).\n"
+    "ACCENT: Castilian Spanish from central Spain (Madrid). Peninsular pronunciation with "
+    "distinción: 'z' and 'c' before 'e'/'i' pronounced /θ/, 's' apical. Never a Latin American accent.\n"
+    "STYLE: Warm, serious and clear. Calm, measured, unhurried pacing with natural pauses at "
+    "commas and full stops. Sober and respectful, never theatrical."
+)
+ESTILO_TIPO = {
+    "t": "This line is the title of a chapter: read it slowly, with gravitas, as a title.",
+    "nombre": "This line is the full name of a person whose story begins: read it slowly, as a title.",
+    "h": "This line is a section heading: read it as a heading, slightly slower.",
+    "lede": "This is the opening paragraph of the chapter: inviting, unhurried.",
+    "p": "",
+}
+
+# Pausas (segundos) entre bloques, según el tipo del bloque anterior y del siguiente.
+INICIO, FINAL = 0.35, 0.9
+
+
+def pausa(prev: str, sig: str) -> float:
+    if prev in ("t", "nombre"):
+        return 1.0
+    if sig == "h":
+        return 1.1
+    if prev == "h":
+        return 0.7
+    if prev == "lede":
+        return 0.85
+    return 0.55
+
+
+def log(*a):
+    print(*a, flush=True)
+
+
+class CuotaAgotada(Exception):
+    """La API ha agotado la cuota: se para limpiamente y se reanuda en la próxima ejecución."""
+
+
+class ErrorFatal(Exception):
+    """Clave inválida, modelo inexistente, sin crédito: no se arregla reintentando."""
+
+
+class ErrorBloque(Exception):
+    """Un bloque no se ha podido locutar bien: su pista queda pendiente y se sigue con la siguiente."""
+
+
+# ---------------------------------------------------------------- audio en memoria
+
+def pcm_de(datos: bytes) -> array.array:
+    """Muestras int16 mono a 24 kHz a partir de WAV (RIFF) o PCM crudo.
+
+    El WAV se lee a mano: los WAV de una respuesta en streaming pueden declarar tamaño 0 en el
+    trozo «data», y entonces el resto del búfer es el audio."""
+    if datos[:4] == b"RIFF" and datos[8:12] == b"WAVE":
+        pos, canales, bits, frec, crudo = 12, 1, 16, RATE, None
+        while pos + 8 <= len(datos):
+            ident, tam = datos[pos:pos + 4], struct.unpack("<I", datos[pos + 4:pos + 8])[0]
+            cuerpo = pos + 8
+            if ident == b"fmt ":
+                _fmt, canales, frec = struct.unpack("<HHI", datos[cuerpo:cuerpo + 8])
+                bits = struct.unpack("<H", datos[cuerpo + 14:cuerpo + 16])[0]
+            elif ident == b"data":
+                fin = len(datos) if tam == 0 or cuerpo + tam > len(datos) else cuerpo + tam
+                crudo = datos[cuerpo:fin]
+                break
+            pos = cuerpo + tam + (tam & 1)
+        if crudo is None:
+            raise ValueError("WAV sin trozo de datos")
+        if bits != 16:
+            raise ValueError(f"WAV de {bits} bits no admitido")
+    else:
+        crudo, canales, frec = datos, 1, RATE
+    a = array.array("h")
+    a.frombytes(crudo[: len(crudo) - (len(crudo) % 2)])
+    if canales > 1:
+        a = array.array("h", a[::canales])
+    if frec != RATE:
+        a = remuestrea(a, frec, RATE)
+    if not len(a):
+        raise ValueError("audio vacío")
+    return a
+
+
+def remuestrea(a: array.array, de: int, a_: int) -> array.array:
+    n = int(len(a) * a_ / de)
+    out = array.array("h", [0]) * n
+    for i in range(n):
+        x = i * de / a_
+        j = int(x)
+        f = x - j
+        v0 = a[j] if j < len(a) else 0
+        v1 = a[j + 1] if j + 1 < len(a) else v0
+        out[i] = int(v0 + (v1 - v0) * f)
+    return out
+
+
+def silencio(seg: float) -> array.array:
+    return array.array("h", [0]) * int(round(seg * RATE))
+
+
+def recorta(a: array.array, umbral: int = 220, margen: float = 0.04) -> array.array:
+    """Quita el silencio de los extremos para controlar las pausas entre bloques."""
+    n = len(a)
+    ini = 0
+    while ini < n and abs(a[ini]) < umbral:
+        ini += 1
+    fin = n - 1
+    while fin > ini and abs(a[fin]) < umbral:
+        fin -= 1
+    if ini >= fin:
+        return array.array("h")
+    m = int(margen * RATE)
+    return a[max(0, ini - m): min(n, fin + m + 1)]
+
+
+def normaliza(a: array.array, rms_obj_db: float = -20.0, pico_db: float = -1.0) -> array.array:
+    """Ganancia única para toda la pista: RMS de la voz a -20 dBFS sin pasar de -1 dBFS de pico."""
+    voz = [x for x in a if abs(x) > 300]
+    if not voz:
+        return a
+    rms = math.sqrt(sum(x * x for x in voz) / len(voz)) / 32768.0
+    pico = max(abs(x) for x in voz) / 32768.0
+    g = (10 ** (rms_obj_db / 20)) / max(rms, 1e-9)
+    g = min(g, (10 ** (pico_db / 20)) / max(pico, 1e-9))
+    if abs(g - 1) < 0.02:
+        return a
+    return array.array("h", (max(-32768, min(32767, int(x * g))) for x in a))
+
+
+def ffmpeg_bin() -> str:
+    b = os.environ.get("FFMPEG_BIN") or shutil.which("ffmpeg")
+    if b:
+        return b
+    try:
+        import imageio_ffmpeg  # type: ignore
+
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception as e:  # pragma: no cover
+        raise ErrorFatal("No hay ffmpeg: instálelo o `pip install imageio-ffmpeg`") from e
+
+
+def a_mp3(a: array.array, destino: Path, titulo: str, comentario: str) -> None:
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    tmp = destino.with_suffix(".tmp.mp3")
+    cmd = [
+        ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+        "-f", "s16le", "-ar", str(RATE), "-ac", "1", "-i", "pipe:0",
+        "-c:a", "libmp3lame", "-b:a", f"{KBPS}k", "-ar", str(RATE), "-ac", "1",
+        "-metadata", f"title={titulo}", "-metadata", "artist=Proyecto Origen Azabarte",
+        "-metadata", f"comment={comentario}", "-id3v2_version", "3",
+        str(tmp),
+    ]
+    subprocess.run(cmd, input=a.tobytes(), check=True)
+    tmp.replace(destino)
+
+
+# ---------------------------------------------------------------- comprobación de duración
+
+_NUM = {1: 5, 2: 10, 3: 18, 4: 28}
+
+
+def largo_hablado(texto: str) -> int:
+    """Longitud aproximada de lo que se dice: «1798» se lee «mil setecientos noventa y ocho»."""
+    t = re.sub(r"\d+", lambda m: "x" * _NUM.get(len(m.group()), 7 * len(m.group())), texto)
+    t = re.sub(r"\b[IVXLC]{2,}\b", lambda m: "x" * 10, t)  # siglos en romanos: «XVI» → «dieciséis»
+    return len(t)
+
+
+def duracion_razonable(texto: str, a: array.array):
+    dur = len(a) / RATE
+    est = largo_hablado(texto)
+    cps = est / dur if dur > 0 else 999.0
+    lo, hi = (4.0, 30.0) if est < 60 else (8.0, 26.0)
+    return dur, cps, lo <= cps <= hi
+
+
+# ---------------------------------------------------------------- motores de voz
+
+def estilo_de(k: str) -> str:
+    extra = ESTILO_TIPO.get(k, "")
+    return ESTILO_BASE + ("\n" + extra if extra else "")
+
+
+class Motor:
+    nombre = "?"
+
+    def __init__(self, args):
+        self.args = args
+        self.cerrojo = threading.Lock()
+        self.ultima = 0.0
+        self.peticiones = 0
+        self.caracteres = 0
+
+    def espera_turno(self):
+        rpm = self.args.rpm
+        if not rpm or rpm <= 0:
+            return
+        with self.cerrojo:
+            turno = max(time.time(), self.ultima + 60.0 / rpm)
+            self.ultima = turno
+        falta = turno - time.time()
+        if falta > 0:
+            time.sleep(falta)
+
+    def cuenta(self, texto):
+        with self.cerrojo:
+            self.peticiones += 1
+            self.caracteres += len(texto)
+
+    def locuta(self, texto: str, k: str) -> array.array:
+        raise NotImplementedError
+
+
+def clasifica(codigo, mensaje: str) -> str:
+    """dia | minuto | fatal | bloque | reintentar"""
+    m = mensaje.lower()
+    if codigo == 429 or "resource_exhausted" in m or "rate limit" in m or "too many requests" in m:
+        if any(x in m for x in ("per_day", "perday", "per day", "daily")):
+            return "dia"
+        return "minuto"
+    if codigo in (401, 403) or "api_key_invalid" in m or "api key not valid" in m or "permission_denied" in m:
+        return "fatal"
+    if codigo == 402 or ("insufficient" in m and "credit" in m):
+        return "fatal"
+    if codigo == 404 or ("model" in m and "not found" in m):
+        return "fatal"
+    if codigo == 400:
+        return "bloque"
+    return "reintentar"
+
+
+def retraso_sugerido(mensaje: str):
+    m = re.search(r"retry(?:Delay)?\W+(?:in\s+)?(\d+(?:\.\d+)?)\s*s", mensaje, re.I)
+    return float(m.group(1)) if m else None
+
+
+class MotorGemini(Motor):
+    nombre = "gemini"
+
+    def __init__(self, args):
+        super().__init__(args)
+        clave = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+        if not clave:
+            raise ErrorFatal("Falta la variable GEMINI_API_KEY")
+        from google import genai  # type: ignore
+
+        self.client = genai.Client(api_key=clave)
+
+    def locuta(self, texto, k):
+        self.espera_turno()
+        it = self.client.interactions.create(
+            model=self.args.modelo,
+            input=[{
+                "type": "text",
+                "text": texto,
+                "annotations": [{"type": "speech_metadata", "style": estilo_de(k)}],
+            }],
+            response_format={"type": "audio"},
+            generation_config={"speech_config": [{"voice": self.args.voz}]},
+        )
+        self.cuenta(texto)
+        au = getattr(it, "output_audio", None)
+        if au is None or not getattr(au, "data", None):
+            raise RuntimeError("La respuesta de Gemini no trae audio")
+        datos = au.data
+        if isinstance(datos, str):
+            datos = base64.b64decode(datos)
+        elif isinstance(datos, (bytes, bytearray)) and datos[:4] != b"RIFF":
+            try:
+                datos = base64.b64decode(datos, validate=True)
+            except Exception:
+                pass
+        return pcm_de(bytes(datos))
+
+    @staticmethod
+    def error(e):
+        return getattr(e, "status_code", None) or getattr(e, "code", None), str(e)
+
+
+class MotorOpenRouter(Motor):
+    nombre = "openrouter"
+    URL = "https://openrouter.ai/api/v1/audio/speech"
+
+    def __init__(self, args):
+        super().__init__(args)
+        self.clave = os.environ.get("OPENROUTER_API_KEY")
+        if not self.clave:
+            raise ErrorFatal("Falta la variable OPENROUTER_API_KEY")
+
+    def locuta(self, texto, k):
+        self.espera_turno()
+        modelo = self.args.modelo if "/" in self.args.modelo else "google/" + self.args.modelo
+        meta = {"speech_metadata": {"style": estilo_de(k)}}
+        cuerpo = {"model": modelo, "input": texto, "voice": self.args.voz, "response_format": "pcm",
+                  "provider": {"options": {"google-ai-studio": meta, "google-vertex": meta}}}
+        req = urllib.request.Request(
+            self.URL, data=json.dumps(cuerpo).encode("utf-8"), method="POST",
+            headers={"Authorization": f"Bearer {self.clave}", "Content-Type": "application/json",
+                     "HTTP-Referer": "https://azabarte.com", "X-Title": "Proyecto Origen Azabarte"})
+        try:
+            with urllib.request.urlopen(req, timeout=300) as r:
+                tipo = r.headers.get("Content-Type", "")
+                datos = r.read()
+        except urllib.error.HTTPError as e:
+            texto_err = e.read().decode("utf-8", "replace")[:600]
+            # Si OpenRouter rechaza la dirección de estilo no se sigue sin ella: sin estilo no hay acento
+            # castellano garantizado, y esa grabación no se volvería a hacer.
+            if e.code == 400 and "Provider returned error" not in texto_err and (
+                    "ZodError" in texto_err or "Unrecognized key" in texto_err or "provider.options" in texto_err):
+                raise ErrorFatal("OpenRouter no admite la dirección de estilo (acento): use GEMINI_API_KEY. "
+                                 + texto_err) from e
+            raise RuntimeError(f"HTTP {e.code}: {texto_err}") from e
+        if "json" in tipo:
+            raise RuntimeError(f"HTTP 200 sin audio: {datos.decode('utf-8', 'replace')[:400]}")
+        self.cuenta(texto)
+        return pcm_de(datos)
+
+    @staticmethod
+    def error(e):
+        m = re.search(r"HTTP (\d{3})", str(e))
+        return (int(m.group(1)) if m else None), str(e)
+
+
+class MotorPrueba(Motor):
+    """Tono suave con la duración de una lectura real (≈ 15 caracteres por segundo)."""
+
+    nombre = "prueba"
+
+    def locuta(self, texto, k):
+        seg = max(0.6, largo_hablado(texto) / 15.0)
+        n = int(seg * RATE)
+        f = 220.0 if k == "p" else 330.0
+        out = array.array("h", [0]) * n
+        for i in range(n):
+            env = min(1.0, i / 2400, (n - i) / 2400)
+            out[i] = int(2500 * env * math.sin(2 * math.pi * f * i / RATE))
+        self.cuenta(texto)
+        return out
+
+    @staticmethod
+    def error(e):
+        return None, str(e)
+
+
+MOTORES = {"gemini": MotorGemini, "openrouter": MotorOpenRouter, "prueba": MotorPrueba}
+
+
+# ---------------------------------------------------------------- caché por bloque
+
+class Cache:
+    def __init__(self, carpeta: Path, firma: str):
+        self.dir = carpeta
+        self.firma = firma
+        self.dir.mkdir(parents=True, exist_ok=True)
+
+    def ruta(self, texto, k):
+        h = hashlib.sha1(f"{self.firma}\n{k}\n{texto}".encode("utf-8")).hexdigest()
+        return self.dir / f"{h}.pcm"
+
+    def lee(self, texto, k):
+        p = self.ruta(texto, k)
+        if p.exists():
+            a = array.array("h")
+            a.frombytes(p.read_bytes())
+            if len(a):
+                return a
+        return None
+
+    def guarda(self, texto, k, a):
+        p = self.ruta(texto, k)
+        tmp = p.with_name(p.name + f".{threading.get_ident()}.tmp")
+        tmp.write_bytes(a.tobytes())
+        os.replace(tmp, p)
+
+    def olvida(self, bloques):
+        for b in bloques:
+            self.ruta(b["x"], b["k"]).unlink(missing_ok=True)
+
+
+def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int = 4,
+                  esperas_max: int = 10) -> array.array:
+    guardado = cache.lee(texto, k)
+    if guardado is not None:
+        return guardado
+    fallos, esperas, espera = 0, 0, 20.0
+    mejor, ultimo = None, ""
+    while fallos < intentos:
+        try:
+            a = recorta(motor.locuta(texto, k))
+        except (ErrorFatal, CuotaAgotada):
+            raise
+        except Exception as e:  # noqa: BLE001
+            codigo, msg = motor.error(e)
+            tipo = clasifica(codigo, msg)
+            ultimo = f"{codigo}: {msg[:240]}"
+            if tipo == "dia":
+                raise CuotaAgotada(msg[:300]) from e
+            if tipo == "fatal":
+                raise ErrorFatal(msg[:500]) from e
+            if tipo == "minuto":
+                # Las esperas por límite de peticiones no gastan intentos.
+                esperas += 1
+                if esperas > esperas_max:
+                    raise CuotaAgotada("el límite de peticiones no cede: " + msg[:200]) from e
+                t = min(max(retraso_sugerido(msg) or espera, 5.0), 180.0)
+                log(f"  límite de peticiones; espero {int(t)} s")
+                time.sleep(t)
+                espera = min(espera * 1.6, 120.0)
+                continue
+            fallos += 1
+            log(f"  error ({codigo}) en «{texto[:40]}…»: {msg[:160]}")
+            if tipo == "bloque" and fallos >= 2:
+                break
+            time.sleep(min(5 * fallos, 30))
+            continue
+        dur, cps, ok = duracion_razonable(texto, a)
+        if ok:
+            cache.guarda(texto, k, a)
+            return a
+        fallos += 1
+        ultimo = f"duración sospechosa: {dur:.1f} s para «{texto[:40]}…» ({cps:.1f} c/s)"
+        log("  " + ultimo + "; repito")
+        # Solo vale como último recurso una toma con voz y ritmo verosímil, nunca un silencio.
+        if dur >= 0.3 and 3.0 <= cps <= 40.0 and (mejor is None or abs(cps - 15) < abs(mejor[1] - 15)):
+            mejor = (a, cps)
+    if mejor is not None:
+        log(f"  se acepta la mejor toma ({mejor[1]:.1f} c/s) de «{texto[:40]}…»")
+        cache.guarda(texto, k, mejor[0])
+        return mejor[0]
+    raise ErrorBloque(ultimo or "sin audio")
+
+
+# ---------------------------------------------------------------- manifiesto
+
+def nombre_mp3(clave: str) -> str:
+    return re.sub(r"[^A-Za-z0-9_.-]+", "-", clave) + ".mp3"
+
+
+def lee_json(p: Path, defecto):
+    if p.exists():
+        return json.loads(p.read_text("utf-8"))
+    return defecto
+
+
+def escribe_json(p: Path, d):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    tmp = p.with_suffix(".tmp")
+    tmp.write_text(json.dumps(d, ensure_ascii=False, indent=1) + "\n", "utf-8")
+    tmp.replace(p)
+
+
+def firma_voz(motor: str, modelo: str, voz: str) -> str:
+    base = f"{modelo}|{voz}|{hashlib.sha1(ESTILO_BASE.encode()).hexdigest()[:10]}"
+    return "prueba|" + base if motor == "prueba" else base
+
+
+def hecha(man, salida: Path, t, firma) -> bool:
+    ya = man["pistas"].get(t["clave"])
+    return bool(ya and ya.get("huella") == t["huella"] and ya.get("firma") == firma
+                and ya.get("src") and (salida / ya["src"]).exists())
+
+
+def locuta_pista(motor, cache, t, hilos):
+    with ThreadPoolExecutor(max_workers=max(1, hilos)) as ex:
+        futuros = [ex.submit(locuta_bloque, motor, cache, b["x"], b["k"]) for b in t["bloques"]]
+        audios, errores = [], []
+        for f in futuros:
+            try:
+                audios.append(f.result())
+            except Exception as e:  # noqa: BLE001
+                errores.append(e)
+    if errores:
+        for tipo in (ErrorFatal, CuotaAgotada):
+            for e in errores:
+                if isinstance(e, tipo):
+                    raise e
+        raise errores[0]
+    piezas, marcas = [silencio(INICIO)], []
+    pos = len(piezas[0])
+    for i, b in enumerate(t["bloques"]):
+        if i > 0:
+            s = silencio(pausa(t["bloques"][i - 1]["k"], b["k"]))
+            piezas.append(s)
+            pos += len(s)
+        marcas.append(round(pos / RATE, 2))
+        piezas.append(audios[i])
+        pos += len(audios[i])
+    piezas.append(silencio(FINAL))
+    pista = array.array("h")
+    for p in piezas:
+        pista.extend(p)
+    return normaliza(pista), marcas
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--motor", choices=sorted(MOTORES), default="gemini")
+    ap.add_argument("--modelo", default=os.environ.get("VOZ_MODELO") or MODELO)
+    ap.add_argument("--voz", default=os.environ.get("VOZ_NOMBRE") or None,
+                    help=f"voz de Google; si no se indica, la del manifiesto actual o {VOZ}")
+    ap.add_argument("--textos", default=str(AQUI / "textos.json"))
+    ap.add_argument("--salida", default=str(AQUI))
+    ap.add_argument("--solo", default="", help="claves separadas por comas (cap:sabemos,pj:P001)")
+    ap.add_argument("--max-pistas", type=int, default=0, help="0 = sin límite")
+    ap.add_argument("--rpm", type=float, default=float(os.environ.get("VOZ_RPM") or 0),
+                    help="peticiones por minuto como máximo (0 = sin pausa entre peticiones)")
+    ap.add_argument("--hilos", type=int, default=int(os.environ.get("VOZ_HILOS") or 4),
+                    help="bloques que se piden a la vez (1 = de uno en uno)")
+    ap.add_argument("--limite-minutos", type=float, default=0,
+                    help="no empieza pistas nuevas pasado este tiempo (0 = sin límite)")
+    ap.add_argument("--forzar", action="store_true", help="regenera aunque la huella coincida")
+    ap.add_argument("--cache", default=str(AQUI / ".cache"))
+    ap.add_argument("--fijar-base", default=None, help="solo reescribe la base de audio.json y sale")
+    ap.add_argument("--podar", action="store_true",
+                    help="borra las pistas que ya no existen en la web (con freno si serían muchas)")
+    ap.add_argument("--forzar-poda", action="store_true", help="poda aunque desaparezcan muchas pistas")
+    args = ap.parse_args(argv)
+
+    salida = Path(args.salida)
+    salida.mkdir(parents=True, exist_ok=True)
+    man_p = salida / "audio.json"
+    man = lee_json(man_p, {"esquema": "4.6", "base": "", "voz": {}, "pistas": {}})
+    man.setdefault("pistas", {})
+    man.setdefault("voz", {})
+
+    if args.fijar_base is not None:
+        man["base"] = args.fijar_base.rstrip("/")
+        escribe_json(man_p, man)
+        log(f"base = {man['base']}")
+        return 0
+
+    textos = lee_json(Path(args.textos), None)
+    if not textos:
+        raise SystemExit(f"No existe {args.textos}; ejecute antes extraer_textos.mjs")
+    pistas = textos.get("pistas") or []
+    if textos.get("edicion") != "narrativa" or not any(t["clave"].startswith("cap:") for t in pistas):
+        log(f"ERROR: {args.textos} no es la edición narrativa (edición «{textos.get('edicion')}», "
+            f"{len(pistas)} pistas). No se locuta ni se borra nada.")
+        return 3
+    vivas = {t["clave"] for t in pistas}
+
+    # La voz se mantiene entre ejecuciones: la indicada, o la del manifiesto, o la de siempre.
+    args.voz = args.voz or man["voz"].get("voz") or VOZ
+    firma = firma_voz(args.motor, args.modelo, args.voz)
+    cache = Cache(Path(args.cache) / re.sub(r"[^A-Za-z0-9]+", "_", firma), firma)
+
+    if args.podar:
+        sobran = [c for c in man["pistas"] if c not in vivas]
+        tope = max(3, int(0.2 * len(man["pistas"])))
+        if len(sobran) > tope and not args.forzar_poda:
+            log(f"AVISO: la poda quitaría {len(sobran)} pistas (más de {tope}); no se poda. "
+                "Si es correcto, repita con --forzar-poda.")
+        else:
+            for clave in sobran:
+                src = man["pistas"][clave].get("src")
+                if src and (salida / src).exists():
+                    (salida / src).unlink()
+                del man["pistas"][clave]
+                log(f"podada {clave}")
+
+    solo = {s.strip() for s in args.solo.split(",") if s.strip()}
+    pendientes = []
+    for t in pistas:
+        if solo and t["clave"] not in solo:
+            continue
+        if not args.forzar and hecha(man, salida, t, firma):
+            cache.olvida(t["bloques"])  # ya está en un MP3 publicado: los bloques sueltos sobran
+            continue
+        pendientes.append(t)
+    if args.max_pistas > 0:
+        pendientes = pendientes[: args.max_pistas]
+
+    total_c = sum(t["chars"] for t in pendientes)
+    log(f"{len(pendientes)} pistas por locutar ({total_c} caracteres) con {args.motor} · {args.modelo} · voz {args.voz}")
+    if not pendientes:
+        escribe_json(man_p, man)
+        return 0
+
+    motor = MOTORES[args.motor](args)
+    if not man["voz"] or not solo:
+        man["voz"] = {
+            "motor": "Google Gemini TTS" + (" (vía OpenRouter)" if args.motor == "openrouter" else ""),
+            "modelo": args.modelo,
+            "voz": args.voz,
+            "aviso": "Locución con voz sintética generada por IA (Google Gemini).",
+        }
+        if args.motor == "prueba":
+            man["voz"].update({"motor": "Prueba (tonos sin voz)", "aviso": "Pista de prueba: tonos sin voz."})
+
+    hechas, fallidas, seguidas = 0, [], 0
+    codigo_salida = 0
+    inicio = time.time()
+    try:
+        for n, t in enumerate(pendientes, 1):
+            if args.limite_minutos and time.time() - inicio > args.limite_minutos * 60:
+                log(f"Límite de {args.limite_minutos:.0f} min alcanzado; el resto queda para la próxima ejecución.")
+                break
+            log(f"[{n}/{len(pendientes)}] {t['clave']} · {t['titulo']} · {len(t['bloques'])} bloques, {t['chars']} caracteres")
+            try:
+                pista, marcas = locuta_pista(motor, cache, t, args.hilos)
+                src = "mp3/" + nombre_mp3(t["clave"])
+                a_mp3(pista, salida / src, t["titulo"], man["voz"].get("aviso", ""))
+            except (ErrorFatal, CuotaAgotada):
+                raise
+            except Exception as e:  # noqa: BLE001
+                fallidas.append(t["clave"])
+                seguidas += 1
+                log(f"  ✗ {t['clave']} queda pendiente: {str(e)[:300]}")
+                if seguidas >= 3:
+                    log("Tres pistas seguidas han fallado; se para esta ejecución.")
+                    break
+                continue
+            seguidas = 0
+            man["pistas"][t["clave"]] = {
+                "src": src,
+                "huella": t["huella"],
+                "marcas": marcas,
+                "dur": round(len(pista) / RATE, 2),
+                "bytes": (salida / src).stat().st_size,
+                "titulo": t["titulo"],
+                "firma": firma,
+                "generado": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            }
+            escribe_json(man_p, man)
+            hechas += 1
+            log(f"  ✓ {src} · {man['pistas'][t['clave']]['dur']:.0f} s")
+    except CuotaAgotada as e:
+        log(f"Cuota agotada: {e}")
+        log("Se han guardado las pistas terminadas; la próxima ejecución continúa donde se quedó.")
+    except ErrorFatal as e:
+        log(f"ERROR: {e}")
+        codigo_salida = 2
+    finally:
+        escribe_json(man_p, man)
+        log(f"Pistas terminadas en esta ejecución: {hechas}. Fallidas: {len(fallidas)} {fallidas[:10]}. "
+            f"Peticiones: {motor.peticiones}. Caracteres enviados: {motor.caracteres}.")
+        faltan = [t["clave"] for t in pistas if not hecha(man, salida, t, firma)]
+        log(f"Pistas pendientes en total: {len(faltan)} de {len(pistas)}.")
+    if codigo_salida == 0 and fallidas:
+        codigo_salida = 1
+    return codigo_salida
+
+
+if __name__ == "__main__":
+    sys.exit(main())

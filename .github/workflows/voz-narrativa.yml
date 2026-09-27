@@ -1,0 +1,186 @@
+# Locuta la edición narrativa de azabarte.com con la voz de Google (Gemini TTS) y publica el audio.
+#
+# Necesita UNO de estos secretos del repositorio (Settings → Secrets and variables → Actions):
+#   GEMINI_API_KEY      clave de la API de Gemini (Google AI Studio). Con la capa gratuita va más despacio:
+#                       lo que no quepa en la cuota del día se termina en las ejecuciones siguientes.
+#   OPENROUTER_API_KEY  clave de OpenRouter; usa el mismo modelo (google/gemini-3.8-flash-tts) con su crédito.
+# Sin secreto, la ejecución termina enseguida con un aviso y no cambia nada.
+#
+# Variables opcionales (Settings → Secrets and variables → Actions → Variables):
+#   VOZ_NOMBRE  voz de Google (por defecto la que ya tenga el manifiesto, y si no, Charon)
+#   VOZ_RPM     tope de peticiones por minuto (útil con la capa gratuita, p. ej. 8)
+#   VOZ_HILOS   peticiones a la vez (4)
+#   WEB_URL     página de la edición narrativa (https://azabarte.com/)
+#
+# Cada ejecución lee la web publicada, locuta solo las pistas nuevas o cuyo texto ha cambiado, sube los MP3,
+# y después el manifiesto audio.json con la dirección del CDN (jsDelivr) clavada al commit de esos MP3. Por
+# último purga la caché del manifiesto. La web lo consulta al cargar: no hace falta volver a desplegarla.
+name: Locutar la edición narrativa
+
+on:
+  workflow_dispatch:
+    inputs:
+      solo:
+        description: 'Solo estas pistas, separadas por comas (vacío = todo lo pendiente). Ej.: cap:sabemos,pj:P001'
+        required: false
+        default: ''
+      max_pistas:
+        description: 'Máximo de pistas en esta ejecución (0 = sin límite)'
+        required: false
+        default: '0'
+      voz:
+        description: 'Cambiar la voz (Charon, Orus, Iapetus, Rasalgethi, Sadaltager; femeninas: Gacrux, Sulafat). Vacío = la actual. Cambiarla relocuta todo y se conserva en adelante.'
+        required: false
+        default: ''
+      forzar:
+        description: 'Regenerar aunque el texto no haya cambiado'
+        type: boolean
+        default: false
+  schedule:
+    # A diario: continúa lo que quedara por cuota y relocuta los textos que se hayan editado en la web.
+    - cron: '23 3 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voz-narrativa
+  cancel-in-progress: false
+
+jobs:
+  locutar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      VOZ_NOMBRE: ${{ inputs.voz || vars.VOZ_NOMBRE || '' }}
+      VOZ_RPM: ${{ vars.VOZ_RPM || '0' }}
+      VOZ_HILOS: ${{ vars.VOZ_HILOS || '4' }}
+      WEB_URL: ${{ vars.WEB_URL || 'https://azabarte.com/' }}
+    steps:
+      - name: Elegir motor
+        id: motor
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ -n "$GEMINI_API_KEY" ]; then echo "motor=gemini" >> "$GITHUB_OUTPUT"
+          elif [ -n "$OPENROUTER_API_KEY" ]; then echo "motor=openrouter" >> "$GITHUB_OUTPUT"
+          else
+            echo "motor=" >> "$GITHUB_OUTPUT"
+            echo "::warning title=Falta la clave de voz::Añada el secreto GEMINI_API_KEY u OPENROUTER_API_KEY en Settings → Secrets and variables → Actions."
+          fi
+
+      # La punta de la rama al empezar (no el commit que disparó una ejecución en cola) y todo el historial,
+      # para saber si el manifiesto ya apunta a un commit con estos mismos MP3.
+      - uses: actions/checkout@v4
+        if: steps.motor.outputs.motor != ''
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        if: steps.motor.outputs.motor != ''
+        with:
+          node-version: '22'
+
+      - uses: actions/setup-python@v5
+        if: steps.motor.outputs.motor != ''
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        if: steps.motor.outputs.motor != ''
+        run: pip install -r voz/narrativa/requirements.txt
+
+      # Bloques sueltos de una pista a medias (si la cuota se acabó en mitad de un capítulo).
+      - name: Recuperar los bloques ya locutados
+        if: steps.motor.outputs.motor != ''
+        uses: actions/cache/restore@v4
+        with:
+          path: voz/narrativa/.cache
+          key: voz-bloques-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: voz-bloques-
+
+      # Se niega (y para el trabajo) si la página no es la edición narrativa o llega sin capítulos.
+      - name: Extraer los textos de la web publicada
+        if: steps.motor.outputs.motor != ''
+        run: node voz/narrativa/extraer_textos.mjs --url "$WEB_URL"
+
+      - name: Locutar lo pendiente
+        if: steps.motor.outputs.motor != ''
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: >-
+          python voz/narrativa/locutar.py
+          --motor "${{ steps.motor.outputs.motor }}"
+          --solo "${{ inputs.solo }}"
+          --max-pistas "${{ inputs.max_pistas || '0' }}"
+          --limite-minutos 300
+          --podar
+          ${{ inputs.forzar && '--forzar' || '' }}
+
+      - name: Publicar el audio
+        if: always() && steps.motor.outputs.motor != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          empuja() {
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME"; then return 0; fi
+              echo "No se ha podido subir (intento $i); reintento."; sleep $((i * 10))
+            done
+            return 1
+          }
+          # 1) Los MP3 y los textos primero; el manifiesto aún no, para que nunca apunte a MP3 que no están.
+          git add -A voz/narrativa
+          git reset -q voz/narrativa/audio.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Voz narrativa: locuciones con Gemini TTS ($(date -u +%F))"
+            empuja
+          fi
+          # 2) La base del manifiesto debe ser un commit con estos mismos MP3.
+          if [ -n "$(ls -A voz/narrativa/mp3 2>/dev/null | grep -v '^\.' || true)" ]; then
+            BASE=$(python -c "import json;print(json.load(open('voz/narrativa/audio.json')).get('base',''))")
+            BASE_SHA=$(printf '%s' "$BASE" | sed -n 's#.*@\([0-9a-f]\{40\}\)/.*#\1#p')
+            ACTUAL=$(git rev-parse HEAD:voz/narrativa/mp3)
+            PREVIO=$( [ -n "$BASE_SHA" ] && git rev-parse "$BASE_SHA:voz/narrativa/mp3" 2>/dev/null || true )
+            if [ "$PREVIO" != "$ACTUAL" ]; then
+              SHA=$(git rev-parse HEAD)
+              python voz/narrativa/locutar.py --fijar-base "https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${SHA}/voz/narrativa"
+            fi
+          fi
+          # 3) El manifiesto.
+          git add voz/narrativa/audio.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Voz narrativa: manifiesto de las locuciones"
+            empuja
+            curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${GITHUB_REF_NAME}/voz/narrativa/audio.json" \
+              || echo "No se ha podido purgar la caché de jsDelivr; se renovará sola en unas horas."
+          else
+            echo "El manifiesto no cambia."
+          fi
+
+      - name: Guardar los bloques de la pista a medias
+        if: always() && steps.motor.outputs.motor != ''
+        uses: actions/cache/save@v4
+        with:
+          path: voz/narrativa/.cache
+          key: voz-bloques-${{ github.run_id }}-${{ github.run_attempt }}
+
+      # Si algo ha fallado, el audio ya pagado queda descargable en la ejecución durante 30 días.
+      - name: Conservar el audio generado
+        if: failure() && steps.motor.outputs.motor != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: voz-narrativa-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            voz/narrativa/mp3/
+            voz/narrativa/audio.json
+          if-no-files-found: ignore
+          retention-days: 30
