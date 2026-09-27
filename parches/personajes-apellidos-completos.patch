@@ -1,6 +1,6 @@
 --- a/public/app.js
 +++ b/public/app.js
-@@ -408,9 +408,22 @@
+@@ -408,9 +408,28 @@
  function yearLoose(t){t=t||'';var m=/(\d{4})/.exec(t);if(m)return +m[1];var r=/s\.\s*(XVI|XVII|XVIII|XIX|XX|XXI)\b/i.exec(t);if(r){return {XVI:1550,XVII:1650,XVIII:1750,XIX:1850,XX:1950,XXI:2010}[r[1].toUpperCase()]}if(/contempor/i.test(t))return 2000;return null}
  function pjMatchTree(nombre,fechas){var tw=normWords(nombre);var ty=yearLoose(fechas);var best=null,bl=0;PJ.personajes.forEach(function(p){if(p.arbol===false)return;var al=(p.alias||[]).some(function(a){return normWords(a).join(' ')===tw.join(' ')});if(!al){if(tw.length<2)return;var pw=normWords(p.nombre);var n=Math.min(3,tw.length,pw.length);if(n<2)return;for(var i=0;i<n;i++)if(tw[i]!==pw[i])return;var tq=qual(nombre);if(tq){var pq=qual(p.nombre);if(pq?pq!==tq:p.nombre.toLowerCase().indexOf(tq)<0)return}}if(ty!==null){var py=pjYear(p);if(Math.abs(ty-py)>45)return}var L=normWords(p.nombre).length+(al?100:0);if(L>bl){best=p;bl=L}});return best}
  function emblemaHtml(cls){var e=PJ.emblema;if(!e||!e.img)return '';var vd=vidUrl(e.video)||monVid('iglesia');return '<figure class="emblema '+(cls||'')+(vd?' lam':'')+'">'+lamHtml(e.img,vd,e.titulo||'')+'<figcaption><b>'+esc(e.titulo||'')+'</b>'+esc(e.texto||'')+'</figcaption></figure>'}
@@ -19,13 +19,19 @@
 +function marcaGrafia(html){return String(html||'').replace(GRAFIA_RE,'<em>$1</em>')}
 +/* Rótulo de un personaje en tarjetas, tiras y fichas breves: nombre corto en negrita y, debajo, todos sus apellidos. */
 +function pjRotulo(p){var ap=pjApellido(p);return '<b>'+esc(p.corto||p.nombre)+'</b>'+(ap?'<span class="ape">'+marcaGrafia(esc(ap))+'</span>':'')}
++/* Grafías del apellido que lleva cada personaje, tal como aparecen en su nombre. */
++function pjGrafias(p){var out=[];String(p.nombre||'').replace(GRAFIA_RE,function(m){if(out.indexOf(m)<0)out.push(m);return m});return out}
++/* Etiqueta de apellido de cada retrato de la galería: en dorado, la grafía del apellido familiar que lleva;
++   en gris, el apellido de quien entra en la historia sin llevarlo (consortes, padres, líneas Galindo y Fides). */
++function pjApePill(p){var g=pjGrafias(p);if(g.length)return '<span class="pj-ape" title="Lleva el apellido familiar con esta grafía">'+esc(g.join(' · '))+'</span>';var nm=(p.nombre||'').replace(/«[^»]*»/g,'').replace(/\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();var ap=(p.corto||'').split(/[,(]/)[0].trim().indexOf(' ')<0?pjApellido(p):nm.split(' ').slice(1).join(' ').replace(/^[\s/]+/,'');return '<span class="pj-ape otro" title="No lleva el apellido familiar">'+esc(ap||'sin apellido consignado')+'</span>'}
++var PJ_APE_LEYENDA='<p class="pj-ape-leyenda"><span class="pj-ape">Azabarte</span> grafía del apellido familiar que lleva cada persona · <span class="pj-ape otro">Galindo</span> quien entra en la historia con otro apellido</p>';
  function pjHref(id){return PJ_BY[id]?'#explorar/personajes/'+id:'#explorar/personas/'+id}
 -function stripHtml(except){return '<div class="strip">'+PJ.personajes.slice().sort(function(a,b){return pjYear(a)-pjYear(b)}).filter(function(p){return p.id!==except}).map(function(p){return '<a href="#explorar/personajes/'+p.id+'">'+ava(p)+'<div><b>'+esc(p.corto||p.nombre)+'</b>'+(pjApellido(p)?'<span class="ape">'+esc(pjApellido(p))+'</span>':'')+esc(p.epoca)+'</div></a>'}).join('')+'<a class="more" href="#explorar/personajes"><span class="ava">···</span><div><b>Ver todos</b>'+PJ.personajes.length+' personajes</div></a></div>'}
 +function stripHtml(except){return '<div class="strip">'+PJ.personajes.slice().sort(function(a,b){return pjYear(a)-pjYear(b)}).filter(function(p){return p.id!==except}).map(function(p){return '<a href="#explorar/personajes/'+p.id+'">'+ava(p)+'<div>'+pjRotulo(p)+esc(p.epoca)+'</div></a>'}).join('')+'<a class="more" href="#explorar/personajes"><span class="ava">···</span><div><b>Ver todos</b>'+PJ.personajes.length+' personajes</div></a></div>'}
  var VIEWS={esp:[0,0,1183.6,1015.8],alava:[505,92,170,146],mancha:[488,418,215,185],rutas:[380,90,470,404]};
  var GBOUNDS={esp:[[35.9,-9.4],[43.9,3.4]],alava:[[42.45,-3.05],[43.05,-2.35]],mancha:[[39.15,-3.1],[40.25,-1.9]],rutas:[[39.2,-3.9],[43.05,-0.2]]};
  /* 27-09-2026 (decisión 6A del investigador): el mapa general ya no dibuja las tres rutas antiguas desde
-@@ -504,7 +517,7 @@
+@@ -504,7 +523,7 @@
     al que se viaja al pulsar un personaje o el botón de vista aérea. */
  function gmPuntoUrbano(key){var l=LUG[key];return l?{lat:l.lat,lng:l.lon,ref:l.punto||''}:null}
  function gmPjEl(p,here){var el=document.createElement('div');el.className='pj-mk'+(here?' here':'');el.dataset.pj=p.id;if(gmDomPos(p))el.dataset.dom='1';var img=pjImg(p);var d=p.domicilio;
@@ -34,7 +40,7 @@
  function initGoogleMap(m){
    var here=m.dataset.here, view=m.dataset.view, el=$('.gm',m), info=$('.info',m), MK=gmMarkerClass();
    var map=new google.maps.Map(el,{disableDefaultUI:true,gestureHandling:'cooperative',clickableIcons:false,keyboardShortcuts:false,backgroundColor:(getComputedStyle(m).getPropertyValue('--sea')||'').trim()||'#c9d9e0',minZoom:5,maxZoom:20,mapTypeId:'hybrid',styles:[],streetViewControl:true,streetViewControlOptions:{position:google.maps.ControlPosition.RIGHT_BOTTOM},restriction:{latLngBounds:{north:46.5,south:33.5,west:-14,east:7.5},strictBounds:false}});
-@@ -629,13 +642,13 @@
+@@ -629,16 +648,16 @@
      });
    });
  }
@@ -46,11 +52,15 @@
    var list=PJ.personajes.slice().sort(function(a,b){return pjYear(a)-pjYear(b)});
    var secs=[];list.forEach(function(p){var k=siglo(pjYear(p));var sec=secs[secs.length-1];if(!sec||sec.k!==k){sec={k:k,items:[]};secs.push(sec)}sec.items.push(p)});
 -  var html=secs.map(function(sec){return '<section class="pgrp"><div class="gh"><span class="sig">'+(sec.k.indexOf('Siglo ')===0?esc(sec.k.replace('Siglo ','')):'')+'</span><h2>'+esc(sec.k)+'</h2></div><div class="pgal">'+sec.items.map(function(p){return '<a class="pcard '+(p.vivo&&!p.vivo_autorizado?'vivo':'')+'" href="#explorar/personajes/'+p.id+'">'+ava(p)+'<span class="yr">'+esc(p.epoca)+'</span><h3>'+esc(p.nombre)+'</h3><span class="ep">'+esc(LUG[p.lugar]?LUG[p.lugar].nombre.split(' (')[0]:'')+'</span><span class="rol">'+esc(p.rol)+'</span>'+(p.vivo&&!p.vivo_autorizado?'<span class="lock">🔒 edición restringida</span>':'')+'</a>'}).join('')+'</div></section>'}).join('');
-+  var html=secs.map(function(sec){return '<section class="pgrp"><div class="gh"><span class="sig">'+(sec.k.indexOf('Siglo ')===0?esc(sec.k.replace('Siglo ','')):'')+'</span><h2>'+esc(sec.k)+'</h2></div><div class="pgal">'+sec.items.map(function(p){return '<a class="pcard '+(p.vivo&&!p.vivo_autorizado?'vivo':'')+'" href="#explorar/personajes/'+p.id+'">'+ava(p)+'<span class="yr">'+esc(p.epoca)+'</span><h3>'+marcaGrafia(esc(p.nombre))+'</h3><span class="ep">'+esc(LUG[p.lugar]?LUG[p.lugar].nombre.split(' (')[0]:'')+'</span><span class="rol">'+esc(p.rol)+'</span>'+(p.vivo&&!p.vivo_autorizado?'<span class="lock">🔒 edición restringida</span>':'')+'</a>'}).join('')+'</div></section>'}).join('');
++  var html=secs.map(function(sec){return '<section class="pgrp"><div class="gh"><span class="sig">'+(sec.k.indexOf('Siglo ')===0?esc(sec.k.replace('Siglo ','')):'')+'</span><h2>'+esc(sec.k)+'</h2></div><div class="pgal">'+sec.items.map(function(p){return '<a class="pcard '+(p.vivo&&!p.vivo_autorizado?'vivo':'')+'" href="#explorar/personajes/'+p.id+'">'+ava(p)+'<span class="yr">'+esc(p.epoca)+'</span><h3>'+marcaGrafia(esc(p.nombre))+'</h3>'+pjApePill(p)+'<span class="ep">'+esc(LUG[p.lugar]?LUG[p.lugar].nombre.split(' (')[0]:'')+'</span><span class="rol">'+esc(p.rol)+'</span>'+(p.vivo&&!p.vivo_autorizado?'<span class="lock">🔒 edición restringida</span>':'')+'</a>'}).join('')+'</div></section>'}).join('');
    var venus=(PJ.grupos||[]).filter(function(gr){return gr.id==='venus'})[0];
    var vbox=venus?'<div class="venus-box"><div class="vv">'+(venus.ids||[]).map(function(i){return PJ_BY[i]?ava(PJ_BY[i]):''}).join('')+'</div><div><h3>'+esc(venus.titulo)+'</h3><p>'+enrich(esc(venus.texto))+'</p><div class="chips">'+(venus.ids||[]).map(function(i){var q=PJ_BY[i];return q?'<a class="chip" href="#explorar/personajes/'+i+'">'+esc(q.nombre)+'</a>':''}).join('')+'</div></div></div>':'';
-   return subnav('personajes')+'<div class="gal-hero"><div><div class="eyebrow" style="margin-bottom:6px">'+(NARR?esc(NRU.galeriaEyebrow||''):'Los rostros de la investigación · en orden cronológico')+'</div><h1 style="font-size:34px;margin-bottom:10px">'+(NARR?esc(NRU.galeriaTitulo||'Personajes'):'Personajes del árbol Azabarte')+'</h1><div class="pj-aviso" style="margin-bottom:0">'+(NARR?esc(NRU.galeriaAviso||PJ.aviso):esc(PJ.aviso)+' Los retratos hechos a partir de fotografías reales conservan los rasgos de la persona y se indican como tales.')+'</div></div>'+emblemaHtml()+'</div>'+(PJ.personajes.some(function(x){return D.vocesOn&&x.voz&&x.voz.clip&&x.video})?'<div class="caps-tools"><span>Al pasar el ratón, los personajes cobran vida y hablan</span><button type="button" class="chip '+(store.get('az_sound',false)?'on':'')+'" id="capSound">'+(store.get('az_sound',false)?'🔊 Sonido activado':'🔇 Sin sonido')+'</button></div>':'')+html+vbox+(MON.monumentos.length?'<h2 style="font-size:26px;margin-bottom:4px">El pueblo de los retratos</h2><p class="muted" style="margin-bottom:10px;font-size:13.5px">Los edificios que aparecen al fondo, con sus fechas contrastadas. <a href="#leer/pueblo" style="color:var(--gold-deep)">Leer el capítulo del pueblo →</a></p><div class="mon-strip">'+MON.monumentos.filter(function(m){return (m.zona||'pedroneras')==='pedroneras'}).map(function(m){var img=monImg(m.id);var vd=monVid(m.id);return img?'<a href="#leer/pueblo" class="'+(vd?'lam':'')+'">'+lamHtml(img,vd,'')+'<span>'+esc(m.titulo)+'</span><small>'+esc(m.siglo)+'</small></a>':''}).join('')+'</div>':'')+
-@@ -646,7 +659,7 @@
+-  return subnav('personajes')+'<div class="gal-hero"><div><div class="eyebrow" style="margin-bottom:6px">'+(NARR?esc(NRU.galeriaEyebrow||''):'Los rostros de la investigación · en orden cronológico')+'</div><h1 style="font-size:34px;margin-bottom:10px">'+(NARR?esc(NRU.galeriaTitulo||'Personajes'):'Personajes del árbol Azabarte')+'</h1><div class="pj-aviso" style="margin-bottom:0">'+(NARR?esc(NRU.galeriaAviso||PJ.aviso):esc(PJ.aviso)+' Los retratos hechos a partir de fotografías reales conservan los rasgos de la persona y se indican como tales.')+'</div></div>'+emblemaHtml()+'</div>'+(PJ.personajes.some(function(x){return D.vocesOn&&x.voz&&x.voz.clip&&x.video})?'<div class="caps-tools"><span>Al pasar el ratón, los personajes cobran vida y hablan</span><button type="button" class="chip '+(store.get('az_sound',false)?'on':'')+'" id="capSound">'+(store.get('az_sound',false)?'🔊 Sonido activado':'🔇 Sin sonido')+'</button></div>':'')+html+vbox+(MON.monumentos.length?'<h2 style="font-size:26px;margin-bottom:4px">El pueblo de los retratos</h2><p class="muted" style="margin-bottom:10px;font-size:13.5px">Los edificios que aparecen al fondo, con sus fechas contrastadas. <a href="#leer/pueblo" style="color:var(--gold-deep)">Leer el capítulo del pueblo →</a></p><div class="mon-strip">'+MON.monumentos.filter(function(m){return (m.zona||'pedroneras')==='pedroneras'}).map(function(m){var img=monImg(m.id);var vd=monVid(m.id);return img?'<a href="#leer/pueblo" class="'+(vd?'lam':'')+'">'+lamHtml(img,vd,'')+'<span>'+esc(m.titulo)+'</span><small>'+esc(m.siglo)+'</small></a>':''}).join('')+'</div>':'')+
++  return subnav('personajes')+'<div class="gal-hero"><div><div class="eyebrow" style="margin-bottom:6px">'+(NARR?esc(NRU.galeriaEyebrow||''):'Los rostros de la investigación · en orden cronológico')+'</div><h1 style="font-size:34px;margin-bottom:10px">'+(NARR?esc(NRU.galeriaTitulo||'Personajes'):'Personajes del árbol Azabarte')+'</h1><div class="pj-aviso" style="margin-bottom:0">'+(NARR?esc(NRU.galeriaAviso||PJ.aviso):esc(PJ.aviso)+' Los retratos hechos a partir de fotografías reales conservan los rasgos de la persona y se indican como tales.')+'</div>'+PJ_APE_LEYENDA+'</div>'+emblemaHtml()+'</div>'+(PJ.personajes.some(function(x){return D.vocesOn&&x.voz&&x.voz.clip&&x.video})?'<div class="caps-tools"><span>Al pasar el ratón, los personajes cobran vida y hablan</span><button type="button" class="chip '+(store.get('az_sound',false)?'on':'')+'" id="capSound">'+(store.get('az_sound',false)?'🔊 Sonido activado':'🔇 Sin sonido')+'</button></div>':'')+html+vbox+(MON.monumentos.length?'<h2 style="font-size:26px;margin-bottom:4px">El pueblo de los retratos</h2><p class="muted" style="margin-bottom:10px;font-size:13.5px">Los edificios que aparecen al fondo, con sus fechas contrastadas. <a href="#leer/pueblo" style="color:var(--gold-deep)">Leer el capítulo del pueblo →</a></p><div class="mon-strip">'+MON.monumentos.filter(function(m){return (m.zona||'pedroneras')==='pedroneras'}).map(function(m){var img=monImg(m.id);var vd=monVid(m.id);return img?'<a href="#leer/pueblo" class="'+(vd?'lam':'')+'">'+lamHtml(img,vd,'')+'<span>'+esc(m.titulo)+'</span><small>'+esc(m.siglo)+'</small></a>':''}).join('')+'</div>':'')+
+     '<h2 style="font-size:26px;margin-bottom:12px">Dónde nacieron, dónde está el apellido</h2>'+mapaHtml(null,'esp');
+ }
+ function viewPersonaje(id){
+@@ -646,7 +665,7 @@
    var c=byId[p.id]||{}; var ms=mentionsOf[p.id]||[]; var l=LUG[p.lugar]; var f=null; var tk=null;
    var mp=matchPersona(p.nombre.replace(/[«»\[\]]/g,''));
    D.arbol.generaciones.forEach(function(gen){gen.grupos.forEach(function(gr){gr.personas.forEach(function(x){if(!f&&x.personaId===p.id){f={x:x,gen:gen,gr:gr};tk=treeKey(x)}})})});
@@ -59,7 +69,7 @@
    var nac=(p.vivo&&tr.unlocked&&p.restringido&&p.restringido.nacimiento)?p.restringido.nacimiento:p.nacimiento;var dates='<div class="pj-dates"><div><b>Nacimiento</b><span>'+enrich(esc(nac||'—'))+'</span></div>'+(p.hito?'<div><b>Hito documental</b><span>'+enrich(esc(p.hito))+'</span></div>':'')+'<div><b>Defunción</b><span>'+enrich(esc(p.defuncion||'—'))+'</span></div></div>';
    var kin='<div class="kin"><h4>Son sus parientes…</h4>'+(p.parientes||[]).map(function(k){var q=PJ_BY[k.id]||byId[k.id];if(!q)return '';var n=q.nombre||q['Nombre normalizado'];return '<a href="'+pjHref(k.id)+'">'+ava(PJ_BY[k.id]||{nombre:n},'sm')+'<div><b>'+esc(n)+'</b><span>'+esc(NARR?relNarr(k.rel):k.rel)+(PJ_BY[k.id]||NARR?'':' · expediente '+k.id)+'</span></div></a>'}).join('')+'</div>';
    var restr=p.vivo?'<div class="pj-restr"><span>🔒</span><div><b>Persona viva.</b> '+(tr.unlocked?'Edición restringida activa: se muestran los datos aportados por la familia.':(p.vivo_autorizado?'Su retrato y esta semblanza breve se publican con autorización expresa de la familia; la fecha, la localidad y la profesión siguen reservadas a la edición con contraseña.':'En la edición pública solo constan nombre y relación familiar. La fecha y la fotografía se muestran con la contraseña de investigador.'))+'</div></div>':'';var alav=(p.grupo==='alava')?'<div class="alava-aviso">Serie alavesa del apellido: sin relación acreditada con Las Pedroñeras. Contexto documentado, no antepasado.</div>':'';var capt=p.foto==='real'?'Retrato a partir de fotografía real<br>ilustración fiel a sus rasgos':p.foto==='recuerdo'?'Retrato de juventud<br>reconstrucción a partir del recuerdo de la familia':(p.foto==='pendiente'?'Retrato pendiente<br>se hará a partir de su fotografía':'Retrato imaginado<br>ilustración, no documento');
-@@ -666,7 +679,7 @@
+@@ -666,7 +685,7 @@
  function nrNombre(id){var q=PJ_BY[id]||byId[id];return q?(q.nombre||q['Nombre normalizado']||id):id}
  function nrRol(id){var q=PJ_BY[id];if(q)return q.rol||q.epoca||'';var c=byId[id];return c?(c['Periodo / fecha']||''):''}
  function nrHref(id){return PJ_BY[id]?'#explorar/personajes/'+id:(byId[id]?'#explorar/personas/'+id:null)}
@@ -68,7 +78,7 @@
  function nrParas(ps,dc){return (ps||[]).map(function(t,i){return '<p'+(dc&&i===0?' class="dc"':'')+'>'+enrich(esc(t))+'</p>'}).join('')}
  function relNarr(rel){var r=String(rel||'').split('·')[0].trim();var m={'Progenitor/a':'Padre o madre','Hijo/a':'Hijo o hija','Hermano/a':'Hermano o hermana','Cónyuge':'Cónyuge','Posible misma identidad':'Probablemente la misma persona','Posible parentesco':'Pariente posible','Identidad descartada':'No es la misma persona','papel_por_aclarar':'Papel por aclarar'};return m[r]||r}
  function nrMonGrid(zona){return '<div class="mon-grid">'+MON.monumentos.filter(function(m){return (m.zona||'pedroneras')===zona}).map(function(m){var img=monImg(m.id);var vd=monVid(m.id);return '<figure class="mon'+(m.id==='escudo'?' vert':'')+(vd?' lam':'')+'">'+(img?lamHtml(img,vd,m.titulo):'')+'<div class="mb"><h3>'+esc(m.titulo)+'</h3><span class="sig">'+esc(m.siglo)+'</span><p>'+esc(m.texto)+'</p>'+(m.familia?'<div class="fam">'+esc(m.familia)+'</div>':'')+'</div></figure>'}).join('')+'</div>'}
-@@ -2155,7 +2168,7 @@
+@@ -2155,7 +2174,7 @@
    if(!A) return '<div class="section-head"><h2>Rastro en Álava</h2><p>Sin datos.</p></div>';
    var pjChip = function(id){
      var p = PJ_BY[id]; if(!p) return '';
@@ -77,7 +87,7 @@
    };
  
    var stats = '<div class="grid cols-4">'+
-@@ -2646,7 +2659,7 @@
+@@ -2646,7 +2665,7 @@
      '<div class="section-head" style="margin-top:22px;"><div class="eyebrow">Los rostros · '+rostros.length+' fichas</div><h2 style="font-size:18px;">Las personas de la serie alavesa</h2>'+
      '<p>Retratos imaginados: ilustraciones, no documentos. Contexto documentado del apellido en su comarca, no antepasados acreditados de Las Pedroñeras.</p></div>'+
      '<div class="strip">'+rostros.map(function(p){
@@ -86,7 +96,7 @@
      }).join('')+'</div>' : '';
  
    var intro = '<p class="parte-intro">Hasta ahora, que «Zabarte» fuese un apellido vasco antiguo era una afirmación de repertorio. El 4 de septiembre de 2026 dejó de serlo: el índice sacramental del Archivo Histórico Diocesano de Vitoria lo documenta de forma continua durante dos siglos y medio. Lo que sigue faltando no es el apellido, es la persona que lo trajo.</p>';
-@@ -3933,7 +3946,7 @@
+@@ -3933,7 +3952,7 @@
    function nombreDe(id){var pj=PJ_BY[id];if(pj)return pj.corto||pj.nombre;var p=byId[id];if(!p){var c=colDe(id);return c?(c.corto||c.nombre||''):''}var n=String(p['Nombre normalizado']||''),c=n.replace(/\s*\[[^\]]*\]\s*/g,' ').replace(/\s*\(.*$/,'').trim();return c||n||id}
    function chipPersona(id,rol){
      var pj=PJ_BY[id],p=byId[id],t=rol?' title="'+esc(rol)+'"':'';
@@ -95,16 +105,25 @@
      if(p)return '<a class="bt-chip bt-per" href="#explorar/personas/'+esc(id)+'"'+t+'>'+esc(nombreDe(id))+'</a>';
      if(pj)return '<span class="bt-chip bt-per"'+t+'>'+esc(pj.corto||pj.nombre)+'</span>';
      /* quien no está en el censo pero sí en «Quiénes lo hacen posible» (COL-SCG, don Serafín) */
-@@ -5895,7 +5908,7 @@
+@@ -5895,7 +5914,7 @@
  /* ---------- galería ---------- */
  function pnCuantas(n){var L=['','Una persona','Dos personas','Tres personas','Cuatro personas','Cinco personas','Seis personas','Siete personas','Ocho personas','Nueve personas','Diez personas'];return L[n]||n+' personas'}
  function pnCard(p){var viv=p.vivo&&!p.vivo_autorizado;var lug=pnNombreLugar(p.lugar);
 -  return '<a class="pcard pn-card'+(viv?' vivo':'')+'" href="#explorar/personajes/'+esc(p.id)+'">'+ava(p)+'<span class="yr">'+esc(p.epoca||'')+'</span><h4 class="pn-card-h">'+esc(p.nombre)+'</h4><span class="ep">'+esc(lug)+'</span><span class="rol">'+esc(p.rol||'')+'</span>'+(viv?'<span class="lock">🔒 edición restringida</span>':pnRotHtml(p))+'</a>'}
-+  return '<a class="pcard pn-card'+(viv?' vivo':'')+'" href="#explorar/personajes/'+esc(p.id)+'">'+ava(p)+'<span class="yr">'+esc(p.epoca||'')+'</span><h4 class="pn-card-h">'+marcaGrafia(esc(p.nombre))+'</h4><span class="ep">'+esc(lug)+'</span><span class="rol">'+esc(p.rol||'')+'</span>'+(viv?'<span class="lock">🔒 edición restringida</span>':pnRotHtml(p))+'</a>'}
++  return '<a class="pcard pn-card'+(viv?' vivo':'')+'" href="#explorar/personajes/'+esc(p.id)+'">'+ava(p)+'<span class="yr">'+esc(p.epoca||'')+'</span><h4 class="pn-card-h">'+marcaGrafia(esc(p.nombre))+'</h4>'+pjApePill(p)+'<span class="ep">'+esc(lug)+'</span><span class="rol">'+esc(p.rol||'')+'</span>'+(viv?'<span class="lock">🔒 edición restringida</span>':pnRotHtml(p))+'</a>'}
  function pnSigloSec(k,items){return '<section class="pgrp pn-grp" aria-labelledby="pn-s-'+esc(k.replace(/\W+/g,''))+'"><div class="gh"><span class="sig" aria-hidden="true">'+(k.indexOf('Siglo ')===0?esc(k.replace('Siglo ','')):'')+'</span><h3 id="pn-s-'+esc(k.replace(/\W+/g,''))+'">'+esc(k)+'</h3></div><div class="pgal">'+items.map(pnCard).join('')+'</div></section>'}
  function pnGrupoSec(gr,items){var fuera=!!(gr.sinParentesco===true||PN_FUERA[gr.id]);var lam=gr.lamina||PN_LAM[gr.id];var img=lam?monImg(lam):null;
    var cap=null;var k=gr.capitulo||PN_CAP[gr.id];if(k){if(NARR){var ch=pnChap(k);if(ch)cap={t:ch.t,h:'#leer/'+k}}else{var ch2=pnChap(k);if(ch2)cap={t:ch2.t,h:'#leer/'+k};else if((NR.capitulos||{})[k])cap={t:NR.capitulos[k].t,h:'/#leer/'+k}}}
-@@ -6077,7 +6090,7 @@
+@@ -5915,7 +5934,7 @@
+   var saltos=[['pn-familia','La familia']].concat(ordA.map(function(id){return ['pn-g-'+id,PN_GR[id].titulo]}));
+   if(ordF.length)saltos.push(['pn-fuera','El apellido fuera de la familia']);
+   var nav=(ordA.length||ordF.length)?'<nav class="pn-saltos" aria-label="Partes de la galería">'+saltos.map(function(s){return '<a href="#explorar/personajes" data-scroll="'+s[0]+'">'+esc(s[1])+'</a>'}).join('')+'</nav>':'';
+-  var A='<div class="pn-parte" id="pn-familia"><h2>La familia de Las Pedroñeras</h2><p>Por orden de nacimiento, desde los primeros Azabarte del pueblo hasta hoy.</p></div>'+secs.map(function(s){return pnSigloSec(s.k,s.items)}).join('')+
++  var A='<div class="pn-parte" id="pn-familia"><h2>La familia de Las Pedroñeras</h2><p>Por orden de nacimiento, desde los primeros Azabarte del pueblo hasta hoy.</p>'+PJ_APE_LEYENDA+'</div>'+secs.map(function(s){return pnSigloSec(s.k,s.items)}).join('')+
+     ordA.map(function(id){return pnGrupoSec(PN_GR[id],apart[id])}).join('');
+   var B='';
+   if(ordF.length){
+@@ -6077,7 +6096,7 @@
    var wpx=Math.round(W*s),hpx=Math.round(H*s);
    var svg=D.mapaSvg.replace(/viewBox="[^"]*"/,'viewBox="'+vb+'"').replace('<svg ','<svg role="img" aria-labelledby="'+uid+'-'+M.id+'" width="'+wpx+'" height="'+hpx+'" preserveAspectRatio="xMidYMid meet" focusable="false" ').replace('class="esp"','class="esp pn-cm-svg"').replace('</svg>','<g class="pn-cm-capa">'+marcos+segs+mks+lbs+'</g></svg>');
    return '<figure class="pn-cm-m pn-cm-'+M.id+'" style="--pn-w:'+wpx+'px">'+svg+'<figcaption id="'+uid+'-'+M.id+'">'+esc(M.t)+'</figcaption></figure>'}
@@ -115,11 +134,14 @@
    var uid='pn-cm'+(++PN.cm);var E=pnCmEsquema(C),SK=E.solar,SL=pnLug(SK);
 --- a/public/index.html
 +++ b/public/index.html
-@@ -464,6 +464,7 @@
+@@ -464,6 +464,10 @@
  .por.speaking .pj-voz blockquote{color:var(--t9)}
  .pj-hero h1{font-size:40px;font-weight:500;margin:6px 0 12px}
  .pj-hero h1 em{font-family:var(--hist);font-style:normal;color:var(--gold-deep)}
 +.pcard h3 em,.pn-card-h em,.ape em,.legacy .strip a .ape em{display:inline;font-style:normal;font-size:inherit;color:var(--gold-deep);margin:0}
++.pj-ape{display:inline-block;font:600 10.5px/1.7 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:0 9px;border-radius:999px;background:var(--gold-soft);color:var(--gold-deep);margin:2px 0 1px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
++.pj-ape.otro{background:transparent;color:var(--t5);border:1px solid var(--line-2);text-transform:none;letter-spacing:.02em;font-weight:500}
++.pj-ape-leyenda{font-family:var(--sans);font-size:12.5px;line-height:1.7;color:var(--t7);margin:10px 0 0}
  .pj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
  .pj-lede{font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--t7);margin-bottom:18px}
  .pj-dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:16px}

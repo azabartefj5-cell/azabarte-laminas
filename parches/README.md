@@ -31,12 +31,21 @@ Cambios en `public/app.js`:
   pasan a mostrar el nombre completo.
 - Galería (`viewPersonajes` y `pnCard`) y título de la ficha: el nombre completo con
   la grafía resaltada.
+- Galería: cada retrato lleva bajo el nombre una etiqueta de apellido (`pjApePill`).
+  En dorado, la grafía del apellido familiar que aparece en su nombre (Azabarte,
+  Zabarte, Çabarte, Zauartte… y las dos si lleva dos, como «Azabarte · Azavarte»);
+  en gris, el apellido de quien entra en la historia sin llevarlo (Galindo, Navarro
+  Fides, Arellano Castillo…). Una leyenda al inicio de la galería explica los dos
+  colores.
 
-Cambio en `public/index.html` (una regla de CSS junto a `.pj-hero h1 em`):
+Cambios en `public/index.html` (cuatro reglas de CSS junto a `.pj-hero h1 em`):
 
     .pcard h3 em,.pn-card-h em,.ape em,.legacy .strip a .ape em{display:inline;font-style:normal;font-size:inherit;color:var(--gold-deep);margin:0}
+    .pj-ape{display:inline-block;font:600 10.5px/1.7 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:0 9px;border-radius:999px;background:var(--gold-soft);color:var(--gold-deep);margin:2px 0 1px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .pj-ape.otro{background:transparent;color:var(--t5);border:1px solid var(--line-2);text-transform:none;letter-spacing:.02em;font-weight:500}
+    .pj-ape-leyenda{font-family:var(--sans);font-size:12.5px;line-height:1.7;color:var(--t7);margin:10px 0 0}
 
-Si `index.html` se genera a partir de una plantilla, añadir esa regla en la plantilla.
+Si `index.html` se genera a partir de una plantilla, añadir esas reglas en la plantilla.
 
 ## Cómo aplicar
 
