@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 76,
- "total_caracteres": 280854,
+ "total_caracteres": 281050,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -1416,7 +1416,7 @@
     },
     {
      "k": "p",
-     "x": "En la comarca hubo además otro Martín del apellido. El 5 de julio de 1557, veinte años después de la ejecutoria, se bautizó en la parroquia de San Salvador de La Roda, una villa hoy de Albacete a unos cincuenta kilómetros de Barchín, a Juan, hijo de Martín de Zabarte y de su mujer, Ana López; fue su padrino Diego de Alarcón, regidor de la villa. El cura escribió el apellido con ce cedilla, igual que los escribanos de Barchín. Aquel Martín pudo ser el mozo u otro hombre del mismo nombre, pero la mujer de Martín el mozo se llamaba Sabina, no Ana, y mientras otro papel no lo aclare no se pueden tener por el mismo hombre. En 1581 un Juan de Çabarte firmó como testigo en una boda de la villa, y cinco años después, en 1586, el obispo de Cuenca confirmó en La Roda a Ana, hija de Juan de Zabarte y de Isabel Martínez, con toda probabilidad hija de aquel testigo: había allí otra familia del apellido. Lo que sí dicen aquellos papeles es que el apellido andaba ya por toda aquella tierra. En el siglo siguiente, en cambio, ningún Zabarte volvió a bautizar a un hijo en La Roda, y en los libros de bodas que se conservan ninguno se casa ni casa a sus hijos."
+     "x": "En la comarca hubo además otro Martín del apellido. El 5 de julio de 1557, veinte años después de la ejecutoria, se bautizó en la parroquia de San Salvador de La Roda, una villa hoy de Albacete a unos cincuenta kilómetros de Barchín, a Juan, hijo de Martín de Zabarte y de su mujer, Ana López; fue su padrino Diego de Alarcón, regidor de la villa. El cura escribió el apellido con ce cedilla, igual que los escribanos de Barchín. Aquel Martín pudo ser el mozo u otro hombre del mismo nombre, pero la mujer de Martín el mozo se llamaba Sabina, no Ana, y mientras otro papel no lo aclare no se pueden tener por el mismo hombre. En 1581 un Juan de Zabarte, con el apellido escrito también con ce cedilla, fue testigo de una boda en la villa. Cinco años después, en 1586, el obispo de Cuenca confirmó en La Roda a Ana, hija de Juan de Zabarte y de Isabel Martínez, que con toda probabilidad era hija de aquel testigo: había allí otra familia del apellido. Lo que sí dicen aquellos papeles es que el apellido andaba ya por toda aquella tierra. En el siglo siguiente, en cambio, ningún Zabarte volvió a bautizar a un hijo en La Roda, y en los libros de bodas que se han podido leer ninguno se casó allí ni casó a sus hijos."
     },
     {
      "k": "h",
@@ -1435,8 +1435,8 @@
      "x": "La sentencia de 1537 guarda todavía muchas hojas sin leer, y quizá describa la casa de la que salió la familia. Pero ningún papel une a estos Zabarte con la familia de Las Pedroñeras, y por eso Martín de Zabarte no se cuenta aquí como antepasado de nadie, sino como lo que es: la prueba de que el camino entre el valle del Deba y la Mancha de Cuenca existía, y se andaba, muy pronto."
     }
    ],
-   "huella": "3994b47e6a3f5d2baf8870e95a443c12795f3e51087eb7042a6b6d7652a90f64",
-   "chars": 7703
+   "huella": "c1d0b9cfe663ef5fab2876c0f42d014f26681fcfcadfdc689983bee894957c73",
+   "chars": 7762
   },
   {
    "clave": "cap:canada",
@@ -1638,15 +1638,15 @@
     },
     {
      "k": "p",
-     "x": "De los tres tramos del camino, uno tiene papeles y dos esperan el suyo. Los documentos que pueden decidirlos se conocen, y casi todos están en Cuenca. En el Archivo Diocesano pueden estar los libros de Buenache, que en 1827 ya estaban numerados, así que los más antiguos se pueden pedir por su número, y quizá los de Barchín. Allí pueden estar también el libro de bautismos de Cañada Juncosa que empezaba en 1715, que en 1827 todavía guardaba el cura de la aldea, y los expedientes de la ordenación de Rodrigo Zabarte y de la capellanía de los Cantero, con la lista de parientes que tenían derecho a ella. En los libros de Belmonte o en los de Las Pedroñeras puede estar la boda de los padres de Pedro. En Madrid, el testamento de Rodrigo. La Roda, donde el apellido vivía en el siglo dieciséis, ya no guarda nada más en internet: sus bautismos del siglo siguiente y sus bodas se han leído enteros y no lo nombran después de 1586. Y en Granada, las hojas todavía sin leer de la sentencia de 1537."
+     "x": "De los tres tramos del camino, uno tiene papeles y dos esperan el suyo. Los documentos que pueden decidirlos se conocen, y casi todos están en Cuenca. En el Archivo Diocesano pueden estar los libros de Buenache, que en 1827 ya estaban numerados, así que los más antiguos se pueden pedir por su número, y quizá los de Barchín. Allí pueden estar también el libro de bautismos de Cañada Juncosa que empezaba en 1715, que en 1827 todavía guardaba el cura de la aldea, y los expedientes de la ordenación de Rodrigo Zabarte y de la capellanía de los Cantero, con la lista de parientes que tenían derecho a ella. En los libros de Belmonte o en los de Las Pedroñeras puede estar la boda de los padres de Pedro. En Madrid, el testamento de Rodrigo. En La Roda, donde el apellido vivía en el siglo dieciséis, ya se han leído sus bautismos del siglo siguiente y sus bodas: después de 1586 ningún Zabarte bautiza allí a un hijo ni se casa, y solo quedan por mirar los testigos de algunas bodas, unas listas de confirmación posteriores y unas pocas páginas desvaídas de bautismos. Y en Granada, las hojas todavía sin leer de la sentencia de 1537."
     },
     {
      "k": "p",
      "x": "Quinientos años después el caserío sigue en su sitio, y la calle Fray Luis de León también. Entre uno y otra quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro."
     }
    ],
-   "huella": "8fdf9113dfe18b92fde7cbac7903a4974bdcc0d1ce4e8b49cf26a3625166723f",
-   "chars": 7636
+   "huella": "a91896a226afb6eefe79910b21cef7b75f75c118798c552f1dada9fcfa1033d0",
+   "chars": 7773
   },
   {
    "clave": "cap:marcharon",
