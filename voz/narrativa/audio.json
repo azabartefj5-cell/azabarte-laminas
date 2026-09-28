@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@98902a7dd6bfa58aabb5703888394c3d6aca766f/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@2185dce3ad3d9247bb23f22627ee9cd89ca83ce5/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -164,6 +164,47 @@
    "titulo": "Un caserío llamado Zabarte",
    "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
    "generado": "2026-09-28T07:31:43Z"
+  },
+  "cap:cronologia": {
+   "src": "mp3/cap-cronologia.mp3",
+   "huella": "79ca94570f1590bccca68bfa50e13ed883ee05c2b164c266b63df644f290a32b",
+   "marcas": [
+    0.35,
+    4.41,
+    32.79,
+    37.37,
+    69.15,
+    103.43,
+    107.29,
+    129.36,
+    150.78,
+    170.83,
+    174.9,
+    197.43,
+    225.75,
+    253.71,
+    256.69,
+    296.57,
+    330.34,
+    356.63,
+    359.36,
+    396.1,
+    440.47,
+    463.54,
+    467.02,
+    492.84,
+    523.45,
+    527.0,
+    562.02,
+    580.12,
+    583.38,
+    617.35
+   ],
+   "dur": 645.01,
+   "bytes": 5161056,
+   "titulo": "Pedro, el primer Azabarte conocido del pueblo",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-28T23:18:22Z"
   }
  }
 }
