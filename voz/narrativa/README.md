@@ -15,15 +15,21 @@ del sistema. Aquí se generan esas pistas y su manifiesto.
 
 ## Cómo se pone en marcha
 
-1. **Añadir la clave de voz.** En GitHub, en este repositorio: *Settings → Secrets and variables → Actions →
-   New repository secret*. Nombre `GEMINI_API_KEY` y como valor una clave de Google AI Studio
+1. **Añadir la clave de voz como secreto, nunca en un fichero.** El repositorio es público: una clave escrita
+   en él quedaría a la vista de cualquiera. En GitHub, en este repositorio: *Settings → Secrets and variables →
+   Actions → New repository secret*. Nombre `GEMINI_API_KEY` y como valor la clave de Google AI Studio
    (aistudio.google.com → *Get API key*). Sirve también `OPENROUTER_API_KEY` con una clave de OpenRouter: usa
    el mismo modelo de Google y se paga con el crédito de OpenRouter.
 2. **Lanzar la locución.** *Actions → Locutar la edición narrativa → Run workflow*. Si no se lanza a mano, la
-   ejecución diaria la hace sola. Con la capa gratuita de Google la cuota diaria no da para todo de una vez:
-   cada día se continúa donde se quedó. Con clave de pago u OpenRouter termina en una sola ejecución.
+   ejecución diaria (9:17 UTC, después de que Google reinicie la cuota) la hace sola y continúa cada día donde
+   se quedó.
 3. **Aplicar el parche de la web una sola vez** (ver abajo) y desplegar como de costumbre. A partir de ahí las
    grabaciones nuevas o regeneradas aparecen solas, sin volver a desplegar.
+
+**Cuánto tarda.** La capa gratuita de Google da solo 10 peticiones al día a `gemini-3.8-flash-tts`. Por eso el
+generador pide varios párrafos seguidos en cada petición («tramos»): la edición completa son unas 106
+peticiones, unos 11 días de ejecuciones diarias. Activando la facturación en el proyecto de Google de la clave
+(el propio aviso de límite enlaza a ai.dev/rate-limit), el límite sube y todo termina en una sola ejecución.
 
 Coste aproximado con pago por uso, a precios de septiembre de 2026 (Google duplica el precio el 1 de enero de 2027):
 
@@ -37,9 +43,15 @@ Coste aproximado con pago por uso, a precios de septiembre de 2026 (Google dupli
 1. `extraer_textos.mjs` descarga la página publicada y extrae los textos **con las mismas funciones de la web**
    (bloque `VZ-TEXTO` del módulo `voz.js`): título, entradilla, títulos de sección y párrafos de cada capítulo,
    y nombre, entradilla y relato de cada personaje. Calcula la huella SHA-256 de cada texto.
-2. `locutar.py` locuta solo lo nuevo o lo que ha cambiado (huella distinta), bloque a bloque, une los bloques
-   con pausas, iguala el volumen, guarda el MP3 y anota en `audio.json` el segundo en que empieza cada bloque
-   (`marcas`). Esas marcas son las que mueven el resaltado y el desplazamiento de la página.
+2. `locutar.py` locuta solo lo nuevo o lo que ha cambiado (huella distinta). Agrupa los bloques en tramos de
+   hasta unos 5 500 caracteres, separados por una pausa larga explícita, y pide cada tramo de una vez: menos
+   peticiones y la misma voz de principio a fin, sin cambios de timbre entre párrafos. Después parte el audio
+   por los silencios (eligiendo, para cada frontera, el silencio más largo cerca de donde debería caer según el
+   texto; nunca corta dentro de la voz), une los bloques con pausas uniformes, iguala el volumen, guarda el MP3
+   y anota en `audio.json` el segundo en que empieza cada bloque (`marcas`). Esas marcas son las que mueven el
+   resaltado y el desplazamiento de la página. Un tramo solo se acepta si su ritmo es de lectura normal y cada
+   párrafo dura lo que le corresponde (así no pasa un párrafo saltado ni un final cortado); si no, se pide una
+   vez en dos mitades y, si tampoco sale, la pista queda pendiente para otro día sin gastar más cuota.
 3. La Action publica los MP3, clava la dirección del CDN al commit y purga la caché de `audio.json` en jsDelivr.
 
 La web solo usa una grabación si su huella coincide con el texto que muestra. Si se edita un capítulo, ese
@@ -52,7 +64,11 @@ capítulo vuelve a sonar con la voz del navegador hasta que la ejecución diaria
   «voz» al lanzar la Action a mano o con la variable de repositorio `VOZ_NOMBRE`. La voz elegida queda anotada
   en `audio.json` y las ejecuciones siguientes la conservan. Cambiarla relocuta todo.
 - La dirección (acento castellano peninsular, tono de narrador de documental, ritmo pausado) está en
-  `ESTILO_BASE` dentro de `locutar.py`. Cambiarla también relocuta todo.
+  `ESTILO_BASE` dentro de `locutar.py`, y además se fija el idioma de la voz a `es-ES` y una semilla de
+  generación para que los tramos suenen igual. Cambiar cualquiera de estas cosas relocuta todo.
+- Prueba del 28-09-2026 con la clave real, evaluada por Gemini escuchando el audio: acento castellano
+  peninsular con distinción c/z, lectura literal al 100 % y naturalidad de 8 a 9,5 sobre 10. Generando párrafo
+  a párrafo el timbre variaba entre párrafos; por eso se pasó a tramos.
 - Cada bloque se comprueba por su duración, contando los años como palabras: si la voz se come texto o añade
   silencios, se repite, y nunca se publica una toma muda. Un bloque que no sale deja su pista pendiente y se
   sigue con las demás.
@@ -71,9 +87,10 @@ python voz/narrativa/locutar.py --motor gemini                      # todo lo pe
 python voz/narrativa/locutar.py --motor prueba --salida /tmp/prueba # sin clave: tonos, para probar
 ```
 
-Opciones útiles: `--voz`, `--hilos` (peticiones a la vez, 4 por defecto), `--rpm` (tope de peticiones por
-minuto), `--forzar`, `--max-pistas`, `--podar` (quita las pistas que ya no están en la web; se frena si serían
-muchas, salvo con `--forzar-poda`).
+Opciones útiles: `--voz`, `--modo tramos|bloques`, `--max-tramo` (caracteres por petición), `--idioma`,
+`--semilla`, `--hilos` (peticiones a la vez, 4 por defecto), `--rpm` (tope de peticiones por minuto),
+`--forzar`, `--max-pistas`, `--podar` (quita las pistas que ya no están en la web; se frena si serían muchas,
+salvo con `--forzar-poda`).
 
 Salvaguardas: el extractor y el generador se niegan a trabajar si la página no es la edición narrativa o llega
 sin capítulos. Así un despliegue equivocado de la web no borra las grabaciones. Si la subida falla, la Action

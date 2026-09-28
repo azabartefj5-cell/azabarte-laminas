@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 76,
- "total_caracteres": 269581,
+ "total_caracteres": 280854,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -847,7 +847,7 @@
     },
     {
      "k": "lede",
-     "x": "Los papeles decían que Francisco y Vicenta habían dejado tres hijos. La familia recordaba otra cosa, y lo que recordaba encaja con los papeles. Este capítulo recoge lo que se recuerda en la calle donde vivieron todos, contado por quienes lo oyeron a sus mayores: cuatro conversaciones y una carta escrita a mano, entre agosto y septiembre de 2026, que devolvieron a la historia dos hijas olvidadas, varios niños que no llegaron a crecer, una nieta llamada Camila y un nombre que nadie sabía escribir."
+     "x": "Los papeles decían que Francisco y Vicenta habían dejado tres hijos. La familia recordaba otra cosa, y lo que recordaba encaja con los papeles. Este capítulo recoge lo que se recuerda en la calle donde vivieron todos, contado por quienes lo oyeron a sus mayores: cuatro conversaciones y una carta escrita a mano, entre agosto y septiembre de 2026, que devolvieron a la historia dos hijas olvidadas, varios niños que no llegaron a crecer, una nieta llamada Camila y un nombre que nadie sabía escribir. Al final, un periódico de la guerra civil viene a confirmar en lo esencial otro de esos recuerdos: el de Venus, el hijo, en el frente de Madrid."
     },
     {
      "k": "h",
@@ -919,6 +919,30 @@
     },
     {
      "k": "h",
+     "x": "Los hijos de Venus en la guerra"
+    },
+    {
+     "k": "p",
+     "x": "La guerra civil empezó en julio de 1936, y Las Pedroñeras quedó en la zona de la República. Aquel verano el pueblo mandó a Madrid un convoy de siete camiones con víveres, y el 3 de septiembre un diario de la capital, El Liberal, publicó lo que había dado la sección del pueblo del sindicato socialista de los trabajadores de la tierra «para los campesinos voluntarios del frente»: cincuenta y cinco ovejas, veinte arrobas de ajos, seis mil kilos de harina, quinientos pollos, dos mil quinientos huevos y ocho jamones, entre otras cosas. Muchos mozos del pueblo fueron a aquel frente, y no todos volvieron. En 1937 un periódico de Cuenca daba la noticia de la muerte de Abilio Gómez, un carpintero de Las Pedroñeras, en el frente de Madrid. Y en la lista de los muertos del pueblo en la guerra que ha reunido un historiador local figura Jesús Araque Azabarte, «de la Pronuana». La familia recuerda que un hijo de la Pronuana murió en la guerra, y con toda probabilidad es él, primo hermano de los hijos de Venus."
+    },
+    {
+     "k": "p",
+     "x": "Según recuerda la familia, dos de los hijos de Venus estuvieron en ese frente: Venus y su mellizo Julián se fueron voluntarios a Madrid. Para Venus hay un papel que lo confirma en lo esencial. El 7 de noviembre de 1938, en el segundo aniversario de la defensa de la ciudad, el periódico de su brigada, «Escucha», repasó batallón por batallón a los hombres que la habían defendido en noviembre de 1936 y seguían en sus filas, y entre ellos nombra a «Venus Azabarte, hoy sargento». No da su segundo apellido ni dice que fuera voluntario, pero con un nombre que casi nadie llevaba fuera de esta casa es él con toda probabilidad. De Julián no ha aparecido ningún papel de la guerra misma."
+    },
+    {
+     "k": "p",
+     "x": "Emiliano, el pequeño, tenía catorce años cuando empezó la guerra, y la guerra terminó sin que lo llamaran a filas: el último llamamiento de la República, en enero de 1939, no llegó a los nacidos en 1922. La familia recuerda que, con unos diecisiete años, fue alguna vez hasta el frente de Madrid a llevar comida a sus hermanos. Si la edad es exacta, fue en las últimas semanas de la guerra, que en Madrid terminó el 28 de marzo de 1939."
+    },
+    {
+     "k": "p",
+     "x": "Después llegó la posguerra, y los papeles de aquellos años vuelven a nombrar a los hermanos, aunque ninguno con toda la claridad que haría falta. Un Francisco Azabarte Galindo, labrador de Las Pedroñeras nacido hacia 1915, que con toda probabilidad es Paco, el mayor de los varones, pasó de 1940 a 1942 por un batallón disciplinario de soldados trabajadores que trabajó en Navarra y después en Ceuta. En el Archivo General Militar de Guadalajara hay expedientes a nombre de Francisco y de Julián Azabarte Galindo, con toda probabilidad los dos hermanos, en una serie que reúne a soldados trabajadores, a los soldados que los custodiaban y a prisioneros, y que por eso no dice en qué condición estuvo cada uno. Y a nombre de Venus Azabarte Galindo hay dos fichas de 1940 de un tribunal especial que el nuevo régimen creó contra la masonería y el comunismo, que todavía no se han podido ver: mientras no se lean, no se sabe qué dicen de él."
+    },
+    {
+     "k": "p",
+     "x": "Lo que no aparece también cuenta. Ninguno de los hijos de Venus figura en el índice de los consejos de guerra de la posguerra que corresponde al pueblo, ni en los expedientes de responsabilidades políticas que publicó el Boletín Oficial del Estado entre 1939 y 1945, ni en las listas de fusilados y presos del pueblo. Julián, que según la familia murió muy joven, seguía vivo, si aquel expediente es suyo, cuando se abrió, así que su muerte hay que buscarla de 1937 en adelante. Los expedientes de Guadalajara, los papeles de la brigada de Venus y las inscripciones del registro civil del pueblo se pueden pedir, y son los papeles que pueden convertir en seguro lo que hoy es probable."
+    },
+    {
+     "k": "h",
      "x": "Las voces de esta historia"
     },
     {
@@ -927,7 +951,7 @@
     },
     {
      "k": "p",
-     "x": "Su hermano Francisco se sentó a escribir de su puño y letra una carta de dos caras, encabezada «Apreciable primo Francisco», donde puso nombre a los hermanos de la abuela Vicenta y escribió por primera vez el nombre de Pronuana. Detrás de los dos está el trabajo de su hermano Antonio, que había reunido por escrito la historia de cinco generaciones de la familia. Y el árbol genealógico que conserva la familia puso fechas y cónyuges a los ocho hijos de Venus."
+     "x": "Su hermano Francisco se sentó a escribir de su puño y letra una carta de dos caras, encabezada «Apreciable primo Francisco», donde puso nombre a los hermanos de la abuela Vicenta y escribió por primera vez el nombre de Pronuana. Detrás de los dos está el trabajo de su hermano Antonio, que había reunido por escrito la historia de cinco generaciones de la familia. Y el árbol genealógico que conserva la familia puso fechas y cónyuges a los ocho hijos de Venus. El recuerdo de Emiliano camino del frente lo ha traído su nieto Francisco Javier, el que ha reunido esta historia."
     },
     {
      "k": "h",
@@ -935,15 +959,15 @@
     },
     {
      "k": "p",
-     "x": "Nada de este capítulo está todavía en un documento. Es memoria, contada por quien la recibió de sus mayores, y así se guarda: con el nombre de quien lo cuenta y el de aquel a quien se lo oyó. Cuando dos recuerdos se contradicen, y a veces lo hacen, se conservan los dos. Cuando uno de ellos está escrito y fechado, como la carta de Francisco Gallardo Azabarte, es el que se tiene por vigente; pero eso no lo hace más verdadero, solo más firme."
+     "x": "Casi nada de este capítulo está todavía en un documento. Salvo los papeles de la guerra, es memoria, contada por quien la recibió de sus mayores, y así se guarda: con el nombre de quien lo cuenta y el de aquel a quien se lo oyó. Cuando dos recuerdos se contradicen, y a veces lo hacen, se conservan los dos. Cuando uno de ellos está escrito y fechado, como la carta de Francisco Gallardo Azabarte, es el que se tiene por vigente; pero eso no lo hace más verdadero, solo más firme."
     },
     {
      "k": "p",
      "x": "La memoria no prueba un parentesco. Dice dónde buscarlo, y explica lo que el papel calla. En el caso de Camila, el papel que lo confirmaría existe y se puede pedir: su inscripción en el Registro Civil de Las Pedroñeras, con el nombre de su madre escrito. Y hay otro más sencillo todavía, el nacimiento de una Isidora López Azabarte en 1899, que con toda probabilidad es su media hermana y nombraría a la madre de las dos. Cuando lleguen, este capítulo dejará de ser solo memoria."
     }
    ],
-   "huella": "8d315f7934ba78355e1940652c1cbf552c66031a1bec9b7b563d201efdaf646b",
-   "chars": 8992
+   "huella": "e1e174acf58b424a4cbc2a17bf05a7cde6fa62bad4ffe8c138c9cad9e53ccf39",
+   "chars": 13074
   },
   {
    "clave": "cap:actas",
@@ -1303,11 +1327,11 @@
     },
     {
      "k": "p",
-     "x": "Los documentos del origen del apellido se cuentan en sus capítulos, y aquí basta con saber cuáles son. Del caserío de Angiozar hay escrituras de escribanos de 1517 a 1738 y pleitos de 1632 a 1773. De los hidalgos de Barchín del Hoyo y de Buenache, la ejecutoria de 1537 y su confirmación de 1595, en Granada, y de La Roda, dos partidas de 1557 y 1586. De la familia de Cañada Juncosa, escrituras firmadas en Madrid entre 1772 y 1802, un grado de la Universidad de Toledo de 1801 y un bautizo de Cartagena de 1767. De Álava, las copias de Vitoria de 1526, 1528, 1719, 1725 y 1736. De Udala, junto a Mondragón, una prueba de hidalguía de 1804 leída entera. La edición de investigación los cita con su archivo y explica qué dice cada uno."
+     "x": "Los documentos del origen del apellido se cuentan en sus capítulos, y aquí basta con saber cuáles son. Del caserío de Angiozar hay escrituras de escribanos de 1517 a 1738 y pleitos de 1632 a 1773. De los hidalgos de Barchín del Hoyo y de Buenache, la ejecutoria de 1537 y su confirmación de 1595, en Granada, y de La Roda, tres partidas de 1557, 1581 y 1586. De la familia de Cañada Juncosa, escrituras firmadas en Madrid entre 1772 y 1802, un grado de la Universidad de Toledo de 1801 y un bautizo de Cartagena de 1767. De Álava, las copias de Vitoria de 1526, 1528, 1719, 1725 y 1736. De Udala, junto a Mondragón, una prueba de hidalguía de 1804 leída entera. La edición de investigación los cita con su archivo y explica qué dice cada uno."
     }
    ],
-   "huella": "28bb1b141f762fff0820393dc89107193ab89e6b23ae843fd33252c698ef6a38",
-   "chars": 6845
+   "huella": "ab631d95357ea30571c19a470e04146fa160122ff9e545b9bc97184714e8dab3",
+   "chars": 6852
   },
   {
    "clave": "cap:barchin",
@@ -1392,7 +1416,7 @@
     },
     {
      "k": "p",
-     "x": "En la comarca hubo además otro Martín del apellido. El 5 de julio de 1557, veinte años después de la ejecutoria, se bautizó en la parroquia de San Salvador de La Roda, una villa hoy de Albacete a unos cincuenta kilómetros de Barchín, a Juan, hijo de Martín de Zabarte y de su mujer, Ana López; fue su padrino Diego de Alarcón, regidor de la villa. El cura escribió el apellido con ce cedilla, igual que los escribanos de Barchín. Aquel Martín pudo ser el mozo u otro hombre del mismo nombre, pero la mujer de Martín el mozo se llamaba Sabina, no Ana, y mientras otro papel no lo aclare no se pueden tener por el mismo hombre. Treinta años después, en 1586, el obispo de Cuenca confirmó en La Roda a Ana, hija de Juan de Zabarte y de Isabel Martínez: había allí otra familia del apellido. Lo que sí dicen aquellos papeles es que el apellido andaba ya por toda aquella tierra."
+     "x": "En la comarca hubo además otro Martín del apellido. El 5 de julio de 1557, veinte años después de la ejecutoria, se bautizó en la parroquia de San Salvador de La Roda, una villa hoy de Albacete a unos cincuenta kilómetros de Barchín, a Juan, hijo de Martín de Zabarte y de su mujer, Ana López; fue su padrino Diego de Alarcón, regidor de la villa. El cura escribió el apellido con ce cedilla, igual que los escribanos de Barchín. Aquel Martín pudo ser el mozo u otro hombre del mismo nombre, pero la mujer de Martín el mozo se llamaba Sabina, no Ana, y mientras otro papel no lo aclare no se pueden tener por el mismo hombre. En 1581 un Juan de Çabarte firmó como testigo en una boda de la villa, y cinco años después, en 1586, el obispo de Cuenca confirmó en La Roda a Ana, hija de Juan de Zabarte y de Isabel Martínez, con toda probabilidad hija de aquel testigo: había allí otra familia del apellido. Lo que sí dicen aquellos papeles es que el apellido andaba ya por toda aquella tierra. En el siglo siguiente, en cambio, ningún Zabarte volvió a bautizar a un hijo en La Roda, y en los libros de bodas que se conservan ninguno se casa ni casa a sus hijos."
     },
     {
      "k": "h",
@@ -1411,8 +1435,8 @@
      "x": "La sentencia de 1537 guarda todavía muchas hojas sin leer, y quizá describa la casa de la que salió la familia. Pero ningún papel une a estos Zabarte con la familia de Las Pedroñeras, y por eso Martín de Zabarte no se cuenta aquí como antepasado de nadie, sino como lo que es: la prueba de que el camino entre el valle del Deba y la Mancha de Cuenca existía, y se andaba, muy pronto."
     }
    ],
-   "huella": "d4231f871bb5ac1a9bb4df6bec27280b238dab63322646c6aafa9ed7cee116ad",
-   "chars": 7419
+   "huella": "3994b47e6a3f5d2baf8870e95a443c12795f3e51087eb7042a6b6d7652a90f64",
+   "chars": 7703
   },
   {
    "clave": "cap:canada",
@@ -1614,15 +1638,15 @@
     },
     {
      "k": "p",
-     "x": "De los tres tramos del camino, uno tiene papeles y dos esperan el suyo. Los documentos que pueden decidirlos se conocen, y casi todos están en Cuenca. En el Archivo Diocesano pueden estar los libros de Buenache, que en 1827 ya estaban numerados, así que los más antiguos se pueden pedir por su número, y quizá los de Barchín. Allí pueden estar también el libro de bautismos de Cañada Juncosa que empezaba en 1715, que en 1827 todavía guardaba el cura de la aldea, y los expedientes de la ordenación de Rodrigo Zabarte y de la capellanía de los Cantero, con la lista de parientes que tenían derecho a ella. En los libros de Belmonte o en los de Las Pedroñeras puede estar la boda de los padres de Pedro. En Madrid, el testamento de Rodrigo. En La Roda, donde el apellido vivía en el siglo dieciséis, los libros del siglo siguiente, que se pueden ver desde casa. Y en Granada, las hojas todavía sin leer de la sentencia de 1537."
+     "x": "De los tres tramos del camino, uno tiene papeles y dos esperan el suyo. Los documentos que pueden decidirlos se conocen, y casi todos están en Cuenca. En el Archivo Diocesano pueden estar los libros de Buenache, que en 1827 ya estaban numerados, así que los más antiguos se pueden pedir por su número, y quizá los de Barchín. Allí pueden estar también el libro de bautismos de Cañada Juncosa que empezaba en 1715, que en 1827 todavía guardaba el cura de la aldea, y los expedientes de la ordenación de Rodrigo Zabarte y de la capellanía de los Cantero, con la lista de parientes que tenían derecho a ella. En los libros de Belmonte o en los de Las Pedroñeras puede estar la boda de los padres de Pedro. En Madrid, el testamento de Rodrigo. La Roda, donde el apellido vivía en el siglo dieciséis, ya no guarda nada más en internet: sus bautismos del siglo siguiente y sus bodas se han leído enteros y no lo nombran después de 1586. Y en Granada, las hojas todavía sin leer de la sentencia de 1537."
     },
     {
      "k": "p",
      "x": "Quinientos años después el caserío sigue en su sitio, y la calle Fray Luis de León también. Entre uno y otra quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro."
     }
    ],
-   "huella": "b555911f944d75b0f830f32ec3ad6992d1289e6abc3d39b89c09b33cec8adb53",
-   "chars": 7566
+   "huella": "8fdf9113dfe18b92fde7cbac7903a4974bdcc0d1ce4e8b49cf26a3625166723f",
+   "chars": 7636
   },
   {
    "clave": "cap:marcharon",
@@ -1683,11 +1707,19 @@
     },
     {
      "k": "p",
-     "x": "Del otro gran viajero de la familia no hay todavía ningún papel, pero hay una historia que dos ramas de la casa cuentan casi igual. Es la de Juan Navarro Fides, hermano de la abuela Vicenta, al que llamaban «el Polaco», aunque era tan manchego como ella. Aquí se sigue la versión que escribió a mano, en septiembre de 2026, su sobrino bisnieto Francisco Gallardo Azabarte, en una carta encabezada «Apreciable primo Francisco»."
+     "x": "Del otro gran viajero de la familia no hay todavía ningún papel, pero hay una historia que dos ramas de la casa cuentan casi igual. Es la de Juan Navarro Fides, hermano de la abuela Vicenta, al que llamaban «el Polaco», aunque era tan manchego como ella. En el habla de Las Pedroñeras se llama hoy «polaco» al hombre recio y corpulento, y en la familia se recuerda que a él se lo decían porque era muy fuerte. Aquí se sigue la versión que escribió a mano, en septiembre de 2026, su sobrino bisnieto Francisco Gallardo Azabarte, en una carta encabezada «Apreciable primo Francisco»."
     },
     {
      "k": "p",
-     "x": "En el pueblo había una costumbre: de noche, los mozos no cruzaban por ciertos sitios —las Cuatro Esquinas, la esquina de la Fuca, la placeta—, y el que pasaba ya sabía a lo que se exponía. Una noche Juan cruzó. «Se armó la marimorena», como se cuenta en casa, y Juan, que llevaba una porra de hierro, golpeó a uno y lo mató. En su casa eran tan pobres que no pudieron «pagar la muerte», y la pagó él: trece años de cárcel. Al cumplirlos no volvió al pueblo. Se alistó voluntario en la guerra carlista, en un cuerpo de caballería."
+     "x": "En el pueblo había una costumbre: de noche, los mozos no cruzaban por ciertos sitios —las Cuatro Esquinas, la esquina de la Fuca, la placeta—, y el que pasaba ya sabía a lo que se exponía. Una noche Juan cruzó. «Se armó la marimorena», como se cuenta en casa, y Juan, que llevaba una porra de hierro, golpeó a uno y lo mató. En su casa eran tan pobres que no pudieron «pagar la muerte», y la pagó él: trece años de cárcel. Los trece años cuadran con la justicia de aquel tiempo: en los dos casos de homicidio que se conocen de la Audiencia de Albacete, la que sentenciaba las causas de la comarca, la pena fue de doce años y un día de reclusión. Al cumplirlos no volvió al pueblo. Se alistó voluntario en la guerra carlista, en un cuerpo de caballería."
+    },
+    {
+     "k": "p",
+     "x": "Ningún papel dice todavía cuándo ni con quién se alistó, pero sí cómo llegó aquella guerra a su tierra. En mayo de 1872 se levantó en el propio pueblo una pequeña partida carlista, y la Guardia Civil de Belmonte salió en su persecución. En 1874 la guerra volvió, y con más gente. En febrero la gente del cabecilla Santés andaba repartida entre Minaya, Villarrobledo y Las Pedroñeras, y hacia el 23 de marzo entró por Belmonte, El Pedernoso y Las Pedroñeras la partida de Valiente. El 27 de abril, a las cuatro de la madrugada, ochocientos carlistas de a pie y cien de a caballo entraron por sorpresa en Belmonte. Un periódico de Madrid los pintó harapientos, muchos de ellos chicos de doce y trece años, y viejos. Pidieron ochenta mil reales y se llevaron de Las Pedroñeras a dieciséis vecinos como rehenes, entre ellos una señora. Aquella columna, la de José Valiente y Cantero, estaba formada por hijos de la provincia de Cuenca, y cinco días después, el 2 de mayo, la derrotaron en el puerto de Monsaete, en la serranía."
+    },
+    {
+     "k": "p",
+     "x": "De cómo iban los jinetes carlistas que andaban por la comarca queda una estampa de aquel mismo año. En noviembre de 1874 cinco de ellos, mozos de veinte a veinticinco años, se presentaron en Cañada Juncosa a cobrar dinero y cebada para los caballos. Llevaban boina blanca, carabina —un fusil corto, de los de caballería— y sable, pantalón azul con una franja encarnada y, tres de ellos, capote de montar. Si Juan cabalgó alguna vez así, ningún papel lo cuenta; la familia solo recuerda que sirvió a caballo."
     },
     {
      "k": "p",
@@ -1699,7 +1731,7 @@
     },
     {
      "k": "p",
-     "x": "En esa misma rama la historia se cuenta con otras piezas: que la bolsa se la dio a la propia Vicenta mientras ella segaba en la encomienda, al pasar con un destacamento de caballería, diciéndole «guárdamelo; si no vuelvo, es para ti y tus hijos», y que acabó sus días en Extremadura. Las dos versiones se guardan, y la que se tiene por vigente es la escrita. Las dos coinciden en lo esencial: un hermano que se fue lejos y que, a su manera, no se olvidó de los suyos. De momento ningún papel lo nombra. Si hubo causa por aquella muerte, la llevaría el juzgado de Belmonte, que era el de la comarca, y la sentenciaría la Audiencia de Albacete. Los protocolos de los notarios de Mula de aquellos años se destruyeron, pero en su Registro Civil tiene que estar el acta de defunción de febrero de 1905, con los nombres de sus padres, y el día que aparezca «el Polaco» dejará de ser un recuerdo para ser un documento."
+     "x": "En esa misma rama la historia se cuenta con otras piezas: que la bolsa se la dio a la propia Vicenta mientras ella segaba en la encomienda, al pasar con un destacamento de caballería, diciéndole «guárdamelo; si no vuelvo, es para ti y tus hijos», y que acabó sus días en Extremadura. Las dos versiones se guardan, y la que se tiene por vigente es la escrita. Las dos coinciden en lo esencial: un hermano que se fue lejos y que, a su manera, no se olvidó de los suyos. De momento ningún papel lo nombra. Si hubo causa por aquella muerte, la llevaría el juzgado de Belmonte, que era el de la comarca, y la sentenciaría la Audiencia de Albacete. Los protocolos de los notarios de Mula de aquellos años se destruyeron, pero en su Registro Civil tiene que estar el acta de defunción de febrero de 1905, que ya se ha pedido, con los nombres de sus padres, y el día que aparezca «el Polaco» dejará de ser un recuerdo para ser un documento."
     },
     {
      "k": "h",
@@ -1718,8 +1750,8 @@
      "x": "Por esos caminos hay hoy personas que llevan el apellido Azabarte y que nunca han vivido en Las Pedroñeras. Sus historias también caben en estas páginas, y el capítulo de las preguntas abiertas explica cómo pueden llegar hasta aquí."
     }
    ],
-   "huella": "1d98216d4a673c7e7e64f8310c4399b31b8614a49e989701b670dd8467da2ca5",
-   "chars": 7504
+   "huella": "8cbaada0b7d85dfc6ffe2465cf1cef122586be33e2ce0690b0e93e0945754248",
+   "chars": 9433
   },
   {
    "clave": "cap:pendiente",
@@ -1780,7 +1812,7 @@
     },
     {
      "k": "p",
-     "x": "De la rama de la abuela quedan dos preguntas. La primera es el final de Juan «el Polaco». Según la carta de la familia murió en Mula el 24 de febrero de 1905, pero ningún papel que se pueda leer desde casa lo nombra: los libros de Mula de aquellos años no están en línea, y los protocolos de sus notarios anteriores a 1936 se perdieron. La llave es su acta de defunción, en el Registro Civil de Mula, que dará sus padres y cerrará de paso quiénes eran los de Vicenta. Si la Iglesia heredó sus bienes, como se cuenta, tuvo que dejarlo dicho en un testamento, porque su hermana Vicenta vivía todavía y la ley no dejaba heredar a la Iglesia de otro modo. Y del crimen que lo llevó a la cárcel la familia puede ayudar más que ningún archivo: el nombre del mozo que murió, o el año, abriría los papeles del juzgado de Belmonte, que era el del pueblo, y de la Audiencia de Albacete, que sentenciaba aquellas causas."
+     "x": "De la rama de la abuela quedan dos preguntas. La primera es el final de Juan «el Polaco». Según la carta de la familia murió en Mula el 24 de febrero de 1905, pero ningún papel que se pueda leer desde casa lo nombra: los libros de Mula de aquellos años no están en línea, y los protocolos de sus notarios anteriores a 1936 se perdieron. La llave es su acta de defunción, que ya se ha pedido al Registro Civil de Mula: dará sus padres y cerrará de paso quiénes eran los de Vicenta. Si la Iglesia heredó sus bienes, como se cuenta, tuvo que dejarlo dicho en un testamento, porque su hermana Vicenta vivía todavía y la ley no dejaba heredar a la Iglesia de otro modo. Y del crimen que lo llevó a la cárcel la familia puede ayudar más que ningún archivo: el nombre del mozo que murió, o el año, abriría los papeles del juzgado de Belmonte, que era el del pueblo, y de la Audiencia de Albacete, que sentenciaba aquellas causas."
     },
     {
      "k": "p",
@@ -1811,8 +1843,8 @@
      "x": "A los más pequeños de la casa se les puede proponer un juego: preguntar a sus abuelos cómo se llamaban los abuelos de ellos, y apuntarlo en un papel con la fecha. Preguntas como esa, hechas a tiempo, son las que pusieron en marcha esta historia."
     }
    ],
-   "huella": "3feeddc9c011dddb4e48bf42c4168777f70ccbbd3f9eece884a206708574da9a",
-   "chars": 7385
+   "huella": "b2a2398c96b8c2aa69d9f31daec6086f152cb56c70d4ed9578bae71ed0f560c4",
+   "chars": 7398
   },
   {
    "clave": "cap:glosario",
@@ -2579,7 +2611,11 @@
     },
     {
      "k": "p",
-     "x": "Creció en aquella casa con sus siete hermanos, Eugenia, Vicenta, Florencia, Francisco, Francisca, Julián y Venus, y cerca de la prima Camila, mucho mayor que él, a la que llamó «prima» toda su vida. Ese detalle pequeño sería, ochenta años después, el hilo del que tirar para ordenar dos generaciones de la familia. Por su madre venía de «los Guardejas», una casa de muchos hermanos a la que el pueblo llamaba así porque el padre había sido guarda del monte de La Muela. Tenía catorce años cuando empezó la guerra civil y diecisiete cuando terminó, y de aquellos años no ha llegado hasta esta historia ningún recuerdo suyo."
+     "x": "Creció en aquella casa con sus siete hermanos, Eugenia, Vicenta, Florencia, Francisco, Francisca, Julián y Venus, y cerca de la prima Camila, mucho mayor que él, a la que llamó «prima» toda su vida. Ese detalle pequeño sería, ochenta años después, el hilo del que tirar para ordenar dos generaciones de la familia. Por su madre venía de «los Guardejas», una casa de muchos hermanos a la que el pueblo llamaba así porque el padre había sido guarda del monte de La Muela. Tenía catorce años cuando empezó la guerra civil y diecisiete cuando terminó."
+    },
+    {
+     "k": "p",
+     "x": "De aquellos años la familia guarda un recuerdo suyo. Sus hermanos Venus y Julián estaban en el frente de Madrid, y Emiliano, todavía un muchacho de unos diecisiete años, fue alguna vez hasta allí a llevarles comida de casa. Es un recuerdo de la familia, y lo ha contado su nieto Francisco Javier. Él no llegó a ser soldado de aquella guerra: el último llamamiento de la República, en enero de 1939, alcanzó de los mozos más jóvenes solo a los nacidos hasta marzo de 1921, y Emiliano había nacido en febrero de 1922, así que iba como civil. Si la edad que se recuerda es exacta, aquellos viajes fueron en las últimas semanas de la guerra, que en el frente de Madrid terminó a finales de marzo de 1939."
     },
     {
      "k": "p",
@@ -2598,8 +2634,8 @@
      "x": "Murió en febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de esta galería, y el suyo está hecho sobre una fotografía que guarda la familia. Es el abuelo del investigador y el punto exacto donde la memoria viva se encuentra con los papeles: de su casa salieron los recuerdos del abuelo Venus y de la prima Camila que dieron pie a todo esto."
     }
    ],
-   "huella": "ed4c0504bf44ef939443a48b8d0f718e1fcd0fc54852dd62cfd959e9ac0c413e",
-   "chars": 3990
+   "huella": "17c3c1d80134ad2d2236cf7173f4d65a989563cbc7f103e8d91aaa00e7b5a3bc",
+   "chars": 4615
   },
   {
    "clave": "pj:P127",
@@ -2690,11 +2726,11 @@
     },
     {
      "k": "lede",
-     "x": "El segundo Venus: hijo de Venus Azabarte Navarro y de Encarnación Galindo Gallardo, hermano de Emiliano y, según recuerda la familia, mellizo de Julián."
+     "x": "El segundo Venus: hijo de Venus Azabarte Navarro y de Encarnación Galindo Gallardo, hermano de Emiliano y, según recuerda la familia, mellizo de Julián. Con toda probabilidad es el Venus Azabarte que defendió Madrid en noviembre de 1936 y que en 1938 era sargento."
     },
     {
      "k": "p",
-     "x": "Venus llevó el nombre de su padre, un nombre que en La Mancha no llevaba casi nadie: el de la diosa romana, el mismo que tiene el lucero que se ve al caer la tarde. Al padre, según se cuenta en la familia, el registro no se lo había querido admitir y lo había inscrito como Marcelino, hasta que, ya casado, consiguió cambiarlo. El hijo lo heredó, y después lo llevó también un sobrino suyo, Venus Azabarte Arellano, hermano de Pilar: tres generaciones seguidas con un nombre cuyo origen es, todavía hoy, uno de los pequeños enigmas de la casa."
+     "x": "Venus llevó el nombre de su padre, un nombre que en La Mancha no llevaba casi nadie: el de la diosa romana, el mismo que tiene el lucero que se ve al caer la tarde. Al padre le había costado que el registro se lo admitiera; el hijo lo heredó, y después lo llevó también un sobrino suyo, Venus Azabarte Arellano, hermano de Pilar: tres generaciones seguidas con un nombre cuyo origen es, todavía hoy, uno de los pequeños enigmas de la casa."
     },
     {
      "k": "p",
@@ -2702,19 +2738,31 @@
     },
     {
      "k": "p",
-     "x": "Juan Ortiz Pacheco, nieto de su tía la Boni, se acuerda de verlo llegar, cuando él era niño, a la matanza del cerdo en casa de Juan Vicente Ortiz, su padre, junto con sus hermanos Emiliano y Francisco y con el primo Aurelio. Era uno de los días grandes del invierno en muchas casas del pueblo, cuando se mataba el cerdo y se juntaba la familia para preparar la carne y los embutidos de todo el año."
-    },
-    {
-     "k": "p",
      "x": "Una fotografía familiar de los años treinta lo muestra, según la familia, de pie a la izquierda junto a dos de sus hermanos, delante de un cartel de la época. De esa imagen sale el retrato que acompaña esta página."
     },
     {
      "k": "p",
-     "x": "De él no se conoce todavía ninguna fecha. Si de verdad eran mellizos, la misma hoja del registro civil dará la suya y la de Julián. Mientras tanto queda lo que recuerdan los primos: un hombre que llegaba a la matanza con sus hermanos y que llevó, como su padre, un nombre que en La Mancha no llevaba casi nadie."
+     "x": "Cuando empezó la guerra civil, en julio de 1936, Venus era un hombre joven. La familia recuerda que se fue voluntario al frente de Madrid, y que con él iba su mellizo Julián. Un papel de aquellos años lo confirma en lo esencial. El 7 de noviembre de 1938, al cumplirse dos años de la defensa de la ciudad, «Escucha», el periódico de la 44 Brigada Mixta del ejército de la República, repasó batallón por batallón a los hombres que habían defendido Madrid en noviembre de 1936 y seguían en sus filas. En el párrafo del 176 Batallón aparece «Venus Azabarte, hoy sargento»."
+    },
+    {
+     "k": "p",
+     "x": "El periódico no da su segundo apellido, ni su edad, ni su pueblo, y tampoco dice que fuera voluntario: eso lo cuenta la familia. Pero fuera de esta casa casi nadie se llamaba Venus, y el otro Venus Azabarte de aquellos años, su padre, pasaba ya de los sesenta. Es él con toda probabilidad: estuvo en el frente de Madrid desde los días de la defensa de la ciudad, y en dos años llegó a sargento."
+    },
+    {
+     "k": "p",
+     "x": "Acabada la guerra, su nombre aparece en dos fichas de 1940 del Tribunal Especial para la Represión de la Masonería y el Comunismo, uno de los tribunales de la posguerra, y en otra de un fichero hecho con papeles de la República que se incautaron. Ninguna se ha podido ver todavía, y mientras no se lean no se sabe qué dicen de él: muchas de aquellas fichas nacieron de papeles incautados, y muchos de aquellos expedientes se cerraron sin seguir adelante. En los índices de consejos de guerra y de expedientes de responsabilidades políticas que se han revisado no aparece."
+    },
+    {
+     "k": "p",
+     "x": "Juan Ortiz Pacheco, nieto de su tía la Boni, se acuerda de verlo llegar, cuando él era niño, a la matanza del cerdo en casa de Juan Vicente Ortiz, su padre, junto con sus hermanos Emiliano y Francisco y con el primo Aurelio. Era uno de los días grandes del invierno en muchas casas del pueblo, cuando se mataba el cerdo y se juntaba la familia para preparar la carne y los embutidos de todo el año."
+    },
+    {
+     "k": "p",
+     "x": "De él no se conoce todavía ninguna fecha. Si de verdad eran mellizos, la misma hoja del registro civil dará la suya y la de Julián, y los papeles de su brigada, que guarda el Archivo General Militar de Ávila, pueden decir quiénes eran sus padres y convertir en seguro lo que hoy es probable. Mientras tanto queda lo que recuerdan los primos: un hombre que llegaba a la matanza con sus hermanos y que llevó, como su padre, un nombre que en La Mancha no llevaba casi nadie."
     }
    ],
-   "huella": "baaed3f610804a3113e063a3946b9d1d1d19d1deb49ec81ad69d2b4863e97a6c",
-   "chars": 2028
+   "huella": "3dca976d12b51c4f1bb4bcb6152e3dd7c987c7deac1fd0511129109d6a473637",
+   "chars": 3730
   },
   {
    "clave": "pj:P130",
@@ -2858,11 +2906,19 @@
     },
     {
      "k": "p",
-     "x": "No hay que confundirlo con otro Francisco Azabarte Galindo que aparece en los papeles de la quinta de 1915, la de los mozos llamados aquel año al servicio militar: por las fechas que se conocen, cuando aquel mozo nació, Encarnación, la madre de Paco, era todavía una niña. Tres hombres con el mismo nombre y los mismos apellidos cruzan esta historia, y cada uno va por su lado. El de esta página es Paco, el de la boda doble, al que, según Juan Ortiz, se parece el nieto de su hermano pequeño."
+     "x": "Acabada la guerra, pasó con toda probabilidad dos años lejos de casa. Una base de datos de historiadores, «Víctimas de la dictadura en Castilla-La Mancha», recoge a un Francisco Azabarte Galindo, labrador, natural de Las Pedroñeras y nacido hacia 1915, que de 1940 a 1942 estuvo en el Batallón Disciplinario de Soldados Trabajadores número 13. Eran unas unidades en las que, acabada la guerra, se ponía a trabajar en carreteras y fortificaciones a mozos que habían servido en el ejército de la República. Aquel batallón estuvo primero en Navarra y después en Ceuta, al otro lado del Estrecho, hasta que lo disolvieron. La fecha de nacimiento encaja con que Paco fuera el mayor de los varones de la casa, aunque la ficha no da sus padres."
+    },
+    {
+     "k": "p",
+     "x": "Del mismo nombre hay además un expediente en el Archivo General Militar de Guadalajara, que está por pedir, y un soldado con su nombre y el apellido mal escrito, «Azbarte», figura en los papeles de una brigada del ejército de la República que combatió en el frente de Córdoba en el último invierno de la guerra. Puede ser él, pero de ese papel solo se ha visto el índice."
+    },
+    {
+     "k": "p",
+     "x": "Su nombre y sus dos apellidos son los mismos que los de su abuelo, así que cada papel que los lleva hay que leerlo con cuidado para saber de cuál de los dos habla. El de esta página es Paco, el de la boda doble, al que, según Juan Ortiz, se parece el nieto de su hermano pequeño."
     }
    ],
-   "huella": "4cb321790fe80e9319d4e2c6da8cfc93c7cc8587815a7494f4c11860b4245b50",
-   "chars": 1934
+   "huella": "bd7db9664a9873d729e578b99327496d1152056e521a14cd1e3fc55c3f604bea",
+   "chars": 2828
   },
   {
    "clave": "pj:P136",
@@ -2920,11 +2976,15 @@
     },
     {
      "k": "p",
-     "x": "Si de verdad eran mellizos, Julián y Venus estarán inscritos el mismo día en el registro civil de Las Pedroñeras, y esa página dirá por fin cuándo nacieron. Mientras tanto queda su cara, que es mucho más de lo que ha quedado de casi todos los que aparecen en esta historia."
+     "x": "La familia recuerda que, cuando llegó la guerra, Julián se fue voluntario al frente de Madrid con su mellizo Venus. De Julián no ha aparecido ningún papel de la guerra misma. Sí hay, en el Archivo General Militar de Guadalajara, un expediente a nombre de Julián Azabarte Galindo, en una serie de los años de la guerra y la posguerra que reúne por orden alfabético a soldados trabajadores, a los soldados que los custodiaban y a prisioneros. Por la rareza del nombre y de los dos apellidos juntos es, con toda probabilidad, el suyo, pero el índice no da su pueblo ni sus padres, ni dice en cuál de aquellas condiciones estuvo: eso lo dirá el expediente cuando se pida."
+    },
+    {
+     "k": "p",
+     "x": "Si ese expediente es suyo, Julián seguía vivo cuando se abrió, y su muerte temprana, de la que nadie recuerda la fecha ni la causa, hay que buscarla de 1937 en adelante. Si de verdad eran mellizos, Julián y Venus estarán inscritos el mismo día en el registro civil de Las Pedroñeras, y esa página dirá por fin cuándo nacieron. Mientras tanto queda su cara, que es mucho más de lo que ha quedado de casi todos los que aparecen en esta historia."
     }
    ],
-   "huella": "078571a8e618f57579324318ac7a5afd0be1b48a6da4fb5e6a9126c90927956d",
-   "chars": 1579
+   "huella": "3f0774be70f245428ce572dfa0bce3b6aa94178a0948c7066c56eef087599942",
+   "chars": 2416
   },
   {
    "clave": "pj:P098",
@@ -3237,15 +3297,19 @@
     },
     {
      "k": "p",
-     "x": "Debió de nacer en Las Pedroñeras hacia 1840, en la casa de Francisco Navarro y Tomasa Fides, que era una casa pobre. Fueron tres hermanos, Vicenta, Francisco y Juan, y él era unos años menor que Vicenta. En la familia se le recuerda inmenso: medía dos metros, y le llamaban «el Polaco» por lo fuerte que era, aunque, como dice un bisnieto de Vicenta, Juan Ortiz Pacheco, «no era polaco, sino manchego». De mozo fue pastor, y andaba por el campo con su garrota."
+     "x": "Debió de nacer en Las Pedroñeras hacia 1840, en la casa de Francisco Navarro y Tomasa Fides, que era una casa pobre. Fueron tres hermanos, Vicenta, Francisco y Juan, y él era unos años menor que Vicenta. En la familia se le recuerda inmenso: medía dos metros, y le llamaban «el Polaco» por lo fuerte que era, aunque, como dice un bisnieto de Vicenta, Juan Ortiz Pacheco, «no era polaco, sino manchego». En el habla del pueblo se llama hoy «polaco» al hombre recio y corpulento. De mozo fue pastor, y andaba por el campo con su garrota."
     },
     {
      "k": "p",
-     "x": "En el pueblo había una costumbre: de noche, los mozos no cruzaban por ciertos sitios —las Cuatro Esquinas, la placeta y algún rincón más—, y el que pasaba ya sabía a lo que se exponía. Una noche Juan cruzó. Se armó una pelea, él llevaba una porra de hierro, golpeó a uno y lo mató. Así lo dejó escrito en 2026, de su puño y letra, otro bisnieto de Vicenta, Francisco Gallardo Azabarte, en una carta dirigida al investigador. En casa eran tan pobres que no pudieron «pagar la muerte», como se decía, y la pagó él: trece años de cárcel."
+     "x": "En el pueblo había una costumbre: de noche, los mozos no cruzaban por ciertos sitios —las Cuatro Esquinas, la placeta y algún rincón más—, y el que pasaba ya sabía a lo que se exponía. Una noche Juan cruzó. Se armó una pelea, él llevaba una porra de hierro, golpeó a uno y lo mató. Así lo dejó escrito en 2026, de su puño y letra, otro bisnieto de Vicenta, Francisco Gallardo Azabarte, en una carta dirigida al investigador. En casa eran tan pobres que no pudieron «pagar la muerte», como se decía, y la pagó él: trece años de cárcel. Los trece años cuadran con la justicia de aquel tiempo: en los dos casos de homicidio que se conocen de la Audiencia de Albacete, la que sentenciaba las causas de la comarca, la pena fue de doce años y un día de reclusión."
     },
     {
      "k": "p",
-     "x": "Al cumplir la condena no volvió al pueblo. Se fue voluntario a la guerra carlista, la de los partidarios de don Carlos, que reclamaba el trono, y sirvió en la caballería. Años después se presentó una noche a caballo ante la casa de sus padres y llamó por la ventana: «madre, padre». Su madre avisó a su marido —«Francisco, que ha venido Juan»—, pero él le pidió que no abriera la puerta. La besó por la ventana, dejó dos bolsas y desapareció para siempre."
+     "x": "Al cumplir la condena no volvió al pueblo. Se fue voluntario a la guerra carlista, la de los partidarios de don Carlos, que reclamaba el trono, y sirvió en la caballería. Cuándo y con quién se alistó no lo dice ningún papel, pero la guerra anduvo muy cerca de su casa. En 1874 las columnas carlistas entraron varias veces en la comarca, y el 27 de abril, a las cuatro de la madrugada, ochocientos hombres de a pie y cien de a caballo entraron por sorpresa en Belmonte y se llevaron de Las Pedroñeras a dieciséis vecinos como rehenes. Cinco jinetes carlistas que pasaron aquel otoño por Cañada Juncosa, en la misma comarca, llevaban boina blanca, carabina, sable y pantalón azul con una franja encarnada."
+    },
+    {
+     "k": "p",
+     "x": "Años después se presentó una noche a caballo ante la casa de sus padres y llamó por la ventana: «madre, padre». Su madre avisó a su marido —«Francisco, que ha venido Juan»—, pero él le pidió que no abriera la puerta. La besó por la ventana, dejó dos bolsas y desapareció para siempre."
     },
     {
      "k": "p",
@@ -3260,8 +3324,8 @@
      "x": "En la rama de la Boni la historia se cuenta de otra manera. Allí se dice que Juan pasó con un destacamento de caballería junto a la encomienda donde segaba su hermana, que la llamó por su nombre y que le dejó a ella la bolsa: «guárdamelo; si no vuelvo, es para ti y tus hijos». Y que sus últimos años no los pasó en Mula, sino en Extremadura, con unas cabras y unas ovejas. Las dos versiones se guardan, y la que se sigue es la escrita. En el fondo cuentan lo mismo: un hermano enorme que se fue muy lejos y que, a su manera, nunca se olvidó de los suyos."
     }
    ],
-   "huella": "866b3fbb883dc06df4e10ca9a8b37501e8fcb03da85be548fe8d5b05a0be7f1b",
-   "chars": 3130
+   "huella": "54b1e980b9ca8ac3c5ba1ffc7e58b27c1279cf31c32cb5dc24d4c1ecae7eac05",
+   "chars": 3960
   },
   {
    "clave": "pj:P100",
