@@ -7,8 +7,9 @@
 # el manifiesto no cambie (cuando el audio lo ha subido otra persona o sesión).
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
-git config user.name "github-actions[bot]"
-git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+# Identidad del bot solo si no hay otra (en la Action no la hay; en una sesión local se respeta la suya).
+git config user.name >/dev/null || git config user.name "github-actions[bot]"
+git config user.email >/dev/null || git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 if [ -n "${GH_TOKEN:-}" ]; then
   git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 fi
