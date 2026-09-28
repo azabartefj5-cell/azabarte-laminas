@@ -10,6 +10,7 @@
 #   VOZ_NOMBRE  voz de Google (por defecto la que ya tenga el manifiesto, y si no, Charon)
 #   VOZ_RPM     tope de peticiones por minuto (útil con la capa gratuita, p. ej. 8)
 #   VOZ_HILOS   peticiones a la vez (4)
+#   VOZ_MODO    tramos (varios párrafos por petición: poca cuota y voz continua) o bloques (uno a uno)
 #   WEB_URL     página de la edición narrativa (https://azabarte.com/)
 #
 # Cada ejecución lee la web publicada, locuta solo las pistas nuevas o cuyo texto ha cambiado, sube los MP3,
@@ -37,8 +38,9 @@ on:
         type: boolean
         default: false
   schedule:
-    # A diario: continúa lo que quedara por cuota y relocuta los textos que se hayan editado en la web.
-    - cron: '23 3 * * *'
+    # A diario, después de que Google reinicie la cuota (medianoche de California, 7:00 u 8:00 UTC):
+    # continúa lo que quedara por cuota y relocuta los textos que se hayan editado en la web.
+    - cron: '17 9 * * *'
 
 permissions:
   contents: write
