@@ -337,6 +337,10 @@ class MotorGemini(Motor):
                 raise
             it = self.client.interactions.create(**peticion)
         self.cuenta(texto)
+        estado = str(getattr(it, "status", "") or "").lower()
+        if estado in ("incomplete", "budget_exceeded", "failed", "cancelled"):
+            # Respuesta cortada (p. ej. por el tope de salida): no vale y repetirla igual daría lo mismo.
+            raise ErrorBloque(f"Gemini devolvió una respuesta «{estado}»")
         au = getattr(it, "output_audio", None)
         if au is None or not getattr(au, "data", None):
             raise RuntimeError("La respuesta de Gemini no trae audio")
@@ -470,13 +474,23 @@ class Cache:
         tmp.write_bytes(a.tobytes())
         os.replace(tmp, p)
 
-    def olvida(self, bloques):
-        for b in bloques:
-            self.ruta(b["x"], b["k"]).unlink(missing_ok=True)
+    def olvida(self, claves):
+        for texto, k in claves:
+            self.ruta(texto, k).unlink(missing_ok=True)
+
+    def limpia(self, dias=21):
+        """Borra lo que lleve semanas sin usarse (restos de tramos partidos o de textos que cambiaron)."""
+        limite = time.time() - dias * 86400
+        for p in self.dir.glob("*.pcm"):
+            try:
+                if p.stat().st_mtime < limite:
+                    p.unlink()
+            except OSError:
+                pass
 
 
 def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int = 4,
-                  esperas_max: int = 10, valida=None) -> array.array:
+                  esperas_max: int = 10, valida=None, ultimo_recurso: bool = True) -> array.array:
     guardado = cache.lee(texto, k)
     if guardado is not None:
         return guardado
@@ -487,6 +501,12 @@ def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int 
             a = recorta(motor.locuta(texto, k))
         except (ErrorFatal, CuotaAgotada):
             raise
+        except ErrorBloque as e:
+            ultimo = str(e)
+            fallos += 1
+            if not ultimo_recurso:
+                break
+            continue
         except Exception as e:  # noqa: BLE001
             codigo, msg = motor.error(e)
             tipo = clasifica(codigo, msg)
@@ -521,7 +541,7 @@ def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int 
         # Solo vale como último recurso una toma con voz y ritmo verosímil, nunca un silencio.
         if dur >= 0.3 and 3.0 <= cps <= 40.0 and (mejor is None or abs(cps - 15) < abs(mejor[1] - 15)):
             mejor = (a, cps)
-    if mejor is not None:
+    if mejor is not None and ultimo_recurso:
         log(f"  se acepta la mejor toma ({mejor[1]:.1f} c/s) de «{texto[:40]}…»")
         cache.guarda(texto, k, mejor[0])
         return mejor[0]
@@ -573,31 +593,39 @@ def silencios(rms, minimo=0.25):
 
 
 def elige_cortes(sil, esperados, dur):
-    """Elige, en orden, un silencio por cada frontera entre bloques maximizando la duración del silencio
-    menos lo que se aleja de la posición esperada. Cada trozo debe durar al menos un tercio de lo previsto."""
+    """Elige, en orden, un silencio por cada frontera entre bloques. Premia los silencios largos y penaliza
+    que cada trozo se aparte de la duración que le toca por su texto (y, poco, que la frontera se aleje de su
+    posición absoluta prevista): así una deriva acumulada del ritmo no arrastra varias fronteras a pausas de
+    frase. Cada trozo debe durar al menos un tercio de lo previsto."""
     m, ns = len(esperados), len(sil)
     if m == 0:
         return []
     if ns < m:
         return None
-    alfa = 0.06  # segundos de silencio que «cuesta» cada segundo de alejamiento
+    ANCLA, TROZO = 0.015, 0.04  # segundos de silencio que «cuesta» cada segundo de desviación
     centro = [(a + b) / 2 for a, b in sil]
     largo = [b - a for a, b in sil]
     NADA = float("-inf")
     dp = [[NADA] * ns for _ in range(m)]
     antes = [[-1] * ns for _ in range(m)]
     for k in range(m):
-        tramo_esp = esperados[k] - (esperados[k - 1] if k else 0.0)
+        esp = esperados[k] - (esperados[k - 1] if k else 0.0)
         for j in range(ns):
-            base = largo[j] - alfa * abs(centro[j] - esperados[k])
+            base = largo[j] - ANCLA * abs(centro[j] - esperados[k])
             if k == 0:
-                if centro[j] >= tramo_esp / 3:
-                    dp[0][j] = base
+                if centro[j] >= esp / 3:
+                    dp[0][j] = base - TROZO * abs(centro[j] - esp)
                 continue
             mejor, arg = NADA, -1
             for i in range(j):
-                if dp[k - 1][i] > mejor and centro[j] - centro[i] >= tramo_esp / 3:
-                    mejor, arg = dp[k - 1][i], i
+                if dp[k - 1][i] == NADA:
+                    continue
+                seg = centro[j] - centro[i]
+                if seg < esp / 3:
+                    continue
+                v = dp[k - 1][i] - TROZO * abs(seg - esp)
+                if v > mejor:
+                    mejor, arg = v, i
             if arg >= 0:
                 dp[k][j] = mejor + base
                 antes[k][j] = arg
@@ -605,7 +633,7 @@ def elige_cortes(sil, esperados, dur):
     finales = [j for j in range(ns) if dp[m - 1][j] > NADA and dur - centro[j] >= ultimo_esp / 3]
     if not finales:
         return None
-    j = max(finales, key=lambda x: dp[m - 1][x])
+    j = max(finales, key=lambda x: dp[m - 1][x] - TROZO * abs(dur - centro[x] - ultimo_esp))
     elegidos = [j]
     for k in range(m - 1, 0, -1):
         j = antes[k][j]
@@ -623,11 +651,12 @@ def parte_tramo(a: array.array, textos):
     dur = len(a) / RATE
     rms = energia(a)
     sil = silencios(rms)
-    pesos = [largo_hablado(x) + 30 for x in textos]  # +30: la pausa larga entre párrafos
-    total, acc, esperados = sum(pesos), 0, []
-    for w in pesos[:-1]:
-        acc += w
-        esperados.append(dur * acc / total)
+    PAUSA = 30  # la pausa larga entre párrafos, en «caracteres» de lectura
+    largos_txt = [largo_hablado(x) for x in textos]
+    total, acc, esperados = sum(largos_txt) + PAUSA * (n - 1), 0, []
+    for w in largos_txt[:-1]:
+        acc += w + PAUSA
+        esperados.append(dur * (acc - PAUSA / 2) / total)
     cortes = elige_cortes(sil, esperados, dur)
     if cortes is None:
         cortes = []
@@ -653,6 +682,8 @@ def parte_tramo(a: array.array, textos):
 
 
 def valida_tramo(textos):
+    """Un tramo vale si su ritmo global es de lectura normal, no pasa del tope de salida y cada párrafo, una
+    vez partido, dura lo que corresponde a su texto (un párrafo saltado o un final cortado no pasan)."""
     habla = sum(largo_hablado(x) for x in textos)
 
     def valida(a):
@@ -660,22 +691,64 @@ def valida_tramo(textos):
         pausas = sum(b - a_ for a_, b in silencios(energia(a), minimo=1.2))
         voz = max(0.1, dur - pausas)
         cps = habla / voz
-        return dur, cps, (8.0 <= cps <= 24.0) if habla >= 200 else (4.0 <= cps <= 30.0)
+        ok = (8.0 <= cps <= 20.0) if habla >= 200 else (4.0 <= cps <= 30.0)
+        ok = ok and dur <= 8 * 60
+        if ok:
+            trozos, _e, _c = parte_tramo(a, textos)
+            ok = all(len(tr) and duracion_razonable(x, tr)[2] for x, tr in zip(textos, trozos))
+            # Un final cortado deja el último párrafo «demasiado rápido»: ahí el tope es más estricto.
+            if ok and largo_hablado(textos[-1]) >= 60:
+                ok = duracion_razonable(textos[-1], trozos[-1])[1] <= 21.0
+        return dur, cps, ok
     return valida
 
 
-def locuta_tramo(motor, cache, bloques):
+def mitad(bloques):
+    """Índice que parte los bloques en dos mitades de lectura parecida."""
+    largos = [largo_hablado(b["x"]) for b in bloques]
+    total, acc, mejor, h = sum(largos), 0, None, 1
+    for i in range(1, len(bloques)):
+        acc += largos[i - 1]
+        d = abs(acc - total / 2)
+        if mejor is None or d < mejor:
+            mejor, h = d, i
+    return h
+
+
+def locuta_tramo(motor, cache, bloques, partido=False):
     if len(bloques) == 1:
         b = bloques[0]
         return [locuta_bloque(motor, cache, b["x"], b["k"])], True
     textos = [b["x"] for b in bloques]
-    a = locuta_bloque(motor, cache, SEPARADOR.join(textos), "tramo", intentos=2, valida=valida_tramo(textos))
+    try:
+        # Una sola petición: repetir el mismo texto con la misma semilla daría lo mismo.
+        a = locuta_bloque(motor, cache, SEPARADOR.join(textos), "tramo", intentos=1,
+                          valida=valida_tramo(textos), ultimo_recurso=False)
+    except ErrorBloque as e:
+        if partido:  # ya era una mitad: la pista queda pendiente para otro día, sin gastar más cuota
+            raise
+        h = mitad(bloques)
+        log(f"  tramo de {len(bloques)} bloques no válido ({str(e)[:120]}); se pide en dos mitades")
+        t1, e1 = locuta_tramo(motor, cache, bloques[:h], partido=True)
+        t2, e2 = locuta_tramo(motor, cache, bloques[h:], partido=True)
+        return t1 + t2, e1 and e2
     trozos, exacto, _ = parte_tramo(a, textos)
-    for b, tr in zip(bloques, trozos):
-        _d, cps, ok = duracion_razonable(b["x"], tr) if len(tr) else (0, 0, False)
-        if not ok:
-            exacto = False
     return trozos, exacto
+
+
+def grupos_de(bloques, args):
+    return tramos(bloques, args.max_tramo) if args.modo == "tramos" else [[i] for i in range(len(bloques))]
+
+
+def claves_cache(t, args):
+    """Claves de caché que usa una pista con su agrupación normal (sin contar mitades de tramos fallidos)."""
+    bl, out = t["bloques"], []
+    for g in grupos_de(bl, args):
+        if len(g) == 1:
+            out.append((bl[g[0]]["x"], bl[g[0]]["k"]))
+        else:
+            out.append((SEPARADOR.join(bl[i]["x"] for i in g), "tramo"))
+    return out
 
 
 # ---------------------------------------------------------------- manifiesto
@@ -714,7 +787,7 @@ def hecha(man, salida: Path, t, firma) -> bool:
 
 def locuta_pista(motor, cache, t, args):
     bl = t["bloques"]
-    grupos = tramos(bl, args.max_tramo) if args.modo == "tramos" else [[i] for i in range(len(bl))]
+    grupos = grupos_de(bl, args)
     audios, errores, aproximadas = [None] * len(bl), [], []
     with ThreadPoolExecutor(max_workers=max(1, args.hilos)) as ex:
         futuros = [ex.submit(locuta_tramo, motor, cache, [bl[i] for i in g]) for g in grupos]
@@ -769,10 +842,10 @@ def main(argv=None):
                     help="peticiones a la vez (1 = de una en una)")
     ap.add_argument("--modo", choices=["tramos", "bloques"], default=os.environ.get("VOZ_MODO") or "tramos",
                     help="tramos: varios párrafos por petición (menos cuota, voz continua); bloques: uno a uno")
-    ap.add_argument("--max-tramo", type=int, default=int(os.environ.get("VOZ_MAX_TRAMO") or MAX_TRAMO),
+    ap.add_argument("--max-tramo", type=int, default=os.environ.get("VOZ_MAX_TRAMO") or MAX_TRAMO,
                     help="caracteres hablados por petición en modo tramos")
     ap.add_argument("--idioma", default=os.environ.get("VOZ_IDIOMA") or IDIOMA,
-                    help="idioma de la voz para Gemini (es-ES); vacío para no fijarlo")
+                    help="idioma de la voz para Gemini (es-ES)")
     ap.add_argument("--semilla", default=os.environ.get("VOZ_SEMILLA") or str(SEMILLA),
                     help="semilla de generación para Gemini; 'no' para no fijarla")
     ap.add_argument("--limite-minutos", type=float, default=0,
@@ -784,7 +857,12 @@ def main(argv=None):
                     help="borra las pistas que ya no existen en la web (con freno si serían muchas)")
     ap.add_argument("--forzar-poda", action="store_true", help="poda aunque desaparezcan muchas pistas")
     args = ap.parse_args(argv)
-    args.semilla = None if str(args.semilla).lower() in ("", "no", "none") else int(args.semilla)
+    if args.modo not in ("tramos", "bloques"):
+        ap.error(f"--modo / VOZ_MODO debe ser tramos o bloques, no {args.modo!r}")
+    try:
+        args.semilla = None if str(args.semilla).lower() in ("", "no", "none") else int(args.semilla)
+    except ValueError:
+        ap.error(f"--semilla / VOZ_SEMILLA debe ser un número o 'no', no {args.semilla!r}")
 
     salida = Path(args.salida)
     salida.mkdir(parents=True, exist_ok=True)
@@ -813,6 +891,7 @@ def main(argv=None):
     args.voz = args.voz or man["voz"].get("voz") or VOZ
     firma = firma_voz(args)
     cache = Cache(Path(args.cache) / re.sub(r"[^A-Za-z0-9]+", "_", firma), firma)
+    cache.limpia()
 
     if args.podar:
         sobran = [c for c in man["pistas"] if c not in vivas]
@@ -834,8 +913,10 @@ def main(argv=None):
         if solo and t["clave"] not in solo:
             continue
         if not args.forzar and hecha(man, salida, t, firma):
-            cache.olvida(t["bloques"])  # ya está en un MP3 publicado: los bloques sueltos sobran
+            cache.olvida(claves_cache(t, args))  # ya está en un MP3 publicado: su caché sobra
             continue
+        if args.forzar:
+            cache.olvida(claves_cache(t, args))  # forzar es pedir de nuevo, no reutilizar lo guardado
         pendientes.append(t)
     if args.max_pistas > 0:
         pendientes = pendientes[: args.max_pistas]
