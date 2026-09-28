@@ -319,7 +319,7 @@ class MotorGemini(Motor):
 
     def locuta(self, texto, k):
         self.espera_turno()
-        it = self.client.interactions.create(
+        peticion = dict(
             model=self.args.modelo,
             input=[{
                 "type": "text",
@@ -329,6 +329,13 @@ class MotorGemini(Motor):
             response_format={"type": "audio"},
             generation_config=self.config(),
         )
+        # Sin los reintentos propios del SDK (esperan minutos ante un límite): los gobierna locuta_bloque.
+        try:
+            it = self.client.interactions.create(**peticion, retries=None)
+        except TypeError as e:
+            if "retries" not in str(e):
+                raise
+            it = self.client.interactions.create(**peticion)
         self.cuenta(texto)
         au = getattr(it, "output_audio", None)
         if au is None or not getattr(au, "data", None):
