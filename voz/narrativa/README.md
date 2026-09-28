@@ -51,7 +51,9 @@ Coste aproximado con pago por uso, a precios de septiembre de 2026 (Google dupli
    y anota en `audio.json` el segundo en que empieza cada bloque (`marcas`). Esas marcas son las que mueven el
    resaltado y el desplazamiento de la página. Un tramo solo se acepta si su ritmo es de lectura normal y cada
    párrafo dura lo que le corresponde (así no pasa un párrafo saltado ni un final cortado); si no, se pide una
-   vez en dos mitades y, si tampoco sale, la pista queda pendiente para otro día sin gastar más cuota.
+   vez en dos mitades y, si tampoco sale, la pista queda pendiente para otro día sin gastar más cuota. La toma
+   descartada no se tira: queda en la caché (`.cache/rechazos/`) junto al motivo (qué párrafo falló y con qué
+   ritmo), para escucharla y revisar el caso.
 3. La Action publica los MP3, clava la dirección del CDN al commit y purga la caché de `audio.json` en jsDelivr.
 
 La web solo usa una grabación si su huella coincide con el texto que muestra. Si se edita un capítulo, ese
