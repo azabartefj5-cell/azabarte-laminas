@@ -64,6 +64,10 @@ jobs:
       VOZ_NOMBRE: ${{ inputs.voz || vars.VOZ_NOMBRE || '' }}
       VOZ_RPM: ${{ vars.VOZ_RPM || '0' }}
       VOZ_HILOS: ${{ vars.VOZ_HILOS || '4' }}
+      VOZ_MODO: ${{ vars.VOZ_MODO || '' }}
+      VOZ_MAX_TRAMO: ${{ vars.VOZ_MAX_TRAMO || '' }}
+      VOZ_IDIOMA: ${{ vars.VOZ_IDIOMA || '' }}
+      VOZ_SEMILLA: ${{ vars.VOZ_SEMILLA || '' }}
       WEB_URL: ${{ vars.WEB_URL || 'https://azabarte.com/' }}
     steps:
       - name: Elegir motor
