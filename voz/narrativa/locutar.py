@@ -71,7 +71,17 @@ ESTILO_TIPO = {
     "h": "This line is a section heading: read it as a heading, slightly slower.",
     "lede": "This is the opening paragraph of the chapter: inviting, unhurried.",
     "p": "",
+    "tramo": ("The text may begin with a title and contain section headings: read each one as a heading. "
+              "Each <long pause> marks the end of a paragraph: leave a clear silence there."),
 }
+
+# Tramos: varios bloques seguidos en una sola petición. Así cabe en la cuota (la capa gratuita de Google da
+# muy pocas peticiones al día) y la voz no cambia de timbre de un párrafo a otro. Los bloques van separados
+# por una pausa larga explícita y el audio se parte después por los silencios.
+SEPARADOR = "\n\n<long pause> <long pause>\n\n"
+MAX_TRAMO = 5500  # caracteres hablados por petición: unos 7 min de audio, holgado bajo el tope de salida
+IDIOMA = "es-ES"
+SEMILLA = 1798
 
 # Pausas (segundos) entre bloques, según el tipo del bloque anterior y del siguiente.
 INICIO, FINAL = 0.35, 0.9
@@ -309,7 +319,7 @@ class MotorGemini(Motor):
 
     def locuta(self, texto, k):
         self.espera_turno()
-        it = self.client.interactions.create(
+        peticion = dict(
             model=self.args.modelo,
             input=[{
                 "type": "text",
@@ -317,8 +327,15 @@ class MotorGemini(Motor):
                 "annotations": [{"type": "speech_metadata", "style": estilo_de(k)}],
             }],
             response_format={"type": "audio"},
-            generation_config={"speech_config": [{"voice": self.args.voz}]},
+            generation_config=self.config(),
         )
+        # Sin los reintentos propios del SDK (esperan minutos ante un límite): los gobierna locuta_bloque.
+        try:
+            it = self.client.interactions.create(**peticion, retries=None)
+        except TypeError as e:
+            if "retries" not in str(e):
+                raise
+            it = self.client.interactions.create(**peticion)
         self.cuenta(texto)
         au = getattr(it, "output_audio", None)
         if au is None or not getattr(au, "data", None):
@@ -332,6 +349,15 @@ class MotorGemini(Motor):
             except Exception:
                 pass
         return pcm_de(bytes(datos))
+
+    def config(self):
+        voz = {"voice": self.args.voz}
+        if self.args.idioma:
+            voz["language"] = self.args.idioma
+        gc = {"speech_config": [voz]}
+        if self.args.semilla is not None:
+            gc["seed"] = self.args.semilla
+        return gc
 
     @staticmethod
     def error(e):
@@ -387,14 +413,25 @@ class MotorPrueba(Motor):
 
     nombre = "prueba"
 
-    def locuta(self, texto, k):
-        seg = max(0.6, largo_hablado(texto) / 15.0)
+    @staticmethod
+    def tono(seg, f):
         n = int(seg * RATE)
-        f = 220.0 if k == "p" else 330.0
         out = array.array("h", [0]) * n
         for i in range(n):
             env = min(1.0, i / 2400, (n - i) / 2400)
             out[i] = int(2500 * env * math.sin(2 * math.pi * f * i / RATE))
+        return out
+
+    def locuta(self, texto, k):
+        out = array.array("h")
+        for j, bloque in enumerate(texto.split(SEPARADOR)):
+            if j:
+                out.extend(silencio(2.4))
+            frases = [x for x in re.split(r"(?<=[.;:?!])\s+", bloque) if x] or [bloque]
+            for i, fr in enumerate(frases):
+                if i:  # pausas de frase de 0,3 a 1,1 s, como las de la voz real
+                    out.extend(silencio(0.3 + 0.8 * ((len(fr) * 7919) % 100) / 100))
+                out.extend(self.tono(max(0.5, largo_hablado(fr) / 15.0), 220.0 if k == "p" else 330.0))
         self.cuenta(texto)
         return out
 
@@ -439,7 +476,7 @@ class Cache:
 
 
 def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int = 4,
-                  esperas_max: int = 10) -> array.array:
+                  esperas_max: int = 10, valida=None) -> array.array:
     guardado = cache.lee(texto, k)
     if guardado is not None:
         return guardado
@@ -474,7 +511,7 @@ def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int 
                 break
             time.sleep(min(5 * fallos, 30))
             continue
-        dur, cps, ok = duracion_razonable(texto, a)
+        dur, cps, ok = (valida or (lambda x: duracion_razonable(texto, x)))(a)
         if ok:
             cache.guarda(texto, k, a)
             return a
@@ -489,6 +526,156 @@ def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int 
         cache.guarda(texto, k, mejor[0])
         return mejor[0]
     raise ErrorBloque(ultimo or "sin audio")
+
+
+# ---------------------------------------------------------------- tramos
+
+def tramos(bloques, maximo):
+    """Índices de bloques agrupados en tramos de hasta `maximo` caracteres hablados; si el tramo ya va
+    mediado, se corta con preferencia antes de un título de sección."""
+    out, cur, n = [], [], 0
+    for i, b in enumerate(bloques):
+        largo = largo_hablado(b["x"])
+        if cur and (n + largo > maximo or (b["k"] == "h" and n > 0.55 * maximo)):
+            out.append(cur)
+            cur, n = [], 0
+        cur.append(i)
+        n += largo
+    if cur:
+        out.append(cur)
+    return out
+
+
+TRAMA = 0.02
+
+
+def energia(a):
+    f = int(TRAMA * RATE)
+    return [math.sqrt(sum(x * x for x in a[i:i + f]) / f) for i in range(0, len(a) - f + 1, f)]
+
+
+def silencios(rms, minimo=0.25):
+    """Silencios internos (inicio, fin) en segundos, con umbral relativo al nivel de la voz."""
+    if not rms:
+        return []
+    nivel = sorted(rms)[int(0.9 * (len(rms) - 1))]
+    umbral = max(120.0, nivel * 0.08)
+    out, ini = [], None
+    for i, r in enumerate(rms):
+        if r < umbral:
+            if ini is None:
+                ini = i
+        else:
+            if ini is not None and ini > 0 and (i - ini) * TRAMA >= minimo:
+                out.append((ini * TRAMA, i * TRAMA))
+            ini = None
+    return out
+
+
+def elige_cortes(sil, esperados, dur):
+    """Elige, en orden, un silencio por cada frontera entre bloques maximizando la duración del silencio
+    menos lo que se aleja de la posición esperada. Cada trozo debe durar al menos un tercio de lo previsto."""
+    m, ns = len(esperados), len(sil)
+    if m == 0:
+        return []
+    if ns < m:
+        return None
+    alfa = 0.06  # segundos de silencio que «cuesta» cada segundo de alejamiento
+    centro = [(a + b) / 2 for a, b in sil]
+    largo = [b - a for a, b in sil]
+    NADA = float("-inf")
+    dp = [[NADA] * ns for _ in range(m)]
+    antes = [[-1] * ns for _ in range(m)]
+    for k in range(m):
+        tramo_esp = esperados[k] - (esperados[k - 1] if k else 0.0)
+        for j in range(ns):
+            base = largo[j] - alfa * abs(centro[j] - esperados[k])
+            if k == 0:
+                if centro[j] >= tramo_esp / 3:
+                    dp[0][j] = base
+                continue
+            mejor, arg = NADA, -1
+            for i in range(j):
+                if dp[k - 1][i] > mejor and centro[j] - centro[i] >= tramo_esp / 3:
+                    mejor, arg = dp[k - 1][i], i
+            if arg >= 0:
+                dp[k][j] = mejor + base
+                antes[k][j] = arg
+    ultimo_esp = dur - esperados[-1]
+    finales = [j for j in range(ns) if dp[m - 1][j] > NADA and dur - centro[j] >= ultimo_esp / 3]
+    if not finales:
+        return None
+    j = max(finales, key=lambda x: dp[m - 1][x])
+    elegidos = [j]
+    for k in range(m - 1, 0, -1):
+        j = antes[k][j]
+        elegidos.append(j)
+    return [sil[i] for i in reversed(elegidos)]
+
+
+def parte_tramo(a: array.array, textos):
+    """Parte el audio de un tramo en los audios de sus bloques. Solo se corta dentro de silencios (o, si
+    faltan, en el punto de menos energía cercano), así un corte dudoso nunca parte una palabra: como mucho
+    mueve el resaltado una frase. Devuelve (trozos, exacto, silencios_de_corte)."""
+    n = len(textos)
+    if n == 1:
+        return [a], True, []
+    dur = len(a) / RATE
+    rms = energia(a)
+    sil = silencios(rms)
+    pesos = [largo_hablado(x) + 30 for x in textos]  # +30: la pausa larga entre párrafos
+    total, acc, esperados = sum(pesos), 0, []
+    for w in pesos[:-1]:
+        acc += w
+        esperados.append(dur * acc / total)
+    cortes = elige_cortes(sil, esperados, dur)
+    if cortes is None:
+        cortes = []
+        for e in esperados:  # sin silencios bastantes: el tramo de menos energía a ±1,5 s
+            c = int(e / TRAMA)
+            v = range(max(1, c - 75), min(len(rms) - 1, c + 75))
+            i = min(v, key=lambda x: rms[x]) if len(v) else c
+            cortes.append((i * TRAMA, (i + 1) * TRAMA))
+        exacto = False
+    else:
+        # Exacto si los cortes son justo los silencios más largos y se distinguen con holgura del resto.
+        largos = sorted((b - a_ for a_, b in sil), reverse=True)
+        elegidos = sorted(b - a_ for a_, b in cortes)
+        exacto = len(largos) >= n - 1 and elegidos[0] >= largos[n - 2] - 1e-9 and (
+            len(largos) == n - 1 or elegidos[0] - largos[n - 1] >= 0.35)
+    trozos, ini = [], 0
+    for c0, c1 in cortes:
+        medio = int((c0 + c1) / 2 * RATE)
+        trozos.append(recorta(a[ini:medio]))
+        ini = medio
+    trozos.append(recorta(a[ini:]))
+    return trozos, exacto, cortes
+
+
+def valida_tramo(textos):
+    habla = sum(largo_hablado(x) for x in textos)
+
+    def valida(a):
+        dur = len(a) / RATE
+        pausas = sum(b - a_ for a_, b in silencios(energia(a), minimo=1.2))
+        voz = max(0.1, dur - pausas)
+        cps = habla / voz
+        return dur, cps, (8.0 <= cps <= 24.0) if habla >= 200 else (4.0 <= cps <= 30.0)
+    return valida
+
+
+def locuta_tramo(motor, cache, bloques):
+    if len(bloques) == 1:
+        b = bloques[0]
+        return [locuta_bloque(motor, cache, b["x"], b["k"])], True
+    textos = [b["x"] for b in bloques]
+    a = locuta_bloque(motor, cache, SEPARADOR.join(textos), "tramo", intentos=2, valida=valida_tramo(textos))
+    trozos, exacto, _ = parte_tramo(a, textos)
+    for b, tr in zip(bloques, trozos):
+        _d, cps, ok = duracion_razonable(b["x"], tr) if len(tr) else (0, 0, False)
+        if not ok:
+            exacto = False
+    return trozos, exacto
 
 
 # ---------------------------------------------------------------- manifiesto
@@ -510,9 +697,13 @@ def escribe_json(p: Path, d):
     tmp.replace(p)
 
 
-def firma_voz(motor: str, modelo: str, voz: str) -> str:
-    base = f"{modelo}|{voz}|{hashlib.sha1(ESTILO_BASE.encode()).hexdigest()[:10]}"
-    return "prueba|" + base if motor == "prueba" else base
+def firma_voz(args) -> str:
+    base = f"{args.modelo}|{args.voz}|{hashlib.sha1(ESTILO_BASE.encode()).hexdigest()[:10]}"
+    if args.modo == "tramos":
+        base += f"|tramos{args.max_tramo}"
+    if args.motor != "openrouter" and (args.idioma or args.semilla is not None):
+        base += f"|{args.idioma}|{args.semilla}"
+    return "prueba|" + base if args.motor == "prueba" else base
 
 
 def hecha(man, salida: Path, t, firma) -> bool:
@@ -521,13 +712,19 @@ def hecha(man, salida: Path, t, firma) -> bool:
                 and ya.get("src") and (salida / ya["src"]).exists())
 
 
-def locuta_pista(motor, cache, t, hilos):
-    with ThreadPoolExecutor(max_workers=max(1, hilos)) as ex:
-        futuros = [ex.submit(locuta_bloque, motor, cache, b["x"], b["k"]) for b in t["bloques"]]
-        audios, errores = [], []
-        for f in futuros:
+def locuta_pista(motor, cache, t, args):
+    bl = t["bloques"]
+    grupos = tramos(bl, args.max_tramo) if args.modo == "tramos" else [[i] for i in range(len(bl))]
+    audios, errores, aproximadas = [None] * len(bl), [], []
+    with ThreadPoolExecutor(max_workers=max(1, args.hilos)) as ex:
+        futuros = [ex.submit(locuta_tramo, motor, cache, [bl[i] for i in g]) for g in grupos]
+        for g, f in zip(grupos, futuros):
             try:
-                audios.append(f.result())
+                trozos, exacto = f.result()
+                for i, tr in zip(g, trozos):
+                    audios[i] = tr
+                if not exacto:
+                    aproximadas.append(f"{g[0] + 1}-{g[-1] + 1}")
             except Exception as e:  # noqa: BLE001
                 errores.append(e)
     if errores:
@@ -536,6 +733,9 @@ def locuta_pista(motor, cache, t, hilos):
                 if isinstance(e, tipo):
                     raise e
         raise errores[0]
+    if aproximadas:
+        log(f"  aviso: marcas aproximadas en los bloques {', '.join(aproximadas)} (cortes dudosos entre párrafos)")
+    log(f"  {len(grupos)} peticiones para {len(bl)} bloques")
     piezas, marcas = [silencio(INICIO)], []
     pos = len(piezas[0])
     for i, b in enumerate(t["bloques"]):
@@ -566,7 +766,15 @@ def main(argv=None):
     ap.add_argument("--rpm", type=float, default=float(os.environ.get("VOZ_RPM") or 0),
                     help="peticiones por minuto como máximo (0 = sin pausa entre peticiones)")
     ap.add_argument("--hilos", type=int, default=int(os.environ.get("VOZ_HILOS") or 4),
-                    help="bloques que se piden a la vez (1 = de uno en uno)")
+                    help="peticiones a la vez (1 = de una en una)")
+    ap.add_argument("--modo", choices=["tramos", "bloques"], default=os.environ.get("VOZ_MODO") or "tramos",
+                    help="tramos: varios párrafos por petición (menos cuota, voz continua); bloques: uno a uno")
+    ap.add_argument("--max-tramo", type=int, default=int(os.environ.get("VOZ_MAX_TRAMO") or MAX_TRAMO),
+                    help="caracteres hablados por petición en modo tramos")
+    ap.add_argument("--idioma", default=os.environ.get("VOZ_IDIOMA") or IDIOMA,
+                    help="idioma de la voz para Gemini (es-ES); vacío para no fijarlo")
+    ap.add_argument("--semilla", default=os.environ.get("VOZ_SEMILLA") or str(SEMILLA),
+                    help="semilla de generación para Gemini; 'no' para no fijarla")
     ap.add_argument("--limite-minutos", type=float, default=0,
                     help="no empieza pistas nuevas pasado este tiempo (0 = sin límite)")
     ap.add_argument("--forzar", action="store_true", help="regenera aunque la huella coincida")
@@ -576,6 +784,7 @@ def main(argv=None):
                     help="borra las pistas que ya no existen en la web (con freno si serían muchas)")
     ap.add_argument("--forzar-poda", action="store_true", help="poda aunque desaparezcan muchas pistas")
     args = ap.parse_args(argv)
+    args.semilla = None if str(args.semilla).lower() in ("", "no", "none") else int(args.semilla)
 
     salida = Path(args.salida)
     salida.mkdir(parents=True, exist_ok=True)
@@ -602,7 +811,7 @@ def main(argv=None):
 
     # La voz se mantiene entre ejecuciones: la indicada, o la del manifiesto, o la de siempre.
     args.voz = args.voz or man["voz"].get("voz") or VOZ
-    firma = firma_voz(args.motor, args.modelo, args.voz)
+    firma = firma_voz(args)
     cache = Cache(Path(args.cache) / re.sub(r"[^A-Za-z0-9]+", "_", firma), firma)
 
     if args.podar:
@@ -632,7 +841,10 @@ def main(argv=None):
         pendientes = pendientes[: args.max_pistas]
 
     total_c = sum(t["chars"] for t in pendientes)
-    log(f"{len(pendientes)} pistas por locutar ({total_c} caracteres) con {args.motor} · {args.modelo} · voz {args.voz}")
+    peticiones = sum(len(tramos(t["bloques"], args.max_tramo)) if args.modo == "tramos" else len(t["bloques"])
+                     for t in pendientes)
+    log(f"{len(pendientes)} pistas por locutar ({total_c} caracteres, unas {peticiones} peticiones) con "
+        f"{args.motor} · {args.modelo} · voz {args.voz} · modo {args.modo}")
     if not pendientes:
         escribe_json(man_p, man)
         return 0
@@ -658,7 +870,7 @@ def main(argv=None):
                 break
             log(f"[{n}/{len(pendientes)}] {t['clave']} · {t['titulo']} · {len(t['bloques'])} bloques, {t['chars']} caracteres")
             try:
-                pista, marcas = locuta_pista(motor, cache, t, args.hilos)
+                pista, marcas = locuta_pista(motor, cache, t, args)
                 src = "mp3/" + nombre_mp3(t["clave"])
                 a_mp3(pista, salida / src, t["titulo"], man["voz"].get("aviso", ""))
             except (ErrorFatal, CuotaAgotada):

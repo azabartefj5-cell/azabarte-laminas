@@ -1,6 +1,27 @@
 {
  "esquema": "4.6",
- "base": "",
- "voz": {},
- "pistas": {}
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@db7962e3ff05f1366b96701b5cd46315f0254cbb/voz/narrativa",
+ "voz": {
+  "motor": "Google Gemini TTS",
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "Charon",
+  "aviso": "Locución con voz sintética generada por IA (Google Gemini)."
+ },
+ "pistas": {
+  "cap:glosario": {
+   "src": "mp3/cap-glosario.mp3",
+   "huella": "306a26fa85c49e8230dc3780d31f0836fa509ec391538380626b3f0075a77a19",
+   "marcas": [
+    0.35,
+    3.23,
+    24.74,
+    27.53
+   ],
+   "dur": 45.83,
+   "bytes": 367604,
+   "titulo": "Pequeño diccionario del archivo",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-28T02:12:18Z"
+  }
+ }
 }

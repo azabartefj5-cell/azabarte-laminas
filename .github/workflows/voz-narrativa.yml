@@ -10,6 +10,7 @@
 #   VOZ_NOMBRE  voz de Google (por defecto la que ya tenga el manifiesto, y si no, Charon)
 #   VOZ_RPM     tope de peticiones por minuto (útil con la capa gratuita, p. ej. 8)
 #   VOZ_HILOS   peticiones a la vez (4)
+#   VOZ_MODO    tramos (varios párrafos por petición: poca cuota y voz continua) o bloques (uno a uno)
 #   WEB_URL     página de la edición narrativa (https://azabarte.com/)
 #
 # Cada ejecución lee la web publicada, locuta solo las pistas nuevas o cuyo texto ha cambiado, sube los MP3,
@@ -36,9 +37,16 @@ on:
         description: 'Regenerar aunque el texto no haya cambiado'
         type: boolean
         default: false
+  push:
+    # Audio subido a mano o desde otra sesión: solo se fija la base del CDN y se purga la caché.
+    branches: [main]
+    paths:
+      - 'voz/narrativa/audio.json'
+      - 'voz/narrativa/mp3/**'
   schedule:
-    # A diario: continúa lo que quedara por cuota y relocuta los textos que se hayan editado en la web.
-    - cron: '23 3 * * *'
+    # A diario, después de que Google reinicie la cuota (medianoche de California, 7:00 u 8:00 UTC):
+    # continúa lo que quedara por cuota y relocuta los textos que se hayan editado en la web.
+    - cron: '17 9 * * *'
 
 permissions:
   contents: write
@@ -49,6 +57,7 @@ concurrency:
 
 jobs:
   locutar:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 350
     env:
@@ -125,46 +134,7 @@ jobs:
         if: always() && steps.motor.outputs.motor != ''
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          empuja() {
-            for i in 1 2 3 4 5; do
-              if git pull --rebase --autostash origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME"; then return 0; fi
-              echo "No se ha podido subir (intento $i); reintento."; sleep $((i * 10))
-            done
-            return 1
-          }
-          # 1) Los MP3 y los textos primero; el manifiesto aún no, para que nunca apunte a MP3 que no están.
-          git add -A voz/narrativa
-          git reset -q voz/narrativa/audio.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Voz narrativa: locuciones con Gemini TTS ($(date -u +%F))"
-            empuja
-          fi
-          # 2) La base del manifiesto debe ser un commit con estos mismos MP3.
-          if [ -n "$(ls -A voz/narrativa/mp3 2>/dev/null | grep -v '^\.' || true)" ]; then
-            BASE=$(python -c "import json;print(json.load(open('voz/narrativa/audio.json')).get('base',''))")
-            BASE_SHA=$(printf '%s' "$BASE" | sed -n 's#.*@\([0-9a-f]\{40\}\)/.*#\1#p')
-            ACTUAL=$(git rev-parse HEAD:voz/narrativa/mp3)
-            PREVIO=$( [ -n "$BASE_SHA" ] && git rev-parse "$BASE_SHA:voz/narrativa/mp3" 2>/dev/null || true )
-            if [ "$PREVIO" != "$ACTUAL" ]; then
-              SHA=$(git rev-parse HEAD)
-              python voz/narrativa/locutar.py --fijar-base "https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${SHA}/voz/narrativa"
-            fi
-          fi
-          # 3) El manifiesto.
-          git add voz/narrativa/audio.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Voz narrativa: manifiesto de las locuciones"
-            empuja
-            curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${GITHUB_REF_NAME}/voz/narrativa/audio.json" \
-              || echo "No se ha podido purgar la caché de jsDelivr; se renovará sola en unas horas."
-          else
-            echo "El manifiesto no cambia."
-          fi
+        run: bash voz/narrativa/publicar.sh
 
       - name: Guardar los bloques de la pista a medias
         if: always() && steps.motor.outputs.motor != ''
@@ -184,3 +154,19 @@ jobs:
             voz/narrativa/audio.json
           if-no-files-found: ignore
           retention-days: 30
+
+  publicar:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Fijar la base del CDN y purgar la caché del manifiesto
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PURGA_SIEMPRE: '1'
+        run: bash voz/narrativa/publicar.sh
