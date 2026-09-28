@@ -478,10 +478,19 @@ class Cache:
         for texto, k in claves:
             self.ruta(texto, k).unlink(missing_ok=True)
 
+    def guarda_rechazo(self, texto, k, a, motivo):
+        """Aparta una toma que no pasó la validación, con el motivo: cuesta una petición de la cuota y así
+        se puede escuchar y revisar después en lugar de perderla."""
+        d = self.dir / "rechazos"
+        d.mkdir(parents=True, exist_ok=True)
+        base = d / self.ruta(texto, k).stem
+        base.with_suffix(".pcm").write_bytes(a.tobytes())
+        base.with_suffix(".txt").write_text(f"{motivo}\n\n{texto}\n", "utf-8")
+
     def limpia(self, dias=21):
         """Borra lo que lleve semanas sin usarse (restos de tramos partidos o de textos que cambiaron)."""
         limite = time.time() - dias * 86400
-        for p in self.dir.glob("*.pcm"):
+        for p in [*self.dir.glob("*.pcm"), *self.dir.glob("rechazos/*")]:
             try:
                 if p.stat().st_mtime < limite:
                     p.unlink()
@@ -537,6 +546,14 @@ def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int 
             return a
         fallos += 1
         ultimo = f"duración sospechosa: {dur:.1f} s para «{texto[:40]}…» ({cps:.1f} c/s)"
+        motivo = getattr(valida, "motivo", "")
+        if motivo:
+            ultimo += f"; {motivo}"
+        if not ultimo_recurso:
+            try:
+                cache.guarda_rechazo(texto, k, a, ultimo)
+            except OSError:
+                pass
         log("  " + ultimo + "; repito")
         # Solo vale como último recurso una toma con voz y ritmo verosímil, nunca un silencio.
         if dur >= 0.3 and 3.0 <= cps <= 40.0 and (mejor is None or abs(cps - 15) < abs(mejor[1] - 15)):
@@ -687,18 +704,29 @@ def valida_tramo(textos):
     habla = sum(largo_hablado(x) for x in textos)
 
     def valida(a):
+        valida.motivo = ""
         dur = len(a) / RATE
         pausas = sum(b - a_ for a_, b in silencios(energia(a), minimo=1.2))
         voz = max(0.1, dur - pausas)
         cps = habla / voz
         ok = (8.0 <= cps <= 20.0) if habla >= 200 else (4.0 <= cps <= 30.0)
-        ok = ok and dur <= 8 * 60
+        if not ok:
+            valida.motivo = f"ritmo global {cps:.1f} c/s"
+        elif dur > 8 * 60:
+            ok, valida.motivo = False, f"dura {dur:.0f} s, más del tope de salida"
         if ok:
             trozos, _e, _c = parte_tramo(a, textos)
-            ok = all(len(tr) and duracion_razonable(x, tr)[2] for x, tr in zip(textos, trozos))
+            ritmos = [duracion_razonable(x, tr) if len(tr) else (0.0, 999.0, False)
+                      for x, tr in zip(textos, trozos)]
+            malos = [i for i, r in enumerate(ritmos) if not r[2]]
             # Un final cortado deja el último párrafo «demasiado rápido»: ahí el tope es más estricto.
-            if ok and largo_hablado(textos[-1]) >= 60:
-                ok = duracion_razonable(textos[-1], trozos[-1])[1] <= 21.0
+            if not malos and largo_hablado(textos[-1]) >= 60 and ritmos[-1][1] > 21.0:
+                malos = [len(textos) - 1]
+            if malos:
+                ok = False
+                valida.motivo = "párrafos fuera de ritmo: " + ", ".join(
+                    f"{i + 1}/{len(textos)} «{textos[i][:30]}…» {ritmos[i][0]:.1f} s, {ritmos[i][1]:.1f} c/s"
+                    for i in malos[:3])
         return dur, cps, ok
     return valida
 
