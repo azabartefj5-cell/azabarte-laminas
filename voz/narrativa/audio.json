@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@95ade105ae9534761905a74e5d97eedd552f8eac/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@24be1af232b12fd644272754416e58b1f47f0883/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1381,6 +1381,55 @@
    "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
    "generado": "2026-09-29T21:36:29Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@95ade105ae9534761905a74e5d97eedd552f8eac/voz/narrativa"
+  },
+  "lib:casa": {
+   "src": "mp3/lib-casa.mp3",
+   "huella": "0622a4e61915728c61977b6a4cdc3531e443e80d789a9a2d717878dee22f21df",
+   "marcas": [
+    0.35,
+    2.92,
+    6.65,
+    19.45,
+    43.97,
+    79.4,
+    83.58,
+    114.05,
+    117.44,
+    144.32,
+    147.22,
+    171.95,
+    216.05,
+    220.03,
+    273.94,
+    276.58,
+    304.09,
+    346.48,
+    349.82,
+    392.37,
+    396.69,
+    424.74,
+    427.1,
+    456.03,
+    494.96,
+    499.66,
+    502.51,
+    543.73,
+    582.45,
+    588.34,
+    593.58,
+    615.82,
+    643.19,
+    649.69,
+    683.13,
+    718.02,
+    749.04
+   ],
+   "dur": 773.67,
+   "bytes": 6190404,
+   "titulo": "Capítulo primero · Una casa en el valle",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T22:53:14Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@24be1af232b12fd644272754416e58b1f47f0883/voz/narrativa"
   }
  }
 }
