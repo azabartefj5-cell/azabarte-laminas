@@ -42,12 +42,27 @@ if [ -n "$(ls -A voz/narrativa/mp3 2>/dev/null | grep -v '^\.' || true)" ]; then
     python3 voz/narrativa/locutar.py --fijar-base "https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${SHA}/voz/narrativa"
   fi
 fi
+# Calentar (29-09-2026): jsDelivr trae cada fichero de GitHub la primera vez que alguien lo pide, y eso tarda
+# de 3 a 6 s por MP3 (41 s el primero de un commit). Se pide aquí cada MP3 recién publicado para que esa espera
+# la pague la Action y no el primer oyente. Seis a la vez; un fallo no para nada.
+calienta() {
+  python3 - <<'PY' | xargs -r -P 6 -I{} sh -c 'if curl -fsS -o /dev/null --retry 3 --max-time 300 "{}"; then echo "  caliente: {}"; else echo "  sin calentar: {}"; fi'
+import json
+m = json.load(open("voz/narrativa/audio.json", encoding="utf-8"))
+b = (m.get("base") or "").rstrip("/")
+for p in (m.get("pistas") or {}).values():
+    if isinstance(p, dict) and p.get("src") and (p.get("base") or b).rstrip("/") == b and b:
+        print(b + "/" + p["src"])
+PY
+}
 # 3) El manifiesto.
 git add voz/narrativa/audio.json
 if ! git diff --cached --quiet; then
   git commit -m "Voz narrativa: manifiesto de las locuciones"
   empuja
   purga
+  echo "Calentando en jsDelivr los audios recién publicados…"
+  calienta || true
 elif [ "${PURGA_SIEMPRE:-}" = "1" ]; then
   echo "El manifiesto ya estaba al día; se purga la caché para que se vea."
   purga

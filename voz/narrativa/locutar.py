@@ -84,6 +84,7 @@ SEPARADOR = "\n\n<long pause> <long pause>\n\n"
 MAX_TRAMO = 5500  # caracteres hablados por petición: unos 7 min de audio, holgado bajo el tope de salida
 IDIOMA = "es-ES"
 SEMILLA = 1798
+TIEMPO_MAX_S = 480  # tope de cada petición a Gemini; una locución normal tarda mucho menos
 
 # Pausas (segundos) entre bloques, según el tipo del bloque anterior y del siguiente.
 INICIO, FINAL = 0.35, 0.9
@@ -322,8 +323,14 @@ class MotorGemini(Motor):
         if not clave:
             raise ErrorFatal("Falta la variable GEMINI_API_KEY")
         from google import genai  # type: ignore
+        from google.genai import types  # type: ignore
 
-        self.client = genai.Client(api_key=clave)
+        # Tiempo máximo por petición (29-09-2026). Sin él, una petición colgada no fallaba nunca: la ejecución
+        # de pago 36591271235 se quedó más de dos horas y media en «Locutar lo pendiente» cuando el lote debía
+        # tardar unos 50 minutos (diagnóstico de la sesión «Navegación en versión narrativa»). Con el tope, la
+        # petición falla y locuta_bloque la reintenta como cualquier otro fallo. Comprobado que el SDK lo aplica
+        # a interactions.create (en milisegundos).
+        self.client = genai.Client(api_key=clave, http_options=types.HttpOptions(timeout=TIEMPO_MAX_S * 1000))
 
     def locuta(self, texto, k):
         self.espera_turno()
