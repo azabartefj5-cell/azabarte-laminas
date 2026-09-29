@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 76,
- "total_caracteres": 285153,
+ "total_caracteres": 320451,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -18,6 +18,30 @@
      "x": "En el cementerio de Las Pedroñeras hay una lápida de piedra clara con dos nombres, Francisco Azabarte Galindo y Vicenta Navarro Fides. Desde esa piedra, una de las más antiguas que se conservan allí, esta historia camina hacia atrás: hasta un Pedro que se casó en el pueblo en 1798 y, siguiendo el apellido, hasta unos Zabarte que ya vivían en tierras de Cuenca en tiempos del emperador Carlos y hasta una casa de un valle de Gipuzkoa que se llamaba Zabarte hace más de quinientos años. Este capítulo la cuenta entera en pocas páginas; los demás la cuentan despacio."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Todo empieza con un abuelo, Emiliano, el menor de ocho hermanos, y con un nieto que quiso saber de dónde venía un apellido que casi nadie lleva."
+    },
+    {
+     "k": "cl",
+     "x": "Tres generaciones tienen papeles firmes: Francisco y Vicenta, su hijo Venus y los ocho hijos de Venus. Antes de ellos, un Pedro Azabarte se casó en el pueblo en 1798, y sus padres eran del pueblo según unas partidas y de Belmonte según otra."
+    },
+    {
+     "k": "cl",
+     "x": "El apellido estaba en tierras de Cuenca mucho antes: un hidalgo de Elgeta vivía en Barchín del Hoyo en 1535, y una familia Zabarte vivió todo el siglo dieciocho en Cañada Juncosa, a pocas leguas del pueblo."
+    },
+    {
+     "k": "cl",
+     "x": "Zabarte es el nombre de una casa: un caserío de Angiozar, en Gipuzkoa, que ya daba nombre a hombres del valle en el siglo quince y sigue en pie. Si el apellido de la familia sale de él, ningún papel lo dice todavía."
+    },
+    {
+     "k": "cl",
+     "x": "Falta un puente: ningún papel une todavía a aquellos Zabarte con la familia de Pedro. Por eso no están en el árbol, aunque sí en esta historia."
+    },
+    {
      "k": "h",
      "x": "Empieza con un abuelo"
     },
@@ -28,6 +52,14 @@
     {
      "k": "p",
      "x": "El apellido es rarísimo: lo llevan unas ochenta personas en toda España, y los papeles que lo nombran se concentran en la provincia de Cuenca. Cuando un apellido es tan escaso, lo corriente es que cuantos lo llevan vengan de la misma casa. Que sea lo corriente no quiere decir que esté probado, y aquí se cuenta solo lo que los papeles consienten contar."
+    },
+    {
+     "k": "ct",
+     "x": "Cómo leer esta historia"
+    },
+    {
+     "k": "cp",
+     "x": "En estas páginas hay tres clases de noticias, y cada una se dice a su manera. Lo que consta en un papel —un acta, una partida, una escritura— se cuenta sin rodeos. Lo que recuerda la familia se cuenta como recuerdo, diciendo quién lo recuerda. Y lo que es probable, pero todavía no está escrito en ningún papel, se dice una sola vez con esas palabras: «con toda probabilidad», «todo apunta a». Así cualquiera puede saber, en cada línea, cuánto pesa lo que lee."
     },
     {
      "k": "h",
@@ -44,6 +76,14 @@
     {
      "k": "p",
      "x": "Venus Azabarte Navarro, el único varón de los tres, nació hacia 1876 y fue labrador. Se casó con Encarnación Galindo Gallardo y tuvieron ocho hijos: Eugenia, Vicenta, Florencia, Francisco, Francisca, Julián, Venus y Emiliano. Es el puente entre el siglo de las actas y la familia de hoy: la casa de Venus, en la misma calle, es la que recuerdan quienes todavía viven."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hacía: el juzgado y la parroquia"
+    },
+    {
+     "k": "cp",
+     "x": "Desde 1871 cada nacimiento, cada boda y cada muerte de España se apuntan en el Registro Civil, que en los pueblos llevaba el juzgado municipal. Antes de esa fecha los únicos que escribían esas cosas eran los curas, en los libros de la parroquia: bautizos, bodas y entierros. Por eso esta historia se lee con dos clases de papeles: las actas del juzgado, del siglo diecinueve en adelante, y las partidas de la iglesia, que llegan mucho más atrás."
     },
     {
      "k": "h",
@@ -112,10 +152,14 @@
     {
      "k": "p",
      "x": "Mientras tanto, la historia se cuenta como está: con nombres seguros, con parientes probables y con huecos dichos en voz alta. Un nombre repetido en un papel viejo no convierte a nadie en pariente, y en esta familia nadie ha querido inventarse un antepasado."
+    },
+    {
+     "k": "pull",
+     "x": "Un nombre repetido en un papel viejo no convierte a nadie en pariente."
     }
    ],
-   "huella": "d926029fb58700999a9d8a72fffb587f7a136ffcf8e526d21c3a25604311135d",
-   "chars": 7898
+   "huella": "a9c0d7a46efcd64ea76c760f0e4618ad140de767f7086b425c7b455bf73aa104",
+   "chars": 9903
   },
   {
    "clave": "cap:pueblo",
@@ -131,6 +175,30 @@
      "x": "Quien llega a Las Pedroñeras por cualquiera de sus caminos ve primero una torre de piedra con un chapitel de pizarra: es la de la iglesia de la Asunción, levantada en el siglo dieciséis, que aparece al fondo de casi todos los retratos de esta historia. Alrededor de ella, en una villa de la Mancha conquense famosa por el ajo morado, se casó Pedro en 1798, nacieron Francisco, Venus y Emiliano, y están enterrados casi todos los de esta familia."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Una villa más vieja que sus papeles: existía antes de 1400, y en 1479 se alzó en nombre de los Reyes Católicos."
+    },
+    {
+     "k": "cl",
+     "x": "Toda la familia cabía en una calle, la de Fray Luis de León, que arranca de la plaza de la iglesia."
+    },
+    {
+     "k": "cl",
+     "x": "Los libros de bautismos de 1822 a 1858 se perdieron, pero en 1858 existían todavía, y un expediente de aquel año cuenta cómo se llevaban."
+    },
+    {
+     "k": "cl",
+     "x": "Belmonte, a doce kilómetros, es el pueblo del que eran naturales los padres de Pedro según una partida de 1809; las bodas de 1798 los hacen del propio pueblo."
+    },
+    {
+     "k": "cl",
+     "x": "Las piedras de los retratos son reales: cada lámina se dibujó sobre una fotografía del edificio de hoy."
+    },
+    {
      "k": "h",
      "x": "Un pueblo más viejo de lo que parece"
     },
@@ -141,6 +209,14 @@
     {
      "k": "p",
      "x": "El pueblo que conoció Francisco a mediados del siglo diecinueve era un pueblo de labradores y jornaleros. Los papeles hablan de la calle Mayor, de la calle de Mendizábal, donde vivía el alguacil que fue a declarar la muerte de Francisco, y sobre todo de la calle Fray Luis de León, que arranca de la plaza de la iglesia."
+    },
+    {
+     "k": "ct",
+     "x": "Así se vivía: labradores y jornaleros"
+    },
+    {
+     "k": "cp",
+     "x": "En los pueblos de La Mancha no era lo mismo ser labrador que jornalero. El labrador trabajaba tierras suyas o arrendadas, con sus mulas y sus aperos, y a veces daba trabajo a otros. El jornalero no tenía más que sus brazos: cada mañana buscaba quien lo contratara y cobraba por día trabajado, el jornal. Francisco, según su acta, fue jornalero; su hijo Venus, labrador."
     },
     {
      "k": "h",
@@ -167,6 +243,10 @@
      "x": "Por eso la lápida de los dos, de piedra clara, está hoy en el cementerio nuevo, con sus nombres completos. En la fotografía que hizo la familia el día de Todos los Santos de 2025 tiene dos ramos de flores encima. Es una de las piedras más antiguas que se conservan allí, y es el primer documento de esta historia que cualquiera puede ir a ver."
     },
     {
+     "k": "pie",
+     "x": "La lápida que se trasladó al cementerio nuevo · Cementerio de Las Pedroñeras · fotografía de la familia, 1 de noviembre de 2025 · una de las más antiguas que se conservan"
+    },
+    {
      "k": "h",
      "x": "Los curas que se olvidaban de escribir"
     },
@@ -189,6 +269,14 @@
     {
      "k": "p",
      "x": "Entre las cuarenta y seis partidas olvidadas no había ningún Azabarte. Eso, que a primera vista desanima, dice algo valioso: todo indica que el bautizo de Francisco, hacia 1839, y la boda de sus padres se escribieron a su tiempo en los libros de la parroquia, y esos libros existían todavía en 1858. Lo que se perdió después fue, por lo menos, el libro de bautismos, y con él la hoja que habría dado de una vez los apellidos de Pablo y de Blasa."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: provisor, fiscal y reales"
+    },
+    {
+     "k": "cp",
+     "x": "El provisor era el juez del obispo: resolvía en su nombre los asuntos de la diócesis. El fiscal eclesiástico hacía de acusador y vigilaba que se cumplieran las reglas. Y el real era la moneda con que se contaba en Castilla. Un jornalero ganaba entonces unos pocos reales al día, así que nueve mil ochocientos reales eran el jornal de varios años."
     },
     {
      "k": "h",
@@ -223,8 +311,8 @@
      "x": "La otra mitad de la historia transcurre en Álava y Gipuzkoa: la aldea de Ondategi con su iglesia de San Lorenzo y su lavadero, una casa-torre del tipo que poblaba los valles alaveses, y Vitoria, la ciudad del archivo donde se guardan los libros. Están dibujados con el mismo estilo, para que las dos orillas de la historia se parezcan, y se cuentan despacio en los dos capítulos dedicados a Álava."
     }
    ],
-   "huella": "033fde9f7da03b1e1d801c27da07a9d2e596c8b8d821e71e4bb1ab2311b1edad",
-   "chars": 7497
+   "huella": "5130fabff5b75b171439679776e98dcc70cd3083fcf84c67d0156163c112d452",
+   "chars": 9088
   },
   {
    "clave": "cap:hipotesis",
@@ -238,6 +326,30 @@
     {
      "k": "lede",
      "x": "Todas las familias cuentan de dónde vienen. En esta se decía que venían de Francia, o del norte con los carlistas; que los Navarro eran de Navarra y los Fides, valencianos; que hubo una «hermana Camila» que no cabía en ninguna parte del árbol; y que la A del apellido tenía un origen escondido. Este capítulo pone cada historia al lado de los papeles, y cuenta lo que ha quedado de ella."
+    },
+    {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "El apellido no vino de Francia: en lo que las grandes bases de genealogía guardan de allí no hay ningún Azabarte antiguo, y los papeles que hay llevan el apellido de Elgeta, en el valle del Deba, a tierras de Cuenca, aunque todavía no hasta la familia."
+    },
+    {
+     "k": "cl",
+     "x": "Las guerras carlistas llegan tarde: la familia ya estaba en el pueblo en 1798, treinta y cinco años antes de la primera."
+    },
+    {
+     "k": "cl",
+     "x": "Los Navarro y los Fides eran del pueblo, según sus propias actas de defunción."
+    },
+    {
+     "k": "cl",
+     "x": "La prima Camila encontró su sitio: según recuerda otra rama de la familia, era nieta de Francisco y Vicenta, hija de su hija mayor."
+    },
+    {
+     "k": "cl",
+     "x": "La A, con toda probabilidad, no la trajo nadie de fuera: la ponían y la quitaban las plumas de curas y escribanos."
     },
     {
      "k": "h",
@@ -264,6 +376,14 @@
      "x": "Queda un parecido de sonido. En el Ariège, al otro lado del Pirineo, hay un lugar llamado Sabart, documentado desde el siglo nueve, y su nombre recuerda a Zabarte. Pero Sabart tiene su propia explicación en la lengua de allí, y Zabarte la tiene en la de aquí, entre los nombres vascos de casa terminados en «-arte». Y la forma con ese, Sabarte, no hace falta ir a buscarla fuera: los repertorios de apellidos la recogen en Mondragón y en Angiozar, y en Álava el mismo apellido se escribió unas veces con zeta y otras con ese. En el sur de Francia también hay Sabarte desde el siglo dieciséis, pero es un apellido propio de aquella tierra, y en las bases que se han recorrido ninguno de ellos aparece al sur de los Pirineos. Con todo esto a la vista, se puede decir ya que el apellido no vino de Francia. La frase de la familia sigue siendo un recuerdo, y como recuerdo se guarda."
     },
     {
+     "k": "ct",
+     "x": "Para entenderlo: qué es una leyenda de familia"
+    },
+    {
+     "k": "cp",
+     "x": "Una leyenda de familia no es una mentira. Es la manera en que una familia se explica a sí misma, y a menudo guarda algo cierto aunque se equivoque en los detalles: en este caso, la idea de que el apellido vino de lejos. Zabarte es, en efecto, el nombre de una casa del norte; lo que todavía no se sabe es si la familia viene de ella, ni por qué camino, y ningún papel lleva ese lejos hasta Francia. Estas páginas no borran ninguna leyenda. Las ponen al lado de los documentos, para que cada cual vea dónde coinciden y dónde no."
+    },
+    {
      "k": "h",
      "x": "«Vinieron del norte con las guerras carlistas»"
     },
@@ -284,6 +404,14 @@
      "x": "Las guerras carlistas sí dejaron huella en la memoria de la familia, pero en otra historia: la de Juan, el hermano de Vicenta Navarro al que llamaban «el Polaco», que, según cuenta la familia, se fue voluntario a la caballería carlista. Se cuenta en el capítulo «Los que se marcharon»."
     },
     {
+     "k": "ct",
+     "x": "Un apunte de época: las guerras carlistas"
+    },
+    {
+     "k": "cp",
+     "x": "En el siglo diecinueve España tuvo tres guerras civiles por la corona. Enfrentaron a los partidarios de don Carlos, hermano del rey Fernando, y después a los de sus herederos, con los de la reina Isabel, hija de Fernando, y los gobiernos liberales. La primera duró de 1833 a 1840, la segunda de 1846 a 1849 y la tercera de 1872 a 1876. Muchos mozos de los pueblos se alistaron en uno u otro bando, y de aquellas campañas salieron no pocas historias de familia."
+    },
+    {
      "k": "h",
      "x": "«Navarro porque venían de Navarra; Fides, de valenciano»"
     },
@@ -294,6 +422,14 @@
     {
      "k": "p",
      "x": "Navarro, además, es uno de los apellidos más corrientes de España: lo llevan más de ciento setenta mil personas. Que un día significara «de Navarra» no dice nada de esta casa en concreto. Y de unos Fides valencianos no ha quedado más rastro que un testigo de apellido Gilbert en una de las bodas de Pedro Azabarte, que no prueba nada: un testigo de boda no tiene por qué ser pariente de nadie."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: de dónde salen los apellidos"
+    },
+    {
+     "k": "cp",
+     "x": "Los apellidos españoles nacieron de pocas fuentes. Unos vienen del nombre del padre: Martínez era el hijo de Martín, y Fernández, el de Fernando. Otros vienen de un lugar, de una casa o de un origen: Navarro, Zabarte, Belmonte. Otros, de un oficio o de un apodo. Pero se fijaron hace muchos siglos, y desde entonces pasan de padres a hijos vivan donde vivan. Por eso un Navarro de La Mancha puede no tener un solo antepasado navarro en quinientos años."
     },
     {
      "k": "h",
@@ -332,8 +468,8 @@
      "x": "La única vez que un libro de Álava escribe la A con seguridad es en un bautizo de Vitoria de 1725, y allí no nace de ninguna suma: el escribiente se la puso a la madre del niño y también a su abuelo, que no tenía nada de Azedo, y quien firmaba aquel libro había escrito Zabarte, sin A, en la boda de los padres. La A aparece y desaparece según quién tenga la pluma. Lo que se sabe de la A de Las Pedroñeras se cuenta, paso a paso, en el capítulo «Un camino a medio andar»."
     }
    ],
-   "huella": "c883868969c4376de814d06d8b316b25bbb3c82a6aeb3fb7f18708bfdc644895",
-   "chars": 8876
+   "huella": "37806e756352f26079c6ab08104c55cdcd70d2480860658d295de18bd12691be",
+   "chars": 11161
   },
   {
    "clave": "cap:genesis",
@@ -347,6 +483,30 @@
     {
      "k": "lede",
      "x": "En el valle alto del Deba, entre Bergara y Elgeta, hay un caserío que se llama Zabarte. Cuando Colón cruzó el Atlántico ya había hombres que se llamaban «de Zabarte» por aquella casa, y la casa sigue en pie. Antes de ser un apellido, Zabarte fue un lugar. Este capítulo cuenta cómo es, quiénes vivieron en ella durante tres siglos y cómo su nombre salió del valle."
+    },
+    {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Zabarte es un lugar: un caserío del barrio de Angiozar, en Bergara, casa solar con sepultura propia en su iglesia y todavía en pie."
+    },
+    {
+     "k": "cl",
+     "x": "Los primeros que se llamaron así aparecen en los papeles de Elgeta desde mediados del siglo quince."
+    },
+    {
+     "k": "cl",
+     "x": "El nombre era de la casa: cuando la heredaba una hija, el marido que entraba en ella acababa llevándolo."
+    },
+    {
+     "k": "cl",
+     "x": "En el valle nunca llevó A: Zabarte, Çabarte, Zauarte o Zavarte, pero ninguna A en sus papeles."
+    },
+    {
+     "k": "cl",
+     "x": "Del valle salió gente hacia el sur, y la salida más antigua que se conoce llegó a tierras de Cuenca en 1535."
     },
     {
      "k": "h",
@@ -365,6 +525,14 @@
      "x": "Era, además, una casa solar, y como tal tenía sepultura propia dentro de la iglesia de San Miguel de Angiozar. Allí enterraron en septiembre de 1701 a José de Zabarte, un hijo de la casa, y el cura dejó escrito que lo pusieron «en la sepultura de su casa nativa»."
     },
     {
+     "k": "ct",
+     "x": "Para entenderlo: qué es una casa solar"
+    },
+    {
+     "k": "cp",
+     "x": "En Gipuzkoa y en Bizkaia una casa solar era la casa de la que un linaje tomaba su nombre. No tenía por qué ser un palacio: muchas eran caseríos de labranza. Lo que la distinguía era su antigüedad y sus derechos, como un asiento y una sepultura propios en la iglesia del lugar. Quien nacía en ella podía decir, estuviera donde estuviera, que era «de la casa de Zabarte», y eso, lejos de su tierra, abría puertas."
+    },
+    {
      "k": "h",
      "x": "Los primeros que se llamaron así"
     },
@@ -375,6 +543,14 @@
     {
      "k": "p",
      "x": "Después el apellido se sigue por los protocolos de los escribanos —los libros donde cada notario guardaba copia de las escrituras que se firmaban ante él— y por los pleitos: un Martín de Zabarte, vecino de Elgeta, en 1550; un Juan de Zabarte en Mondragón en 1559, y los Martínez de Zabarte de Elgeta a comienzos del siglo diecisiete. Esos papeles se conservan, y se sabe en qué archivos: los de Bergara, Oñati y Gipuzkoa."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: la ce con cedilla"
+    },
+    {
+     "k": "cp",
+     "x": "En los papeles viejos el apellido se escribe muchas veces Çabarte, con una ce que lleva debajo una colita, la cedilla. Era una letra del castellano antiguo que sonaba parecido a la zeta de hoy, y se usó hasta el siglo dieciocho, cuando se abandonó. En la letra apretada de los escribanos de entonces la cedilla se alargaba y se confundía con otros trazos, y más de una vez quien lee hoy esos papeles no sabe si tiene delante una Ç o dos letras distintas. En esta historia eso importará más de una vez."
     },
     {
      "k": "h",
@@ -395,6 +571,14 @@
     {
      "k": "p",
      "x": "No todos los hijos heredaban, pero todos seguían siendo de la casa. En 1693 se casó en Angiozar José de Zabarte, un hijo segundón de los dueños, con María de Egurbide, y en 1695 bautizaron a su hija Mariana. José no heredó la casa, pero cuando murió, en 1701, lo enterraron en la sepultura que la familia tenía en la iglesia, la de «su casa nativa»."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hacía: la casa, para un solo heredero"
+    },
+    {
+     "k": "cp",
+     "x": "En Gipuzkoa y en Bizkaia la costumbre era que la casa pasara entera a un solo heredero, hijo o hija, para que no se partiera. Si heredaba una hija, el marido entraba a vivir en la casa, aportaba su dote y acababa conociéndose por el nombre de ella. Los demás hermanos recibían su parte y tenían que buscar la vida en otra parte: casándose en otra casa, entrando en la Iglesia o marchándose lejos. Por eso de las casas del valle salió tanta gente hacia Castilla, y por eso el apellido viajó."
     },
     {
      "k": "h",
@@ -431,10 +615,14 @@
     {
      "k": "p",
      "x": "Y en el siglo dieciocho vivía otra familia del apellido en Cañada Juncosa, más cerca todavía de Las Pedroñeras. Ninguno de ellos está unido por un papel a la familia de Pedro Azabarte, pero entre la casa del valle y la calle Fray Luis de León ya no hay un vacío de cuatrocientos kilómetros, sino varias paradas conocidas del apellido, a la espera del papel que las una."
+    },
+    {
+     "k": "pull",
+     "x": "Antes de ser un apellido, Zabarte fue una casa, y la casa sigue en pie."
     }
    ],
-   "huella": "e2d94c61111d8ec6d62b7cb214e703aa21dea392c0a356894f6bf7037cebad2d",
-   "chars": 7499
+   "huella": "ce88e65a5796fbb89ba03ae942f36e226081cc07391cbba435b44e57931f1336",
+   "chars": 9643
   },
   {
    "clave": "cap:cronologia",
@@ -450,6 +638,26 @@
      "x": "Un día de enero de 1798, en la iglesia de Nuestra Señora de la Asunción de Las Pedroñeras, un cura escribió en el libro de matrimonios un apellido que no sale en ningún papel más antiguo del pueblo que se conozca: Azabarte. El novio se llamaba Pedro. Tres hojas de los libros de la parroquia cuentan su vida a saltos, con dos bodas y un bautizo, y dejan escrita de pasada la pista que ha llevado la búsqueda fuera del pueblo, hacia Belmonte."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Pedro Azabarte se casó en Las Pedroñeras el 8 de enero de 1798 con María Parrilla y, ya viudo, el 5 de octubre de 1805 con Manuela de Carlos. Su hermana María se casó un mes después que él."
+    },
+    {
+     "k": "cl",
+     "x": "Pablo Pascasio, hijo de Pedro y de Manuela, nació el 22 de febrero de 1809. Todo apunta a que es el Pablo que fue padre de Francisco Azabarte Galindo."
+    },
+    {
+     "k": "cl",
+     "x": "Belmonte o Las Pedroñeras: las bodas de 1798 dan a los padres de Pedro, Francisco y María Mateo Cantero, por naturales del pueblo, y el bautizo de 1809, por naturales de Belmonte, a doce kilómetros. Es la primera vez que un papel de la familia mira fuera del pueblo."
+    },
+    {
+     "k": "cl",
+     "x": "Entre 1822 y 1858 los libros de bautismos de la parroquia tienen un hueco, y en él cayó el bautizo de Francisco."
+    },
+    {
      "k": "h",
      "x": "Enero de 1798: una boda con la parroquia vacante"
     },
@@ -460,6 +668,18 @@
     {
      "k": "p",
      "x": "Un mes más tarde, el 11 de febrero, en la misma hoja abierta del libro, se casó una hermana de Pedro, María Azabarte, con un viudo del pueblo, Antonio García Cañizares, que había perdido a su primera mujer, Felipa Ramírez. Su partida termina en la cara de atrás de la hoja, y allí dejó escrito el cura que los padres difuntos habían sido «vecinos y naturales» de la villa. Fueron testigos el sacristán, Nicolás Gómez, y un Agustín García. Dos hermanos que se casan con un mes de diferencia, huérfanos los dos de padre y de madre: así entra el apellido en la historia del pueblo."
+    },
+    {
+     "k": "pull",
+     "x": "El apellido entra en los papeles del pueblo con dos bodas y dos huérfanos, en el invierno de 1798."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: casar y velar"
+    },
+    {
+     "k": "cp",
+     "x": "Casi todas las bodas de aquellos libros terminan con la misma fórmula: los novios fueron «casados y velados». Casarse era darse el sí ante el cura y dos testigos. Velarse era recibir después, en una misa, la bendición nupcial, con un velo que se extendía sobre la cabeza de la novia y los hombros del novio. En Adviento y en Cuaresma no se velaba, y por eso algunas parejas se casaban un día y se velaban semanas más tarde."
     },
     {
      "k": "h",
@@ -478,6 +698,14 @@
      "x": "En esa misma página del libro hay otro detalle. En la boda anterior a la de Pedro, la de Mariano de Haro y María García, figura como testigo un Dámaso Azabarte. Es otro hombre adulto con el apellido, en el mismo pueblo y el mismo año, del que no se sabe nada más. Pudo ser pariente de Pedro; ningún papel lo dice todavía."
     },
     {
+     "k": "ct",
+     "x": "Así se hacía: las amonestaciones"
+    },
+    {
+     "k": "cp",
+     "x": "Antes de casar a una pareja, el cura anunciaba en la misa mayor, tres días de fiesta seguidos, que aquellos dos querían casarse, por si algún vecino sabía de un impedimento: un parentesco demasiado cercano, una promesa de boda anterior, un matrimonio que no se había deshecho. Eran las amonestaciones, que también se llamaban proclamas. De ahí viene la expresión, todavía viva, de «correr las amonestaciones»."
+    },
+    {
      "k": "h",
      "x": "Febrero de 1809: un niño en tiempo de guerra"
     },
@@ -492,6 +720,14 @@
     {
      "k": "p",
      "x": "En esa partida el apellido del padre sale escrito de dos maneras, «Azavarte» en el texto y «Azabarte» al margen, con uve en una línea y con be en la otra. No es un descuido raro: la be y la uve sonaban igual, y cada escribiente ponía la que le parecía. Los abuelos por parte de madre fueron Francisco de Carlos y Catalina Carrión. Los de parte de padre, Francisco y María Mateo Cantero, y de ellos el cura escribió algo más: eran naturales de Belmonte."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: la guerra en tierras de Cuenca"
+    },
+    {
+     "k": "cp",
+     "x": "En la primavera de 1808 empezó la guerra contra los franceses, la que los libros llaman guerra de la Independencia y que duró hasta 1814. La Mancha era camino de paso entre Madrid y Andalucía, y sus pueblos vieron pasar soldados de los dos bandos, con requisas de grano, de bestias y de carros. En medio de todo aquello la vida de las parroquias siguió adelante: se bautizaba, se casaba y se enterraba, y los curas lo seguían apuntando."
     },
     {
      "k": "h",
@@ -538,6 +774,14 @@
      "x": "Había nacido hacia 1806, así que por la edad pudo ser hijo del primer matrimonio de Pedro con María Parrilla, y medio hermano de Pablo Pascasio; ningún papel lo dice todavía. De su casa, en cambio, se sabe algo más gracias a un papel encontrado muy lejos del pueblo: con toda probabilidad, una hija suya, María, se casó en Valencia en 1868. Es la primera Azabarte del pueblo que se sabe que hizo su vida fuera de la provincia, y su historia se cuenta en «Los que se marcharon»."
     },
     {
+     "k": "ct",
+     "x": "Un apunte de época: las tercianas"
+    },
+    {
+     "k": "cp",
+     "x": "Durante siglos, en muchas tierras de España con agua quieta —lagunas, ríos lentos, arrozales—, los mosquitos transmitían unas fiebres que volvían al tercer o al cuarto día, y por eso se llamaban tercianas o cuartanas. Los médicos del siglo diecinueve las anotaban como «intermitentes», y llamaban «perniciosa» a la forma que mataba. Es el paludismo, y España no se vio libre de él hasta 1964."
+    },
+    {
      "k": "h",
      "x": "Josefa, la abuela de un niño de Caudete"
     },
@@ -562,8 +806,8 @@
      "x": "Al mirarlos juntos se ve lo que esta historia tiene resuelto y lo que no. El apellido hizo muy pronto el viaje del norte a Cuenca, hacia 1535, y en el siglo dieciocho había Zabarte a pocas leguas de Las Pedroñeras. Lo que ningún papel ha cruzado todavía son los tramos que unen a unos Zabarte con otros y a todos ellos con la casa de Francisco, el padre de Pedro. En la línea, esos tramos se ven vacíos: es el hueco que queda por llenar."
     }
    ],
-   "huella": "79ca94570f1590bccca68bfa50e13ed883ee05c2b164c266b63df644f290a32b",
-   "chars": 10059
+   "huella": "f6c9d5d037dbbd8797c39f56d655ae860285a89748326cf3ddd56e0c58e7bc11",
+   "chars": 12698
   },
   {
    "clave": "cap:alava",
@@ -579,6 +823,30 @@
      "x": "El 2 de octubre de 1725, en la parroquia de San Vicente de Vitoria, un escribiente anotó el bautizo de un niño llamado Miguel y escribió el apellido de su madre como no volvería a escribirlo nadie en aquel archivo: Martínez de Azabarte. La madre era de una aldea del valle de Zigoitia y venía de una familia que se puede seguir, bautizo a bautizo, durante más de dos siglos. Nadie ha podido probar que sean antepasados de la familia de Cuenca, pero en su historia pasa todo lo que después pasa en Las Pedroñeras: el apellido escrito de muchas maneras, la A que aparece y desaparece, los hijos que se van."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Donato, hijo de Celedón, pasó de Acosta a Ondategi, dos aldeas del mismo valle, en el siglo diecisiete."
+    },
+    {
+     "k": "cl",
+     "x": "Ocho hermanos, tres maneras de escribirlos: el cura apuntó Zabarte, Sabarte y Martínez de Sabarte a los hijos de una misma casa."
+    },
+    {
+     "k": "cl",
+     "x": "Francisca se fue a Vitoria, se casó con un Azedo y en el bautizo de su hijo Miguel la escribieron «Martínez de Azabarte», la única vez en todo el archivo."
+    },
+    {
+     "k": "cl",
+     "x": "El apellido siguió en Álava hasta el siglo veinte: el último de la serie murió en Vitoria en 1982."
+    },
+    {
+     "k": "cl",
+     "x": "Ninguno bajó a Cuenca, que se sepa: la rama que más al sur llegó se quedó en la orilla del Ebro."
+    },
+    {
      "k": "h",
      "x": "De Acosta a Ondategi"
     },
@@ -589,6 +857,14 @@
     {
      "k": "p",
      "x": "Donato es el que se mueve. El 28 de septiembre de 1687 se casó en Ondategi, otra aldea del mismo valle, con Francisca Fernández de Gamarra, y se quedó a vivir allí. Viudo, volvió a casarse en 1708 en Gopegi con Ysabela Aguirre. Es el único traslado de la familia en siglo y medio, y fue de un pueblo a otro del mismo valle."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: los apellidos largos de Álava"
+    },
+    {
+     "k": "cp",
+     "x": "En Álava era corriente un apellido hecho de dos piezas: un patronímico, como Martínez, Fernández u Ortiz, y un lugar o una casa, unidos por «de». Así salen Martínez de Zabarte, Fernández de Gamarra u Ortiz de Zárate. No era señal de nobleza: lo usaban igual los labradores que los hidalgos. Decía de qué casa o de qué lugar venía una familia, y por eso en estos libros la misma persona aparece unas veces con el apellido largo y otras con el corto."
     },
     {
      "k": "h",
@@ -619,6 +895,18 @@
      "x": "La misma mujer, en la misma ciudad, aparece escrita de cuatro maneras en dieciséis años: Zabarte, Martínez de Zabarte, Martínez de Azabarte y Martínez de Sabarte. Francisca murió en Vitoria en junio de 1736, con treinta y cinco años, y la enterraron en la iglesia de San Vicente. No hizo testamento, anotó el cura, porque era pobre. Su viudo volvió a casarse dos años después, y cuando él murió, en la Nochebuena de 1741, los hijos de Francisca se quedaron sin padre ni madre."
     },
     {
+     "k": "pull",
+     "x": "La misma mujer, en la misma ciudad, aparece escrita de cuatro maneras en dieciséis años."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hacía: la velación"
+    },
+    {
+     "k": "cp",
+     "x": "Casarse y velarse no eran lo mismo. La boda se celebraba ante el cura y los testigos, y la velación era una bendición solemne que se daba después, en una misa, cubriendo a los novios con un velo. No podía hacerse en los tiempos de penitencia, como el Adviento o la Cuaresma, y por eso muchas parejas, como Francisca y Melchor, se casaban un día y se velaban semanas o meses más tarde."
+    },
+    {
      "k": "h",
      "x": "Los que se quedaron y los que se fueron"
     },
@@ -647,16 +935,56 @@
      "x": "Son, en total, más de setecientos asientos alaveses repartidos por más de sesenta pueblos entre 1526 y 1900. Entre ellos hay al menos cuarenta y un niños que no llegaron a los ocho años, y fueron más, porque muchos entierros no están en los índices. Es lo mismo que se ve al pasar las hojas de los libros de Cuenca, y conviene decirlo: durante la mayor parte de estos cuatrocientos años, enterrar hijos pequeños fue parte de lo que significaba tener familia."
     },
     {
+     "k": "ct",
+     "x": "Un apunte de época: por qué morían tantos niños"
+    },
+    {
+     "k": "cp",
+     "x": "Hasta bien entrado el siglo veinte, en toda España era corriente que una familia enterrara a varios hijos pequeños. Las fiebres, las infecciones del agua y de la leche, la viruela o el sarampión se llevaban a muchos antes de cumplir los cinco años, y no había medicinas para curarlos. Por eso tantas familias ponían a un hijo el nombre de un hermano muerto poco antes: era la manera de que el nombre siguiera en la casa."
+    },
+    {
      "k": "h",
      "x": "Diez maneras de escribir un apellido"
     },
     {
      "k": "p",
      "x": "Si en los índices de Vitoria se busca solo «Azabarte», aparece un único asiento. Si se buscan las otras maneras que usaron los curas, aparecen más de setecientos. La lección de Álava es sencilla y sirve para toda esta historia: un apellido no se escribía, se oía, y cada pluma lo apuntaba como podía. Estas son las diez formas que dejaron los libros alaveses:"
+    },
+    {
+     "k": "li",
+     "x": "Zabarte, la más corriente, más de trescientas veces."
+    },
+    {
+     "k": "li",
+     "x": "Sabarte, casi otras tantas, sobre todo en Ondategi, Murua, Manurga y Vitoria."
+    },
+    {
+     "k": "li",
+     "x": "Savarte y Zavarte, con uve, unas pocas decenas."
+    },
+    {
+     "k": "li",
+     "x": "Çabarte, con cedilla, en los papeles más antiguos de Vitoria, de Acosta y de Baranbio."
+    },
+    {
+     "k": "li",
+     "x": "Asabarte y Asabatto, tal como leyó el archivo los dos bautizos de Ondategi de 1526 y 1528."
+    },
+    {
+     "k": "li",
+     "x": "Gavarte, dos veces, en Ondategi, en 1765 y 1766."
+    },
+    {
+     "k": "li",
+     "x": "Cavarte, una vez, en la boda de un Zeledón en Acosta, en 1673."
+    },
+    {
+     "k": "li",
+     "x": "Y Azabarte, una sola vez, en Vitoria, en 1725."
     }
    ],
-   "huella": "16c8f878823702484cf3e729087bea49f876216de323bc0a13149b581d6f395f",
-   "chars": 7183
+   "huella": "0b93c47f78e6be5aa15ee09538605f7adb937cd6b83915a2e93ed2f165d221c3",
+   "chars": 9747
   },
   {
    "clave": "cap:ondategi",
@@ -670,6 +998,26 @@
     {
      "k": "lede",
      "x": "El 25 de noviembre de 1526, en la iglesia de San Lorenzo de Ondategi, una aldea del valle de Zigoitia a quince kilómetros de Vitoria, bautizaron a una niña llamada María, hija de Diego y de María. Es el asiento más antiguo del apellido en toda Álava. El archivo leyó su apellido como «Asabarte», con A; en la hoja, la letra que va delante no se deja leer bien, y puede ser también una Ç, la de Çabarte, que es como se escribía entonces el apellido en Gipuzkoa. La iglesia sigue en pie, y la pila también."
+    },
+    {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "El asiento alavés más antiguo del apellido es el bautizo de una niña, María, el 25 de noviembre de 1526, en una iglesia que sigue en pie."
+    },
+    {
+     "k": "cl",
+     "x": "Una aldea de unas treinta casas, donde todos se conocían y el cura escribía los apellidos de oído."
+    },
+    {
+     "k": "cl",
+     "x": "Hablaban euskera y escribían en castellano: de ahí las seis maneras de anotar el mismo apellido en un solo libro."
+    },
+    {
+     "k": "cl",
+     "x": "No es la cuna del apellido: todo apunta a que la cuna es el caserío de Angiozar; Ondategi es su primer rastro en Álava."
     },
     {
      "k": "h",
@@ -698,6 +1046,18 @@
     {
      "k": "p",
      "x": "Cuando bautizaron a María, en 1526, la aldea pertenecía al obispado de Calahorra y La Calzada; el de Vitoria no se creó hasta el siglo diecinueve. El edificio en el que la bautizaron sigue ahí, con su portada y su pila. Es uno de los pocos lugares de la historia de Álava que todavía se pueden visitar y tocar."
+    },
+    {
+     "k": "pull",
+     "x": "El edificio en el que bautizaron a María en 1526 sigue ahí, con su portada y su pila."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hacía: el libro de bautismos"
+    },
+    {
+     "k": "cp",
+     "x": "En 1526 ninguna ley general obligaba todavía a los curas a llevar libro de bautismos. Lo mandó el concilio de Trento en 1563, y desde entonces cada parroquia apuntaba en él la fecha, el nombre del niño, el de sus padres y el de sus padrinos. El libro de Ondategi empieza en 1501, más de medio siglo antes de aquella orden, y por eso guarda nombres que en otros pueblos se perdieron. Si María está en él es porque el cura de su aldea ya escribía cuando la costumbre todavía no era general."
     },
     {
      "k": "h",
@@ -748,8 +1108,8 @@
      "x": "Y es un pueblo con lavadero. La lámina lo dibuja con las lavanderas de hacia 1900, porque ese es el sitio donde se contaban las historias de las familias antes de que alguien las escribiera."
     }
    ],
-   "huella": "57daaad41ab2fac437bef8e71bc8a95f76eb43bdeea2e27b64df1884cefbcf42",
-   "chars": 6339
+   "huella": "3d4c852983616fda2c73dd02ece9b337244360768605886ae33b12ff6103d858",
+   "chars": 7433
   },
   {
    "clave": "cap:fides",
@@ -765,6 +1125,26 @@
      "x": "El 3 de noviembre de 1878, a las once de la mañana, un vecino de Las Pedroñeras entró en el juzgado a declarar que a las ocho de aquella misma mañana había muerto en su casa una mujer de setenta y seis años, Tomasa Fides Calvo. El acta que se escribió ese día es el papel más antiguo de la rama de la abuela Vicenta, y cuenta la vida de la mujer que, con toda probabilidad, fue su madre."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Vicenta Navarro Fides, la abuela de toda la familia, era hija de Francisco y de Tomasa, los dos de Las Pedroñeras, según su acta de 1914."
+    },
+    {
+     "k": "cl",
+     "x": "Tomasa Fides Calvo murió en el pueblo en 1878, a los setenta y seis años. Tenía el nombre, el apellido y el pueblo de la madre de Vicenta, y la edad encaja, aunque ningún papel dice todavía que fueran la misma."
+    },
+    {
+     "k": "cl",
+     "x": "Los Fides eran del pueblo desde el siglo dieciocho por lo menos, y ningún papel los trae de Valencia, como se contaba en casa: hacia 1830 formaban en Las Pedroñeras una parentela numerosa."
+    },
+    {
+     "k": "cl",
+     "x": "Vicenta tuvo dos hermanos, según recuerda la familia: Francisco y Juan. Juan, «el Polaco», es el protagonista de una de las historias más contadas de la casa."
+    },
+    {
      "k": "h",
      "x": "Una mujer de setenta y seis años"
     },
@@ -775,6 +1155,18 @@
     {
      "k": "p",
      "x": "El secretario que escribió el acta se equivocó y se corrigió sobre la marcha: puso «casada» y añadió enseguida «digo viuda». Aquellos tropiezos de la pluma no se podían borrar, y gracias a ellos un papel de hace siglo y medio parece escrito ayer. El acta dice además que sus padres, Juan Fides y Tomasa Calvo, eran naturales y vecinos de la villa: con ellos la rama de los Fides llega hasta el siglo dieciocho."
+    },
+    {
+     "k": "pull",
+     "x": "«Casada, digo viuda»: un tropiezo de la pluma que ha durado siglo y medio."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hacía: los dos apellidos"
+    },
+    {
+     "k": "cp",
+     "x": "En España cada persona lleva dos apellidos, el primero del padre y el segundo de la madre. Tomasa Fides Calvo era Fides por su padre, Juan Fides, y Calvo por su madre, Tomasa Calvo; y la abuela se llamó Vicenta Navarro Fides porque su padre era un Navarro y su madre una Fides. Los papeles viejos, sin embargo, casi nunca escriben los dos. Muchas veces nombran a los padres solo por el nombre de pila, y hay que reconstruir los apellidos siguiendo a los hijos, que es como se hace en esta historia."
     },
     {
      "k": "h",
@@ -835,10 +1227,18 @@
     {
      "k": "p",
      "x": "De Juan la familia cuenta otra historia, y la cuenta sobre todo una carta escrita en 2026. Dice que una noche de mozo, en una riña, mató a un hombre, que pagó la muerte con trece años de cárcel y que al salir no volvió al pueblo, sino que se fue a la guerra carlista. Y que años después se presentó de noche a caballo ante la casa de sus padres y les dejó por la ventana dos bolsas que resultaron ser de oro, con las que compraron unas tierras y una yunta de borricos. La vida de Juan, que acabó lejos, en Murcia, se cuenta entera en «Los que se marcharon»."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: la encomienda y la desamortización"
+    },
+    {
+     "k": "cp",
+     "x": "En la Edad Media las órdenes militares, como las de Santiago o Calatrava, administraban grandes fincas llamadas encomiendas, cuyas rentas cobraba un caballero, el comendador. En el siglo diecinueve el Estado se quedó con muchas tierras de la Iglesia, de las órdenes y de los pueblos, y las vendió en subasta: fue la desamortización. Muchas encomiendas pasaron así a manos de propietarios particulares, que las labraban con jornaleros de los pueblos cercanos, y el nombre de encomienda se les quedó."
     }
    ],
-   "huella": "283c76c7c7543b3fd1ea3da3de49b7c255f26e70219018913e17e677bdfb2d6d",
-   "chars": 7091
+   "huella": "6a85c4454e9790065ab85edf04385347a47865a030b1c499fab932ac66b7b06a",
+   "chars": 8955
   },
   {
    "clave": "cap:oral",
@@ -852,6 +1252,30 @@
     {
      "k": "lede",
      "x": "Los papeles decían que Francisco y Vicenta habían dejado tres hijos. La familia recordaba otra cosa, y lo que recordaba encaja con los papeles. Este capítulo recoge lo que se recuerda en la calle donde vivieron todos, contado por quienes lo oyeron a sus mayores: cuatro conversaciones y una carta escrita a mano, entre agosto y septiembre de 2026, que devolvieron a la historia dos hijas olvidadas, varios niños que no llegaron a crecer, una nieta llamada Camila y un nombre que nadie sabía escribir. Al final, un periódico de la guerra civil viene a confirmar en lo esencial otro de esos recuerdos: el de Venus, el hijo, en el frente de Madrid."
+    },
+    {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Francisco y Vicenta tuvieron nueve u once hijos, según quién lo cuente. Cinco llegaron a mayores, y las actas de 1912 y 1914 nombran solo a los tres que seguían vivos."
+    },
+    {
+     "k": "cl",
+     "x": "Camila, a la que todos tenían por prima del abuelo Emiliano, era, según recuerda la familia, nieta de Francisco y Vicenta: la hija de Vicenta, la mayor de las hijas."
+    },
+    {
+     "k": "cl",
+     "x": "Una carta de la familia llama Pronuana a la hija del medio, y en el pueblo le decían «la Podruana»."
+    },
+    {
+     "k": "cl",
+     "x": "Venus, el hijo, estuvo con toda probabilidad entre los defensores de Madrid en noviembre de 1936: el periódico de su brigada lo nombra en 1938, ya sargento. La familia recuerda que se fue voluntario con su mellizo Julián y que Emiliano, con unos diecisiete años, les llevó comida al frente."
+    },
+    {
+     "k": "cl",
+     "x": "Lo demás es memoria de la familia: dice dónde buscar y explica lo que los papeles callan, pero todavía no está en un documento."
     },
     {
      "k": "h",
@@ -906,6 +1330,14 @@
      "x": "Su bisnieto Juan Ortiz Pacheco cuenta otra historia de ella. Un día, bajando a lavar, Vicenta encontró una moneda de oro. Eran los años de la última guerra carlista, cuando se decía que llegaban al pueblo machos cargados de oro para la casa de don Juan Somalo, pagador del pretendiente. Vicenta escondió la moneda y volvió a buscar más, pero no había."
     },
     {
+     "k": "ct",
+     "x": "Un apunte de época: el pan fiado"
+    },
+    {
+     "k": "cp",
+     "x": "En los pueblos de jornaleros el dinero entraba sobre todo en verano, con la siega y la trilla, y escaseaba el resto del año. Por eso las tiendas y los panaderos fiaban: apuntaban en una libreta lo que cada casa se llevaba y lo cobraban cuando llegaba el jornal de la cosecha. Una libreta sin saldar era una deuda con nombre y apellidos."
+    },
+    {
      "k": "h",
      "x": "Una calle de motes y de parientes"
     },
@@ -920,6 +1352,14 @@
     {
      "k": "p",
      "x": "La calle guarda también sus heridas. Cuenta Ubaldo Gallardo Azabarte que el día del entierro de la abuela Vicenta, en febrero de 1914, a Venus le dijeron en el cementerio que un cuñado suyo y otros hombres se habían quedado bebiendo en la casa en lugar de acompañarla. Volvió, fue a por la pistola y les disparó dos tiros mientras saltaban las tapias de los corrales. No hirió a nadie, pero las dos casas no volvieron a tratarse, y los nietos de una y otra crecieron sin conocerse. Por eso cada rama recuerda cosas que la otra olvidó, y por eso hizo falta juntar a las dos para entender la historia entera."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: los motes"
+    },
+    {
+     "k": "cp",
+     "x": "En los pueblos donde muchas familias comparten apellido, el mote distingue una casa de otra. Suele nacer de un oficio, de una anécdota o de un rasgo de alguien, y pasa de padres a hijos como un apellido más, a veces durante generaciones. En esta historia los motes se escriben entre comillas y con artículo, tal como se dicen: «la Habichuela», «el Polaco», «los Pollos»."
     },
     {
      "k": "h",
@@ -944,6 +1384,14 @@
     {
      "k": "p",
      "x": "Lo que no aparece también cuenta. Ninguno de los hijos de Venus figura en el índice de los consejos de guerra de la posguerra que corresponde al pueblo, ni en los expedientes de responsabilidades políticas que publicó el Boletín Oficial del Estado entre 1939 y 1945, ni en las listas de fusilados y presos del pueblo. Julián, que según la familia murió muy joven, seguía vivo, si aquel expediente es suyo, cuando se abrió, así que su muerte hay que buscarla de 1937 en adelante. Los expedientes de Guadalajara, los papeles de la brigada de Venus y las inscripciones del registro civil del pueblo se pueden pedir, y son los papeles que pueden convertir en seguro lo que hoy es probable."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: las brigadas mixtas"
+    },
+    {
+     "k": "cp",
+     "x": "Al empezar la guerra, la República combatió con columnas de milicianos voluntarios. En el otoño de 1936 empezó a organizarlas en brigadas mixtas, unidades de unos cuatro batallones con su artillería y sus servicios, y a finales de aquel año los hombres que habían defendido Madrid en noviembre formaron varias de ellas. La 44, a la que pertenecía el 176 Batallón de Venus, nació el último día de 1936 y pasó la guerra en el frente de Madrid, cerca de la capital."
     },
     {
      "k": "h",
@@ -972,10 +1420,14 @@
     {
      "k": "p",
      "x": "Ese papel importa más de lo que parece. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Si es ella la Isidora de los Higuerillas, su madre habría muerto de parto hacia 1911 o 1912, y Camila, que le llevaba dieciséis años, habría nacido hacia 1891 o 1892. Pero la familia recuerda a Vicenta como la mayor de las hijas de la casa, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908. Algo no encaja todavía: o Vicenta no era la mayor de los hermanos, o aquella Isidora es otra, o alguna de las cuentas se ha movido al pasar de boca en boca. No hace falta elegir. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá, y cuando llegue, este capítulo dejará de ser solo memoria."
+    },
+    {
+     "k": "pull",
+     "x": "La memoria no prueba un parentesco: dice dónde buscarlo y explica lo que el papel calla."
     }
    ],
-   "huella": "8b3cf0c21b793c01277da9960cddb2a303b05c5f76cb1fab6cd90ab8ac5ce696",
-   "chars": 13850
+   "huella": "ec74b1359fadfebf1e5e2c81bc781163f453a01c1559117d8ab3677b14fa66d3",
+   "chars": 16070
   },
   {
    "clave": "cap:actas",
@@ -991,6 +1443,26 @@
      "x": "Sobre la mesa del juzgado municipal de Las Pedroñeras había un libro grueso de hojas impresas, con huecos en blanco para los nombres. Dos veces, con año y medio de diferencia, el mismo secretario mojó la pluma para llenarlos con los de Francisco y Vicenta. Esas dos hojas son el suelo firme de toda esta historia: dicen cómo murieron, quién fue a declararlo, qué hijos dejaban y cómo se llamaban sus padres."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Francisco Azabarte Galindo murió el 8 de agosto de 1912, a los setenta y tres años, de unas fiebres tifoideas."
+    },
+    {
+     "k": "cl",
+     "x": "Vicenta Navarro Fides murió el 8 de febrero de 1914, a los setenta y ocho, en su casa de la calle Fray Luis de León."
+    },
+    {
+     "k": "cl",
+     "x": "Las dos actas nombran tres hijos vivos —Venus, Bonifacia y la hija del medio, escrita de dos maneras— y a los padres de cada uno, solo por el nombre de pila."
+    },
+    {
+     "k": "cl",
+     "x": "Los dos habían hecho testamento ante notario, y esos testamentos son los papeles que todavía faltan por encontrar."
+    },
+    {
      "k": "h",
      "x": "Un libro con huecos en blanco"
     },
@@ -1001,6 +1473,14 @@
     {
      "k": "p",
      "x": "Para declarar una muerte no hacía falta ser de la familia. Bastaba un vecino mayor de edad que conociera al difunto, y en los pueblos iba muchas veces el alguacil o un amigo de la casa. Así ocurrió con Francisco y con Vicenta: el mismo hombre fue las dos veces al juzgado."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: el Registro Civil"
+    },
+    {
+     "k": "cp",
+     "x": "Hasta 1870, en España solo la Iglesia apuntaba los nacimientos, las bodas y las muertes, en los libros de cada parroquia. Aquel año una ley creó el Registro Civil, que empezó a funcionar el 1 de enero de 1871 en todos los municipios, a cargo de los juzgados. Desde entonces hay dos papeles para cada persona: la partida de la iglesia y la inscripción del juzgado. Para buscar a alguien nacido antes de 1871 hay que ir a la parroquia; para los nacidos después, se puede ir a los dos sitios."
     },
     {
      "k": "h",
@@ -1015,6 +1495,14 @@
      "x": "El acta dice que Francisco era natural de la villa y que estaba casado con Vicenta Navarro, con la que dejaba tres hijos: Venus, Venancia y Bonifacia. Lo da por hijo legítimo de Pablo y de Blasa, difuntos los dos y naturales del pueblo. Añade que había hecho testamento ante el notario don Justino Zapata, y que lo enterrarían en el cementerio de Santa Catalina, «único de esta localidad»."
     },
     {
+     "k": "ct",
+     "x": "Un apunte de época: las fiebres tifoideas"
+    },
+    {
+     "k": "cp",
+     "x": "La fiebre tifoidea la causa un microbio que viaja en el agua y en los alimentos contaminados. En los pueblos sin agua corriente, donde se bebía de pozos y aljibes, era frecuente en verano, cuando el agua escaseaba y se calentaba. Daba fiebre alta durante semanas, y a una persona mayor podía costarle la vida. Francisco murió en agosto, en lo más fuerte del verano manchego."
+    },
+    {
      "k": "h",
      "x": "8 de febrero de 1914"
     },
@@ -1025,6 +1513,10 @@
     {
      "k": "p",
      "x": "Vicenta era viuda de Francisco Azabarte y dejaba tres hijos: Venus, Ambrosiana y Bonifacia. Era hija de Francisco y de Tomasa, difuntos y naturales de la villa. Había testado ante el notario don Enrique Serrano Martí, y la enterraron también en Santa Catalina. Cuando aquel cementerio se cerró, según se recuerda en casa, sus nietos pagaron el traslado de los dos al cementerio nuevo, con la piedra que había labrado su hijo Venus, y allí siguen. La lápida repite la fecha y la edad del acta de Francisco, y escribe con todas las letras el apellido Galindo."
+    },
+    {
+     "k": "pie",
+     "x": "Lo que dice la piedra · Cementerio de Las Pedroñeras · fotografía de la familia, 1 de noviembre de 2025 · repite la fecha y la edad del acta, y escribe el apellido Galindo"
     },
     {
      "k": "h",
@@ -1039,16 +1531,28 @@
      "x": "Tampoco dan la fecha de nacimiento. Dan la edad, y de la edad sale una horquilla de un año: por eso de Francisco se dice que nació entre el verano de 1838 y el de 1839, y de Vicenta, hacia 1835 o 1836. Las fechas exactas estarán en sus bautizos, si algún día aparecen."
     },
     {
+     "k": "pull",
+     "x": "«Deja tres hijos»: tres palabras que escondieron durante un siglo a los que ya no estaban."
+    },
+    {
      "k": "h",
      "x": "Dos testamentos por encontrar"
     },
     {
      "k": "p",
      "x": "Quedan dos pistas que nadie ha seguido todavía: los dos testamentos. El de Francisco, ante Justino Zapata, y el de Vicenta, ante Enrique Serrano Martí, deben de estar en los protocolos de los notarios de la comarca, que se guardan en el Archivo Histórico Provincial de Cuenca. Un testamento de aquella época suele nombrar a todos los hijos, a los vivos y a los que murieron dejando descendencia, y a veces también a los nietos: sería la manera de poner nombre, de una vez, a las dos hijas mayores, y quizá también a Camila."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: el protocolo notarial"
+    },
+    {
+     "k": "cp",
+     "x": "Cuando alguien hacía testamento, vendía una tierra o daba un poder, lo hacía ante un notario, al que antes se llamaba escribano. El notario escribía el documento, lo hacía firmar y guardaba el original en un libro que se encuadernaba cada año: el protocolo. Pasados cien años, esos libros van a los archivos históricos de cada provincia, donde se pueden consultar. Muchos secretos de familia duermen allí."
     }
    ],
-   "huella": "98c2043adab60533b36e63a97447995835b7c5a667c26afdef610bfc6093fbb5",
-   "chars": 4487
+   "huella": "fd986126d28ad3c934346c47ff92d6dbbe1223faa40ee1f7cc308584d044dccd",
+   "chars": 6645
   },
   {
    "clave": "cap:contexto",
@@ -1064,6 +1568,26 @@
      "x": "Cada fecha de esta historia salió de un edificio concreto: un juzgado de pueblo, un archivo diocesano con cita previa, un tribunal de Granada que guarda cinco siglos de pleitos, un buscador gratuito en Vitoria. Este capítulo es un paseo por esos lugares, para que quien lea sepa dónde duerme cada papel y cómo se despierta."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Lo posterior a 1871 está en el Registro Civil del pueblo; lo anterior, en los libros de la parroquia, que se guardan en el Archivo Diocesano de Cuenca."
+    },
+    {
+     "k": "cl",
+     "x": "Los papeles del norte están en Vitoria, Oñati, Tolosa y Bergara; los de los hidalgos de Barchín del Hoyo, en la Chancillería de Granada."
+    },
+    {
+     "k": "cl",
+     "x": "Muchos papeles sueltos se han leído en fotografías de microfilm que se pueden consultar gratis en internet."
+    },
+    {
+     "k": "cl",
+     "x": "Buena parte de esta investigación se ha hecho por carta: peticiones a los archivos y respuestas que llegan por correo."
+    },
+    {
      "k": "h",
      "x": "El juzgado de paz de Las Pedroñeras"
     },
@@ -1074,6 +1598,14 @@
     {
      "k": "p",
      "x": "En esos mismos libros esperan las inscripciones que cerrarían casi todo lo que la memoria cuenta. Está el nacimiento de Venus, hacia 1876, quizá con el nombre de Marcelino, y los de sus ocho hijos, entre 1907 y 1922. Están el de Camila y el de Isidora López Azabarte, nacida en 1907 o en 1908, a la que se tiene por su media hermana. Cada una es una certificación que se pide en una ventanilla, y cada una puede cambiar una página de esta historia."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: el juez de paz"
+    },
+    {
+     "k": "cp",
+     "x": "En los pueblos que no tienen juzgado de primera instancia hay un juez de paz. Es un vecino, elegido por el ayuntamiento y nombrado por el Tribunal Superior de Justicia de la comunidad, que atiende los asuntos menores y ha tenido durante mucho tiempo a su cargo el Registro Civil del municipio. El de Las Pedroñeras lo es desde 2023."
     },
     {
      "k": "h",
@@ -1092,6 +1624,14 @@
      "x": "El archivo pide permiso previo y el pago de una tasa para enseñar en público sus imágenes, y por eso las fotografías de Cuenca solo se ven en la edición de la familia, la que pide contraseña; aquí se cuenta lo que dicen. En ese mismo archivo pueden estar los libros de Cañada Juncosa, y en la parroquia de Belmonte, que guarda los suyos desde 1547, los de aquella villa. Allí nadie ha buscado todavía a Francisco y a María Mateo Cantero: es la próxima parada."
     },
     {
+     "k": "ct",
+     "x": "Así se hacía: los libros de la parroquia"
+    },
+    {
+     "k": "cp",
+     "x": "Desde el concilio de Trento, a mediados del siglo dieciséis, cada parroquia tuvo que llevar libros de bautismos y de bodas, y algo más tarde también de entierros y de confirmaciones. El cura apuntaba cada sacramento con la fecha, los nombres, los padres y, muchas veces, los abuelos y los padrinos. Durante tres siglos fueron el único registro de la gente corriente, y por eso son la fuente principal de cualquier historia de familia anterior a 1871."
+    },
+    {
      "k": "h",
      "x": "Los archivos del norte"
     },
@@ -1102,6 +1642,14 @@
     {
      "k": "p",
      "x": "Las escrituras de los escribanos de Bergara, entre ellas las que hablan del caserío Zabarte, están en Oñati, en el Archivo Histórico de Protocolos de Gipuzkoa, que contestó en dos días, corrigió dos signaturas equivocadas y presupuestó las fotografías que faltaban en dos euros con cuarenta. Los pleitos de la casa, de 1632 a 1773, llegaron del Archivo General de Gipuzkoa, en Tolosa. El Archivo Municipal de Bergara respondió al día siguiente de recibir la carta. Y los pleitos de hidalguía de los Zabarte del norte se guardan en Valladolid, en la Real Chancillería."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: las Chancillerías"
+    },
+    {
+     "k": "cp",
+     "x": "Durante siglos Castilla tuvo dos grandes tribunales, las Reales Chancillerías: la de Valladolid juzgaba los pleitos de las tierras al norte del río Tajo, y la de Granada, los del sur. Allí se resolvían, entre otras cosas, los pleitos de hidalguía, en los que un vecino tenía que probar que era hidalgo para no pagar los tributos de los demás. Sus archivos guardan cientos de miles de pleitos, y en muchos declaran testigos que cuentan la historia de una familia."
     },
     {
      "k": "h",
@@ -1116,6 +1664,10 @@
      "x": "Casi todos esos papeles sueltos se han leído en las fotografías de microfilm que FamilySearch, una organización dedicada a la genealogía, ha ido tomando durante décadas en archivos de medio mundo y deja ver gratis en internet. Tiene una herramienta que lee de corrido la letra de los manuscritos, y por esa puerta lateral entraron en esta historia los Zabarte de la comarca. No tiene, en cambio, los libros de Las Pedroñeras, de Belmonte ni de San Clemente, y para esos no hay más camino que el archivo."
     },
     {
+     "k": "pull",
+     "x": "Un papel de archivo no se encuentra de golpe: se pide, se espera y, un día, llega por correo."
+    },
+    {
      "k": "h",
      "x": "Un edificio de correos"
     },
@@ -1124,8 +1676,8 @@
      "x": "La lámina de este capítulo es el edificio de Correos de Vitoria, de 1928, mucho más moderno que cualquier papel de esta historia. Está aquí porque buena parte de esta investigación se ha hecho por carta: peticiones a los archivos, respuestas de los archiveros, fotografías que llegan por correo y una carta escrita a mano por un pariente. Hay peticiones que se contestan en un día y otras que llevan semanas esperando. Sin quienes las leen y las contestan, al otro lado de cada ventanilla, no habría historia que contar."
     }
    ],
-   "huella": "f5deabe401deabff371da1b6d276a01e653e9337ea4b0daa5b8873b3eb34ab4b",
-   "chars": 5648
+   "huella": "045e5994efa6a95f2d9c41e09fd245c843903b0bb5d7ec77a3989a260f5b714e",
+   "chars": 7621
   },
   {
    "clave": "cap:metodo",
@@ -1139,6 +1691,26 @@
     {
      "k": "lede",
      "x": "Esta historia está hecha con papeles de verdad y con recuerdos de verdad, y no siempre es fácil saber en cuál de los dos se apoya cada frase. Estas son las reglas con que está escrita: pocas, sencillas y las mismas para todos, para que quien lea sepa en cada momento dónde pisa."
+    },
+    {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Lo que dice un documento se cuenta sin rodeos; lo que recuerda la familia se dice como recuerdo, con el nombre de quien lo cuenta."
+    },
+    {
+     "k": "cl",
+     "x": "Lo probable se advierte una vez, y no se da por seguro hasta que aparece el papel."
+    },
+    {
+     "k": "cl",
+     "x": "Compartir apellido no hace a nadie pariente: por eso los Zabarte del norte y de la comarca no están en el árbol."
+    },
+    {
+     "k": "cl",
+     "x": "Los retratos son dibujos, y la historia tiene fecha: cambia cuando llega un papel nuevo."
     },
     {
      "k": "h",
@@ -1163,6 +1735,14 @@
     {
      "k": "p",
      "x": "Cuanto más cerca está un papel del hecho y de la mano que lo escribió, más vale. Por eso un acta de 1912 manda sobre un árbol de familia, y una partida vista manda sobre el índice que la resume. En la edición de investigación cada dato lleva su clase; aquí se dice con palabras."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hace: antes de decir «es su hijo»"
+    },
+    {
+     "k": "cp",
+     "x": "Antes de dar por bueno que alguien es hijo de alguien, esta historia se hace siempre las mismas preguntas. Si la edad encaja con todo lo demás. Si coinciden, además del nombre, el cónyuge, el oficio o la casa. Si había en el pueblo otra persona con el mismo nombre por las mismas fechas. Si se ha visto el papel original o solo un índice. Si se ha leído la página entera, márgenes incluidos. Y si los apellidos se han leído como se usaban en la época. Cuando alguna respuesta falla, el parentesco se queda en probable."
     },
     {
      "k": "h",
@@ -1209,6 +1789,10 @@
      "x": "El caso más claro llegó del Perú. En un registro de Monsefú de 1797, la máquina había leído el nombre de un tal Baltazar Azabarte, que habría sido el único Azabarte de América. Mirada la fotografía de cerca, ponía Azabache. Desde entonces la regla es firme: lo que ha leído una máquina solo dice dónde mirar, y nada cuenta hasta que alguien lo ha visto con sus propios ojos en el papel."
     },
     {
+     "k": "pull",
+     "x": "Una máquina dice dónde mirar; solo el ojo sobre el papel dice lo que pone."
+    },
+    {
      "k": "h",
      "x": "Los retratos son dibujos"
     },
@@ -1241,8 +1825,8 @@
      "x": "Todo lo que se cuenta aquí está al día a 26 de septiembre de 2026. La historia sigue abierta: hay cartas enviadas a archivos que esperan respuesta, conversaciones pendientes con quienes todavía recuerdan y libros de Belmonte y de Cañada Juncosa por abrir. Cuando llegue un papel nuevo, cambiará lo que haya que cambiar, y quedará dicho que ha cambiado. Lo último que se ha sabido se anuncia aquí mismo."
     }
    ],
-   "huella": "07dc75f2751324e878eb32adb9c37536ff7ec51aa387b2b3127316472e077f2a",
-   "chars": 7371
+   "huella": "12720cbc41e8a20f70771f631f0375c2fe6b2be12f34b214634224d541490216",
+   "chars": 8434
   },
   {
    "clave": "cap:documentos",
@@ -1258,12 +1842,40 @@
      "x": "Detrás de cada fecha de esta historia hay un papel concreto, con su letra, sus tachones y sus silencios. Aquí están, uno detrás de otro, los que sostienen la historia de la familia de Las Pedroñeras: qué son, dónde se guardan y qué dice cada uno. Las fotografías de los originales se reservan para la edición de la familia; lo que dicen, en cambio, es de todos."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Tres actas del Registro Civil, de 1878, 1912 y 1914, fijan a los abuelos de toda la familia y a la madre probable de Vicenta."
+    },
+    {
+     "k": "cl",
+     "x": "Cinco hojas de la parroquia, de 1798 a 1854, llevan la historia hasta Pedro Azabarte y sus padres, que unas hacen del pueblo y otra, de Belmonte."
+    },
+    {
+     "k": "cl",
+     "x": "El cuaderno de 1858 retrata el pueblo de los años treinta e indica que el bautizo de Francisco se escribió a su tiempo."
+    },
+    {
+     "k": "cl",
+     "x": "Cada papel se cita con su archivo; las fotografías de los originales solo se muestran en la edición completa, con contraseña."
+    },
+    {
      "k": "h",
      "x": "Cómo se lee un papel viejo"
     },
     {
      "k": "p",
      "x": "Un documento antiguo no se lee como un periódico. Las partidas de la parroquia mezclan fórmulas en latín con nombres en castellano, abrevian casi todas las palabras que se repiten y escriben los nombres como sonaban. Las actas del juzgado son más fáciles, porque llevan la fórmula impresa, pero la letra de cada secretario tiene sus caprichos. Leer bien un papel viejo es leerlo entero, márgenes incluidos, y no fiarse de ningún resumen que no se haya comprobado sobre el original."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hacía: la letra de los curas"
+    },
+    {
+     "k": "cp",
+     "x": "Los escribientes de los siglos dieciocho y diecinueve ahorraban tinta y tiempo con abreviaturas que hoy desconciertan: «dho» por dicho, «Xptóbal» por Cristóbal, «Franco» por Francisco, una rayita sobre una vocal en lugar de la ene que falta. La be y la uve se usaban sin distinción, y la zeta, la ce y la ese se confundían con facilidad. Por eso un mismo apellido puede salir escrito de tres maneras en la misma página, y hace falta seguir a la persona, y no a la letra, para saber si es la misma."
     },
     {
      "k": "h",
@@ -1294,6 +1906,10 @@
      "x": "Las otras dos hojas son del libro de entierros de 1851 a 1857. La del 18 de agosto de 1854 es la de Manuel Azabarte, marido de Vicenta López, de cuarenta y ocho años, muerto de una intermitente perniciosa. La otra, de febrero de 1853, se pidió para comprobar una lectura y no trae a ningún Azabarte: en ella consta que una María Campos, a la que una primera lectura había tomado por mujer de un Azabarte, era en realidad la mujer de Pablo Mauro Yzquierdo."
     },
     {
+     "k": "pull",
+     "x": "Un papel también sirve para decir que no."
+    },
+    {
      "k": "h",
      "x": "El cuaderno de 1858"
     },
@@ -1322,6 +1938,14 @@
      "x": "Entre los papeles impresos de esta historia hay uno de 1933. La Gaceta de Madrid, el diario oficial del Estado, publicó aquel año que Venus Azabarte tenía abierto un expediente de revisión de la renta de unas tierras ante el juzgado de Belmonte. Es señal de que llevaba tierras en arriendo, como tantos labradores de entonces, que trabajaban fincas ajenas a cambio de una renta; en aquellos años la ley permitía a los arrendatarios pedir al juez que la revisara."
     },
     {
+     "k": "ct",
+     "x": "Para entenderlo: la Gaceta"
+    },
+    {
+     "k": "cp",
+     "x": "La Gaceta de Madrid fue durante siglos el periódico oficial del Estado: en ella se publicaban las leyes, los nombramientos, las subastas y muchos avisos de los juzgados. Su heredero es el Boletín Oficial del Estado, el que hoy se conoce como BOE. Sus números antiguos se pueden leer gratis en internet, y a veces guardan el nombre de un abuelo donde nadie lo esperaba."
+    },
+    {
      "k": "h",
      "x": "Una piedra y una carta"
     },
@@ -1338,8 +1962,8 @@
      "x": "Los documentos del origen del apellido se cuentan en sus capítulos, y aquí basta con saber cuáles son. Del caserío de Angiozar hay escrituras de escribanos de 1517 a 1738 y pleitos de 1632 a 1773. De los hidalgos de Barchín del Hoyo y de Buenache, la ejecutoria de 1537 y su confirmación de 1595, en Granada, y de La Roda, tres partidas de 1557, 1581 y 1586. De la familia de Cañada Juncosa, escrituras firmadas en Madrid entre 1772 y 1802, un grado de la Universidad de Toledo de 1801 y un bautizo de Cartagena de 1767. De Álava, las copias de Vitoria de 1526, 1528, 1719, 1725 y 1736. De Udala, junto a Mondragón, una prueba de hidalguía de 1804 leída entera. La edición de investigación los cita con su archivo y explica qué dice cada uno."
     }
    ],
-   "huella": "ab631d95357ea30571c19a470e04146fa160122ff9e545b9bc97184714e8dab3",
-   "chars": 6852
+   "huella": "2ff43764adfd75e1ab63185205b2e79100388bcfe3e462d47c61f3d38275b99c",
+   "chars": 8352
   },
   {
    "clave": "cap:barchin",
@@ -1355,6 +1979,26 @@
      "x": "El 18 de febrero de 1535, ante la Real Chancillería de Granada, el procurador de un vecino de Barchín del Hoyo demandó al concejo de su villa y al fiscal del rey. Su parte, decía, era «ome hijodalgo notorio de padre y abuelo». Se llamaba Martín de Zabarte, su familia venía de Elgeta, en Gipuzkoa, y es el primer hombre del apellido que se conoce lejos del País Vasco, en tierras de Cuenca y en tiempos del emperador Carlos."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "En 1535 un Zabarte vivía ya en tierras de Cuenca: Martín, vecino de Barchín del Hoyo, que en 1537 ganó su hidalguía ante la Chancillería de Granada."
+    },
+    {
+     "k": "cl",
+     "x": "Venía de la casa de Zabarte: su padre se crió en ella, y su abuelo era vecino de Elgeta."
+    },
+    {
+     "k": "cl",
+     "x": "Su nieto Francisco vivía en Buenache de Alarcón y tuvo que defender la misma hidalguía entre 1591 y 1595."
+    },
+    {
+     "k": "cl",
+     "x": "Ningún papel lo une todavía a la familia de Pedro: por eso está en esta historia y no en el árbol."
+    },
+    {
      "k": "h",
      "x": "Barchín del Hoyo, en 1535"
     },
@@ -1365,6 +2009,14 @@
     {
      "k": "p",
      "x": "Está a unos ocho kilómetros de Buenache de Alarcón, a seis de Olmedilla y a unos veinte de Cañada Juncosa. Las Pedroñeras y Belmonte quedan a unos cincuenta y cinco kilómetros al oeste, a dos o tres jornadas de camino a pie."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: el marquesado de Villena"
+    },
+    {
+     "k": "cp",
+     "x": "En el siglo quince buena parte de la Mancha de Cuenca y de Albacete pertenecía a un solo señor, el marqués de Villena: Belmonte, Alarcón, San Clemente y muchas otras villas eran suyas. Tras la guerra que ganaron los Reyes Católicos, el marqués tuvo que devolver a la corona buena parte de ellas, y algunas aldeas, como Barchín, se convirtieron en villas del rey. Belmonte, en cambio, siguió siendo del marqués."
     },
     {
      "k": "h",
@@ -1383,6 +2035,14 @@
      "x": "Según el resumen de su pleito que publicó en 2015 un libro de pleitos de hidalguía, en Barchín había sido alcalde de la Hermandad por el estado de los hidalgos —uno de los alcaldes que cuidaban de la seguridad de los caminos y los campos—, y parientes suyos habían sido elegidos para las Juntas de Gipuzkoa, la asamblea de la provincia. De qué vivía, los papeles no lo dicen."
     },
     {
+     "k": "ct",
+     "x": "Para entenderlo: hidalgos y pecheros"
+    },
+    {
+     "k": "cp",
+     "x": "En Castilla la gente se dividía en dos estados. Los hidalgos estaban libres de ciertos tributos, los pechos; los demás, la gran mayoría, eran pecheros, porque pechaban, es decir, pagaban. En Gipuzkoa y en Bizkaia todos los naturales se tenían por hidalgos, pero fuera de su tierra tenían que probarlo, y si el concejo no lo aceptaba, el asunto acababa ante una de las dos Chancillerías del rey: la de Valladolid, para las tierras al norte del Tajo, o la de Granada, para las del sur."
+    },
+    {
      "k": "h",
      "x": "De la casa de Zabarte a la de Zabala"
     },
@@ -1393,6 +2053,18 @@
     {
      "k": "p",
      "x": "Iguria es un barrio de Elorrio, en Bizkaia, justo al otro lado de la raya con Gipuzkoa, y todavía hoy hay allí un caserío llamado Zabala, a unos cinco kilómetros en línea recta del caserío Zabarte de Angiozar: una legua de las de entonces, poco más o menos. Por eso, aunque el pleito no nombra el barrio de Angiozar, todo apunta a que la casa de Zabarte que invocaba Martín era la misma que sigue en pie."
+    },
+    {
+     "k": "pull",
+     "x": "Es la primera vez que la casa de Zabarte se nombra fuera del País Vasco, y la nombra un vecino de Cuenca."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hacía: el que no heredaba, se iba"
+    },
+    {
+     "k": "cp",
+     "x": "En las casas del valle solo uno de los hijos heredaba la casa. Los demás recibían su parte y buscaban la vida fuera: unos se casaban con la heredera de otra casa, como hizo el padre de Martín; otros entraban en la Iglesia, se hacían escribanos o soldados, o se marchaban a Castilla y a las Indias. Muchos llevaban consigo, como todo capital, el nombre de su casa y la hidalguía que les daba."
     },
     {
      "k": "h",
@@ -1427,6 +2099,14 @@
      "x": "En la comarca hubo además otro Martín del apellido. El 5 de julio de 1557, veinte años después de la ejecutoria, se bautizó en la parroquia de San Salvador de La Roda, una villa hoy de Albacete a unos cincuenta kilómetros de Barchín, a Juan, hijo de Martín de Zabarte y de su mujer, Ana López; fue su padrino Diego de Alarcón, regidor de la villa. El cura escribió el apellido con ce cedilla, igual que los escribanos de Barchín. Aquel Martín pudo ser el mozo u otro hombre del mismo nombre, pero la mujer de Martín el mozo se llamaba Sabina, no Ana, y mientras otro papel no lo aclare no se pueden tener por el mismo hombre. En 1581 un Juan de Zabarte, con el apellido escrito también con ce cedilla, fue testigo de una boda en la villa. Cinco años después, en 1586, el obispo de Cuenca confirmó en La Roda a Ana, hija de Juan de Zabarte y de Isabel Martínez, que con toda probabilidad era hija de aquel testigo: había allí otra familia del apellido. Lo que sí dicen aquellos papeles es que el apellido andaba ya por toda aquella tierra. En el siglo siguiente, en cambio, ningún Zabarte volvió a bautizar a un hijo en La Roda, y en los libros de bodas que se han podido leer ninguno se casó allí ni casó a sus hijos."
     },
     {
+     "k": "ct",
+     "x": "Para entenderlo: por qué hubo que pleitear dos veces"
+    },
+    {
+     "k": "cp",
+     "x": "Una ejecutoria de hidalguía valía para siempre, pero cada concejo llevaba sus propias listas. Por eso muchas familias guardaban la suya como el papel más valioso de la casa, y por eso sus nietos, cuando un concejo nuevo los apuntaba entre los pecheros, tenían que volver a Granada con ella para que se la hicieran cumplir. Esa nueva orden es lo que se llamaba una sobrecarta."
+    },
+    {
      "k": "h",
      "x": "Lo que vino después"
     },
@@ -1443,8 +2123,8 @@
      "x": "La sentencia de 1537 guarda todavía muchas hojas sin leer, y quizá describa la casa de la que salió la familia. Pero ningún papel une a estos Zabarte con la familia de Las Pedroñeras, y por eso Martín de Zabarte no se cuenta aquí como antepasado de nadie, sino como lo que es: la prueba de que el camino entre el valle del Deba y la Mancha de Cuenca existía, y se andaba, muy pronto."
     }
    ],
-   "huella": "c1d0b9cfe663ef5fab2876c0f42d014f26681fcfcadfdc689983bee894957c73",
-   "chars": 7762
+   "huella": "ea26e14f68147b409d4eeef34336f032049ae0b069688d8d59fc4a44675b55fc",
+   "chars": 10156
   },
   {
    "clave": "cap:canada",
@@ -1458,6 +2138,30 @@
     {
      "k": "lede",
      "x": "En noviembre de 1800, en Carabanchel de Arriba, a las puertas de Madrid, un cura de más de setenta años hizo testamento ante el único escribano del lugar. Se llamaba Rodrigo Zabarte y era de Cañada Juncosa, una aldea de la Mancha conquense a menos de cuarenta kilómetros de Las Pedroñeras. Gracias a él y a sus tratos con los escribanos de Madrid se conoce hoy una familia Zabarte que vivió todo el siglo dieciocho a pocas leguas de la de Pedro Azabarte."
+    },
+    {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Todo el siglo dieciocho hubo Zabarte en Cañada Juncosa, a unos treinta y ocho kilómetros de Las Pedroñeras."
+    },
+    {
+     "k": "cl",
+     "x": "Antonio Zabarte y Ana Villalba son los más antiguos que se conocen: nacieron hacia 1700."
+    },
+    {
+     "k": "cl",
+     "x": "Su hijo Rodrigo fue cura cerca de Madrid, y su nieto José Clemente, médico."
+    },
+    {
+     "k": "cl",
+     "x": "Entre sus parientes había un Cantero, como la madre de Pedro Azabarte. Ningún papel une todavía a las dos familias."
+    },
+    {
+     "k": "cl",
+     "x": "Nunca escribieron la A: Zabarte, Zavarte o Sabarte, según la mano."
     },
     {
      "k": "h",
@@ -1496,6 +2200,14 @@
      "x": "Al pie de ese poder de 1797 Rodrigo firmó de su puño con dos apellidos: «Rodrigo Zabarte y Cantero». En las demás firmas suyas que se conocen, de 1772, de 1794 y de 1795, pone solo Rodrigo Zabarte, que era lo corriente, y su madre era Ana Villalba. Pudo añadir el Cantero aquella vez, en el papel de la capellanía, para hacer valer su parentesco con el fundador, que era lo que le daba derecho a ella. La firma, por sí sola, no dice de qué lado le venía ese parentesco: dice que Rodrigo se tenía por pariente de aquel fundador."
     },
     {
+     "k": "ct",
+     "x": "Para entenderlo: capellanía y beneficiado"
+    },
+    {
+     "k": "cp",
+     "x": "Una capellanía era una fundación: alguien dejaba unas tierras o un dinero puesto a rédito para que, con lo que rentaran, un clérigo dijera misas por su alma. Los parientes del fundador solían tener preferencia para gozarla, y como nadie podía ordenarse sacerdote sin tener de qué vivir, una capellanía servía de sustento para entrar en la Iglesia. Un beneficiado era el clérigo que tenía un beneficio, es decir, un puesto con renta en una parroquia."
+    },
+    {
      "k": "h",
      "x": "El testamento de 1800"
     },
@@ -1518,6 +2230,14 @@
     {
      "k": "p",
      "x": "No consta que llegara a ordenarse. Pasó de la Filosofía a la Medicina, y el 29 de junio de 1801 se graduó de bachiller en Medicina en la Universidad de Toledo. Al año siguiente, para «recibirse de Médico», tuvo que probar que descendía de cristianos viejos, y en el poder que firmó con ese fin nombró a sus cuatro abuelos: Antonio Zabarte y Ana Villalba, de Cañada Juncosa; Andrés Parrilla, de Albaladejo, e Isabel Collado, de Olivares. Con toda probabilidad es el «Josef Clemente Zabarte, médico», que cita la Gaceta de Madrid en 1808."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: la limpieza de sangre"
+    },
+    {
+     "k": "cp",
+     "x": "Para muchos oficios y dignidades, desde el sacerdocio hasta la medicina, se exigía entonces probar la limpieza de sangre: que en la familia no había antepasados judíos ni moriscos, ni condenados por la Inquisición. Se hacía en el pueblo de origen, con testigos que declaraban ante la justicia sobre los padres y los abuelos del interesado. Por eso aquellos papeles son hoy una mina para quien busca una familia: obligaban a poner por escrito cuatro abuelos con sus pueblos."
     },
     {
      "k": "h",
@@ -1546,10 +2266,14 @@
     {
      "k": "p",
      "x": "Los papeles que pueden decidirlo existen, o existieron. En el Archivo Diocesano de Cuenca pueden estar el expediente que se abrió cuando Rodrigo se ordenó, con su genealogía, y el de la capellanía de Francisco Cantero, que solía nombrar a los parientes con derecho a ella. Y el libro de bautismos de Cañada Juncosa de 1715 a 1750, donde estarían los de Rodrigo, Antonio y Lucía y los de cualquier otro hijo de la casa, existía todavía en 1827, cuando un escribano de Alarcón lo tuvo en las manos. Su último bautizo es el de un niño cuya madre se llamaba Lucía Cantero: también había Cantero en la aldea. Si el libro se conserva, puede contestar a la pregunta. Y queda la boda de Francisco con María Mateo Cantero, que con toda probabilidad se celebró en Belmonte o en Las Pedroñeras, los dos pueblos que les dan los papeles, y que puede decir de una vez cómo se apellidaba él y de dónde era. Hasta entonces, lo de Francisco es una posibilidad con buenos motivos, no un parentesco."
+    },
+    {
+     "k": "pull",
+     "x": "Un Cantero a cada lado no hace un parentesco, pero dice dónde hay que buscarlo."
     }
    ],
-   "huella": "e9c653b2b7159ed7377a501e1e9587d8e39e1ffdf62921e11026c68ba4f7999d",
-   "chars": 8481
+   "huella": "e8ae8ec00d6e97920e7363ea770da4642972a60051c7c8a7c912508cc4f34fa3",
+   "chars": 10034
   },
   {
    "clave": "cap:camino",
@@ -1563,6 +2287,30 @@
     {
      "k": "lede",
      "x": "Imagínese un mapa de España con dos alfileres: uno en un valle de Gipuzkoa, donde hay un caserío que se llama Zabarte, y otro en una calle de Las Pedroñeras, donde vivió Francisco Azabarte. Entre los dos hay unos cuatrocientos kilómetros en línea recta, más de trescientos cincuenta años de papeles y un camino que todavía no se puede andar entero. Este capítulo lo recorre parada a parada: dónde tiene papeles, dónde se abren otros caminos y dónde el hilo se esconde todavía."
+    },
+    {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "Zabarte es el nombre de una casa: un caserío de Angiozar que dio nombre a un linaje hace más de quinientos años. Si la familia de Las Pedroñeras viene de él, ningún papel lo dice todavía."
+    },
+    {
+     "k": "cl",
+     "x": "El primer tramo tiene papeles: en 1535 un hidalgo oriundo de Elgeta, cuyo padre se había criado en una casa de Zabarte, vivía en Barchín del Hoyo, en tierras de Cuenca."
+    },
+    {
+     "k": "cl",
+     "x": "Los otros dos tramos esperan su papel: de Barchín a Cañada Juncosa hay un siglo sin documentos, y de Cañada Juncosa a la familia de Pedro, una generación sin nadie en común."
+    },
+    {
+     "k": "cl",
+     "x": "El apellido anduvo otros caminos: hubo Zabarte en Álava hasta el siglo veinte, y también en Logroño, en Toledo y en Madrid."
+    },
+    {
+     "k": "cl",
+     "x": "La A aparece en Las Pedroñeras: en el valle y en los demás papeles del apellido casi nadie la escribe, y en el pueblo está desde 1798."
     },
     {
      "k": "h",
@@ -1587,6 +2335,14 @@
     {
      "k": "p",
      "x": "Ningún documento cuenta cómo bajó Martín. Un viaje así, de unos quinientos kilómetros por caminos de herradura, se hacía entonces a pie o a lomo de mula, y llevaba dos o tres semanas. No fue el único que lo hizo: en los mismos años vivían en tierras de Cuenca otros tres hidalgos de Elgeta, uno de ellos a un paso de Belmonte."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: vascos en Castilla"
+    },
+    {
+     "k": "cp",
+     "x": "En el siglo dieciséis era corriente encontrar hombres de Gipuzkoa y de Bizkaia por toda Castilla: escribanos y secretarios en la corte, mercaderes, canteros que levantaban iglesias, soldados y marinos. Salían de casas que no podían mantener a todos los hijos y llevaban consigo dos cosas que valían mucho lejos de su tierra: muchos sabían leer y escribir, y casi todos podían probar una hidalguía que les abría puertas. Martín de Zabarte fue uno de tantos."
     },
     {
      "k": "h",
@@ -1641,6 +2397,18 @@
      "x": "Todo apunta a que la A nació en La Mancha, en la mano de algún cura o de algún escribano que oyó el nombre y lo escribió a su manera. Por sí sola no es pista de parentesco con nadie, pero es la marca propia de esta familia: la letra que el apellido lleva en Las Pedroñeras y que, fuera de la gente del pueblo, solo se ha visto con seguridad una vez, en Vitoria."
     },
     {
+     "k": "pull",
+     "x": "Todo apunta a que la A no vino de lejos: la puso una pluma de La Mancha."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: escribir de oído"
+    },
+    {
+     "k": "cp",
+     "x": "Durante siglos nadie tuvo un apellido escrito de una sola manera. No había documento de identidad: el cura o el escribano oía el nombre y lo apuntaba como sabía, y el mismo hombre podía aparecer con una be en su boda y con una uve en el bautizo de su hijo. La forma de los apellidos empezó a fijarse con el Registro Civil, en 1871, y del todo con el documento de identidad, ya en el siglo veinte."
+    },
+    {
      "k": "h",
      "x": "Lo que falta por andar"
     },
@@ -1653,8 +2421,8 @@
      "x": "Quinientos años después el caserío sigue en su sitio, y la calle Fray Luis de León también. Entre uno y otra quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro."
     }
    ],
-   "huella": "a91896a226afb6eefe79910b21cef7b75f75c118798c552f1dada9fcfa1033d0",
-   "chars": 7773
+   "huella": "8ac414ac3befdd514228dfb502ccd3ad594de69173a840d1069307873e86a887",
+   "chars": 9572
   },
   {
    "clave": "cap:marcharon",
@@ -1670,6 +2438,26 @@
      "x": "Un apellido que había bajado del norte también supo irse. Este capítulo sigue a los de la casa que salieron de Las Pedroñeras y dejaron rastro en otra parte: una muchacha que se casó en un valle de Valencia en 1868, un hermano de la abuela Vicenta que se fue a la guerra y acabó sus días en Murcia, y otros que buscaron la vida lejos. De unos queda un papel; de otros, lo que se cuenta en casa."
     },
     {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "María Azabarte, nacida en Las Pedroñeras hacia 1844, se casó en 1868 en Benifairó de la Valldigna, en Valencia: es la primera Azabarte del pueblo que se sabe que hizo su vida fuera de la provincia."
+    },
+    {
+     "k": "cl",
+     "x": "Un hijo suyo aparece en 1890 escrito Magraner Zabarte: en una sola generación, el apellido perdió la A."
+    },
+    {
+     "k": "cl",
+     "x": "Juan Navarro Fides, «el Polaco», hermano de la abuela Vicenta, se fue a la guerra carlista y murió en Mula, en Murcia, el 24 de febrero de 1905, según cuenta por escrito la familia."
+    },
+    {
+     "k": "cl",
+     "x": "Otros se fueron más tarde: un soldado que volvió de Cuba y un nieto de Venus que acabó en Bilbao."
+    },
+    {
      "k": "h",
      "x": "Irse de un pueblo de la Mancha"
     },
@@ -1680,6 +2468,14 @@
     {
      "k": "p",
      "x": "Casi nunca quedaba constancia de la marcha: el papel siguiente, si existe, aparece en otro archivo y escrito por otra mano. Por eso cada uno de los que siguen es un pequeño hallazgo."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: las quintas"
+    },
+    {
+     "k": "cp",
+     "x": "Cada año se sorteaba en los pueblos qué mozos iban al ejército. Eran las quintas, llamadas así porque en sus comienzos se llevaban a uno de cada cinco. Quien tenía dinero podía pagar para librarse, y también se libraba el hijo que era el sostén de unos padres pobres; por eso los expedientes de quintas están llenos de partidas que las familias presentaban para probar su caso. Gracias a uno de ellos se conoce hoy la boda de María Azabarte."
     },
     {
      "k": "h",
@@ -1696,6 +2492,14 @@
     {
      "k": "p",
      "x": "Si hoy se conoce su boda es por una casualidad de las quintas. En 1874 el suegro de María, que también se llamaba José Magraner, pidió que se librara del servicio a otro de sus hijos, alegó que José ya estaba casado y presentó una copia de la partida firmada por el cura. Aquella copia quedó cosida a un expediente de la Diputación de Valencia, y su fotografía puede verse hoy en internet. Así, una muchacha de Las Pedroñeras de la que nadie en la familia sabía nada tiene ahora nombre, pueblo y fecha."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: la Valldigna"
+    },
+    {
+     "k": "cp",
+     "x": "La Valldigna es un valle entre montañas, en el sur de la provincia de Valencia, cerca de la costa. Según la tradición, el rey Jaime II de Aragón lo llamó así, «valle digno», porque lo vio digno de un monasterio, y allí mandó levantar el de Santa María de la Valldigna, que sigue en pie en Simat, el pueblo de la suegra de María. Era tierra de regadío, muy distinta de los secanos de La Mancha."
     },
     {
      "k": "h",
@@ -1742,6 +2546,18 @@
      "x": "En esa misma rama la historia se cuenta con otras piezas: que la bolsa se la dio a la propia Vicenta mientras ella segaba en la encomienda, al pasar con un destacamento de caballería, diciéndole «guárdamelo; si no vuelvo, es para ti y tus hijos», y que acabó sus días en Extremadura. Las dos versiones se guardan, y la que se tiene por vigente es la escrita. Las dos coinciden en lo esencial: un hermano que se fue lejos y que, a su manera, no se olvidó de los suyos. De momento ningún papel lo nombra. Si hubo causa por aquella muerte, la llevaría el juzgado de Belmonte, que era el de la comarca, y la sentenciaría la Audiencia de Albacete. Los protocolos de los notarios de Mula de aquellos años se destruyeron, pero en su Registro Civil tiene que estar el acta de defunción de febrero de 1905, que ya se ha pedido, con los nombres de sus padres, y el día que aparezca «el Polaco» dejará de ser un recuerdo para ser un documento."
     },
     {
+     "k": "pull",
+     "x": "Besó a su madre por la ventana, dejó dos bolsas y no volvió nunca."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: la última guerra carlista"
+    },
+    {
+     "k": "cp",
+     "x": "Entre 1872 y 1876 España vivió la tercera y última guerra carlista: los partidarios de don Carlos, que se tenía por rey legítimo, se alzaron contra el gobierno de Madrid. Se combatió sobre todo en el País Vasco, Navarra, Cataluña y el Maestrazgo, pero las tropas carlistas llegaron también a tierras de Cuenca, y en julio de 1874 entraron en la propia capital. En La Mancha fue una guerra de columnas que iban y venían: entraban en un pueblo, recogían armas, caballos y dinero, a veces se llevaban vecinos como rehenes y seguían camino con la tropa del Gobierno detrás. Muchos hombres se alistaron voluntarios, unos por convicción, otros por la paga y otros porque no tenían adónde ir."
+    },
+    {
      "k": "h",
      "x": "Cuba, Bilbao y otros caminos más recientes"
     },
@@ -1758,8 +2574,8 @@
      "x": "Por esos caminos hay hoy personas que llevan el apellido Azabarte y que nunca han vivido en Las Pedroñeras. Sus historias también caben en estas páginas, y el capítulo de las preguntas abiertas explica cómo pueden llegar hasta aquí."
     }
    ],
-   "huella": "c31357bd5873a5d910b199b811a1dbd57071688a9af59fcb843e0655865defcc",
-   "chars": 9401
+   "huella": "7c677fb12810e145e6b169589e352cd9d6d0bc2cd2846aa42c38e50ec738f77c",
+   "chars": 11691
   },
   {
    "clave": "cap:pendiente",
@@ -1773,6 +2589,26 @@
     {
      "k": "lede",
      "x": "Toda historia de familia llega a un borde más allá del cual los papeles callan. Esta tiene varios, y ninguno es un muro: son preguntas que se pueden contestar. Este capítulo las enseña una por una, como quien enseña las habitaciones de una casa que todavía se está construyendo, y termina con una invitación a quien lleve el apellido o guarde un recuerdo."
+    },
+    {
+     "k": "ch",
+     "x": "Claves del capítulo"
+    },
+    {
+     "k": "cl",
+     "x": "La pregunta mayor es de dónde venía Francisco, el padre de Pedro, y si era de los Zabarte que vivieron en la comarca en los siglos dieciséis y dieciocho."
+    },
+    {
+     "k": "cl",
+     "x": "Falta el papel que una a Pablo Pascasio con el Pablo padre de Francisco, y los que den nombre a las hijas mayores de la casa."
+    },
+    {
+     "k": "cl",
+     "x": "Muchas respuestas están en archivos que ya se conocen: Belmonte, Cuenca, Madrid, Mula y el Registro Civil del pueblo."
+    },
+    {
+     "k": "cl",
+     "x": "Una fotografía, una carta o un recuerdo de la familia pueden valer tanto como un legajo."
     },
     {
      "k": "h",
@@ -1789,6 +2625,14 @@
     {
      "k": "p",
      "x": "Las respuestas pueden estar en papeles que ya se sabe dónde buscar. En el Archivo Diocesano de Cuenca puede estar el expediente que se abrió cuando Rodrigo Zabarte se ordenó sacerdote, que debía llevar su genealogía, y el de la capellanía que fundó su tío, don Francisco Cantero, con la lista de parientes que tenían derecho a ella. Allí pueden estar también el bautizo del jesuita Dámaso Ordoño y Zabarte, nacido en Hontecillas en 1783, que dirá cómo se llamaba su madre, una Zabarte, y de qué casa venía, y el libro de bautismos de Cañada Juncosa que iba de 1715 a 1750, con el de cualquier Francisco hijo de aquella casa. En Madrid espera el testamento de Rodrigo, firmado el 7 de noviembre de 1800. En Belmonte o en Las Pedroñeras, la boda de Francisco con María Mateo Cantero, que puede darle por fin apellido y pueblo. Y en los libros de Las Pedroñeras anteriores a 1822, la boda de Josefa Azabarte, la abuela del niño de Caudete, con Pedro Beltrán, que dirá de quién era hija."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: los papeles de un cura"
+    },
+    {
+     "k": "cp",
+     "x": "Para ordenarse sacerdote no bastaba con querer. El obispado abría un expediente en el que el aspirante tenía que probar quiénes eran sus padres y sus abuelos, que era hijo legítimo y de buenas costumbres, y que tenía de qué vivir, casi siempre una capellanía. Declaraban testigos de su pueblo, y el expediente se guardaba. Por eso los papeles de un cura del siglo dieciocho son a menudo el mejor retrato de su familia."
     },
     {
      "k": "h",
@@ -1843,6 +2687,42 @@
      "x": "Muchas de estas preguntas no se contestarán en un archivo, sino en una casa. Buena parte de esta historia salió de un recuerdo, el de una prima mayor que no encajaba en ningún sitio, y cada conversación con alguien de la familia ha traído algo que ningún papel tenía: un nombre, un mote, una fecha, una fotografía. Cualquiera que lleve el apellido Azabarte, o que descienda de alguien que lo llevó, puede añadir una pieza."
     },
     {
+     "k": "pull",
+     "x": "Una fotografía con un nombre escrito por detrás puede valer tanto como un legajo."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hace: guardar un recuerdo"
+    },
+    {
+     "k": "cp",
+     "x": "Un recuerdo vale más con tres datos: quién lo cuenta, a quién se lo oyó y cuándo. «Me lo contaba mi abuela, que lo había vivido» no es lo mismo que «lo leí en internet», aunque las dos cosas puedan ser verdad. Apuntarlo así, con los nombres, es lo que permite a esta historia guardar cada recuerdo sin confundirlo con un documento."
+    },
+    {
+     "k": "li",
+     "x": "Las fotografías antiguas ayudan a poner cara y fecha, sobre todo si llevan escrito por detrás un nombre, un lugar o un año."
+    },
+    {
+     "k": "li",
+     "x": "Las cartas, las postales y los recordatorios de difuntos guardan nombres, fechas y parentescos que no están en ningún archivo."
+    },
+    {
+     "k": "li",
+     "x": "Los papeles de la casa, como los libros de familia, las escrituras de tierras, las cartillas militares o los recibos viejos, dicen quién vivía dónde y con quién."
+    },
+    {
+     "k": "li",
+     "x": "Los recuerdos cuentan tanto como los papeles: los motes, las casas, quién se fue del pueblo y adónde, quién era primo de quién."
+    },
+    {
+     "k": "li",
+     "x": "Los nombres y los años que se recuerdan de oídas, como el del mozo que murió en las Cuatro Esquinas, pueden abrir un archivo entero."
+    },
+    {
+     "k": "li",
+     "x": "Una fotografía hecha con el teléfono basta, y los originales se quedan siempre en su casa."
+    },
+    {
      "k": "p",
      "x": "Para hacerlo llegar basta con decírselo al investigador, Francisco Javier García Azabarte, o a cualquiera de los parientes que ya colaboran en esta historia, cuyos nombres están en «Quiénes lo hacen posible». Nada se publica sin permiso de quien lo aporta, y cada recuerdo se guarda con el nombre de quien lo cuenta."
     },
@@ -1851,8 +2731,8 @@
      "x": "A los más pequeños de la casa se les puede proponer un juego: preguntar a sus abuelos cómo se llamaban los abuelos de ellos, y apuntarlo en un papel con la fecha. Preguntas como esa, hechas a tiempo, son las que pusieron en marcha esta historia."
     }
    ],
-   "huella": "deb7562e54b6a6fbfe708f93a2ab5800e536b326237a83d6321cc0d0a7e4580c",
-   "chars": 7619
+   "huella": "a34cb49c0cbf2c4b23249f9b8b50c356347c2d955debdaba2277d2085d076051",
+   "chars": 9781
   },
   {
    "clave": "cap:glosario",
