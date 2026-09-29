@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@95ade105ae9534761905a74e5d97eedd552f8eac/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1349,6 +1349,38 @@
    "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
    "generado": "2026-09-29T18:20:22Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "lib:prologo": {
+   "src": "mp3/lib-prologo.mp3",
+   "huella": "640225f82cfafccc0fc776aad9f6bbaa0e25e08a338a7729f1be2eb40cdadc63",
+   "marcas": [
+    0.35,
+    3.54,
+    14.12,
+    36.22,
+    58.86,
+    74.65,
+    76.98,
+    105.01,
+    135.87,
+    139.27,
+    141.15,
+    164.06,
+    192.07,
+    197.77,
+    219.13,
+    221.36,
+    264.44,
+    295.38,
+    299.93,
+    325.43
+   ],
+   "dur": 342.1,
+   "bytes": 2737834,
+   "titulo": "Prólogo · Una piedra clara",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T21:36:29Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@95ade105ae9534761905a74e5d97eedd552f8eac/voz/narrativa"
   }
  }
 }
