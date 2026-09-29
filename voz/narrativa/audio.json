@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@47882e65780d2676dbb90e11809f356da1cd3893/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1148,6 +1148,207 @@
    "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
    "generado": "2026-09-29T15:53:55Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@47882e65780d2676dbb90e11809f356da1cd3893/voz/narrativa"
+  },
+  "pj:P108": {
+   "src": "mp3/pj-P108.mp3",
+   "huella": "b364ddaf24e57f5e301cdcbae4299db4af615617026a50db6c61561fa6928f77",
+   "marcas": [
+    0.35,
+    3.32,
+    16.01,
+    42.78,
+    67.92,
+    97.76,
+    133.2,
+    175.12,
+    193.71
+   ],
+   "dur": 215.26,
+   "bytes": 1723076,
+   "titulo": "Vicenta, la mayor",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:13:30Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P109": {
+   "src": "mp3/pj-P109.mp3",
+   "huella": "46cc0a331bdb40c3934656576e47de12300db36d7d4245e9ba8d46458b44d8e6",
+   "marcas": [
+    0.35,
+    3.03,
+    12.57,
+    48.42,
+    68.16,
+    105.1,
+    130.48
+   ],
+   "dur": 153.92,
+   "bytes": 1232314,
+   "titulo": "Isidora",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:14:45Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P089": {
+   "src": "mp3/pj-P089.mp3",
+   "huella": "a19ec47bc625bbbd2d090f73f2d68a9ba7ce98e29443d35845e5f08f834d24f8",
+   "marcas": [
+    0.35,
+    4.24,
+    17.58,
+    69.25,
+    113.37,
+    134.22,
+    167.35
+   ],
+   "dur": 181.64,
+   "bytes": 1454075,
+   "titulo": "Pronuana",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:15:27Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P091": {
+   "src": "mp3/pj-P091.mp3",
+   "huella": "f3a2133371275954c8955ebbaeb05d681ebcc34a02910628c7b8300cdf22178b",
+   "marcas": [
+    0.35,
+    4.14,
+    16.2,
+    40.02,
+    69.94,
+    97.59,
+    123.55,
+    140.61
+   ],
+   "dur": 166.74,
+   "bytes": 1334844,
+   "titulo": "Bonifacia",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:16:08Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P003": {
+   "src": "mp3/pj-P003.mp3",
+   "huella": "17c3c1d80134ad2d2236cf7173f4d65a989563cbc7f103e8d91aaa00e7b5a3bc",
+   "marcas": [
+    0.35,
+    4.24,
+    13.01,
+    45.03,
+    73.05,
+    106.13,
+    151.72,
+    178.3,
+    213.29,
+    245.8
+   ],
+   "dur": 279.77,
+   "bytes": 2239163,
+   "titulo": "Emiliano",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:16:54Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P127": {
+   "src": "mp3/pj-P127.mp3",
+   "huella": "176996e931614a5ee441e103343875cd838b5caf2f899d35d5cc6b9beba7b2b5",
+   "marcas": [
+    0.35,
+    2.86,
+    16.44,
+    45.39,
+    71.12,
+    89.68,
+    112.13,
+    145.41
+   ],
+   "dur": 154.62,
+   "bytes": 1237880,
+   "titulo": "Adela",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:17:34Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P133": {
+   "src": "mp3/pj-P133.mp3",
+   "huella": "3f93994d73226d56525d33add55fd5efed5373d6cba14fc906db5d42c245796d",
+   "marcas": [
+    0.35,
+    3.03,
+    11.31,
+    45.47,
+    69.73,
+    118.67,
+    143.96
+   ],
+   "dur": 161.04,
+   "bytes": 1289146,
+   "titulo": "Vicenta",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:18:11Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P138": {
+   "src": "mp3/pj-P138.mp3",
+   "huella": "3dca976d12b51c4f1bb4bcb6152e3dd7c987c7deac1fd0511129109d6a473637",
+   "marcas": [
+    0.35,
+    3.07,
+    20.56,
+    45.51,
+    70.94,
+    82.25,
+    121.57,
+    146.01,
+    178.3,
+    200.54
+   ],
+   "dur": 231.28,
+   "bytes": 1851135,
+   "titulo": "Venus (hijo)",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:18:55Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P130": {
+   "src": "mp3/pj-P130.mp3",
+   "huella": "a04434de1d4ae3e8f6b1095c84c90d861247eecb8f5d4f32258a62d01ac84883",
+   "marcas": [
+    0.35,
+    3.19,
+    15.95,
+    50.06,
+    83.18,
+    104.08,
+    112.86,
+    136.72
+   ],
+   "dur": 157.29,
+   "bytes": 1259212,
+   "titulo": "Encarnación",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:19:40Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+  },
+  "pj:P120": {
+   "src": "mp3/pj-P120.mp3",
+   "huella": "046a8c2336588ec5c07e46e2afc50e55bfd751686d3a9161af13f533ed1180b4",
+   "marcas": [
+    0.35,
+    4.37,
+    15.5,
+    49.02,
+    71.94,
+    99.34,
+    116.86
+   ],
+   "dur": 137.69,
+   "bytes": 1102330,
+   "titulo": "Eugenia",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-29T18:20:22Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
   }
  }
 }
