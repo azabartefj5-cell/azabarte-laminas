@@ -69,6 +69,8 @@ ESTILO_TIPO = {
     "t": "This line is the title of a chapter: read it slowly, with gravitas, as a title.",
     "nombre": "This line is the full name of a person whose story begins: read it slowly, as a title.",
     "h": "This line is a section heading: read it as a heading, slightly slower.",
+    "ch": "This line announces the key points of the chapter: read it as a heading.",
+    "ct": "This line is the title of an explanatory note: read it as a heading.",
     "lede": "This is the opening paragraph of the chapter: inviting, unhurried.",
     "p": "",
     "tramo": ("The text may begin with a title and contain section headings: read each one as a heading. "
@@ -88,13 +90,19 @@ INICIO, FINAL = 0.35, 0.9
 
 
 def pausa(prev: str, sig: str) -> float:
+    # Desde el 29-09-2026 también se leen los textos intercalados de los capítulos: «ch» (rótulo de las
+    # claves), «cl» (cada clave), «pull» (frase destacada), «ct»/«cp» (título y texto de un recuadro),
+    # «li» (lista) y «pie» (nota de una fotografía). Los rótulos llevan pausa de epígrafe, y las notas,
+    # algo más de aire que un párrafo, para que se oiga que se sale del hilo y se vuelve a él.
     if prev in ("t", "nombre"):
         return 1.0
-    if sig == "h":
+    if sig in ("h", "ch", "ct"):
         return 1.1
-    if prev == "h":
+    if prev in ("h", "ch", "ct"):
         return 0.7
     if prev == "lede":
+        return 0.85
+    if sig in ("pull", "pie") or prev in ("pull", "cp", "pie"):
         return 0.85
     return 0.55
 
