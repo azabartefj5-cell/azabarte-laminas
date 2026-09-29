@@ -14,3 +14,8 @@ Este repositorio aloja los vídeos y la voz de la edición narrativa; el sitio v
 manifiesto `audio.json` y el generador. La Action «Locutar la edición narrativa» las crea y las publica por
 jsDelivr en cuanto el repositorio tiene el secreto `GEMINI_API_KEY` u `OPENROUTER_API_KEY`. Detalles y parche
 para la web en `voz/narrativa/README.md`.
+
+## Parches para la web
+
+En `parches/` se guardan los cambios de código de la web que se aplican sobre la carpeta
+local desde la que se despliega (ver `parches/README.md`).
