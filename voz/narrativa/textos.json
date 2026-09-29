@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 76,
- "total_caracteres": 281050,
+ "total_caracteres": 285153,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -249,7 +249,7 @@
     },
     {
      "k": "p",
-     "x": "Los papeles no la apoyan en nada. El apellido está concentrado en el valle del Deba, en el interior de Gipuzkoa, y su rastro se va apagando cuanto más cerca de los Pirineos se busca: en los pueblos de la frontera, con casi medio millón de bautismos, apenas aparece siete veces, y todas tardías. No hay ninguna casa llamada Zabarte al norte de la muga, ni ninguna forma francesa del apellido en más de tres mil asientos del norte. Y en los registros franceses que se han podido recorrer, los que parecían Zabarte eran Labarte o Dubarte."
+     "x": "Los papeles no la apoyan en nada. El apellido está concentrado en el valle del Deba, en el interior de Gipuzkoa, y su rastro se va apagando cuanto más cerca de los Pirineos se busca: en los pueblos de la frontera, con casi medio millón de bautismos, apenas aparece siete veces, y todas tardías. No hay ninguna casa llamada Zabarte al norte de la muga, ni ninguna forma francesa del apellido en más de tres mil asientos del norte."
     },
     {
      "k": "p",
@@ -257,7 +257,11 @@
     },
     {
      "k": "p",
-     "x": "Queda un parecido de sonido. En el Ariège, al otro lado del Pirineo, hay un lugar llamado Sabart, documentado desde el siglo nueve, y su nombre recuerda a Zabarte. Pero Sabart tiene su propia explicación en la lengua de allí, y Zabarte la tiene en la de aquí, entre los nombres vascos de casa terminados en «-arte». Hasta la forma con ese, Sabarte, es vasca: los repertorios de apellidos la recogen en Mondragón y en Angiozar. La frase de la familia sigue siendo un recuerdo, y como recuerdo se guarda."
+     "x": "En septiembre de 2026 se buscó por fin en Francia. Se miró lo que dos grandes bases de genealogía guardan de los libros de bautismos, bodas y entierros de aquel país, que en el sur es mucho, aunque no todo, y se leyeron en el propio libro las actas más antiguas y las más dudosas. No apareció ningún Azabarte antiguo. Los apellidos parecidos que abundan cerca de Narbona, Azalbert y Azibert, vienen de viejos nombres de pila: Azalbert es el mismo nombre que Adalberto, dicho a la manera de aquella tierra. Y los Zabarte antiguos que daban los buscadores y se pudieron leer en el libro resultaron ser Labarte o Labarthe, porque la ele mayúscula de la letra francesa de entonces se parece mucho a una zeta. En ninguna de aquellas actas se habla de España. La familia Zabarte que vivió cerca de Burdeos en el siglo veinte desciende, según los índices, de un español que murió allí en 1913: el camino, cuando lo hubo, fue el contrario."
+    },
+    {
+     "k": "p",
+     "x": "Queda un parecido de sonido. En el Ariège, al otro lado del Pirineo, hay un lugar llamado Sabart, documentado desde el siglo nueve, y su nombre recuerda a Zabarte. Pero Sabart tiene su propia explicación en la lengua de allí, y Zabarte la tiene en la de aquí, entre los nombres vascos de casa terminados en «-arte». Y la forma con ese, Sabarte, no hace falta ir a buscarla fuera: los repertorios de apellidos la recogen en Mondragón y en Angiozar, y en Álava el mismo apellido se escribió unas veces con zeta y otras con ese. En el sur de Francia también hay Sabarte desde el siglo dieciséis, pero es un apellido propio de aquella tierra, y en las bases que se han recorrido ninguno de ellos aparece al sur de los Pirineos. Con todo esto a la vista, se puede decir ya que el apellido no vino de Francia. La frase de la familia sigue siendo un recuerdo, y como recuerdo se guarda."
     },
     {
      "k": "h",
@@ -305,7 +309,7 @@
     },
     {
      "k": "p",
-     "x": "Falta el papel que lo confirme, y es un papel que tiene que existir: Camila nació hacia 1883, cuando ya había Registro Civil, y su inscripción de nacimiento debe llevar el nombre de su madre. Quiénes fueron su padre y sus hijos, y cómo se supo todo esto, se cuenta en el capítulo «Lo que se cuenta en la calle Fray Luis de León»."
+     "x": "Falta el papel que lo confirme, y es un papel que tiene que existir: Camila nació cuando ya había Registro Civil, y su inscripción de nacimiento debe llevar el nombre de su madre. El año no se sabe. Se recuerda que le llevaba dieciséis años a su media hermana Isidora, y si esa Isidora es, como se ha creído, la Isidora López Azabarte que según su lápida nació en 1907 o en 1908, Camila habría nacido hacia 1891 o 1892. Quiénes fueron su padre y sus hijos, y cómo se supo todo esto, se cuenta en el capítulo «Lo que se cuenta en la calle Fray Luis de León»."
     },
     {
      "k": "h",
@@ -328,8 +332,8 @@
      "x": "La única vez que un libro de Álava escribe la A con seguridad es en un bautizo de Vitoria de 1725, y allí no nace de ninguna suma: el escribiente se la puso a la madre del niño y también a su abuelo, que no tenía nada de Azedo, y quien firmaba aquel libro había escrito Zabarte, sin A, en la boda de los padres. La A aparece y desaparece según quién tenga la pluma. Lo que se sabe de la A de Las Pedroñeras se cuenta, paso a paso, en el capítulo «Un camino a medio andar»."
     }
    ],
-   "huella": "dea116a4c88be6b43228d6836d8ab9c45ddfe3a1d49e7d8127b2470694eaac92",
-   "chars": 7446
+   "huella": "c883868969c4376de814d06d8b316b25bbb3c82a6aeb3fb7f18708bfdc644895",
+   "chars": 8876
   },
   {
    "clave": "cap:genesis",
@@ -871,7 +875,7 @@
     },
     {
      "k": "p",
-     "x": "Y Camila era hija de Vicenta, la mayor: nieta de Francisco, sobrina carnal de Venus y prima hermana de Emiliano. Su padre era un Lorente, al que mataron por cuestiones de los bandos del pueblo cuando iba con su cuñado Venus. La madre volvió a casarse con uno de «los Higuerillas», tuvo con él dos hijos más, Isidora y Francisco, y murió de parto, con la criatura, hacia 1903. Camila se crió con los abuelos, y cuando estos murieron, en 1912 y 1914, le dieron a elegir: «con la Podruana, con la Boni o con nosotros»."
+     "x": "Y Camila era hija de Vicenta, la mayor: nieta de Francisco, sobrina carnal de Venus y prima hermana de Emiliano. Su padre era un Lorente, al que mataron por cuestiones de los bandos del pueblo cuando iba con su cuñado Venus. La madre volvió a casarse con uno de «los Higuerillas», tuvo con él dos hijos más, Isidora y Francisco, y murió de parto, con la criatura, cuando Isidora tenía cuatro años. Camila se crió con los abuelos, y cuando estos murieron, en 1912 y 1914, le dieron a elegir: «con la Podruana, con la Boni o con nosotros»."
     },
     {
      "k": "p",
@@ -963,11 +967,15 @@
     },
     {
      "k": "p",
-     "x": "La memoria no prueba un parentesco. Dice dónde buscarlo, y explica lo que el papel calla. En el caso de Camila, el papel que lo confirmaría existe y se puede pedir: su inscripción en el Registro Civil de Las Pedroñeras, con el nombre de su madre escrito. Y hay otro más sencillo todavía, el nacimiento de una Isidora López Azabarte en 1899, que con toda probabilidad es su media hermana y nombraría a la madre de las dos. Cuando lleguen, este capítulo dejará de ser solo memoria."
+     "x": "La memoria no prueba un parentesco. Dice dónde buscarlo, y explica lo que el papel calla. En el caso de Camila, el papel que lo confirmaría existe y se puede pedir: su inscripción en el Registro Civil de Las Pedroñeras, con el nombre de su madre escrito. Y hay otro más sencillo todavía, el nacimiento de Isidora López Azabarte, a la que se tiene por su media hermana, que nombraría a la madre de las dos."
+    },
+    {
+     "k": "p",
+     "x": "Ese papel importa más de lo que parece. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Si es ella la Isidora de los Higuerillas, su madre habría muerto de parto hacia 1911 o 1912, y Camila, que le llevaba dieciséis años, habría nacido hacia 1891 o 1892. Pero la familia recuerda a Vicenta como la mayor de las hijas de la casa, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908. Algo no encaja todavía: o Vicenta no era la mayor de los hermanos, o aquella Isidora es otra, o alguna de las cuentas se ha movido al pasar de boca en boca. No hace falta elegir. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá, y cuando llegue, este capítulo dejará de ser solo memoria."
     }
    ],
-   "huella": "e1e174acf58b424a4cbc2a17bf05a7cde6fa62bad4ffe8c138c9cad9e53ccf39",
-   "chars": 13074
+   "huella": "8b3cf0c21b793c01277da9960cddb2a303b05c5f76cb1fab6cd90ab8ac5ce696",
+   "chars": 13850
   },
   {
    "clave": "cap:actas",
@@ -1065,7 +1073,7 @@
     },
     {
      "k": "p",
-     "x": "En esos mismos libros esperan las inscripciones que cerrarían casi todo lo que la memoria cuenta. Está el nacimiento de Venus, hacia 1876, quizá con el nombre de Marcelino, y los de sus ocho hijos, entre 1907 y 1922. Están el de Camila y el de una Isidora López Azabarte nacida en 1899, que con toda probabilidad es su media hermana. Cada una es una certificación que se pide en una ventanilla, y cada una puede cambiar una página de esta historia."
+     "x": "En esos mismos libros esperan las inscripciones que cerrarían casi todo lo que la memoria cuenta. Está el nacimiento de Venus, hacia 1876, quizá con el nombre de Marcelino, y los de sus ocho hijos, entre 1907 y 1922. Están el de Camila y el de Isidora López Azabarte, nacida en 1907 o en 1908, a la que se tiene por su media hermana. Cada una es una certificación que se pide en una ventanilla, y cada una puede cambiar una página de esta historia."
     },
     {
      "k": "h",
@@ -1116,7 +1124,7 @@
      "x": "La lámina de este capítulo es el edificio de Correos de Vitoria, de 1928, mucho más moderno que cualquier papel de esta historia. Está aquí porque buena parte de esta investigación se ha hecho por carta: peticiones a los archivos, respuestas de los archiveros, fotografías que llegan por correo y una carta escrita a mano por un pariente. Hay peticiones que se contestan en un día y otras que llevan semanas esperando. Sin quienes las leen y las contestan, al otro lado de cada ventanilla, no habría historia que contar."
     }
    ],
-   "huella": "5daa7b10fae1526fbdef3c5a6eeabe239af9ab0f572c021147730d19f8d36b5e",
+   "huella": "f5deabe401deabff371da1b6d276a01e653e9337ea4b0daa5b8873b3eb34ab4b",
    "chars": 5648
   },
   {
@@ -1743,15 +1751,15 @@
     },
     {
      "k": "p",
-     "x": "Y hubo quien se fue en los años de la emigración, cuando miles de familias de La Mancha salieron hacia Madrid, Valencia, Barcelona o el País Vasco en busca de trabajo. Lorencio, al que llamaban «Larry», hijo de Florencia, la hermana de Emiliano, se marchó a las Vascongadas y murió en Bilbao. Sin saberlo, hizo hacia el norte, al revés, el camino que otros Zabarte habían hecho cuatro siglos antes."
+     "x": "Y hubo quien se fue en los años de la emigración, cuando miles de familias de La Mancha salieron hacia Madrid, Valencia, Barcelona o el País Vasco en busca de trabajo. Un hijo de Florencia, la hermana de Emiliano, se marchó a las Vascongadas y murió en Bilbao. Sin saberlo, hizo hacia el norte, al revés, el camino que otros Zabarte habían hecho cuatro siglos antes."
     },
     {
      "k": "p",
      "x": "Por esos caminos hay hoy personas que llevan el apellido Azabarte y que nunca han vivido en Las Pedroñeras. Sus historias también caben en estas páginas, y el capítulo de las preguntas abiertas explica cómo pueden llegar hasta aquí."
     }
    ],
-   "huella": "8cbaada0b7d85dfc6ffe2465cf1cef122586be33e2ce0690b0e93e0945754248",
-   "chars": 9433
+   "huella": "c31357bd5873a5d910b199b811a1dbd57071688a9af59fcb843e0655865defcc",
+   "chars": 9401
   },
   {
    "clave": "cap:pendiente",
@@ -1804,7 +1812,7 @@
     },
     {
      "k": "p",
-     "x": "El papel más barato y que más cierra es el nacimiento de una Isidora López Azabarte, en 1899. Todo apunta a que es la media hermana de Camila, y en ese caso nombrará a su madre, Vicenta Azabarte Navarro, y probará que existió. Después vendrían el de Camila, el de Venus, que quizá se inscribió como Marcelino, y los de sus ocho hijos. Y los dos testamentos de los abuelos, ante los notarios Justino Zapata y Enrique Serrano Martí, que pueden nombrar de una vez a todos los hijos."
+     "x": "El papel más barato y que más cierra es el nacimiento de Isidora López Azabarte, que según su lápida nació entre agosto de 1907 y agosto de 1908. Se la tiene por la media hermana de Camila, y en ese caso su partida nombrará a su madre, Vicenta Azabarte Navarro, y probará que existió. Dirá también si las cuentas del recuerdo se sostienen, porque con esa fecha no encajan del todo: una hija mayor nacida hacia 1860 difícilmente daba a luz en 1908. Después vendrían el de Camila, el de Venus, que quizá se inscribió como Marcelino, y los de sus ocho hijos. Y los dos testamentos de los abuelos, ante los notarios Justino Zapata y Enrique Serrano Martí, que pueden nombrar de una vez a todos los hijos."
     },
     {
      "k": "h",
@@ -1843,8 +1851,8 @@
      "x": "A los más pequeños de la casa se les puede proponer un juego: preguntar a sus abuelos cómo se llamaban los abuelos de ellos, y apuntarlo en un papel con la fecha. Preguntas como esa, hechas a tiempo, son las que pusieron en marcha esta historia."
     }
    ],
-   "huella": "b2a2398c96b8c2aa69d9f31daec6086f152cb56c70d4ed9578bae71ed0f560c4",
-   "chars": 7398
+   "huella": "deb7562e54b6a6fbfe708f93a2ab5800e536b326237a83d6321cc0d0a7e4580c",
+   "chars": 7619
   },
   {
    "clave": "cap:glosario",
@@ -2213,7 +2221,7 @@
     },
     {
      "k": "p",
-     "x": "Según recuerda la familia, Camila nació hacia 1883, hija de Vicenta, la mayor de las hijas de la casa, y de un Lorente al que mataron por cuestiones de política cuando ella era muy pequeña; aquel día él iba con su cuñado Venus, y el pueblo andaba partido en dos bandos. Su nombre completo sería, con toda probabilidad, Camila Lorente Azabarte. Su madre volvió a casarse, con uno de «los Higuerillas», tuvo con él a Isidora y a Francisco, y murió de parto hacia 1903. Camila se quedó sin padre y sin madre, con dos medio hermanos pequeños; a Isidora le llevaba dieciséis años."
+     "x": "Según recuerda la familia, Camila era hija de Vicenta, la mayor de las hijas de la casa, y de un Lorente al que mataron por cuestiones de política cuando ella era muy pequeña; aquel día él iba con su cuñado Venus, y el pueblo andaba partido en dos bandos. Su nombre completo sería, con toda probabilidad, Camila Lorente Azabarte. Su madre volvió a casarse, con uno de «los Higuerillas», tuvo con él a Isidora y a Francisco, y murió de parto cuando Isidora tenía cuatro años. Camila se quedó sin padre y sin madre, con dos medio hermanos pequeños; a Isidora le llevaba dieciséis años."
     },
     {
      "k": "p",
@@ -2221,7 +2229,7 @@
     },
     {
      "k": "p",
-     "x": "Sobre su crianza hay dos recuerdos, y los dos se guardan. En la rama de la Boni se cuenta que fue la abuela Vicenta quien la recogió, la tuvo en su casa y la casó: «salió de la boda de su casa». En la de Venus se recuerda otra cosa: que, muertos los abuelos, le dieron a elegir entre irse «con la Podruana, con la Boni o con nosotros», que eligió al tío Venus, que se crió allí como una hija más, con su prima Eugenia, unos veinte años, y que de aquella puerta salió de novia. Tampoco coinciden las dos ramas en su edad, y cada casa recuerda a la suya."
+     "x": "Sobre su crianza hay dos recuerdos, y los dos se guardan. En la rama de la Boni se cuenta que fue la abuela Vicenta quien la recogió, la tuvo en su casa y la casó: «salió de la boda de su casa». En la de Venus se recuerda otra cosa: que, muertos los abuelos, le dieron a elegir entre irse «con la Podruana, con la Boni o con nosotros», que eligió al tío Venus, que se crió allí como una hija más, con su prima Eugenia, unos veinte años, y que de aquella puerta salió de novia. Tampoco se recuerda igual su edad. Unos cuentan que le llevaba dieciséis años a su media hermana Isidora; Ubaldo Gallardo Azabarte, nieto de Venus, la recuerda en cambio de la edad de su propia madre, Vicenta Azabarte Galindo, que nació en 1907. La cuenta depende del año de Isidora: si es, como se ha creído, la Isidora López Azabarte que según su lápida nació en 1907 o en 1908, Camila habría nacido hacia 1891 o 1892, y las dos versiones quedan más cerca, aunque todavía no casan. Su partida de nacimiento dirá cuál acierta."
     },
     {
      "k": "p",
@@ -2236,8 +2244,8 @@
      "x": "De Camila descienden «los Habichuelos», que llevan todavía el mote de su abuela Vicenta, «la Habichuela». La familia la recordó siempre con toda seguridad, sobrina del abuelo Venus, prima del abuelo Emiliano y mucho mayor que él, y durante mucho tiempo no hubo manera de encajarla, hasta que otra rama de la familia recordó que era nieta, y no hija. Con esa sola pieza, tres generaciones de la casa quedaron en su sitio."
     }
    ],
-   "huella": "6a6552772046447c753ec4d22f4f03502d5d3c23ac9cc5bf1fa7bd56f4ab94a3",
-   "chars": 2796
+   "huella": "cc81fa7a20fc25b110df5c44b42b6aed1405dc36f2d2626d55c430934bbb3c02",
+   "chars": 3256
   },
   {
    "clave": "pj:P101",
@@ -2443,23 +2451,27 @@
     },
     {
      "k": "lede",
-     "x": "La mayor de las hijas de Francisco y Vicenta y la madre de Camila, según recuerda la familia. Enviudó joven, volvió a casarse y murió de parto antes que sus padres; por eso no aparece en sus actas."
+     "x": "La mayor de las hijas de Francisco y Vicenta y la madre de Camila, según recuerda la familia. Enviudó, volvió a casarse y murió de parto antes que sus padres; por eso no aparece en sus actas."
     },
     {
      "k": "p",
-     "x": "De Vicenta, la hija, no hay todavía ningún papel. Se la conoce por lo que cuentan dos ramas de la casa que hace un siglo dejaron de tratarse, la de la Boni y la de Venus, y que sin embargo la recuerdan igual. Fue la mayor de los hermanos, nacida con toda probabilidad hacia 1860, y la única que llevó el nombre de su madre, en una familia donde, como advierten los propios parientes, «hay muchas Isidoras y Vicentas»."
+     "x": "De Vicenta, la hija, no hay todavía ningún papel. Se la conoce por lo que cuentan dos ramas de la casa que hace un siglo dejaron de tratarse, la de la Boni y la de Venus, y que sin embargo la recuerdan igual. Las dos la tienen por la mayor de los hermanos, lo que la haría nacer hacia 1860, y fue la única que llevó el nombre de su madre, en una familia donde, como advierten los propios parientes, «hay muchas Isidoras y Vicentas»."
     },
     {
      "k": "p",
-     "x": "Se casó dos veces. Su primer marido era un Lorente, y lo mataron por cuestiones de política; aquel día iba con su cuñado Venus. Eran los años en que en muchos pueblos de España la vida pública se repartía entre dos bandos, cada uno arrimado a sus hombres principales, y las rencillas acababan a veces en sangre. En Las Pedroñeras, según se recuerda, el pueblo andaba partido en dos. De aquel matrimonio había nacido Camila, hacia 1883."
+     "x": "Se casó dos veces. Su primer marido era un Lorente, y lo mataron por cuestiones de política; aquel día iba con su cuñado Venus. Eran los años en que en muchos pueblos de España la vida pública se repartía entre dos bandos, cada uno arrimado a sus hombres principales, y las rencillas acababan a veces en sangre. En Las Pedroñeras, según se recuerda, el pueblo andaba partido en dos. De aquel matrimonio había nacido Camila."
     },
     {
      "k": "p",
-     "x": "Viuda y joven, se volvió a casar con uno de «los Higuerillas», una familia que tenía sus casas en fila junto al pozo, con una calle particular para ellas solas, y tuvo con él dos hijos: Isidora, la mayor, y Francisco. Todo apunta a que aquella Isidora es la Isidora López Azabarte que nació en 1899 y murió en 1980, y a que López era el apellido de los Higuerillas."
+     "x": "Viuda, se volvió a casar con uno de «los Higuerillas», una familia que tenía sus casas en fila junto al pozo, con una calle particular para ellas solas, y tuvo con él dos hijos: Isidora, la mayor, y Francisco. Se ha creído que aquella Isidora es la Isidora López Azabarte enterrada en el cementerio del pueblo, y que López era el apellido de los Higuerillas. Su lápida dice que murió el 22 de agosto de 1986, con setenta y ocho años, así que nació en 1907 o en 1908."
     },
     {
      "k": "p",
-     "x": "Murió de parto, y con ella la criatura, cuando Isidora tenía cuatro años y Francisco dos: hacia 1903. Era una muerte frecuente entonces, cuando las mujeres parían en casa sin más ayuda que la de una comadrona o una vecina. Lo cuenta una bisnieta suya, nieta de aquella Isidora. El viudo volvió a casarse, con «la Capacha», y de ahí vienen los Eleuterios y los Tecas, que ya no son familia. Hubo un tiempo en que esto se contaba al revés, como si el que enviudó y volvió a casarse hubiera sido el padre de Camila; era el padrastro, porque al padre lo habían matado años antes."
+     "x": "Murió de parto, y con ella la criatura, cuando Isidora tenía cuatro años y Francisco dos. Era una muerte frecuente entonces, cuando las mujeres parían en casa sin más ayuda que la de una comadrona o una vecina. Lo cuenta una bisnieta suya, nieta de aquella Isidora. El viudo volvió a casarse, con «la Capacha», y de ahí vienen los Eleuterios y los Tecas, que ya no son familia. Hubo un tiempo en que esto se contaba al revés, como si el que enviudó y volvió a casarse hubiera sido el padre de Camila; era el padrastro, porque al padre lo habían matado años antes."
+    },
+    {
+     "k": "p",
+     "x": "Las fechas de esta historia dependen de Isidora. Si es su hija la Isidora de la lápida, Vicenta murió hacia 1911 o 1912, y Camila, que le llevaba dieciséis años a su media hermana, habría nacido hacia 1891 o 1892. Pero eso casa mal con lo demás que se recuerda: una mujer nacida hacia 1860 difícilmente daba a luz en 1908 y moría de parto cuatro años más tarde. Puede que Vicenta no fuera la mayor de los hermanos, puede que la Isidora de la lápida sea otra o puede que alguna de las cuentas del recuerdo no sea exacta. No hace falta elegir todavía: la partida de nacimiento de Isidora, que nombrará a su madre, lo dirá."
     },
     {
      "k": "p",
@@ -2470,8 +2482,8 @@
      "x": "Murió antes que sus padres, y por eso las actas de 1912 y de 1914, que solo nombran a los hijos vivos, la dejan fuera. Pero su nombre es el que lo explica todo: por qué la familia llamaba a Camila sobrina del abuelo Venus, por qué el abuelo Emiliano la llamaba prima y por qué era tantos años mayor que él. Sin ella, la casa no se entiende."
     }
    ],
-   "huella": "b610c01ae4a3fce334968ab927cbcc5552a6772c9cae15edd245d43d6f99b7bb",
-   "chars": 2677
+   "huella": "b364ddaf24e57f5e301cdcbae4299db4af615617026a50db6c61561fa6928f77",
+   "chars": 3383
   },
   {
    "clave": "pj:P109",
@@ -2857,23 +2869,23 @@
     },
     {
      "k": "p",
-     "x": "Florencia fue una de las ocho hijas e hijos de Venus Azabarte Navarro y Encarnación Galindo Gallardo, criada como todos ellos en la casa de la calle Fray Luis de León. Su sobrino Ubaldo Gallardo Azabarte la recuerda como «la de Porras el panadero». En los pueblos de entonces a la mujer casada se la nombraba por la casa de su marido, y la de Florencia era una casa de panaderos."
+     "x": "Florencia fue una de las ocho hijas e hijos de Venus Azabarte Navarro y Encarnación Galindo Gallardo, criada como todos ellos en la casa de la calle Fray Luis de León. Su sobrino Ubaldo Gallardo Azabarte la recuerda como «la de Porras el panadero». «Porras» no era un apellido, sino un mote, como tantos del pueblo. A la mujer casada se la nombraba a menudo por el mote de una casa, y a Florencia la nombraban por el de un panadero; de qué casa venía ese mote, si de la de su marido o de otra, no se sabe todavía."
     },
     {
      "k": "p",
-     "x": "Tuvo tres hijos que se recuerdan. La primera que se nombra es una hija, Vicenta, otra de las muchas Vicentas de la familia. Rafael siguió el oficio y fue panadero como su padre. Lorencio, al que llamaban «Larry», se marchó a las Vascongadas, como se llamaba entonces a las provincias vascas, y murió en Bilbao."
+     "x": "Se recuerdan tres hijos suyos, una hija y dos varones. Uno de ellos fue también panadero. El otro se marchó a las Vascongadas, como se llamaba entonces a las provincias vascas, y murió en Bilbao."
     },
     {
      "k": "p",
-     "x": "Fueron muchos los manchegos que en el siglo veinte dejaron el campo para buscar trabajo en las fábricas y los talleres del norte, y Bilbao fue uno de sus destinos. Lorencio es el primero de la familia de quien se sabe que hizo ese camino. Es el inverso del que, cuatro siglos antes, habían hecho unos Zabarte que bajaron de Gipuzkoa a tierras de Cuenca, con los que no consta parentesco y de los que entonces nadie en la casa sabía nada."
+     "x": "Fueron muchos los manchegos que en el siglo veinte dejaron el campo para buscar trabajo en las fábricas y los talleres del norte, y Bilbao fue uno de sus destinos. Aquel hijo de Florencia es el primero de la familia de quien se sabe que hizo ese camino. Es el inverso del que, cuatro siglos antes, habían hecho unos Zabarte que bajaron de Gipuzkoa a tierras de Cuenca, con los que no consta parentesco y de los que entonces nadie en la casa sabía nada."
     },
     {
      "k": "p",
-     "x": "De Florencia no se conoce todavía ninguna fecha. Su partida de boda, cuando se pida, dirá también el nombre y el apellido del panadero, porque «Porras» bien pudo ser el mote de la casa y no el apellido del marido. Hasta entonces la recuerdan su nombre en la lista de hermanos que la familia recita de memoria y el pan de una casa de panaderos."
+     "x": "En el cementerio de Las Pedroñeras hay una lápida que, con toda probabilidad, es la suya. Es la de la familia Picazo-Azabarte, y en ella están su marido, Juan Picazo Moreno, que murió el 3 de marzo de 1958, y Florencia, que murió el 26 de noviembre de 1986, a los setenta y cuatro años. Nació, por tanto, hacia 1912, justo entre sus hermanas Vicenta, que era de 1907, y Francisca, que era de 1916, y según el índice del cementerio llevaba el mismo Galindo que todos ellos. El epitafio habla de «tu esposo e hijos», y Juan Picazo había muerto veintiocho años antes: todo indica que Florencia volvió a casarse después de enviudar. De ese segundo marido no se sabe todavía nada. Las bodas del Registro Civil dirán quién fue. Hasta entonces la recuerdan su nombre en la lista de hermanos que la familia recita de memoria y el pan de una casa de panaderos."
     }
    ],
-   "huella": "35d9f46926954fe566f27d9c9c369f5700f3f05fb2a815bd4d90038e4c337362",
-   "chars": 1638
+   "huella": "bd20918c5dcc7f32462681ee453c253179e84967f70645313940fa18efa04d68",
+   "chars": 2180
   },
   {
    "clave": "pj:P135",
