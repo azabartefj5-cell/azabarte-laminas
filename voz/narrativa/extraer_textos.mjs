@@ -7,6 +7,7 @@
  *   - cap:<id>  cada capítulo de narrativa.capitulos con al menos 2 bloques;
  *   - pj:<id>   cada personaje con relato narrativo (nombre, entradilla, relato) y al menos 3 bloques;
  *   - bio:<id>  el personaje sin relato narrativo (nombre, primera frase de la bio, resto de la bio).
+ *   - lib:<id>  cada capítulo del libro continuo «Antes de nosotros» (narrativa.libro, desde el 29-09-2026).
  * La huella es el SHA-256 hex del texto canónico, la misma que calcula el navegador con
  * crypto.subtle; el reproductor solo usa una grabación si su huella coincide con el texto actual.
  *
@@ -57,7 +58,7 @@ function funcionesTexto(html) {
   const m = /\/\*VZ-TEXTO-INICIO\*\/([\s\S]*?)\/\*VZ-TEXTO-FIN\*\//.exec(code);
   if (!m) throw new Error('El script de la página no tiene el bloque VZ-TEXTO');
   const ctx = {};
-  vm.runInNewContext(m[1] + '\n;this.F={vzLimpia,vzBloquesCapitulo,vzBloquesRelato,vzTextoCanonico};', ctx, { timeout: 5000 });
+  vm.runInNewContext(m[1] + "\n;this.F={vzLimpia,vzBloquesCapitulo,vzBloquesRelato,vzTextoCanonico,vzBloquesLibro:(typeof vzBloquesLibro==='function'?vzBloquesLibro:null)};", ctx, { timeout: 5000 });
   return ctx.F;
 }
 
@@ -74,6 +75,17 @@ function pistas(D, F) {
       if (b.length < 2) continue;
       out.push({ clave: 'cap:' + id, titulo: N.t || id, tipo: 'cap', bloques: b });
     }
+  }
+  // El libro continuo «Antes de nosotros» (29-09-2026): una pista por capítulo, en el orden del libro.
+  // Una página anterior, sin vzBloquesLibro, simplemente no da pistas lib:.
+  const L = NR.libro;
+  if (NARR && F.vzBloquesLibro && L && Array.isArray(L.capitulos)) {
+    L.capitulos.forEach((C, i) => {
+      if (!C || !C.id) return;
+      const b = F.vzBloquesLibro(L, i);
+      if (b.length < 2) return;
+      out.push({ clave: 'lib:' + C.id, titulo: [C.rotulo, C.t].filter(Boolean).join(' · '), tipo: 'lib', bloques: b });
+    });
   }
   for (const p of ((D.personajes || {}).personajes || [])) {
     const R = NARR ? NRP(p.id) : {};

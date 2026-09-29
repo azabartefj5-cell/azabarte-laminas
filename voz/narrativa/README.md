@@ -48,7 +48,8 @@ Coste aproximado con pago por uso, a precios de septiembre de 2026 (Google dupli
 
 1. `extraer_textos.mjs` descarga la página publicada y extrae los textos **con las mismas funciones de la web**
    (bloque `VZ-TEXTO` del módulo `voz.js`): título, entradilla, títulos de sección y párrafos de cada capítulo,
-   y nombre, entradilla y relato de cada personaje. Calcula la huella SHA-256 de cada texto.
+   y nombre, entradilla y relato de cada personaje. Desde el 29-09-2026, también cada capítulo del libro continuo
+   «Antes de nosotros» (pistas `lib:<id>`, regla `vzBloquesLibro`). Calcula la huella SHA-256 de cada texto.
 2. `locutar.py` locuta solo lo nuevo o lo que ha cambiado (huella distinta). Agrupa los bloques en tramos de
    hasta unos 5 500 caracteres, separados por una pausa larga explícita, y pide cada tramo de una vez: menos
    peticiones y la misma voz de principio a fin, sin cambios de timbre entre párrafos. Después parte el audio
