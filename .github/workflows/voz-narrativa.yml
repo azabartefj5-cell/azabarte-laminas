@@ -138,7 +138,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ inputs.clave == 'pago' && secrets.GEMINI_API_KEY_PAGO || secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        # Si el vigilante de locutar.py ve una pista atascada (más de 20 min), vuelca la pila al registro y sale
+        # Si el vigilante de locutar.py ve una pista atascada (más de 30 min), vuelca la pila al registro y sale
         # con 4; lo terminado ya está guardado, así que se relanza y sigue con lo pendiente (hasta tres veces).
         run: |
           for intento in 1 2 3; do

@@ -86,8 +86,32 @@ MAX_TRAMO = 5500  # caracteres hablados por petición: unos 7 min de audio, holg
 IDIOMA = "es-ES"
 SEMILLA = 1798
 TIEMPO_MAX_S = 480  # tope de cada petición a Gemini; una locución normal tarda mucho menos
-PISTA_MAX_S = 1200  # vigilante: una pista que pase de 20 min sin terminar se da por atascada
+RELOJ_S = 300  # reloj propio de cada petición (con_reloj): una locución normal tarda menos de un minuto
+PISTA_MAX_S = 1800  # vigilante: una pista que pase de 30 min sin terminar se da por atascada
 SALIDA_ATASCO = 4  # código de salida del vigilante; la Action vuelve a lanzar el script (hasta tres veces)
+
+
+def con_reloj(funcion, segundos: float, quien: str):
+    """Ejecuta funcion() con un reloj propio (29-09-2026). El tiempo máximo del SDK mide la espera entre datos, no
+    la petición entera: con la conexión viva, o si la biblioteca espera a que el servidor cierre la tarea, no salta,
+    y tres ejecuciones se quedaron horas paradas al empezar una pista. Aquí la llamada corre en un hilo aparte
+    y, si no vuelve a tiempo, se abandona (hilo daemon) y se lanza TimeoutError, que locuta_bloque reintenta."""
+    res = {}
+
+    def corre():
+        try:
+            res["ok"] = funcion()
+        except BaseException as e:  # noqa: BLE001
+            res["error"] = e
+
+    hilo = threading.Thread(target=corre, daemon=True)
+    hilo.start()
+    hilo.join(segundos)
+    if hilo.is_alive():
+        raise TimeoutError(f"{quien} no respondió en {int(segundos)} s; se abandona la petición y se reintenta")
+    if "error" in res:
+        raise res["error"]
+    return res.get("ok")
 
 
 class Vigia:
@@ -380,12 +404,14 @@ class MotorGemini(Motor):
             generation_config=self.config(),
         )
         # Sin los reintentos propios del SDK (esperan minutos ante un límite): los gobierna locuta_bloque.
-        try:
-            it = self.client.interactions.create(**peticion, retries=None)
-        except TypeError as e:
-            if "retries" not in str(e):
-                raise
-            it = self.client.interactions.create(**peticion)
+        def crea():
+            try:
+                return self.client.interactions.create(**peticion, retries=None)
+            except TypeError as e:
+                if "retries" not in str(e):
+                    raise
+                return self.client.interactions.create(**peticion)
+        it = con_reloj(crea, RELOJ_S, "Gemini")
         self.cuenta(texto)
         estado = str(getattr(it, "status", "") or "").lower()
         if estado in ("incomplete", "budget_exceeded", "failed", "cancelled"):
