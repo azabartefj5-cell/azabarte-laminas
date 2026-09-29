@@ -941,9 +941,19 @@ def main(argv=None):
     man.setdefault("voz", {})
 
     if args.fijar_base is not None:
-        man["base"] = args.fijar_base.rstrip("/")
+        # Base por pista (29-09-2026): cada MP3 conserva la dirección del commit en que se publicó, y solo las
+        # pistas recién locutadas (sin «base» propia) reciben la nueva. Así la dirección de lo que no cambia no
+        # se mueve y jsDelivr la sigue teniendo en caché: con una base única, cada publicación enfriaba todos
+        # los audios y el primer oyente esperaba segundos (hasta 41 s medidos) a que jsDelivr los trajera.
+        nueva = args.fijar_base.rstrip("/")
+        n = 0
+        for p in (man.get("pistas") or {}).values():
+            if isinstance(p, dict) and not p.get("base"):
+                p["base"] = nueva
+                n += 1
+        man["base"] = nueva
         escribe_json(man_p, man)
-        log(f"base = {man['base']}")
+        log(f"base = {nueva} · {n} pistas nuevas con ella; las demás conservan la suya")
         return 0
 
     textos = lee_json(Path(args.textos), None)
