@@ -138,14 +138,22 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ inputs.clave == 'pago' && secrets.GEMINI_API_KEY_PAGO || secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: >-
-          python voz/narrativa/locutar.py
-          --motor "${{ steps.motor.outputs.motor }}"
-          --solo "${{ inputs.solo }}"
-          --max-pistas "${{ inputs.max_pistas || '0' }}"
-          --limite-minutos 300
-          --podar
-          ${{ inputs.forzar && '--forzar' || '' }}
+        # Si el vigilante de locutar.py ve una pista atascada (más de 20 min), vuelca la pila al registro y sale
+        # con 4; lo terminado ya está guardado, así que se relanza y sigue con lo pendiente (hasta tres veces).
+        run: |
+          for intento in 1 2 3; do
+            rc=0
+            python voz/narrativa/locutar.py \
+              --motor "${{ steps.motor.outputs.motor }}" \
+              --solo "${{ inputs.solo }}" \
+              --max-pistas "${{ inputs.max_pistas || '0' }}" \
+              --limite-minutos 300 \
+              --podar \
+              ${{ inputs.forzar && '--forzar' || '' }} || rc=$?
+            if [ "$rc" -ne 4 ]; then exit "$rc"; fi
+            echo "::warning title=Voz::una pista se quedó atascada (intento $intento); se relanza y sigue con lo pendiente"
+          done
+          exit 4
 
       # Segunda clave gratuita (29-09-2026): continúa donde lo dejó la primera (mismos textos, la caché de
       # bloques y el audio.json que esta acaba de escribir). Corre aunque el paso anterior acabe con alguna

@@ -32,6 +32,7 @@ import argparse
 import array
 import base64
 import datetime as _dt
+import faulthandler
 import hashlib
 import json
 import math
@@ -85,6 +86,40 @@ MAX_TRAMO = 5500  # caracteres hablados por petición: unos 7 min de audio, holg
 IDIOMA = "es-ES"
 SEMILLA = 1798
 TIEMPO_MAX_S = 480  # tope de cada petición a Gemini; una locución normal tarda mucho menos
+PISTA_MAX_S = 1200  # vigilante: una pista que pase de 20 min sin terminar se da por atascada
+SALIDA_ATASCO = 4  # código de salida del vigilante; la Action vuelve a lanzar el script (hasta tres veces)
+
+
+class Vigia:
+    """Vigilante de pistas (29-09-2026). Dos ejecuciones de pago se quedaron horas paradas al empezar una pista
+    (pj:P108 a las 15:53 y pj:P134 a las 18:20 UTC), la segunda ya con el tope de 8 min por petición: el atasco
+    no está (solo) en la espera de la respuesta. Si una pista pasa de PISTA_MAX_S, se vuelca la pila de todos
+    los hilos al registro (para ver dónde estaba parada) y se sale con SALIDA_ATASCO. Lo terminado ya está en
+    audio.json y en la caché de bloques; la Action relanza el script y sigue con lo pendiente."""
+
+    def __init__(self, segundos: float):
+        self.segundos = segundos
+        self.t = None
+
+    def arma(self, clave: str) -> None:
+        self.desarma()
+        def salta():
+            log(f"VIGILANTE: la pista {clave} lleva más de {int(self.segundos // 60)} min sin terminar; "
+                "se para esta ejecución (lo terminado ya está guardado). Pila de todos los hilos:")
+            try:
+                faulthandler.dump_traceback(file=sys.stderr, all_threads=True)
+            except Exception:  # noqa: BLE001
+                pass
+            sys.stdout.flush(); sys.stderr.flush()
+            os._exit(SALIDA_ATASCO)
+        self.t = threading.Timer(self.segundos, salta)
+        self.t.daemon = True
+        self.t.start()
+
+    def desarma(self) -> None:
+        if self.t:
+            self.t.cancel()
+            self.t = None
 
 # Pausas (segundos) entre bloques, según el tipo del bloque anterior y del siguiente.
 INICIO, FINAL = 0.35, 0.9
@@ -1031,11 +1066,13 @@ def main(argv=None):
     codigo_salida = 0
     inicio = time.time()
     try:
+        vigia = Vigia(PISTA_MAX_S)
         for n, t in enumerate(pendientes, 1):
             if args.limite_minutos and time.time() - inicio > args.limite_minutos * 60:
                 log(f"Límite de {args.limite_minutos:.0f} min alcanzado; el resto queda para la próxima ejecución.")
                 break
             log(f"[{n}/{len(pendientes)}] {t['clave']} · {t['titulo']} · {len(t['bloques'])} bloques, {t['chars']} caracteres")
+            vigia.arma(t["clave"])
             try:
                 pista, marcas = locuta_pista(motor, cache, t, args)
                 src = "mp3/" + nombre_mp3(t["clave"])
