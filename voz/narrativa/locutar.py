@@ -389,7 +389,13 @@ class MotorGemini(Motor):
         # tardar unos 50 minutos (diagnóstico de la sesión «Navegación en versión narrativa»). Con el tope, la
         # petición falla y locuta_bloque la reintenta como cualquier otro fallo. Comprobado que el SDK lo aplica
         # a interactions.create (en milisegundos).
-        self.client = genai.Client(api_key=clave, http_options=types.HttpOptions(timeout=TIEMPO_MAX_S * 1000))
+        # Sin reintentos del SDK (29-09-2026, causa de los atascos, vista en la pila que volcó el vigilante): el
+        # «retries=None» que se pasaba a create() el SDK no lo admite, así que se repetía la llamada sin él y
+        # quedaban sus reintentos por defecto, que respetan el Retry-After de Google y dormían horas en
+        # _gaos/utils/retries.py sin decir nada. Con attempts=0 el error (429, 5xx…) llega al momento a
+        # locuta_bloque, que sabe si esperar un minuto o parar hasta mañana y lo deja en el registro.
+        self.client = genai.Client(api_key=clave, http_options=types.HttpOptions(
+            timeout=TIEMPO_MAX_S * 1000, retry_options=types.HttpRetryOptions(attempts=0)))
 
     def locuta(self, texto, k):
         self.espera_turno()
@@ -403,15 +409,8 @@ class MotorGemini(Motor):
             response_format={"type": "audio"},
             generation_config=self.config(),
         )
-        # Sin los reintentos propios del SDK (esperan minutos ante un límite): los gobierna locuta_bloque.
-        def crea():
-            try:
-                return self.client.interactions.create(**peticion, retries=None)
-            except TypeError as e:
-                if "retries" not in str(e):
-                    raise
-                return self.client.interactions.create(**peticion)
-        it = con_reloj(crea, RELOJ_S, "Gemini")
+        # Los reintentos los gobierna locuta_bloque; el SDK no reintenta (retry_options attempts=0 en el cliente).
+        it = con_reloj(lambda: self.client.interactions.create(**peticion), RELOJ_S, "Gemini")
         self.cuenta(texto)
         estado = str(getattr(it, "status", "") or "").lower()
         if estado in ("incomplete", "budget_exceeded", "failed", "cancelled"):
