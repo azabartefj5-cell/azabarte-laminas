@@ -26,6 +26,12 @@ del sistema. Aquí se generan esas pistas y su manifiesto.
 3. **Aplicar el parche de la web una sola vez** (ver abajo) y desplegar como de costumbre. A partir de ahí las
    grabaciones nuevas o regeneradas aparecen solas, sin volver a desplegar.
 
+**Dos claves (29-09-2026, decisión del investigador).** `GEMINI_API_KEY` es una clave **gratuita** y es la
+de siempre: la usan la ejecución diaria, la que lanza `publicar.cmd` tras cada despliegue de la web y las
+manuales. `GEMINI_API_KEY_PAGO` es de pago y solo se usa lanzando la Action a mano con «clave: pago»
+(`gh workflow run voz-narrativa.yml -f clave=pago`), cuando el investigador lo pida en ese momento. El primer
+lote completo se grabó con ella.
+
 **Cuánto tarda.** La capa gratuita de Google da solo 10 peticiones al día a `gemini-3.8-flash-tts`. Por eso el
 generador pide varios párrafos seguidos en cada petición («tramos»): la edición completa son unas 106
 peticiones, unos 11 días de ejecuciones diarias. Activando la facturación en el proyecto de Google de la clave
