@@ -149,15 +149,17 @@ jobs:
 
       # Segunda clave gratuita (29-09-2026): continúa donde lo dejó la primera (mismos textos, la caché de
       # bloques y el audio.json que esta acaba de escribir). Corre aunque el paso anterior acabe con alguna
-      # pista fallida, pero no si se cancela la ejecución; sin el secreto, no hace nada.
+      # pista fallida, pero no si se cancela la ejecución; sin el secreto, no hace nada. Con la cuota gratuita
+      # acaba en minutos: su tope (30 min, y 40 de plazo para el paso) deja margen dentro de los 350 del trabajo.
       - name: Locutar lo pendiente con la segunda clave gratuita
         if: ${{ !cancelled() && steps.motor.outputs.motor == 'gemini' && inputs.clave != 'pago' }}
+        timeout-minutes: 40
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_2 }}
         run: |
           if [ -z "$GEMINI_API_KEY" ]; then echo "Sin segunda clave gratuita (GEMINI_API_KEY_2)."; exit 0; fi
           echo "::notice title=Clave de Google::segunda gratuita"
-          python voz/narrativa/locutar.py --motor gemini --solo "${{ inputs.solo }}" --max-pistas "${{ inputs.max_pistas || '0' }}" --limite-minutos 300 --podar
+          python voz/narrativa/locutar.py --motor gemini --solo "${{ inputs.solo }}" --max-pistas "${{ inputs.max_pistas || '0' }}" --limite-minutos 30 --podar
 
       - name: Publicar el audio
         if: always() && steps.motor.outputs.motor != ''
