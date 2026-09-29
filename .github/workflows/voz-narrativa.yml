@@ -5,6 +5,9 @@
 #                       ejecución diaria, la que lanza publicar.cmd tras cada despliegue y las manuales.
 #                       Con la capa gratuita va más despacio: lo que no quepa en la cuota del día se termina
 #                       en las ejecuciones siguientes.
+#   GEMINI_API_KEY_2    segunda clave GRATUITA, de otra cuenta (29-09-2026, decisión del investigador): cuando
+#                       la primera agota su cuota del día, la ejecución sigue con esta (paso «…con la segunda
+#                       clave gratuita»). Dobla lo que se graba cada día sin pagar. No se usa con «clave: pago».
 #   GEMINI_API_KEY_PAGO clave DE PAGO (29-09-2026). Solo se usa si se lanza a mano con «clave: pago», por
 #                       decisión expresa del investigador en ese momento.
 #   OPENROUTER_API_KEY  clave de OpenRouter; usa el mismo modelo (google/gemini-3.8-flash-tts) con su crédito.
@@ -143,6 +146,18 @@ jobs:
           --limite-minutos 300
           --podar
           ${{ inputs.forzar && '--forzar' || '' }}
+
+      # Segunda clave gratuita (29-09-2026): continúa donde lo dejó la primera (mismos textos, la caché de
+      # bloques y el audio.json que esta acaba de escribir). Corre aunque el paso anterior acabe con alguna
+      # pista fallida, pero no si se cancela la ejecución; sin el secreto, no hace nada.
+      - name: Locutar lo pendiente con la segunda clave gratuita
+        if: ${{ !cancelled() && steps.motor.outputs.motor == 'gemini' && inputs.clave != 'pago' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_2 }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then echo "Sin segunda clave gratuita (GEMINI_API_KEY_2)."; exit 0; fi
+          echo "::notice title=Clave de Google::segunda gratuita"
+          python voz/narrativa/locutar.py --motor gemini --solo "${{ inputs.solo }}" --max-pistas "${{ inputs.max_pistas || '0' }}" --limite-minutos 300 --podar
 
       - name: Publicar el audio
         if: always() && steps.motor.outputs.motor != ''
