@@ -476,7 +476,10 @@ class Cache:
 
     def olvida(self, claves):
         for texto, k in claves:
-            self.ruta(texto, k).unlink(missing_ok=True)
+            p = self.ruta(texto, k)
+            p.unlink(missing_ok=True)
+            for ext in (".pcm", ".txt"):  # tampoco se aprovechan las tomas descartadas: se pide de nuevo
+                (self.dir / "rechazos" / (p.stem + ext)).unlink(missing_ok=True)
 
     def guarda_rechazo(self, texto, k, a, motivo):
         """Aparta una toma que no pasó la validación, con el motivo: cuesta una petición de la cuota y así
@@ -485,7 +488,23 @@ class Cache:
         d.mkdir(parents=True, exist_ok=True)
         base = d / self.ruta(texto, k).stem
         base.with_suffix(".pcm").write_bytes(a.tobytes())
-        base.with_suffix(".txt").write_text(f"{motivo}\n\n{texto}\n", "utf-8")
+        base.with_suffix(".txt").write_text(" ".join(motivo.split()) + f"\n\n{texto}\n", "utf-8")
+
+    def recupera_rechazo(self, texto, k, valida):
+        """Si hay una toma descartada de este mismo texto que la validación de ahora acepta (p. ej. porque
+        se descartó por un corte entre párrafos que ya se elige mejor), pasa a la caché y ahorra la petición."""
+        base = self.dir / "rechazos" / self.ruta(texto, k).stem
+        p = base.with_suffix(".pcm")
+        if not p.exists():
+            return None
+        a = array.array("h")
+        a.frombytes(p.read_bytes())
+        if not len(a) or not valida(a)[2]:
+            return None
+        self.guarda(texto, k, a)
+        p.unlink(missing_ok=True)
+        base.with_suffix(".txt").unlink(missing_ok=True)
+        return a
 
     def limpia(self, dias=21):
         """Borra lo que lleve semanas sin usarse (restos de tramos partidos o de textos que cambiaron)."""
@@ -503,6 +522,11 @@ def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int 
     guardado = cache.lee(texto, k)
     if guardado is not None:
         return guardado
+    if valida is not None:
+        guardado = cache.recupera_rechazo(texto, k, valida)
+        if guardado is not None:
+            log(f"  se aprovecha una toma descartada antes que ahora sí vale: «{' '.join(texto[:40].split())}…»")
+            return guardado
     fallos, esperas, espera = 0, 0, 20.0
     mejor, ultimo = None, ""
     while fallos < intentos:
@@ -613,15 +637,24 @@ def elige_cortes(sil, esperados, dur):
     """Elige, en orden, un silencio por cada frontera entre bloques. Premia los silencios largos y penaliza
     que cada trozo se aparte de la duración que le toca por su texto (y, poco, que la frontera se aleje de su
     posición absoluta prevista): así una deriva acumulada del ritmo no arrastra varias fronteras a pausas de
-    frase. Cada trozo debe durar al menos un tercio de lo previsto."""
+    frase. En los trozos cortos (títulos y epígrafes) cuenta además la desviación relativa: que un título de
+    2 s quede en 0,8 s o en 5 s apenas mueve la cuenta en segundos, pero es un corte en la coma del propio
+    título o una frase del párrafo siguiente. En los párrafos largos ese término se desvanece, para no
+    forzar un ritmo igual en todos cuando la voz se toma su tiempo en alguno. Cada trozo debe durar al
+    menos un tercio de lo previsto."""
     m, ns = len(esperados), len(sil)
     if m == 0:
         return []
     if ns < m:
         return None
     ANCLA, TROZO = 0.015, 0.04  # segundos de silencio que «cuesta» cada segundo de desviación
+    REL, CORTO = 0.5, 4.0  # peso de la desviación relativa, pleno en trozos de hasta CORTO segundos
     centro = [(a + b) / 2 for a, b in sil]
     largo = [b - a for a, b in sil]
+
+    def pena(seg, esp):
+        rel = abs(math.log(max(seg, 0.05) / max(esp, 0.05)))
+        return TROZO * abs(seg - esp) + REL * min(1.0, CORTO / max(esp, 0.05)) * rel
     NADA = float("-inf")
     dp = [[NADA] * ns for _ in range(m)]
     antes = [[-1] * ns for _ in range(m)]
@@ -631,7 +664,7 @@ def elige_cortes(sil, esperados, dur):
             base = largo[j] - ANCLA * abs(centro[j] - esperados[k])
             if k == 0:
                 if centro[j] >= esp / 3:
-                    dp[0][j] = base - TROZO * abs(centro[j] - esp)
+                    dp[0][j] = base - pena(centro[j], esp)
                 continue
             mejor, arg = NADA, -1
             for i in range(j):
@@ -640,7 +673,7 @@ def elige_cortes(sil, esperados, dur):
                 seg = centro[j] - centro[i]
                 if seg < esp / 3:
                     continue
-                v = dp[k - 1][i] - TROZO * abs(seg - esp)
+                v = dp[k - 1][i] - pena(seg, esp)
                 if v > mejor:
                     mejor, arg = v, i
             if arg >= 0:
@@ -650,7 +683,7 @@ def elige_cortes(sil, esperados, dur):
     finales = [j for j in range(ns) if dp[m - 1][j] > NADA and dur - centro[j] >= ultimo_esp / 3]
     if not finales:
         return None
-    j = max(finales, key=lambda x: dp[m - 1][x] - TROZO * abs(dur - centro[x] - ultimo_esp))
+    j = max(finales, key=lambda x: dp[m - 1][x] - pena(dur - centro[x], ultimo_esp))
     elegidos = [j]
     for k in range(m - 1, 0, -1):
         j = antes[k][j]

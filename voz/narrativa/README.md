@@ -47,13 +47,17 @@ Coste aproximado con pago por uso, a precios de septiembre de 2026 (Google dupli
    hasta unos 5 500 caracteres, separados por una pausa larga explícita, y pide cada tramo de una vez: menos
    peticiones y la misma voz de principio a fin, sin cambios de timbre entre párrafos. Después parte el audio
    por los silencios (eligiendo, para cada frontera, el silencio más largo cerca de donde debería caer según el
-   texto; nunca corta dentro de la voz), une los bloques con pausas uniformes, iguala el volumen, guarda el MP3
+   texto; nunca corta dentro de la voz). En títulos y epígrafes, que duran uno o dos segundos, pesa además la
+   desviación relativa: así no se corta en la coma de un título («Ondategi, la aldea de la pila») ni se mete
+   en el epígrafe la primera frase del párrafo siguiente. Después une los bloques con pausas uniformes, iguala el volumen, guarda el MP3
    y anota en `audio.json` el segundo en que empieza cada bloque (`marcas`). Esas marcas son las que mueven el
    resaltado y el desplazamiento de la página. Un tramo solo se acepta si su ritmo es de lectura normal y cada
    párrafo dura lo que le corresponde (así no pasa un párrafo saltado ni un final cortado); si no, se pide una
    vez en dos mitades y, si tampoco sale, la pista queda pendiente para otro día sin gastar más cuota. La toma
    descartada no se tira: queda en la caché (`.cache/rechazos/`) junto al motivo (qué párrafo falló y con qué
-   ritmo), para escucharla y revisar el caso.
+   ritmo), para escucharla y revisar el caso. Antes de volver a pedir ese mismo texto, se prueba la toma
+   descartada con la validación del momento: si ahora pasa (porque se descartó por un corte que hoy se elige
+   mejor), se usa y no se gasta cuota.
 3. La Action publica los MP3, clava la dirección del CDN al commit y purga la caché de `audio.json` en jsDelivr.
 
 La web solo usa una grabación si su huella coincide con el texto que muestra. Si se edita un capítulo, ese
