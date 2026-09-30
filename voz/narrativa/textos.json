@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 93,
- "total_caracteres": 491190,
+ "total_caracteres": 501504,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -1379,19 +1379,19 @@
     },
     {
      "k": "p",
-     "x": "Según recuerda la familia, dos de los hijos de Venus estuvieron en ese frente: Venus y su mellizo Julián se fueron voluntarios a Madrid. Para Venus hay un papel que lo confirma en lo esencial. El 7 de noviembre de 1938, en el segundo aniversario de la defensa de la ciudad, el periódico de su brigada, «Escucha», repasó batallón por batallón a los hombres que la habían defendido en noviembre de 1936 y seguían en sus filas, y entre ellos nombra a «Venus Azabarte, hoy sargento». No da su segundo apellido ni dice que fuera voluntario, pero con un nombre que casi nadie llevaba fuera de esta casa es él con toda probabilidad. De Julián no ha aparecido ningún papel de la guerra misma."
+     "x": "Según recuerda la familia, los mellizos de la casa de Venus, Julián y Venus, se fueron voluntarios a defender la República con diecisiete años: habían nacido el 30 de noviembre de 1918. Los papeles lo confirman. Las fichas que el régimen de Franco hizo con los papeles incautados a la República dicen que Julián, campesino, de la UGT desde 1935 y de las Juventudes Socialistas Unificadas, fue «voluntario en la cuarta Brigada Mixta», y que Venus, hijo de Venus y Encarnación, era sargento y estaba afiliado a la UGT y al Partido Comunista. En noviembre de 1938 el periódico de su brigada, la 44, lo contaba entre los defensores de Madrid: «Venus Azabarte, hoy sargento»."
     },
     {
      "k": "p",
-     "x": "Emiliano, el pequeño, tenía catorce años cuando empezó la guerra, y la guerra terminó sin que lo llamaran a filas: el último llamamiento de la República, en enero de 1939, no llegó a los nacidos en 1922. La familia recuerda que, con unos diecisiete años, fue alguna vez hasta el frente de Madrid a llevar comida a sus hermanos. Si la edad es exacta, fue en las últimas semanas de la guerra, que en Madrid terminó el 28 de marzo de 1939."
+     "x": "Su padre, que según su nieta Pilar era socialista desde que se fundó el partido en el pueblo, en 1931, les llevaba comida en un carro de mulas hasta el frente, a la Cuesta de la Reina, junto a Aranjuez: unos cuatro días de camino. Con él iba Emiliano, el pequeño, que tenía catorce años y al que la guerra no llegó a llamar a filas. Al acabar la guerra amenazaron con ir a por el padre, y los mellizos se encerraron con él en la casa para defenderlo. No fueron a por él, y su nombre no aparece en ningún papel de la represión. El proceso por masonería y comunismo que se recuerda en casa lo tuvo el hijo, Venus, al que el tribunal de ese nombre encausó y procesó en la posguerra."
     },
     {
      "k": "p",
-     "x": "Después llegó la posguerra, y los papeles de aquellos años vuelven a nombrar a los hermanos, aunque ninguno con toda la claridad que haría falta. Un Francisco Azabarte Galindo, labrador de Las Pedroñeras nacido hacia 1915, que con toda probabilidad es Paco, el mayor de los varones, pasó de 1940 a 1942 por un batallón disciplinario de soldados trabajadores que trabajó en Navarra y después en Ceuta. En el Archivo General Militar de Guadalajara hay expedientes a nombre de Francisco y de Julián Azabarte Galindo, con toda probabilidad los dos hermanos, en una serie que reúne a soldados trabajadores, a los soldados que los custodiaban y a prisioneros, y que por eso no dice en qué condición estuvo cada uno. Y a nombre de Venus Azabarte Galindo hay dos fichas de 1940 de un tribunal especial que el nuevo régimen creó contra la masonería y el comunismo, que todavía no se han podido ver: mientras no se lean, no se sabe qué dicen de él."
+     "x": "A Paco, el mayor de los varones, la posguerra se lo llevó a un batallón disciplinario de soldados trabajadores, el número 13, que trabajó en Navarra y después en Ceuta de 1940 a 1942. En casa se recuerda que el suelo era todo barro, que dormían subidos a los árboles y que volvió con un mal de la piel que ya no lo dejó en toda su vida. Julián, que según la familia murió muy joven, tiene también un expediente de aquellos años en el Archivo General Militar de Guadalajara, y figura en un libro de detenidos de la policía militar de la República en Madrid."
     },
     {
      "k": "p",
-     "x": "Lo que no aparece también cuenta. Ninguno de los hijos de Venus figura en el índice de los consejos de guerra de la posguerra que corresponde al pueblo, ni en los expedientes de responsabilidades políticas que publicó el Boletín Oficial del Estado entre 1939 y 1945, ni en las listas de fusilados y presos del pueblo. Julián, que según la familia murió muy joven, seguía vivo, si aquel expediente es suyo, cuando se abrió, así que su muerte hay que buscarla de 1937 en adelante. Los expedientes de Guadalajara, los papeles de la brigada de Venus y las inscripciones del registro civil del pueblo se pueden pedir, y son los papeles que pueden convertir en seguro lo que hoy es probable."
+     "x": "Lo que no aparece también cuenta. Ninguno de los de la casa figura en los consejos de guerra del pueblo, ni en los expedientes de responsabilidades políticas, ni en las listas de fusilados y presos. Las cartas para pedir los expedientes de Guadalajara, las fichas y el sumario que guarda Salamanca, los papeles de las brigadas en Ávila y las inscripciones del registro civil del pueblo ya están escritas, y son los papeles que pueden convertir en seguro lo que hoy es probable."
     },
     {
      "k": "ct",
@@ -1399,7 +1399,7 @@
     },
     {
      "k": "cp",
-     "x": "Al empezar la guerra, la República combatió con columnas de milicianos voluntarios. En el otoño de 1936 empezó a organizarlas en brigadas mixtas, unidades de unos cuatro batallones con su artillería y sus servicios, y a finales de aquel año los hombres que habían defendido Madrid en noviembre formaron varias de ellas. La 44, a la que pertenecía el 176 Batallón de Venus, nació el último día de 1936 y pasó la guerra en el frente de Madrid, cerca de la capital."
+     "x": "Al empezar la guerra, la República combatió con columnas de milicianos voluntarios. En el otoño de 1936 empezó a organizarlas en brigadas mixtas, unidades de unos cuatro batallones con su artillería y sus servicios. La 4, la de Julián, se formó en Albacete en noviembre de aquel año; la 44, a la que pertenecía el 176 Batallón de Venus, nació el último día de 1936 de los hombres que habían defendido Madrid en noviembre. Las dos pasaron buena parte de la guerra en el frente de Madrid, a las puertas de la capital."
     },
     {
      "k": "h",
@@ -1434,8 +1434,8 @@
      "x": "Ese papel importa más de lo que parece. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Si es ella la Isidora de los Higuerillas, su madre habría muerto de parto hacia 1911 o 1912, y Camila, que le llevaba dieciséis años, habría nacido hacia 1891 o 1892. Pero la familia recuerda a Vicenta como la mayor de las hijas de la casa, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908. Algo no encaja todavía: o Vicenta no era la mayor de los hermanos, o aquella Isidora es otra, o alguna de las cuentas se ha movido al pasar de boca en boca. No hace falta elegir. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá, y cuando llegue, este capítulo dejará de ser solo memoria."
     }
    ],
-   "huella": "c67df37885db4a066aa75e7d7af70dd315ecdfb700a679d6b01acc14977969f0",
-   "chars": 15980
+   "huella": "aff9de2265360464cff200dec80a4ce62d1ad2c87d66ccfb16fee292998c3b55",
+   "chars": 15672
   },
   {
    "clave": "cap:actas",
@@ -4823,7 +4823,7 @@
     },
     {
      "k": "p",
-     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y Juan Ortiz Pacheco añadió que Julián murió muy joven; nadie de los que quedan recuerda de qué ni cuándo. De él se conserva una sola fotografía, una cartulina pequeña de estudio, sin nada escrito, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura, la chaqueta echada por encima y una mano en el bolsillo."
+     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe. Juan Ortiz Pacheco añadió que Julián murió muy joven; nadie de los que quedan recuerda de qué ni cuándo. De él se conserva una sola fotografía, una cartulina pequeña de estudio, sin nada escrito, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura, la chaqueta echada por encima y una mano en el bolsillo."
     },
     {
      "k": "pull",
@@ -4866,8 +4866,8 @@
      "x": "Encarnación murió en 1943, con unos cincuenta y tres años, y Venus tres años después, en 1946. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "7a8f481e981b4c9f56ddb470401f39e864eeaa4a6b9f93f94201124b920d2d38",
-   "chars": 11446
+   "huella": "1a055f22f5f844f24b590e34f5ecfe952f243103d2216e6ec854b4c9dc602908",
+   "chars": 11569
   },
   {
    "clave": "lib:guerra",
@@ -4880,7 +4880,15 @@
     },
     {
      "k": "lede",
-     "x": "Cuando empezó la guerra, en julio de 1936, el pequeño de la casa de Venus tenía catorce años y sus hermanos varones eran hombres jóvenes. Lo que les pasó entonces y después lo cuentan a medias la familia y unos pocos papeles, y lo que falta también es parte de la historia."
+     "x": "Cuando empezó la guerra, en julio de 1936, los mellizos de la casa de Venus tenían diecisiete años y el pequeño, catorce. Lo que les pasó entonces y después lo cuentan a la vez la familia y unos cuantos papeles, y esta vez se dan la razón más de lo que se contradicen."
+    },
+    {
+     "k": "p",
+     "x": "En Las Pedroñeras, el Partido Socialista y su sindicato, la Unión General de Trabajadores, se fundaron en 1931, el año en que se proclamó la Segunda República. Lo dejó escrito el propio ayuntamiento de la posguerra, en un informe de 1942 sobre quiénes habían gobernado el pueblo en los años de la guerra. En junio de 1934, en la huelga de los campesinos de la UGT, la directiva de la Casa del Pueblo acabó en la cárcel de Belmonte; los periódicos que lo contaron no dan sus nombres. Según recuerda su nieta Pilar, Venus fue socialista desde el principio, desde que se fundó el partido. En la casa se le recuerda como un hombre de peso en el pueblo y muy querido, de los que daban cobijo a quien lo necesitaba y ayudaban a parientes y amigos. Ningún papel le da un cargo: su nombre no está entre los concejales ni entre los directivos que enumera aquel informe."
+    },
+    {
+     "k": "p",
+     "x": "Los hijos iban por el mismo camino. Julián, uno de los mellizos, se afilió a la UGT el 1 de agosto de 1935, con dieciséis años, y después a las Juventudes Socialistas Unificadas, que nacieron en la primavera de 1936 de la unión de los jóvenes socialistas y los comunistas. Su mellizo, Venus, estuvo afiliado a la UGT y al Partido Comunista. Lo dicen las fichas que el régimen de Franco hizo después de la guerra con los papeles que incautó a la República, y que hoy guarda en Salamanca el Centro Documental de la Memoria Histórica."
     },
     {
      "k": "p",
@@ -4900,19 +4908,27 @@
     },
     {
      "k": "h",
-     "x": "«Venus Azabarte, hoy sargento»"
+     "x": "Diecisiete años"
     },
     {
      "k": "p",
-     "x": "Según recuerda la familia, dos de los hijos de Venus se fueron voluntarios al frente de Madrid: los mellizos, Venus y Julián. Para Venus hay un papel que lo confirma en lo esencial. El 7 de noviembre de 1938, al cumplirse dos años de la defensa de la ciudad, «Escucha», el periódico de la 44 Brigada Mixta del ejército de la República, repasó batallón por batallón a los hombres que habían defendido Madrid en noviembre de 1936 y seguían en sus filas."
+     "x": "Los mellizos, Julián y Venus, habían nacido el 30 de noviembre de 1918, y cuando empezó la guerra tenían diecisiete años. Los dos se fueron voluntarios a defender la República. Así lo ha contado siempre la familia, y ahora lo dice también un papel: la ficha de Julián, que es la que ha dado el día de su nacimiento, lo llama con estas palabras «voluntario en la cuarta Brigada Mixta». Pilar recuerda que volvieron con veinte años, y las cuentas salen: veinte tenían en marzo de 1939. Según ella fueron tres los hermanos que se fueron voluntarios; el nombre del tercero no ha llegado."
     },
     {
      "k": "pull",
-     "x": "En el párrafo del 176 Batallón aparece «Venus Azabarte, hoy sargento»."
+     "x": "Dos muchachos de diecisiete años, voluntarios desde el primer otoño de la guerra."
     },
     {
      "k": "p",
-     "x": "El periódico no da su segundo apellido, ni su edad, ni su pueblo, y tampoco dice que fuera voluntario: eso lo cuenta la familia. Pero fuera de esta casa casi nadie se llamaba Venus, y el otro Venus Azabarte de aquellos años, su padre, pasaba ya de los sesenta. Es él con toda probabilidad: estuvo en el frente de Madrid desde los días de la defensa de la ciudad, y en dos años llegó a sargento. De Julián, en cambio, no ha aparecido ningún papel de la guerra misma, y lo que se sabe de él en aquellos años es solo lo que recuerda la familia."
+     "x": "La 4.ª Brigada Mixta se formó en Albacete en noviembre de 1936 y entró en combate enseguida, en la Ciudad Universitaria y el Parque del Oeste, en los días de la defensa de Madrid. Pasó el año 1937 y la primera mitad de 1938 en los frentes de la misma ciudad, a orillas del Manzanares, y en el verano de 1938 la mandaron a Extremadura. Ningún papel dice si Julián siguió con ella todo ese tiempo."
+    },
+    {
+     "k": "p",
+     "x": "De Venus se sabe algo más. El 7 de noviembre de 1938, al cumplirse dos años de la defensa de Madrid, «Escucha», el periódico de la 44 Brigada Mixta, repasó batallón por batallón a los hombres que habían defendido la ciudad en noviembre de 1936 y seguían en sus filas, y en el párrafo del 176 Batallón nombra a «Venus Azabarte, hoy sargento». Su ficha de Salamanca dice lo mismo con más señas: natural de Pedroñeras, hijo de Venus y Encarnación, sargento. Aquella brigada salió de una de las columnas que en noviembre de 1936 defendieron Madrid por la Casa de Campo, y pasó el resto de la guerra en el frente del norte de la ciudad, entre El Pardo y la sierra."
+    },
+    {
+     "k": "p",
+     "x": "Otra ficha de Julián dice solo que figura en un libro de detenidos del Servicio de Investigación Militar de Madrid, la policía del ejército de la República. No dice cuándo ni por qué, y aquel servicio detenía a soldados por causas muy distintas. El libro, si se conserva, lo dirá."
     },
     {
      "k": "ct",
@@ -4920,7 +4936,31 @@
     },
     {
      "k": "cp",
-     "x": "Al empezar la guerra, la República combatió con columnas de milicianos voluntarios. En el otoño de 1936 empezó a organizarlas en brigadas mixtas, unidades de unos cuatro batallones con su artillería y sus servicios, y a finales de aquel año los hombres que habían defendido Madrid en noviembre formaron varias de ellas. La 44, a la que pertenecía el 176 Batallón, nació el último día de 1936 y pasó la guerra en el frente de Madrid, cerca de la capital."
+     "x": "Al empezar la guerra, la República combatió con columnas de milicianos voluntarios. En el otoño de 1936 empezó a organizarlas en brigadas mixtas, unidades de unos cuatro batallones con su artillería y sus servicios. La 4, la de Julián, se formó en Albacete en noviembre de aquel año con los batallones 13 a 16. La 44, a la que pertenecía el 176 Batallón de Venus, nació el último día de 1936 de los hombres que habían defendido Madrid en noviembre. Las dos pasaron buena parte de la guerra en el frente de Madrid, a las puertas de la capital."
+    },
+    {
+     "k": "h",
+     "x": "El carro de la Cuesta de la Reina"
+    },
+    {
+     "k": "p",
+     "x": "Mientras los mellizos estaban en el frente, su padre iba a verlos. Según recuerda su nieta Pilar, Venus cargaba un carro de mulas con comida y víveres de casa y salía de Las Pedroñeras camino del frente, a llevárselos a sus hijos y a ver cómo estaban. Con él iba Emiliano, el pequeño, que tenía catorce años, y quizá algún otro hermano. En casa aquel frente tenía un nombre: la Cuesta de la Reina."
+    },
+    {
+     "k": "p",
+     "x": "La Cuesta de la Reina es la bajada de la carretera de Andalucía hasta el río Jarama, unos ocho kilómetros al norte de Aranjuez. A finales de octubre de 1936 las tropas sublevadas llegaron a lo alto, junto a Seseña, y desde entonces fue frente: en enero de 1937 tomaron la casilla de peones camineros de la cima y ya no la dejaron hasta el final de la guerra. Con ese nombre la citan los partes de guerra de los dos bandos. Para quien subía desde La Mancha por Ocaña y Aranjuez, el frente empezaba allí."
+    },
+    {
+     "k": "p",
+     "x": "Desde Las Pedroñeras hasta allí hay unos ciento veinte kilómetros por la carretera de Cartagena, la que pasaba por el pueblo, y un carro de mulas andaba entre veinte y treinta y tantos kilómetros al día: unos cuatro días de ida y otros tantos de vuelta. Hasta los frentes de la ciudad de Madrid, por Tarancón, eran unos cuarenta kilómetros más."
+    },
+    {
+     "k": "pull",
+     "x": "Cuatro días de camino, con un muchacho de catorce años en el carro."
+    },
+    {
+     "k": "p",
+     "x": "Las historias de las brigadas de los mellizos no las sitúan en la Cuesta de la Reina, sino en los frentes de la ciudad misma, a orillas del Manzanares y en El Pardo. Puede que el carro llegara a más de un sitio, o que con los años el frente de Madrid y la Cuesta de la Reina se quedaran en la memoria como uno solo; no se sabe. Si Emiliano tenía catorce años, aquellos viajes fueron entre el otoño de 1936 y los primeros días de febrero de 1937. El primer recuerdo que llegó a esta historia le daba diecisiete y ponía el viaje en las últimas semanas de la guerra, y las dos versiones se guardan. Soldado no lo fue: el último llamamiento de la República, en enero de 1939, no alcanzó a los nacidos en 1922."
     },
     {
      "k": "h",
@@ -4944,43 +4984,63 @@
     },
     {
      "k": "h",
-     "x": "El pequeño, camino del frente"
+     "x": "La casa defendida"
+    },
+    {
+     "k": "p",
+     "x": "La guerra terminó en el frente de Madrid el 28 de marzo de 1939, y el 1 de abril en toda España. Según recuerda la familia, los mellizos volvieron a casa con veinte años."
+    },
+    {
+     "k": "p",
+     "x": "La provincia de Cuenca quedó en manos de los vencedores el 28 y el 29 de marzo, y en los pueblos de la comarca aquellas semanas fueron de detenciones. En Las Pedroñeras se detuvo a quienes se habían metido en política, sobre todo a los del ayuntamiento y el comité de los años de la guerra, y, según las memorias de un vecino, eran los falangistas del pueblo quienes llevaban los nombres. A los detenidos los encerraron en el corral de Mendizábal y después en las cárceles de San Clemente y del castillo de Belmonte; varios fueron juzgados en consejo de guerra, y en 1942 el ayuntamiento daba a una veintena de vecinos por presos en la prisión de Uclés."
+    },
+    {
+     "k": "p",
+     "x": "Lo que pasó entonces en la casa de Venus lo cuenta Pilar tal como se lo contaron. Al acabar la guerra amenazaron con ir a por el padre, y se habló de juzgarlo por masonería y comunismo. Los mellizos, que volvían del frente, se encerraron con él en la casa de la calle Fray Luis de León, dispuestos a defenderlo con lo que habían aprendido en la guerra; en la casa estaban también los demás, y Emiliano con ellos. No fueron a por él. Venus no fue procesado ni acabó en un campo, y su nombre no aparece en ninguno de los papeles de la represión de la posguerra que se han revisado, tampoco en las listas que el ayuntamiento hizo en 1940 y 1942 de los vecinos a los que tenía por responsables."
+    },
+    {
+     "k": "p",
+     "x": "El proceso por masonería y comunismo que recuerda la familia existe, pero lleva el nombre del hijo. El Tribunal Especial para la Represión de la Masonería y el Comunismo, que se creó en 1940 y empezó a funcionar en 1941, tiene dos fichas a nombre de Venus Azabarte Galindo, el sargento que según los papeles incautados estaba afiliado al Partido Comunista: una de encausado por comunismo y otra de procesado por uno de sus juzgados. Padre e hijo se llamaban igual, y las dos palabras que repite la familia eran el nombre mismo del tribunal. Puede que el recuerdo juntara la amenaza al padre en 1939 con el proceso del hijo unos años después. Las fichas hay que pedirlas a Salamanca, y hasta que se lean no se sabrá cómo terminó aquello: muchas de aquellas causas contra simples afiliados se cerraron sin condena."
+    },
+    {
+     "k": "p",
+     "x": "En la familia se piensa que aquella defensa pudo salvar al padre, y quizá a todos los que estaban en la casa, y que sin ella la rama de Venus podría no haber llegado hasta hoy. Nadie puede saber qué habría pasado. Lo que la familia quiere que conste es su agradecimiento a los que guardaron aquella puerta, y que se cuente lo que vivió cada uno sin abrir cuentas con nadie."
     },
     {
      "k": "pull",
-     "x": "Emiliano tenía catorce años cuando empezó la guerra y diecisiete cuando terminó, y no llegó a ser soldado."
+     "x": "A cada uno le toca vivir la historia donde le toca vivirla."
     },
     {
-     "k": "p",
-     "x": "El último llamamiento a filas de la República, publicado en enero de 1939, alcanzó de los mozos más jóvenes solo a los nacidos entre enero y marzo de 1921, y él había nacido en febrero de 1922. Pero, según ha contado su nieto Francisco Javier, con unos diecisiete años fue alguna vez hasta el frente de Madrid a llevar comida de casa a sus hermanos. Si la edad que se recuerda es exacta, aquellos viajes fueron en las últimas semanas de la guerra, que en Madrid terminó el 28 de marzo de 1939."
+     "k": "ct",
+     "x": "Para entenderlo: el tribunal de la masonería y el comunismo"
     },
     {
-     "k": "p",
-     "x": "Acabada la guerra, llegó el racionamiento. Una orden del 14 de mayo de 1939 dio a cada familia dos cartillas, una para la carne y otra para los demás alimentos, y con ellas se compraba en la tienda de siempre una cantidad fija de pan, aceite, azúcar, arroz o judías. Lo que faltaba se buscaba en el estraperlo, el mercado negro de aquellos años, y las cartillas no se suprimieron hasta 1952. Un vecino de Las Pedroñeras dejó escrito en unas memorias que entonces «todo estaba racionado», y que 1941 fue un año muy malo porque apenas llovió."
+     "k": "cp",
+     "x": "El Tribunal Especial para la Represión de la Masonería y el Comunismo lo creó una ley del 1 de marzo de 1940, para castigar a quienes hubieran pertenecido a la masonería o a organizaciones que el régimen tenía por comunistas. Empezó a trabajar en 1941, y cada causa la instruía uno de sus juzgados especiales. Sus fichas nacían a menudo de los papeles incautados a los partidos y sindicatos de la República. Fichas y expedientes se guardan hoy en el Centro Documental de la Memoria Histórica, en Salamanca."
     },
     {
      "k": "h",
-     "x": "Los papeles de la posguerra"
+     "x": "Paco, en el batallón"
     },
     {
      "k": "p",
-     "x": "Los papeles de aquellos años vuelven a nombrar a los hermanos, aunque ninguno con toda la claridad que haría falta. Una base de datos reunida por historiadores recoge a un Francisco Azabarte Galindo, labrador, natural de Las Pedroñeras y nacido hacia 1915, que de 1940 a 1942 estuvo en el Batallón Disciplinario de Soldados Trabajadores número 13. En aquellas unidades se ponía a trabajar en carreteras y fortificaciones a mozos que habían servido en el ejército de la República. Aquel batallón estuvo primero en Navarra y después en Ceuta, al otro lado del Estrecho, hasta que lo disolvieron. La ficha no da los nombres de sus padres, pero el año encaja, y con toda probabilidad es Paco, el mayor de los varones de la casa."
+     "x": "A Paco, el mayor de los varones, la posguerra se lo llevó lejos. En la casa de Emiliano se recuerda que estuvo en un campo de trabajos forzados, quizá en Ceuta, y un papel dice lo mismo por su cuenta. Una base de datos reunida por historiadores recoge a un Francisco Azabarte Galindo, labrador, natural de Las Pedroñeras y nacido hacia 1915, en el Batallón Disciplinario de Soldados Trabajadores número 13. La familia no conocía esa ficha, ni la ficha a la familia, y por eso vale tanto que coincidan."
     },
     {
      "k": "p",
-     "x": "En el Archivo General Militar de Guadalajara hay además expedientes a nombre de Francisco y de Julián Azabarte Galindo, con toda probabilidad los dos hermanos. Están en una serie que reúne por orden alfabético a soldados trabajadores, a los soldados que los custodiaban y a prisioneros, y por eso el índice no dice en qué condición estuvo cada uno. También figura un soldado llamado Francisco, con el apellido mal escrito, «Azbarte», en los papeles de una brigada de la República que combatió en el frente de Córdoba en el último invierno de la guerra. Puede ser Paco, pero de ese papel solo se ha visto el índice. Como Paco llevaba el mismo nombre y los mismos apellidos que su abuelo el jornalero, cada papel que los nombra hay que leerlo con cuidado."
+     "x": "El camino de aquel batallón está bien estudiado. Los mozos que un historiador ha podido seguir en él pasaron en junio de 1940 por la caja de reclutas y por el campo de concentración Miguel de Unamuno, en Madrid, y de allí salieron hacia Lesaka, en el norte de Navarra, a abrir la carretera de Lesaka a Oiartzun y a fortificar la frontera cerca de Bera. Vivían en barracones sin ventanas, con frío, nieve y lluvia casi siempre, con una ducha de agua fría a la semana, un solo par de botas y una comida escasa y mala. En marzo de 1941 el batallón cruzó el Estrecho: su plana mayor estaba en Punta Cires, en la costa de Marruecos, al oeste de Ceuta, y allí siguió hasta que lo disolvieron, en diciembre de 1942. Las licencias que se conservan de aquel batallón se firmaron en Ceuta en mayo de 1942."
     },
     {
      "k": "p",
-     "x": "A nombre de Venus Azabarte Galindo, con los dos apellidos del hijo, hay dos fichas de 1940 del Tribunal Especial para la Represión de la Masonería y el Comunismo, uno de los tribunales que el nuevo régimen creó en la posguerra, y otra en un fichero hecho con papeles de la República que se incautaron."
+     "x": "Lo que contaba Paco ha llegado a través de su sobrina Pilar. Aquello era tan miserable que no había dónde echarse: el suelo era todo barro, y dormían subidos a los árboles. Ningún testimonio publicado habla de árboles, pero los presos de otros batallones del Estrecho contaron que dormían en la tierra, empapados por «lluvias y barros», y que los piojos, la sarna y los granos eran cosa de todos los días. Paco salió de allí con vida, pero volvió con unos picores tremendos, un mal de la piel que ya no lo dejó: lo tuvo hasta que murió, de viejo."
     },
     {
      "k": "pull",
-     "x": "Ninguna se ha podido ver todavía, y mientras no se lean, no se sabe qué dicen de él."
+     "x": "Dormían en los árboles, porque abajo no había más que barro."
     },
     {
      "k": "p",
-     "x": "Muchas de aquellas fichas nacieron de papeles incautados, y muchos de aquellos expedientes se cerraron sin seguir adelante."
+     "x": "Del mismo nombre hay además un expediente en el Archivo General Militar de Guadalajara, que está por pedir, y un soldado llamado Francisco, con el apellido mal escrito, «Azbarte», figura en los papeles de una brigada de la República que combatió en el frente de Córdoba en el último invierno de la guerra. Puede ser Paco, llamado a filas con su quinta. Como llevaba el mismo nombre y los mismos apellidos que su abuelo el jornalero, cada papel que los nombra hay que leerlo con cuidado."
     },
     {
      "k": "ct",
@@ -5000,19 +5060,19 @@
     },
     {
      "k": "p",
-     "x": "Ninguno de los hijos de Venus figura en el índice de los consejos de guerra de la posguerra que corresponde al pueblo, ni en los expedientes de responsabilidades políticas que publicó el Boletín Oficial del Estado entre 1939 y 1945, ni en las listas de fusilados y presos de Las Pedroñeras. En aquel boletín sale, en cambio, un apellido que ya ha aparecido en esta historia. En mayo de 1941 anunció que el juez de responsabilidades políticas de Cuenca abría expediente a Juan Villalba Zabarte, labrador de Cañada Juncosa, y en septiembre de 1942, que el tribunal de Albacete lo sobreseía, es decir, que lo daba por cerrado. Dos siglos después de Antonio Zabarte y Ana Villalba, el apellido seguía en la aldea. Tampoco con él se conoce parentesco."
+     "x": "Ninguno de los de la casa de Venus figura en el índice de los consejos de guerra de la posguerra que corresponde al pueblo, ni en los expedientes de responsabilidades políticas que publicó el Boletín Oficial del Estado entre 1939 y 1945, ni en las listas de fusilados y presos de Las Pedroñeras, ni en los papeles que el ayuntamiento mandó a la Causa General, la gran investigación del régimen sobre la guerra en la zona de la República. En aquel boletín sale, en cambio, un apellido que ya ha aparecido en esta historia. En mayo de 1941 anunció que el juez de responsabilidades políticas de Cuenca abría expediente a Juan Villalba Zabarte, labrador de Cañada Juncosa, y en septiembre de 1942, que el tribunal de Albacete lo sobreseía, es decir, que lo daba por cerrado. Dos siglos después de Antonio Zabarte y Ana Villalba, el apellido seguía en la aldea. Tampoco con él se conoce parentesco."
     },
     {
      "k": "p",
-     "x": "Si el expediente de Guadalajara es suyo, Julián, que según la familia murió muy joven, seguía vivo cuando lo abrieron, y su muerte hay que buscarla de 1937 en adelante. Los expedientes de Guadalajara, los papeles de la brigada de Venus, que guarda el Archivo General Militar de Ávila, y las inscripciones del registro civil del pueblo se pueden pedir, y son los que pueden convertir en seguro lo que hoy es probable. Si de verdad eran mellizos, una misma hoja del registro dirá el día en que nacieron los dos."
+     "x": "En el Archivo General Militar de Guadalajara hay también un expediente de Julián, en la misma serie que el de Paco, que reúne a soldados trabajadores, a los soldados que los custodiaban y a prisioneros. Si es suyo, seguía vivo cuando lo abrieron, y su muerte, que la familia recuerda temprana, hay que buscarla de 1937 en adelante. Los expedientes de Guadalajara, las fichas del tribunal y los papeles incautados que guarda Salamanca, los de las brigadas, en Ávila, y las inscripciones del registro civil del pueblo se pueden pedir, y las cartas para hacerlo ya están escritas. Son los papeles que pueden convertir en seguro lo que hoy es probable."
     },
     {
      "k": "p",
-     "x": "Cuando acabó la guerra, en la casa de la calle Fray Luis de León seguía el pequeño, el muchacho que, según se recuerda, había llevado comida a sus hermanos hasta el frente de Madrid. En el papel se llamaba Juan de Mata; en la vida, Emiliano. Iba a ser el abuelo de quien, muchos años después, se puso a preguntar."
+     "x": "Cuando acabó la guerra, en la casa de la calle Fray Luis de León seguía el pequeño, el muchacho que a los catorce años había ido con su padre en el carro hasta el frente. En el papel se llamaba Juan de Mata; en la vida, Emiliano. Iba a ser el abuelo de quien, muchos años después, se puso a preguntar."
     }
    ],
-   "huella": "0980441a9750373aae2d6e84d78c35ab5cda063974a7ad46618c809e0332f7bd",
-   "chars": 10331
+   "huella": "38050e112c996de9c535a3911ee057959b934ceada2b4da0d4ae2312aad50acf",
+   "chars": 17616
   },
   {
    "clave": "lib:emiliano",
@@ -5049,7 +5109,7 @@
     },
     {
      "k": "p",
-     "x": "Por su madre, Encarnación, era de «los Guardejas», la casa del guarda del monte de La Muela. Por su padre, era nieto de la Habichuela y del jornalero menudo que no se echaba para atrás. Tenía catorce años cuando empezó la guerra y diecisiete cuando terminó, y de aquellos años queda el recuerdo, ya contado, de sus viajes al frente de Madrid con comida para sus hermanos."
+     "x": "Por su madre, Encarnación, era de «los Guardejas», la casa del guarda del monte de La Muela. Por su padre, era nieto de la Habichuela y del jornalero menudo que no se echaba para atrás. Tenía catorce años cuando empezó la guerra y diecisiete cuando terminó, y de aquellos años queda el recuerdo, ya contado, de sus viajes en el carro de su padre hasta el frente, con comida para sus hermanos."
     },
     {
      "k": "h",
@@ -5148,8 +5208,8 @@
      "x": "De la casa de Emiliano y Adela salieron los recuerdos del abuelo Venus y de la prima Camila que dieron pie a todo, y de ella salió también una pregunta. Su nieto Francisco Javier, que había crecido oyendo a su madre, Pilar, hablar de aquella calle, quiso saber de dónde venía un apellido que casi nadie lleva. Lo que queda de este libro no es ya la vida de los antepasados, sino la historia de cómo se supo, quién la contó y qué falta todavía por saber."
     }
    ],
-   "huella": "5074af176f0d05c8dd3f2ea720906892c39bfafed6c9e8eda83bf382380f79ec",
-   "chars": 9009
+   "huella": "ae86e04edf61099e0c763f712083b08d37a0e68b5ce7f2002d5450860652509f",
+   "chars": 9030
   },
   {
    "clave": "lib:epilogo",
@@ -5174,7 +5234,7 @@
     },
     {
      "k": "p",
-     "x": "Empezó en las conversaciones de Pilar Azabarte Arellano con su hijo sobre el abuelo Francisco y sobre de dónde venían los Azabarte, y en el recuerdo de una prima mayor que no cabía en ningún sitio. A finales de agosto de 2026 se sentaron los dos delante de las actas fotografiadas para encajar a Camila, y aquella tarde la pieza no apareció. A Pilar le llegaron también, en septiembre, la carta escrita a mano por su primo Francisco Gallardo Azabarte y la única fotografía de su tío Julián."
+     "x": "Empezó en las conversaciones de Pilar Azabarte Arellano con su hijo sobre el abuelo Francisco y sobre de dónde venían los Azabarte, y en el recuerdo de una prima mayor que no cabía en ningún sitio. A finales de agosto de 2026 se sentaron los dos delante de las actas fotografiadas para encajar a Camila, y aquella tarde la pieza no apareció. A Pilar le llegaron también, en septiembre, la carta escrita a mano por su primo Francisco Gallardo Azabarte y la única fotografía de su tío Julián. Y fue ella quien contó, a finales de septiembre, lo que se recordaba en casa de la guerra: el carro del abuelo Venus camino del frente, la casa que defendieron los mellizos y los trabajos forzados del tío Paco."
     },
     {
      "k": "p",
@@ -5262,6 +5322,10 @@
     },
     {
      "k": "p",
+     "x": "De la guerra quedan también papeles por leer, y las cartas para pedirlos ya están escritas. En Salamanca están las fichas y el sumario del tribunal que procesó a Venus, el sargento, y los papeles de la República de los que salieron las fichas de los mellizos, entre ellos el libro de detenidos donde figura Julián. En Guadalajara esperan los expedientes de Paco y de Julián; en Ávila, los de sus brigadas, y en el registro civil del pueblo, la muerte de Julián, que nadie sabe cuándo fue."
+    },
+    {
+     "k": "p",
      "x": "De la rama de la abuela quedan dos preguntas. El acta de defunción del Polaco, de febrero de 1905, ya se ha pedido al Registro Civil de Mula, y el día que llegue dirá quiénes eran sus padres y, de paso, los de Vicenta. Si Tomasa Fides Calvo, la mujer que murió en 1878, era la madre de los dos hermanos, lo dirán dos bodas: la de Francisco Navarro con su Tomasa y la de Tomasa Fides Calvo con Fernando Giménez. Y en el norte queda una letra. Solo la fotografía digital del microfilm de Ondategi, con más aumento, podrá decir si la niña de 1526 se escribió con una A delante. Mientras tanto, todo apunta a que la A de la familia la puso una pluma de La Mancha."
     },
     {
@@ -5297,8 +5361,8 @@
      "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en septiembre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
     }
    ],
-   "huella": "49629fd515f36497979fe4716d5333549328201f4ca1df47d47ccaf2c9b95465",
-   "chars": 11423
+   "huella": "4a930249f46cdfbb972481d4290254ab9a8abb9a5ce0fa3fb4c93b811e1c16c7",
+   "chars": 12122
   },
   {
    "clave": "pj:P001",
@@ -5429,7 +5493,7 @@
     },
     {
      "k": "lede",
-     "x": "El único hijo varón de Francisco y Vicenta que llegó a mayor. Labrador de mano firme y genio vivo, nacido hacia 1876: de su casa sale la familia de hoy, y suya es la piedra que todavía cubre a sus padres."
+     "x": "El único hijo varón de Francisco y Vicenta que llegó a mayor. Labrador de mano firme y genio vivo, nacido hacia 1876 y, según recuerda su nieta, socialista desde que se fundó el partido en el pueblo: de su casa sale la familia de hoy, y suya es la piedra que todavía cubre a sus padres."
     },
     {
      "k": "p",
@@ -5465,11 +5529,19 @@
     },
     {
      "k": "p",
+     "x": "En los años de la República, según recuerda su nieta Pilar, Venus fue socialista desde que se fundó el partido en el pueblo, en 1931, y un hombre de peso y muy querido, de los que daban cobijo a quien lo necesitaba y ayudaban a parientes y amigos. Cuando llegó la guerra, sus mellizos, Julián y Venus, se fueron voluntarios con diecisiete años, y él cargaba un carro de mulas con comida y se iba hasta el frente, a la Cuesta de la Reina, a llevársela y a ver cómo estaban. Eran unos cuatro días de camino, y con él iba Emiliano, el pequeño, de catorce años."
+    },
+    {
+     "k": "p",
+     "x": "Al acabar la guerra amenazaron con ir a por él, y se habló de juzgarlo por masonería y comunismo. Los mellizos, que volvían del frente, se encerraron con él en la casa, dispuestos a defenderlo, y no fueron a por él. Su nombre no aparece en ninguno de los papeles de la represión de la posguerra: el proceso por masonería y comunismo lo tuvo su hijo, que se llamaba como él. En la familia se piensa que aquella defensa lo salvó, y con él quizá a todos los de la casa, y se les agradece a los que guardaron la puerta."
+    },
+    {
+     "k": "p",
      "x": "Murió en 1946, tres años después que Encarnación. Cuando se cerró el cementerio viejo él ya no estaba, y, según se recuerda en casa, fueron sus hijos quienes pagaron el traslado de los restos de sus padres al nuevo, con aquella misma piedra a cuestas; les ayudó su nieto Francisco Gallardo Azabarte. No todas las familias lo costearon, y los cuerpos por los que nadie pagó siguen bajo lo que hoy es el parque. Los de Francisco y Vicenta no: descansan bajo la piedra que talló su hijo, con los dos nombres que él mismo grabó."
     }
    ],
-   "huella": "8f0db804814304b15689f28ea45beba78d0bb1faf64959d05b7229e3d603c337",
-   "chars": 5207
+   "huella": "585aeac4dbe71d43ef3559902bf76d4064e221c344cad3003a15a8a256f55ef7",
+   "chars": 6361
   },
   {
    "clave": "pj:P094",
@@ -6048,7 +6120,7 @@
     },
     {
      "k": "p",
-     "x": "De aquellos años la familia guarda un recuerdo suyo. Sus hermanos Venus y Julián estaban en el frente de Madrid, y Emiliano, todavía un muchacho de unos diecisiete años, fue alguna vez hasta allí a llevarles comida de casa. Es un recuerdo de la familia, y lo ha contado su nieto Francisco Javier. Él no llegó a ser soldado de aquella guerra: el último llamamiento de la República, en enero de 1939, alcanzó de los mozos más jóvenes solo a los nacidos hasta marzo de 1921, y Emiliano había nacido en febrero de 1922, así que iba como civil. Si la edad que se recuerda es exacta, aquellos viajes fueron en las últimas semanas de la guerra, que en el frente de Madrid terminó a finales de marzo de 1939."
+     "x": "De aquellos años su hija Pilar guarda un recuerdo. Sus hermanos mellizos, Venus y Julián, se habían ido voluntarios al frente, y su padre les llevaba comida en un carro de mulas hasta la Cuesta de la Reina, junto a Aranjuez; Emiliano, con catorce años, iba con él, y eran cuatro días de camino de ida. En otra versión del recuerdo tenía diecisiete años y fue en las últimas semanas de la guerra. Él no llegó a ser soldado de aquella guerra: el último llamamiento de la República, en enero de 1939, no alcanzó a los nacidos en 1922. Y al acabar estaba en la casa de su padre los días en que, según se recuerda, sus hermanos se encerraron allí para defenderlo."
     },
     {
      "k": "p",
@@ -6067,8 +6139,8 @@
      "x": "Murió en febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de esta galería, y el suyo está hecho sobre una fotografía que guarda la familia. Es el abuelo del investigador y el punto exacto donde la memoria viva se encuentra con los papeles: de su casa salieron los recuerdos del abuelo Venus y de la prima Camila que dieron pie a todo esto."
     }
    ],
-   "huella": "17c3c1d80134ad2d2236cf7173f4d65a989563cbc7f103e8d91aaa00e7b5a3bc",
-   "chars": 4615
+   "huella": "ff8d927faf236d5cd4deb2b29ebee071d0696b4a4af6f320a1b5335e59cc0ffd",
+   "chars": 4573
   },
   {
    "clave": "pj:P127",
@@ -6159,7 +6231,7 @@
     },
     {
      "k": "lede",
-     "x": "El segundo Venus: hijo de Venus Azabarte Navarro y de Encarnación Galindo Gallardo, hermano de Emiliano y, según recuerda la familia, mellizo de Julián. Con toda probabilidad es el Venus Azabarte que defendió Madrid en noviembre de 1936 y que en 1938 era sargento."
+     "x": "El segundo Venus: hijo de Venus Azabarte Navarro y de Encarnación Galindo Gallardo, mellizo de Julián y hermano de Emiliano. Se fue voluntario con diecisiete años, defendió Madrid desde noviembre de 1936 y en 1938 era sargento."
     },
     {
      "k": "p",
@@ -6167,7 +6239,7 @@
     },
     {
      "k": "p",
-     "x": "Fue uno de los ocho hijos de la casa de la calle Fray Luis de León, hermano de Eugenia, Vicenta, Florencia, Francisco, Francisca, Julián y Emiliano. Su sobrino Ubaldo Gallardo Azabarte contó en septiembre de 2026 que Venus y Julián eran mellizos, hermanos nacidos del mismo parto. Julián murió muy joven. Venus vivió lo bastante para que lo recuerden los niños de la generación siguiente."
+     "x": "Fue uno de los ocho hijos de la casa de la calle Fray Luis de León, hermano de Eugenia, Vicenta, Florencia, Francisco, Francisca, Julián y Emiliano. Su sobrino Ubaldo Gallardo Azabarte contó en septiembre de 2026 que Venus y Julián eran mellizos, hermanos nacidos del mismo parto, y una ficha de la guerra ha dado después el día: el 30 de noviembre de 1918. Julián murió muy joven. Venus vivió lo bastante para que lo recuerden los niños de la generación siguiente."
     },
     {
      "k": "p",
@@ -6175,15 +6247,11 @@
     },
     {
      "k": "p",
-     "x": "Cuando empezó la guerra civil, en julio de 1936, Venus era un hombre joven. La familia recuerda que se fue voluntario al frente de Madrid, y que con él iba su mellizo Julián. Un papel de aquellos años lo confirma en lo esencial. El 7 de noviembre de 1938, al cumplirse dos años de la defensa de la ciudad, «Escucha», el periódico de la 44 Brigada Mixta del ejército de la República, repasó batallón por batallón a los hombres que habían defendido Madrid en noviembre de 1936 y seguían en sus filas. En el párrafo del 176 Batallón aparece «Venus Azabarte, hoy sargento»."
+     "x": "Cuando empezó la guerra tenía diecisiete años, y se fue voluntario al frente de Madrid, como su mellizo. El 7 de noviembre de 1938, al cumplirse dos años de la defensa de la ciudad, «Escucha», el periódico de la 44 Brigada Mixta del ejército de la República, repasó batallón por batallón a los hombres que habían defendido Madrid en noviembre de 1936 y seguían en sus filas, y en el párrafo del 176 Batallón aparece «Venus Azabarte, hoy sargento». Su ficha del Centro Documental de la Memoria Histórica, hecha después de la guerra con papeles de la República que se incautaron, lo confirma con todas las señas: natural de Pedroñeras, hijo de Venus y Encarnación, sargento, afiliado a la UGT y al Partido Comunista. Su brigada había salido de una de las columnas que defendieron Madrid por la Casa de Campo, y pasó el resto de la guerra en el frente del norte de la ciudad, entre El Pardo y la sierra."
     },
     {
      "k": "p",
-     "x": "El periódico no da su segundo apellido, ni su edad, ni su pueblo, y tampoco dice que fuera voluntario: eso lo cuenta la familia. Pero fuera de esta casa casi nadie se llamaba Venus, y el otro Venus Azabarte de aquellos años, su padre, pasaba ya de los sesenta. Es él con toda probabilidad: estuvo en el frente de Madrid desde los días de la defensa de la ciudad, y en dos años llegó a sargento."
-    },
-    {
-     "k": "p",
-     "x": "Acabada la guerra, su nombre aparece en dos fichas de 1940 del Tribunal Especial para la Represión de la Masonería y el Comunismo, uno de los tribunales de la posguerra, y en otra de un fichero hecho con papeles de la República que se incautaron. Ninguna se ha podido ver todavía, y mientras no se lean no se sabe qué dicen de él: muchas de aquellas fichas nacieron de papeles incautados, y muchos de aquellos expedientes se cerraron sin seguir adelante. En los índices de consejos de guerra y de expedientes de responsabilidades políticas que se han revisado no aparece."
+     "x": "Al acabar la guerra volvió a casa con veinte años y, según recuerda su sobrina Pilar, se encerró con su mellizo en la casa de su padre para defenderlo, porque amenazaban con ir a por él y se hablaba de juzgarlo por masonería y comunismo. No fueron a por el padre. A quien sí alcanzó aquel tribunal fue al hijo: el Tribunal Especial para la Represión de la Masonería y el Comunismo, que empezó a funcionar en 1941, tiene dos fichas a su nombre, una de encausado por comunismo y otra de procesado por uno de sus juzgados. No se han visto todavía, y no se sabe cómo terminó: muchas de aquellas causas contra simples afiliados se cerraron sin condena."
     },
     {
      "k": "p",
@@ -6191,11 +6259,11 @@
     },
     {
      "k": "p",
-     "x": "De él no se conoce todavía ninguna fecha. Si de verdad eran mellizos, la misma hoja del registro civil dará la suya y la de Julián, y los papeles de su brigada, que guarda el Archivo General Militar de Ávila, pueden decir quiénes eran sus padres y convertir en seguro lo que hoy es probable. Mientras tanto queda lo que recuerdan los primos: un hombre que llegaba a la matanza con sus hermanos y que llevó, como su padre, un nombre que en La Mancha no llevaba casi nadie."
+     "x": "De él se sabe ya el día en que nació, el mismo que el de Julián. Los papeles de su brigada, que guarda el Archivo General Militar de Ávila, y las fichas del tribunal, en Salamanca, pueden decir lo que falta. Mientras tanto queda lo que recuerdan los primos: un hombre que llegaba a la matanza con sus hermanos y que llevó, como su padre, un nombre que en La Mancha no llevaba casi nadie."
     }
    ],
-   "huella": "3dca976d12b51c4f1bb4bcb6152e3dd7c987c7deac1fd0511129109d6a473637",
-   "chars": 3730
+   "huella": "e3cd57ba8b259e4235b6894d4343b9aa8857cf0edc64eef53895075e35ebc3ea",
+   "chars": 3699
   },
   {
    "clave": "pj:P130",
@@ -6319,7 +6387,7 @@
     },
     {
      "k": "lede",
-     "x": "El hermano de Emiliano al que todos llamaban Paco, el mayor de los varones de la casa de Venus. Llevaba el nombre y los dos apellidos de su abuelo, el jornalero nacido hacia 1839."
+     "x": "El hermano de Emiliano al que todos llamaban Paco, el mayor de los varones de la casa de Venus. Acabada la guerra pasó dos años en un batallón de trabajos forzados, en Navarra y en Ceuta, y volvió con un mal de la piel que no lo dejó en toda su vida."
     },
     {
      "k": "p",
@@ -6339,7 +6407,15 @@
     },
     {
      "k": "p",
-     "x": "Acabada la guerra, pasó con toda probabilidad dos años lejos de casa. Una base de datos de historiadores, «Víctimas de la dictadura en Castilla-La Mancha», recoge a un Francisco Azabarte Galindo, labrador, natural de Las Pedroñeras y nacido hacia 1915, que de 1940 a 1942 estuvo en el Batallón Disciplinario de Soldados Trabajadores número 13. Eran unas unidades en las que, acabada la guerra, se ponía a trabajar en carreteras y fortificaciones a mozos que habían servido en el ejército de la República. Aquel batallón estuvo primero en Navarra y después en Ceuta, al otro lado del Estrecho, hasta que lo disolvieron. La fecha de nacimiento encaja con que Paco fuera el mayor de los varones de la casa, aunque la ficha no da sus padres."
+     "x": "Acabada la guerra, la posguerra se lo llevó lejos. En la casa de Emiliano se recuerda que estuvo en un campo de trabajos forzados, quizá en Ceuta, y un papel dice lo mismo por su cuenta: una base de datos reunida por historiadores recoge a un Francisco Azabarte Galindo, labrador, natural de Las Pedroñeras y nacido hacia 1915, en el Batallón Disciplinario de Soldados Trabajadores número 13. Eran unas unidades en las que se ponía a trabajar en carreteras y fortificaciones, sin juicio ni condena, a mozos que habían servido en el ejército de la República y a los que el nuevo régimen tenía por desafectos."
+    },
+    {
+     "k": "p",
+     "x": "Los mozos de aquel batallón pasaron en el verano de 1940 por el campo de concentración Miguel de Unamuno, en Madrid, y de allí fueron a Lesaka, en el norte de Navarra, a abrir una carretera y a fortificar la frontera, en barracones sin ventanas, con frío, nieve y lluvia y una comida escasa y mala. En marzo de 1941 cruzaron el Estrecho, y el batallón siguió en la costa de Marruecos, junto a Ceuta, hasta que lo disolvieron a finales de 1942."
+    },
+    {
+     "k": "p",
+     "x": "Lo que contaba Paco ha llegado a través de su sobrina Pilar. Aquello era tan miserable que no había dónde echarse: el suelo era todo barro, y dormían subidos a los árboles. Salió de allí con vida, pero volvió con unos picores tremendos, un mal de la piel que ya no lo dejó en toda su vida, hasta que murió de viejo."
     },
     {
      "k": "p",
@@ -6350,8 +6426,8 @@
      "x": "Su nombre y sus dos apellidos son los mismos que los de su abuelo, así que cada papel que los lleva hay que leerlo con cuidado para saber de cuál de los dos habla. El de esta página es Paco, el de la boda doble, al que, según Juan Ortiz, se parece el nieto de su hermano pequeño."
     }
    ],
-   "huella": "bd7db9664a9873d729e578b99327496d1152056e521a14cd1e3fc55c3f604bea",
-   "chars": 2828
+   "huella": "c7411443bd3a22aefacf5d0cb85d3348b6d99ccabd0bbbeac2183b301cae4ba6",
+   "chars": 3527
   },
   {
    "clave": "pj:P136",
@@ -6393,11 +6469,11 @@
     },
     {
      "k": "lede",
-     "x": "Hermano de Emiliano y, según la familia, mellizo de Venus. Murió muy joven, y de él queda una sola fotografía."
+     "x": "Hermano de Emiliano y mellizo de Venus, nacido el 30 de noviembre de 1918. Se fue voluntario a la guerra con diecisiete años, murió muy joven, y de él queda una sola fotografía."
     },
     {
      "k": "p",
-     "x": "Julián fue hijo de Venus Azabarte Navarro y Encarnación Galindo Gallardo, y hermano de Emiliano. Su sobrino Ubaldo Gallardo Azabarte contó que había nacido mellizo de su hermano Venus, del mismo parto. Juan Ortiz Pacheco, nieto de su tía la Boni, añadió que murió muy joven. Nadie de los que quedan recuerda de qué murió ni exactamente cuándo."
+     "x": "Julián fue hijo de Venus Azabarte Navarro y Encarnación Galindo Gallardo, y hermano de Emiliano. Su sobrino Ubaldo Gallardo Azabarte contó que había nacido mellizo de su hermano Venus, del mismo parto, y una ficha de los años de la guerra ha dado el día: el 30 de noviembre de 1918. Juan Ortiz Pacheco, nieto de su tía la Boni, añadió que murió muy joven. Nadie de los que quedan recuerda de qué murió ni exactamente cuándo."
     },
     {
      "k": "p",
@@ -6409,15 +6485,19 @@
     },
     {
      "k": "p",
-     "x": "La familia recuerda que, cuando llegó la guerra, Julián se fue voluntario al frente de Madrid con su mellizo Venus. De Julián no ha aparecido ningún papel de la guerra misma. Sí hay, en el Archivo General Militar de Guadalajara, un expediente a nombre de Julián Azabarte Galindo, en una serie de los años de la guerra y la posguerra que reúne por orden alfabético a soldados trabajadores, a los soldados que los custodiaban y a prisioneros. Por la rareza del nombre y de los dos apellidos juntos es, con toda probabilidad, el suyo, pero el índice no da su pueblo ni sus padres, ni dice en cuál de aquellas condiciones estuvo: eso lo dirá el expediente cuando se pida."
+     "x": "Aquella ficha, que guarda en Salamanca el Centro Documental de la Memoria Histórica y que se hizo después de la guerra con papeles de la República que se incautaron, dice que era campesino, que estaba afiliado a la UGT desde el 1 de agosto de 1935, con dieciséis años, y a las Juventudes Socialistas Unificadas, y que fue «voluntario en la cuarta Brigada Mixta». Aquella brigada se formó en Albacete en noviembre de 1936, combatió en la Ciudad Universitaria en los días de la defensa de Madrid y pasó 1937 y parte de 1938 en los frentes de la ciudad, a orillas del Manzanares. La familia lo recordaba así, voluntario con diecisiete años junto a su mellizo, y su sobrina Pilar recuerda que volvieron con veinte."
     },
     {
      "k": "p",
-     "x": "Si ese expediente es suyo, Julián seguía vivo cuando se abrió, y su muerte temprana, de la que nadie recuerda la fecha ni la causa, hay que buscarla de 1937 en adelante. Si de verdad eran mellizos, Julián y Venus estarán inscritos el mismo día en el registro civil de Las Pedroñeras, y esa página dirá por fin cuándo nacieron. Mientras tanto queda su cara, que es mucho más de lo que ha quedado de casi todos los que aparecen en esta historia."
+     "x": "Otra ficha dice que figura en un libro de detenidos del Servicio de Investigación Militar de Madrid, la policía del ejército de la República, sin decir cuándo ni por qué. Y al acabar la guerra, según cuenta Pilar, los dos mellizos se encerraron en la casa de su padre para defenderlo, porque amenazaban con ir a por él; no fueron a por él."
+    },
+    {
+     "k": "p",
+     "x": "En el Archivo General Militar de Guadalajara hay además un expediente a su nombre, en una serie de la posguerra que reúne a soldados trabajadores, a los soldados que los custodiaban y a prisioneros, y que por eso no dice en qué condición estuvo. Si es suyo, Julián seguía vivo cuando se abrió, y su muerte temprana, de la que nadie recuerda la fecha ni la causa, hay que buscarla de 1937 en adelante en el registro civil de Las Pedroñeras, que dirá también, en la misma hoja, el nacimiento de los dos mellizos. Mientras tanto queda su cara, que es mucho más de lo que ha quedado de casi todos los que aparecen en esta historia."
     }
    ],
-   "huella": "3f0774be70f245428ce572dfa0bce3b6aa94178a0948c7066c56eef087599942",
-   "chars": 2416
+   "huella": "e1c75733b388ab8cd962517c0ae90706572c21a58c84bb6d3527f3aef83918dc",
+   "chars": 3130
   },
   {
    "clave": "pj:P098",
