@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@91137d7d15f2091dc317443821086ab3af4922c5/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@9b275b2955556483fd4976339f81f3d39fd0e306/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1602,6 +1602,51 @@
    "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
    "generado": "2026-09-30T00:52:11Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@91137d7d15f2091dc317443821086ab3af4922c5/voz/narrativa"
+  },
+  "lib:boda": {
+   "src": "mp3/lib-boda.mp3",
+   "huella": "16db05c33e98098f595c18828ded3b5e1c032348bb807516688ec1ad14a0fecd",
+   "marcas": [
+    0.35,
+    3.18,
+    8.62,
+    24.52,
+    63.65,
+    91.48,
+    95.07,
+    124.03,
+    127.8,
+    157.15,
+    159.66,
+    202.53,
+    231.27,
+    238.38,
+    261.06,
+    264.51,
+    296.85,
+    299.26,
+    329.72,
+    356.22,
+    363.98,
+    397.38,
+    399.09,
+    444.57,
+    488.32,
+    494.04,
+    526.35,
+    553.13,
+    555.27,
+    579.32,
+    622.73,
+    626.05,
+    666.83
+   ],
+   "dur": 687.47,
+   "bytes": 5500746,
+   "titulo": "Capítulo sexto · Una boda en enero de 1798",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-30T01:18:04Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@9b275b2955556483fd4976339f81f3d39fd0e306/voz/narrativa"
   }
  }
 }
