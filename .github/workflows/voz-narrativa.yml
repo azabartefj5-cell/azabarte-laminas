@@ -56,9 +56,12 @@ on:
       - 'voz/narrativa/audio.json'
       - 'voz/narrativa/mp3/**'
   schedule:
-    # A diario, después de que Google reinicie la cuota (medianoche de California, 7:00 u 8:00 UTC):
-    # continúa lo que quedara por cuota y relocuta los textos que se hayan editado en la web.
-    - cron: '17 9 * * *'
+    # Continúa lo que quedara por cuota y relocuta los textos que se hayan editado en la web. Google reinicia la cuota
+    # a medianoche de California (7:00 u 8:00 UTC).
+    # Cada dos horas (30-09-2026, orden del investigador: «que las locuciones se vayan generando de forma automática, sin
+    # que lo tenga que decir cada día; en cuanto una API gratuita pueda, que se ponga con ello»). Si todas las claves
+    # gratuitas han gastado su cupo del día, la ejecución lo ve en la primera petición y acaba en un par de minutos.
+    - cron: '17 */2 * * *'
 
 permissions:
   contents: write

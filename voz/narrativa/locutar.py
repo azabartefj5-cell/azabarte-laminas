@@ -1160,6 +1160,11 @@ def main(argv=None):
         if args.forzar:
             cache.olvida(claves_cache(t, args))  # forzar es pedir de nuevo, no reutilizar lo guardado
         pendientes.append(t)
+    # Primero el libro (30-09-2026, orden del investigador): «Antes de nosotros» solo se lee en el lector y es lo que más se
+    # escucha; luego los capítulos de la web y, al final, los relatos de personajes y lo demás. Dentro de cada grupo, el
+    # orden de la web (el del libro, capítulo a capítulo). Con cupo escaso, lo más leído suena antes.
+    PRIORIDAD = {"lib": 0, "cap": 1, "pj": 2, "bio": 3}
+    pendientes.sort(key=lambda t: PRIORIDAD.get(t["clave"].split(":", 1)[0], 9))
     if args.max_pistas > 0:
         pendientes = pendientes[: args.max_pistas]
 
