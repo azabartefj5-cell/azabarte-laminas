@@ -155,19 +155,24 @@ jobs:
           done
           exit 4
 
-      # Segunda clave gratuita (29-09-2026): continúa donde lo dejó la primera (mismos textos, la caché de
-      # bloques y el audio.json que esta acaba de escribir). Corre aunque el paso anterior acabe con alguna
-      # pista fallida, pero no si se cancela la ejecución; sin el secreto, no hace nada. Con la cuota gratuita
-      # acaba en minutos: su tope (30 min, y 40 de plazo para el paso) deja margen dentro de los 350 del trabajo.
-      - name: Locutar lo pendiente con la segunda clave gratuita
+      # Claves gratuitas extra (29 y 30-09-2026): cuando la primera agota su cuota del día, siguen, una tras otra,
+      # GEMINI_API_KEY_2, GEMINI_API_KEY_3… (cada una, de otra cuenta, suma unas 10 peticiones al día). Continúan
+      # donde lo dejó la anterior (mismos textos, caché de bloques y audio.json). Corren aunque el paso anterior acabe
+      # con alguna pista fallida, pero no si se cancela la ejecución ni con «clave: pago». Una clave sin secreto se
+      # salta. Tope de 30 min por clave (y 70 de plazo para el paso) dentro de los 350 del trabajo.
+      - name: Locutar lo pendiente con las otras claves gratuitas
         if: ${{ !cancelled() && steps.motor.outputs.motor == 'gemini' && inputs.clave != 'pago' }}
-        timeout-minutes: 40
+        timeout-minutes: 70
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_2 }}
+          CLAVE_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          CLAVE_3: ${{ secrets.GEMINI_API_KEY_3 }}
         run: |
-          if [ -z "$GEMINI_API_KEY" ]; then echo "Sin segunda clave gratuita (GEMINI_API_KEY_2)."; exit 0; fi
-          echo "::notice title=Clave de Google::segunda gratuita"
-          python voz/narrativa/locutar.py --motor gemini --solo "${{ inputs.solo }}" --max-pistas "${{ inputs.max_pistas || '0' }}" --limite-minutos 30 --podar
+          for n in 2 3; do
+            var="CLAVE_$n"; clave="${!var}"
+            if [ -z "$clave" ]; then echo "Sin clave gratuita número $n."; continue; fi
+            echo "::notice title=Clave de Google::gratuita número $n"
+            GEMINI_API_KEY="$clave" python voz/narrativa/locutar.py --motor gemini --solo "${{ inputs.solo }}"               --max-pistas "${{ inputs.max_pistas || '0' }}" --limite-minutos 30 --podar || true
+          done
 
       - name: Publicar el audio
         if: always() && steps.motor.outputs.motor != ''
