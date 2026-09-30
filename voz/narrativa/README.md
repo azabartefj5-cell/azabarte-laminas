@@ -72,6 +72,23 @@ capítulo vuelve a sonar con la voz del navegador hasta que la ejecución diaria
 
 ## Voz y dirección
 
+**Desde el 30-09-2026: voz culta, tranquila y estable** (decisión del investigador: «calidad, estabilidad, carácter
+narrativo histórico elegante, castellano peninsular»; «tono tranquilo apto para personas mayores; si quiero lo
+acelero»). Medido sobre las pistas anteriores: 169 palabras/min de media (148-187) y ritmo desigual entre pistas.
+Lo que se hizo, validado con pilotos (`tmp/voz_narrativa` y el registro de `CONTROL_INVESTIGACION.md`):
+
+- Las indicaciones van **dentro del texto** (`generate_content`, «Read the following Spanish text aloud as a mature
+  Castilian narrator… SLOWLY… for elderly listeners… Do not read these instructions. TRANSCRIPT: …»), no en la
+  anotación de estilo de `interactions`: así sale más pausada y con el mismo tono entre tomas. Una dirección larga
+  (miles de caracteres) el modelo la **lee en voz alta**: la de `ESTILO_BASE` cabe en unas líneas.
+- Tramos de **1.500 caracteres** como mucho (`MAX_TRAMO`): en tramos largos el modelo acelera.
+- **Pausas alargadas** en cada párrafo (`PAUSAS_FACTOR` = 1,7 desde silencios de 0,15 s): unas 135 palabras/min sin
+  estirar la voz. Si la pista entera pasa de `RITMO_MAX` (20,5 caracteres por segundo de habla), se frena como mucho
+  un 5 %; las lentas se dejan (frenar distorsiona más que acelerar, y el oyente acelera en la web).
+- Otra semilla en cada reintento del mismo texto (con la misma, Gemini repite la toma fallida).
+- Las citas en primera persona de los personajes (otra función, hoy apagada en la web) se harán con la voz
+  Algenib y habla de Las Pedroñeras: indicaciones del investigador en `tmp/voz_narrativa/indicaciones_pedronero.md`.
+
 - Voz prediseñada **Charon** (grave, informativa). Es estable en el tiempo: las voces diseñadas a medida caducan.
   Otras candidatas: Orus, Iapetus, Rasalgethi, Sadaltager; femeninas, Gacrux y Sulafat. Se cambia en el campo
   «voz» al lanzar la Action a mano o con la variable de repositorio `VOZ_NOMBRE`. La voz elegida queda anotada

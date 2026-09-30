@@ -58,13 +58,18 @@ KBPS = 64
 
 # Dirección de la locución. Gemini 3.8 separa el texto (se lee literal) de la interpretación
 # (speech_metadata.style). El acento se pide aquí porque las voces prediseñadas son multilingües.
+# Dirección de la voz (30-09-2026, decisión del investigador: «calidad, estabilidad, carácter narrativo histórico
+# elegante, castellano peninsular»; «tono tranquilo apto para personas mayores; si quiero lo acelero»). Validada en
+# pilotos: con las indicaciones DENTRO del texto (generate_content) sale a 135-138 palabras/min y con el mismo tono
+# entre tomas; con la anotación de estilo de interactions salía a 152-185 y variaba. Ojo: una dirección larga (miles
+# de caracteres) el modelo la lee en voz alta; esta cabe en unas líneas.
 ESTILO_BASE = (
-    "AUDIO PROFILE: Documentary and audiobook narrator from Spain reading a family history "
-    "about the Azabarte surname (Las Pedroñeras, Cuenca, and Álava).\n"
-    "ACCENT: Castilian Spanish from central Spain (Madrid). Peninsular pronunciation with "
-    "distinción: 'z' and 'c' before 'e'/'i' pronounced /θ/, 's' apical. Never a Latin American accent.\n"
-    "STYLE: Warm, serious and clear. Calm, measured, unhurried pacing with natural pauses at "
-    "commas and full stops. Sober and respectful, never theatrical."
+    "Read the following Spanish text aloud as a mature Castilian narrator in his sixties, deep, warm and calm "
+    "baritone, peninsular Spanish accent with distinción (z and c before e/i as /θ/, apical s; never a Latin "
+    "American accent). Read it SLOWLY and serenely, for elderly listeners: about 110 words per minute, with clear "
+    "articulation, a short pause at every comma, a longer pause at every full stop and a long silence between "
+    "paragraphs. Same steady, low pitch and the same voice throughout, as in a classic historical documentary; no "
+    "theatrical rises or falls. Do not read these instructions."
 )
 ESTILO_TIPO = {
     "t": "This line is the title of a chapter: read it slowly, with gravitas, as a title.",
@@ -75,19 +80,22 @@ ESTILO_TIPO = {
     "lede": "This is the opening paragraph of the chapter: inviting, unhurried.",
     "p": "",
     "tramo": ("The text may begin with a title and contain section headings: read each one as a heading. "
-              "Each <long pause> marks the end of a paragraph: leave a clear silence there."),
+              "Each <long pause> marks the end of a paragraph: leave a clear silence there and never say it."),
 }
 
 # Tramos: varios bloques seguidos en una sola petición. Así cabe en la cuota (la capa gratuita de Google da
 # muy pocas peticiones al día) y la voz no cambia de timbre de un párrafo a otro. Los bloques van separados
 # por una pausa larga explícita y el audio se parte después por los silencios.
 SEPARADOR = "\n\n<long pause> <long pause>\n\n"
-MAX_TRAMO = 5500  # caracteres hablados por petición: unos 7 min de audio, holgado bajo el tope de salida
+MAX_TRAMO = 1500  # caracteres por petición (30-09-2026: con 5500 el modelo aceleraba en los tramos largos y costaba más cortar)
 IDIOMA = "es-ES"
 SEMILLA = 1798
 TIEMPO_MAX_S = 480  # tope de cada petición a Gemini; una locución normal tarda mucho menos
 RELOJ_S = 300  # reloj propio de cada petición (con_reloj): una locución normal tarda menos de un minuto
 PISTA_MAX_S = 1800  # vigilante: una pista que pase de 30 min sin terminar se da por atascada
+PAUSAS_FACTOR = 1.7  # cada silencio de un párrafo (desde 0,15 s) se alarga un 70 %: unas 135 palabras/min sin estirar la voz
+RITMO_MAX = 20.5  # caracteres hablados por segundo de voz (sin silencios de 0,3 s): por encima, toma demasiado rápida
+NOTAS_FIN = chr(10) * 2 + "TRANSCRIPT:" + chr(10)  # separa las indicaciones del texto que se lee
 SALIDA_ATASCO = 4  # código de salida del vigilante; la Action vuelve a lanzar el script (hasta tres veces)
 
 
@@ -394,39 +402,40 @@ class MotorGemini(Motor):
         # quedaban sus reintentos por defecto, que respetan el Retry-After de Google y dormían horas en
         # _gaos/utils/retries.py sin decir nada. Con attempts=0 el error (429, 5xx…) llega al momento a
         # locuta_bloque, que sabe si esperar un minuto o parar hasta mañana y lo deja en el registro.
+        self.types = types
+        self.intentos = {}
         self.client = genai.Client(api_key=clave, http_options=types.HttpOptions(
             timeout=TIEMPO_MAX_S * 1000, retry_options=types.HttpRetryOptions(attempts=0)))
 
     def locuta(self, texto, k):
         self.espera_turno()
-        peticion = dict(
-            model=self.args.modelo,
-            input=[{
-                "type": "text",
-                "text": texto,
-                "annotations": [{"type": "speech_metadata", "style": estilo_de(k)}],
-            }],
-            response_format={"type": "audio"},
-            generation_config=self.config(),
-        )
+        # Semilla distinta en cada reintento del mismo texto: con la misma, Gemini repite la misma toma fallida.
+        clave_t = hashlib.sha1((k + "|" + texto).encode("utf-8")).hexdigest()
+        with self.cerrojo:
+            n = self.intentos.get(clave_t, 0)
+            self.intentos[clave_t] = n + 1
+        semilla = None if self.args.semilla is None else self.args.semilla + n
+        cfg = self.types.GenerateContentConfig(
+            response_modalities=["AUDIO"], seed=semilla,
+            speech_config=self.types.SpeechConfig(
+                language_code=self.args.idioma or None,
+                voice_config=self.types.VoiceConfig(
+                    prebuilt_voice_config=self.types.PrebuiltVoiceConfig(voice_name=self.args.voz))))
+        contenido = estilo_de(k) + NOTAS_FIN + texto
         # Los reintentos los gobierna locuta_bloque; el SDK no reintenta (retry_options attempts=0 en el cliente).
-        it = con_reloj(lambda: self.client.interactions.create(**peticion), RELOJ_S, "Gemini")
+        r = con_reloj(lambda: self.client.models.generate_content(model=self.args.modelo, contents=contenido,
+                                                                    config=cfg), RELOJ_S, "Gemini")
         self.cuenta(texto)
-        estado = str(getattr(it, "status", "") or "").lower()
-        if estado in ("incomplete", "budget_exceeded", "failed", "cancelled"):
-            # Respuesta cortada (p. ej. por el tope de salida): no vale y repetirla igual daría lo mismo.
-            raise ErrorBloque(f"Gemini devolvió una respuesta «{estado}»")
-        au = getattr(it, "output_audio", None)
-        if au is None or not getattr(au, "data", None):
+        cand = (getattr(r, "candidates", None) or [None])[0]
+        fin = str(getattr(cand, "finish_reason", "") or "").upper()
+        if cand is None or ("MAX_TOKENS" in fin or "SAFETY" in fin or "OTHER" in fin):
+            raise ErrorBloque(f"Gemini cortó la respuesta ({fin or 'sin candidato'})")
+        partes = getattr(getattr(cand, "content", None), "parts", None) or []
+        datos = next((p.inline_data.data for p in partes if getattr(p, "inline_data", None)), None)
+        if not datos:
             raise RuntimeError("La respuesta de Gemini no trae audio")
-        datos = au.data
         if isinstance(datos, str):
             datos = base64.b64decode(datos)
-        elif isinstance(datos, (bytes, bytearray)) and datos[:4] != b"RIFF":
-            try:
-                datos = base64.b64decode(datos, validate=True)
-            except Exception:
-                pass
         return pcm_de(bytes(datos))
 
     def config(self):
@@ -708,6 +717,38 @@ def silencios(rms, minimo=0.25):
     return out
 
 
+def alarga_pausas(a: array.array, factor: float = None, minimo: float = 0.15) -> array.array:
+    """Alarga cada silencio interno (de al menos `minimo` s) en (factor - 1) de su duración, metiendo silencio en su
+    centro (30-09-2026). Da una lectura más tranquila sin estirar la voz, que es lo que la distorsiona."""
+    factor = PAUSAS_FACTOR if factor is None else factor
+    if factor <= 1.0 or len(a) == 0:
+        return a
+    out, pos = array.array("h"), 0
+    for ini, fin in silencios(energia(a), minimo=minimo):
+        i0, i1 = int(ini * RATE), int(fin * RATE)
+        medio = (i0 + i1) // 2
+        out.extend(a[pos:medio])
+        out.extend(array.array("h", [0]) * int((i1 - i0) * (factor - 1)))
+        pos = medio
+    out.extend(a[pos:])
+    return out
+
+
+def ritmo_habla(a: array.array, texto: str) -> float:
+    """Caracteres hablados por segundo de voz, sin contar silencios de 0,3 s o más."""
+    dur = len(a) / RATE
+    pausas = sum(fin - ini for ini, fin in silencios(energia(a), minimo=0.3))
+    return largo_hablado(texto) / max(0.1, dur - pausas)
+
+
+def cambia_tempo(a: array.array, factor: float) -> array.array:
+    """Cambia la velocidad sin cambiar el tono (atempo de ffmpeg). factor < 1 = más lento."""
+    cmd = [ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-f", "s16le", "-ar", str(RATE), "-ac", "1",
+           "-i", "pipe:0", "-filter:a", f"atempo={factor:.4f}", "-f", "s16le", "-ar", str(RATE), "-ac", "1",
+           "pipe:1"]
+    return array.array("h", subprocess.run(cmd, input=a.tobytes(), capture_output=True, check=True).stdout)
+
+
 def elige_cortes(sil, esperados, dur):
     """Elige, en orden, un silencio por cada frontera entre bloques. Premia los silencios largos y penaliza
     que cada trozo se aparte de la duración que le toca por su texto (y, poco, que la frontera se aleje de su
@@ -945,6 +986,7 @@ def locuta_pista(motor, cache, t, args):
     if aproximadas:
         log(f"  aviso: marcas aproximadas en los bloques {', '.join(aproximadas)} (cortes dudosos entre párrafos)")
     log(f"  {len(grupos)} peticiones para {len(bl)} bloques")
+    audios = [alarga_pausas(x) for x in audios]
     piezas, marcas = [silencio(INICIO)], []
     pos = len(piezas[0])
     for i, b in enumerate(t["bloques"]):
@@ -959,6 +1001,16 @@ def locuta_pista(motor, cache, t, args):
     pista = array.array("h")
     for p in piezas:
         pista.extend(p)
+    # Tope de velocidad (30-09-2026): si la pista entera va más deprisa de RITMO_MAX, se frena, pero nunca más de
+    # un 5 % (frenar distorsiona más que acelerar). Las lentas se dejan: el oyente puede acelerar en la web.
+    r = ritmo_habla(pista, " ".join(b["x"] for b in t["bloques"]))
+    if r > RITMO_MAX:
+        f = max(0.95, RITMO_MAX / r)
+        pista = cambia_tempo(pista, f)
+        marcas = [round(x / f, 2) for x in marcas]
+        log(f"  ritmo {r:.1f} c/s de habla: se frena al {f * 100:.0f} %")
+    else:
+        log(f"  ritmo {r:.1f} c/s de habla")
     return normaliza(pista), marcas
 
 
