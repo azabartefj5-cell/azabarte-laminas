@@ -386,8 +386,15 @@ class MotorGemini(Motor):
 
     def __init__(self, args):
         super().__init__(args)
-        clave = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-        if not clave:
+        # Varias claves, alternándolas (30-09-2026, orden del investigador: «úsalas todas las gratuitas alternándolas»):
+        # GEMINI_API_KEY y GEMINI_API_KEY_2…_9. Cada petición va con la siguiente; la que agota su cuota del día se
+        # aparta y siguen las demás. Con una sola clave, todo es como antes.
+        claves = []
+        for nombre in ["GEMINI_API_KEY", "GOOGLE_API_KEY"] + [f"GEMINI_API_KEY_{i}" for i in range(2, 10)]:
+            v = (os.environ.get(nombre) or "").strip()
+            if v and v not in claves:
+                claves.append(v)
+        if not claves:
             raise ErrorFatal("Falta la variable GEMINI_API_KEY")
         from google import genai  # type: ignore
         from google.genai import types  # type: ignore
@@ -404,8 +411,46 @@ class MotorGemini(Motor):
         # locuta_bloque, que sabe si esperar un minuto o parar hasta mañana y lo deja en el registro.
         self.types = types
         self.intentos = {}
-        self.client = genai.Client(api_key=clave, http_options=types.HttpOptions(
-            timeout=TIEMPO_MAX_S * 1000, retry_options=types.HttpRetryOptions(attempts=0)))
+        opciones = types.HttpOptions(timeout=TIEMPO_MAX_S * 1000, retry_options=types.HttpRetryOptions(attempts=0))
+        self.clientes = [genai.Client(api_key=c, http_options=opciones) for c in claves]
+        self.client = self.clientes[0]
+        self.agotadas, self.turno_cliente = set(), 0
+        if len(self.clientes) > 1:
+            log(f"{len(self.clientes)} claves de Google, alternándolas")
+
+    def _cliente(self):
+        """Siguiente clave con cuota, por turno (a prueba de hilos): (índice, cliente) o (None, None)."""
+        with self.cerrojo:
+            libres = [i for i in range(len(self.clientes)) if i not in self.agotadas]
+            if not libres:
+                return None, None
+            i = libres[self.turno_cliente % len(libres)]
+            self.turno_cliente += 1
+            return i, self.clientes[i]
+
+    def _pide(self, **peticion):
+        """Pide con la siguiente clave. Si esa clave está en su límite (del día o del minuto), prueba las demás; si
+        todas lo están, devuelve el último error, que locuta_bloque clasifica (esperar o parar hasta mañana)."""
+        ultimo = None
+        for _ in range(len(self.clientes)):
+            i, cli = self._cliente()
+            if cli is None:
+                break
+            try:
+                return con_reloj(lambda c=cli: c.models.generate_content(**peticion), RELOJ_S, "Gemini")
+            except Exception as e:  # noqa: BLE001
+                tipo = clasifica(*self.error(e))
+                if len(self.clientes) == 1 or tipo not in ("dia", "minuto"):
+                    raise
+                if tipo == "dia":
+                    with self.cerrojo:
+                        if i not in self.agotadas:
+                            self.agotadas.add(i)
+                            log(f"  clave {i + 1} de {len(self.clientes)}: cuota del día agotada; sigo con las demás")
+                ultimo = e
+        if ultimo is not None:
+            raise ultimo
+        raise CuotaAgotada("todas las claves tienen agotada la cuota del día")
 
     def locuta(self, texto, k):
         self.espera_turno()
@@ -423,8 +468,7 @@ class MotorGemini(Motor):
                     prebuilt_voice_config=self.types.PrebuiltVoiceConfig(voice_name=self.args.voz))))
         contenido = estilo_de(k) + NOTAS_FIN + texto
         # Los reintentos los gobierna locuta_bloque; el SDK no reintenta (retry_options attempts=0 en el cliente).
-        r = con_reloj(lambda: self.client.models.generate_content(model=self.args.modelo, contents=contenido,
-                                                                    config=cfg), RELOJ_S, "Gemini")
+        r = self._pide(model=self.args.modelo, contents=contenido, config=cfg)
         self.cuenta(texto)
         cand = (getattr(r, "candidates", None) or [None])[0]
         fin = str(getattr(cand, "finish_reason", "") or "").upper()

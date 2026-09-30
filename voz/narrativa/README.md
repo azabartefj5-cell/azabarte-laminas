@@ -32,6 +32,11 @@ manuales. `GEMINI_API_KEY_PAGO` es de pago y solo se usa lanzando la Action a ma
 (`gh workflow run voz-narrativa.yml -f clave=pago`), cuando el investigador lo pida en ese momento. El primer
 lote completo se grabó con ella.
 
+**Claves gratuitas alternadas (30-09-2026, orden del investigador).** Hay varias gratuitas, de cuentas distintas
+(`GEMINI_API_KEY`, `GEMINI_API_KEY_2`…`_6`; hoy cuatro), y `locutar.py` las alterna petición a petición. La que agota
+su cuota del día (unas 10 peticiones) se aparta y siguen las demás. Para sumar otra, basta con crear el secreto
+siguiente en GitHub. La de pago nunca entra en esa rotación.
+
 **Cuánto tarda.** La capa gratuita de Google da solo 10 peticiones al día a `gemini-3.8-flash-tts`. Por eso el
 generador pide varios párrafos seguidos en cada petición («tramos»): la edición completa son unas 106
 peticiones, unos 11 días de ejecuciones diarias. Activando la facturación en el proyecto de Google de la clave
