@@ -1,8 +1,8 @@
 {
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
- "total_pistas": 93,
- "total_caracteres": 501504,
+ "total_pistas": 94,
+ "total_caracteres": 502628,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -5156,6 +5156,10 @@
      "x": "No fue la única. En aquellos años, en los pueblos de La Mancha, muchas niñas dejaban la escuela en cuanto hacían falta en casa, y en casa de Emiliano y Adela, con cuatro hijos, las faenas y el campo, hicieron falta todas las manos, y muy pronto. De adulta llegó la música, que en esta familia no falta por ninguna parte, y Pilar cantó muchos años en el coro de la parroquia. Es hoy la memoria viva del barrio: recuerda la casa del abuelo Venus, quién era quién en aquella calle y cómo se trataban su padre y la prima Camila."
     },
     {
+     "k": "p",
+     "x": "Venus, el tercero, es menor que Pilar y mayor que Francisco, y lleva el nombre de su abuelo Venus. Con él iba ella de niña a coger lentejas. Vive, y su retrato, dibujado sobre una fotografía de hoy, está en este libro porque así lo ha querido la familia."
+    },
+    {
      "k": "h",
      "x": "El abuelo que no levantaba la voz"
     },
@@ -5208,8 +5212,8 @@
      "x": "De la casa de Emiliano y Adela salieron los recuerdos del abuelo Venus y de la prima Camila que dieron pie a todo, y de ella salió también una pregunta. Su nieto Francisco Javier, que había crecido oyendo a su madre, Pilar, hablar de aquella calle, quiso saber de dónde venía un apellido que casi nadie lleva. Lo que queda de este libro no es ya la vida de los antepasados, sino la historia de cómo se supo, quién la contó y qué falta todavía por saber."
     }
    ],
-   "huella": "ae86e04edf61099e0c763f712083b08d37a0e68b5ce7f2002d5450860652509f",
-   "chars": 9030
+   "huella": "a019996a184fc9404c627b9e0dbceb45af12c3b5e30f4642ebd4abc80b4149e7",
+   "chars": 9284
   },
   {
    "clave": "lib:epilogo",
@@ -6568,6 +6572,35 @@
    ],
    "huella": "102b157ce93565936bc828c1f816a422703b9ad7713d038988c196f33ef2245f",
    "chars": 1965
+  },
+  {
+   "clave": "pj:P033",
+   "titulo": "Venus (nieto)",
+   "tipo": "pj",
+   "bloques": [
+    {
+     "k": "nombre",
+     "x": "Venus Azabarte Arellano"
+    },
+    {
+     "k": "lede",
+     "x": "El tercero de los hijos de Emiliano y Adela, el que lleva el nombre del abuelo Venus."
+    },
+    {
+     "k": "p",
+     "x": "Venus es el tercero de los cuatro hijos de Emiliano y Adela: después de Emiliano, el mayor, y de Pilar, la única chica, y antes de Francisco, el pequeño. Lleva el nombre de su abuelo, Venus Azabarte Navarro, que llevó también uno de sus tíos, el mellizo de Julián. En esta familia los nombres se repiten de generación en generación, como en tantas casas de La Mancha, donde al nieto se le ponía el nombre del abuelo."
+    },
+    {
+     "k": "p",
+     "x": "Creció en la casa de sus padres, en años en que en el campo hacían falta todas las manos, también las de los niños. Su hermana Pilar recuerda que iban juntos a coger lentejas cuando los dos eran muy pequeños."
+    },
+    {
+     "k": "p",
+     "x": "Vive, y su retrato, dibujado sobre una fotografía de hoy, está aquí porque así lo ha querido la familia, igual que el de su hermana Pilar."
+    }
+   ],
+   "huella": "d1888731c56dd7c5135eb4cc399863f7dbf6b7c97c068c3aed83c4e5256e8ecc",
+   "chars": 870
   },
   {
    "clave": "pj:P131",
