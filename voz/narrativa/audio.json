@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@24be1af232b12fd644272754416e58b1f47f0883/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@ffb37b60163a60c1c556bba0a2a1812a4ca7f1b9/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1430,6 +1430,51 @@
    "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
    "generado": "2026-09-29T22:53:14Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@24be1af232b12fd644272754416e58b1f47f0883/voz/narrativa"
+  },
+  "lib:hidalgo": {
+   "src": "mp3/lib-hidalgo.mp3",
+   "huella": "9d4fa2035a8feebafb4169d13ad3202e52e121c16b48d737068d811179a97194",
+   "marcas": [
+    0.35,
+    4.48,
+    20.05,
+    42.22,
+    90.46,
+    92.55,
+    128.21,
+    165.32,
+    172.94,
+    176.11,
+    204.47,
+    207.33,
+    250.58,
+    284.96,
+    290.75,
+    319.12,
+    321.06,
+    350.92,
+    388.43,
+    392.63,
+    394.4,
+    437.77,
+    471.23,
+    509.8,
+    514.49,
+    546.87,
+    597.7,
+    603.88,
+    605.72,
+    637.33,
+    668.73,
+    676.51,
+    708.7
+   ],
+   "dur": 729.92,
+   "bytes": 5840400,
+   "titulo": "Capítulo segundo · El hidalgo que bajó al sur",
+   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
+   "generado": "2026-09-30T00:16:09Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@ffb37b60163a60c1c556bba0a2a1812a4ca7f1b9/voz/narrativa"
   }
  }
 }
