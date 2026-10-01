@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 502229,
+ "total_caracteres": 502431,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -1359,7 +1359,7 @@
     },
     {
      "k": "p",
-     "x": "El nombre siguió. Lo llevó uno de los mellizos de 1918, el sargento de la defensa de Madrid. Emiliano se lo puso a su tercer hijo, que lo lleva hoy, y este a su vez al suyo, al que la familia perdió cuando era un niño y sigue teniendo muy presente. Son cuatro Venus en cuatro generaciones."
+     "x": "El nombre siguió, por dos ramas. Lo llevó uno de los mellizos de 1918, el sargento de la defensa de Madrid, y hoy lo lleva, de segundo nombre, uno de sus nietos. Emiliano se lo puso a su tercer hijo, que lo lleva también, y este a su vez al suyo, al que la familia perdió cuando era un niño y sigue teniendo muy presente. Son cinco Venus en cuatro generaciones."
     },
     {
      "k": "ct",
@@ -1434,8 +1434,8 @@
      "x": "Ese papel importa más de lo que parece. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Si es ella la Isidora de los Higuerillas, su madre habría muerto de parto hacia 1911 o 1912. Pero la familia recuerda a Vicenta como la mayor de las hijas de la casa, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908. Algo no encaja todavía: o Vicenta no era la mayor de los hermanos, o aquella Isidora es otra, o alguna de las cuentas se ha movido al pasar de boca en boca. No hace falta elegir. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá, y cuando llegue, este capítulo dejará de ser solo memoria."
     }
    ],
-   "huella": "2d315321125921b9aaa3bc84c07d68de72a6aaf298842e9606aeb11344d87ee2",
-   "chars": 17310
+   "huella": "5f59669aa844f2dc3da4fd0d404ea7c7d9cf3d9422329b7d87c45e809568713f",
+   "chars": 17382
   },
   {
    "clave": "cap:actas",
@@ -4875,19 +4875,19 @@
     },
     {
      "k": "p",
-     "x": "Y el nombre siguió en la familia. Venus y Encarnación se lo pusieron a uno de los mellizos de 1918, el que defendió Madrid y llegó a sargento. Emiliano, el pequeño de la casa, llamó Venus a su tercer hijo, que lo lleva hoy. Y él se lo dio a su vez a su hijo, al que la familia perdió cuando era un niño y al que sigue teniendo muy presente."
+     "x": "Y el nombre siguió en la familia, por dos ramas. Venus y Encarnación se lo pusieron a uno de los mellizos de 1918, el que defendió Madrid y llegó a sargento, y hoy lo lleva, de segundo nombre, uno de sus nietos. Emiliano, el pequeño de la casa, llamó Venus a su tercer hijo, que lo lleva también. Y él se lo dio a su vez a su hijo, al que la familia perdió cuando era un niño y al que sigue teniendo muy presente."
     },
     {
      "k": "p",
-     "x": "Son cuatro Venus en cuatro generaciones, del abuelo al bisnieto, con un nombre que fuera de esta casa no llevaba nadie. En el pueblo, el nombre acabó haciendo el oficio de un apellido."
+     "x": "Son cinco Venus en cuatro generaciones, del abuelo a los bisnietos, con un nombre que fuera de esta casa no llevaba nadie. En el pueblo, el nombre acabó haciendo el oficio de un apellido."
     },
     {
      "k": "p",
      "x": "Encarnación murió en 1943, con unos cincuenta y tres años, y Venus tres años después, en 1946. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "2b44756f48f7e76446d78fb00fddbe56a77ce72b9e3af46ecaa0f2b7bc71d44e",
-   "chars": 14640
+   "huella": "b4a22c794c6383a9deb971ff93b470ae2b000c4da313f3e58959620b734ca1c1",
+   "chars": 14716
   },
   {
    "clave": "lib:guerra",
@@ -6259,7 +6259,7 @@
     },
     {
      "k": "p",
-     "x": "Venus llevó el nombre de su padre, un nombre que en La Mancha no llevaba casi nadie: el de la diosa romana, el mismo que tiene el lucero que se ve al caer la tarde. Al padre le había costado que el registro se lo admitiera; el hijo lo heredó, y después lo llevó también un sobrino suyo, Venus Azabarte Arellano, hermano de Pilar: tres generaciones seguidas con un nombre cuyo origen es, todavía hoy, uno de los pequeños enigmas de la casa."
+     "x": "Venus llevó el nombre de su padre, un nombre que en La Mancha no llevaba casi nadie: el de la diosa romana, el mismo que tiene el lucero que se ve al caer la tarde. Al padre le había costado que el registro se lo admitiera; el hijo lo heredó, y después lo llevaron también un sobrino suyo, Venus Azabarte Arellano, hermano de Pilar, y uno de sus propios nietos, que lo tiene de segundo nombre. Por qué lo eligieron sus abuelos sigue siendo, todavía hoy, uno de los pequeños enigmas de la casa."
     },
     {
      "k": "p",
@@ -6286,8 +6286,8 @@
      "x": "De él se sabe ya el día en que nació, el mismo que el de Julián. Los papeles de su brigada, que guarda el Archivo General Militar de Ávila, y las fichas del tribunal, en Salamanca, pueden decir lo que falta. Mientras tanto queda lo que recuerdan los primos: un hombre que llegaba a la matanza con sus hermanos y que llevó, como su padre, un nombre que en La Mancha no llevaba casi nadie."
     }
    ],
-   "huella": "e3cd57ba8b259e4235b6894d4343b9aa8857cf0edc64eef53895075e35ebc3ea",
-   "chars": 3699
+   "huella": "e097c32cfadbbab4063e91eb663898eef09f193351578134cb33d5696d213922",
+   "chars": 3753
   },
   {
    "clave": "pj:P130",
