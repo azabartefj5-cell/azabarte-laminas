@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@f43786bc03ac0213a996ea0b042517153af87179/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@4bce534241e38f39b5ebe2c56112babd9942d650/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1761,6 +1761,54 @@
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-01T16:51:14Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@f43786bc03ac0213a996ea0b042517153af87179/voz/narrativa"
+  },
+  "lib:habichuela": {
+   "src": "mp3/lib-habichuela.mp3",
+   "huella": "27b6c36c6e02f40899d08ba684a296d3aae92452f1528543cefa9d5f8bfa84d4",
+   "marcas": [
+    0.35,
+    6.93,
+    30.81,
+    41.46,
+    75.89,
+    109.75,
+    157.93,
+    162.18,
+    173.1,
+    184.0,
+    208.11,
+    235.57,
+    268.33,
+    270.09,
+    284.49,
+    293.54,
+    305.68,
+    340.49,
+    343.62,
+    378.17,
+    379.86,
+    383.4,
+    388.89,
+    426.07,
+    475.38,
+    477.96,
+    514.53,
+    547.35,
+    574.91,
+    583.49,
+    598.3,
+    659.79,
+    664.24,
+    667.59,
+    697.08,
+    721.53
+   ],
+   "dur": 745.6,
+   "bytes": 5965760,
+   "titulo": "Capítulo noveno · Francisco y Vicenta",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-01T20:17:45Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@4bce534241e38f39b5ebe2c56112babd9942d650/voz/narrativa"
   }
  }
 }
