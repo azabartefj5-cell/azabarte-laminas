@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 495904,
+ "total_caracteres": 496700,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -2527,7 +2527,7 @@
     },
     {
      "k": "p",
-     "x": "En esa misma rama la historia se cuenta con otras piezas: que la bolsa se la dio a la propia Vicenta mientras ella segaba en la encomienda, al pasar con un destacamento de caballería, diciéndole «guárdamelo; si no vuelvo, es para ti y tus hijos», y que acabó sus días en Extremadura. Las dos versiones se guardan, y la que se tiene por vigente es la escrita. Las dos coinciden en lo esencial: un hermano que se fue lejos y que, a su manera, no se olvidó de los suyos. De momento ningún papel lo nombra. Si hubo causa por aquella muerte, la llevaría el juzgado de Belmonte, que era el de la comarca, y la sentenciaría la Audiencia de Albacete. Los protocolos de los notarios de Mula de aquellos años se destruyeron, pero en su Registro Civil tiene que estar el acta de defunción de febrero de 1905, que ya se ha pedido, con los nombres de sus padres, y el día que aparezca «el Polaco» dejará de ser un recuerdo para ser un documento."
+     "x": "En esa misma rama la historia se cuenta con otras piezas: que la bolsa se la dio a la propia Vicenta mientras ella segaba en la encomienda, al pasar con un destacamento de caballería, diciéndole «guárdamelo; si no vuelvo, es para ti y tus hijos», y que acabó sus días en Extremadura. Las dos versiones se guardan, y la que se tiene por vigente es la escrita. Las dos coinciden en lo esencial: un hermano que se fue lejos y que, a su manera, no se olvidó de los suyos. De momento ningún papel lo nombra. Si hubo causa por aquella muerte, la llevaría el juzgado de Belmonte, que era el de la comarca, y la sentenciaría la Audiencia de Albacete. Los protocolos de los notarios de Mula de aquellos años se destruyeron, y el Registro Civil de Mula, al que se pidió su acta de defunción, contestó el 1 de octubre de 2026 que no la encuentra en las fechas que da la carta. Eso no la desmiente, pero deja abierto cuándo y dónde murió: pudo ser otro año u otro lugar, o el nombre pudo escribirse de otra manera. Mientras no aparezca un papel, «el Polaco» sigue siendo un recuerdo."
     },
     {
      "k": "pull",
@@ -2558,8 +2558,8 @@
      "x": "Por esos caminos hay hoy personas que llevan el apellido Azabarte y que nunca han vivido en Las Pedroñeras. Sus historias también caben en estas páginas, y el capítulo de las preguntas abiertas explica cómo pueden llegar hasta aquí."
     }
    ],
-   "huella": "7c677fb12810e145e6b169589e352cd9d6d0bc2cd2846aa42c38e50ec738f77c",
-   "chars": 11691
+   "huella": "5591cc21476a6e9cc7da2021d360f3c29c49df67f9bfcbc02a469de2df3b5f65",
+   "chars": 11830
   },
   {
    "clave": "cap:pendiente",
@@ -2648,7 +2648,7 @@
     },
     {
      "k": "p",
-     "x": "De la rama de la abuela quedan dos preguntas. La primera es el final de Juan «el Polaco». Según la carta de la familia murió en Mula el 24 de febrero de 1905, pero ningún papel que se pueda leer desde casa lo nombra: los libros de Mula de aquellos años no están en línea, y los protocolos de sus notarios anteriores a 1936 se perdieron. La llave es su acta de defunción, que ya se ha pedido al Registro Civil de Mula: dará sus padres y cerrará de paso quiénes eran los de Vicenta. Si la Iglesia heredó sus bienes, como se cuenta, tuvo que dejarlo dicho en un testamento, porque su hermana Vicenta vivía todavía y la ley no dejaba heredar a la Iglesia de otro modo. Y del crimen que lo llevó a la cárcel la familia puede ayudar más que ningún archivo: el nombre del mozo que murió, o el año, abriría los papeles del juzgado de Belmonte, que era el del pueblo, y de la Audiencia de Albacete, que sentenciaba aquellas causas."
+     "x": "De la rama de la abuela quedan dos preguntas. La primera es el final de Juan «el Polaco». Según la carta de la familia murió en Mula el 24 de febrero de 1905, pero ningún papel lo nombra todavía: los libros de Mula de aquellos años no están en línea, y los protocolos de sus notarios anteriores a 1936 se perdieron. Se pidió su acta de defunción al Registro Civil de Mula, y el 1 de octubre de 2026 contestó que en esas fechas no hay ninguna inscrita a su nombre. Ahora hay que saber si se miraron febrero y marzo enteros y el nombre escrito a secas, buscar en los años de alrededor y pedir su entierro a las parroquias de Mula; y vuelve a contar la versión de la otra rama, que lo hacía morir en Extremadura. Cualquiera de esos papeles daría sus padres y cerraría de paso quiénes eran los de Vicenta. Si la Iglesia heredó sus bienes, como se cuenta, tuvo que dejarlo dicho en un testamento, porque su hermana Vicenta vivía todavía y la ley no dejaba heredar a la Iglesia de otro modo. Y del crimen que lo llevó a la cárcel la familia puede ayudar más que ningún archivo: el nombre del mozo que murió, o el año, abriría los papeles del juzgado de Belmonte, que era el del pueblo, y de la Audiencia de Albacete, que sentenciaba aquellas causas."
     },
     {
      "k": "p",
@@ -2715,8 +2715,8 @@
      "x": "A los más pequeños de la casa se les puede proponer un juego: preguntar a sus abuelos cómo se llamaban los abuelos de ellos, y apuntarlo en un papel con la fecha. Preguntas como esa, hechas a tiempo, son las que pusieron en marcha esta historia."
     }
    ],
-   "huella": "35f3b6b906ee9db5179d8dc8f340e296c3b9cb08009b28585f6d169cbabd4c38",
-   "chars": 9750
+   "huella": "1115b34a87ae0660e0ddea0a8a2b145eb29691037a9994546c6e28aed7fc4cc7",
+   "chars": 10071
   },
   {
    "clave": "cap:glosario",
@@ -4304,7 +4304,7 @@
     },
     {
      "k": "p",
-     "x": "Hay algo más que se puede decir, porque lo dicta la ley. Si la Iglesia heredó, fue casi seguro por testamento: con una hermana viva, como lo estaba Vicenta, la ley no le dejaba heredar de otro modo. Buscar aquel testamento en los libros de los notarios de Mula no servirá, porque los de aquellos años se destruyeron. Pero en el Registro Civil de Mula tiene que estar el acta de defunción de febrero de 1905, con los nombres de los padres de Juan, y ya se ha pedido. Dirá cómo se llamaban y, como eran hermanos, aclarará de paso quiénes fueron los de Vicenta."
+     "x": "Hay algo más que se puede decir, porque lo dicta la ley. Si la Iglesia heredó, fue casi seguro por testamento: con una hermana viva, como lo estaba Vicenta, la ley no le dejaba heredar de otro modo. Buscar aquel testamento en los libros de los notarios de Mula no servirá, porque los de aquellos años se destruyeron. Quedaba el Registro Civil de Mula, al que se pidió el acta de defunción de febrero de 1905, con los nombres de los padres de Juan. El 1 de octubre de 2026 contestó que, en esas fechas, no la encuentra. Puede que muriera otro año, o en otro lugar, o que su nombre se escribiera de otra manera. La búsqueda sigue, y el papel que aparezca dirá también, porque eran hermanos, quiénes fueron los padres de Vicenta."
     },
     {
      "k": "h",
@@ -4324,15 +4324,15 @@
     },
     {
      "k": "p",
-     "x": "De momento ningún papel lo nombra. El día que llegue el acta de Mula, «el Polaco» dejará de ser un recuerdo para ser un documento, y se sabrá, de paso, cuál de las dos ramas guardó mejor su final."
+     "x": "De momento ningún papel lo nombra, y el Registro Civil de Mula no ha encontrado su muerte en la fecha que da la carta. El día que aparezca un documento, «el Polaco» dejará de ser un recuerdo para ser un documento, y se sabrá, de paso, cuál de las dos ramas guardó mejor su final."
     },
     {
      "k": "p",
      "x": "En la casa de Francisco y Vicenta, entretanto, la suerte tenía otra cara. De los nueve u once hijos que habían tenido, cuenta la familia, solo cinco llegaron a mayores, y las dos mayores murieron antes que sus padres, dejando hijos pequeños que criaron los abuelos."
     }
    ],
-   "huella": "fd76bc63c60a12786e8b8cbcd5fb372427a436793ace026c283ec32ccf429f77",
-   "chars": 9546
+   "huella": "3be5395670cdb1226d9d3d7b9d46a7361b8c29e80f4a9bf83149f5130ae80e9c",
+   "chars": 9797
   },
   {
    "clave": "lib:hijas",
@@ -5278,7 +5278,7 @@
     },
     {
      "k": "p",
-     "x": "De la rama de la abuela quedan dos preguntas. El acta de defunción del Polaco, de febrero de 1905, ya se ha pedido al Registro Civil de Mula, y el día que llegue dirá quiénes eran sus padres y, de paso, los de Vicenta. Si Tomasa Fides Calvo, la mujer que murió en 1878, era la madre de los dos hermanos, lo dirán dos bodas: la de Francisco Navarro con su Tomasa y la de Tomasa Fides Calvo con Fernando Giménez. Y en el norte queda una letra. Solo la fotografía digital del microfilm de Ondategi, con más aumento, podrá decir si la niña de 1526 se escribió con una A delante. Mientras tanto, todo apunta a que la A de la familia la puso una pluma de La Mancha."
+     "x": "De la rama de la abuela quedan dos preguntas. El Registro Civil de Mula no ha encontrado la muerte del Polaco en febrero de 1905, la fecha de la carta: hay que buscarla en los años de alrededor y en las parroquias de Mula, y el papel que aparezca dirá quiénes eran sus padres y, de paso, los de Vicenta. Si Tomasa Fides Calvo, la mujer que murió en 1878, era la madre de los dos hermanos, lo dirán dos bodas: la de Francisco Navarro con su Tomasa y la de Tomasa Fides Calvo con Fernando Giménez. Y en el norte queda una letra. Solo la fotografía digital del microfilm de Ondategi, con más aumento, podrá decir si la niña de 1526 se escribió con una A delante. Mientras tanto, todo apunta a que la A de la familia la puso una pluma de La Mancha."
     },
     {
      "k": "h",
@@ -5313,8 +5313,8 @@
      "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en septiembre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
     }
    ],
-   "huella": "634b5f2f0aa16cb58faeeb92ffcdba7d47f418fe1551f0b47c901d34ec43304a",
-   "chars": 12081
+   "huella": "dbee92080479fd81777090dac195f5b9a0d4349c7f848a34e499b1ab1b2c52ea",
+   "chars": 12166
   },
   {
    "clave": "pj:P001",
