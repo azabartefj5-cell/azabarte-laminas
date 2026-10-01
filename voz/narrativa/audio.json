@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@4bce534241e38f39b5ebe2c56112babd9942d650/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@a975c97693262000b76568fea2d30390bc232291/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1809,6 +1809,53 @@
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-01T20:17:45Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@4bce534241e38f39b5ebe2c56112babd9942d650/voz/narrativa"
+  },
+  "lib:polaco": {
+   "src": "mp3/lib-polaco.mp3",
+   "huella": "3be5395670cdb1226d9d3d7b9d46a7361b8c29e80f4a9bf83149f5130ae80e9c",
+   "marcas": [
+    0.35,
+    9.52,
+    34.19,
+    67.6,
+    76.06,
+    121.85,
+    164.94,
+    167.02,
+    200.14,
+    208.71,
+    230.81,
+    256.27,
+    258.35,
+    294.57,
+    350.68,
+    408.79,
+    416.72,
+    421.25,
+    486.99,
+    489.12,
+    527.5,
+    537.51,
+    566.4,
+    613.05,
+    615.66,
+    631.48,
+    636.76,
+    648.63,
+    675.65,
+    732.98,
+    734.71,
+    768.44,
+    807.58,
+    818.55,
+    839.43
+   ],
+   "dur": 860.7,
+   "bytes": 6886572,
+   "titulo": "Capítulo décimo · El Polaco",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-01T22:33:47Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@a975c97693262000b76568fea2d30390bc232291/voz/narrativa"
   }
  }
 }
