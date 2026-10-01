@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 496700,
+ "total_caracteres": 501983,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -1347,6 +1347,30 @@
     },
     {
      "k": "h",
+     "x": "Un nombre para toda una casa"
+    },
+    {
+     "k": "p",
+     "x": "A la casa de Venus el pueblo la conoció por el nombre de su dueño: eran «los Venus», y se decía «en una punta los Venus y en la otra los Chicharras», porque las casas de las dos familias estaban en los dos extremos del caserío. Era un nombre que no llevaba nadie más. No es el de ningún santo —lo más parecido son san Venusto y san Venustiano—, fuera de esta familia no se ha encontrado otro Venus en Las Pedroñeras ni en los pueblos de alrededor, y hoy, según el Instituto Nacional de Estadística, no llegan a veinte los hombres que se llaman así en toda España."
+    },
+    {
+     "k": "p",
+     "x": "Por eso tiene sentido lo que contó Ubaldo Gallardo Azabarte: que el juzgado no admitió el nombre y lo inscribió Marcelino, y que ya casado consiguió que le pusieran el suyo. El reglamento del Registro Civil mandaba entonces no consentir «nombres extravagantes ó impropios de personas». Aun así, las actas de sus padres, en 1912 y 1914, ya lo llaman Venus, y la Gaceta de Madrid, en 1933, «don Venus Azabarte». Por qué lo eligieron Francisco y Vicenta no lo ha contado nadie, y ninguna de las explicaciones posibles tiene todavía un papel ni un recuerdo que la sostenga. Su partida de nacimiento, que se buscará con los dos nombres, dirá al menos si Marcelino fue el santo de aquel día."
+    },
+    {
+     "k": "p",
+     "x": "El nombre siguió. Lo llevó uno de los mellizos de 1918, el sargento de la defensa de Madrid. Emiliano se lo puso a su tercer hijo, que lo lleva hoy, y este a su vez al suyo, al que la familia perdió cuando era un niño y sigue teniendo muy presente. Son cuatro Venus en cuatro generaciones."
+    },
+    {
+     "k": "ct",
+     "x": "Para entenderlo: el nombre y el Registro Civil"
+    },
+    {
+     "k": "cp",
+     "x": "Desde 1871 cada nacimiento se inscribía en el Registro Civil, que en los pueblos llevaba el juzgado, además de bautizarse en la parroquia. El reglamento de 1870 dejaba a los padres elegir el nombre, pero prohibía los extravagantes y los impropios de personas, y era el encargado del registro quien decidía cuáles lo eran. Cambiar después un nombre en regla exigía el permiso del Gobierno, un anuncio en la Gaceta de Madrid y en el boletín de la provincia y una nota al margen de la partida. Las reglas se endurecieron más tarde: desde 1938 solo se admitieron nombres del santoral."
+    },
+    {
+     "k": "h",
      "x": "Los hijos de Venus en la guerra"
     },
     {
@@ -1410,8 +1434,8 @@
      "x": "Ese papel importa más de lo que parece. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Si es ella la Isidora de los Higuerillas, su madre habría muerto de parto hacia 1911 o 1912. Pero la familia recuerda a Vicenta como la mayor de las hijas de la casa, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908. Algo no encaja todavía: o Vicenta no era la mayor de los hermanos, o aquella Isidora es otra, o alguna de las cuentas se ha movido al pasar de boca en boca. No hace falta elegir. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá, y cuando llegue, este capítulo dejará de ser solo memoria."
     }
    ],
-   "huella": "f45e966b9552d9913cdf83c2826ddf4b2508e49df667f7a7306254cbe06cea2c",
-   "chars": 15119
+   "huella": "2d315321125921b9aaa3bc84c07d68de72a6aaf298842e9606aeb11344d87ee2",
+   "chars": 17310
   },
   {
    "clave": "cap:actas",
@@ -4675,7 +4699,7 @@
     },
     {
      "k": "p",
-     "x": "En La Mancha no lo llevaba casi nadie. Tan raro era que, según contó su nieto Ubaldo Gallardo Azabarte, en el juzgado no se lo admitieron y lo inscribieron Marcelino, hasta que, ya casado, consiguió que le pusieran el suyo. Lo heredaron después un hijo y un nieto, y de dónde lo sacaron sus padres sigue siendo uno de los pequeños enigmas de la casa."
+     "x": "Llevaba, además, un nombre que no llevaba nadie más en La Mancha, y que le costó, como se contará enseguida, que en el juzgado lo inscribieran con otro."
     },
     {
      "k": "p",
@@ -4683,7 +4707,35 @@
     },
     {
      "k": "p",
-     "x": "Su nombre acabó siendo el de toda su casa. En el pueblo se decía «en una punta los Venus y en la otra los Chicharras», porque la casa de una familia y la de la otra estaban en los dos extremos del caserío. Y suya es, según se recuerda en casa, la piedra clara que todavía cubre a sus padres, sacada de la cueva de las canteras y labrada con sus manos, como se ha contado."
+     "x": "Suya es también, según se recuerda en casa, la piedra clara que todavía cubre a sus padres, sacada de la cueva de las canteras y labrada con sus manos, como se ha contado."
+    },
+    {
+     "k": "h",
+     "x": "Un nombre que no estaba en el santoral"
+    },
+    {
+     "k": "p",
+     "x": "Venus no era nombre de cristiano. Venía de la mitología, no del calendario, y en la larga lista de mártires y santos que la Iglesia recuerda cada día del año no hay ninguno que se llame así. Lo más parecido son dos nombres de la misma raíz, Venusto, al que se celebra en mayo, y Venustiano, en diciembre; y en México, donde Venustiano sí se usaba, «Venus» servía para abreviarlo: al presidente Venustiano Carranza lo llamaban «don Venus»."
+    },
+    {
+     "k": "p",
+     "x": "Tampoco era nombre de la tierra. Fuera de esta familia no se ha encontrado a ningún hombre llamado Venus en Las Pedroñeras ni en los pueblos de alrededor, ni antes ni después. Y hoy, según el Instituto Nacional de Estadística, no llegan a veinte los hombres que se llaman así en toda España."
+    },
+    {
+     "k": "p",
+     "x": "Así se entiende lo que cuenta la familia. El Registro Civil funcionaba en los pueblos desde 1871, y el reglamento que lo gobernaba mandaba al encargado no consentir que a un niño se le pusieran «nombres extravagantes ó impropios de personas». Un juez de pueblo que oyera «Venus» hacia 1876 tenía donde agarrarse para negarse, y según su nieto Ubaldo Gallardo Azabarte lo inscribió Marcelino. Qué nombre le dio el cura en la pila no se sabe todavía."
+    },
+    {
+     "k": "p",
+     "x": "La familia recuerda que, ya casado, consiguió que le pusieran el suyo. Un cambio de nombre en regla pedía entonces el permiso del Gobierno, un anuncio en la Gaceta de Madrid y en el boletín de la provincia y una nota al margen de la partida, y ese anuncio no se ha encontrado. Lo que sí está en los papeles es que Venus fue Venus para todos: así lo llaman las actas de sus padres en 1912 y 1914, y en 1933 la propia Gaceta lo nombra «don Venus Azabarte», el único «don Venus» que aparece en ella. Solo su partida de nacimiento, con lo que tenga escrito al margen, dirá cómo se arregló."
+    },
+    {
+     "k": "pull",
+     "x": "Venus en la calle y en los papeles; Marcelino, quizá, solo en el libro del juzgado."
+    },
+    {
+     "k": "p",
+     "x": "Por qué se lo pusieron sus padres nadie lo ha contado. Francisco era jornalero y Vicenta lavaba la ropa de las casas pudientes; ni entre los Azabarte, ni entre los Navarro, ni entre los Fides aparece antes otro Venus, y no se conoce al padrino. Pudo ser el eco de un santo de nombre parecido, un nombre oído a alguien de fuera o el gusto de unos padres por un nombre que sonara distinto, pero ninguna de esas razones tiene, por ahora, un papel ni un recuerdo que la sostenga. Cuando llegue la partida, su fecha dirá al menos si Marcelino era el santo de aquel día: la Iglesia celebraba a un papa Marcelino el 26 de abril y a los mártires Marcelino y Pedro el 2 de junio."
     },
     {
      "k": "h",
@@ -4810,12 +4862,32 @@
      "x": "Muchos labradores no trabajaban tierras suyas, sino arrendadas: labraban las de otro y le pagaban una renta. Un decreto del 11 de julio de 1931 permitió a los arrendatarios pedir que se la rebajaran cuando era más alta que la que señalaba para aquella finca el catastro, el registro de las tierras con el que Hacienda cobraba la contribución. Como todavía no había tribunales propios para esos casos, las demandas las juzgaron los jueces de primera instancia, como el de Belmonte, y quien no quedaba conforme podía recurrir al Ministerio de Trabajo, en Madrid."
     },
     {
+     "k": "h",
+     "x": "Los Venus"
+    },
+    {
+     "k": "p",
+     "x": "Lo que empezó siendo el nombre de un niño acabó siendo el de toda su casa. En un pueblo donde tantas familias compartían apellido, a la de Venus se la conoció por él: eran «los Venus». En el pueblo se decía «en una punta los Venus y en la otra los Chicharras», porque las casas de las dos familias estaban en los dos extremos del caserío."
+    },
+    {
+     "k": "pull",
+     "x": "Un nombre que no admitió el juzgado acabó dando nombre a una casa."
+    },
+    {
+     "k": "p",
+     "x": "Y el nombre siguió en la familia. Venus y Encarnación se lo pusieron a uno de los mellizos de 1918, el que defendió Madrid y llegó a sargento. Emiliano, el pequeño de la casa, llamó Venus a su tercer hijo, que lo lleva hoy. Y él se lo dio a su vez a su hijo, al que la familia perdió cuando era un niño y al que sigue teniendo muy presente."
+    },
+    {
+     "k": "p",
+     "x": "Son cuatro Venus en cuatro generaciones, del abuelo al bisnieto, con un nombre que fuera de esta casa no llevaba nadie. En el pueblo, el nombre acabó haciendo el oficio de un apellido."
+    },
+    {
      "k": "p",
      "x": "Encarnación murió en 1943, con unos cincuenta y tres años, y Venus tres años después, en 1946. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "5c6dbbc5a0a122dd096350abf840a0eaab4871f110fdfa02449d549f1d59cd0c",
-   "chars": 11429
+   "huella": "13eaee672bb20fcae84a4abbd29e33f16f2ab7af846f355dc0b2012156507e6b",
+   "chars": 14521
   },
   {
    "clave": "lib:guerra",
