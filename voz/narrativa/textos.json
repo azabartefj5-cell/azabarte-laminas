@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 502628,
+ "total_caracteres": 495904,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -47,7 +47,7 @@
     },
     {
      "k": "p",
-     "x": "En la calle Fray Luis de León de Las Pedroñeras hubo una casa con ocho hermanos. El menor se llamaba Juan de Mata en el papel, pero nadie lo llamó nunca de otro modo que Emiliano, y con ese nombre lo recuerdan sus nietos. Uno de ellos, Francisco Javier, creció oyendo a su madre, Pilar, hablar de la casa del abuelo Venus, de la prima Camila y de dónde venían los Azabarte. Un día se puso a preguntar en serio, y de aquellas preguntas nacen estas páginas."
+     "x": "En la calle Fray Luis de León de Las Pedroñeras hubo una casa con ocho hermanos. El menor se llamaba Juan de Mata en el papel, pero nadie lo llamó nunca de otro modo que Emiliano, y con ese nombre lo recuerdan sus nietos. Uno de ellos, Francisco Javier, creció oyendo a su madre, Pilar, hablar de la casa del abuelo Venus y de dónde venían los Azabarte. Un día se puso a preguntar en serio, y de aquellas preguntas nacen estas páginas."
     },
     {
      "k": "p",
@@ -71,7 +71,7 @@
     },
     {
      "k": "p",
-     "x": "No fueron los únicos. La familia recuerda que Francisco y Vicenta tuvieron muchos más hijos —nueve, dicen unos; once, otros— y que solo cinco llegaron a mayores. Esa memoria, como se verá en el capítulo de las leyendas, resolvió uno de los enigmas más queridos de la casa: el de la prima Camila."
+     "x": "No fueron los únicos. La familia recuerda que Francisco y Vicenta tuvieron muchos más hijos —nueve, dicen unos; once, otros— y que solo cinco llegaron a mayores. Esa memoria explica por qué las actas de los padres nombran solo a tres: las dos hijas mayores habían muerto antes que ellos."
     },
     {
      "k": "p",
@@ -158,8 +158,8 @@
      "x": "Un nombre repetido en un papel viejo no convierte a nadie en pariente."
     }
    ],
-   "huella": "2e9669ba5bf4baa3fbc0d1276fba117797a0dcb005b33c2c08dfe82d05d2a5f7",
-   "chars": 9830
+   "huella": "759aa20b9f0806570af7d3f4750147ff180e43c4d5fae426c5861ce5ee9e0363",
+   "chars": 9802
   },
   {
    "clave": "cap:pueblo",
@@ -325,7 +325,7 @@
     },
     {
      "k": "lede",
-     "x": "Todas las familias cuentan de dónde vienen. En esta se decía que venían de Francia, o del norte con los carlistas; que los Navarro eran de Navarra y los Fides, valencianos; que hubo una «hermana Camila» que no cabía en ninguna parte del árbol; y que la A del apellido tenía un origen escondido. Este capítulo pone cada historia al lado de los papeles, y cuenta lo que ha quedado de ella."
+     "x": "Todas las familias cuentan de dónde vienen. En esta se decía que los Azabarte habían venido del norte, de Navarra o del País Vasco, con un carlista o un soldado desertor de aquellas guerras; que los Navarro eran de Navarra y los Fides, valencianos; y que la A del apellido tenía un origen escondido. Más tarde, un pariente añadió que venían de Francia, algo que había leído en internet. Este capítulo pone cada historia al lado de los papeles, y cuenta lo que ha quedado de ella."
     },
     {
      "k": "ch",
@@ -333,11 +333,11 @@
     },
     {
      "k": "cl",
-     "x": "El apellido no vino de Francia: en lo que las grandes bases de genealogía guardan de allí no hay ningún Azabarte antiguo, y los papeles que hay llevan el apellido de Elgeta, en el valle del Deba, a tierras de Cuenca, aunque todavía no hasta la familia."
+     "x": "Del norte, sí; con los carlistas, no: en casa se decía que el primero vino de Navarra o del País Vasco con aquellas guerras. El apellido es, en efecto, de una casa de Gipuzkoa, pero la familia ya estaba en el pueblo en 1798, treinta y cinco años antes de la primera."
     },
     {
      "k": "cl",
-     "x": "Las guerras carlistas llegan tarde: la familia ya estaba en el pueblo en 1798, treinta y cinco años antes de la primera."
+     "x": "El apellido no vino de Francia: en lo que las grandes bases de genealogía guardan de allí no hay ningún Azabarte antiguo, y los papeles que hay llevan el apellido de Elgeta, en el valle del Deba, a tierras de Cuenca, aunque todavía no hasta la familia."
     },
     {
      "k": "cl",
@@ -345,11 +345,35 @@
     },
     {
      "k": "cl",
-     "x": "La prima Camila encontró su sitio: según recuerda otra rama de la familia, era nieta de Francisco y Vicenta, hija de su hija mayor."
+     "x": "La A, con toda probabilidad, no la trajo nadie de fuera: la ponían y la quitaban las plumas de curas y escribanos."
     },
     {
-     "k": "cl",
-     "x": "La A, con toda probabilidad, no la trajo nadie de fuera: la ponían y la quitaban las plumas de curas y escribanos."
+     "k": "h",
+     "x": "«Vinieron del norte, con los carlistas»"
+    },
+    {
+     "k": "p",
+     "x": "Es lo que se contaba en casa: que los Azabarte habían venido del norte, de Navarra o del País Vasco, y que el primero debió de ser un carlista, o un soldado que desertó de aquellas guerras y se quedó en el pueblo. La fecha no encaja. El acta de 1912 lo dice con una sola línea: Francisco era «natural de esta villa», y sus padres, Pablo y Blasa, también. Si alguien vino de fuera, vino antes. Y los libros de la parroquia han retrasado ese «antes» hasta 1798, cuando Pedro Azabarte ya se casaba en Las Pedroñeras, treinta y cinco años antes de que empezara la primera guerra carlista."
+    },
+    {
+     "k": "p",
+     "x": "Ubaldo Gallardo Azabarte tiene además su propia idea: que el apellido lo trajo un guardia civil de Bilbao o de San Sebastián, «hace cinco generaciones», porque el apellido «suena a vasco». Es una suposición suya, no un recuerdo heredado, y las fechas no le dejan sitio: la Guardia Civil se fundó en 1844, cuando los Azabarte llevaban casi medio siglo en el pueblo."
+    },
+    {
+     "k": "p",
+     "x": "Así que el norte de la leyenda no se descarta: se aleja en el tiempo, y más de lo que nadie en casa imaginaba. El apellido Zabarte nació en Gipuzkoa y ya había bajado a tierras de Cuenca en el siglo dieciséis, dos siglos y medio antes de la boda de Pedro. Lo que aún no cuenta ningún papel es si la familia de Pedro desciende de aquellos Zabarte o llegó por otro camino."
+    },
+    {
+     "k": "p",
+     "x": "Las guerras carlistas sí dejaron huella en la memoria de la familia, pero en otra historia: la de Juan, el hermano de Vicenta Navarro al que llamaban «el Polaco», que, según cuenta la familia, se fue voluntario a la caballería carlista. Se cuenta en el capítulo «Los que se marcharon»."
+    },
+    {
+     "k": "ct",
+     "x": "Un apunte de época: las guerras carlistas"
+    },
+    {
+     "k": "cp",
+     "x": "En el siglo diecinueve España tuvo tres guerras civiles por la corona. Enfrentaron a los partidarios de don Carlos, hermano del rey Fernando, y después a los de sus herederos, con los de la reina Isabel, hija de Fernando, y los gobiernos liberales. La primera duró de 1833 a 1840, la segunda de 1846 a 1849 y la tercera de 1872 a 1876. Muchos mozos de los pueblos se alistaron en uno u otro bando, y de aquellas campañas salieron no pocas historias de familia."
     },
     {
      "k": "h",
@@ -357,7 +381,7 @@
     },
     {
      "k": "p",
-     "x": "Es la frase que más se ha repetido en la familia, y la que puso en marcha esta investigación. Al tirar del hilo resultó más reciente de lo que parecía. Ubaldo Gallardo Azabarte contó que lo de Francia lo había leído en internet; su hermano Francisco lo cuenta igual, con otras palabras, «un soldado por aquí se quedó»; y Juan Ortiz Pacheco «el Pollo» pensaba más bien en un valle del Pirineo catalán, por algo que había leído él mismo."
+     "x": "No es lo que se contaba en la familia. La idea la trajo Ubaldo Gallardo Azabarte, que la había leído en internet, y en casa nadie la había oído hasta entonces. Su hermano Francisco la cuenta con otras palabras, «un soldado por aquí se quedó», y Juan Ortiz Pacheco «el Pollo» pensaba más bien en un valle del Pirineo catalán, por algo que había leído él mismo. Aun así, fue una de las preguntas que pusieron en marcha esta búsqueda."
     },
     {
      "k": "p",
@@ -373,7 +397,7 @@
     },
     {
      "k": "p",
-     "x": "Queda un parecido de sonido. En el Ariège, al otro lado del Pirineo, hay un lugar llamado Sabart, documentado desde el siglo nueve, y su nombre recuerda a Zabarte. Pero Sabart tiene su propia explicación en la lengua de allí, y Zabarte la tiene en la de aquí, entre los nombres vascos de casa terminados en «-arte». Y la forma con s, Sabarte, no hace falta ir a buscarla fuera: los repertorios de apellidos la recogen en Mondragón y en Angiozar, y en Álava el mismo apellido se escribió unas veces con z y otras con s. En el sur de Francia también hay Sabarte desde el siglo dieciséis, pero es un apellido propio de aquella tierra, y en las bases que se han recorrido ninguno de ellos aparece al sur de los Pirineos. Con todo esto a la vista, se puede decir ya que el apellido no vino de Francia. La frase de la familia sigue siendo un recuerdo, y como recuerdo se guarda."
+     "x": "Queda un parecido de sonido. En el Ariège, al otro lado del Pirineo, hay un lugar llamado Sabart, documentado desde el siglo nueve, y su nombre recuerda a Zabarte. Pero Sabart tiene su propia explicación en la lengua de allí, y Zabarte la tiene en la de aquí, entre los nombres vascos de casa terminados en «-arte». Y la forma con s, Sabarte, no hace falta ir a buscarla fuera: los repertorios de apellidos la recogen en Mondragón y en Angiozar, y en Álava el mismo apellido se escribió unas veces con z y otras con s. En el sur de Francia también hay Sabarte desde el siglo dieciséis, pero es un apellido propio de aquella tierra, y en las bases que se han recorrido ninguno de ellos aparece al sur de los Pirineos. Con todo esto a la vista, se puede decir ya que el apellido no vino de Francia. La frase queda como lo que fue: una lectura reciente, no un recuerdo de la casa."
     },
     {
      "k": "ct",
@@ -381,35 +405,7 @@
     },
     {
      "k": "cp",
-     "x": "Una leyenda de familia no es una mentira. Es la manera en que una familia se explica a sí misma, y a menudo guarda algo cierto aunque se equivoque en los detalles: en este caso, la idea de que el apellido vino de lejos. Zabarte es, en efecto, el nombre de una casa del norte; lo que todavía no se sabe es si la familia viene de ella, ni por qué camino, y ningún papel lleva ese lejos hasta Francia. Estas páginas no borran ninguna leyenda. Las ponen al lado de los documentos, para que cada cual vea dónde coinciden y dónde no."
-    },
-    {
-     "k": "h",
-     "x": "«Vinieron del norte con las guerras carlistas»"
-    },
-    {
-     "k": "p",
-     "x": "La otra versión situaba la llegada en el siglo diecinueve, con las guerras carlistas. El acta de 1912 la desmonta con una sola línea: Francisco era «natural de esta villa», y sus padres, Pablo y Blasa, también. Si alguien vino de fuera, vino antes. Y los libros de la parroquia han retrasado ese «antes» hasta 1798, cuando Pedro Azabarte ya se casaba en Las Pedroñeras, treinta y cinco años antes de que empezara la primera guerra carlista."
-    },
-    {
-     "k": "p",
-     "x": "Ubaldo Gallardo Azabarte tiene además su propia idea: que el apellido lo trajo un guardia civil de Bilbao o de San Sebastián, «hace cinco generaciones», porque el apellido «suena a vasco». Es una suposición suya, no un recuerdo heredado, y las fechas no le dejan sitio: la Guardia Civil se fundó en 1844, cuando los Azabarte llevaban casi medio siglo en el pueblo."
-    },
-    {
-     "k": "p",
-     "x": "Así que el norte no se descarta: se aleja en el tiempo, y más de lo que nadie en casa imaginaba. El apellido Zabarte nació en Gipuzkoa y ya había bajado a tierras de Cuenca en el siglo dieciséis, dos siglos y medio antes de la boda de Pedro. Lo que aún no cuenta ningún papel es si la familia de Pedro desciende de aquellos Zabarte o llegó por otro camino."
-    },
-    {
-     "k": "p",
-     "x": "Las guerras carlistas sí dejaron huella en la memoria de la familia, pero en otra historia: la de Juan, el hermano de Vicenta Navarro al que llamaban «el Polaco», que, según cuenta la familia, se fue voluntario a la caballería carlista. Se cuenta en el capítulo «Los que se marcharon»."
-    },
-    {
-     "k": "ct",
-     "x": "Un apunte de época: las guerras carlistas"
-    },
-    {
-     "k": "cp",
-     "x": "En el siglo diecinueve España tuvo tres guerras civiles por la corona. Enfrentaron a los partidarios de don Carlos, hermano del rey Fernando, y después a los de sus herederos, con los de la reina Isabel, hija de Fernando, y los gobiernos liberales. La primera duró de 1833 a 1840, la segunda de 1846 a 1849 y la tercera de 1872 a 1876. Muchos mozos de los pueblos se alistaron en uno u otro bando, y de aquellas campañas salieron no pocas historias de familia."
+     "x": "Una leyenda de familia no es una mentira. Es la manera en que una familia se explica a sí misma, y a menudo guarda algo cierto aunque se equivoque en los detalles. Lo que se contaba en esta casa, que el apellido había venido del norte, coincide con lo que dicen los papeles del nombre: Zabarte es, en efecto, una casa de Gipuzkoa. Lo que todavía no se sabe es si la familia viene de ella, ni por qué camino. Estas páginas no borran ninguna leyenda. Las ponen al lado de los documentos, para que cada cual vea dónde coinciden y dónde no."
     },
     {
      "k": "h",
@@ -433,22 +429,6 @@
     },
     {
      "k": "h",
-     "x": "«La hermana Camila»"
-    },
-    {
-     "k": "p",
-     "x": "Toda la familia recordaba a una Camila con Azabarte de segundo apellido, sobrina del abuelo Venus y prima del abuelo Emiliano, pero mucho mayor que él. En casa la llamaban «la hermana Camila», y no cabía en ningún sitio: Francisco y Vicenta, según las actas, dejaron tres hijos, y ninguna de las dos hijas vivas podía ser su madre."
-    },
-    {
-     "k": "p",
-     "x": "La pieza que faltaba la trajo otra rama de la familia. Francisco y Vicenta no tuvieron tres hijos, sino muchos más —nueve u once, según quién lo cuente—, y solo cinco llegaron a mayores. Las actas nombran únicamente a los que seguían vivos en 1912 y 1914. Dos hijas, Vicenta y otra a la que se recuerda como Isidora, habían muerto antes que sus padres, y Camila era hija de esa Vicenta, la mayor. Nieta de Francisco, sobrina de Venus, prima de Emiliano: todo encaja sin forzar nada."
-    },
-    {
-     "k": "p",
-     "x": "Falta el papel que lo confirme, y es un papel que tiene que existir: Camila nació cuando ya había Registro Civil, y su inscripción de nacimiento debe llevar el nombre de su madre. El año no se sabe. Se recuerda que le llevaba dieciséis años a su media hermana Isidora, y si esa Isidora es, como se ha creído, la Isidora López Azabarte que según su lápida nació en 1907 o en 1908, Camila habría nacido hacia 1891 o 1892. Quiénes fueron su padre y sus hijos, y cómo se supo todo esto, se cuenta en el capítulo «Lo que se cuenta en la calle Fray Luis de León»."
-    },
-    {
-     "k": "h",
      "x": "Los dos Galindo"
     },
     {
@@ -468,8 +448,8 @@
      "x": "La única vez que un libro de Álava escribe la A con seguridad es en un bautizo de Vitoria de 1725, y allí no nace de ninguna suma: el escribiente se la puso a la madre del niño y también a su abuelo, que no tenía nada de Azedo, y quien firmaba aquel libro había escrito Zabarte, sin A, en la boda de los padres. La A aparece y desaparece según quién tenga la pluma. Lo que se sabe de la A de Las Pedroñeras se cuenta, paso a paso, en el capítulo «Un camino a medio andar»."
     }
    ],
-   "huella": "48747313317c855c587d29bd72589377d2ae816a4ba07447c38c372ef9dd0a4a",
-   "chars": 11149
+   "huella": "d05206983a744eb02ec23c7139cfb6a5e6aeda0dea1796738a21c1146058b81e",
+   "chars": 10028
   },
   {
    "clave": "cap:genesis",
@@ -1259,7 +1239,7 @@
     },
     {
      "k": "lede",
-     "x": "Los papeles decían que Francisco y Vicenta habían dejado tres hijos. La familia recordaba otra cosa, y lo que recordaba encaja con los papeles. Este capítulo recoge lo que se recuerda en la calle donde vivieron todos, contado por quienes lo oyeron a sus mayores: cuatro conversaciones y una carta escrita a mano, entre agosto y septiembre de 2026, que devolvieron a la historia dos hijas olvidadas, varios niños que no llegaron a crecer, una nieta llamada Camila y un nombre que nadie sabía escribir. Al final, un periódico de la guerra civil viene a confirmar en lo esencial otro de esos recuerdos: el de Venus, el hijo, en el frente de Madrid."
+     "x": "Los papeles decían que Francisco y Vicenta habían dejado tres hijos. La familia recordaba otra cosa, y lo que recordaba encaja con los papeles. Este capítulo recoge lo que se recuerda en la calle donde vivieron todos, contado por quienes lo oyeron a sus mayores: cuatro conversaciones y una carta escrita a mano, entre agosto y septiembre de 2026, que devolvieron a la historia dos hijas olvidadas, varios niños que no llegaron a crecer y un nombre que nadie sabía escribir. Al final, un periódico de la guerra civil viene a confirmar en lo esencial otro de esos recuerdos: el de Venus, el hijo, en el frente de Madrid."
     },
     {
      "k": "ch",
@@ -1268,10 +1248,6 @@
     {
      "k": "cl",
      "x": "Francisco y Vicenta tuvieron nueve u once hijos, según quién lo cuente. Cinco llegaron a mayores, y las actas de 1912 y 1914 nombran solo a los tres que seguían vivos."
-    },
-    {
-     "k": "cl",
-     "x": "Camila, a la que todos tenían por prima del abuelo Emiliano, era, según recuerda la familia, nieta de Francisco y Vicenta: la hija de Vicenta, la mayor de las hijas."
     },
     {
      "k": "cl",
@@ -1287,11 +1263,11 @@
     },
     {
      "k": "h",
-     "x": "El enigma de Camila"
+     "x": "Tres hijos en las actas"
     },
     {
      "k": "p",
-     "x": "El 29 de agosto de 2026, Pilar Azabarte Arellano, hija de Emiliano, se sentó con su hijo delante de las actas fotografiadas de sus bisabuelos. Quería encajar a «la hermana Camila», una mujer que llevaba Azabarte de segundo apellido, se había criado con sus abuelos, huérfana de madre, y al morir estos había elegido irse a vivir con su «tío Venus». Todo el mundo la recordaba como sobrina de Venus y prima de Emiliano. Pero Emiliano nació en 1922, y Camila era mucho mayor que él. Y las actas de 1912 y 1914 solo nombraban tres hijos, el primero Venus y la última Bonifacia. De cuál de ellos podía ser hija Camila fue lo que aquella tarde no salió."
+     "x": "El 29 de agosto de 2026, Pilar Azabarte Arellano, hija de Emiliano, se sentó con su hijo delante de las actas fotografiadas de sus bisabuelos. Se acababa de acordar de una prima de su padre, «la hermana Camila», que llevaba Azabarte de segundo apellido y se había criado con los abuelos, huérfana de madre, y que al morir ellos se fue a vivir a la casa de su «tío Venus», con sus primos. ¿De quién era hija? Las actas de 1912 y 1914 solo nombraban tres hijos, el primero Venus y la última Bonifacia, y ninguno encajaba. Aquella tarde no salió."
     },
     {
      "k": "p",
@@ -1311,7 +1287,7 @@
     },
     {
      "k": "p",
-     "x": "En la rama de Venus se cuenta que eligió al tío Venus y creció en su casa con su prima Eugenia hasta casarse; en la de Bonifacia, que fue la abuela Vicenta quien la tuvo en casa y la casó desde ella. Las dos versiones se guardan. De cualquiera de las dos sale lo mismo: Emiliano, el pequeño de la casa de Venus, la tuvo por prima toda la vida. Bonifacia, la menor de los hermanos, nació cuando su madre rondaba los cincuenta años, y era solo tres años mayor que su sobrina Camila. De la otra hija mayor, aquella cuyo nombre se ha perdido, viene una rama numerosa a la que en el pueblo llaman «los Cabreros», porque el padre de la casa fue cabrero."
+     "x": "En la rama de Venus se cuenta que eligió al tío Venus y creció en su casa con su prima Eugenia hasta casarse; en la de Bonifacia, que fue la abuela Vicenta quien la tuvo en casa y la casó desde ella. Las dos versiones se guardan. Bonifacia, la menor de los hermanos, nació cuando su madre rondaba los cincuenta años, y era solo tres años mayor que su sobrina Camila. De la otra hija mayor, aquella cuyo nombre se ha perdido, viene una rama numerosa a la que en el pueblo llaman «los Cabreros», porque el padre de la casa fue cabrero."
     },
     {
      "k": "h",
@@ -1407,7 +1383,7 @@
     },
     {
      "k": "p",
-     "x": "Todo lo que cuenta este capítulo tiene nombre y apellido. Pilar Azabarte Arellano trajo el recuerdo de Camila y de la casa del abuelo Venus. Juan Ortiz Pacheco «el Pollo» contó lo que le había contado su padre, Juan Vicente, mientras iban juntos al campo —«yo era un preguntón», dice—, y a su padre se lo había contado la Boni: tres voces encadenadas que llegan hasta los años de Francisco y Vicenta. Ubaldo Gallardo Azabarte, nieto de Venus, habló por teléfono de la casa de su abuelo, de los ocho hermanos y de los dos tiros de 1914."
+     "x": "Todo lo que cuenta este capítulo tiene nombre y apellido. Pilar Azabarte Arellano trajo el recuerdo de la casa del abuelo Venus y de los parientes de la calle. Juan Ortiz Pacheco «el Pollo» contó lo que le había contado su padre, Juan Vicente, mientras iban juntos al campo —«yo era un preguntón», dice—, y a su padre se lo había contado la Boni: tres voces encadenadas que llegan hasta los años de Francisco y Vicenta. Ubaldo Gallardo Azabarte, nieto de Venus, habló por teléfono de la casa de su abuelo, de los ocho hermanos y de los dos tiros de 1914."
     },
     {
      "k": "p",
@@ -1427,15 +1403,15 @@
     },
     {
      "k": "p",
-     "x": "En el caso de Camila, el papel que lo confirmaría existe y se puede pedir: su inscripción en el Registro Civil de Las Pedroñeras, con el nombre de su madre escrito. Y hay otro más sencillo todavía, el nacimiento de Isidora López Azabarte, a la que se tiene por su media hermana, que nombraría a la madre de las dos."
+     "x": "En el caso de las hijas mayores, el papel más sencillo es el nacimiento de Isidora López Azabarte, a la que se tiene por hija de Vicenta, la mayor: su inscripción en el Registro Civil de Las Pedroñeras nombraría a su madre."
     },
     {
      "k": "p",
-     "x": "Ese papel importa más de lo que parece. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Si es ella la Isidora de los Higuerillas, su madre habría muerto de parto hacia 1911 o 1912, y Camila, que le llevaba dieciséis años, habría nacido hacia 1891 o 1892. Pero la familia recuerda a Vicenta como la mayor de las hijas de la casa, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908. Algo no encaja todavía: o Vicenta no era la mayor de los hermanos, o aquella Isidora es otra, o alguna de las cuentas se ha movido al pasar de boca en boca. No hace falta elegir. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá, y cuando llegue, este capítulo dejará de ser solo memoria."
+     "x": "Ese papel importa más de lo que parece. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Si es ella la Isidora de los Higuerillas, su madre habría muerto de parto hacia 1911 o 1912. Pero la familia recuerda a Vicenta como la mayor de las hijas de la casa, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908. Algo no encaja todavía: o Vicenta no era la mayor de los hermanos, o aquella Isidora es otra, o alguna de las cuentas se ha movido al pasar de boca en boca. No hace falta elegir. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá, y cuando llegue, este capítulo dejará de ser solo memoria."
     }
    ],
-   "huella": "aff9de2265360464cff200dec80a4ce62d1ad2c87d66ccfb16fee292998c3b55",
-   "chars": 15672
+   "huella": "f45e966b9552d9913cdf83c2826ddf4b2508e49df667f7a7306254cbe06cea2c",
+   "chars": 15119
   },
   {
    "clave": "cap:actas",
@@ -1548,7 +1524,7 @@
     },
     {
      "k": "p",
-     "x": "Quedan dos pistas que nadie ha seguido todavía: los dos testamentos. El de Francisco, ante Justino Zapata, y el de Vicenta, ante Enrique Serrano Martí, deben de estar en los protocolos de los notarios de la comarca, que se guardan en el Archivo Histórico Provincial de Cuenca. Un testamento de aquella época suele nombrar a todos los hijos, a los vivos y a los que murieron dejando descendencia, y a veces también a los nietos: sería la manera de poner nombre, de una vez, a las dos hijas mayores, y quizá también a Camila."
+     "x": "Quedan dos pistas que nadie ha seguido todavía: los dos testamentos. El de Francisco, ante Justino Zapata, y el de Vicenta, ante Enrique Serrano Martí, deben de estar en los protocolos de los notarios de la comarca, que se guardan en el Archivo Histórico Provincial de Cuenca. Un testamento de aquella época suele nombrar a todos los hijos, a los vivos y a los que murieron dejando descendencia, y a veces también a los nietos: sería la manera de poner nombre, de una vez, a las dos hijas mayores."
     },
     {
      "k": "ct",
@@ -1559,8 +1535,8 @@
      "x": "Cuando alguien hacía testamento, vendía una tierra o daba un poder, lo hacía ante un notario, al que antes se llamaba escribano. El notario escribía el documento, lo hacía firmar y guardaba el original en un libro que se encuadernaba cada año: el protocolo. Pasados cien años, esos libros van a los archivos históricos de cada provincia, donde se pueden consultar. Muchos secretos de familia duermen allí."
     }
    ],
-   "huella": "fd986126d28ad3c934346c47ff92d6dbbe1223faa40ee1f7cc308584d044dccd",
-   "chars": 6645
+   "huella": "443bb516acf18988a9fbc949407c2500ea14b30f0645e5ace881b8d1c7135b77",
+   "chars": 6619
   },
   {
    "clave": "cap:contexto",
@@ -1605,7 +1581,7 @@
     },
     {
      "k": "p",
-     "x": "En esos mismos libros esperan las inscripciones que cerrarían casi todo lo que la memoria cuenta. Está el nacimiento de Venus, hacia 1876, quizá con el nombre de Marcelino, y los de sus ocho hijos, entre 1907 y 1922. Están el de Camila y el de Isidora López Azabarte, nacida en 1907 o en 1908, a la que se tiene por su media hermana. Cada una es una certificación que se pide en una ventanilla, y cada una puede cambiar una página de esta historia."
+     "x": "En esos mismos libros esperan las inscripciones que cerrarían casi todo lo que la memoria cuenta. Está el nacimiento de Venus, hacia 1876, quizá con el nombre de Marcelino, y los de sus ocho hijos, entre 1907 y 1922. Está el de Isidora López Azabarte, nacida en 1907 o en 1908, a la que se tiene por hija de Vicenta, la mayor de las hijas. Cada una es una certificación que se pide en una ventanilla, y cada una puede cambiar una página de esta historia."
     },
     {
      "k": "ct",
@@ -1684,8 +1660,8 @@
      "x": "La lámina de este capítulo es el edificio de Correos de Vitoria, de 1928, mucho más moderno que cualquier papel de esta historia. Está aquí porque buena parte de esta investigación se ha hecho por carta: peticiones a los archivos, respuestas de los archiveros, fotografías que llegan por correo y una carta escrita a mano por un pariente. Hay peticiones que se contestan en un día y otras que llevan semanas esperando. Sin quienes las leen y las contestan, al otro lado de cada ventanilla, no habría historia que contar."
     }
    ],
-   "huella": "045e5994efa6a95f2d9c41e09fd245c843903b0bb5d7ec77a3989a260f5b714e",
-   "chars": 7621
+   "huella": "158e99b7128c93f25d1603188231240642623ccd1d2f752848580d21820bd350",
+   "chars": 7627
   },
   {
    "clave": "cap:metodo",
@@ -2660,11 +2636,11 @@
     },
     {
      "k": "p",
-     "x": "De las dos hijas mayores de Francisco y Vicenta no hay todavía ningún documento. De Vicenta, la madre de Camila, se sabe por dos ramas de la familia; de la otra, ni siquiera el nombre es seguro: se la recuerda como Isidora, pero en una de las ramas ese nombre es una deducción y no un recuerdo. De los niños que murieron pequeños no se recuerda ni cuántos fueron. Todos deben de estar en los libros de bautismos y de entierros de la parroquia, y en el Registro Civil los que nacieron después de 1871."
+     "x": "De las dos hijas mayores de Francisco y Vicenta no hay todavía ningún documento. De Vicenta, la mayor, se sabe por dos ramas de la familia; de la otra, ni siquiera el nombre es seguro: se la recuerda como Isidora, pero en una de las ramas ese nombre es una deducción y no un recuerdo. De los niños que murieron pequeños no se recuerda ni cuántos fueron. Todos deben de estar en los libros de bautismos y de entierros de la parroquia, y en el Registro Civil los que nacieron después de 1871."
     },
     {
      "k": "p",
-     "x": "El papel más barato y que más cierra es el nacimiento de Isidora López Azabarte, que según su lápida nació entre agosto de 1907 y agosto de 1908. Se la tiene por la media hermana de Camila, y en ese caso su partida nombrará a su madre, Vicenta Azabarte Navarro, y probará que existió. Dirá también si las cuentas del recuerdo se sostienen, porque con esa fecha no encajan del todo: una hija mayor nacida hacia 1860 difícilmente daba a luz en 1908. Después vendrían el de Camila, el de Venus, que quizá se inscribió como Marcelino, y los de sus ocho hijos. Y los dos testamentos de los abuelos, ante los notarios Justino Zapata y Enrique Serrano Martí, que pueden nombrar de una vez a todos los hijos."
+     "x": "El papel más barato y que más cierra es el nacimiento de Isidora López Azabarte, que según su lápida nació entre agosto de 1907 y agosto de 1908. Se la tiene por hija de esa Vicenta, y en ese caso su partida nombrará a su madre, Vicenta Azabarte Navarro, y probará que existió. Dirá también si las cuentas del recuerdo se sostienen, porque con esa fecha no encajan del todo: una hija mayor nacida hacia 1860 difícilmente daba a luz en 1908. Después vendrían el de Venus, que quizá se inscribió como Marcelino, y los de sus ocho hijos. Y los dos testamentos de los abuelos, ante los notarios Justino Zapata y Enrique Serrano Martí, que pueden nombrar de una vez a todos los hijos."
     },
     {
      "k": "h",
@@ -2739,8 +2715,8 @@
      "x": "A los más pequeños de la casa se les puede proponer un juego: preguntar a sus abuelos cómo se llamaban los abuelos de ellos, y apuntarlo en un papel con la fecha. Preguntas como esa, hechas a tiempo, son las que pusieron en marcha esta historia."
     }
    ],
-   "huella": "a34cb49c0cbf2c4b23249f9b8b50c356347c2d955debdaba2277d2085d076051",
-   "chars": 9781
+   "huella": "35f3b6b906ee9db5179d8dc8f340e296c3b9cb08009b28585f6d169cbabd4c38",
+   "chars": 9750
   },
   {
    "clave": "cap:glosario",
@@ -2810,7 +2786,7 @@
     },
     {
      "k": "p",
-     "x": "Entre los hijos de Francisco y Vicenta hubo uno, Venus, que tuvo ocho. El menor de los ocho se llamaba Emiliano, y uno de sus nietos, Francisco Javier García Azabarte, creció oyendo a su madre, Pilar Azabarte Arellano, hablar de la casa del abuelo Venus, de la prima Camila y de dónde venían los Azabarte. Pilar es la memoria viva de aquel barrio: recuerda quién era quién en la calle y cómo trataba su padre, Emiliano, a la prima Camila. De las conversaciones entre madre e hijo nació la pregunta, y un día él se puso a buscar la respuesta en serio. De aquella búsqueda salen estas páginas."
+     "x": "Entre los hijos de Francisco y Vicenta hubo uno, Venus, que tuvo ocho. El menor de los ocho se llamaba Emiliano, y uno de sus nietos, Francisco Javier García Azabarte, creció oyendo a su madre, Pilar Azabarte Arellano, hablar de la casa del abuelo Venus y de dónde venían los Azabarte. Pilar es la memoria viva de aquel barrio: recuerda quién era quién en la calle y en qué casa vivía cada pariente. De las conversaciones entre madre e hijo nació la pregunta, y un día él se puso a buscar la respuesta en serio. De aquella búsqueda salen estas páginas."
     },
     {
      "k": "h",
@@ -2818,11 +2794,11 @@
     },
     {
      "k": "p",
-     "x": "Todas las familias cuentan de dónde vienen, y esta tenía varias respuestas. La que más se ha repetido, y la que puso en marcha la búsqueda, cabe en tres palabras: «venimos de Francia». Otros decían que los Azabarte habían llegado del norte con las guerras carlistas del siglo diecinueve. Y de los apellidos de la abuela Vicenta se decía que los Navarro se llamaban así porque venían de Navarra, y que Fides era apellido valenciano."
+     "x": "Todas las familias cuentan de dónde vienen. En esta se contaba que los Azabarte habían venido del norte, de Navarra o del País Vasco, y que el primero debió de ser un carlista, o un soldado que desertó de aquellas guerras y se quedó en el pueblo. De los apellidos de la abuela Vicenta se decía que los Navarro se llamaban así porque venían de Navarra, y que Fides era apellido valenciano. Mucho después, ya con la búsqueda en marcha, un pariente añadió otra idea, «venimos de Francia», que había leído en internet y que en casa nadie había oído hasta entonces."
     },
     {
      "k": "p",
-     "x": "Había también un enigma de puertas adentro. Toda la familia recordaba a una Camila que llevaba Azabarte de segundo apellido, sobrina del abuelo Venus y prima de Emiliano, aunque mucho mayor que él. En casa la llamaban «la hermana Camila», y no cabía en ningún sitio del árbol. Se decía, además, que la A con que empieza el apellido tenía un origen escondido. Y se daba por hecho que el Galindo que llevaban Emiliano y sus hermanos venía de muy atrás, de la madre de aquel Francisco de la lápida."
+     "x": "Había también algunas cosas de puertas adentro que nadie sabía explicar. Se decía que la A con que empieza el apellido tenía un origen escondido. Y se daba por hecho que el Galindo que llevaban Emiliano y sus hermanos venía de muy atrás, de la madre de aquel Francisco de la lápida."
     },
     {
      "k": "p",
@@ -2861,8 +2837,8 @@
      "x": "Para empezar por el principio hay que dejar la piedra clara donde está e irse muy lejos y muy atrás: unos cuatrocientos kilómetros al norte, a un valle de Gipuzkoa donde, hace más de quinientos años, un caserío daba su nombre a quienes vivían en él."
     }
    ],
-   "huella": "3ca1eb12bd4718a31d6b1f7f5b191f985920b438bebaf0afb7d435b0ad09e4e3",
-   "chars": 5460
+   "huella": "89fb16e189a2831b91d0aef41394242f2c652fbb0555bc9bc4466b531c5e8e57",
+   "chars": 5337
   },
   {
    "clave": "lib:casa",
@@ -3575,7 +3551,7 @@
     },
     {
      "k": "p",
-     "x": "Y está la frase que más se ha repetido en la familia: que venían de Francia. Ubaldo Gallardo Azabarte contó que lo había leído en internet, y su hermano Francisco lo cuenta con otras palabras, «un soldado por aquí se quedó». Los papeles no la apoyan. El apellido se apaga cuanto más cerca de los Pirineos se busca: en los pueblos de la frontera, con casi medio millón de bautismos, aparece apenas siete veces, y todas tardías. Al norte de la frontera no hay ninguna casa llamada Zabarte."
+     "x": "Queda la idea más reciente: que los Azabarte venían de Francia. No es lo que se contaba en la familia. La trajo Ubaldo Gallardo Azabarte, que lo había leído en internet, y nadie en casa la había oído antes; su hermano Francisco lo cuenta con otras palabras, «un soldado por aquí se quedó», que recuerdan más bien al soldado carlista del que sí se hablaba. Los papeles no la apoyan. El apellido se apaga cuanto más cerca de los Pirineos se busca: en los pueblos de la frontera, con casi medio millón de bautismos, aparece apenas siete veces, y todas tardías. Al norte de la frontera no hay ninguna casa llamada Zabarte."
     },
     {
      "k": "p",
@@ -3587,15 +3563,15 @@
     },
     {
      "k": "pull",
-     "x": "La frase de la familia sigue siendo un recuerdo, y como recuerdo se guarda."
+     "x": "Lo que se contaba en casa apuntaba al norte de la península, y hacia allí apuntan también los papeles del apellido."
     },
     {
      "k": "p",
      "x": "Con el mapa a la vista y el trozo sin papel bien señalado, la historia puede por fin llegar a Las Pedroñeras. Allí, en la iglesia de la Asunción, en enero de 1798, con la parroquia sin cura propio, un teniente de cura iba a casar a un hombre llamado Pedro, y la A iba a quedar escrita desde el primer día."
     }
    ],
-   "huella": "5662f4e9a3306d51432af09b6762fd9613f1817456f21172b5ce1dc819cb25b6",
-   "chars": 7330
+   "huella": "ca19c68bf68c4f69bbaede1b60f569df1b4fe17bc5e6fa0921ec1a21e93c4b53",
+   "chars": 7501
   },
   {
    "clave": "lib:boda",
@@ -3724,7 +3700,7 @@
     },
     {
      "k": "p",
-     "x": "Estas bodas bastan para resolver una de las leyendas de la familia. En casa se contaba que los Azabarte habían llegado del norte con las guerras carlistas. Pero la primera de aquellas guerras empezó en 1833, al morir el rey Fernando VII, y Pedro ya se casaba en Las Pedroñeras en 1798, treinta y cinco años antes, con sus padres difuntos y tenidos por vecinos de la villa."
+     "x": "Estas bodas bastan para resolver una de las leyendas de la familia. En casa se contaba que los Azabarte habían venido del norte, de Navarra o del País Vasco, y que el primero sería un carlista o un soldado que desertó de aquellas guerras. La mitad del norte no está lejos de lo que dicen los papeles del apellido, que nació en una casa de Gipuzkoa. La fecha, en cambio, no encaja: la primera de aquellas guerras empezó en 1833, al morir el rey Fernando VII, y Pedro ya se casaba en Las Pedroñeras en 1798, treinta y cinco años antes, con sus padres difuntos y tenidos por vecinos de la villa."
     },
     {
      "k": "pull",
@@ -3743,8 +3719,8 @@
      "x": "Pedro y Manuela tuvieron, que se sepa, un solo hijo. Nació en febrero de 1809, en plena guerra contra los ejércitos de Napoleón, y el cura que lo bautizó se tomó el trabajo de apuntar a sus cuatro abuelos. En uno de aquellos renglones hay una línea que, por primera vez, mira fuera del pueblo."
     }
    ],
-   "huella": "aa19b3d950bc367b98a652a379d1b142741a89455656a0417a3913ec9ef52a61",
-   "chars": 10022
+   "huella": "7822be81f1134ea4543edf5e5a61247224484910c949f8b2063aa8bdc383ada4",
+   "chars": 10242
   },
   {
    "clave": "lib:pascasio",
@@ -4352,11 +4328,11 @@
     },
     {
      "k": "p",
-     "x": "En la casa de Francisco y Vicenta, entretanto, la suerte tenía otra cara. De los nueve u once hijos que habían tenido, cuenta la familia, solo cinco llegaron a mayores, y las dos mayores murieron antes que sus padres. Una de ellas dejó una hija, Camila, a la que en casa llamaban «la hermana» y que no cabía en ningún sitio del árbol de la familia."
+     "x": "En la casa de Francisco y Vicenta, entretanto, la suerte tenía otra cara. De los nueve u once hijos que habían tenido, cuenta la familia, solo cinco llegaron a mayores, y las dos mayores murieron antes que sus padres, dejando hijos pequeños que criaron los abuelos."
     }
    ],
-   "huella": "1869653c62a591ee70c9f5e191ab8a1beef0f37befb1d41f7534ad74bf1808aa",
-   "chars": 9629
+   "huella": "fd76bc63c60a12786e8b8cbcd5fb372427a436793ace026c283ec32ccf429f77",
+   "chars": 9546
   },
   {
    "clave": "lib:hijas",
@@ -4369,23 +4345,19 @@
     },
     {
      "k": "lede",
-     "x": "En la familia se hablaba de una «hermana Camila» que llevaba Azabarte de segundo apellido y no cabía en ningún sitio. La pieza que faltaba la guardaba otra rama de la casa."
+     "x": "Las actas de 1912 y 1914 nombran solo a tres hijos de Francisco y Vicenta. La familia recordaba más, y lo que recordaba encaja con los papeles."
     },
     {
      "k": "p",
-     "x": "El 29 de agosto de 2026, Pilar Azabarte Arellano se sentó con su hijo Francisco Javier delante de las actas fotografiadas de sus bisabuelos, Francisco y Vicenta. Quería encajar a «la hermana Camila», que se había criado con sus abuelos, huérfana de madre. Todos la tenían por sobrina de Venus y por prima de Emiliano, el padre de Pilar. Pero Emiliano había nacido en 1922, y Camila era mucho mayor que él. Y las actas de 1912 y 1914 solo nombraban tres hijos, el primero Venus y la última Bonifacia. Aquella tarde la pieza no apareció."
+     "x": "Cuando murió Francisco, en 1912, y cuando murió Vicenta, en 1914, el juzgado apuntó los hijos que dejaban: Venus, Bonifacia, la pequeña, y entre los dos una hija a la que cada acta da un nombre distinto. Durante un tiempo se pensó que no hubo más. En el verano de 2026, Pilar Azabarte Arellano se acordó de una prima de su padre, Camila, que llevaba Azabarte de segundo apellido, y al preguntar de quién era hija salió algo que nadie había contado."
     },
     {
      "k": "p",
-     "x": "Dos días después, el 31 de agosto, la respuesta llegó por otra rama. Juan Ortiz Pacheco, nieto de Bonifacia, la contó como se la había oído a su padre, Juan Vicente, mientras iban juntos al campo. «Yo era un preguntón», dice. Francisco y Vicenta tuvieron nueve hijos —once, diría él mismo dos semanas más tarde—, y cinco llegaron a mayores. Las dos mayores, Vicenta y otra de nombre inseguro, murieron antes que sus padres. Por eso las actas nombran solo a tres."
+     "x": "La respuesta llegó por otra rama. Juan Ortiz Pacheco, nieto de Bonifacia, la contó como se la había oído a su padre, Juan Vicente, mientras iban juntos al campo. «Yo era un preguntón», dice. Francisco y Vicenta tuvieron nueve hijos —once, diría él mismo dos semanas más tarde—, y cinco llegaron a mayores. Las dos mayores, Vicenta y otra de nombre inseguro, murieron antes que sus padres. Por eso las actas nombran solo a tres."
     },
     {
      "k": "pull",
      "x": "No eran todos los hijos, sino los que quedaban vivos."
-    },
-    {
-     "k": "p",
-     "x": "Y Camila era hija de la mayor. Con esa sola pieza, tres generaciones quedaron en su sitio: era nieta de Francisco y Vicenta, sobrina carnal de Venus y prima hermana de Emiliano, y le llevaba tantos años porque su madre había sido la primera de los hermanos."
     },
     {
      "k": "h",
@@ -4409,23 +4381,15 @@
     },
     {
      "k": "p",
-     "x": "Era una muerte frecuente entonces, cuando se paría en casa, con una comadrona o una vecina. Camila se quedó sin padre ni madre. El viudo se casó otra vez, con «la Capacha»."
-    },
-    {
-     "k": "h",
-     "x": "Camila, «la hermana»"
+     "x": "Era una muerte frecuente entonces, cuando se paría en casa, con una comadrona o una vecina. El viudo se casó otra vez, con «la Capacha»."
     },
     {
      "k": "p",
-     "x": "A Camila la llamaron siempre «la hermana Camila», y la palabra no quiere decir lo que parece. En el pueblo se nombraba así a mucha gente, como tratamiento: «la hermana Boli», «la hermana Podruana», «el hermano Juan Haro». Sobre su crianza hay dos recuerdos, y los dos se guardan. En la rama de Venus se cuenta que, muertos los abuelos en 1912 y 1914, le dieron a elegir entre irse «con la Podruana, con la Boni o con nosotros»; que eligió al tío Venus y se crió en su casa como una hija más, al lado de su prima Eugenia, unos veinte años, y que de aquella puerta salió de novia. En la rama de la Boni se cuenta que fue la abuela Vicenta quien la tuvo en su casa y la casó desde allí: «salió de la boda de su casa»."
-    },
-    {
-     "k": "pull",
-     "x": "Ninguna de las dos versiones está escrita, y ninguna manda sobre la otra."
+     "x": "Camila se quedó sin padre ni madre. La recogieron sus abuelos, Francisco y Vicenta, y cuando murieron ellos, en 1912 y 1914, pasó a vivir a la casa de su tío Venus, con sus primos. Allí estuvo hasta casarse con Juan Haro, según se recuerda; tuvo cinco hijos y vivió en un callejón de la misma calle Fray Luis de León. De ella vienen «los Habichuelos», que llevan todavía el mote de su abuela, «la Habichuela». En el pueblo la llamaban «la hermana Camila», que no era un parentesco sino un tratamiento corriente entonces, como «la hermana Boli» o «la hermana Podruana»."
     },
     {
      "k": "p",
-     "x": "Se casó con Juan Haro, según se recuerda en la rama de Venus, y tuvo cinco hijos: Vicenta, Teresa, Encarna, Domingo y Francisco. Vivió en el callejón de la portada de Paquito Molina, en una casa partida a los dos lados de la calle. De ella vienen «los Habichuelos», que llevan todavía el mote de su abuela, «la Habichuela». El hombre que en 1912 y en 1914 iría al juzgado a declarar la muerte de sus abuelos llevaba el apellido de su padre: se llamaba Manuel Lorente Izquierdo. Si eran parientes, no se sabe."
+     "x": "Cuándo ocurrió todo esto no se sabe bien. Se ha creído que la Isidora de los Higuerillas es la Isidora López Azabarte enterrada en el cementerio del pueblo, que murió en 1986 con setenta y ocho años. Si es ella, su madre habría muerto hacia 1911 o 1912, y eso casa mal con una hija mayor nacida hacia 1860. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá."
     },
     {
      "k": "ct",
@@ -4434,22 +4398,6 @@
     {
      "k": "cp",
      "x": "En los pueblos donde muchas familias comparten apellido, el mote distingue una casa de otra. Suele nacer de un oficio, de una anécdota o de un rasgo de alguien, y pasa de padres a hijos como un apellido más, a veces durante generaciones. En la calle Fray Luis de León lo tenía cada casa: «los Higuerillas», «los Cabreros», «los Pollos», «los Habichuelos». Donde medio vecindario se apellida igual, el mote es la manera de saber de qué casa es cada uno."
-    },
-    {
-     "k": "h",
-     "x": "Unas cuentas que no cuadran"
-    },
-    {
-     "k": "p",
-     "x": "Tampoco la edad de Camila se recuerda igual. Unos cuentan que le llevaba dieciséis años a su media hermana Isidora. Ubaldo Gallardo Azabarte, nieto de Venus, la recuerda en cambio de la edad de su propia madre, Vicenta Azabarte Galindo, que nació en 1907. Todo depende de quién fuera aquella Isidora. Se ha creído que es la Isidora López Azabarte enterrada en el cementerio del pueblo, y que López era el apellido de los Higuerillas. Su lápida dice que murió el 22 de agosto de 1986, con setenta y ocho años. Nació, por tanto, en 1907 o en 1908."
-    },
-    {
-     "k": "p",
-     "x": "Si es ella, Vicenta murió de parto hacia 1911 o 1912, y Camila habría nacido hacia 1891 o 1892. Pero las dos ramas recuerdan a Vicenta como la mayor de los hermanos, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908 y moría de parto cuatro años más tarde. Algo no encaja todavía. Puede que Vicenta no fuera la mayor, puede que la Isidora de la lápida sea otra, o puede que alguna cuenta se haya movido al pasar de boca en boca. No hace falta elegir."
-    },
-    {
-     "k": "pull",
-     "x": "La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá."
     },
     {
      "k": "h",
@@ -4469,7 +4417,7 @@
     },
     {
      "k": "p",
-     "x": "Se casó, y de su casa vienen «los Cabreros», de la parte baja de la calle Fray Luis de León, llamados así porque el padre de aquella casa fue cabrero. Entre ellos se recuerda a Ángela, la mayor, a Venancia, a Nemesio y a otro que murió en la guerra. Se cuenta que a su hija mayor, huérfana de madre, la recogió la abuela Vicenta, la tuvo en su casa y la casó desde allí, igual que a Camila. Fueron dos nietas, una de cada hija muerta, criadas por la misma mujer."
+     "x": "Se casó, y de su casa vienen «los Cabreros», de la parte baja de la calle Fray Luis de León, llamados así porque el padre de aquella casa fue cabrero. Entre ellos se recuerda a Ángela, la mayor, a Venancia, a Nemesio y a otro que murió en la guerra. Se cuenta que a su hija mayor, huérfana de madre, la recogió la abuela Vicenta, la tuvo en su casa y la casó desde allí. Fueron dos nietas, una de cada hija muerta, las que se criaron con los abuelos."
     },
     {
      "k": "p",
@@ -4505,7 +4453,7 @@
     },
     {
      "k": "p",
-     "x": "Bonifacia, «la Boni», nació cuando su madre «estaba rondando los cincuenta años», y fue la pequeña de los cinco que llegaron a mayores: tan pequeña que entre ella y su sobrina Camila no había más que tres años. La casaron a los diecinueve años, porque su madre, según cuenta su nieto Juan, tenía prisa por no dejar sin casa a la última. El novio fue Desiderio Ortiz Redondo, de «los Pollos», el panadero que llevaba el pan a casa de Vicenta. Tuvieron cinco hijos: Bonifacia, Leona, Francisca, que murió joven, Juan Vicente y Francisco."
+     "x": "Bonifacia, «la Boni», nació cuando su madre «estaba rondando los cincuenta años», y fue la pequeña de los cinco que llegaron a mayores: tan pequeña que alguna de sus sobrinas era casi de su edad. La casaron a los diecinueve años, porque su madre, según cuenta su nieto Juan, tenía prisa por no dejar sin casa a la última. El novio fue Desiderio Ortiz Redondo, de «los Pollos», el panadero que llevaba el pan a casa de Vicenta. Tuvieron cinco hijos: Bonifacia, Leona, Francisca, que murió joven, Juan Vicente y Francisco."
     },
     {
      "k": "p",
@@ -4525,15 +4473,15 @@
     },
     {
      "k": "cp",
-     "x": "Un recuerdo de familia no prueba un parentesco: dice dónde buscarlo y explica lo que el papel calla. Vale más cuanto mejor se sabe quién lo cuenta y a quién se lo oyó. Cuando dos recuerdos chocan, como los de la crianza de Camila, se guardan los dos. Cuando uno está escrito y fechado, se tiene por vigente, aunque eso no lo hace más verdadero, solo más firme. Y cuando llega el papel, manda el papel, y el recuerdo se queda como lo que es."
+     "x": "Un recuerdo de familia no prueba un parentesco: dice dónde buscarlo y explica lo que el papel calla. Vale más cuanto mejor se sabe quién lo cuenta y a quién se lo oyó. Cuando dos recuerdos chocan, se guardan los dos. Cuando uno está escrito y fechado, se tiene por vigente, aunque eso no lo hace más verdadero, solo más firme. Y cuando llega el papel, manda el papel, y el recuerdo se queda como lo que es."
     },
     {
      "k": "p",
      "x": "En agosto de 1912, un secretario del juzgado iba a escribir en una hoja impresa los nombres de los hijos que le quedaban a Francisco, y año y medio después, en otra, los que le quedaban a Vicenta. Las dos mayores no estarían en ninguna, y la del medio saldría cada vez con un nombre distinto."
     }
    ],
-   "huella": "76a58466ff4406d31ddfd7527c4f2c588be8a5603a95d9cf56f030f5e1e3d38b",
-   "chars": 11191
+   "huella": "c040e66685626d81a17d4977b85a9bc1129a3f556e71f800e321828ce57556d3",
+   "chars": 9188
   },
   {
    "clave": "lib:actas",
@@ -4634,7 +4582,7 @@
     },
     {
      "k": "p",
-     "x": "Quedan dos pistas que nadie ha seguido todavía, los dos testamentos. El de Francisco, ante Justino Zapata, y el de Vicenta, ante Enrique Serrano Martí, deben de estar entre los protocolos de los notarios de la comarca, que se guardan en el Archivo Histórico Provincial de Cuenca. Un testamento de aquella época suele nombrar a todos los hijos, a los vivos y a los que murieron dejando descendencia, y a veces también a los nietos. Sería la manera de poner nombre, de una vez, a las dos hijas mayores, y quizá también a Camila."
+     "x": "Quedan dos pistas que nadie ha seguido todavía, los dos testamentos. El de Francisco, ante Justino Zapata, y el de Vicenta, ante Enrique Serrano Martí, deben de estar entre los protocolos de los notarios de la comarca, que se guardan en el Archivo Histórico Provincial de Cuenca. Un testamento de aquella época suele nombrar a todos los hijos, a los vivos y a los que murieron dejando descendencia, y a veces también a los nietos. Sería la manera de poner nombre, de una vez, a las dos hijas mayores."
     },
     {
      "k": "ct",
@@ -4697,8 +4645,8 @@
      "x": "Muertos Francisco y Vicenta, la casa vieja fue de la Boni. Pero la historia que llega hasta hoy siguió en otra casa de la misma calle, la del hijo que había tallado la piedra. Era la de Venus, el labrador, y en ella iban a crecer ocho hijos."
     }
    ],
-   "huella": "d19e7e32099509f83558c385040396d77ce37310b524644d183ec676ff1550a2",
-   "chars": 9739
+   "huella": "4e4951cbd57f1774a0ea16c51ceda9864dc19dce111783c3db62439ab1571625",
+   "chars": 9713
   },
   {
    "clave": "lib:venus",
@@ -4775,7 +4723,7 @@
     },
     {
      "k": "p",
-     "x": "Venus y Encarnación criaron a sus hijos en la casa de la calle Fray Luis de León. La primera fue Eugenia, a la que en casa y en el pueblo llamaban «la Eugenia» y también «la mayor de la casa», porque detrás de ella vinieron siete. En la rama de Venus se recuerda que con ella se crió la prima Camila, que al morir los abuelos eligió irse con el tío Venus; en la de la Boni se recuerda de otro modo. Eugenia se casó con Julián Salcedo, y un hijo de los dos se casó con Encarna, la hija de Camila."
+     "x": "Venus y Encarnación criaron a sus hijos en la casa de la calle Fray Luis de León. La primera fue Eugenia, a la que en casa y en el pueblo llamaban «la Eugenia» y también «la mayor de la casa», porque detrás de ella vinieron siete. Eugenia se casó con Julián Salcedo, y un hijo de los dos se casó con Encarna, hija de su prima Camila, que había vivido en aquella misma casa."
     },
     {
      "k": "pull",
@@ -4783,7 +4731,7 @@
     },
     {
      "k": "p",
-     "x": "La segunda fue Vicenta, que nació el 31 de marzo de 1907. Llevó el nombre de su abuela, «la Habichuela», y el de su tía Vicenta, la hija mayor de Francisco y Vicenta y madre de Camila. Se casó con Antonio Gallardo Parra. De su suegro, Francisco Gallardo Buedo, se contaba que había ido tocando la trompeta a la guerra de Cuba, la que terminó en 1898 con la pérdida de la isla. «No tiraba tiros», cuenta su nieto Ubaldo, hijo de Vicenta, y volvió muy delgado."
+     "x": "La segunda fue Vicenta, que nació el 31 de marzo de 1907. Llevó el nombre de su abuela, «la Habichuela», y el de su tía Vicenta, la hija mayor de Francisco y Vicenta. Se casó con Antonio Gallardo Parra. De su suegro, Francisco Gallardo Buedo, se contaba que había ido tocando la trompeta a la guerra de Cuba, la que terminó en 1898 con la pérdida de la isla. «No tiraba tiros», cuenta su nieto Ubaldo, hijo de Vicenta, y volvió muy delgado."
     },
     {
      "k": "p",
@@ -4866,8 +4814,8 @@
      "x": "Encarnación murió en 1943, con unos cincuenta y tres años, y Venus tres años después, en 1946. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "1a055f22f5f844f24b590e34f5ecfe952f243103d2216e6ec854b4c9dc602908",
-   "chars": 11569
+   "huella": "5c6dbbc5a0a122dd096350abf840a0eaab4871f110fdfa02449d549f1d59cd0c",
+   "chars": 11429
   },
   {
    "clave": "lib:guerra",
@@ -5105,7 +5053,7 @@
     },
     {
      "k": "p",
-     "x": "Llegó tarde a una casa llena. Su padre pasaba ya de los cuarenta, y su hermana Vicenta le llevaba casi quince años. Creció entre Eugenia, Vicenta, Florencia, Paco, Francisca y los mellizos Julián y Venus, y cerca de una mujer mucho mayor que él a la que llamó «prima» toda su vida: Camila, que según la memoria de la familia era la nieta huérfana de los abuelos Francisco y Vicenta. Esa palabra de trato, repetida durante décadas, fue ochenta años después el hilo del que se tiró para poner en orden dos generaciones de la casa."
+     "x": "Llegó tarde a una casa llena. Su padre pasaba ya de los cuarenta, y su hermana Vicenta le llevaba casi quince años. Creció entre Eugenia, Vicenta, Florencia, Paco, Francisca y los mellizos Julián y Venus, en una calle llena de primos."
     },
     {
      "k": "p",
@@ -5153,7 +5101,7 @@
     },
     {
      "k": "p",
-     "x": "No fue la única. En aquellos años, en los pueblos de La Mancha, muchas niñas dejaban la escuela en cuanto hacían falta en casa, y en casa de Emiliano y Adela, con cuatro hijos, las faenas y el campo, hicieron falta todas las manos, y muy pronto. De adulta llegó la música, que en esta familia no falta por ninguna parte, y Pilar cantó muchos años en el coro de la parroquia. Es hoy la memoria viva del barrio: recuerda la casa del abuelo Venus, quién era quién en aquella calle y cómo se trataban su padre y la prima Camila."
+     "x": "No fue la única. En aquellos años, en los pueblos de La Mancha, muchas niñas dejaban la escuela en cuanto hacían falta en casa, y en casa de Emiliano y Adela, con cuatro hijos, las faenas y el campo, hicieron falta todas las manos, y muy pronto. De adulta llegó la música, que en esta familia no falta por ninguna parte, y Pilar cantó muchos años en el coro de la parroquia. Es hoy la memoria viva del barrio: recuerda la casa del abuelo Venus, quién era quién en aquella calle y en qué casa vivía cada pariente."
     },
     {
      "k": "p",
@@ -5209,11 +5157,11 @@
     },
     {
      "k": "p",
-     "x": "De la casa de Emiliano y Adela salieron los recuerdos del abuelo Venus y de la prima Camila que dieron pie a todo, y de ella salió también una pregunta. Su nieto Francisco Javier, que había crecido oyendo a su madre, Pilar, hablar de aquella calle, quiso saber de dónde venía un apellido que casi nadie lleva. Lo que queda de este libro no es ya la vida de los antepasados, sino la historia de cómo se supo, quién la contó y qué falta todavía por saber."
+     "x": "De la casa de Emiliano y Adela salieron los recuerdos del abuelo Venus y de aquella calle de parientes que dieron pie a todo, y de ella salió también una pregunta. Su nieto Francisco Javier, que había crecido oyendo a su madre, Pilar, hablar de aquella calle, quiso saber de dónde venía un apellido que casi nadie lleva. Lo que queda de este libro no es ya la vida de los antepasados, sino la historia de cómo se supo, quién la contó y qué falta todavía por saber."
     }
    ],
-   "huella": "a019996a184fc9404c627b9e0dbceb45af12c3b5e30f4642ebd4abc80b4149e7",
-   "chars": 9284
+   "huella": "4458281786a75a7b97ee462d073915cd46e6945ae0d3c0fd73ce9411bcc1d1c4",
+   "chars": 8989
   },
   {
    "clave": "lib:epilogo",
@@ -5238,7 +5186,7 @@
     },
     {
      "k": "p",
-     "x": "Empezó en las conversaciones de Pilar Azabarte Arellano con su hijo sobre el abuelo Francisco y sobre de dónde venían los Azabarte, y en el recuerdo de una prima mayor que no cabía en ningún sitio. A finales de agosto de 2026 se sentaron los dos delante de las actas fotografiadas para encajar a Camila, y aquella tarde la pieza no apareció. A Pilar le llegaron también, en septiembre, la carta escrita a mano por su primo Francisco Gallardo Azabarte y la única fotografía de su tío Julián. Y fue ella quien contó, a finales de septiembre, lo que se recordaba en casa de la guerra: el carro del abuelo Venus camino del frente, la casa que defendieron los mellizos y los trabajos forzados del tío Paco."
+     "x": "Empezó en las conversaciones de Pilar Azabarte Arellano con su hijo sobre el abuelo Francisco y sobre de dónde venían los Azabarte. A finales de agosto de 2026 se sentaron los dos delante de las actas fotografiadas de los bisabuelos, y de aquellas tardes salieron preguntas que llevaron a otras ramas de la familia. A Pilar le llegaron también, en septiembre, la carta escrita a mano por su primo Francisco Gallardo Azabarte y la única fotografía de su tío Julián. Y fue ella quien contó, a finales de septiembre, lo que se recordaba en casa de la guerra: el carro del abuelo Venus camino del frente, la casa que defendieron los mellizos y los trabajos forzados del tío Paco."
     },
     {
      "k": "p",
@@ -5322,7 +5270,7 @@
     },
     {
      "k": "p",
-     "x": "Más cerca de casa falta el papel que diga que el Pablo nacido en 1809 es el Pablo padre de Francisco. El bautizo de Francisco se perdió con su libro, pero la boda de Pablo y Blasa puede estar en los libros de matrimonios de aquellos años, que nadie ha revisado todavía, y con ella el apellido Galindo escrito por fin junto al nombre de Blasa. Tampoco tienen papel todavía las hijas mayores. El documento más barato y el que más cierra es el nacimiento de Isidora López Azabarte: si es la media hermana de Camila, nombrará a su madre y dirá si las cuentas del recuerdo se sostienen. Detrás vendrían el de Camila, el de Venus, quizá inscrito como Marcelino, y los dos testamentos de los abuelos, que pueden nombrar de una vez a todos los hijos."
+     "x": "Más cerca de casa falta el papel que diga que el Pablo nacido en 1809 es el Pablo padre de Francisco. El bautizo de Francisco se perdió con su libro, pero la boda de Pablo y Blasa puede estar en los libros de matrimonios de aquellos años, que nadie ha revisado todavía, y con ella el apellido Galindo escrito por fin junto al nombre de Blasa. Tampoco tienen papel todavía las hijas mayores. El documento más barato y el que más cierra es el nacimiento de Isidora López Azabarte: si es hija de Vicenta, la mayor, nombrará a su madre y dirá si las cuentas del recuerdo se sostienen. Detrás vendrían el de Venus, quizá inscrito como Marcelino, y los dos testamentos de los abuelos, que pueden nombrar de una vez a todos los hijos."
     },
     {
      "k": "p",
@@ -5365,8 +5313,8 @@
      "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en septiembre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
     }
    ],
-   "huella": "4a930249f46cdfbb972481d4290254ab9a8abb9a5ce0fa3fb4c93b811e1c16c7",
-   "chars": 12122
+   "huella": "634b5f2f0aa16cb58faeeb92ffcdba7d47f418fe1551f0b47c901d34ec43304a",
+   "chars": 12081
   },
   {
    "clave": "pj:P001",
@@ -5391,7 +5339,7 @@
     },
     {
      "k": "p",
-     "x": "Se casó con Vicenta Navarro Fides, unos tres años mayor que él, y tuvieron nueve u once hijos, según quién lo cuente. La mayoría se les murieron pequeños, como tantos niños de entonces. Llegaron a mayores cinco: Vicenta, otra hija cuyo nombre nadie recuerda con seguridad, Venus, que fue el único varón, Pronuana y Bonifacia. Las dos mayores, cuenta la familia, murieron antes que él, y en su casa se criaron dos nietas que se habían quedado huérfanas, una de cada una. La más recordada es Camila."
+     "x": "Se casó con Vicenta Navarro Fides, unos tres años mayor que él, y tuvieron nueve u once hijos, según quién lo cuente. La mayoría se les murieron pequeños, como tantos niños de entonces. Llegaron a mayores cinco: Vicenta, otra hija cuyo nombre nadie recuerda con seguridad, Venus, que fue el único varón, Pronuana y Bonifacia. Las dos mayores, cuenta la familia, murieron antes que él, y en su casa se criaron dos nietas que se habían quedado huérfanas, una de cada una."
     },
     {
      "k": "p",
@@ -5422,8 +5370,8 @@
      "x": "Allí siguen los dos, bajo la piedra que su hijo Venus labró con roca de la cueva de las canteras. La inscripción lo nombra «Francisco Azabarte Galindo», con el segundo apellido que las actas solo dejaban adivinar, repite el día de su muerte y sus setenta y tres años, y es de las más viejas que se conservan en el recinto. Se puede ir a verla. Y de aquel jornalero menudo que no se echaba atrás arrancan las ramas que hoy se reparten por el pueblo: los de Venus, los de la Boni, los de la Podruana, los Cabreros y los que salieron de su hija mayor."
     }
    ],
-   "huella": "6fecfb4546e8646072ced8f57591572d1b8cdda538da505e5017b31a7daa5c1d",
-   "chars": 5618
+   "huella": "277a83a2fb093bfee49df7cf7b7f6149a9888cd6b080100118aa1c95834698fd",
+   "chars": 5590
   },
   {
    "clave": "pj:P086",
@@ -5444,7 +5392,7 @@
     },
     {
      "k": "p",
-     "x": "Se casó con Francisco Azabarte Galindo, unos tres años más joven que ella, y tuvo con él nueve u once hijos. La mayoría se le murieron pequeños, como era tan corriente entonces, y a dos hijas ya crecidas, las dos mayores, las enterró ella. Le quedaron Venus, Pronuana y Bonifacia. Tuvo en su casa a dos nietas que se habían quedado huérfanas, una de cada hija muerta, y en la rama de la Boni se cuenta que las casó a las dos desde allí. La más recordada es Camila."
+     "x": "Se casó con Francisco Azabarte Galindo, unos tres años más joven que ella, y tuvo con él nueve u once hijos. La mayoría se le murieron pequeños, como era tan corriente entonces, y a dos hijas ya crecidas, las dos mayores, las enterró ella. Le quedaron Venus, Pronuana y Bonifacia. Tuvo en su casa a dos nietas que se habían quedado huérfanas, una de cada hija muerta, y en la rama de la Boni se cuenta que las casó a las dos desde allí."
     },
     {
      "k": "p",
@@ -5483,8 +5431,8 @@
      "x": "La enterraron en Santa Catalina, junto a Francisco, y con él pasó después al cementerio nuevo, bajo la piedra que, según se recuerda, labró su hijo. La inscripción la nombra con sus dos apellidos, Navarro y Fides, pero la mitad de la piedra que le corresponde es la más gastada, la que ya casi no se lee. Lo que no se ha borrado es el mote: en el pueblo sigue habiendo Habichuelos."
     }
    ],
-   "huella": "d15fcce0d9e968771b5be3b81cf29d55b3490ca8450aeb5a191de23973610f72",
-   "chars": 6740
+   "huella": "3b14d9544843d3ad3cebce300445adb8ac4576dc1aab415856dce2a36f112ae4",
+   "chars": 6712
   },
   {
    "clave": "pj:P002",
@@ -5517,7 +5465,7 @@
     },
     {
      "k": "p",
-     "x": "En la rama de Venus se recuerda que, muertos los abuelos, su sobrina Camila, huérfana, pudo elegir con quién vivir —«con la Podruana, con la Boni o con nosotros»— y eligió al tío Venus, que se crió en su casa como una hija más, con su prima Eugenia, y que de aquella puerta salió de novia. En la rama de la Boni se cuenta de otro modo: que a Camila la crió y la casó la abuela Vicenta. Las dos casas guardan su versión. Los primos, en todo caso, se trataban de cerca. Cuando se mataba el cerdo en casa de Juan Vicente, el hijo de la Boni, allí estaban los hijos de Venus, Emiliano, Venus y Francisco, con Aurelio, el de la Podruana, todos nietos del mismo matrimonio; lo recuerda Juan Ortiz Pacheco, que era un niño entonces."
+     "x": "Muertos sus padres, vivió también en su casa su sobrina Camila, la hija huérfana de su hermana Vicenta, con sus primos. Los primos de las distintas casas se trataban de cerca. Cuando se mataba el cerdo en casa de Juan Vicente, el hijo de la Boni, allí estaban los hijos de Venus, Emiliano, Venus y Francisco, con Aurelio, el de la Podruana, todos nietos del mismo matrimonio; lo recuerda Juan Ortiz Pacheco, que era un niño entonces."
     },
     {
      "k": "p",
@@ -5544,8 +5492,8 @@
      "x": "Murió en 1946, tres años después que Encarnación. Cuando se cerró el cementerio viejo él ya no estaba, y, según se recuerda en casa, fueron sus hijos quienes pagaron el traslado de los restos de sus padres al nuevo, con aquella misma piedra a cuestas; les ayudó su nieto Francisco Gallardo Azabarte. No todas las familias lo costearon, y los cuerpos por los que nadie pagó siguen bajo lo que hoy es el parque. Los de Francisco y Vicenta no: descansan bajo la piedra que talló su hijo, con los dos nombres que él mismo grabó."
     }
    ],
-   "huella": "585aeac4dbe71d43ef3559902bf76d4064e221c344cad3003a15a8a256f55ef7",
-   "chars": 6361
+   "huella": "3d55f71b2feaca60c8e699baec24db886f2da1f6c4ce0285d723214a886d401f",
+   "chars": 6069
   },
   {
    "clave": "pj:P094",
@@ -5714,7 +5662,7 @@
     },
     {
      "k": "lede",
-     "x": "«La hermana Camila»: según la memoria de la familia, nieta de Francisco y Vicenta, huérfana desde niña y criada por los suyos. De ella vienen «los Habichuelos»."
+     "x": "Una de las nietas de Francisco y Vicenta, hija de Vicenta, la mayor. Huérfana desde niña, la criaron sus abuelos y después vivió en la casa de su tío Venus. De ella vienen «los Habichuelos»."
     },
     {
      "k": "p",
@@ -5726,11 +5674,11 @@
     },
     {
      "k": "p",
-     "x": "Sobre su crianza hay dos recuerdos, y los dos se guardan. En la rama de la Boni se cuenta que fue la abuela Vicenta quien la recogió, la tuvo en su casa y la casó: «salió de la boda de su casa». En la de Venus se recuerda otra cosa: que, muertos los abuelos, le dieron a elegir entre irse «con la Podruana, con la Boni o con nosotros», que eligió al tío Venus, que se crió allí como una hija más, con su prima Eugenia, unos veinte años, y que de aquella puerta salió de novia. Tampoco se recuerda igual su edad. Unos cuentan que le llevaba dieciséis años a su media hermana Isidora; Ubaldo Gallardo Azabarte, nieto de Venus, la recuerda en cambio de la edad de su propia madre, Vicenta Azabarte Galindo, que nació en 1907. La cuenta depende del año de Isidora: si es, como se ha creído, la Isidora López Azabarte que según su lápida nació en 1907 o en 1908, Camila habría nacido hacia 1891 o 1892, y las dos versiones quedan más cerca, aunque todavía no casan. Su partida de nacimiento dirá cuál acierta."
+     "x": "La recogieron sus abuelos, Francisco y Vicenta, y cuando murieron, en 1912 y 1914, pasó a vivir a la casa de su tío Venus, con sus primos, hasta que se casó."
     },
     {
      "k": "p",
-     "x": "Se casó con Juan Haro, según se recuerda en la rama de Venus, y tuvo cinco hijos: Vicenta, Teresa, Encarna, Domingo y Francisco, el más joven. Vivió en el callejón de la portada de Paquito Molina, en la calle Fray Luis de León, en una casa repartida a los dos lados de la calle: las habitaciones a un lado y la cocina, grande, al otro, con derecho de paso por la portada de los Molina. Teresa se casó con un Torral. Encarna se casó con Julián Salcedo, el hijo de Eugenia, la prima de Camila, de modo que Camila y Eugenia acabaron consuegras y las dos ramas volvieron a unirse."
+     "x": "Se casó con Juan Haro, según se recuerda en la rama de Venus, y tuvo cinco hijos: Vicenta, Teresa, Encarna, Domingo y Francisco, el más joven. Vivió en el callejón de la portada de Paquito Molina, en la calle Fray Luis de León, en una casa repartida a los dos lados de la calle: las habitaciones a un lado y la cocina, grande, al otro, con derecho de paso por la portada de los Molina. Teresa se casó con un Torral. Encarna se casó con Julián Salcedo, el hijo de Eugenia, la prima de Camila, de modo que Camila y Eugenia acabaron consuegras."
     },
     {
      "k": "p",
@@ -5738,11 +5686,11 @@
     },
     {
      "k": "p",
-     "x": "De Camila descienden «los Habichuelos», que llevan todavía el mote de su abuela Vicenta, «la Habichuela». La familia la recordó siempre con toda seguridad, sobrina del abuelo Venus, prima del abuelo Emiliano y mucho mayor que él, y durante mucho tiempo no hubo manera de encajarla, hasta que otra rama de la familia recordó que era nieta, y no hija. Con esa sola pieza, tres generaciones de la casa quedaron en su sitio."
+     "x": "De Camila descienden «los Habichuelos», que llevan todavía el mote de su abuela Vicenta, «la Habichuela»."
     }
    ],
-   "huella": "cc81fa7a20fc25b110df5c44b42b6aed1405dc36f2d2626d55c430934bbb3c02",
-   "chars": 3256
+   "huella": "64393a46f89bf32310350954389f958d9b42e4bc8677153dadec9aae4a562028",
+   "chars": 2089
   },
   {
    "clave": "pj:P101",
@@ -5972,15 +5920,15 @@
     },
     {
      "k": "p",
-     "x": "A Camila, que ya no tenía ni padre ni madre, la recogió la abuela Vicenta, según se cuenta en la rama de la Boni; en la de Venus se recuerda que acabó criándose con el tío Venus. De Camila vienen «los Habichuelos», que llevan el mote de la abuela Vicenta, «la Habichuela»; de Isidora, una rama que todavía vive en el pueblo."
+     "x": "A Camila, que ya no tenía ni padre ni madre, la recogieron los abuelos, y al morir ellos vivió en la casa de su tío Venus. De Camila vienen «los Habichuelos», que llevan el mote de la abuela Vicenta, «la Habichuela»; de Isidora, una rama que todavía vive en el pueblo."
     },
     {
      "k": "p",
-     "x": "Murió antes que sus padres, y por eso las actas de 1912 y de 1914, que solo nombran a los hijos vivos, la dejan fuera. Pero su nombre es el que lo explica todo: por qué la familia llamaba a Camila sobrina del abuelo Venus, por qué el abuelo Emiliano la llamaba prima y por qué era tantos años mayor que él. Sin ella, la casa no se entiende."
+     "x": "Murió antes que sus padres, y por eso las actas de 1912 y de 1914, que solo nombran a los hijos vivos, la dejan fuera."
     }
    ],
-   "huella": "b364ddaf24e57f5e301cdcbae4299db4af615617026a50db6c61561fa6928f77",
-   "chars": 3383
+   "huella": "28623d50f28e0e68842283bd5455f2e219f75cf4f6c6d1efe1bcdf208056f1c2",
+   "chars": 3105
   },
   {
    "clave": "pj:P109",
@@ -6046,15 +5994,15 @@
     },
     {
      "k": "p",
-     "x": "Vivía en la cuesta de la iglesia, por donde suben las imágenes el Jueves Santo: pasada la esquina del cura, a la izquierda, en una portada junto a un pequeño ensanche de la calle, como un pradillo. Fue, con Venus y con la Boni, una de las tres casas entre las que pudo elegir su sobrina Camila cuando se quedó sin abuelos: «con la Podruana, con la Boni o con nosotros». Juan Ortiz Pacheco, nieto de la Boni, llegó a conocerla: «a la hermana Boli y a la hermana Podruana sí que las he conocido», dice."
+     "x": "Vivía en la cuesta de la iglesia, por donde suben las imágenes el Jueves Santo: pasada la esquina del cura, a la izquierda, en una portada junto a un pequeño ensanche de la calle, como un pradillo. Juan Ortiz Pacheco, nieto de la Boni, llegó a conocerla: «a la hermana Boli y a la hermana Podruana sí que las he conocido», dice."
     },
     {
      "k": "p",
      "x": "Los papeles solo dicen de ella que vivía en 1912 y en 1914. El nombre con que la llamaban, la casa de la cuesta y los hijos los ha guardado el pueblo, que fue el único que nunca dudó de cómo llamarla."
     }
    ],
-   "huella": "a19ec47bc625bbbd2d090f73f2d68a9ba7ce98e29443d35845e5f08f834d24f8",
-   "chars": 2720
+   "huella": "28b1273d9fc00be87f041990b7ab595957b6136e773902635a5fc07fe5586cda",
+   "chars": 2548
   },
   {
    "clave": "pj:P091",
@@ -6071,7 +6019,7 @@
     },
     {
      "k": "p",
-     "x": "Bonifacia nació cuando su madre «estaba rondando los cincuenta años», y fue la pequeña de los cinco hermanos que llegaron a mayores: tan pequeña que entre ella y su sobrina Camila no había más que tres años. De las hijas de la casa es la única cuyo nombre escribieron igual las dos actas, la de su padre en 1912 y la de su madre en 1914, y fue la última de todos los hermanos en morir."
+     "x": "Bonifacia nació cuando su madre «estaba rondando los cincuenta años», y fue la pequeña de los cinco hermanos que llegaron a mayores: tan pequeña que alguna de sus sobrinas era casi de su edad. De las hijas de la casa es la única cuyo nombre escribieron igual las dos actas, la de su padre en 1912 y la de su madre en 1914, y fue la última de todos los hermanos en morir."
     },
     {
      "k": "p",
@@ -6094,8 +6042,8 @@
      "x": "Ese nieto es Juan Ortiz Pacheco «el Pollo», y el mote le viene del abuelo Desiderio y de su casa panadera. Todo lo que sabe se lo contó su padre, Juan Vicente, mientras iban juntos al campo —«yo era un preguntón», dice—, y a su padre se lo había contado ella. Gracias a esa cadena de tres voces, la rama de la Boni ha conservado la mitad de esta historia, la que la rama de Venus había olvidado."
     }
    ],
-   "huella": "f3a2133371275954c8955ebbaeb05d681ebcc34a02910628c7b8300cdf22178b",
-   "chars": 2578
+   "huella": "48fcabaa247f738db5ba5dd655d0d53f98c1227abc3e191d7085c1352b3e5c81",
+   "chars": 2563
   },
   {
    "clave": "pj:P003",
@@ -6120,7 +6068,7 @@
     },
     {
      "k": "p",
-     "x": "Creció en aquella casa con sus siete hermanos, Eugenia, Vicenta, Florencia, Francisco, Francisca, Julián y Venus, y cerca de la prima Camila, mucho mayor que él, a la que llamó «prima» toda su vida. Ese detalle pequeño sería, ochenta años después, el hilo del que tirar para ordenar dos generaciones de la familia. Por su madre venía de «los Guardejas», una casa de muchos hermanos a la que el pueblo llamaba así porque el padre había sido guarda del monte de La Muela. Tenía catorce años cuando empezó la guerra civil y diecisiete cuando terminó."
+     "x": "Creció en aquella casa con sus siete hermanos, Eugenia, Vicenta, Florencia, Francisco, Francisca, Julián y Venus, en una calle llena de primos. Por su madre venía de «los Guardejas», una casa de muchos hermanos a la que el pueblo llamaba así porque el padre había sido guarda del monte de La Muela. Tenía catorce años cuando empezó la guerra civil y diecisiete cuando terminó."
     },
     {
      "k": "p",
@@ -6140,11 +6088,11 @@
     },
     {
      "k": "p",
-     "x": "Murió en febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de esta galería, y el suyo está hecho sobre una fotografía que guarda la familia. Es el abuelo del investigador y el punto exacto donde la memoria viva se encuentra con los papeles: de su casa salieron los recuerdos del abuelo Venus y de la prima Camila que dieron pie a todo esto."
+     "x": "Murió en febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de esta galería, y el suyo está hecho sobre una fotografía que guarda la familia. Es el abuelo del investigador y el punto exacto donde la memoria viva se encuentra con los papeles: de su casa salieron los recuerdos del abuelo Venus y de aquella calle que dieron pie a todo esto."
     }
    ],
-   "huella": "ff8d927faf236d5cd4deb2b29ebee071d0696b4a4af6f320a1b5335e59cc0ffd",
-   "chars": 4573
+   "huella": "6cc1e98f963180176973f72cfc41fa7608bdc4247e6fa9d9653817ef37284f6a",
+   "chars": 4400
   },
   {
    "clave": "pj:P127",
@@ -6202,7 +6150,7 @@
     },
     {
      "k": "p",
-     "x": "Vicenta nació el 31 de marzo de 1907 en Las Pedroñeras, en la casa de la calle Fray Luis de León, la de Venus Azabarte Navarro y Encarnación Galindo Gallardo. Su hijo Ubaldo la cuenta la segunda de los ocho hermanos, detrás de Eugenia, y era casi quince años mayor que el pequeño, Emiliano. Su nombre era el de su abuela, Vicenta Navarro Fides, «la Habichuela», y el de su tía Vicenta, la hermana mayor de su padre y madre de la prima Camila. En esta familia las Vicentas se repiten en cada generación, y en esta historia cada una tiene su propia página."
+     "x": "Vicenta nació el 31 de marzo de 1907 en Las Pedroñeras, en la casa de la calle Fray Luis de León, la de Venus Azabarte Navarro y Encarnación Galindo Gallardo. Su hijo Ubaldo la cuenta la segunda de los ocho hermanos, detrás de Eugenia, y era casi quince años mayor que el pequeño, Emiliano. Su nombre era el de su abuela, Vicenta Navarro Fides, «la Habichuela», y el de su tía Vicenta, la hermana mayor de su padre. En esta familia las Vicentas se repiten en cada generación, y en esta historia cada una tiene su propia página."
     },
     {
      "k": "p",
@@ -6221,8 +6169,8 @@
      "x": "Sin su rama, media historia se habría perdido. De la casa de Vicenta salieron la memoria de las hermanas de Venus, el recuerdo de los mellizos y la primera carta escrita a mano que ha recibido esta investigación, y todavía queda por leer lo que Antonio dejó escrito."
     }
    ],
-   "huella": "3f93994d73226d56525d33add55fd5efed5373d6cba14fc906db5d42c245796d",
-   "chars": 2585
+   "huella": "4ab91436064d2fceab86810ff587bc8e19354da843717cbb23fc26ceef2cb7a6",
+   "chars": 2558
   },
   {
    "clave": "pj:P138",
@@ -6292,7 +6240,7 @@
     },
     {
      "k": "p",
-     "x": "Los crió en la casa de la calle Fray Luis de León. En la rama de Venus se recuerda que en aquella casa se crió también, como una hija más, la sobrina de su marido, Camila, que se había quedado huérfana, junto a Eugenia. Las dos familias volvieron a juntarse una generación después, cuando el hijo de Eugenia se casó con Encarna, la hija de Camila."
+     "x": "Los crió en la casa de la calle Fray Luis de León. En aquella casa vivió también, muertos los abuelos, Camila, la sobrina huérfana de su marido. Las dos familias volvieron a juntarse una generación después, cuando el hijo de Eugenia se casó con Encarna, la hija de Camila."
     },
     {
      "k": "p",
@@ -6307,8 +6255,8 @@
      "x": "Por ella, la mitad del apellido de la casa de Venus es el de los guardas de La Muela. Y por ella la familia quedó emparentada con mucha gente del pueblo: la casa de los Guardejas se extendió tanto que su nieto Ubaldo saluda a muchos por la calle con un «eh, pariente», y más de uno le pregunta por qué le llama así."
     }
    ],
-   "huella": "a04434de1d4ae3e8f6b1095c84c90d861247eecb8f5d4f32258a62d01ac84883",
-   "chars": 2327
+   "huella": "811d5e46a240438f8a6656897e0ae56bbe5912fd93f44a4d1a0276cc21028b45",
+   "chars": 2252
   },
   {
    "clave": "pj:P120",
@@ -6321,7 +6269,7 @@
     },
     {
      "k": "lede",
-     "x": "«La Eugenia», la mayor de la casa de Venus. Se casó con Julián Salcedo, y su hijo acabó casándose con la hija de la prima Camila, con la que ella se había criado."
+     "x": "«La Eugenia», la mayor de la casa de Venus. Se casó con Julián Salcedo."
     },
     {
      "k": "p",
@@ -6329,7 +6277,7 @@
     },
     {
      "k": "p",
-     "x": "En la rama de Venus se cuenta que con ella se crió la prima Camila, que al quedarse sin abuelos eligió irse a vivir «con el tío Venus» y creció en aquella casa como una hija más, al lado de Eugenia. En la rama de la Boni se recuerda a Camila bastante mayor y criada por su abuela, y cada casa guarda su versión. En las dos, Eugenia y Camila acabaron unidas para siempre."
+     "x": "En aquella casa vivió también su prima Camila, huérfana, que pasó a vivir con el tío Venus cuando murieron los abuelos."
     },
     {
      "k": "p",
@@ -6344,8 +6292,8 @@
      "x": "Su sobrino Ubaldo la nombró la primera cuando recitó de memoria a los hijos de su abuelo, y la recordó como madre de Julián Salcedo. De ella no se conoce todavía la fecha de su muerte, pero su sitio en la casa nadie lo discute: fue la primera en llegar y la que vio crecer a todos los demás."
     }
    ],
-   "huella": "046a8c2336588ec5c07e46e2afc50e55bfd751686d3a9161af13f533ed1180b4",
-   "chars": 2070
+   "huella": "b13c7fd779379dad9a3648adf065c5e68418a7b9180045c6644f8d363eedfc22",
+   "chars": 1728
   },
   {
    "clave": "pj:P134",
@@ -6563,15 +6511,15 @@
     },
     {
      "k": "p",
-     "x": "Es la memoria viva del barrio. Recuerda la casa del abuelo Venus, quién era quién en aquella calle y cómo se trataban Camila y su padre, Emiliano, y buena parte de lo que después se ha podido contrastar con documentos salió antes de su boca. Es también la puerta por la que entra casi todo: a ella le llegaron, en septiembre de 2026, la carta manuscrita de su primo Francisco Gallardo Azabarte y la única fotografía que se conserva de su tío Julián."
+     "x": "Es la memoria viva del barrio. Recuerda la casa del abuelo Venus, quién era quién en aquella calle y en qué casa vivía cada pariente, y buena parte de lo que después se ha podido contrastar con documentos salió antes de su boca. Es también la puerta por la que entra casi todo: a ella le llegaron, en septiembre de 2026, la carta manuscrita de su primo Francisco Gallardo Azabarte y la única fotografía que se conserva de su tío Julián."
     },
     {
      "k": "p",
-     "x": "Esta historia empezó en sus conversaciones con su hijo sobre el abuelo Francisco y sobre de dónde venían los Azabarte. A finales de agosto de 2026 se sentaron los dos delante de las actas fotografiadas para encajar a la prima Camila, y aquella tarde la pieza no apareció. La trajo días después otra rama de la familia, y con ella empezó a moverse todo. Su historia completa está en «Quiénes lo hacen posible». Aquí basta decir que sin sus conversaciones no habría habido historia que contar."
+     "x": "Esta historia empezó en sus conversaciones con su hijo sobre el abuelo Francisco y sobre de dónde venían los Azabarte. A finales de agosto de 2026 se sentaron los dos delante de las actas fotografiadas de los bisabuelos, y de aquellas tardes salieron preguntas que acabaron llevando a otras ramas de la familia. Su historia completa está en «Quiénes lo hacen posible». Aquí basta decir que sin sus conversaciones no habría habido historia que contar."
     }
    ],
-   "huella": "102b157ce93565936bc828c1f816a422703b9ad7713d038988c196f33ef2245f",
-   "chars": 1965
+   "huella": "dce0f0195a91def397828c282a6e4702f89739d74ad18936da91b8571dce7208",
+   "chars": 1911
   },
   {
    "clave": "pj:P033",
