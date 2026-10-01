@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 503093,
+ "total_caracteres": 503280,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -5080,7 +5080,7 @@
     },
     {
      "k": "p",
-     "x": "Ninguno de los de la casa de Venus figura en el índice de los consejos de guerra de la posguerra que corresponde al pueblo, ni en los expedientes de responsabilidades políticas que publicó el Boletín Oficial del Estado entre 1939 y 1945, ni en las listas de fusilados y presos de Las Pedroñeras, ni en los papeles que el ayuntamiento mandó a la Causa General, la gran investigación del régimen sobre la guerra en la zona de la República. En aquel boletín sale, en cambio, un apellido que ya ha aparecido en esta historia. En mayo de 1941 anunció que el juez de responsabilidades políticas de Cuenca abría expediente a Juan Villalba Zabarte, labrador de Cañada Juncosa, y en septiembre de 1942, que el tribunal de Albacete lo sobreseía, es decir, que lo daba por cerrado. Dos siglos después de Antonio Zabarte y Ana Villalba, el apellido seguía en la aldea. Tampoco con él se conoce parentesco."
+     "x": "Ninguno de los de la casa de Venus figura en el índice de los consejos de guerra de la posguerra que corresponde al pueblo, ni en los expedientes de responsabilidades políticas que publicó el Boletín Oficial del Estado entre 1939 y 1945, ni en las listas de fusilados y presos de Las Pedroñeras, ni en los papeles que el ayuntamiento mandó a la Causa General, la gran investigación del régimen sobre la guerra en la zona de la República. En aquel boletín sale, en cambio, un apellido que ya ha aparecido en esta historia. En mayo de 1941 anunció que el juez de responsabilidades políticas de Cuenca abría expediente a Juan Villalba Zabarte, labrador de Cañada Juncosa, y en septiembre de 1942, que el tribunal de Albacete lo sobreseía, es decir, que lo daba por cerrado. Dos siglos después de Antonio Zabarte y Ana Villalba, el apellido seguía en la aldea. Un árbol de familia que alguien subió a internet, sin fechas ni lugares, le da por padres a Regino Villalba y a Catalina Zabarte, y cinco hermanos; de ella no dice dónde ni cuándo nació. Tampoco con él se conoce parentesco."
     },
     {
      "k": "p",
@@ -5091,8 +5091,8 @@
      "x": "Cuando acabó la guerra, en la casa de la calle Fray Luis de León seguía el pequeño, el muchacho que a los catorce años había ido con su padre en el carro hasta el frente. En el papel se llamaba Juan de Mata; en la vida, Emiliano. Iba a ser el abuelo de quien, muchos años después, se puso a preguntar."
     }
    ],
-   "huella": "38050e112c996de9c535a3911ee057959b934ceada2b4da0d4ae2312aad50acf",
-   "chars": 17616
+   "huella": "caa97ae6188abb8e507c731af5d71783e12ea881b637e826a0f8e651e1938335",
+   "chars": 17803
   },
   {
    "clave": "lib:emiliano",
