@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c1cc5ce4a77bca30724756dbfd6fed4375bbefa6/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@f43786bc03ac0213a996ea0b042517153af87179/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1715,6 +1715,52 @@
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-01T16:15:52Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c1cc5ce4a77bca30724756dbfd6fed4375bbefa6/voz/narrativa"
+  },
+  "lib:fides": {
+   "src": "mp3/lib-fides.mp3",
+   "huella": "6d5524dc13658efd7b24ad49f8b336b0944c6fd7c9e41ebb7067d8764a399e16",
+   "marcas": [
+    0.35,
+    6.55,
+    29.51,
+    72.65,
+    84.21,
+    132.79,
+    190.83,
+    195.32,
+    227.39,
+    230.73,
+    274.03,
+    321.19,
+    327.41,
+    372.01,
+    374.69,
+    412.13,
+    456.11,
+    464.73,
+    470.57,
+    473.68,
+    485.82,
+    511.11,
+    570.91,
+    572.53,
+    610.9,
+    623.97,
+    662.54,
+    664.11,
+    701.15,
+    720.27,
+    726.99,
+    745.94,
+    751.14,
+    790.3
+   ],
+   "dur": 815.9,
+   "bytes": 6528130,
+   "titulo": "Capítulo octavo · La casa de los Fides",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-01T16:51:14Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@f43786bc03ac0213a996ea0b042517153af87179/voz/narrativa"
   }
  }
 }
