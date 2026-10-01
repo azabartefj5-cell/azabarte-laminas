@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@a975c97693262000b76568fea2d30390bc232291/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@e4e2cfadea7e9fdc983f5ed54f1945bced10d021/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1856,6 +1856,53 @@
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-01T22:33:47Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@a975c97693262000b76568fea2d30390bc232291/voz/narrativa"
+  },
+  "lib:hijas": {
+   "src": "mp3/lib-hijas.mp3",
+   "huella": "c040e66685626d81a17d4977b85a9bc1129a3f556e71f800e321828ce57556d3",
+   "marcas": [
+    0.35,
+    7.39,
+    24.55,
+    65.14,
+    103.72,
+    113.62,
+    117.68,
+    155.85,
+    195.25,
+    215.79,
+    226.38,
+    239.53,
+    289.23,
+    323.26,
+    326.04,
+    371.05,
+    373.16,
+    406.22,
+    414.02,
+    422.42,
+    462.0,
+    501.64,
+    503.29,
+    547.11,
+    553.67,
+    566.25,
+    607.11,
+    646.69,
+    650.12,
+    697.8,
+    736.83,
+    774.24,
+    785.39,
+    790.01,
+    834.02
+   ],
+   "dur": 859.56,
+   "bytes": 6877386,
+   "titulo": "Capítulo undécimo · Las hijas que faltaban",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-01T22:42:24Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@e4e2cfadea7e9fdc983f5ed54f1945bced10d021/voz/narrativa"
   }
  }
 }
