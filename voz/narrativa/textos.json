@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 503280,
+ "total_caracteres": 504432,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -240,11 +240,11 @@
     },
     {
      "k": "p",
-     "x": "Por eso la lápida de los dos, de piedra clara, está hoy en el cementerio nuevo, con sus nombres completos. En la fotografía que hizo la familia el día de Todos los Santos de 2025 tiene dos ramos de flores encima. Es una de las piedras más antiguas que se conservan allí, y es el primer documento de esta historia que cualquiera puede ir a ver."
+     "x": "Por eso la lápida de los dos, de piedra clara, está hoy en el cementerio nuevo, con sus nombres completos. Es una losa blanca y redondeada, con una cruz grabada en lo alto, y la cierra la dedicatoria de quien la puso: «su desconsolado hijo les dedica este recuerdo». Es una de las piedras más antiguas que se conservan allí, y es el primer documento de esta historia que cualquiera puede ir a ver."
     },
     {
      "k": "pie",
-     "x": "La lápida que se trasladó al cementerio nuevo · Cementerio de Las Pedroñeras · fotografía de la familia, 1 de noviembre de 2025 · una de las más antiguas que se conservan"
+     "x": "La lápida que se trasladó al cementerio nuevo · Cementerio de Las Pedroñeras · fotografía de la familia · una de las más antiguas que se conservan, el monumento de la familia"
     },
     {
      "k": "h",
@@ -311,8 +311,8 @@
      "x": "La otra mitad de la historia transcurre en Álava y Gipuzkoa: la aldea de Ondategi con su iglesia de San Lorenzo y su lavadero, una casa-torre del tipo que poblaba los valles alaveses, y Vitoria, la ciudad del archivo donde se guardan los libros. Están dibujados con el mismo estilo, para que las dos orillas de la historia se parezcan, y se cuentan despacio en los dos capítulos dedicados a Álava."
     }
    ],
-   "huella": "5130fabff5b75b171439679776e98dcc70cd3083fcf84c67d0156163c112d452",
-   "chars": 9088
+   "huella": "9a8dccefaa64521042d8c924b6ca454f12b75dda3019cb41dfeb0eacd586f295",
+   "chars": 9146
   },
   {
    "clave": "cap:hipotesis",
@@ -1351,7 +1351,7 @@
     },
     {
      "k": "p",
-     "x": "A la casa de Venus el pueblo la conoció por el nombre de su dueño: eran «los Venus», y se decía «en una punta los Venus y en la otra los Chicharras», porque las casas de las dos familias estaban en los dos extremos del caserío. Era un nombre que no llevaba nadie más. No es el de ningún santo —lo más parecido son san Venusto y san Venustiano—, fuera de esta familia no se ha encontrado otro Venus en Las Pedroñeras ni en los pueblos de alrededor, y hoy, según el Instituto Nacional de Estadística, no llegan a veinte los hombres que se llaman así en toda España."
+     "x": "A la casa de Venus el pueblo la conoció por el nombre de su dueño: eran «los Venus», y se decía «en una punta los Venus y en la otra los Chicharras», porque las casas de las dos familias estaban en los dos extremos del caserío. Era un nombre que no llevaba nadie más. No es el de ningún santo —lo más parecido son san Venusto y san Venustiano—, fuera de esta familia no se ha encontrado otro Venus en Las Pedroñeras ni en los pueblos de alrededor, y hoy, según el Instituto Nacional de Estadística, no llegan a veinte los hombres que se llaman así en toda España. En las guías de teléfonos de las cuatro provincias manchegas, los únicos abonados que se llaman Venus son de esta familia."
     },
     {
      "k": "p",
@@ -1434,8 +1434,8 @@
      "x": "Ese papel importa más de lo que parece. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Si es ella la Isidora de los Higuerillas, su madre habría muerto de parto hacia 1911 o 1912. Pero la familia recuerda a Vicenta como la mayor de las hijas de la casa, y eso la haría nacer hacia 1860: una mujer de esa edad difícilmente daba a luz en 1908. Algo no encaja todavía: o Vicenta no era la mayor de los hermanos, o aquella Isidora es otra, o alguna de las cuentas se ha movido al pasar de boca en boca. No hace falta elegir. La partida de nacimiento de Isidora, que nombrará a su madre, lo dirá, y cuando llegue, este capítulo dejará de ser solo memoria."
     }
    ],
-   "huella": "deb8188cde6b806ecb669414a61530a7b4f2b376d65ad6624c270e38fbaa0fc8",
-   "chars": 17602
+   "huella": "59555eefa5c1b1be321e192f790cad4881e41a8a0978a23789117092ecf6ea83",
+   "chars": 17725
   },
   {
    "clave": "cap:actas",
@@ -1520,11 +1520,11 @@
     },
     {
      "k": "p",
-     "x": "Vicenta era viuda de Francisco Azabarte y dejaba tres hijos: Venus, Ambrosiana y Bonifacia. Era hija de Francisco y de Tomasa, difuntos y naturales de la villa. Había testado ante el notario don Enrique Serrano Martí, y la enterraron también en Santa Catalina. Cuando aquel cementerio se cerró, según se recuerda en casa, sus nietos pagaron el traslado de los dos al cementerio nuevo, con la piedra que había labrado su hijo Venus, y allí siguen. La lápida repite la fecha y la edad del acta de Francisco, y escribe con todas las letras el apellido Galindo."
+     "x": "Vicenta era viuda de Francisco Azabarte y dejaba tres hijos: Venus, Ambrosiana y Bonifacia. Era hija de Francisco y de Tomasa, difuntos y naturales de la villa. Había testado ante el notario don Enrique Serrano Martí, y la enterraron también en Santa Catalina. Cuando aquel cementerio se cerró, según se recuerda en casa, sus nietos pagaron el traslado de los dos al cementerio nuevo, con la piedra que había labrado su hijo Venus, y allí siguen. La lápida repite la fecha y la edad del acta de Francisco, y escribe con todas las letras el apellido Galindo. A Vicenta le pone el mismo día que el acta, el 8 de febrero de 1914, pero setenta y un años en vez de setenta y ocho: una de las dos cuentas se equivocó, y mientras no aparezca su partida de bautismo vale la del juzgado. Abajo, la dedicatoria del hijo: «su desconsolado hijo les dedica este recuerdo»."
     },
     {
      "k": "pie",
-     "x": "Lo que dice la piedra · Cementerio de Las Pedroñeras · fotografía de la familia, 1 de noviembre de 2025 · repite la fecha y la edad del acta, y escribe el apellido Galindo"
+     "x": "Lo que dice la piedra · Cementerio de Las Pedroñeras · fotografía de la familia · repite la fecha y la edad del acta de Francisco, escribe el apellido Galindo y lleva la dedicatoria de su hijo"
     },
     {
      "k": "h",
@@ -1559,8 +1559,8 @@
      "x": "Cuando alguien hacía testamento, vendía una tierra o daba un poder, lo hacía ante un notario, al que antes se llamaba escribano. El notario escribía el documento, lo hacía firmar y guardaba el original en un libro que se encuadernaba cada año: el protocolo. Pasados cien años, esos libros van a los archivos históricos de cada provincia, donde se pueden consultar. Muchos secretos de familia duermen allí."
     }
    ],
-   "huella": "443bb516acf18988a9fbc949407c2500ea14b30f0645e5ace881b8d1c7135b77",
-   "chars": 6619
+   "huella": "a873b94535757fd7d4aab2c65a9d20c2b52189191a3e82d1cd7cd23995d11cca",
+   "chars": 6942
   },
   {
    "clave": "cap:contexto",
@@ -1959,7 +1959,7 @@
     },
     {
      "k": "p",
-     "x": "Dos de los papeles de esta historia no son de archivo. El primero es de piedra: la lápida de Francisco y Vicenta en el cementerio de Las Pedroñeras, que, según se recuerda en casa, labró su hijo Venus. Repite la fecha y la edad del acta de Francisco y escribe el apellido Galindo, y la familia la fotografió el 1 de noviembre de 2025. El segundo es una carta de dos caras escrita a mano en septiembre de 2026 por Francisco Gallardo Azabarte. Es el primer testimonio escrito de la investigación: nombra a los hermanos de la abuela Vicenta, cuenta la historia de Juan «el Polaco» y escribe por primera vez el nombre de Pronuana. Es correspondencia de familia, y el original se queda en casa."
+     "x": "Dos de los papeles de esta historia no son de archivo. El primero es de piedra: la lápida de Francisco y Vicenta en el cementerio de Las Pedroñeras, que, según se recuerda en casa, labró su hijo Venus. Repite la fecha y la edad del acta de Francisco y escribe el apellido Galindo, y cierra con la dedicatoria de su hijo. La familia la ha fotografiado tan de cerca que se puede leer letra a letra. El segundo es una carta de dos caras escrita a mano en septiembre de 2026 por Francisco Gallardo Azabarte. Es el primer testimonio escrito de la investigación: nombra a los hermanos de la abuela Vicenta, cuenta la historia de Juan «el Polaco» y escribe por primera vez el nombre de Pronuana. Es correspondencia de familia, y el original se queda en casa."
     },
     {
      "k": "h",
@@ -1970,8 +1970,8 @@
      "x": "Los documentos del origen del apellido se cuentan en sus capítulos, y aquí basta con saber cuáles son. Del caserío de Angiozar hay escrituras de escribanos de 1517 a 1738 y pleitos de 1632 a 1773. De los hidalgos de Barchín del Hoyo y de Buenache, la ejecutoria de 1537 y su confirmación de 1595, en Granada, y de La Roda, tres partidas de 1557, 1581 y 1586. De la familia de Cañada Juncosa, escrituras firmadas en Madrid entre 1772 y 1802, un grado de la Universidad de Toledo de 1801 y un bautizo de Cartagena de 1767. De Álava, las copias de Vitoria de 1526, 1528, 1719, 1725 y 1736. De Udala, junto a Mondragón, una prueba de hidalguía de 1804 leída entera. La edición de investigación los cita con su archivo y explica qué dice cada uno."
     }
    ],
-   "huella": "35ca07af933eca4b23a5b56f37f163e0ddb681f8131846e575b110fe5bccd1cc",
-   "chars": 8341
+   "huella": "a9d7968e51622157eb1013072a33b0fa33fd913e43ca968773891c7d3a2fa5f7",
+   "chars": 8403
   },
   {
    "clave": "cap:barchin",
@@ -2782,7 +2782,7 @@
     },
     {
      "k": "p",
-     "x": "La piedra está hoy en el cementerio nuevo del pueblo, y es una de las más antiguas que se conservan allí. Lleva grabados los nombres enteros de los dos, cada uno con sus dos apellidos. En la fotografía que hizo la familia el día de Todos los Santos de 2025 tiene encima dos ramos de flores. Es el primer documento de esta historia que cualquiera puede ir a ver, y el punto desde el que este libro echa a andar hacia atrás."
+     "x": "La piedra está hoy en el cementerio nuevo del pueblo, y es una de las más antiguas que se conservan allí. Lleva grabados los nombres enteros de los dos, cada uno con sus dos apellidos. Es una losa blanca y redondeada, con una cruz grabada en lo alto. Es el primer documento de esta historia que cualquiera puede ir a ver, y el punto desde el que este libro echa a andar hacia atrás."
     },
     {
      "k": "p",
@@ -2790,7 +2790,7 @@
     },
     {
      "k": "pie",
-     "x": "La piedra clara · Cementerio de Las Pedroñeras, 1 de noviembre de 2025 · Fotografía de la familia, hecha el día de Todos los Santos de 2025. La lápida de Francisco y Vicenta es una de las más antiguas que se conservan en el cementerio del pueblo."
+     "x": "La piedra clara · Fotografía de la familia. La lápida de Francisco y Vicenta es una de las más antiguas que se conservan en el cementerio del pueblo."
     },
     {
      "k": "h",
@@ -2861,8 +2861,8 @@
      "x": "Para empezar por el principio hay que dejar la piedra clara donde está e irse muy lejos y muy atrás: unos cuatrocientos kilómetros al norte, a un valle de Gipuzkoa donde, hace más de quinientos años, un caserío daba su nombre a quienes vivían en él."
     }
    ],
-   "huella": "89fb16e189a2831b91d0aef41394242f2c652fbb0555bc9bc4466b531c5e8e57",
-   "chars": 5337
+   "huella": "96a120ced9d6f32b12094c1dc75b57210379496b65ce3b5bc4ef5cd7b7007b70",
+   "chars": 5200
   },
   {
    "clave": "lib:casa",
@@ -4650,7 +4650,7 @@
     },
     {
      "k": "p",
-     "x": "Repitió también el día de su muerte y sus setenta y tres años. A ella la nombró con sus dos apellidos, Navarro y Fides, pero su mitad de la piedra es hoy la más gastada, la que ya casi no se lee."
+     "x": "Repitió también el día de su muerte y sus setenta y tres años. A ella la nombró con sus dos apellidos, Navarro y Fides, y le puso el 8 de febrero de 1914, el mismo día que el acta, pero setenta y un años, siete menos que el juzgado; mientras no aparezca su partida de bautismo, vale la cuenta del acta. Y abajo, antes del último descanse en paz, dejó su dedicatoria: «su desconsolado hijo les dedica este recuerdo»."
     },
     {
      "k": "p",
@@ -4662,15 +4662,15 @@
     },
     {
      "k": "pie",
-     "x": "Lo que dice la piedra · 1 de noviembre de 2025 · La lápida de Francisco y Vicenta en el cementerio nuevo de Las Pedroñeras, fotografiada por la familia el día de Todos los Santos de 2025. Repite la fecha y la edad del acta de Francisco y escribe con todas las letras el apellido Galindo."
+     "x": "Lo que dice la piedra · La lápida de Francisco y Vicenta en el cementerio nuevo de Las Pedroñeras, fotografiada por la familia. Repite la fecha y la edad del acta de Francisco, escribe con todas las letras el apellido Galindo y cierra con la dedicatoria de su hijo."
     },
     {
      "k": "p",
      "x": "Muertos Francisco y Vicenta, la casa vieja fue de la Boni. Pero la historia que llega hasta hoy siguió en otra casa de la misma calle, la del hijo que había tallado la piedra. Era la de Venus, el labrador, y en ella iban a crecer ocho hijos."
     }
    ],
-   "huella": "4e4951cbd57f1774a0ea16c51ceda9864dc19dce111783c3db62439ab1571625",
-   "chars": 9713
+   "huella": "b45a685526a1a1fe0af6fc8bb2a3224a03ee989041bb3489e2948e549d06bafd",
+   "chars": 9911
   },
   {
    "clave": "lib:venus",
@@ -4719,7 +4719,7 @@
     },
     {
      "k": "p",
-     "x": "Tampoco era nombre de la tierra. Fuera de esta familia no se ha encontrado a ningún hombre llamado Venus en Las Pedroñeras ni en los pueblos de alrededor, ni antes ni después. En los millones de bautismos, bodas y entierros españoles de cuatro siglos que reúnen hoy las grandes bases de genealogía, el nombre aparece en tres personas, y ninguna es un hombre del siglo diecinueve. Y hoy, según el Instituto Nacional de Estadística, no llegan a veinte los hombres que se llaman así en toda España."
+     "x": "Tampoco era nombre de la tierra. Fuera de esta familia no se ha encontrado a ningún hombre llamado Venus en Las Pedroñeras ni en los pueblos de alrededor, ni antes ni después. En los millones de bautismos, bodas y entierros españoles de cuatro siglos que reúnen hoy las grandes bases de genealogía, el nombre aparece en tres personas, y ninguna es un hombre del siglo diecinueve. Y hoy, según el Instituto Nacional de Estadística, no llegan a veinte los hombres que se llaman así en toda España. En las guías de teléfonos de las cuatro provincias de La Mancha, de 1999 a 2015, los únicos abonados que se llaman Venus son de esta familia; fuera de ella, el nombre solo lo llevan una cafetería de Albacete y una peluquería de Talavera."
     },
     {
      "k": "p",
@@ -4886,8 +4886,8 @@
      "x": "Encarnación murió en 1943, con unos cincuenta y tres años, y Venus tres años después, en 1946. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "2a225f7e1f2b7a6044246a6be7fb78ff5eda2752d15afd8917b07772fd379991",
-   "chars": 15158
+   "huella": "936be0f6299a0a470f0ceafa8bc57f78caa66926c1bae5386d7900d7d077867a",
+   "chars": 15396
   },
   {
    "clave": "lib:guerra",
@@ -5500,11 +5500,11 @@
     },
     {
      "k": "p",
-     "x": "La enterraron en Santa Catalina, junto a Francisco, y con él pasó después al cementerio nuevo, bajo la piedra que, según se recuerda, labró su hijo. La inscripción la nombra con sus dos apellidos, Navarro y Fides, pero la mitad de la piedra que le corresponde es la más gastada, la que ya casi no se lee. Lo que no se ha borrado es el mote: en el pueblo sigue habiendo Habichuelos."
+     "x": "La enterraron en Santa Catalina, junto a Francisco, y con él pasó después al cementerio nuevo, bajo la piedra que, según se recuerda, labró su hijo. La inscripción la nombra con sus dos apellidos, Navarro y Fides, y da el mismo día de su muerte que el acta, el 8 de febrero de 1914. En la edad no coinciden: la piedra le pone setenta y un años y el juzgado, setenta y ocho. Mientras no aparezca su partida de bautismo, vale la del acta. Lo que no se ha borrado es el mote: en el pueblo sigue habiendo Habichuelos."
     }
    ],
-   "huella": "3b14d9544843d3ad3cebce300445adb8ac4576dc1aab415856dce2a36f112ae4",
-   "chars": 6712
+   "huella": "03509a938c03e775538267f9121adb6e2f8eadaedb03ac906d6662dcdda75eb8",
+   "chars": 6844
   },
   {
    "clave": "pj:P002",
@@ -5549,7 +5549,7 @@
     },
     {
      "k": "p",
-     "x": "Según se recuerda en casa, la lápida de sus padres es obra suya, y la familia la tiene por un monumento propio. Sacó una piedra enorme de la cueva de las canteras, le dio forma con sus manos y grabó en ella los nombres de Francisco y de Vicenta, la misma inscripción que todavía se lee en el cementerio. Fue su regalo póstumo, la manera que encontró de honrar a quienes lo habían criado. Por ese gesto, por su fuerza y por lo trabajador que era, la memoria de la casa lo tiene por el hijo del que sus padres se sintieron más orgullosos y por un hombre bueno y respetado en todo el pueblo: el primer Venus de la familia y el patriarca de la rama de hoy."
+     "x": "Según se recuerda en casa, la lápida de sus padres es obra suya, y la familia la tiene por un monumento propio. Sacó una piedra enorme de la cueva de las canteras, le dio forma con sus manos y grabó en ella los nombres de Francisco y de Vicenta, la misma inscripción que todavía se lee en el cementerio. La propia piedra lo dice a su manera, porque termina con «su desconsolado hijo les dedica este recuerdo», y Venus era el único hijo varón que les quedaba. Fue su regalo póstumo, la manera que encontró de honrar a quienes lo habían criado. Por ese gesto, por su fuerza y por lo trabajador que era, la memoria de la casa lo tiene por el hijo del que sus padres se sintieron más orgullosos y por un hombre bueno y respetado en todo el pueblo: el primer Venus de la familia y el patriarca de la rama de hoy."
     },
     {
      "k": "p",
@@ -5564,8 +5564,8 @@
      "x": "Murió en 1946, tres años después que Encarnación. Cuando se cerró el cementerio viejo él ya no estaba, y, según se recuerda en casa, fueron sus hijos quienes pagaron el traslado de los restos de sus padres al nuevo, con aquella misma piedra a cuestas; les ayudó su nieto Francisco Gallardo Azabarte. No todas las familias lo costearon, y los cuerpos por los que nadie pagó siguen bajo lo que hoy es el parque. Los de Francisco y Vicenta no: descansan bajo la piedra que talló su hijo, con los dos nombres que él mismo grabó."
     }
    ],
-   "huella": "3d55f71b2feaca60c8e699baec24db886f2da1f6c4ce0285d723214a886d401f",
-   "chars": 6069
+   "huella": "a0aa3c52722e3cd591c8621236e4b5d815d0a00233c566f6284d778978e50e63",
+   "chars": 6224
   },
   {
    "clave": "pj:P094",
