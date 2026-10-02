@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 504432,
+ "total_caracteres": 506783,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -2551,7 +2551,7 @@
     },
     {
      "k": "p",
-     "x": "En esa misma rama la historia se cuenta con otras piezas: que la bolsa se la dio a la propia Vicenta mientras ella segaba en la encomienda, al pasar con un destacamento de caballería, diciéndole «guárdamelo; si no vuelvo, es para ti y tus hijos», y que acabó sus días en Extremadura. Las dos versiones se guardan, y la que se tiene por vigente es la escrita. Las dos coinciden en lo esencial: un hermano que se fue lejos y que, a su manera, no se olvidó de los suyos. De momento ningún papel lo nombra. Si hubo causa por aquella muerte, la llevaría el juzgado de Belmonte, que era el de la comarca, y la sentenciaría la Audiencia de Albacete. Los protocolos de los notarios de Mula de aquellos años se destruyeron, y el Registro Civil de Mula, al que se pidió su acta de defunción, contestó el 1 de octubre de 2026 que no la encuentra en las fechas que da la carta. Eso no la desmiente, pero deja abierto cuándo y dónde murió: pudo ser otro año u otro lugar, o el nombre pudo escribirse de otra manera. Mientras no aparezca un papel, «el Polaco» sigue siendo un recuerdo."
+     "x": "En esa misma rama la historia se cuenta con otras piezas: que la bolsa se la dio a la propia Vicenta mientras ella segaba en la encomienda, al pasar con un destacamento de caballería, diciéndole «guárdamelo; si no vuelvo, es para ti y tus hijos», y que acabó sus días en Extremadura. Las dos versiones se guardan, y la que se tiene por vigente es la escrita. Las dos coinciden en lo esencial: un hermano que se fue lejos y que, a su manera, no se olvidó de los suyos. De momento ningún papel lo nombra. Si hubo causa por aquella muerte, la llevaría el juzgado de Belmonte, que era el de la comarca, y la sentenciaría la Audiencia de Albacete. El archivo que guarda los papeles de esa Audiencia contestó el 2 de octubre de 2026 que no encuentra ningún expediente a su nombre; conserva los libros de sentencias de aquellos años, pero no se pueden buscar por el nombre del reo y hay que leerlos en su sala. Los protocolos de los notarios de Mula de aquellos años se destruyeron, y el Registro Civil de Mula, al que se pidió su acta de defunción, contestó el 1 de octubre de 2026 que no la encuentra en las fechas que da la carta. Eso no la desmiente, pero deja abierto cuándo y dónde murió: pudo ser otro año u otro lugar, o el nombre pudo escribirse de otra manera. Mientras no aparezca un papel, «el Polaco» sigue siendo un recuerdo."
     },
     {
      "k": "pull",
@@ -2582,8 +2582,8 @@
      "x": "Por esos caminos hay hoy personas que llevan el apellido Azabarte y que nunca han vivido en Las Pedroñeras. Sus historias también caben en estas páginas, y el capítulo de las preguntas abiertas explica cómo pueden llegar hasta aquí."
     }
    ],
-   "huella": "5591cc21476a6e9cc7da2021d360f3c29c49df67f9bfcbc02a469de2df3b5f65",
-   "chars": 11830
+   "huella": "d939ee01f6497d4a25a6952e5c21cf613916dc71af50200e64ba22442caba01f",
+   "chars": 12091
   },
   {
    "clave": "cap:pendiente",
@@ -2672,7 +2672,7 @@
     },
     {
      "k": "p",
-     "x": "De la rama de la abuela quedan dos preguntas. La primera es el final de Juan «el Polaco». Según la carta de la familia murió en Mula el 24 de febrero de 1905, pero ningún papel lo nombra todavía: los libros de Mula de aquellos años no están en línea, y los protocolos de sus notarios anteriores a 1936 se perdieron. Se pidió su acta de defunción al Registro Civil de Mula, y el 1 de octubre de 2026 contestó que en esas fechas no hay ninguna inscrita a su nombre. Ahora hay que saber si se miraron febrero y marzo enteros y el nombre escrito a secas, buscar en los años de alrededor y pedir su entierro a las parroquias de Mula; y vuelve a contar la versión de la otra rama, que lo hacía morir en Extremadura. Cualquiera de esos papeles daría sus padres y cerraría de paso quiénes eran los de Vicenta. Si la Iglesia heredó sus bienes, como se cuenta, tuvo que dejarlo dicho en un testamento, porque su hermana Vicenta vivía todavía y la ley no dejaba heredar a la Iglesia de otro modo. Y del crimen que lo llevó a la cárcel la familia puede ayudar más que ningún archivo: el nombre del mozo que murió, o el año, abriría los papeles del juzgado de Belmonte, que era el del pueblo, y de la Audiencia de Albacete, que sentenciaba aquellas causas."
+     "x": "De la rama de la abuela quedan dos preguntas. La primera es el final de Juan «el Polaco». Según la carta de la familia murió en Mula el 24 de febrero de 1905, pero ningún papel lo nombra todavía: los libros de Mula de aquellos años no están en línea, y los protocolos de sus notarios anteriores a 1936 se perdieron. Se pidió su acta de defunción al Registro Civil de Mula, y el 1 de octubre de 2026 contestó que en esas fechas no hay ninguna inscrita a su nombre. Ahora hay que saber si se miraron febrero y marzo enteros y el nombre escrito a secas, buscar en los años de alrededor y pedir su entierro a las parroquias de Mula; y vuelve a contar la versión de la otra rama, que lo hacía morir en Extremadura. Cualquiera de esos papeles daría sus padres y cerraría de paso quiénes eran los de Vicenta. Si la Iglesia heredó sus bienes, como se cuenta, tuvo que dejarlo dicho en un testamento, porque su hermana Vicenta vivía todavía y la ley no dejaba heredar a la Iglesia de otro modo. Y del crimen que lo llevó a la cárcel la familia puede ayudar más que ningún archivo: el nombre del mozo que murió, o el año, abriría los papeles del juzgado de Belmonte, que era el del pueblo, y de la Audiencia de Albacete, que sentenciaba aquellas causas. El archivo de Albacete ya ha contestado que no encuentra un expediente a su nombre y que sus libros de sentencias, que van de 1851 a 1892, no tienen índice de nombres y solo se pueden leer en su sala: con el año en la mano, esa lectura sería corta."
     },
     {
      "k": "p",
@@ -2739,8 +2739,8 @@
      "x": "A los más pequeños de la casa se les puede proponer un juego: preguntar a sus abuelos cómo se llamaban los abuelos de ellos, y apuntarlo en un papel con la fecha. Preguntas como esa, hechas a tiempo, son las que pusieron en marcha esta historia."
     }
    ],
-   "huella": "1115b34a87ae0660e0ddea0a8a2b145eb29691037a9994546c6e28aed7fc4cc7",
-   "chars": 10071
+   "huella": "a816ae7e8067ea9df45528bd3cdfff0281165f14920d9dba154feb268a03046b",
+   "chars": 10320
   },
   {
    "clave": "cap:glosario",
@@ -4252,7 +4252,7 @@
     },
     {
      "k": "p",
-     "x": "Los trece años cuadran con la justicia de aquel tiempo. Una causa así la habría llevado el juzgado de Belmonte, que era el de la comarca, y la habría sentenciado la Audiencia de Albacete, el tribunal que juzgaba las causas de la provincia de Cuenca. En los dos casos de homicidio que se conocen de aquella Audiencia, la pena fue de doce años y un día de reclusión."
+     "x": "Los trece años cuadran con la justicia de aquel tiempo. Una causa así la habría llevado el juzgado de Belmonte, que era el de la comarca, y la habría sentenciado la Audiencia de Albacete, el tribunal que juzgaba las causas de la provincia de Cuenca. En los dos casos de homicidio que se conocen de aquella Audiencia, la pena fue de doce años y un día de reclusión. Se preguntó al archivo que guarda los papeles de aquella Audiencia, en Albacete, y el 2 de octubre de 2026 contestó que no encuentra ningún expediente a nombre de Juan. Conserva los libros de sentencias de esos años, pero sin índice de nombres: habrá que leerlos uno a uno, en su sala."
     },
     {
      "k": "p",
@@ -4355,8 +4355,8 @@
      "x": "En la casa de Francisco y Vicenta, entretanto, la suerte tenía otra cara. De los nueve u once hijos que habían tenido, cuenta la familia, solo cinco llegaron a mayores, y las dos mayores murieron antes que sus padres, dejando hijos pequeños que criaron los abuelos."
     }
    ],
-   "huella": "3be5395670cdb1226d9d3d7b9d46a7361b8c29e80f4a9bf83149f5130ae80e9c",
-   "chars": 9797
+   "huella": "2aa9cbbc8d672d71ef91011fc021df3ae4b2e5afb3f510a51df30aba4c3c6a33",
+   "chars": 10083
   },
   {
    "clave": "lib:hijas",
@@ -5145,7 +5145,7 @@
     },
     {
      "k": "p",
-     "x": "Se casaron en los años de las cartillas de racionamiento, que no se suprimieron hasta 1952. Vivieron primero en la casa de la calle Fray Luis de León que había sido de Venus, en la calle donde vivía casi toda la familia de él. Después se mudaron enfrente de la escuela, cruzando la calle, a una casa grande con un patio donde, con los años, los nietos jugaban antes de entrar a clase. Mucho más tarde Adela se trasladó a la avenida Juan XXIII, a una casa que hoy es una de las farmacias más conocidas del pueblo."
+     "x": "Se casaron en los años de las cartillas de racionamiento, que no se suprimieron hasta 1952. Vivieron en la casa de la calle Fray Luis de León que había sido de Venus, en la calle donde vivía casi toda la familia de él. La casa del abuelo ocupaba el número 22 y la casa de atrás, la que da a la calle del Sepulcro, y se partió en herencia entre varios de sus hijos; a Emiliano le tocó la parte de Fray Luis de León. Allí criaron a sus cuatro hijos, y no la dejaron hasta que se casaron todos. Después se mudaron enfrente de la escuela, cruzando la calle, a una casa grande con un patio donde, con los años, los nietos jugaban antes de entrar a clase. Mucho más tarde Adela se trasladó a la avenida Juan XXIII, a una casa que hoy es una de las farmacias más conocidas del pueblo."
     },
     {
      "k": "p",
@@ -5174,6 +5174,10 @@
     {
      "k": "p",
      "x": "No fue la única. En aquellos años, en los pueblos de La Mancha, muchas niñas dejaban la escuela en cuanto hacían falta en casa, y en casa de Emiliano y Adela, con cuatro hijos, las faenas y el campo, hicieron falta todas las manos, y muy pronto. De adulta llegó la música, que en esta familia no falta por ninguna parte, y Pilar cantó muchos años en el coro de la parroquia. Es hoy la memoria viva del barrio: recuerda la casa del abuelo Venus, quién era quién en aquella calle y en qué casa vivía cada pariente."
+    },
+    {
+     "k": "p",
+     "x": "Pilar se casó con José Joaquín García Romero, de la familia que en el pueblo llaman «los Birgolos», trompetista de la banda en su juventud y, durante más de treinta años, gerente de la cooperativa del ajo. La casa de Fray Luis de León la heredó ella, y como estaba ya muy vieja la echó abajo y la levantó de nuevo. En la casa nueva han vivido siempre los dos, allí criaron a sus cuatro hijos y allí siguen."
     },
     {
      "k": "p",
@@ -5232,8 +5236,8 @@
      "x": "De la casa de Emiliano y Adela salieron los recuerdos del abuelo Venus y de aquella calle de parientes que dieron pie a todo, y de ella salió también una pregunta. Su nieto Francisco Javier, que había crecido oyendo a su madre, Pilar, hablar de aquella calle, quiso saber de dónde venía un apellido que casi nadie lleva. Lo que queda de este libro no es ya la vida de los antepasados, sino la historia de cómo se supo, quién la contó y qué falta todavía por saber."
     }
    ],
-   "huella": "4458281786a75a7b97ee462d073915cd46e6945ae0d3c0fd73ce9411bcc1d1c4",
-   "chars": 8989
+   "huella": "fcb013985d5d817edee0ae9f96d37f3554c572dfa71ed5f8473cbf3de9cd80f4",
+   "chars": 9660
   },
   {
    "clave": "lib:epilogo",
@@ -5541,6 +5545,10 @@
     },
     {
      "k": "p",
+     "x": "La casa de Venus ocupaba el número 22 de la calle Fray Luis de León y la casa de atrás, la que da a la calle del Sepulcro. Con el tiempo se dividió para dejarla en herencia a varios de sus hijos, y hoy son dos casas. La parte de Fray Luis de León fue la de su hijo Emiliano, que crió allí a los suyos, y después la de su nieta Pilar, que la levantó de nuevo y vive en ella todavía."
+    },
+    {
+     "k": "p",
      "x": "Tenía pistola y tenía genio. En febrero de 1914, el día que enterraron a su madre, alguien le dijo en el cementerio que su cuñado no había ido. Al volver lo encontró en la casa con cuatro o cinco hombres más, bebiendo, y fue derecho por la pistola. Les disparó dos tiros mientras saltaban las tapias de los corrales, que eran bajas, y no hirió a nadie. Pero desde aquel día las dos ramas no volvieron a tratarse, y los hijos de una y otra crecieron sin conocerse. Lo cuenta su nieto Ubaldo."
     },
     {
@@ -5564,8 +5572,8 @@
      "x": "Murió en 1946, tres años después que Encarnación. Cuando se cerró el cementerio viejo él ya no estaba, y, según se recuerda en casa, fueron sus hijos quienes pagaron el traslado de los restos de sus padres al nuevo, con aquella misma piedra a cuestas; les ayudó su nieto Francisco Gallardo Azabarte. No todas las familias lo costearon, y los cuerpos por los que nadie pagó siguen bajo lo que hoy es el parque. Los de Francisco y Vicenta no: descansan bajo la piedra que talló su hijo, con los dos nombres que él mismo grabó."
     }
    ],
-   "huella": "a0aa3c52722e3cd591c8621236e4b5d815d0a00233c566f6284d778978e50e63",
-   "chars": 6224
+   "huella": "18f535fba1aa63dfdd2da12ea935752ea50d646c1fa4b3e163a3e4d7458386d4",
+   "chars": 6605
   },
   {
    "clave": "pj:P094",
@@ -6148,7 +6156,7 @@
     },
     {
      "k": "p",
-     "x": "Perdió a su madre en 1943 y a su padre en 1946, el mismo año, poco más o menos, en que se casó con Adela Arellano Castillo. Tuvieron cuatro hijos: Emiliano, el mayor, Pilar, la única chica, Venus y Francisco, el pequeño. Vivieron primero en la casa de su padre y después enfrente de la escuela, cruzando la calle, en una casa grande con un patio donde los nietos jugaban antes de entrar a clase."
+     "x": "Perdió a su madre en 1943 y a su padre en 1946, el mismo año, poco más o menos, en que se casó con Adela Arellano Castillo. Tuvieron cuatro hijos: Emiliano, el mayor, Pilar, la única chica, Venus y Francisco, el pequeño. Criaron a sus hijos en la casa de su padre, en la parte que da a la calle Fray Luis de León, y no la dejaron hasta que se casaron todos. Después se mudaron enfrente de la escuela, cruzando la calle, a una casa grande con un patio donde los nietos jugaban antes de entrar a clase."
     },
     {
      "k": "p",
@@ -6163,8 +6171,8 @@
      "x": "Murió en febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de esta galería, y el suyo está hecho sobre una fotografía que guarda la familia. Es el abuelo del investigador y el punto exacto donde la memoria viva se encuentra con los papeles: de su casa salieron los recuerdos del abuelo Venus y de aquella calle que dieron pie a todo esto."
     }
    ],
-   "huella": "6cc1e98f963180176973f72cfc41fa7608bdc4247e6fa9d9653817ef37284f6a",
-   "chars": 4400
+   "huella": "f92b826d073a58358c5bab1c8c2deb3ee5fd407386b73acb40e9ad7133de4d58",
+   "chars": 4505
   },
   {
    "clave": "pj:P127",
@@ -6185,7 +6193,7 @@
     },
     {
      "k": "p",
-     "x": "Vivió gran parte de su vida en la casa de la calle Fray Luis de León que había sido de su suegro, Venus, en la calle donde vivía casi toda la familia de su marido. Junto a aquella calle se levanta la casa palacio de los Molina, y es la que se ve al fondo de su retrato, dibujado sobre una fotografía de estudio que conserva la familia. Más tarde se trasladó a la avenida Juan XXIII, a una casa que hoy es una de las farmacias más conocidas del pueblo."
+     "x": "Vivió gran parte de su vida en la casa de la calle Fray Luis de León que había sido de su suegro, Venus, en la calle donde vivía casi toda la familia de su marido. Allí crió a sus cuatro hijos, y no la dejó hasta que se casaron todos. Junto a aquella calle se levanta la casa palacio de los Molina, y es la que se ve al fondo de su retrato, dibujado sobre una fotografía de estudio que conserva la familia. Más tarde se trasladó a la avenida Juan XXIII, a una casa que hoy es una de las farmacias más conocidas del pueblo."
     },
     {
      "k": "p",
@@ -6204,8 +6212,8 @@
      "x": "Es la abuela materna del investigador. No llevaba el apellido Azabarte, pero descansa con ellos, y de ella vienen los que preguntaron."
     }
    ],
-   "huella": "176996e931614a5ee441e103343875cd838b5caf2f899d35d5cc6b9beba7b2b5",
-   "chars": 2368
+   "huella": "ca0638b9c09a3e24676ee62365a0c126eec24692d8fccc5bf42cf7d65b78b5bc",
+   "chars": 2439
   },
   {
    "clave": "pj:P133",
@@ -6587,11 +6595,15 @@
     },
     {
      "k": "p",
+     "x": "La casa de la calle Fray Luis de León, número 22, la que había sido del abuelo Venus y después de sus padres, la heredó ella. Estaba ya muy envejecida, y la echó abajo para levantarla de nuevo. En la casa nueva ha vivido siempre con su marido, José Joaquín García Romero, y allí siguen los dos. Allí criaron a sus cuatro hijos."
+    },
+    {
+     "k": "p",
      "x": "Esta historia empezó en sus conversaciones con su hijo sobre el abuelo Francisco y sobre de dónde venían los Azabarte. A finales de agosto de 2026 se sentaron los dos delante de las actas fotografiadas de los bisabuelos, y de aquellas tardes salieron preguntas que acabaron llevando a otras ramas de la familia. Su historia completa está en «Quiénes lo hacen posible». Aquí basta decir que sin sus conversaciones no habría habido historia que contar."
     }
    ],
-   "huella": "dce0f0195a91def397828c282a6e4702f89739d74ad18936da91b8571dce7208",
-   "chars": 1911
+   "huella": "54affe66e2d41d80fe0df4f9fe516d1d1d6488b6e8cf34d35aff3e0e30929a71",
+   "chars": 2238
   },
   {
    "clave": "pj:P033",
