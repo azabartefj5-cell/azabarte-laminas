@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@b3d2b60844d78f717af9b020542ad98585c22b57/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@1b97c9aa40f717975ce06e29cdd0f4cf4fec169b/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -886,27 +886,27 @@
   },
   "pj:P001": {
    "src": "mp3/pj-P001.mp3",
-   "huella": "6fecfb4546e8646072ced8f57591572d1b8cdda538da505e5017b31a7daa5c1d",
+   "huella": "277a83a2fb093bfee49df7cf7b7f6149a9888cd6b080100118aa1c95834698fd",
    "marcas": [
     0.35,
-    3.19,
-    18.59,
-    62.13,
-    85.71,
-    122.26,
-    147.64,
-    170.42,
-    198.53,
-    233.78,
-    275.82,
-    313.91
+    8.03,
+    31.62,
+    98.6,
+    128.67,
+    170.02,
+    207.54,
+    235.36,
+    268.71,
+    310.77,
+    364.88,
+    414.48
    ],
-   "dur": 350.95,
-   "bytes": 2808636,
+   "dur": 461.25,
+   "bytes": 3690876,
    "titulo": "Francisco",
-   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
-   "generado": "2026-09-29T14:43:03Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@47882e65780d2676dbb90e11809f356da1cd3893/voz/narrativa"
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-05T00:58:27Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@1b97c9aa40f717975ce06e29cdd0f4cf4fec169b/voz/narrativa"
   },
   "pj:P086": {
    "src": "mp3/pj-P086.mp3",
