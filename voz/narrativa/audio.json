@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c3c27d21b42b7eb9a6444d7c740fe6ac641ea7fd/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -2193,6 +2193,351 @@
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-06T01:20:01Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c3c27d21b42b7eb9a6444d7c740fe6ac641ea7fd/voz/narrativa"
+  },
+  "pj:P135": {
+   "src": "mp3/pj-P135.mp3",
+   "huella": "c7411443bd3a22aefacf5d0cb85d3348b6d99ccabd0bbbeac2183b301cae4ba6",
+   "marcas": [
+    0.35,
+    11.6,
+    38.55,
+    71.0,
+    94.75,
+    118.2,
+    140.85,
+    191.25,
+    228.42,
+    254.75,
+    280.27
+   ],
+   "dur": 300.07,
+   "bytes": 2401404,
+   "titulo": "Francisco",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T08:58:58Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P136": {
+   "src": "mp3/pj-P136.mp3",
+   "huella": "7beb2e81d52f902e23599a37cfee048564871a592bb116fe54a399f1c3da79d2",
+   "marcas": [
+    0.35,
+    3.87,
+    18.13,
+    54.88,
+    94.75
+   ],
+   "dur": 122.99,
+   "bytes": 984828,
+   "titulo": "Francisca",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T08:59:26Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P137": {
+   "src": "mp3/pj-P137.mp3",
+   "huella": "e1c75733b388ab8cd962517c0ae90706572c21a58c84bb6d3527f3aef83918dc",
+   "marcas": [
+    0.35,
+    3.53,
+    25.28,
+    62.82,
+    100.2,
+    131.22,
+    187.16,
+    215.19
+   ],
+   "dur": 263.18,
+   "bytes": 2106306,
+   "titulo": "Julián",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T08:59:58Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P098": {
+   "src": "mp3/pj-P098.mp3",
+   "huella": "875f38089a5cd51f72ebf9eb14d2668504f67dddecefde5b1cef0b33b71f4f1e",
+   "marcas": [
+    0.35,
+    3.77,
+    19.37,
+    48.34,
+    60.23,
+    89.73
+   ],
+   "dur": 105.31,
+   "bytes": 843330,
+   "titulo": "Emiliano (hijo)",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:00:20Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P004": {
+   "src": "mp3/pj-P004.mp3",
+   "huella": "54affe66e2d41d80fe0df4f9fe516d1d1d6488b6e8cf34d35aff3e0e30929a71",
+   "marcas": [
+    0.35,
+    3.44,
+    20.07,
+    61.33,
+    85.85,
+    111.23,
+    143.21,
+    171.82
+   ],
+   "dur": 204.91,
+   "bytes": 1640120,
+   "titulo": "Pilar",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:00:51Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P033": {
+   "src": "mp3/pj-P033.mp3",
+   "huella": "d1888731c56dd7c5135eb4cc399863f7dbf6b7c97c068c3aed83c4e5256e8ecc",
+   "marcas": [
+    0.35,
+    3.34,
+    9.76,
+    43.3,
+    58.94
+   ],
+   "dur": 69.6,
+   "bytes": 557824,
+   "titulo": "Venus (nieto)",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:01:12Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P131": {
+   "src": "mp3/pj-P131.mp3",
+   "huella": "c710508da59de6d41dabef7a6e437a00b0369bd9389f686634091b5fd974644f",
+   "marcas": [
+    0.35,
+    3.25,
+    22.78,
+    49.06,
+    91.48,
+    121.4,
+    149.99
+   ],
+   "dur": 173.11,
+   "bytes": 1385730,
+   "titulo": "Víctor",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:01:49Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P132": {
+   "src": "mp3/pj-P132.mp3",
+   "huella": "87309783b1cce3461a744353a8e6c8cdd540e60e3dd4dd6e8cf9c815ee244325",
+   "marcas": [
+    0.35,
+    6.34,
+    25.2,
+    47.44,
+    81.26,
+    120.08,
+    148.98
+   ],
+   "dur": 184.19,
+   "bytes": 1474427,
+   "titulo": "Casimira",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:02:25Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P087": {
+   "src": "mp3/pj-P087.mp3",
+   "huella": "e4c36a3dbf33277f3cbe3a880912ed9bdae153dbdc1041e3f5bbfcbe4c164b90",
+   "marcas": [
+    0.35,
+    2.49,
+    20.59,
+    53.18,
+    95.04,
+    143.35,
+    188.4
+   ],
+   "dur": 227.22,
+   "bytes": 1818680,
+   "titulo": "Pablo",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:02:55Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P088": {
+   "src": "mp3/pj-P088.mp3",
+   "huella": "6f8d4094657e83b2806a003cc7389ae5bb73e6f20ff7d837dc31233b7fb4defc",
+   "marcas": [
+    0.35,
+    2.58,
+    18.06,
+    48.63,
+    87.26,
+    118.53,
+    151.12
+   ],
+   "dur": 171.37,
+   "bytes": 1371896,
+   "titulo": "Blasa",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:03:23Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P092": {
+   "src": "mp3/pj-P092.mp3",
+   "huella": "7b18abc403f81dd96482a80d9d1befe3f562227d8791e544607682f96e6c9221",
+   "marcas": [
+    0.35,
+    3.07,
+    19.49,
+    46.07,
+    82.34,
+    147.93,
+    198.07,
+    238.83
+   ],
+   "dur": 265.77,
+   "bytes": 2127044,
+   "titulo": "Francisco Navarro",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:04:07Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P093": {
+   "src": "mp3/pj-P093.mp3",
+   "huella": "5b224eb0f60210245b4380db7fbe3a65cec1fb0623b5f36acb2c3053e7f26023",
+   "marcas": [
+    0.35,
+    2.45,
+    25.22,
+    55.74,
+    114.24,
+    151.78,
+    207.14
+   ],
+   "dur": 229.43,
+   "bytes": 1836351,
+   "titulo": "Tomasa Fides",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:07:17Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P124": {
+   "src": "mp3/pj-P124.mp3",
+   "huella": "54b1e980b9ca8ac3c5ba1ffc7e58b27c1279cf31c32cb5dc24d4c1ecae7eac05",
+   "marcas": [
+    0.35,
+    5.47,
+    38.02,
+    87.07,
+    155.81,
+    214.8,
+    246.56,
+    275.9,
+    317.33
+   ],
+   "dur": 362.36,
+   "bytes": 2899862,
+   "titulo": "Juan «el Polaco»",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:10:35Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P100": {
+   "src": "mp3/pj-P100.mp3",
+   "huella": "783a8fc0cbbbcdb16732d5a189c48b582e0d1caf904dc8b84c78abc45873759a",
+   "marcas": [
+    0.35,
+    4.1,
+    22.08,
+    54.93,
+    90.66,
+    129.63,
+    164.65
+   ],
+   "dur": 191.2,
+   "bytes": 1530490,
+   "titulo": "Manuela",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:11:06Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P096": {
+   "src": "mp3/pj-P096.mp3",
+   "huella": "acdac568939f068b58432694794a4072328c1543cb69869c8c3f66ccda082952",
+   "marcas": [
+    0.35,
+    2.47,
+    17.96,
+    49.95,
+    75.86
+   ],
+   "dur": 112.86,
+   "bytes": 903807,
+   "titulo": "Tomasa Calvo",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:13:48Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P149": {
+   "src": "mp3/pj-P149.mp3",
+   "huella": "8cbd7e1a19e06edc1fdd59bd1455bfaa9f1721ea0854fa6c34e92b8f81d7fc6c",
+   "marcas": [
+    0.35,
+    3.12,
+    29.39,
+    60.39,
+    97.88,
+    154.13,
+    205.39,
+    280.56,
+    346.15
+   ],
+   "dur": 374.9,
+   "bytes": 3000076,
+   "titulo": "Francisco, padre de Pedro",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:14:20Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P150": {
+   "src": "mp3/pj-P150.mp3",
+   "huella": "9325dbe178d01b28c675d437163c3d367b1a7a52dd2fca28abe5a972e4684039",
+   "marcas": [
+    0.35,
+    5.49,
+    26.63,
+    61.01,
+    85.8,
+    152.96,
+    185.71
+   ],
+   "dur": 225.38,
+   "bytes": 1803916,
+   "titulo": "María Mateo",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:14:48Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P154": {
+   "src": "mp3/pj-P154.mp3",
+   "huella": "d39ebb18d4149f03f6894aef8f4b698ab439f542c0a5f433360ba0129ae73328",
+   "marcas": [
+    0.35,
+    3.1,
+    20.59,
+    61.37,
+    83.59,
+    114.15
+   ],
+   "dur": 148.14,
+   "bytes": 1186054,
+   "titulo": "Francisco de Carlos",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T09:15:16Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
   }
  }
 }
