@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@56eb5ee504e343a56137d4345dca005cc6f502f4/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -2538,6 +2538,78 @@
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-06T09:15:16Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+  },
+  "pj:P155": {
+   "src": "mp3/pj-P155.mp3",
+   "huella": "8804023f2f2cb1d737c44ac1ad70ad7f76e93959d2941e833874fb3cf2abc395",
+   "marcas": [
+    0.35,
+    2.84,
+    16.12,
+    43.75,
+    66.28
+   ],
+   "dur": 93.41,
+   "bytes": 748283,
+   "titulo": "Catalina",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T16:49:56Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@56eb5ee504e343a56137d4345dca005cc6f502f4/voz/narrativa"
+  },
+  "pj:G1450": {
+   "src": "mp3/pj-G1450.mp3",
+   "huella": "4a96a760b5be81f32da67669765b7d5b409e5fa0ea081846707b3ceb25e7f5c9",
+   "marcas": [
+    0.35,
+    3.36,
+    15.2,
+    46.35,
+    71.81,
+    96.56
+   ],
+   "dur": 112.76,
+   "bytes": 903052,
+   "titulo": "Juan Ibáñez",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T16:50:23Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@56eb5ee504e343a56137d4345dca005cc6f502f4/voz/narrativa"
+  },
+  "pj:C1535": {
+   "src": "mp3/pj-C1535.mp3",
+   "huella": "459cf619f4ffa43c309b5d8b767f8a8f2cec8060fe854e76ea73234a7c5d92cf",
+   "marcas": [
+    0.35,
+    2.79,
+    20.47,
+    62.76,
+    97.06,
+    128.7,
+    159.94
+   ],
+   "dur": 184.19,
+   "bytes": 1474456,
+   "titulo": "Martín de Barchín",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T16:50:53Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@56eb5ee504e343a56137d4345dca005cc6f502f4/voz/narrativa"
+  },
+  "pj:C1591": {
+   "src": "mp3/pj-C1591.mp3",
+   "huella": "83f9a7d9557cea5f96db3695706f7db1e15857faf3e59b5653931546970ae3b6",
+   "marcas": [
+    0.35,
+    3.1,
+    17.56,
+    40.11,
+    66.67,
+    105.78
+   ],
+   "dur": 151.33,
+   "bytes": 1211592,
+   "titulo": "Francisco de Buenache",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T16:51:20Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@56eb5ee504e343a56137d4345dca005cc6f502f4/voz/narrativa"
   }
  }
 }
