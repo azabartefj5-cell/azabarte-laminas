@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@fdd28961a60ad7f507163223ef542bf080b3441b/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c3c27d21b42b7eb9a6444d7c740fe6ac641ea7fd/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -1317,42 +1317,42 @@
   },
   "pj:P130": {
    "src": "mp3/pj-P130.mp3",
-   "huella": "a04434de1d4ae3e8f6b1095c84c90d861247eecb8f5d4f32258a62d01ac84883",
+   "huella": "811d5e46a240438f8a6656897e0ae56bbe5912fd93f44a4d1a0276cc21028b45",
    "marcas": [
     0.35,
-    3.19,
-    15.95,
-    50.06,
-    83.18,
-    104.08,
-    112.86,
-    136.72
+    7.36,
+    27.51,
+    72.95,
+    110.67,
+    134.86,
+    149.07,
+    182.34
    ],
-   "dur": 157.29,
-   "bytes": 1259212,
+   "dur": 209.98,
+   "bytes": 1680652,
    "titulo": "Encarnación",
-   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
-   "generado": "2026-09-29T18:19:40Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T01:18:58Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c3c27d21b42b7eb9a6444d7c740fe6ac641ea7fd/voz/narrativa"
   },
   "pj:P120": {
    "src": "mp3/pj-P120.mp3",
-   "huella": "046a8c2336588ec5c07e46e2afc50e55bfd751686d3a9161af13f533ed1180b4",
+   "huella": "b13c7fd779379dad9a3648adf065c5e68418a7b9180045c6644f8d363eedfc22",
    "marcas": [
     0.35,
-    4.37,
-    15.5,
-    49.02,
-    71.94,
-    99.34,
-    116.86
+    6.29,
+    14.9,
+    58.95,
+    67.88,
+    101.21,
+    122.09
    ],
-   "dur": 137.69,
-   "bytes": 1102330,
+   "dur": 151.97,
+   "bytes": 1216570,
    "titulo": "Eugenia",
-   "firma": "gemini-3.8-flash-tts|Charon|237a4c62fa|tramos5500|es-ES|1798",
-   "generado": "2026-09-29T18:20:22Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5d66dc8da79a625c2bd704e206dfd71c5487f568/voz/narrativa"
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T01:19:30Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c3c27d21b42b7eb9a6444d7c740fe6ac641ea7fd/voz/narrativa"
   },
   "lib:prologo": {
    "src": "mp3/lib-prologo.mp3",
@@ -2175,6 +2175,24 @@
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-03T05:18:16Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@0e23f377e4173100850aaa792c6c15324f539ca6/voz/narrativa"
+  },
+  "pj:P134": {
+   "src": "mp3/pj-P134.mp3",
+   "huella": "bd20918c5dcc7f32462681ee453c253179e84967f70645313940fa18efa04d68",
+   "marcas": [
+    0.35,
+    5.09,
+    16.44,
+    59.75,
+    74.78,
+    101.74
+   ],
+   "dur": 180.76,
+   "bytes": 1446972,
+   "titulo": "Florencia",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-06T01:20:01Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c3c27d21b42b7eb9a6444d7c740fe6ac641ea7fd/voz/narrativa"
   }
  }
 }
