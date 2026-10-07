@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@4f84f8bd389df5ce7a49f6f1f7335db04549cc97/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@13de166592f6007122a6c5c4a4a42d721cc542a8/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -509,9 +509,10 @@
    "dur": 647.03,
    "bytes": 5177168,
    "titulo": "Ondategi, la aldea de la pila",
-   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "firma": "relocutar-2026-10-07|gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-09-30T13:56:04Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@d96616ddce342f5024375208c61918ae63b64680/voz/narrativa"
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@d96616ddce342f5024375208c61918ae63b64680/voz/narrativa",
+   "relocutar": "2026-10-07: el último tramo lee en voz alta las instrucciones de la voz; se graba de nuevo"
   },
   "cap:contexto": {
    "src": "mp3/cap-contexto.mp3",
@@ -894,24 +895,25 @@
    "huella": "277a83a2fb093bfee49df7cf7b7f6149a9888cd6b080100118aa1c95834698fd",
    "marcas": [
     0.35,
-    8.03,
-    31.62,
-    98.6,
-    128.67,
-    170.02,
-    207.54,
-    235.36,
-    268.71,
-    310.77,
-    364.88,
-    414.48
+    3.8,
+    26.67,
+    85.38,
+    115.45,
+    156.8,
+    194.32,
+    222.14,
+    255.49,
+    297.55,
+    351.66,
+    401.26
    ],
-   "dur": 461.25,
-   "bytes": 3690876,
+   "dur": 448.03,
+   "bytes": 5377500,
    "titulo": "Francisco",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-05T00:58:27Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@1b97c9aa40f717975ce06e29cdd0f4cf4fec169b/voz/narrativa"
+   "reparado": "2026-10-07: 3 cortes de dirección leída y respiraciones",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@13de166592f6007122a6c5c4a4a42d721cc542a8/voz/narrativa"
   },
   "pj:P086": {
    "src": "mp3/pj-P086.mp3",
@@ -1326,19 +1328,20 @@
    "marcas": [
     0.35,
     7.36,
-    27.51,
-    72.95,
-    110.67,
-    134.86,
-    149.07,
-    182.34
+    23.52,
+    64.63,
+    102.35,
+    126.54,
+    140.75,
+    174.02
    ],
-   "dur": 209.98,
-   "bytes": 1680652,
+   "dur": 201.66,
+   "bytes": 2421196,
    "titulo": "Encarnación",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-06T01:18:58Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@c3c27d21b42b7eb9a6444d7c740fe6ac641ea7fd/voz/narrativa"
+   "reparado": "2026-10-07: 2 cortes de dirección leída y respiraciones",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@13de166592f6007122a6c5c4a4a42d721cc542a8/voz/narrativa"
   },
   "pj:P120": {
    "src": "mp3/pj-P120.mp3",
@@ -2206,23 +2209,24 @@
    "huella": "c7411443bd3a22aefacf5d0cb85d3348b6d99ccabd0bbbeac2183b301cae4ba6",
    "marcas": [
     0.35,
-    11.6,
-    38.55,
-    71.0,
-    94.75,
-    118.2,
-    140.85,
-    191.25,
-    228.42,
-    254.75,
-    280.27
+    5.87,
+    27.44,
+    54.97,
+    78.72,
+    102.17,
+    124.82,
+    175.22,
+    212.39,
+    238.72,
+    264.24
    ],
-   "dur": 300.07,
-   "bytes": 2401404,
+   "dur": 284.04,
+   "bytes": 3409596,
    "titulo": "Francisco",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-06T08:58:58Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "reparado": "2026-10-07: 3 cortes de dirección leída y respiraciones",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@13de166592f6007122a6c5c4a4a42d721cc542a8/voz/narrativa"
   },
   "pj:P136": {
    "src": "mp3/pj-P136.mp3",
@@ -2284,20 +2288,21 @@
    "huella": "54affe66e2d41d80fe0df4f9fe516d1d1d6488b6e8cf34d35aff3e0e30929a71",
    "marcas": [
     0.35,
-    3.44,
-    20.07,
-    61.33,
-    85.85,
-    111.23,
-    143.21,
-    171.82
+    2.56,
+    14.28,
+    51.21,
+    70.84,
+    92.77,
+    124.75,
+    153.36
    ],
-   "dur": 204.91,
-   "bytes": 1640120,
+   "dur": 186.45,
+   "bytes": 2238584,
    "titulo": "Pilar",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-06T09:00:51Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "reparado": "2026-10-07: 4 cortes de dirección leída y respiraciones",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@13de166592f6007122a6c5c4a4a42d721cc542a8/voz/narrativa"
   },
   "pj:P033": {
    "src": "mp3/pj-P033.mp3",
@@ -2436,21 +2441,22 @@
    "huella": "54b1e980b9ca8ac3c5ba1ffc7e58b27c1279cf31c32cb5dc24d4c1ecae7eac05",
    "marcas": [
     0.35,
-    5.47,
-    38.02,
-    87.07,
-    155.81,
-    214.8,
-    246.56,
-    275.9,
-    317.33
+    4.6,
+    32.66,
+    81.71,
+    150.45,
+    209.44,
+    241.2,
+    270.54,
+    311.97
    ],
-   "dur": 362.36,
-   "bytes": 2899862,
+   "dur": 357.0,
+   "bytes": 4285142,
    "titulo": "Juan «el Polaco»",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-06T09:10:35Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "reparado": "2026-10-07: 1 cortes de dirección leída y respiraciones",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@13de166592f6007122a6c5c4a4a42d721cc542a8/voz/narrativa"
   },
   "pj:P100": {
    "src": "mp3/pj-P100.mp3",
