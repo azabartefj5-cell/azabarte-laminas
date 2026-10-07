@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 506705,
+ "total_caracteres": 506676,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -357,7 +357,7 @@
     },
     {
      "k": "p",
-     "x": "Ubaldo Gallardo Azabarte tiene además su propia idea: que el apellido lo trajo un guardia civil de Bilbao o de San Sebastián, «hace cinco generaciones», porque el apellido «suena a vasco». Es una suposición suya, no un recuerdo heredado, y las fechas no le dejan sitio: la Guardia Civil se fundó en 1844, cuando los Azabarte llevaban casi medio siglo en el pueblo."
+     "x": "En la rama de Venus se ha llegado a suponer, además, que el apellido lo trajo un guardia civil de Bilbao o de San Sebastián, «hace cinco generaciones», porque el apellido «suena a vasco». Es una suposición, no un recuerdo heredado, y las fechas no le dejan sitio: la Guardia Civil se fundó en 1844, cuando los Azabarte llevaban casi medio siglo en el pueblo."
     },
     {
      "k": "p",
@@ -448,8 +448,8 @@
      "x": "La única vez que un libro de Álava escribe la A con seguridad es en un bautizo de Vitoria de 1725, y allí no nace de ninguna suma: el escribiente se la puso a la madre del niño y también a su abuelo, que no tenía nada de Azedo, y quien firmaba aquel libro había escrito Zabarte, sin A, en la boda de los padres. La A aparece y desaparece según quién tenga la pluma. Lo que se sabe de la A de Las Pedroñeras se cuenta, paso a paso, en el capítulo «Un camino a medio andar»."
     }
    ],
-   "huella": "7c992ae33d9fd8cab02e14201bfac076e9f331e7cd8a07342b1b5275804be629",
-   "chars": 9973
+   "huella": "d2fc6391bed611dee28a369f75438ead68fae8fb1a284e541df2fe5b0f7d60b2",
+   "chars": 9967
   },
   {
    "clave": "cap:genesis",
@@ -3736,15 +3736,15 @@
     },
     {
      "k": "p",
-     "x": "Ubaldo Gallardo Azabarte, nieto de Venus, tiene además su propia idea: que el apellido lo trajo un guardia civil de Bilbao o de San Sebastián «hace cinco generaciones», porque «suena a vasco». Es una suposición suya, no un recuerdo heredado, y las fechas no le dejan sitio: la Guardia Civil se fundó en 1844, cuando los Azabarte llevaban casi medio siglo en el pueblo. El norte, con todo, no se descarta. Se aleja en el tiempo, porque el apellido Zabarte ya había bajado a tierras de Cuenca dos siglos y medio antes de la boda de Pedro. Lo que no dice ningún papel es si la familia de Pedro desciende de aquellos Zabarte o llegó por otro camino."
+     "x": "En la rama de Venus se ha llegado a suponer, además, que el apellido lo trajo un guardia civil de Bilbao o de San Sebastián «hace cinco generaciones», porque «suena a vasco». Es una suposición, no un recuerdo heredado, y las fechas no le dejan sitio: la Guardia Civil se fundó en 1844, cuando los Azabarte llevaban casi medio siglo en el pueblo. El norte, con todo, no se descarta. Se aleja en el tiempo, porque el apellido Zabarte ya había bajado a tierras de Cuenca dos siglos y medio antes de la boda de Pedro. Lo que no dice ningún papel es si la familia de Pedro desciende de aquellos Zabarte o llegó por otro camino."
     },
     {
      "k": "p",
      "x": "Pedro y Manuela tuvieron, que se sepa, un solo hijo. Nació en febrero de 1809, en plena guerra contra los ejércitos de Napoleón, y el cura que lo bautizó se tomó el trabajo de apuntar a sus cuatro abuelos. En uno de aquellos renglones hay una línea que, por primera vez, mira fuera del pueblo."
     }
    ],
-   "huella": "7822be81f1134ea4543edf5e5a61247224484910c949f8b2063aa8bdc383ada4",
-   "chars": 10242
+   "huella": "4dc1d3d45b936d9205472abe0e31b09020243546477954ea19e83d737feb4783",
+   "chars": 10219
   },
   {
    "clave": "lib:pascasio",
