@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 506783,
+ "total_caracteres": 506705,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -381,7 +381,7 @@
     },
     {
      "k": "p",
-     "x": "No es lo que se contaba en la familia. La idea la trajo Ubaldo Gallardo Azabarte, que la había leído en internet, y en casa nadie la había oído hasta entonces. Su hermano Francisco la cuenta con otras palabras, «un soldado por aquí se quedó», y Juan Ortiz Pacheco «el Pollo» pensaba más bien en un valle del Pirineo catalán, por algo que había leído él mismo. Aun así, fue una de las preguntas que pusieron en marcha esta búsqueda."
+     "x": "No es lo que se contaba en la familia. La idea llegó a la familia por algo leído en internet, y en casa nadie la había oído hasta entonces. En esa misma rama se cuenta con otras palabras, «un soldado por aquí se quedó», y en otra se pensó más bien en un valle del Pirineo catalán, también por algo leído. Aun así, fue una de las preguntas que pusieron en marcha esta búsqueda."
     },
     {
      "k": "p",
@@ -448,8 +448,8 @@
      "x": "La única vez que un libro de Álava escribe la A con seguridad es en un bautizo de Vitoria de 1725, y allí no nace de ninguna suma: el escribiente se la puso a la madre del niño y también a su abuelo, que no tenía nada de Azedo, y quien firmaba aquel libro había escrito Zabarte, sin A, en la boda de los padres. La A aparece y desaparece según quién tenga la pluma. Lo que se sabe de la A de Las Pedroñeras se cuenta, paso a paso, en el capítulo «Un camino a medio andar»."
     }
    ],
-   "huella": "d05206983a744eb02ec23c7139cfb6a5e6aeda0dea1796738a21c1146058b81e",
-   "chars": 10028
+   "huella": "7c992ae33d9fd8cab02e14201bfac076e9f331e7cd8a07342b1b5275804be629",
+   "chars": 9973
   },
   {
    "clave": "cap:genesis",
@@ -3575,7 +3575,7 @@
     },
     {
      "k": "p",
-     "x": "Queda la idea más reciente: que los Azabarte venían de Francia. No es lo que se contaba en la familia. La trajo Ubaldo Gallardo Azabarte, que lo había leído en internet, y nadie en casa la había oído antes; su hermano Francisco lo cuenta con otras palabras, «un soldado por aquí se quedó», que recuerdan más bien al soldado carlista del que sí se hablaba. Los papeles no la apoyan. El apellido se apaga cuanto más cerca de los Pirineos se busca: en los pueblos de la frontera, con casi medio millón de bautismos, aparece apenas siete veces, y todas tardías. Al norte de la frontera no hay ninguna casa llamada Zabarte."
+     "x": "Queda la idea más reciente: que los Azabarte venían de Francia. No es lo que se contaba en la familia. Llegó a la familia por algo leído en internet, y nadie en casa la había oído antes; en esa misma rama se cuenta con otras palabras, «un soldado por aquí se quedó», que recuerdan más bien al soldado carlista del que sí se hablaba. Los papeles no la apoyan. El apellido se apaga cuanto más cerca de los Pirineos se busca: en los pueblos de la frontera, con casi medio millón de bautismos, aparece apenas siete veces, y todas tardías. Al norte de la frontera no hay ninguna casa llamada Zabarte."
     },
     {
      "k": "p",
@@ -3594,8 +3594,8 @@
      "x": "Con el mapa a la vista y el trozo sin papel bien señalado, la historia puede por fin llegar a Las Pedroñeras. Allí, en la iglesia de la Asunción, en enero de 1798, con la parroquia sin cura propio, un teniente de cura iba a casar a un hombre llamado Pedro, y la A iba a quedar escrita desde el primer día."
     }
    ],
-   "huella": "ca19c68bf68c4f69bbaede1b60f569df1b4fe17bc5e6fa0921ec1a21e93c4b53",
-   "chars": 7501
+   "huella": "28295d5ea5fd9f21f9bcdb9a3f85d47e13dc5a9c119776402cbb7e21f26c66ec",
+   "chars": 7478
   },
   {
    "clave": "lib:boda",
