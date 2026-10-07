@@ -818,7 +818,7 @@ def ritmo_habla(a: array.array, texto: str) -> float:
 # palabras con el texto); quita_respiraciones() deja en silencio las respiraciones aisladas.
 
 INTELIGIBLE_MIN = 0.70  # parte del texto que Whisper (base) entiende: en el libro publicado, de 0,84 a 0,99 (mediana 0,94)
-INTRUSAS = ("paus", "long", "silenc", "transcri", "instrucc", "instruct", "narrat", "spanish", "slowly")
+INTRUSAS = ("paus", "pauz", "long", "llarg", "silenc", "transcri", "instrucc", "instruct", "narrat", "spanish", "slowly")
 _OIDO = {"modelo": None, "cerrojo": threading.Lock(), "aviso": False}
 
 

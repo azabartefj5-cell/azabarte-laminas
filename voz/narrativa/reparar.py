@@ -71,8 +71,9 @@ def busca_intrusas(words, texto):
     return malas
 
 
-COMPANERAS = ("larg", "long", "paus", "silenc")
+COMPANERAS = ("larg", "llarg", "long", "paus", "pauz", "silenc")
 PEGAMENTO = {"a", "de", "y", "e", "o", "la", "el"}  # Whisper oye «largo a pausa»
+SUELTAS = {"pos", "pause"}  # y «Long Pos»: van en la racha, también al final
 
 
 def niveles(a):
@@ -88,7 +89,7 @@ def grupos_intrusos(words, malas):
     """Rachas de palabras de la dirección alrededor de cada intrusa (p. ej. «larga pausa, larga pausa»): (i, j)."""
     def es_dir(k):
         ps = L._palabras(words[k]["w"])
-        return bool(ps) and all(any(p.startswith(c) for c in COMPANERAS) or p in PEGAMENTO for p in ps)
+        return bool(ps) and all(any(p.startswith(c) for c in COMPANERAS) or p in PEGAMENTO or p in SUELTAS for p in ps)
     out = []
     for m in malas:
         i = j = m
