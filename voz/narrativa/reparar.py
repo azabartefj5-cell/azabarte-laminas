@@ -71,7 +71,7 @@ def busca_intrusas(words, texto):
     return malas
 
 
-COMPANERAS = ("larg", "llarg", "long", "paus", "pauz", "silenc")
+COMPANERAS = ("larg", "llarg", "llan", "long", "paus", "pauz", "silenc")
 PEGAMENTO = {"a", "de", "y", "e", "o", "la", "el"}  # Whisper oye «largo a pausa»
 SUELTAS = {"pos", "pause"}  # y «Long Pos»: van en la racha, también al final
 
