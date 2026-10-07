@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@dea5ca7262cddd65076a8cbcb175561dbdce5deb/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@09466317f2f8f23c66338056541a66f928e0b561/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -2664,6 +2664,115 @@
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
    "generado": "2026-10-06T22:48:31Z",
    "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@dea5ca7262cddd65076a8cbcb175561dbdce5deb/voz/narrativa"
+  },
+  "pj:C1745r": {
+   "src": "mp3/pj-C1745r.mp3",
+   "huella": "b1993c7175f28432c694839205389fb349f9cfc23ce6ae15ca12481069d76bae",
+   "marcas": [
+    0.35,
+    2.89,
+    18.24,
+    52.26,
+    84.56,
+    165.54
+   ],
+   "dur": 200.77,
+   "bytes": 1607098,
+   "titulo": "Rodrigo",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-07T05:58:19Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@09466317f2f8f23c66338056541a66f928e0b561/voz/narrativa"
+  },
+  "pj:C1794": {
+   "src": "mp3/pj-C1794.mp3",
+   "huella": "9d85df88b2b1b0665112f947787fc5e4fb0b62696e2fd6ac1bbb763a6a495ed2",
+   "marcas": [
+    0.35,
+    3.75,
+    17.49,
+    37.94,
+    64.37,
+    85.67
+   ],
+   "dur": 141.49,
+   "bytes": 1132880,
+   "titulo": "José Clemente",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-07T05:58:45Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@09466317f2f8f23c66338056541a66f928e0b561/voz/narrativa"
+  },
+  "pj:C1783d": {
+   "src": "mp3/pj-C1783d.mp3",
+   "huella": "47eb6c93300ff557dc6125285a82d9588f9e279b6d3ba3a5a899eb68a9cd39db",
+   "marcas": [
+    0.35,
+    3.85,
+    18.16,
+    63.65,
+    102.37,
+    144.02,
+    188.57
+   ],
+   "dur": 246.37,
+   "bytes": 1971906,
+   "titulo": "Dámaso",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-07T05:59:30Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@09466317f2f8f23c66338056541a66f928e0b561/voz/narrativa"
+  },
+  "pj:G1632": {
+   "src": "mp3/pj-G1632.mp3",
+   "huella": "4227373018f9d8be66abe698936a0aa3482e9075fa3ee42fd7800ace32b19901",
+   "marcas": [
+    0.35,
+    3.52,
+    17.42,
+    47.02,
+    75.98,
+    100.07
+   ],
+   "dur": 123.68,
+   "bytes": 990426,
+   "titulo": "María, la heredera",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-07T06:01:59Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@09466317f2f8f23c66338056541a66f928e0b561/voz/narrativa"
+  },
+  "pj:G1693": {
+   "src": "mp3/pj-G1693.mp3",
+   "huella": "1a97a8449f9e94e264f919e9a85f7caf7065cdca44888ed782b0dc83da55fb61",
+   "marcas": [
+    0.35,
+    3.24,
+    16.5,
+    36.88,
+    54.31,
+    79.71
+   ],
+   "dur": 119.29,
+   "bytes": 955286,
+   "titulo": "José de Angiozar",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-07T06:04:04Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@09466317f2f8f23c66338056541a66f928e0b561/voz/narrativa"
+  },
+  "pj:G1738": {
+   "src": "mp3/pj-G1738.mp3",
+   "huella": "078fc842b95ceee370aa20a323bdf77ec199a160d9b5518f348a6a1c03416e35",
+   "marcas": [
+    0.35,
+    3.0,
+    13.92,
+    42.93,
+    68.0,
+    88.04
+   ],
+   "dur": 121.42,
+   "bytes": 972378,
+   "titulo": "Martín de Angiozar",
+   "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
+   "generado": "2026-10-07T06:04:41Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@09466317f2f8f23c66338056541a66f928e0b561/voz/narrativa"
   }
  }
 }
