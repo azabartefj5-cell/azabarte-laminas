@@ -80,13 +80,15 @@ ESTILO_TIPO = {
     "lede": "This is the opening paragraph of the chapter: inviting, unhurried.",
     "p": "",
     "tramo": ("The text may begin with a title and contain section headings: read each one as a heading. "
-              "Each <long pause> marks the end of a paragraph: leave a clear silence there and never say it."),
+              "Paragraphs are separated by blank lines: leave a clear silence of about two seconds between them."),
 }
 
 # Tramos: varios bloques seguidos en una sola petición. Así cabe en la cuota (la capa gratuita de Google da
-# muy pocas peticiones al día) y la voz no cambia de timbre de un párrafo a otro. Los bloques van separados
-# por una pausa larga explícita y el audio se parte después por los silencios.
-SEPARADOR = "\n\n<long pause> <long pause>\n\n"
+# muy pocas peticiones al día) y la voz no cambia de timbre de un párrafo a otro. El audio se parte después
+# por los silencios. Hasta el 07-10-2026 los bloques iban separados por «<long pause> <long pause>», y el modelo
+# a veces lo decía en voz alta («long pause», «pausa larga»; lo oyó el investigador en el libro): ahora el
+# separador es solo una línea en blanco, sin nada que se pueda leer, y oye() rechaza la toma que lo diga.
+SEPARADOR = "\n\n"
 MAX_TRAMO = 1500  # caracteres por petición (30-09-2026: con 5500 el modelo aceleraba en los tramos largos y costaba más cortar)
 IDIOMA = "es-ES"
 SEMILLA = 1798
@@ -286,13 +288,13 @@ def ffmpeg_bin() -> str:
         raise ErrorFatal("No hay ffmpeg: instálelo o `pip install imageio-ffmpeg`") from e
 
 
-def a_mp3(a: array.array, destino: Path, titulo: str, comentario: str) -> None:
+def a_mp3(a: array.array, destino: Path, titulo: str, comentario: str, kbps: int = KBPS) -> None:
     destino.parent.mkdir(parents=True, exist_ok=True)
     tmp = destino.with_suffix(".tmp.mp3")
     cmd = [
         ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
         "-f", "s16le", "-ar", str(RATE), "-ac", "1", "-i", "pipe:0",
-        "-c:a", "libmp3lame", "-b:a", f"{KBPS}k", "-ar", str(RATE), "-ac", "1",
+        "-c:a", "libmp3lame", "-b:a", f"{kbps}k", "-ar", str(RATE), "-ac", "1",
         "-metadata", f"title={titulo}", "-metadata", "artist=Proyecto Origen Azabarte",
         "-metadata", f"comment={comentario}", "-id3v2_version", "3",
         str(tmp),
@@ -645,6 +647,25 @@ class Cache:
                 pass
 
 
+def valida_bloque(texto):
+    """Un bloque suelto vale si dura lo que corresponde a su texto y no dice nada que no esté en él."""
+    def valida(a):
+        valida.motivo = ""
+        dur, cps, ok = duracion_razonable(texto, a)
+        if ok:
+            malas, claro = oye(a, texto)
+            if malas:
+                ok, valida.motivo = False, "dice en voz alta: " + ", ".join(malas[:4])
+            elif claro is not None and len(_palabras(texto)) >= 25 and claro < INTELIGIBLE_MIN:
+                ok, valida.motivo = False, f"se entiende mal (toma borrosa o con otro acento: {claro:.0%} del texto)"
+        if ok:
+            d = distincion(a, texto)
+            if d and d[1] >= 6 and d[0] / d[1] < DISTINCION_MIN:
+                ok, valida.motivo = False, f"acento sin distinción c/z (seseo: {d[0]} θ de {d[1]})"
+        return dur, cps, ok
+    return valida
+
+
 def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int = 4,
                   esperas_max: int = 10, valida=None, ultimo_recurso: bool = True) -> array.array:
     guardado = cache.lee(texto, k)
@@ -692,13 +713,16 @@ def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int 
                 break
             time.sleep(min(5 * fallos, 30))
             continue
-        dur, cps, ok = (valida or (lambda x: duracion_razonable(texto, x)))(a)
+        valida = valida or valida_bloque(texto)
+        dur, cps, ok = valida(a)
         if ok:
             cache.guarda(texto, k, a)
             return a
         fallos += 1
-        ultimo = f"duración sospechosa: {dur:.1f} s para «{texto[:40]}…» ({cps:.1f} c/s)"
         motivo = getattr(valida, "motivo", "")
+        dice = motivo.startswith("dice en voz alta") or "seseo" in motivo or "se entiende mal" in motivo
+        ultimo = (f"toma rechazada: {dur:.1f} s para «{texto[:40]}…» ({cps:.1f} c/s)" if dice else
+                  f"duración sospechosa: {dur:.1f} s para «{texto[:40]}…» ({cps:.1f} c/s)")
         if motivo:
             ultimo += f"; {motivo}"
         if not ultimo_recurso:
@@ -707,8 +731,9 @@ def locuta_bloque(motor: Motor, cache: Cache, texto: str, k: str, intentos: int 
             except OSError:
                 pass
         log("  " + ultimo + "; repito")
-        # Solo vale como último recurso una toma con voz y ritmo verosímil, nunca un silencio.
-        if dur >= 0.3 and 3.0 <= cps <= 40.0 and (mejor is None or abs(cps - 15) < abs(mejor[1] - 15)):
+        # Solo vale como último recurso una toma con voz y ritmo verosímil, nunca un silencio ni una que diga lo que
+        # no está en el texto.
+        if not dice and dur >= 0.3 and 3.0 <= cps <= 40.0 and (mejor is None or abs(cps - 15) < abs(mejor[1] - 15)):
             mejor = (a, cps)
     if mejor is not None and ultimo_recurso:
         log(f"  se acepta la mejor toma ({mejor[1]:.1f} c/s) de «{texto[:40]}…»")
@@ -783,6 +808,172 @@ def ritmo_habla(a: array.array, texto: str) -> float:
     dur = len(a) / RATE
     pausas = sum(fin - ini for ini, fin in silencios(energia(a), minimo=0.3))
     return largo_hablado(texto) / max(0.1, dur - pausas)
+
+
+# ---------------------------------------------------------------- oído (07-10-2026)
+# El investigador oyó en el libro tomas que decían «long pause» o «pausa larga» y otras con una respiración larga
+# antes del párrafo. La duración no lo delata (un segundo de más en un párrafo largo cae dentro del ritmo normal):
+# hace falta oír. oye() transcribe la toma con faster-whisper: se rechaza si dice palabras de la dirección que no están
+# en el texto o si se entiende mal (tomas borrosas o con otro acento, que también oyó: Whisper casa entonces pocas
+# palabras con el texto); quita_respiraciones() deja en silencio las respiraciones aisladas.
+
+INTELIGIBLE_MIN = 0.70  # parte del texto que Whisper (base) entiende: en el libro publicado, de 0,84 a 0,99 (mediana 0,94)
+INTRUSAS = ("paus", "long", "silenc", "transcri", "instrucc", "instruct", "narrat", "spanish", "slowly")
+_OIDO = {"modelo": None, "cerrojo": threading.Lock(), "aviso": False}
+
+
+def _palabras(s: str):
+    s = s.lower().translate(str.maketrans("áéíóúüàèìòùï", "aeiouuaeioui"))
+    return re.findall(r"[a-zñ]+", s)
+
+
+def inteligible(oidas, texto_palabras) -> float:
+    """Parte de las palabras del texto (sin cifras, que Whisper escribe a su modo) que se oyen y en su orden."""
+    import difflib
+    t = [w for w in texto_palabras if not w.isdigit()]
+    if not t:
+        return 1.0
+    sm = difflib.SequenceMatcher(None, [w for w in oidas if not w.isdigit()], t, autojunk=False)
+    return sum(m.size for m in sm.get_matching_blocks()) / len(t)
+
+
+def oye(a: array.array, texto: str):
+    """(intrusas, inteligibilidad): palabras de la dirección («pausa», «long», «silencio»…) que se oyen en la toma y no
+    están en el texto, y la parte del texto que se entiende (de 0 a 1). ([], None) si no hay faster-whisper (entonces
+    avisa una vez y no frena nada)."""
+    if os.environ.get("VOZ_OIDO", "1") == "0":
+        return [], None
+    with _OIDO["cerrojo"]:
+        if _OIDO["modelo"] is None:
+            try:
+                from faster_whisper import WhisperModel  # type: ignore
+                _OIDO["modelo"] = WhisperModel(os.environ.get("VOZ_OIDO_MODELO") or "base", device="cpu",
+                                               compute_type="int8")
+            except Exception as e:  # noqa: BLE001
+                if not _OIDO["aviso"]:
+                    log(f"  aviso: sin faster-whisper no se oyen las tomas ({str(e)[:120]})")
+                    _OIDO["aviso"] = True
+                return [], None
+        import numpy as np  # viene con faster-whisper
+        x = np.frombuffer(a.tobytes(), dtype=np.int16).astype(np.float32) / 32768.0
+        x = np.interp(np.arange(0, len(x), RATE / 16000), np.arange(len(x)), x)  # Whisper oye a 16 kHz
+        segs, _ = _OIDO["modelo"].transcribe(x.astype(np.float32), language="es", beam_size=1, vad_filter=True,
+                                            condition_on_previous_text=False)
+        oido = " ".join(s.text for s in segs)
+    en_texto = {}
+    for w in _palabras(texto):
+        en_texto[w] = en_texto.get(w, 0) + 1
+    vistas, malas = {}, []
+    oidas = _palabras(oido)
+    for w in oidas:
+        vistas[w] = vistas.get(w, 0) + 1
+        if any(w.startswith(p) for p in INTRUSAS) and vistas[w] > en_texto.get(w, 0):
+            malas.append(w)
+    return malas, inteligible(oidas, _palabras(texto))
+
+
+# Acento (07-10-2026). El investigador oyó tomas con acento latino. Con distinción, cada z y cada c ante e/i suena
+# θ; con seseo, s. Un reconocedor de fonemas (wav2vec2 xlsr-53 espeak, que transcribe en AFI) cuenta las θ de la
+# toma; se comparan con las que pide el texto. Medido en el libro publicado: con distinción salen entre 0,8 y 1,2
+# por cada z o ce/ci del texto; una toma que sesea da casi cero. Por debajo de DISTINCION_MIN, se rechaza.
+FONEMAS_MODELO = "facebook/wav2vec2-xlsr-53-espeak-cv-ft"
+DISTINCION_MIN = 0.45
+_FON = {"m": None, "cerrojo": threading.Lock(), "aviso": False}
+
+
+def zetas_del_texto(texto: str) -> int:
+    t = texto.lower().translate(str.maketrans("áéíóúü", "aeiouu"))
+    return len(re.findall(r"z|c(?=[eiy])", t))
+
+
+def distincion(a: array.array, texto: str):
+    """(θ oídas, θ que pide el texto), o None si no hay reconocedor de fonemas (avisa una vez y no frena nada)."""
+    if os.environ.get("VOZ_ACENTO", "1") == "0":
+        return None
+    esperadas = zetas_del_texto(texto)
+    with _FON["cerrojo"]:
+        if _FON["m"] is None:
+            try:
+                import torch  # type: ignore
+                from huggingface_hub import hf_hub_download  # type: ignore
+                from transformers import Wav2Vec2ForCTC  # type: ignore
+                torch.set_num_threads(max(1, (os.cpu_count() or 2)))
+                modelo = Wav2Vec2ForCTC.from_pretrained(FONEMAS_MODELO).eval()
+                vocab = json.loads(Path(hf_hub_download(FONEMAS_MODELO, "vocab.json")).read_text("utf-8"))
+                _FON["m"] = (torch, modelo, {v for k, v in vocab.items() if k.startswith("θ")})
+            except Exception as e:  # noqa: BLE001
+                if not _FON["aviso"]:
+                    log(f"  aviso: sin reconocedor de fonemas no se comprueba el acento ({str(e)[:120]})")
+                    _FON["aviso"] = True
+                return None
+        import numpy as np
+        torch, modelo, theta = _FON["m"]
+        x = np.frombuffer(a.tobytes(), dtype=np.int16).astype(np.float32) / 32768.0
+        x = np.interp(np.arange(0, len(x), RATE / 16000), np.arange(len(x)), x).astype(np.float32)
+        oidas = 0
+        for k in range(0, len(x), 16000 * 10):  # trozos de 10 s: poca memoria
+            t = x[k:k + 16000 * 10]
+            if len(t) < 1600:
+                continue
+            t = (t - t.mean()) / (t.std() + 1e-7)
+            with torch.no_grad():
+                ids = modelo(torch.from_numpy(t)[None]).logits[0].argmax(-1).tolist()
+            oidas += sum(1 for j, i in enumerate(ids) if i in theta and (j == 0 or ids[j - 1] != i))
+    return oidas, esperadas
+
+
+def quita_respiraciones(a: array.array) -> array.array:
+    """Silencia las respiraciones (07-10-2026). La voz de Gemini a veces toma aire, largo y audible, antes de un
+    párrafo. En la pista son islas de ruido suave entre silencios: sin voz (todo por debajo de la voz en 22 dB o más)
+    y separadas de ella por al menos 60 ms de silencio. También la toma de aire pegada al comienzo de una frase, si
+    dura 0,3 s o más, es ruido (espectro plano) y queda 28 dB por debajo de la voz. La duración no cambia: las
+    marcas siguen valiendo. Las colas de las palabras van pegadas a la voz y no se tocan."""
+    import numpy as np
+    fr = int(TRAMA * RATE)
+    x = np.frombuffer(a.tobytes(), dtype=np.int16).astype(np.float32)
+    n = len(x) // fr
+    if n < 10:
+        return a
+    tr = x[: n * fr].reshape(n, fr)
+    d = 20 * np.log10(np.sqrt((tr ** 2).mean(1)) + 1e-3)
+    nivel = float(np.percentile(d, 90))
+    sp = np.abs(np.fft.rfft(tr * np.hanning(fr), axis=1)) ** 2 + 1e-9
+    plano = np.exp(np.log(sp).mean(1)) / sp.mean(1)
+    sil = d < nivel - 60
+    fuera = np.zeros(n, dtype=bool)
+    i, islas, quitado = 0, 0, 0.0
+    while i < n:
+        if sil[i]:
+            i += 1
+            continue
+        j, hueco = i, 0
+        while j < n and hueco < 3:
+            hueco = hueco + 1 if sil[j] else 0
+            j += 1
+        fin = j - hueco
+        if d[i:fin].max() < nivel - 22:  # isla sin voz: respiración o ruido
+            fuera[i:fin] = True
+            islas += 1
+            quitado += (fin - i) * TRAMA
+        else:  # toma de aire pegada al comienzo de la frase
+            k = i
+            while k < fin and d[k] < nivel - 28:
+                k += 1
+            if (k - i) * TRAMA >= 0.3 and plano[i:k].mean() >= 0.05:
+                fuera[i:k - 1] = True
+                islas += 1
+                quitado += (k - 1 - i) * TRAMA
+        i = j
+    if not islas:
+        return a
+    g = np.repeat((~fuera).astype(np.float32), fr)
+    w = fr // 2  # rampas de 10 ms, sin chasquidos (media móvil por suma acumulada)
+    c = np.concatenate(([0.0], np.cumsum(np.pad(g, (w // 2, w - w // 2 - 1), mode="edge"), dtype=np.float64)))
+    g = ((c[w:] - c[:-w]) / w).astype(np.float32)
+    y = x.copy()
+    y[: n * fr] *= g
+    log(f"  respiraciones silenciadas: {islas} ({quitado:.1f} s)")
+    return array.array("h", np.clip(np.round(y), -32768, 32767).astype(np.int16).tobytes())
 
 
 def cambia_tempo(a: array.array, factor: float) -> array.array:
@@ -920,6 +1111,20 @@ def valida_tramo(textos):
                 valida.motivo = "párrafos fuera de ritmo: " + ", ".join(
                     f"{i + 1}/{len(textos)} «{textos[i][:30]}…» {ritmos[i][0]:.1f} s, {ritmos[i][1]:.1f} c/s"
                     for i in malos[:3])
+        if ok:  # solo se oye la toma que ya ha pasado lo demás: así cuesta poco
+            malas, claro = oye(a, " ".join(textos))
+            if malas:
+                ok, valida.motivo = False, "dice en voz alta palabras que no están en el texto: " + ", ".join(malas[:4])
+            elif claro is not None and claro < INTELIGIBLE_MIN:
+                ok, valida.motivo = False, f"se entiende mal (toma borrosa o con otro acento: {claro:.0%} del texto)"
+            elif claro is not None:
+                log(f"  se entiende el {claro:.0%} del texto")
+        if ok:
+            d = distincion(a, " ".join(textos))
+            if d and d[1] >= 6 and d[0] / d[1] < DISTINCION_MIN:
+                ok, valida.motivo = False, f"acento sin distinción c/z (seseo: {d[0]} θ de {d[1]})"
+            elif d and d[1] >= 6:
+                log(f"  distinción c/z: {d[0]} θ de {d[1]}")
         return dur, cps, ok
     return valida
 
@@ -1055,7 +1260,7 @@ def locuta_pista(motor, cache, t, args):
         log(f"  ritmo {r:.1f} c/s de habla: se frena al {f * 100:.0f} %")
     else:
         log(f"  ritmo {r:.1f} c/s de habla")
-    return normaliza(pista), marcas
+    return normaliza(quita_respiraciones(pista)), marcas
 
 
 def main(argv=None):

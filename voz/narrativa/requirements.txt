@@ -1,2 +1,9 @@
 google-genai>=2.24.0
 imageio-ffmpeg>=0.5
+# Oído de las tomas (07-10-2026): faster-whisper rechaza las que dicen «pausa larga»; el reconocedor de fonemas
+# (torch + transformers, wav2vec2 xlsr-53 espeak) rechaza las que sesean. torch, la versión solo CPU (más ligera).
+--extra-index-url https://download.pytorch.org/whl/cpu
+faster-whisper>=1.0
+numpy>=1.26
+torch
+transformers>=4.40

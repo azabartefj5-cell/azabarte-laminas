@@ -56,7 +56,7 @@ Coste aproximado con pago por uso, a precios de septiembre de 2026 (Google dupli
    y nombre, entradilla y relato de cada personaje. Desde el 29-09-2026, también cada capítulo del libro continuo
    «Antes de nosotros» (pistas `lib:<id>`, regla `vzBloquesLibro`). Calcula la huella SHA-256 de cada texto.
 2. `locutar.py` locuta solo lo nuevo o lo que ha cambiado (huella distinta). Agrupa los bloques en tramos de
-   hasta unos 5 500 caracteres, separados por una pausa larga explícita, y pide cada tramo de una vez: menos
+   hasta unos 1 500 caracteres, separados por una línea en blanco, y pide cada tramo de una vez: menos
    peticiones y la misma voz de principio a fin, sin cambios de timbre entre párrafos. Después parte el audio
    por los silencios (eligiendo, para cada frontera, el silencio más largo cerca de donde debería caer según el
    texto; nunca corta dentro de la voz). En títulos y epígrafes, que duran uno o dos segundos, pesa además la
@@ -107,6 +107,21 @@ Lo que se hizo, validado con pilotos (`tmp/voz_narrativa` y el registro de `CONT
 - Cada bloque se comprueba por su duración, contando los años como palabras: si la voz se come texto o añade
   silencios, se repite, y nunca se publica una toma muda. Un bloque que no sale deja su pista pendiente y se
   sigue con las demás.
+- **Cada toma se oye antes de aceptarla (07-10-2026).** El investigador oyó en el libro tomas que decían «long pause»
+  o «pausa larga», respiraciones largas antes de algunos párrafos y tramos borrosos o con acento latino. Desde ese día:
+  - el separador de párrafos que va a Gemini es solo una línea en blanco (antes, «<long pause> <long pause>», que
+    el modelo a veces leía); probado con una toma real: el corte entre párrafos sigue cayendo en su sitio;
+  - `oye()` transcribe la toma con faster-whisper (modelo base) y la rechaza si dice palabras de la dirección que no
+    están en el texto (`INTRUSAS`: «pausa», «long», «silencio»…) o si se entiende menos de `INTELIGIBLE_MIN` del texto;
+  - `distincion()` cuenta con un reconocedor de fonemas (wav2vec2 xlsr-53 espeak) las θ de la toma y las compara con
+    las z y ce/ci del texto: con distinción salen casi todas; si quedan por debajo de `DISTINCION_MIN`, sesea y se
+    rechaza;
+  - `quita_respiraciones()` deja en silencio las islas de ruido suave entre silencios (tomas de aire) sin cambiar la
+    duración, así que las marcas siguen valiendo;
+  - una toma rechazada por estas razones nunca se acepta «como mal menor».
+  Los modelos (1,3 GB) se guardan en la caché de la Action. Sin ellos (en local, sin instalar), el script avisa y
+  sigue sin esas comprobaciones. `reparar.py` arregla pistas ya publicadas sin pedirlas de nuevo: corta la dirección
+  leída, silencia respiraciones y recoloca las marcas; lo que sesea o se entiende mal hay que relocutarlo.
 - Es voz sintética: el reproductor lo indica («voz sintética (IA)») y cada MP3 lo lleva en sus metadatos.
 - Las voces famosas de ElevenReader, como la de Burt Reynolds, son solo para uso personal dentro de su app y no se
   pueden publicar. Por eso se usa una voz de Google con licencia para publicar.
