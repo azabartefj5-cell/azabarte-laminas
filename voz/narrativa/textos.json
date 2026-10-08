@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 94,
- "total_caracteres": 506676,
+ "total_caracteres": 506610,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -4811,7 +4811,7 @@
     },
     {
      "k": "p",
-     "x": "Detrás vino Francisca, que según las fechas que guarda la familia nació en 1916 y llevó en femenino el nombre del mismo abuelo. Es la que menos rastro ha dejado de los ocho. Su sobrino Ubaldo la nombró, como se hacía en el pueblo con las casadas, por la casa de su marido, pero aquel nombre no llegó a entenderse bien en la grabación de la llamada. Dos árboles de la familia hechos por otras ramas, en MyHeritage, dicen quién era: Juan Cano Olmo. Según ellos, Francisca murió en 1992 y dejó descendencia. Falta el papel del registro que lo confirme. En esta familia, como observa Juan Ortiz Pacheco, los Franciscos y las Vicentas se repiten en cada generación."
+     "x": "Detrás vino Francisca, que según las fechas que guarda la familia nació en 1916 y llevó en femenino el nombre del mismo abuelo. Es la que menos rastro ha dejado de los ocho. Su sobrino Ubaldo la nombró, como se hacía en el pueblo con las casadas, por la casa de su marido, pero aquel nombre no llegó a quedar claro. Dos árboles de la familia hechos por otras ramas, en MyHeritage, dicen quién era: Juan Cano Olmo. Según ellos, Francisca murió en 1992 y dejó descendencia. Falta el papel del registro que lo confirme. En esta familia, como observa Juan Ortiz Pacheco, los Franciscos y las Vicentas se repiten en cada generación."
     },
     {
      "k": "h",
@@ -4886,8 +4886,8 @@
      "x": "Encarnación murió en 1943, con unos cincuenta y tres años, y Venus tres años después, en 1946. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "936be0f6299a0a470f0ceafa8bc57f78caa66926c1bae5386d7900d7d077867a",
-   "chars": 15396
+   "huella": "cbfc6dc1e3098c3c66cb96500057087bb56152508b875ad9263bfcc10c2df4f3",
+   "chars": 15363
   },
   {
    "clave": "lib:guerra",
@@ -6480,15 +6480,15 @@
     },
     {
      "k": "p",
-     "x": "De ella se sabe poco. La conocen el árbol de la familia y la lista de hermanos que en la casa se recita de memoria. Su sobrino Ubaldo Gallardo Azabarte la nombró, como se hacía en el pueblo con todas las casadas, por la casa de su marido, pero ese nombre no llegó a entenderse bien en la grabación de la llamada. Dos árboles de la familia hechos por otras ramas, en MyHeritage, dicen quién era: Juan Cano Olmo. Según ellos, Francisca murió en 1992 y dejó descendencia. Falta el papel del registro que lo confirme."
+     "x": "De ella se sabe poco. La conocen el árbol de la familia y la lista de hermanos que en la casa se recita de memoria. Su sobrino Ubaldo Gallardo Azabarte la nombró, como se hacía en el pueblo con todas las casadas, por la casa de su marido, pero ese nombre no llegó a quedar claro. Dos árboles de la familia hechos por otras ramas, en MyHeritage, dicen quién era: Juan Cano Olmo. Según ellos, Francisca murió en 1992 y dejó descendencia. Falta el papel del registro que lo confirme."
     },
     {
      "k": "p",
      "x": "No hay que confundirla con su hermano Francisco, que lleva casi el mismo nombre. El día en que aparezca su inscripción en el registro civil de Las Pedroñeras tendrá fechas firmes y, con ellas, un sitio más seguro en esta historia. Hasta entonces es uno de los ocho nombres de la casa de Venus, y ese sitio nadie se lo quita."
     }
    ],
-   "huella": "7beb2e81d52f902e23599a37cfee048564871a592bb116fe54a399f1c3da79d2",
-   "chars": 1494
+   "huella": "00c1d60207a67ae751bc0d9e961ff1fde51a59c5aec244ee517494b8f467135e",
+   "chars": 1461
   },
   {
    "clave": "pj:P137",
