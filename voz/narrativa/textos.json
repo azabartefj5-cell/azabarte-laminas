@@ -1,8 +1,8 @@
 {
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
- "total_pistas": 94,
- "total_caracteres": 536316,
+ "total_pistas": 95,
+ "total_caracteres": 549159,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -184,7 +184,7 @@
     },
     {
      "k": "cl",
-     "x": "Toda la familia cabía en una calle, la de Fray Luis de León, que arranca de la plaza de la iglesia."
+     "x": "Toda la familia cabía en una calle, la de Fray Luis de León, que arranca de la plaza de la iglesia y hasta 1900 se llamaba de Belmonte."
     },
     {
      "k": "cl",
@@ -208,7 +208,7 @@
     },
     {
      "k": "p",
-     "x": "El pueblo que conoció Francisco a mediados del siglo diecinueve era un pueblo de labradores y jornaleros. Los papeles hablan de la calle Mayor, de la calle de Mendizábal, donde vivía el alguacil que fue a declarar la muerte de Francisco, y sobre todo de la calle Fray Luis de León, que arranca de la plaza de la iglesia."
+     "x": "El pueblo que conoció Francisco a mediados del siglo diecinueve era un pueblo de labradores y jornaleros. Los papeles hablan de la calle Mayor, de la calle de Mendizábal, donde vivía el alguacil que fue a declarar la muerte de Francisco, y sobre todo de la calle Fray Luis de León, que arranca de la plaza de la iglesia y que hasta 1900 se llamó calle de Belmonte."
     },
     {
      "k": "ct",
@@ -224,11 +224,11 @@
     },
     {
      "k": "p",
-     "x": "En la calle Fray Luis de León vivieron Vicenta, ya viuda, su hijo Venus, su nieta Camila, los Salcedo y «los Cabreros», y alrededor de ella, en la misma manzana, casi todos los parientes que recuerda la familia. Camila vivía en el callejón que queda junto a la casa palacio de los Molina, una casa del siglo dieciocho con balcones de forja que no era de la familia, pero que se eligió como fondo de su retrato. Toda la familia cabía en una calle, y la memoria del pueblo todavía la reparte por portales y esquinas."
+     "x": "En la calle Fray Luis de León, cuando todavía se llamaba de Belmonte, vivían ya en 1880 Francisco y Vicenta, y pocos años después Felipe, el hermano de Francisco. En ella vivieron luego Vicenta, ya viuda, su hijo Venus, su nieta Camila, los Salcedo y «los Cabreros», y alrededor de ella, en la misma manzana, casi todos los parientes que recuerda la familia. Camila vivía en el callejón que queda junto a la casa palacio de los Molina, una casa del siglo dieciocho con balcones de forja que no era de la familia, pero que se eligió como fondo de su retrato. Toda la familia cabía en una calle, y la memoria del pueblo todavía la reparte por portales y esquinas."
     },
     {
      "k": "p",
-     "x": "La calle lleva el nombre de fray Luis de León, el poeta y fraile agustino que nació en Belmonte en el siglo dieciséis. Es una coincidencia que no dice nada de la familia, pero que ata sin querer los dos pueblos de esta historia: en Belmonte, según una partida de 1809, habían nacido los padres de Pedro Azabarte, aunque las bodas de 1798 los hacen naturales de Las Pedroñeras."
+     "x": "Hasta 1900 se llamó calle de Belmonte, y así la escribe todavía, en abril de aquel año, el acta del juzgado que cuenta la muerte de un niño de Venus. Ese año el Ayuntamiento le dio el nombre de fray Luis de León, el poeta y fraile agustino del siglo dieciséis, y no por azar: el acuerdo, según ha publicado Ángel Carrasco Sotos, que ha escrito sobre la historia del pueblo, lo tenía por nacido «en este término municipal», en el paraje de San Blas. Las biografías lo hacen nacer en Belmonte, en 1527 o 1528, y él mismo se declaró ante la Inquisición «natural de Belmonte», pero en Las Pedroñeras se sostiene desde hace más de un siglo que era del pueblo, y la cuestión sigue abierta. Nada de eso toca a la familia, pero la calle ata sin querer los dos pueblos de esta historia: en Belmonte, según una partida de 1809, habían nacido los padres de Pedro Azabarte, aunque las bodas de 1798 los hacen naturales de Las Pedroñeras."
     },
     {
      "k": "h",
@@ -284,7 +284,7 @@
     },
     {
      "k": "p",
-     "x": "A doce kilómetros al norte de Las Pedroñeras está Belmonte, una villa con castillo, murallas y colegiata que fue durante siglos de los marqueses de Villena, los grandes señores de esta parte de La Mancha. Allí nació fray Luis de León, y allí, según el bautizo de Pablo Pascasio de 1809, habían nacido Francisco y María Mateo Cantero, los padres de Pedro Azabarte."
+     "x": "A doce kilómetros al norte de Las Pedroñeras está Belmonte, una villa con castillo, murallas y colegiata que fue durante siglos de los marqueses de Villena, los grandes señores de esta parte de La Mancha. De allí se declaraba natural fray Luis de León, aunque Las Pedroñeras lo tiene por nacido en su término, y allí, según el bautizo de Pablo Pascasio de 1809, habían nacido Francisco y María Mateo Cantero, los padres de Pedro Azabarte."
     },
     {
      "k": "p",
@@ -311,8 +311,8 @@
      "x": "La otra mitad de la historia transcurre en Álava y Gipuzkoa: la aldea de Ondategi con su iglesia de San Lorenzo y su lavadero, una casa-torre del tipo que poblaba los valles alaveses, y Vitoria, la ciudad del archivo donde se guardan los libros. Están dibujados con el mismo estilo, para que las dos orillas de la historia se parezcan, y se cuentan despacio en los dos capítulos dedicados a Álava."
     }
    ],
-   "huella": "fe0adfd5f6f3474eb02d55ad16b0e882ca38ff1dfccc90770724a2745f98e325",
-   "chars": 9192
+   "huella": "143fe620c51a9b3a37999c514dac42b93e3d6a3e1bc51d19885383f975602305",
+   "chars": 10043
   },
   {
    "clave": "cap:hipotesis",
@@ -719,7 +719,7 @@
     },
     {
      "k": "p",
-     "x": "Belmonte era entonces una villa con más nombre que Las Pedroñeras. Tenía castillo, el de los marqueses de Villena, murallas y colegiata, que es una iglesia servida por un cabildo de canónigos. Allí nació en 1527 fray Luis de León, el poeta y catedrático de Salamanca, y es su nombre el que lleva la calle de Las Pedroñeras donde vivieron, siglos después, casi todos los de esta familia. La parroquia de Belmonte conserva sus libros desde 1547, y en ellos pueden estar la boda de Francisco con María Mateo Cantero y, quizá, el bautizo de Pedro."
+     "x": "Belmonte era entonces una villa con más nombre que Las Pedroñeras. Tenía castillo, el de los marqueses de Villena, murallas y colegiata, que es una iglesia servida por un cabildo de canónigos. De allí se declaraba natural fray Luis de León, el poeta y catedrático de Salamanca, nacido en 1527 o 1528. Las Pedroñeras lo tiene por nacido en su término, y por eso en 1900 dio su nombre a la calle de Belmonte, donde vivieron casi todos los de esta familia. La parroquia de Belmonte conserva sus libros desde 1547, y en ellos pueden estar la boda de Francisco con María Mateo Cantero y, quizá, el bautizo de Pedro."
     },
     {
      "k": "p",
@@ -786,8 +786,8 @@
      "x": "Al mirarlos juntos se ve lo que esta historia tiene resuelto y lo que no. El apellido hizo muy pronto el viaje del norte a Cuenca, hacia 1535, y en el siglo dieciocho había Zabarte a pocas leguas de Las Pedroñeras. Lo que ningún papel ha cruzado todavía son los tramos que unen a unos Zabarte con otros y a todos ellos con la casa de Francisco, el padre de Pedro. En la línea, esos tramos se ven vacíos: es el hueco que queda por llenar."
     }
    ],
-   "huella": "a45244242339df1f17d7acd4d6aac6df30ef3ebed44a84124ba2c8f6ecec3da7",
-   "chars": 13706
+   "huella": "5e5deeed340a95ca34b7c361461649ee68dae797174c044e5b6386dce117b8ed",
+   "chars": 13773
   },
   {
    "clave": "cap:alava",
@@ -3636,7 +3636,7 @@
     },
     {
      "k": "p",
-     "x": "Era un pueblo de labradores y jornaleros. Sus papeles hablan de la calle Mayor, de la calle de Mendizábal y, sobre todo, de la calle Fray Luis de León, que arranca de la plaza de la iglesia y donde, andando el tiempo, llegó a caber casi toda la familia. De la casa de los primeros Azabarte, en cambio, ningún papel dice en qué calle estaba. Lo primero que de ellos se conserva no es una casa, sino un nombre, escrito en el libro de matrimonios de la parroquia un día de enero."
+     "x": "Era un pueblo de labradores y jornaleros. Sus papeles hablan de la calle Mayor, de la calle de Mendizábal y, sobre todo, de la calle Fray Luis de León, que arranca de la plaza de la iglesia y hasta 1900 se llamó de Belmonte; en ella, andando el tiempo, llegó a caber casi toda la familia. De la casa de los primeros Azabarte, en cambio, ningún papel dice en qué calle estaba. Lo primero que de ellos se conserva no es una casa, sino un nombre, escrito en el libro de matrimonios de la parroquia un día de enero."
     },
     {
      "k": "ct",
@@ -3751,8 +3751,8 @@
      "x": "Pedro y Manuela tuvieron, que se sepa, un solo hijo. Nació en febrero de 1809, en plena guerra contra los ejércitos de Napoleón, y el cura que lo bautizó se tomó el trabajo de apuntar a sus cuatro abuelos. En uno de aquellos renglones hay una línea que, por primera vez, mira fuera del pueblo."
     }
    ],
-   "huella": "9fa4e3273b7794aeb035462a54c1a711f8e3ddecdc401d6cd35cfa26d654419f",
-   "chars": 10367
+   "huella": "8f32b78cd9bcdd1408ec341c024de5c3f30da9ae3042cc70ec1f97c081a6f3a8",
+   "chars": 10402
   },
   {
    "clave": "lib:pascasio",
@@ -3805,7 +3805,7 @@
     },
     {
      "k": "p",
-     "x": "Belmonte está a doce kilómetros al norte, y era entonces una villa con más nombre que Las Pedroñeras. Tenía murallas, colegiata, que es una iglesia con su cabildo de canónigos, y el castillo de los marqueses de Villena, los señores de aquella tierra. Allí nació en 1527 fray Luis de León, el poeta, y su nombre es el que lleva la calle de Las Pedroñeras donde vivieron, andando el tiempo, casi todos los de esta familia."
+     "x": "Belmonte está a doce kilómetros al norte, y era entonces una villa con más nombre que Las Pedroñeras. Tenía murallas, colegiata, que es una iglesia con su cabildo de canónigos, y el castillo de los marqueses de Villena, los señores de aquella tierra. De allí se declaraba natural fray Luis de León, el poeta, aunque en Las Pedroñeras se sostiene que nació en su término; por eso en 1900 se dio su nombre a la calle de Belmonte, donde vivieron, antes y después, casi todos los de esta familia."
     },
     {
      "k": "p",
@@ -3916,8 +3916,8 @@
      "x": "En aquel pueblo de jornaleros había crecido, entretanto, Francisco, el hijo de Pablo y de María. Y en el mismo pueblo, casi de su misma edad, se había criado una muchacha de la casa de los Navarro. Su madre llevaba un apellido que la familia creyó siempre venido de Valencia: Fides."
     }
    ],
-   "huella": "a69d521bd9ddc1060d6bea929197a52c20ee74cae0257bac670d8c77e0ae31d8",
-   "chars": 12226
+   "huella": "1d1081d7d089f48a0fa370c989a1a5d7316e431a6c0b1a8825f6aeea92dfb50e",
+   "chars": 12298
   },
   {
    "clave": "lib:fides",
@@ -4087,7 +4087,7 @@
     },
     {
      "k": "p",
-     "x": "Se casó con Vicenta Navarro Fides, la muchacha de la casa de los Navarro, casi de su misma edad. No se sabe todavía en qué año fue la boda: ninguno de los papeles que se han leído hasta hoy lo dice, aunque la mayor de las hijas nació hacia 1873. Lo que sí se sabe es dónde vivieron. Los dos habían nacido en Las Pedroñeras, y los dos murieron allí. En 1880 vivían en la calle de Belmonte, la misma donde pocos años después vivía Felipe, el hermano de Francisco; al final de su vida su casa estaba en la calle Fray Luis de León, la que arranca de la plaza de la iglesia, y en esa calle o en su misma manzana vivieron después casi todos los parientes que recuerda la familia."
+     "x": "Se casó con Vicenta Navarro Fides, la muchacha de la casa de los Navarro, casi de su misma edad. No se sabe todavía en qué año fue la boda: ninguno de los papeles que se han leído hasta hoy lo dice, aunque la mayor de las hijas nació hacia 1873. Lo que sí se sabe es dónde vivieron. Los dos habían nacido en Las Pedroñeras, y los dos murieron allí. En 1880 vivían en la calle de Belmonte, la misma donde pocos años después vivía Felipe, el hermano de Francisco. Es la que arranca de la plaza de la iglesia, y en 1900 el Ayuntamiento le dio el nombre de Fray Luis de León: la familia no cambió de calle, la calle cambió de nombre. En ella murió Vicenta en 1914, y en ella o en su misma manzana vivieron después casi todos los parientes que recuerda la familia."
     },
     {
      "k": "p",
@@ -4218,8 +4218,8 @@
      "x": "Aquella suerte, según la familia, tenía otro nombre. Era el de un hermano de Vicenta que, años después de marcharse, se presentó una noche a caballo ante la ventana de sus padres. En Las Pedroñeras lo llamaban «el Polaco»."
     }
    ],
-   "huella": "3f5c84423f9f39eb5d3745dfe3bfe93c815a88b212ec6f21617062b630f90b33",
-   "chars": 10266
+   "huella": "a952e847211aa0e5e629c44fa35c47c505798de3f71656657ab14b9e19273df3",
+   "chars": 10352
   },
   {
    "clave": "lib:polaco",
@@ -5252,6 +5252,155 @@
    "chars": 9674
   },
   {
+   "clave": "lib:hallazgos",
+   "titulo": "Capítulo abierto · Últimos hallazgos de la investigación",
+   "tipo": "lib",
+   "bloques": [
+    {
+     "k": "t",
+     "x": "Capítulo abierto. Últimos hallazgos de la investigación"
+    },
+    {
+     "k": "lede",
+     "x": "Este capítulo no está terminado, ni lo estará mientras siga la investigación. Reúne lo último que se ha sabido y se escribe de nuevo cada vez que llega un papel o un recuerdo que cambia algo."
+    },
+    {
+     "k": "h",
+     "x": "Una mañana en el juzgado"
+    },
+    {
+     "k": "p",
+     "x": "Casi todo lo que se ha sabido en estas semanas salió de una sola mañana, la del 9 de octubre de 2026. El investigador, Francisco Javier García Azabarte, volvió aquel día al juzgado de paz de Las Pedroñeras, donde en agosto había fotografiado las actas de muerte de Francisco y de Vicenta, y esta vez se trajo en fotografías veintidós actas más de la familia, escritas entre 1871 y 1958, con las hojas del índice de defunciones en que aparece el apellido. Un acta del Registro Civil dice más de lo que parece: la calle de la casa, los padres y a veces los abuelos, quién fue a dar parte y qué parentesco tenía con el difunto. Leídas juntas, aquellas hojas cuentan casi un siglo de la familia."
+    },
+    {
+     "k": "p",
+     "x": "Algunas de esas actas se habían pasado a limpio antes con un programa de inteligencia artificial, de los que leen la letra de una fotografía y la escriben de corrido. Antes de dar nada por bueno, cada copia se cotejó con la imagen, renglón a renglón. Algo más de la mitad de los datos estaban bien, y casi uno de cada cinco, mal; los errores caían sobre todo en las cifras y en los nombres escritos a mano. A una niña, Juana, la copia la hacía morir en 1881, y el acta dice 1885. Tampoco se salvaron las lecturas propias: el acta de Francisco, leída de nuevo en octubre, cambió el nombre de su madre, como se verá."
+    },
+    {
+     "k": "pull",
+     "x": "En esta historia solo cuenta lo que se lee en el original."
+    },
+    {
+     "k": "p",
+     "x": "Lo que salió de aquella mañana está ya en los capítulos donde cae, porque un papel nuevo no se añade al final de una historia, sino que la corrige por dentro. Aquí se cuenta junto. Unos recuerdos de la familia, que se habían tomado con cautela, tienen ahora papel; algunos datos que se daban por buenos han resultado equivocados, y uno de los parentescos sobre los que se apoyaba el árbol se ha caído."
+    },
+    {
+     "k": "ct",
+     "x": "Así se hace: leer el original"
+    },
+    {
+     "k": "cp",
+     "x": "Una copia, la haga una persona o una máquina, es una lectura, y toda lectura puede equivocarse. Por eso, cuando un acta llega transcrita, se vuelve a la fotografía y se comprueban uno a uno los nombres, las cifras y los parentescos. Si la letra no se deja leer, se dice que no se lee, y no se completa con lo que se espera encontrar."
+    },
+    {
+     "k": "h",
+     "x": "El nombre del abuelo"
+    },
+    {
+     "k": "p",
+     "x": "La pieza más antigua de aquella mañana es la que más cambia. El 16 de junio de 1876 nació en Las Pedroñeras un hijo de Francisco Azabarte y Vicenta Navarro, y el juzgado lo inscribió como Marcelino. En casa se le llamó siempre Venus, y su nieto Ubaldo Gallardo Azabarte cuenta que en el juzgado no quisieron apuntarlo con ese nombre; el acta le da la razón. Marcelino lo llamaba todavía el juzgado en abril de 1900, y don Venus en marzo de 1902: entre una fecha y otra, el nombre de la casa pudo más que el del libro."
+    },
+    {
+     "k": "p",
+     "x": "Lo que más pesa del acta está en sus últimos renglones, donde el secretario anotó a los cuatro abuelos del niño. El paterno es «Pablo Azabarte Cardoz», natural de la villa y ya difunto. Cardoz es el apellido de Manuela, la mujer de Pedro Azabarte: el cura lo escribió «de Cardos» en 1809, al bautizar a su hijo Pablo Pascasio. Que aquel niño fuera el padre de Francisco era hasta ahora lo más probable, pero ningún papel lo decía; desde octubre lo dice uno. La abuela paterna se llamaba María Galindo Fides, y no Blasa, como se leyó durante unas semanas en una fotografía del acta de Francisco: vuelta a leer en octubre, dice «doña María»."
+    },
+    {
+     "k": "pull",
+     "x": "Con ese papel, la cadena de la familia queda probada con documentos, de Emiliano a Pedro Azabarte."
+    },
+    {
+     "k": "p",
+     "x": "La misma acta da los abuelos maternos, Francisco Navarro y Tomasa Fidez, y los da por muertos. Eso descarta a Tomasa Fides Calvo, la mujer que se tenía por madre de Vicenta y sobre la que se había levantado la línea de los Fides, porque vivió hasta noviembre de 1878: eran dos mujeres del mismo apellido, y la madre de Vicenta había muerto antes. La pregunta vuelve a estar abierta, y con ella se mueve un recuerdo: la noche en que, según se cuenta, el Polaco dejó a sus padres dos bolsas de oro por la ventana tuvo que ser anterior, o la memoria junta momentos distintos. A cambio, aparece una coincidencia. La madre de Francisco y la de Vicenta llevaban el mismo apellido, Fides, y puede que las dos casas fueran parientes."
+    },
+    {
+     "k": "h",
+     "x": "Los nombres que se habían perdido"
+    },
+    {
+     "k": "p",
+     "x": "En la rama de la Boni se tenía a Andrés por el único hermano de Francisco, y de Andrés no ha aparecido todavía ningún papel. Los del juzgado le dan otros tres. Carmen, la mayor, nacida hacia 1838, se casó con Joaquín Martínez y murió viuda en 1910, en la calle de Santa Lucía. Se le murieron de pequeños dos hijos, y en el acta de la primera, Eusebia, muerta en agosto de 1871, fue su abuela María quien dio parte, viuda ya: por ese papel se sabe que Pablo había muerto antes."
+    },
+    {
+     "k": "p",
+     "x": "Felipe, unos diez años menor que Francisco, vivía en la calle de Belmonte, como él, y de él vienen los Azabarte Guijarro. En 1883 se le murió una hija, Juliana, y en los dos años siguientes fue él quien llevó al juzgado la muerte de dos sobrinos, hijos de Francisco; en la segunda se dijo su «tío carnal». Murió en 1926. La tercera es otra Carmen, más joven, casada con Ezequiel Asensio, que en 1888 tuvo una hija en la calle del Sepulcro, y el juzgado le dio los mismos padres que a la mayor. Que dos hermanas se llamaran igual se veía poco, y la partida de su boda dirá si lo eran."
+    },
+    {
+     "k": "pull",
+     "x": "Tres hijos de los que la familia solo sabía que habían muerto tienen ya nombre y fecha."
+    },
+    {
+     "k": "p",
+     "x": "Ángel Mercedes murió en agosto de 1880, con diez meses, en casa de sus padres; Cristóbal, en noviembre de 1884, con tres, y Juana, en septiembre de 1885, con catorce. Estos dos últimos son los sobrinos cuya muerte declaró Felipe, y por las edades nacieron casi a la vez, en el verano de 1884: pudieron ser mellizos, y lo dirá el libro de nacimientos. Juan Ortiz Pacheco recordaba que, de los nueve u once hijos de Francisco y Vicenta, solo cinco llegaron a mayores. Con estos tres, son ya ocho los que tienen nombre."
+    },
+    {
+     "k": "h",
+     "x": "La calle que cambió de nombre"
+    },
+    {
+     "k": "p",
+     "x": "Leídas en orden, las actas parecían contar una mudanza: hasta abril de 1900 la familia vive en la calle de Belmonte, y desde marzo de 1902, en la de Fray Luis de León. El investigador lo aclaró: son la misma calle, la que arranca de la plaza de la iglesia, y lo que cambió fue el nombre. Ángel Carrasco Sotos, que ha escrito sobre la historia del pueblo, pone fecha al cambio. El 27 de mayo de 1900, el Ayuntamiento acordó que la antigua calle de Belmonte se llamara en adelante de Fray Luis de León."
+    },
+    {
+     "k": "pull",
+     "x": "La familia no se movió de su calle. Fue la calle la que cambió de nombre."
+    },
+    {
+     "k": "p",
+     "x": "Con eso, las fechas se ordenan solas. En aquella calle vivían Francisco y Vicenta en 1880, cuando se les murió Ángel Mercedes, y Felipe, el hermano de Francisco, en 1883. En ella se le murió a Venus su hijo Alejandro, en abril de 1900, siete semanas antes del acuerdo, y la primera Eugenia en 1902, con la calle ya rebautizada. En ella murieron Vicenta, la hija mayor, en 1911, y su madre en 1914, y en ella siguió la casa de Venus hasta 1946. Son más de sesenta años de la familia en la misma calle, con dos nombres."
+    },
+    {
+     "k": "p",
+     "x": "El nombre nuevo tenía su razón. El acuerdo de 1900 daba al poeta por nacido «en este término municipal», en el paraje de San Blas. Las biografías lo hacen nacer en Belmonte, en 1527 o en 1528, y él mismo se declaró ante la Inquisición «natural de Belmonte»; no se conoce su partida de bautismo, y los libros de la parroquia de Belmonte empiezan en 1547. En Las Pedroñeras se sostiene desde hace más de un siglo que era del pueblo, y la cuestión sigue abierta. No toca a la familia, pero la calle de los Azabarte, que se llamó de Belmonte y se llama de Fray Luis, ata sin querer los dos pueblos que se disputan al poeta."
+    },
+    {
+     "k": "h",
+     "x": "Las cuatro hijas"
+    },
+    {
+     "k": "p",
+     "x": "De las cuatro hijas de Francisco y Vicenta, dos no tenían hasta octubre un solo papel, y ahora las cuatro tienen fecha de muerte. Vicenta, la mayor, la única que llevó el nombre de su madre, murió el 10 de diciembre de 1911, con treinta y ocho años, de una enfermedad crónica del corazón. Su acta trae los dos maridos que se recordaban en la familia: Domingo Lorente, el padre de Camila, y Juan López, con quien tuvo a Isidora y a Francisco. En casa se recordaba que murió de parto; el acta habla del corazón, y las dos cosas pueden ir juntas. Por la edad nació hacia 1873, y no hacia 1860, como se creía, y con esa fecha encajan por fin sus hijos."
+    },
+    {
+     "k": "pull",
+     "x": "El nombre de la hija del medio no lo supo escribir nadie."
+    },
+    {
+     "k": "p",
+     "x": "Su hermana Isidora murió el 29 de julio de 1907. Su nombre lo había dado Juan Ortiz Pacheco, advirtiendo que lo deducía y no lo recordaba, y también Ubaldo Gallardo Azabarte, desde la otra rama; acertaron los dos. La hija del medio tuvo peor suerte con la pluma. El secretario de 1912 la escribió «Pronuana» y el de 1914, «Semproniana»; en el pueblo la llamaban «la hermana Podruana». Su acta de defunción, de agosto de 1957, dice Produana, y así se llama desde ahora en esta historia. La Boni, la pequeña, vivió hasta junio de 1962."
+    },
+    {
+     "k": "h",
+     "x": "Once hijos en casa de Venus"
+    },
+    {
+     "k": "p",
+     "x": "En casa de Venus y Encarnación se recordaban ocho hijos, los que llegaron a mayores. Los papeles del juzgado añaden otros tres, muertos de pequeños en los primeros años del matrimonio: Alejandro, con ocho días, en abril de 1900; una primera Eugenia, con cuatro meses, en marzo de 1902, y, con toda probabilidad, un Francisco, en agosto de 1903. La Eugenia que se crió, la mayor de los ocho, llevó el nombre de la hermana muerta, como se hacía entonces, y murió joven, probablemente en mayo de 1932."
+    },
+    {
+     "k": "pull",
+     "x": "Ocho hijos se criaron en la casa de Venus; antes que ellos, otros tres no llegaron a crecer."
+    },
+    {
+     "k": "p",
+     "x": "Con esos hijos se mueve también la fecha de la madre. Las actas de Alejandro y de la primera Eugenia le dan veintitrés años en 1900 y veintidós en 1902, dos cifras que no casan entre sí pero que bastan para saber que Encarnación nació entre 1876 y 1880, y no en 1890, como recogía el árbol de la familia. Era, por tanto, casi de la edad de su marido."
+    },
+    {
+     "k": "p",
+     "x": "Venus murió el 25 de mayo de 1946 en su casa, viudo ya de Encarnación, y su acta nombra a los siete hijos que le vivían. El índice pone fecha a la muerte de varios de ellos. Paco murió en mayo de 1986 y Florencia, en noviembre del mismo año; Francisca, en octubre de 1990, y no en 1992, como daban los árboles de la familia. Julián murió el 2 de junio de 1958, con treinta y nueve años; murió joven, como decía Juan Ortiz Pacheco. Su acta lo hace nacer el 3 de noviembre de 1918, y la ficha que le hicieron después de la guerra, el 30: el día lo dirá la inscripción de su nacimiento."
+    },
+    {
+     "k": "p",
+     "x": "De aquella casa vienen también los últimos recuerdos. Pilar Azabarte Arellano ha contado cómo se fueron a la guerra los mellizos, con diecisiete años: pasó por el pueblo un camión recogiendo voluntarios, se subieron sin decir nada, y cuando sus padres se enteraron ya iban camino del frente. A Paco, el mayor de los varones, no le tocó elegir: lo llamaron a filas. Los dos recuerdos casan con los papeles que se conocen, y los expedientes que esperan en los archivos dirán el resto."
+    },
+    {
+     "k": "p",
+     "x": "Lo que falta está a la vista, y casi todo en el mismo juzgado: las bodas de los hermanos de Francisco y la de Venus con Encarnación, los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides y el acta completa de Isidora. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará, como esta vez, a los capítulos donde cae."
+    }
+   ],
+   "huella": "abc1a6e67decd05eeebb200c9504f04c0c3bfe8283d08c66928a3a61d24b34e3",
+   "chars": 11609
+  },
+  {
    "clave": "lib:epilogo",
    "titulo": "Epílogo · Lo que falta por contar",
    "tipo": "lib",
@@ -5402,11 +5551,11 @@
     },
     {
      "k": "p",
-     "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en septiembre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
+     "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en octubre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
     }
    ],
-   "huella": "b8530d8f6bd04e34fec5d9e2c7b4d8df30a82c65d5dd460a136234ac8eb3617c",
-   "chars": 13253
+   "huella": "bfe6d06395661b530e1aa0085efe8280ec0c44a97f7b20759e018a04e6607ffa",
+   "chars": 13250
   },
   {
    "clave": "pj:P001",
@@ -5447,7 +5596,7 @@
     },
     {
      "k": "p",
-     "x": "Los papeles del juzgado cuentan más hermanos de los que guardó la memoria. Carmen, nacida hacia 1838, se casó con Joaquín Martínez y murió viuda en 1910, en la calle de Santa Lucía, con setenta y dos años; su acta nombra a sus padres, don Pablo y doña María, igual que la de Francisco. Felipe, unos diez años menor que él y jornalero como él en la calle de Belmonte, fue en 1885 a declarar la muerte de una hija de Francisco y se dijo su «tío carnal»; de él vienen los Azabarte Guijarro. Y hubo otra Carmen, más joven, casada con Ezequiel Asensio, que en 1888 inscribió a una hija, Consolación, cuando su madre, María, vivía todavía. De Andrés no ha aparecido todavía ningún papel."
+     "x": "Los papeles del juzgado cuentan más hermanos de los que guardó la memoria. Carmen, nacida hacia 1838, se casó con Joaquín Martínez y murió viuda en 1910, en la calle de Santa Lucía, con setenta y dos años; su acta nombra a sus padres, don Pablo y doña María, igual que la de Francisco. Felipe, unos diez años menor que él y jornalero como él en la calle de Belmonte, la que en 1900 pasó a llamarse de Fray Luis de León, fue en 1885 a declarar la muerte de una hija de Francisco y se dijo su «tío carnal»; de él vienen los Azabarte Guijarro. Y hubo otra Carmen, más joven, casada con Ezequiel Asensio, que en 1888 inscribió a una hija, Consolación, cuando su madre, María, vivía todavía. De Andrés no ha aparecido todavía ningún papel."
     },
     {
      "k": "p",
@@ -5466,8 +5615,8 @@
      "x": "Allí siguen los dos, bajo la piedra que su hijo Venus labró con roca de la cueva de las canteras. La inscripción lo nombra «Francisco Azabarte Galindo», con el segundo apellido que las actas solo dejaban adivinar, repite el día de su muerte y sus setenta y tres años, y es de las más viejas que se conservan en el recinto. Se puede ir a verla. Y de aquel jornalero menudo que no se echaba atrás arrancan las ramas que hoy se reparten por el pueblo: los de Venus, los de la Boni, los de la Podruana, los Cabreros y los que salieron de su hija mayor."
     }
    ],
-   "huella": "2a79c190e56d613a546613109e3d5dc3b842995d772e67d1835f3d6f8cbd22cc",
-   "chars": 6658
+   "huella": "57ab78ba6cda3aec51e9c440298a83436d3df20dee235db0e4f2f7ee71d2dcf4",
+   "chars": 6711
   },
   {
    "clave": "pj:P086",
@@ -7051,7 +7200,7 @@
     },
     {
      "k": "p",
-     "x": "Belmonte está a unos doce kilómetros al norte de Las Pedroñeras. Era una villa de señorío, con murallas, colegiata y el castillo que había levantado en el siglo quince el marqués de Villena, y dos siglos antes de que naciera Francisco había nacido allí fray Luis de León, el poeta que da nombre a la calle donde después vivió la familia en Las Pedroñeras. Con toda probabilidad se casó en Belmonte o en Las Pedroñeras, y en los libros de una de las dos parroquias puede estar su boda con María Mateo Cantero, con el apellido escrito como lo oyera aquel cura —Azabarte, Azavarte, Zabarte o Sabarte, que son la misma palabra— y con los nombres de sus padres."
+     "x": "Belmonte está a unos doce kilómetros al norte de Las Pedroñeras. Era una villa de señorío, con murallas, colegiata y el castillo que había levantado en el siglo quince el marqués de Villena, y dos siglos antes de que naciera Francisco había nacido allí, según sus biografías, fray Luis de León, el poeta que da nombre a la calle de Las Pedroñeras donde vivió la familia, que hasta 1900 se llamó, precisamente, calle de Belmonte. Con toda probabilidad se casó en Belmonte o en Las Pedroñeras, y en los libros de una de las dos parroquias puede estar su boda con María Mateo Cantero, con el apellido escrito como lo oyera aquel cura —Azabarte, Azavarte, Zabarte o Sabarte, que son la misma palabra— y con los nombres de sus padres."
     },
     {
      "k": "p",
@@ -7070,8 +7219,8 @@
      "x": "Su nombre de pila, escrito en tres partidas cuando él ya no vivía, es el hilo del que tiran hoy sus descendientes. De Pedro es antepasado seguro, y como la cadena que baja de él a Pablo Pascasio y a Francisco Azabarte Galindo está ya probada entera, es la raíz documentada de toda la familia: el primer hombre de la casa con nombre, aunque todavía sin un apellido escrito."
     }
    ],
-   "huella": "721fc60a1e0ced2a94ca2ee2b6b7a6f89b621afd61c078d3a1b8d68a7f283b95",
-   "chars": 4495
+   "huella": "35f0bdca2dfcc88b6a86b144f26ea735726093d8d13baac2842d173d3addce1d",
+   "chars": 4568
   },
   {
    "clave": "pj:P150",
