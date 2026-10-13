@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 549159,
+ "total_caracteres": 548480,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -739,7 +739,7 @@
     },
     {
      "k": "p",
-     "x": "La familia recordaba además que Francisco tuvo un solo hermano, Andrés, y que los dos iban juntos a segar. Lo contaba la rama de la Boni: que Francisco era el más trabajador de los dos, y que de Andrés vienen «los Perreros», ganaderos del pueblo que vivían con desahogo. Los papeles del Registro Civil han traído otros tres hermanos que la memoria había perdido: Carmen, nacida hacia 1838 y casada con Joaquín Martínez; Felipe, nacido hacia 1850, que en 1885 declaró como tío la muerte de su sobrina Juana y del que vienen los Azabarte Guijarro, y otra Carmen, más joven, casada con Ezequiel Asensio. De Andrés, en cambio, no ha salido todavía ningún papel: su bautizo estará cerca del de Francisco, en el mismo libro perdido o en alguno de los que vinieron después."
+     "x": "La familia recordaba además que Francisco tuvo un solo hermano, Andrés, y que los dos iban juntos a segar. Lo contaba la rama de la Boni, que añadía que de Andrés vienen «los Perreros», ganaderos del pueblo que vivían con desahogo. Los papeles del Registro Civil han traído otros tres hermanos que la memoria había perdido: Carmen, nacida hacia 1838 y casada con Joaquín Martínez; Felipe, nacido hacia 1850, que en 1885 declaró como tío la muerte de su sobrina Juana y del que vienen los Azabarte Guijarro, y otra Carmen, más joven, casada con Ezequiel Asensio. De Andrés, en cambio, no ha salido todavía ningún papel: su bautizo estará cerca del de Francisco, en el mismo libro perdido o en alguno de los que vinieron después."
     },
     {
      "k": "h",
@@ -786,8 +786,8 @@
      "x": "Al mirarlos juntos se ve lo que esta historia tiene resuelto y lo que no. El apellido hizo muy pronto el viaje del norte a Cuenca, hacia 1535, y en el siglo dieciocho había Zabarte a pocas leguas de Las Pedroñeras. Lo que ningún papel ha cruzado todavía son los tramos que unen a unos Zabarte con otros y a todos ellos con la casa de Francisco, el padre de Pedro. En la línea, esos tramos se ven vacíos: es el hueco que queda por llenar."
     }
    ],
-   "huella": "5e5deeed340a95ca34b7c361461649ee68dae797174c044e5b6386dce117b8ed",
-   "chars": 13773
+   "huella": "e275ba7a8f26a5f2dd5460363d7832da1102548eb6acd6b9013b4fc2ad88a532",
+   "chars": 13734
   },
   {
    "clave": "cap:alava",
@@ -4111,7 +4111,7 @@
     },
     {
      "k": "p",
-     "x": "Juan Ortiz Pacheco contó en septiembre de 2026 que Francisco tenía un hermano, Andrés. De los dos se recuerda una siega que hicieron juntos. A la hora de la siesta uno se quedó dormido, y cuando despertó, el otro lo estaba esperando con la broma hecha: «mira, que te he engañado». En casa se decía que uno de los dos era muy trabajador y el otro no tanto, y que el trabajador era Francisco. Es poco, pero es lo que la memoria ha guardado de los dos: una siega, una siesta y una broma entre hermanos."
+     "x": "Juan Ortiz Pacheco contó en septiembre de 2026 que Francisco tenía un hermano, Andrés. De los dos se recuerda que iban juntos a segar, y que de Andrés vienen «los Perreros», ganaderos del pueblo. Es poco, pero es lo que la memoria ha guardado de los dos: dos hermanos que compartían el trabajo del campo."
     },
     {
      "k": "p",
@@ -4218,8 +4218,8 @@
      "x": "Aquella suerte, según la familia, tenía otro nombre. Era el de un hermano de Vicenta que, años después de marcharse, se presentó una noche a caballo ante la ventana de sus padres. En Las Pedroñeras lo llamaban «el Polaco»."
     }
    ],
-   "huella": "a952e847211aa0e5e629c44fa35c47c505798de3f71656657ab14b9e19273df3",
-   "chars": 10352
+   "huella": "c31afbec654ab44d5732d6a90ba36372bee28b12f4649a4bbd1d8c83d198406b",
+   "chars": 10157
   },
   {
    "clave": "lib:polaco",
@@ -5592,7 +5592,7 @@
     },
     {
      "k": "p",
-     "x": "Según se recuerda en la rama de la Boni, tuvo un solo hermano, Andrés, del que vienen «los Perreros», una familia de ganaderos del pueblo que siempre vivió bien. De los dos se recuerda una siega que hicieron juntos: a la hora de la siesta uno se quedó dormido y, cuando despertó, el otro lo estaba esperando con la broma hecha, «mira, que te he engañado». En casa se decía que uno de los dos era muy trabajador y el otro no tanto, y que el trabajador era Francisco."
+     "x": "Según se recuerda en la rama de la Boni, tuvo un solo hermano, Andrés, del que vienen «los Perreros», una familia de ganaderos del pueblo que siempre vivió bien. De los dos se recuerda que iban juntos a segar."
     },
     {
      "k": "p",
@@ -5615,8 +5615,8 @@
      "x": "Allí siguen los dos, bajo la piedra que su hijo Venus labró con roca de la cueva de las canteras. La inscripción lo nombra «Francisco Azabarte Galindo», con el segundo apellido que las actas solo dejaban adivinar, repite el día de su muerte y sus setenta y tres años, y es de las más viejas que se conservan en el recinto. Se puede ir a verla. Y de aquel jornalero menudo que no se echaba atrás arrancan las ramas que hoy se reparten por el pueblo: los de Venus, los de la Boni, los de la Podruana, los Cabreros y los que salieron de su hija mayor."
     }
    ],
-   "huella": "57ab78ba6cda3aec51e9c440298a83436d3df20dee235db0e4f2f7ee71d2dcf4",
-   "chars": 6711
+   "huella": "2b4bda5d98e98e920ac08e798026184e87007d0d1ef8ee91c57ce581ea3df0ca",
+   "chars": 6455
   },
   {
    "clave": "pj:P086",
@@ -6904,7 +6904,7 @@
     },
     {
      "k": "p",
-     "x": "Lo que la familia recuerda de su casa es poco, pero tiene nombre. Juan Ortiz Pacheco, bisnieto de Francisco, contó en septiembre de 2026 que Francisco tenía un hermano, Andrés, y que los dos iban juntos a segar. De un día de siega se recuerda que uno se echó la siesta y el otro le gastó una broma, y que Francisco era el más trabajador de los dos. De Andrés vienen «los Perreros», ganaderos del pueblo que vivían bien. En la rama de la Boni se tenía a Andrés por el único hermano de Francisco, pero los papeles del juzgado añaden otros tres que la memoria no guardó: Carmen, nacida hacia 1838, que se casó con Joaquín Martínez; Felipe, unos diez años menor que Francisco, del que vienen los Azabarte Guijarro, y otra Carmen, más joven, casada con Ezequiel Asensio. De Andrés, en cambio, no ha aparecido todavía ningún papel."
+     "x": "Lo que la familia recuerda de su casa es poco, pero tiene nombre. Juan Ortiz Pacheco, bisnieto de Francisco, contó en septiembre de 2026 que Francisco tenía un hermano, Andrés, y que los dos iban juntos a segar. De Andrés vienen «los Perreros», ganaderos del pueblo que vivían bien. En la rama de la Boni se tenía a Andrés por el único hermano de Francisco, pero los papeles del juzgado añaden otros tres que la memoria no guardó: Carmen, nacida hacia 1838, que se casó con Joaquín Martínez; Felipe, unos diez años menor que Francisco, del que vienen los Azabarte Guijarro, y otra Carmen, más joven, casada con Ezequiel Asensio. De Andrés, en cambio, no ha aparecido todavía ningún papel."
     },
     {
      "k": "p",
@@ -6915,8 +6915,8 @@
      "x": "Murió antes de agosto de 1871: aquel mes su mujer, María, fue al juzgado a declarar la muerte de una nieta y se dijo ya viuda, y en 1876 el acta de nacimiento de Venus lo da por difunto. Por Francisco, Pablo es el abuelo de Venus Azabarte Navarro y el bisabuelo de Emiliano y de sus hermanos, y con él la familia enlaza hacia atrás con Pedro, con los padres de Pedro y con el siglo dieciocho: era el eslabón que faltaba por soldar, y de él cuelga todo lo que hay más atrás."
     }
    ],
-   "huella": "37cd144500bff252ee20f91f648bad3b85f84a25fb0bfcb6668da634358ffb05",
-   "chars": 3539
+   "huella": "8deac19a69f4a65e1e76cb0d831cd21a4892e38bdf7205b244459d4bda79eac1",
+   "chars": 3402
   },
   {
    "clave": "pj:P088",
@@ -6941,7 +6941,7 @@
     },
     {
      "k": "p",
-     "x": "La memoria de la familia le atribuía dos hijos: Francisco, el que siguió la casa, y Andrés, del que vienen «los Perreros», ganaderos del pueblo. Iban juntos a segar, y en la rama de Bonifacia todavía se cuenta de ellos una siesta en plena siega y una broma de hermanos. Los papeles del juzgado le dan más: Carmen, la mayor de las hijas que se conocen, nacida hacia 1838 y casada con Joaquín Martínez; Felipe, nacido hacia 1850, del que vienen los Azabarte Guijarro, y otra Carmen, casada con Ezequiel Asensio, que en 1888 la hizo abuela una vez más. De Andrés no ha aparecido todavía ningún papel."
+     "x": "La memoria de la familia le atribuía dos hijos: Francisco, el que siguió la casa, y Andrés, del que vienen «los Perreros», ganaderos del pueblo. Iban juntos a segar, y así se recuerdan todavía en la rama de Bonifacia. Los papeles del juzgado le dan más: Carmen, la mayor de las hijas que se conocen, nacida hacia 1838 y casada con Joaquín Martínez; Felipe, nacido hacia 1850, del que vienen los Azabarte Guijarro, y otra Carmen, casada con Ezequiel Asensio, que en 1888 la hizo abuela una vez más. De Andrés no ha aparecido todavía ningún papel."
     },
     {
      "k": "p",
@@ -6952,8 +6952,8 @@
      "x": "No se sabe exactamente cuándo nació ni cuándo murió, ni cómo se llamaban sus padres; su segundo apellido, Fides, es el mismo de la madre de su nuera Vicenta, y quizá eran parientes. Pero su apellido sigue a la vista de todos: es el Galindo que su nieto Venus dejó escrito en la lápida que labró para sus padres, junto al nombre de Francisco Azabarte Galindo."
     }
    ],
-   "huella": "1e0c8833e3886aba149cd97b0d9d26325d0b4e88718f75526ab2ce62dc34e902",
-   "chars": 2839
+   "huella": "603f3398266d795b25a71049109f4bb7178fbd0b2679d0a4663b1e432b981a00",
+   "chars": 2787
   },
   {
    "clave": "pj:P092",
