@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 548480,
+ "total_caracteres": 544844,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -1786,23 +1786,19 @@
     },
     {
      "k": "h",
-     "x": "Las máquinas también se equivocan"
+     "x": "Lo que no dicen los índices"
     },
     {
      "k": "p",
-     "x": "Una parte de esta investigación se ha hecho con una herramienta nueva: programas que leen solos la letra de millones de páginas manuscritas fotografiadas y permiten buscar en ellas un apellido. Son una gran ayuda y se equivocan mucho. En la búsqueda de septiembre de 2026, casi tres de cada cuatro resultados eran errores: la máquina leía «Zabarte» donde el escribano había puesto «a su parte» o «por la otra parte», y confundía el apellido con Labarte, Lasarte o Sabater."
+     "x": "Los índices de las grandes bases de genealogía ayudan mucho y se equivocan mucho. En la búsqueda de septiembre de 2026, casi tres de cada cuatro resultados eran errores: donde el índice decía «Zabarte», el escribano había puesto «a su parte» o «por la otra parte», y el apellido se confundía con Labarte, Lasarte o Sabater."
     },
     {
      "k": "p",
-     "x": "El caso más claro llegó del Perú. En un registro de Monsefú de 1797, la máquina había leído el nombre de un tal Baltazar Azabarte, que habría sido el único Azabarte de América. Mirada la fotografía de cerca, ponía Azabache. Desde entonces la regla es firme: lo que ha leído una máquina solo dice dónde mirar, y nada cuenta hasta que alguien lo ha visto con sus propios ojos en el papel."
-    },
-    {
-     "k": "p",
-     "x": "Lo mismo vale para las transcripciones que hace otra inteligencia artificial. Ocho de las actas fotografiadas en el Registro el 9 de octubre de 2026 las había transcrito antes uno de esos programas, y cada transcripción se cotejó con la fotografía, dato por dato. De ciento cincuenta y cuatro datos, ochenta y cuatro estaban bien, treinta y nueve incompletos y veintiocho equivocados; tres no se podían comprobar. Entre los errores había un padre cambiado, Juan por Francisco; una niña muerta en 1885 a la que el programa fechaba cuatro años antes, y una edad de trece meses leída como tres. Lo que cuenta esta historia es lo que se ve en la fotografía."
+     "x": "El caso más claro llegó del Perú. En un registro de Monsefú de 1797, el índice daba un Baltazar Azabarte, que habría sido el único Azabarte de América. Mirada la fotografía de cerca, ponía Azabache. Por eso en esta historia solo cuenta lo que se lee en el papel."
     },
     {
      "k": "pull",
-     "x": "Una máquina dice dónde mirar; solo el ojo sobre el papel dice lo que pone."
+     "x": "Un índice dice dónde mirar; solo el papel dice lo que pone."
     },
     {
      "k": "h",
@@ -1837,8 +1833,8 @@
      "x": "Todo lo que se cuenta aquí está al día a 26 de septiembre de 2026. La historia sigue abierta: hay cartas enviadas a archivos que esperan respuesta, conversaciones pendientes con quienes todavía recuerdan y libros de Belmonte y de Cañada Juncosa por abrir. Cuando llegue un papel nuevo, cambiará lo que haya que cambiar, y quedará dicho que ha cambiado. Lo último que se ha sabido se anuncia aquí mismo."
     }
    ],
-   "huella": "ee78156a95fecb9cf4cb810b3be65e6ad800f0e16ce30eba520f9bc02ae02e4b",
-   "chars": 9095
+   "huella": "8d10ba7d1af2a37b3df308120869cc18bc80f8da3fd793ef5ab85bcaaafb7a45",
+   "chars": 8148
   },
   {
    "clave": "cap:documentos",
@@ -5262,35 +5258,7 @@
     },
     {
      "k": "lede",
-     "x": "Este capítulo no está terminado, ni lo estará mientras siga la investigación. Reúne lo último que se ha sabido y se escribe de nuevo cada vez que llega un papel o un recuerdo que cambia algo."
-    },
-    {
-     "k": "h",
-     "x": "Una mañana en el juzgado"
-    },
-    {
-     "k": "p",
-     "x": "Casi todo lo que se ha sabido en estas semanas salió de una sola mañana, la del 9 de octubre de 2026. El investigador, Francisco Javier García Azabarte, volvió aquel día al juzgado de paz de Las Pedroñeras, donde en agosto había fotografiado las actas de muerte de Francisco y de Vicenta, y esta vez se trajo en fotografías veintidós actas más de la familia, escritas entre 1871 y 1958, con las hojas del índice de defunciones en que aparece el apellido. Un acta del Registro Civil dice más de lo que parece: la calle de la casa, los padres y a veces los abuelos, quién fue a dar parte y qué parentesco tenía con el difunto. Leídas juntas, aquellas hojas cuentan casi un siglo de la familia."
-    },
-    {
-     "k": "p",
-     "x": "Algunas de esas actas se habían pasado a limpio antes con un programa de inteligencia artificial, de los que leen la letra de una fotografía y la escriben de corrido. Antes de dar nada por bueno, cada copia se cotejó con la imagen, renglón a renglón. Algo más de la mitad de los datos estaban bien, y casi uno de cada cinco, mal; los errores caían sobre todo en las cifras y en los nombres escritos a mano. A una niña, Juana, la copia la hacía morir en 1881, y el acta dice 1885. Tampoco se salvaron las lecturas propias: el acta de Francisco, leída de nuevo en octubre, cambió el nombre de su madre, como se verá."
-    },
-    {
-     "k": "pull",
-     "x": "En esta historia solo cuenta lo que se lee en el original."
-    },
-    {
-     "k": "p",
-     "x": "Lo que salió de aquella mañana está ya en los capítulos donde cae, porque un papel nuevo no se añade al final de una historia, sino que la corrige por dentro. Aquí se cuenta junto. Unos recuerdos de la familia, que se habían tomado con cautela, tienen ahora papel; algunos datos que se daban por buenos han resultado equivocados, y uno de los parentescos sobre los que se apoyaba el árbol se ha caído."
-    },
-    {
-     "k": "ct",
-     "x": "Así se hace: leer el original"
-    },
-    {
-     "k": "cp",
-     "x": "Una copia, la haga una persona o una máquina, es una lectura, y toda lectura puede equivocarse. Por eso, cuando un acta llega transcrita, se vuelve a la fotografía y se comprueban uno a uno los nombres, las cifras y los parentescos. Si la letra no se deja leer, se dice que no se lee, y no se completa con lo que se espera encontrar."
+     "x": "Este capítulo no está terminado, ni lo estará mientras siga la investigación. Reúne lo último que se ha encontrado y se escribe de nuevo con cada hallazgo."
     },
     {
      "k": "h",
@@ -5298,11 +5266,11 @@
     },
     {
      "k": "p",
-     "x": "La pieza más antigua de aquella mañana es la que más cambia. El 16 de junio de 1876 nació en Las Pedroñeras un hijo de Francisco Azabarte y Vicenta Navarro, y el juzgado lo inscribió como Marcelino. En casa se le llamó siempre Venus, y su nieto Ubaldo Gallardo Azabarte cuenta que en el juzgado no quisieron apuntarlo con ese nombre; el acta le da la razón. Marcelino lo llamaba todavía el juzgado en abril de 1900, y don Venus en marzo de 1902: entre una fecha y otra, el nombre de la casa pudo más que el del libro."
+     "x": "El acta más antigua es la que más cambia. El 16 de junio de 1876 nació en Las Pedroñeras un hijo de Francisco Azabarte y Vicenta Navarro, y el juzgado lo inscribió como Marcelino. En casa se le llamó siempre Venus, y en la familia se recuerda que en el juzgado no quisieron apuntarlo con ese nombre; el acta lo confirma. Marcelino lo llamaba todavía el juzgado en abril de 1900, y don Venus en marzo de 1902: entre una fecha y otra, el nombre de la casa pudo más que el del libro."
     },
     {
      "k": "p",
-     "x": "Lo que más pesa del acta está en sus últimos renglones, donde el secretario anotó a los cuatro abuelos del niño. El paterno es «Pablo Azabarte Cardoz», natural de la villa y ya difunto. Cardoz es el apellido de Manuela, la mujer de Pedro Azabarte: el cura lo escribió «de Cardos» en 1809, al bautizar a su hijo Pablo Pascasio. Que aquel niño fuera el padre de Francisco era hasta ahora lo más probable, pero ningún papel lo decía; desde octubre lo dice uno. La abuela paterna se llamaba María Galindo Fides, y no Blasa, como se leyó durante unas semanas en una fotografía del acta de Francisco: vuelta a leer en octubre, dice «doña María»."
+     "x": "Lo que más pesa del acta está en sus últimos renglones, donde el secretario anotó a los cuatro abuelos del niño. El paterno es «Pablo Azabarte Cardoz», natural de la villa y ya difunto. Cardoz es el apellido de Manuela, la mujer de Pedro Azabarte: el cura lo escribió «de Cardos» en 1809, al bautizar a su hijo Pablo Pascasio. Que aquel niño fuera el padre de Francisco era hasta ahora lo más probable, pero ningún papel lo decía; ahora lo dice uno. La abuela paterna se llamaba María Galindo Fides, y no Blasa, como se había creído: el acta de defunción de Francisco dice «doña María»."
     },
     {
      "k": "pull",
@@ -5318,7 +5286,7 @@
     },
     {
      "k": "p",
-     "x": "En la rama de la Boni se tenía a Andrés por el único hermano de Francisco, y de Andrés no ha aparecido todavía ningún papel. Los del juzgado le dan otros tres. Carmen, la mayor, nacida hacia 1838, se casó con Joaquín Martínez y murió viuda en 1910, en la calle de Santa Lucía. Se le murieron de pequeños dos hijos, y en el acta de la primera, Eusebia, muerta en agosto de 1871, fue su abuela María quien dio parte, viuda ya: por ese papel se sabe que Pablo había muerto antes."
+     "x": "En la rama de la Boni se tenía a Andrés por el único hermano de Francisco, y de Andrés no ha aparecido todavía ningún papel. Las actas del Registro Civil le dan otros tres. Carmen, la mayor, nacida hacia 1838, se casó con Joaquín Martínez y murió viuda en 1910, en la calle de Santa Lucía. Se le murieron de pequeños dos hijos, y en el acta de la primera, Eusebia, muerta en agosto de 1871, fue su abuela María quien dio parte, viuda ya: por ese papel se sabe que Pablo había muerto antes."
     },
     {
      "k": "p",
@@ -5330,7 +5298,7 @@
     },
     {
      "k": "p",
-     "x": "Ángel Mercedes murió en agosto de 1880, con diez meses, en casa de sus padres; Cristóbal, en noviembre de 1884, con tres, y Juana, en septiembre de 1885, con catorce. Estos dos últimos son los sobrinos cuya muerte declaró Felipe, y por las edades nacieron casi a la vez, en el verano de 1884: pudieron ser mellizos, y lo dirá el libro de nacimientos. Juan Ortiz Pacheco recordaba que, de los nueve u once hijos de Francisco y Vicenta, solo cinco llegaron a mayores. Con estos tres, son ya ocho los que tienen nombre."
+     "x": "Ángel Mercedes murió en agosto de 1880, con diez meses, en casa de sus padres; Cristóbal, en noviembre de 1884, con tres, y Juana, en septiembre de 1885, con catorce. Estos dos últimos son los sobrinos cuya muerte declaró Felipe, y por las edades nacieron casi a la vez, en el verano de 1884: pudieron ser mellizos, y lo dirá el libro de nacimientos. En la familia se recordaba que, de los nueve u once hijos de Francisco y Vicenta, solo cinco llegaron a mayores. Con estos tres, son ya ocho los que tienen nombre."
     },
     {
      "k": "h",
@@ -5338,7 +5306,7 @@
     },
     {
      "k": "p",
-     "x": "Leídas en orden, las actas parecían contar una mudanza: hasta abril de 1900 la familia vive en la calle de Belmonte, y desde marzo de 1902, en la de Fray Luis de León. El investigador lo aclaró: son la misma calle, la que arranca de la plaza de la iglesia, y lo que cambió fue el nombre. Ángel Carrasco Sotos, que ha escrito sobre la historia del pueblo, pone fecha al cambio. El 27 de mayo de 1900, el Ayuntamiento acordó que la antigua calle de Belmonte se llamara en adelante de Fray Luis de León."
+     "x": "Las actas escriben calle de Belmonte hasta abril de 1900, y calle de Fray Luis de León desde marzo de 1902. No fue una mudanza: son la misma calle, la que arranca de la plaza de la iglesia, y lo que cambió fue el nombre. El 27 de mayo de 1900, el Ayuntamiento acordó que la antigua calle de Belmonte se llamara en adelante de Fray Luis de León."
     },
     {
      "k": "pull",
@@ -5358,7 +5326,7 @@
     },
     {
      "k": "p",
-     "x": "De las cuatro hijas de Francisco y Vicenta, dos no tenían hasta octubre un solo papel, y ahora las cuatro tienen fecha de muerte. Vicenta, la mayor, la única que llevó el nombre de su madre, murió el 10 de diciembre de 1911, con treinta y ocho años, de una enfermedad crónica del corazón. Su acta trae los dos maridos que se recordaban en la familia: Domingo Lorente, el padre de Camila, y Juan López, con quien tuvo a Isidora y a Francisco. En casa se recordaba que murió de parto; el acta habla del corazón, y las dos cosas pueden ir juntas. Por la edad nació hacia 1873, y no hacia 1860, como se creía, y con esa fecha encajan por fin sus hijos."
+     "x": "De las cuatro hijas de Francisco y Vicenta, dos no tenían hasta ahora un solo papel, y ahora las cuatro tienen fecha de muerte. Vicenta, la mayor, la única que llevó el nombre de su madre, murió el 10 de diciembre de 1911, con treinta y ocho años, de una enfermedad crónica del corazón. Su acta trae los dos maridos que se recordaban en la familia: Domingo Lorente, el padre de Camila, y Juan López, con quien tuvo a Isidora y a Francisco. En casa se recordaba que murió de parto; el acta habla del corazón, y las dos cosas pueden ir juntas. Por la edad nació hacia 1873, y no hacia 1860, como se creía, y con esa fecha encajan por fin sus hijos."
     },
     {
      "k": "pull",
@@ -5366,7 +5334,7 @@
     },
     {
      "k": "p",
-     "x": "Su hermana Isidora murió el 29 de julio de 1907. Su nombre lo había dado Juan Ortiz Pacheco, advirtiendo que lo deducía y no lo recordaba, y también Ubaldo Gallardo Azabarte, desde la otra rama; acertaron los dos. La hija del medio tuvo peor suerte con la pluma. El secretario de 1912 la escribió «Pronuana» y el de 1914, «Semproniana»; en el pueblo la llamaban «la hermana Podruana». Su acta de defunción, de agosto de 1957, dice Produana, y así se llama desde ahora en esta historia. La Boni, la pequeña, vivió hasta junio de 1962."
+     "x": "Su hermana Isidora murió el 29 de julio de 1907. Su nombre se recordaba en las dos ramas de la familia, y era el bueno. La hija del medio tuvo peor suerte con la pluma. El secretario de 1912 la escribió «Pronuana» y el de 1914, «Semproniana»; en el pueblo la llamaban «la hermana Podruana». Su acta de defunción, de agosto de 1957, dice Produana, y así se llama desde ahora en esta historia. La Boni, la pequeña, vivió hasta junio de 1962."
     },
     {
      "k": "h",
@@ -5374,7 +5342,7 @@
     },
     {
      "k": "p",
-     "x": "En casa de Venus y Encarnación se recordaban ocho hijos, los que llegaron a mayores. Los papeles del juzgado añaden otros tres, muertos de pequeños en los primeros años del matrimonio: Alejandro, con ocho días, en abril de 1900; una primera Eugenia, con cuatro meses, en marzo de 1902, y, con toda probabilidad, un Francisco, en agosto de 1903. La Eugenia que se crió, la mayor de los ocho, llevó el nombre de la hermana muerta, como se hacía entonces, y murió joven, probablemente en mayo de 1932."
+     "x": "En casa de Venus y Encarnación se recordaban ocho hijos, los que llegaron a mayores. Las actas del Registro Civil añaden otros tres, muertos de pequeños en los primeros años del matrimonio: Alejandro, con ocho días, en abril de 1900; una primera Eugenia, con cuatro meses, en marzo de 1902, y, con toda probabilidad, un Francisco, en agosto de 1903. La Eugenia que se crió, la mayor de los ocho, llevó el nombre de la hermana muerta, como se hacía entonces, y murió joven, probablemente en mayo de 1932."
     },
     {
      "k": "pull",
@@ -5386,19 +5354,19 @@
     },
     {
      "k": "p",
-     "x": "Venus murió el 25 de mayo de 1946 en su casa, viudo ya de Encarnación, y su acta nombra a los siete hijos que le vivían. El índice pone fecha a la muerte de varios de ellos. Paco murió en mayo de 1986 y Florencia, en noviembre del mismo año; Francisca, en octubre de 1990, y no en 1992, como daban los árboles de la familia. Julián murió el 2 de junio de 1958, con treinta y nueve años; murió joven, como decía Juan Ortiz Pacheco. Su acta lo hace nacer el 3 de noviembre de 1918, y la ficha que le hicieron después de la guerra, el 30: el día lo dirá la inscripción de su nacimiento."
+     "x": "Venus murió el 25 de mayo de 1946 en su casa, viudo ya de Encarnación, y su acta nombra a los siete hijos que le vivían. El índice pone fecha a la muerte de varios de ellos. Paco murió en mayo de 1986 y Florencia, en noviembre del mismo año; Francisca, en octubre de 1990, y no en 1992, como daban los árboles de la familia. Julián murió el 2 de junio de 1958, con treinta y nueve años; murió joven, como se recordaba. Su acta lo hace nacer el 3 de noviembre de 1918, y la ficha que le hicieron después de la guerra, el 30: el día lo dirá la inscripción de su nacimiento."
     },
     {
      "k": "p",
-     "x": "De aquella casa vienen también los últimos recuerdos. Pilar Azabarte Arellano ha contado cómo se fueron a la guerra los mellizos, con diecisiete años: pasó por el pueblo un camión recogiendo voluntarios, se subieron sin decir nada, y cuando sus padres se enteraron ya iban camino del frente. A Paco, el mayor de los varones, no le tocó elegir: lo llamaron a filas. Los dos recuerdos casan con los papeles que se conocen, y los expedientes que esperan en los archivos dirán el resto."
+     "x": "De aquella casa vienen también los últimos recuerdos. Los mellizos se fueron a la guerra con diecisiete años: pasó por el pueblo un camión recogiendo voluntarios, se subieron sin decir nada, y cuando sus padres se enteraron ya iban camino del frente. A Paco, el mayor de los varones, no le tocó elegir: lo llamaron a filas. Los dos recuerdos casan con los papeles que se conocen, y los expedientes que esperan en los archivos dirán el resto."
     },
     {
      "k": "p",
-     "x": "Lo que falta está a la vista, y casi todo en el mismo juzgado: las bodas de los hermanos de Francisco y la de Venus con Encarnación, los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides y el acta completa de Isidora. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará, como esta vez, a los capítulos donde cae."
+     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco y la de Venus con Encarnación, los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides y el acta completa de Isidora. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "abc1a6e67decd05eeebb200c9504f04c0c3bfe8283d08c66928a3a61d24b34e3",
-   "chars": 11609
+   "huella": "6044e0063ebe7253aefeea434296be9d6295f78c82e66a2576b30e05218ff361",
+   "chars": 9040
   },
   {
    "clave": "lib:epilogo",
@@ -5479,7 +5447,7 @@
     },
     {
      "k": "p",
-     "x": "Muchos papeles sueltos se han leído en las fotografías de microfilm que FamilySearch, una organización dedicada a la genealogía, ha tomado en archivos de medio mundo y deja ver gratis. Sus programas leen solos la letra de los manuscritos, y por esa puerta lateral entraron en esta historia los Zabarte de la comarca. Pero las máquinas se equivocan mucho: en la búsqueda de septiembre de 2026, casi tres de cada cuatro resultados eran errores. En un registro de 1797 de Monsefú, en el Perú, la máquina había leído el nombre de un tal Baltazar Azabarte, que habría sido el único de América. Mirada la fotografía de cerca, ponía Azabache. Desde entonces la regla es firme: lo que lee una máquina solo dice dónde mirar."
+     "x": "Muchos papeles sueltos se han leído en las fotografías de microfilm que FamilySearch, una organización dedicada a la genealogía, ha tomado en archivos de medio mundo y deja ver gratis, y por esa puerta lateral entraron en esta historia los Zabarte de la comarca. Sus índices se equivocan mucho: en la búsqueda de septiembre de 2026, casi tres de cada cuatro resultados eran errores. En un registro de 1797 de Monsefú, en el Perú, el índice daba un tal Baltazar Azabarte, que habría sido el único de América. Mirada la fotografía de cerca, ponía Azabache. Por eso un índice solo dice dónde mirar."
     },
     {
      "k": "h",
@@ -5554,8 +5522,8 @@
      "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en octubre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
     }
    ],
-   "huella": "bfe6d06395661b530e1aa0085efe8280ec0c44a97f7b20759e018a04e6607ffa",
-   "chars": 13250
+   "huella": "ccedbf8806c4557cb32ed20b7ddfa37af750b8c20509944ed2c12422660cff4e",
+   "chars": 13130
   },
   {
    "clave": "pj:P001",
