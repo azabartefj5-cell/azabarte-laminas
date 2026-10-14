@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@446313813a4c1c2114f3b9c719c5309e5aea3bbc/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@e2cde3d75fbb3a97e45700f32e5ddf07a4c4d3ce/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -985,23 +985,23 @@
   },
   "pj:P099": {
    "src": "mp3/pj-P099.mp3",
-   "huella": "17acf0edb6c363222e18771a94941788d06cf379be98ef7b5d20169ab3b30b31",
+   "huella": "c13c702ac1615c9254e4c7e0ca80a2df92e00d58c157b035fe840cfc82058226",
    "marcas": [
     0.35,
-    4.36,
-    25.49,
-    73.42,
-    144.24,
-    199.43,
-    268.5,
-    350.74
+    5.01,
+    25.57,
+    76.78,
+    137.16,
+    189.3,
+    251.74,
+    335.23
    ],
-   "dur": 378.52,
-   "bytes": 3029048,
+   "dur": 361.33,
+   "bytes": 2891576,
    "titulo": "Pedro",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-05T09:05:43Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@a0ffcfbbfa00b9319ae6bade49839f5c80cfd349/voz/narrativa"
+   "generado": "2026-10-14T13:46:25Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@e2cde3d75fbb3a97e45700f32e5ddf07a4c4d3ce/voz/narrativa"
   },
   "pj:P140": {
    "src": "mp3/pj-P140.mp3",
@@ -1043,43 +1043,43 @@
   },
   "pj:P110": {
    "src": "mp3/pj-P110.mp3",
-   "huella": "64393a46f89bf32310350954389f958d9b42e4bc8677153dadec9aae4a562028",
+   "huella": "67e1e5fc165a045b2a822060b947aa018b58916006f00867fafba97b8503ab2c",
    "marcas": [
     0.35,
-    4.33,
-    22.02,
-    71.93,
-    92.32,
-    109.46,
-    148.81,
-    187.55
+    6.18,
+    28.81,
+    106.65,
+    126.86,
+    143.21,
+    196.78,
+    245.37
    ],
-   "dur": 195.65,
-   "bytes": 1566009,
+   "dur": 254.52,
+   "bytes": 2037177,
    "titulo": "Camila",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-05T09:07:20Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@a0ffcfbbfa00b9319ae6bade49839f5c80cfd349/voz/narrativa"
+   "generado": "2026-10-14T13:48:21Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@e2cde3d75fbb3a97e45700f32e5ddf07a4c4d3ce/voz/narrativa"
   },
   "pj:P101": {
    "src": "mp3/pj-P101.mp3",
-   "huella": "89fc6afc87590c2ba7b1e06a335f7e3cf55148b46f1bc338e155275c335eac0e",
+   "huella": "b96f2e679bc6fd84498d65a6dd0f3c31ef6c0b689024dad868f3914794fd8f36",
    "marcas": [
     0.35,
-    4.36,
-    26.36,
-    53.1,
-    89.61,
-    129.6,
-    178.76,
-    234.31
+    4.55,
+    35.63,
+    61.79,
+    97.9,
+    139.44,
+    192.58,
+    265.17
    ],
-   "dur": 259.4,
-   "bytes": 2076161,
+   "dur": 287.69,
+   "bytes": 2302337,
    "titulo": "Pablo Pascasio",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-05T09:07:52Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@a0ffcfbbfa00b9319ae6bade49839f5c80cfd349/voz/narrativa"
+   "generado": "2026-10-14T13:51:00Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@e2cde3d75fbb3a97e45700f32e5ddf07a4c4d3ce/voz/narrativa"
   },
   "pj:P142": {
    "src": "mp3/pj-P142.mp3",
