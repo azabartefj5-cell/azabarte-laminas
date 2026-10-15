@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@71bc4e6e51c77ab6a720c378f61d74488ec67e58/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@ae9875f0dff5ad28b91e00ed191d3d288d90f844/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -2356,41 +2356,41 @@
   },
   "pj:P087": {
    "src": "mp3/pj-P087.mp3",
-   "huella": "e4c36a3dbf33277f3cbe3a880912ed9bdae153dbdc1041e3f5bbfcbe4c164b90",
+   "huella": "8deac19a69f4a65e1e76cb0d831cd21a4892e38bdf7205b244459d4bda79eac1",
    "marcas": [
     0.35,
-    2.49,
-    20.59,
-    53.18,
-    95.04,
-    143.35,
-    188.4
+    3.14,
+    25.12,
+    73.23,
+    133.14,
+    198.0,
+    268.49
    ],
-   "dur": 227.22,
-   "bytes": 1818680,
+   "dur": 309.03,
+   "bytes": 2473208,
    "titulo": "Pablo",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:02:55Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "generado": "2026-10-15T17:01:59Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@ae9875f0dff5ad28b91e00ed191d3d288d90f844/voz/narrativa"
   },
   "pj:P088": {
    "src": "mp3/pj-P088.mp3",
-   "huella": "6f8d4094657e83b2806a003cc7389ae5bb73e6f20ff7d837dc31233b7fb4defc",
+   "huella": "603f3398266d795b25a71049109f4bb7178fbd0b2679d0a4663b1e432b981a00",
    "marcas": [
     0.35,
-    2.58,
-    18.06,
-    48.63,
-    87.26,
-    118.53,
-    151.12
+    3.33,
+    26.58,
+    82.31,
+    127.05,
+    174.34,
+    206.0
    ],
-   "dur": 171.37,
-   "bytes": 1371896,
-   "titulo": "Blasa",
+   "dur": 234.27,
+   "bytes": 1875136,
+   "titulo": "María",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:03:23Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "generado": "2026-10-15T17:03:51Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@ae9875f0dff5ad28b91e00ed191d3d288d90f844/voz/narrativa"
   },
   "pj:P092": {
    "src": "mp3/pj-P092.mp3",
