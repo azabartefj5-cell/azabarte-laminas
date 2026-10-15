@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@ae9875f0dff5ad28b91e00ed191d3d288d90f844/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5996b4198abc85798cc19299175fed4ee8270fdf/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -2394,42 +2394,42 @@
   },
   "pj:P092": {
    "src": "mp3/pj-P092.mp3",
-   "huella": "7b18abc403f81dd96482a80d9d1befe3f562227d8791e544607682f96e6c9221",
+   "huella": "9cf0b095689ed8eb2a59d2745530a35abb6404879d40bbbe76defa28311ffd4b",
    "marcas": [
     0.35,
-    3.07,
-    19.49,
-    46.07,
-    82.34,
-    147.93,
-    198.07,
-    238.83
+    2.75,
+    16.55,
+    59.94,
+    94.89,
+    162.63,
+    247.45,
+    288.61
    ],
-   "dur": 265.77,
-   "bytes": 2127044,
+   "dur": 315.1,
+   "bytes": 2521796,
    "titulo": "Francisco Navarro",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:04:07Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "generado": "2026-10-15T21:24:55Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5996b4198abc85798cc19299175fed4ee8270fdf/voz/narrativa"
   },
   "pj:P093": {
    "src": "mp3/pj-P093.mp3",
-   "huella": "5b224eb0f60210245b4380db7fbe3a65cec1fb0623b5f36acb2c3053e7f26023",
+   "huella": "9024e9398f1c5a9ca3f9d6b73f7ca54a4d8e7f9565f5ed913578b129641d7764",
    "marcas": [
     0.35,
-    2.45,
-    25.22,
-    55.74,
-    114.24,
-    151.78,
-    207.14
+    3.2,
+    27.27,
+    61.03,
+    137.36,
+    170.96,
+    234.67
    ],
-   "dur": 229.43,
-   "bytes": 1836351,
+   "dur": 257.59,
+   "bytes": 2061759,
    "titulo": "Tomasa Fides",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:07:17Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "generado": "2026-10-15T21:27:00Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5996b4198abc85798cc19299175fed4ee8270fdf/voz/narrativa"
   },
   "pj:P124": {
    "src": "mp3/pj-P124.mp3",
