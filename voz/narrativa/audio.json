@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@5996b4198abc85798cc19299175fed4ee8270fdf/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@9f64f4c8b7c23d9585eda027fb435afb7bad5829/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -2433,61 +2433,60 @@
   },
   "pj:P124": {
    "src": "mp3/pj-P124.mp3",
-   "huella": "54b1e980b9ca8ac3c5ba1ffc7e58b27c1279cf31c32cb5dc24d4c1ecae7eac05",
+   "huella": "bd1fe01c37f9864f8ba46afffc0b47beb077c293eac811f1f500460267ada411",
    "marcas": [
     0.35,
-    4.6,
-    32.66,
-    81.71,
-    150.45,
-    209.44,
-    241.2,
-    270.54,
-    311.97
+    4.73,
+    30.49,
+    76.11,
+    147.67,
+    211.08,
+    239.8,
+    300.19,
+    340.38
    ],
-   "dur": 357.0,
-   "bytes": 4285142,
+   "dur": 394.56,
+   "bytes": 3157334,
    "titulo": "Juan «el Polaco»",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:10:35Z",
-   "reparado": "2026-10-07: 1 cortes de dirección leída y respiraciones",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@13de166592f6007122a6c5c4a4a42d721cc542a8/voz/narrativa"
+   "generado": "2026-10-16T00:26:22Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@9f64f4c8b7c23d9585eda027fb435afb7bad5829/voz/narrativa"
   },
   "pj:P100": {
    "src": "mp3/pj-P100.mp3",
-   "huella": "783a8fc0cbbbcdb16732d5a189c48b582e0d1caf904dc8b84c78abc45873759a",
+   "huella": "23b0f641e690865e9791fe60d1f6a5f381ef54876b27ada106b75d258f595ad3",
    "marcas": [
     0.35,
-    4.1,
-    22.08,
-    54.93,
-    90.66,
-    129.63,
-    164.65
+    4.16,
+    24.96,
+    57.25,
+    92.26,
+    129.19,
+    184.09
    ],
-   "dur": 191.2,
-   "bytes": 1530490,
+   "dur": 209.44,
+   "bytes": 1676410,
    "titulo": "Manuela",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:11:06Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "generado": "2026-10-16T00:27:55Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@9f64f4c8b7c23d9585eda027fb435afb7bad5829/voz/narrativa"
   },
   "pj:P096": {
    "src": "mp3/pj-P096.mp3",
-   "huella": "acdac568939f068b58432694794a4072328c1543cb69869c8c3f66ccda082952",
+   "huella": "cdc2dc65b0de9296616beae5df8883e9d25082a22ef7a8f637211dc2a5e0c82a",
    "marcas": [
     0.35,
-    2.47,
-    17.96,
-    49.95,
-    75.86
+    2.39,
+    14.65,
+    40.18,
+    62.18
    ],
-   "dur": 112.86,
-   "bytes": 903807,
+   "dur": 101.74,
+   "bytes": 814911,
    "titulo": "Tomasa Calvo",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:13:48Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "generado": "2026-10-16T00:29:27Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@9f64f4c8b7c23d9585eda027fb435afb7bad5829/voz/narrativa"
   },
   "pj:P149": {
    "src": "mp3/pj-P149.mp3",
@@ -2621,21 +2620,21 @@
   },
   "pj:P095": {
    "src": "mp3/pj-P095.mp3",
-   "huella": "06ab01a6a1e9bd318486afa24a9b283855e2b02fb48789444a0d94a4f4f7d236",
+   "huella": "68a666535b8c6686b80715189859b67ff7bffc6ee20fb849154f315e77271137",
    "marcas": [
     0.35,
-    2.55,
-    15.82,
-    45.92,
-    68.78,
-    101.39
+    2.49,
+    16.02,
+    50.16,
+    75.28,
+    107.65
    ],
-   "dur": 138.84,
-   "bytes": 1111549,
+   "dur": 152.9,
+   "bytes": 1224061,
    "titulo": "Juan Fides",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T22:40:56Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@dea5ca7262cddd65076a8cbcb175561dbdce5deb/voz/narrativa"
+   "generado": "2026-10-16T00:28:44Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@9f64f4c8b7c23d9585eda027fb435afb7bad5829/voz/narrativa"
   },
   "pj:C1700": {
    "src": "mp3/pj-C1700.mp3",
