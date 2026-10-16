@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@9f64f4c8b7c23d9585eda027fb435afb7bad5829/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@0f6491440109914e4153840f6f4a5ddcbff2f9d1/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -2490,24 +2490,24 @@
   },
   "pj:P149": {
    "src": "mp3/pj-P149.mp3",
-   "huella": "8cbd7e1a19e06edc1fdd59bd1455bfaa9f1721ea0854fa6c34e92b8f81d7fc6c",
+   "huella": "35f0bdca2dfcc88b6a86b144f26ea735726093d8d13baac2842d173d3addce1d",
    "marcas": [
     0.35,
-    3.12,
-    29.39,
-    60.39,
-    97.88,
-    154.13,
-    205.39,
-    280.56,
-    346.15
+    2.93,
+    30.33,
+    63.07,
+    100.87,
+    160.31,
+    229.12,
+    304.46,
+    373.85
    ],
-   "dur": 374.9,
-   "bytes": 3000076,
+   "dur": 402.84,
+   "bytes": 3223756,
    "titulo": "Francisco, padre de Pedro",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:14:20Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "generado": "2026-10-16T07:11:22Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@0f6491440109914e4153840f6f4a5ddcbff2f9d1/voz/narrativa"
   },
   "pj:P150": {
    "src": "mp3/pj-P150.mp3",
@@ -2530,38 +2530,38 @@
   },
   "pj:P154": {
    "src": "mp3/pj-P154.mp3",
-   "huella": "d39ebb18d4149f03f6894aef8f4b698ab439f542c0a5f433360ba0129ae73328",
+   "huella": "afc05aa8a95b2b078a38e5c1509a05b089f268a8fcdd4b442171b9fc0e329126",
    "marcas": [
     0.35,
-    3.1,
-    20.59,
-    61.37,
-    83.59,
-    114.15
+    4.69,
+    23.13,
+    75.74,
+    97.72,
+    133.22
    ],
-   "dur": 148.14,
-   "bytes": 1186054,
-   "titulo": "Francisco de Carlos",
+   "dur": 156.43,
+   "bytes": 1252294,
+   "titulo": "Francisco de Cardos",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-06T09:15:16Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@684ff88ab756cc53205558cf7ff4ad73eddf3c45/voz/narrativa"
+   "generado": "2026-10-16T07:12:15Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@0f6491440109914e4153840f6f4a5ddcbff2f9d1/voz/narrativa"
   },
   "pj:P155": {
    "src": "mp3/pj-P155.mp3",
-   "huella": "8804023f2f2cb1d737c44ac1ad70ad7f76e93959d2941e833874fb3cf2abc395",
+   "huella": "12a136965ea9bef9ef81d080ec53c61c46e1339fea9029db08771bbd630e479f",
    "marcas": [
     0.35,
-    2.76,
-    17.27,
-    47.88,
-    73.72
+    2.88,
+    16.54,
+    43.79,
+    66.81
    ],
-   "dur": 105.14,
-   "bytes": 841979,
+   "dur": 95.64,
+   "bytes": 765947,
    "titulo": "Catalina",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-07T11:53:48Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@39f5d77b5584ad44215167611a5de8fb424e7e84/voz/narrativa"
+   "generado": "2026-10-16T07:12:59Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@0f6491440109914e4153840f6f4a5ddcbff2f9d1/voz/narrativa"
   },
   "pj:G1450": {
    "src": "mp3/pj-G1450.mp3",
