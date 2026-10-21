@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 544844,
+ "total_caracteres": 555517,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -204,7 +204,7 @@
     },
     {
      "k": "p",
-     "x": "Las Pedroñeras existía ya antes de 1400. En 1479 la villa se alzó, junto con El Pedernoso y Las Mesas, en nombre de los Reyes Católicos, y en su término quedan noticias y restos de al menos tres pequeños poblados medievales que se despoblaron. De uno de ellos, el Robledillo de Záncara, procede la portada de piedra que hoy luce la ermita del Santo Sepulcro: la trajeron de una iglesia abandonada y la volvieron a montar. El ajo morado, que da fama al pueblo, está hasta en el escudo, junto a un árbol y dos perdices."
+     "x": "Las Pedroñeras existía ya antes de 1400. En 1479 la villa se alzó, junto con El Pedernoso y Las Mesas, en nombre de los Reyes Católicos, y en su término quedan noticias y restos de al menos tres pequeños poblados medievales que se despoblaron. De uno de ellos, el Robledillo de Záncara, procede la portada de piedra que hoy luce la ermita del Santo Sepulcro: la trajeron de una iglesia abandonada y la volvieron a montar. En el pueblo se cuenta de toda la vida que Las Pedroñeras nació de aquellos poblados: una enfermedad dejó casi vacíos Navalcaballo, el Robledillo y San Blas, los pocos que quedaron se juntaron aquí, en una finca que llamaban de Pedro Heras, y de ella le vendría el nombre. Es tradición, sin papel que la confirme. El ajo morado, que da fama al pueblo, está hasta en el escudo, junto a un árbol y dos perdices."
     },
     {
      "k": "p",
@@ -236,11 +236,11 @@
     },
     {
      "k": "p",
-     "x": "El único cementerio era el de Santa Catalina; allí se enterró a Francisco en 1912 y a Vicenta en 1914. Aquel cementerio se cerró y en su solar está hoy el parque del pueblo. Mudar los restos al cementerio nuevo costaba dinero y, según se recuerda en casa, lo pagaba cada familia: los de Francisco y Vicenta se trasladaron porque sus descendientes lo costearon, y los cuerpos por los que nadie pagó se quedaron debajo del parque."
+     "x": "El único cementerio era el de Santa Catalina; allí se enterró a Francisco en 1912 y a Vicenta en 1914. Aquel cementerio se cerró y en su solar está hoy el parque del pueblo. Mudar los restos al cementerio nuevo costaba dinero y, según se recuerda en casa, lo pagaba cada familia: los de Francisco y Vicenta se trasladaron porque sus descendientes lo costearon, y con ellos los de Venus, que se había enterrado junto a sus padres. Los llevó en el carro de la casa su nieto Francisco Gallardo Azabarte. Los cuerpos por los que nadie pagó, o que no se pudieron sacar, se quedaron debajo del parque."
     },
     {
      "k": "p",
-     "x": "Por eso la lápida de los dos, de piedra clara, está hoy en el cementerio nuevo, con sus nombres completos. Es una losa blanca y redondeada, con una cruz grabada en lo alto, y la cierra la dedicatoria de quien la puso: «su desconsolado hijo les dedica este recuerdo». Es una de las piedras más antiguas que se conservan allí, y es el primer documento de esta historia que cualquiera puede ir a ver."
+     "x": "Por eso la lápida de los dos, de piedra clara, está hoy en el cementerio nuevo, con sus nombres completos. Es una losa blanca y redondeada, con una cruz grabada en lo alto, y la cierra la dedicatoria de quien la puso: «su desconsolado hijo les dedica este recuerdo». La labró Venus él solo, con sus manos, y cuando sus hermanas se enteraron ya estaba hecha. Es una de las piedras más antiguas que se conservan allí, y es el primer documento de esta historia que cualquiera puede ir a ver."
     },
     {
      "k": "pie",
@@ -311,8 +311,8 @@
      "x": "La otra mitad de la historia transcurre en Álava y Gipuzkoa: la aldea de Ondategi con su iglesia de San Lorenzo y su lavadero, una casa-torre del tipo que poblaba los valles alaveses, y Vitoria, la ciudad del archivo donde se guardan los libros. Están dibujados con el mismo estilo, para que las dos orillas de la historia se parezcan, y se cuentan despacio en los dos capítulos dedicados a Álava."
     }
    ],
-   "huella": "143fe620c51a9b3a37999c514dac42b93e3d6a3e1bc51d19885383f975602305",
-   "chars": 10043
+   "huella": "86239c3ca0cfe27a777b22894d7142bcb742fb4f48f126b3db4ac3f15724f12b",
+   "chars": 10615
   },
   {
    "clave": "cap:hipotesis",
@@ -1287,7 +1287,7 @@
     },
     {
      "k": "p",
-     "x": "En la rama de Venus se cuenta que eligió al tío Venus y creció en su casa con su prima Eugenia hasta casarse; en la de Bonifacia, que fue la abuela Vicenta quien la tuvo en casa y la casó desde ella. Las dos versiones se guardan. Bonifacia, la menor de los hermanos, nació cuando su madre rondaba los cincuenta años, y era solo tres años mayor que su sobrina Camila. De la otra hija mayor, Isidora, muerta en 1907 según el índice de defunciones del Registro Civil, viene una rama numerosa a la que en el pueblo llaman «los Cabreros», porque el padre de la casa fue cabrero."
+     "x": "En la rama de Venus se cuenta que eligió al tío Venus y creció en su casa con su prima Eugenia hasta casarse; en la de Bonifacia, que fue la abuela Vicenta quien la tuvo en casa y la casó desde ella. Las dos versiones se guardan. Bonifacia, la menor de los hermanos, nació cuando su madre rondaba los cincuenta años, y era solo tres años mayor que su sobrina Camila. De la otra hija mayor, Isidora, muerta en 1907 según el índice de defunciones del Registro Civil, viene una rama numerosa a la que en el pueblo llaman «los Cabreros», porque el padre de la casa fue cabrero. A ella la recuerdan como «la Sidora la Cabrera», «la del Coso», y de sus hijos se nombran Nemesio y Eutimio, al que algunos dicen Eutemio. Se recuerda también que una hija de Eutimio se casó con un hijo de un Francisco de la familia, aunque de cuál no llegó a quedar claro."
     },
     {
      "k": "h",
@@ -1328,6 +1328,10 @@
     {
      "k": "p",
      "x": "Camila, Venus, Eugenia, los Salcedo, «los Cabreros» y Nemesio vivían todos en la calle Fray Luis de León o en la misma manzana, alrededor de la portada de don Paco Mogorrón. Los Molina, los de la casa palacio, no son parientes: llegaron después, cuando Sebastián Molina se casó con la hija de don Paco. La casa vieja de Francisco y Vicenta fue después la de la Boni, y la de Venus estaba en la misma calle. Toda la familia cabía en una calle."
+    },
+    {
+     "k": "p",
+     "x": "Venus fue comprando casas en aquel barrio con lo que ganaba. Se le recuerda muy trabajador y muy fuerte, y en su rama nadie atribuye su hacienda al oro del Polaco. A la condesa le compró una casa con horno, donde pasó sus últimos años, viudo, con su hijo Julián, todavía soltero, que se quedó después con ella. Compró la que llamaban «la fragua», donde nacieron después varios de sus nietos, y una era en lo alto para hacer una casa a cada hijo, que menguó al abrirse la calle del pozo nuevo; allí solo edificó Paco. La suya la partió en dos, para Emiliano y para el nieto que había criado, el hijo de Eugenia. Y para la carretera de Las Mesas acarreó con su cuñado toda la piedra, en un volquete que él mismo se hizo y que la familia guarda todavía."
     },
     {
      "k": "p",
@@ -1387,7 +1391,7 @@
     },
     {
      "k": "p",
-     "x": "A Paco, el mayor de los varones, la posguerra se lo llevó a un batallón disciplinario de soldados trabajadores, el número 13, que trabajó en Navarra y después en Ceuta de 1940 a 1942. En casa se recuerda que el suelo era todo barro, que dormían subidos a los árboles y que volvió con un mal de la piel que ya no lo dejó en toda su vida. Julián, que murió joven, en 1958, con treinta y nueve años, tiene también un expediente de aquellos años en el Archivo General Militar de Guadalajara, y figura en un libro de detenidos de la policía militar de la República en Madrid."
+     "x": "A Paco, el mayor de los varones, la posguerra se lo llevó a un batallón disciplinario de soldados trabajadores, el número 13, que trabajó en Navarra y después en Ceuta de 1940 a 1942. Su sobrino Francisco Gallardo Azabarte, que guarda su fotografía, lo recuerda igual: el que estuvo en la guerra y luego preso en un campo de concentración, todavía muy joven. En casa se recuerda que el suelo era todo barro, que dormían subidos a los árboles y que volvió con un mal de la piel que ya no lo dejó en toda su vida. Julián, que murió joven, en 1958, con treinta y nueve años, tiene también un expediente de aquellos años en el Archivo General Militar de Guadalajara, y figura en un libro de detenidos de la policía militar de la República en Madrid."
     },
     {
      "k": "p",
@@ -1411,7 +1415,7 @@
     },
     {
      "k": "p",
-     "x": "Su hermano Francisco se sentó a escribir de su puño y letra una carta de dos caras, encabezada «Apreciable primo Francisco», donde puso nombre a los hermanos de la abuela Vicenta y escribió por primera vez a mano el nombre de Pronuana, la Produana de su acta de defunción. Detrás de los dos está el trabajo de su hermano Antonio, que había reunido por escrito la historia de cinco generaciones de la familia. Y el árbol genealógico que conserva la familia puso fechas y cónyuges a los ocho hijos de Venus. El recuerdo de Emiliano camino del frente lo ha traído su nieto Francisco Javier, el que ha reunido esta historia."
+     "x": "Su hermano Francisco se sentó a escribir de su puño y letra una carta de dos caras, encabezada «Apreciable primo Francisco», donde puso nombre a los hermanos de la abuela Vicenta y escribió por primera vez a mano el nombre de Pronuana, la Produana de su acta de defunción. En octubre de 2026 recibió en su casa a su prima Pilar y a su hijo, y contó de viva voz lo que recuerda de la casa de Venus: las casas y el horno, la piedra de los abuelos y el traslado al cementerio nuevo, que hizo él mismo con el carro de la casa. Detrás de los dos está el trabajo de su hermano Antonio, que había reunido por escrito la historia de cinco generaciones de la familia. Y el árbol genealógico que conserva la familia puso fechas y cónyuges a los ocho hijos de Venus. El recuerdo de Emiliano camino del frente lo ha traído su nieto Francisco Javier, el que ha reunido esta historia."
     },
     {
      "k": "h",
@@ -1434,8 +1438,8 @@
      "x": "Ese papel resolvió además una cuenta que no salía. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Como la familia recuerda a Vicenta como la mayor de las hijas de la casa, se la había hecho nacer hacia 1860, y una mujer de esa edad difícilmente daba a luz en 1908. El acta le da treinta y ocho años al morir: nació hacia 1873 y tenía unos treinta y cuatro cuando nació Isidora. Pudo ser la mayor de las hijas que llegaron a mayores, y antes de ella pudo haber hermanos que murieron pequeños. Faltan todavía sus dos bodas y el nacimiento de Camila, que dirían cuándo murió Domingo Lorente."
     }
    ],
-   "huella": "7965196b99a79eae4ce22927a3e05cdcf9276b1ecbf0288b175ed1fd23875a24",
-   "chars": 19381
+   "huella": "80b19c2b10c932cc607045c584eabcb8bbbf283fef67fbf33a721005d1c1f23e",
+   "chars": 20830
   },
   {
    "clave": "cap:actas",
@@ -2547,7 +2551,7 @@
     },
     {
      "k": "p",
-     "x": "Años después, sigue la carta, se presentó una noche a caballo ante la casa de sus padres y llamó por la ventana: «madre, padre». Su madre dijo «Francisco, que ha venido Juan», pero él le pidió que no abriera la puerta. La besó por la ventana, dejó dos bolsas y desapareció para siempre. Francisco y Tomasa guardaron aquellas bolsas mucho tiempo sin saber lo que eran, y cuando por fin las abrieron tampoco lo supieron, «porque no lo habían visto nunca». Reunida la familia y hechas las averiguaciones, resultó ser oro. Lo convirtieron en dinero, compraron unas tierras y una yunta de borricos, y desde entonces la casa vivió bien. Hay un límite que la carta no podía conocer: el acta de nacimiento de Venus, de junio de 1876, da ya por difuntos a Francisco y a Tomasa. Si fueron ellos quienes recibieron las bolsas, aquella noche fue anterior, en los años de la última guerra carlista, o la memoria juntó en una sola noche momentos distintos."
+     "x": "Años después, sigue la carta, se presentó una noche a caballo ante la casa de sus padres y llamó por la ventana: «madre, padre». Su madre dijo «Francisco, que ha venido Juan», pero él le pidió que no abriera la puerta. La besó por la ventana, dejó dos bolsas y desapareció para siempre. Francisco y Tomasa guardaron aquellas bolsas mucho tiempo sin saber lo que eran, y cuando por fin las abrieron tampoco lo supieron, «porque no lo habían visto nunca». Reunida la familia y hechas las averiguaciones, resultó ser oro. Lo convirtieron en dinero, compraron unas tierras y una yunta de borricos, y desde entonces la casa vivió bien. Hay un límite que la carta no podía conocer: el acta de nacimiento de Venus, de junio de 1876, da ya por difuntos a Francisco y a Tomasa. Si fueron ellos quienes recibieron las bolsas, aquella noche fue anterior, en los años de la última guerra carlista, o la memoria juntó en una sola noche momentos distintos. En la rama de Venus, en cambio, no se cree que lo que llegó a tener el nieto viniera de aquel oro, sino de lo mucho que trabajó."
     },
     {
      "k": "p",
@@ -2575,7 +2579,7 @@
     },
     {
      "k": "p",
-     "x": "Hubo también quien se fue y volvió. Francisco Gallardo Buedo, el abuelo paterno de Ubaldo y de Francisco Gallardo Azabarte, fue a la guerra de Cuba tocando la trompeta en el ejército y, según cuenta su nieto Ubaldo, volvió muy delgado. No era Azabarte, pero su hijo Antonio se casó con Vicenta, la hija de Venus."
+     "x": "Hubo también quien se fue y volvió. Francisco Gallardo Buedo, el abuelo paterno de Ubaldo y de Francisco Gallardo Azabarte, fue a la guerra de Cuba tocando la trompeta en el ejército y, según cuenta su nieto Ubaldo, volvió muy delgado. Después fue cochero de la condesa, como se la nombra en el pueblo, y la llevaba de visita a casa del marqués del Pedernoso o de la condesa de Belmonte. No era Azabarte, pero su hijo Antonio se casó con Vicenta, la hija de Venus."
     },
     {
      "k": "p",
@@ -2586,8 +2590,8 @@
      "x": "Por esos caminos hay hoy personas que llevan el apellido Azabarte y que nunca han vivido en Las Pedroñeras. Sus historias también caben en estas páginas, y el capítulo de las preguntas abiertas explica cómo pueden llegar hasta aquí."
     }
    ],
-   "huella": "967a2748c588419e0c7af7e41f3c57ec594edc8fd478d88c75fded68fb056577",
-   "chars": 12403
+   "huella": "9f458fccd415a27821273a8a303a4aaae05d4132cee2cea1fac2e039cd6f234b",
+   "chars": 12684
   },
   {
    "clave": "cap:pendiente",
@@ -3628,6 +3632,10 @@
     },
     {
      "k": "p",
+     "x": "En el pueblo se cuenta de toda la vida otra historia de su origen: que una enfermedad dejó casi vacíos Navalcaballo, el Robledillo y San Blas, que los pocos que quedaron se juntaron aquí, en una finca que llamaban de Pedro Heras, y que de ella le viene el nombre. Las calles más viejas serían la del Risco y la de Belmonte, la que hoy lleva el nombre de Fray Luis de León. Es tradición, sin papel que la confirme, pero guarda el recuerdo de aquellos poblados que se vaciaron."
+    },
+    {
+     "k": "p",
      "x": "Quien se acerca al pueblo por cualquiera de sus caminos ve primero una torre de piedra con un chapitel de pizarra. Es la de la iglesia de Nuestra Señora de la Asunción, que levantaron en el siglo dieciséis, en dos fases, Juan Flórez y su hijo; la familia la creía de hacia 1490. Más antigua todavía es la ermita de San Julián, la de la lámina que abre este capítulo. Y en el escudo de la villa, junto a un árbol y dos perdices, está lo que ha dado fama al pueblo: el ajo morado."
     },
     {
@@ -3747,8 +3755,8 @@
      "x": "Pedro y Manuela tuvieron, que se sepa, un solo hijo. Nació en febrero de 1809, en plena guerra contra los ejércitos de Napoleón, y el cura que lo bautizó se tomó el trabajo de apuntar a sus cuatro abuelos. En uno de aquellos renglones hay una línea que, por primera vez, mira fuera del pueblo."
     }
    ],
-   "huella": "8f32b78cd9bcdd1408ec341c024de5c3f30da9ae3042cc70ec1f97c081a6f3a8",
-   "chars": 10402
+   "huella": "d1c59f5cfa2ae80d1abe1ebc5f2fd0f7a80e8be7453e3086d0dde19f1a991fa7",
+   "chars": 10877
   },
   {
    "clave": "lib:pascasio",
@@ -4348,7 +4356,7 @@
     },
     {
      "k": "p",
-     "x": "Tampoco el final es el mismo. En esa rama, Juan no acabó en Mula, sino en Extremadura, retirado con unas cabras y unas ovejas, y de allí escribieron dos veces a Vicenta para que fuera a recoger lo que dejaba; al cabo, arreglaron los papeles y cobró. Las dos versiones se guardan, y la que se tiene por vigente es la escrita, la de la carta. Estar escrita no la hace más verdadera, solo más firme."
+     "x": "Tampoco el final es el mismo. En esa rama, Juan no acabó en Mula, sino en Extremadura, retirado con unas cabras y unas ovejas, y de allí escribieron dos veces a Vicenta para que fuera a recoger lo que dejaba; al cabo, arreglaron los papeles y cobró. Las dos versiones se guardan, y la que se tiene por vigente es la escrita, la de la carta. Estar escrita no la hace más verdadera, solo más firme. En la rama de Venus, en cambio, nadie achaca al oro lo que llegó a tener el abuelo: lo atribuyen a lo mucho que trabajó."
     },
     {
      "k": "pull",
@@ -4363,8 +4371,8 @@
      "x": "En la casa de Francisco y Vicenta, entretanto, la suerte tenía otra cara. De los nueve u once hijos que habían tenido, cuenta la familia, solo cinco llegaron a mayores, y las dos mayores murieron antes que sus padres, dejando hijos pequeños que criaron los abuelos."
     }
    ],
-   "huella": "61aca04aa763dae2d0606ef564a1b7064866c08699e747dfc367289b88aca4b7",
-   "chars": 10467
+   "huella": "05a781ba63b59f6070a264ce2fb02ddd9b133ed69ae57af5bb557dcff90dc633",
+   "chars": 10588
   },
   {
    "clave": "lib:hijas",
@@ -4650,7 +4658,7 @@
     },
     {
      "k": "p",
-     "x": "La piedra clara con que empezó este libro tiene también su historia, y la guarda la familia. Según se recuerda en casa, la labró Venus. Sacó una piedra enorme de la cueva de las canteras, le dio forma con sus manos y grabó en ella los nombres de su padre y de su madre."
+     "x": "La piedra clara con que empezó este libro tiene también su historia, y la guarda la familia. Según se recuerda en casa, la labró Venus. Sacó una piedra enorme de la cueva de las canteras, le dio forma él solo, con sus manos, y grabó en ella los nombres de su padre y de su madre. Cuando sus hermanas se enteraron, ya estaba hecha."
     },
     {
      "k": "pull",
@@ -4662,11 +4670,11 @@
     },
     {
      "k": "p",
-     "x": "Cuando se cerró el cementerio de Santa Catalina, Venus ya no vivía. En aquel solar está hoy el parque del pueblo. Mudar los restos al cementerio nuevo costaba dinero, y lo pagaba cada familia. Los de Francisco y Vicenta los costearon sus nietos, los hijos de Venus, entre ellos Emiliano, el pequeño. Los ayudó Francisco Gallardo Azabarte, nieto de Venus y autor de la carta de la familia, y se los llevaron con aquella misma piedra. Así lo cuenta la familia. Los cuerpos por los que nadie pagó siguen debajo del parque."
+     "x": "Cuando se cerró el cementerio de Santa Catalina, Venus ya no vivía, y descansaba allí con sus padres. En aquel solar está hoy el parque del pueblo. Mudar los restos al cementerio nuevo costaba dinero, y lo pagaba cada familia. Los de Francisco y Vicenta los costearon sus nietos, los hijos de Venus, entre ellos Emiliano, el pequeño. De sacar los restos se ocupaba un hombre que cobraba por ello, y los llevó en el carro de la casa Francisco Gallardo Azabarte, nieto de Venus y autor de la carta de la familia, con aquella misma piedra. Con ellos entraron en la fosa nueva el propio Venus, con toda probabilidad Encarnación, y Encarnita, una hija de Paco que había muerto muy joven. Así lo cuenta la familia. Los cuerpos por los que nadie pagó siguen debajo del parque."
     },
     {
      "k": "p",
-     "x": "La familia tiene aquella piedra por un monumento propio, el regalo de un hijo a quienes lo habían criado. Gracias a ella y a sus nietos, Francisco y Vicenta siguen juntos en el cementerio nuevo, con los dos nombres que Venus grabó. Es de las piedras más viejas del recinto, y el primer documento de esta historia que cualquiera puede ir a ver."
+     "x": "La familia tiene aquella piedra por un monumento propio, el regalo de un hijo a quienes lo habían criado. Gracias a ella y a sus nietos, Francisco y Vicenta siguen juntos en el cementerio nuevo, con los dos nombres que Venus grabó. Es de las piedras más viejas del recinto, y casi la única de su clase: pocas familias del pueblo tienen algo parecido. La cuidan todavía unas nietas de Venus, y es el primer documento de esta historia que cualquiera puede ir a ver."
     },
     {
      "k": "pie",
@@ -4677,8 +4685,8 @@
      "x": "Muertos Francisco y Vicenta, la casa vieja fue de la Boni. Pero la historia que llega hasta hoy siguió en otra casa de la misma calle, la del hijo que había tallado la piedra. Era la de Venus, el labrador, y en ella iban a crecer ocho hijos."
     }
    ],
-   "huella": "6dbac8341e2259bedbb2269e25cdc3134dbf162ca36e4e37c660f5369c836652",
-   "chars": 10691
+   "huella": "e0d6c68422473a012d11261d10590e2f2e12851ba28fe0ae3f567adf8e21ffcc",
+   "chars": 11122
   },
   {
    "clave": "lib:venus",
@@ -4783,7 +4791,7 @@
     },
     {
      "k": "p",
-     "x": "Venus y Encarnación criaron a sus hijos en la casa de la calle Fray Luis de León. La primera de los que llegaron a mayores fue Eugenia, que llevaba el nombre de una hermana muerta antes de que ella naciera, y a la que en casa y en el pueblo llamaban «la Eugenia» y también «la mayor de la casa», porque detrás de ella vinieron siete. Eugenia se casó con Julián Salcedo, y un hijo de los dos se casó con Encarna, hija de su prima Camila, que había vivido en aquella misma casa. Murió joven: el índice de defunciones del juzgado trae a una Eugenia Azabarte Galindo muerta el 15 de mayo de 1932, que con toda probabilidad es ella."
+     "x": "Venus y Encarnación criaron a sus hijos en la casa de la calle Fray Luis de León. La primera de los que llegaron a mayores fue Eugenia, que llevaba el nombre de una hermana muerta antes de que ella naciera, y a la que en casa y en el pueblo llamaban «la Eugenia» y también «la mayor de la casa», porque detrás de ella vinieron siete. Eugenia se casó con Julián Salcedo, y un hijo de los dos se casó con Encarna, hija de su prima Camila, que había vivido en aquella misma casa. Murió joven, de parto, según se recuerda en la familia: el índice de defunciones del juzgado trae a una Eugenia Azabarte Galindo muerta el 15 de mayo de 1932, que con toda probabilidad es ella. A su hijo mayor lo crió el abuelo Venus en su casa."
     },
     {
      "k": "pull",
@@ -4791,7 +4799,7 @@
     },
     {
      "k": "p",
-     "x": "La segunda fue Vicenta, que nació el 31 de marzo de 1907. Llevó el nombre de su abuela, «la Habichuela», y el de su tía Vicenta, la hija mayor de Francisco y Vicenta. Se casó con Antonio Gallardo Parra. De su suegro, Francisco Gallardo Buedo, se contaba que había ido tocando la trompeta a la guerra de Cuba, la que terminó en 1898 con la pérdida de la isla. «No tiraba tiros», cuenta su nieto Ubaldo, hijo de Vicenta, y volvió muy delgado."
+     "x": "La segunda fue Vicenta, que nació el 31 de marzo de 1907. Llevó el nombre de su abuela, «la Habichuela», y el de su tía Vicenta, la hija mayor de Francisco y Vicenta. Se casó con Antonio Gallardo Parra. De su suegro, Francisco Gallardo Buedo, se contaba que había ido tocando la trompeta a la guerra de Cuba, la que terminó en 1898 con la pérdida de la isla. «No tiraba tiros», cuenta su nieto Ubaldo, hijo de Vicenta, y volvió muy delgado. Después fue cochero de la condesa, como se la nombra todavía en el pueblo, y por las tardes la llevaba de visita a casa del marqués del Pedernoso o de la condesa de Belmonte."
     },
     {
      "k": "p",
@@ -4807,7 +4815,7 @@
     },
     {
      "k": "p",
-     "x": "El mayor de los varones, según su sobrino Ubaldo, fue Francisco, al que todos llamaban Paco. Por la costumbre, tan extendida, de poner a un nieto el nombre del abuelo, llevaba el nombre y los dos apellidos del jornalero Francisco Azabarte Galindo, aunque su Galindo le venía de otra casa. Antes que él hubo, con toda probabilidad, otro Francisco, el niño que se les murió en 1903, y era costumbre dar a un hijo el nombre de un hermano muerto. Se casó con una mujer de San Clemente el mismo día que su primo hermano Juan Vicente, el hijo de la Boni. Según el índice de defunciones del juzgado, murió con toda probabilidad el 7 de mayo de 1986."
+     "x": "El mayor de los varones, según su sobrino Ubaldo, fue Francisco, al que todos llamaban Paco. Por la costumbre, tan extendida, de poner a un nieto el nombre del abuelo, llevaba el nombre y los dos apellidos del jornalero Francisco Azabarte Galindo, aunque su Galindo le venía de otra casa. Antes que él hubo, con toda probabilidad, otro Francisco, el niño que se les murió en 1903, y era costumbre dar a un hijo el nombre de un hermano muerto. En la familia se recuerda a aquel primer Francisco de otra manera, ya mocito, de quince años o más, y se cuenta que a la niña que vino después la llamaron Francisca por él. Las fechas de los papeles no dejan sitio a un mozo así, y se guardan las dos versiones. Se casó con una mujer de San Clemente el mismo día que su primo hermano Juan Vicente, el hijo de la Boni. Según el índice de defunciones del juzgado, murió con toda probabilidad el 7 de mayo de 1986."
     },
     {
      "k": "pull",
@@ -4815,7 +4823,7 @@
     },
     {
      "k": "p",
-     "x": "Lo cuenta el hijo de aquel otro matrimonio, Juan Ortiz Pacheco. Cuando Juan conoció al investigador, nieto de Emiliano, en septiembre de 2026, le encontró nada más verlo el parecido con el tío Paco."
+     "x": "Lo cuenta el hijo de aquel otro matrimonio, Juan Ortiz Pacheco. Cuando Juan conoció al investigador, nieto de Emiliano, en septiembre de 2026, le encontró nada más verlo el parecido con el tío Paco. Su sobrino Francisco Gallardo Azabarte guarda su fotografía: un hombre guapo, de pelo ondulado. Paco perdió muy joven a una hija, Encarnita, y también a un hijo jovencito."
     },
     {
      "k": "p",
@@ -4831,7 +4839,7 @@
     },
     {
      "k": "p",
-     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe, aunque el acta de defunción de Julián dice el 3, y solo la inscripción de su nacimiento lo resolverá. Juan Ortiz Pacheco añadió que Julián murió muy joven, y acertó: murió el 2 de junio de 1958, con treinta y nueve años, de un colapso del corazón, según su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026. De él se conserva una sola fotografía, una cartulina pequeña de estudio, sin nada escrito, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura, la chaqueta echada por encima y una mano en el bolsillo."
+     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe, aunque el acta de defunción de Julián dice el 3, y solo la inscripción de su nacimiento lo resolverá. Juan Ortiz Pacheco añadió que Julián murió muy joven, y acertó: murió el 2 de junio de 1958, con treinta y nueve años, de un colapso del corazón, según su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026. De él se conservan por lo menos dos fotografías. Una es una cartulina pequeña de estudio, sin nada escrito, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura, la chaqueta echada por encima y una mano en el bolsillo."
     },
     {
      "k": "pull",
@@ -4839,7 +4847,7 @@
     },
     {
      "k": "p",
-     "x": "Quién es lo dice la familia, que la ha guardado, y se calcula que es de los años treinta. La aportó a esta investigación su sobrina Pilar, en septiembre de 2026."
+     "x": "Quién es lo dice la familia, que la ha guardado, y se calcula que es de los años treinta. La aportó a esta investigación su sobrina Pilar, en septiembre de 2026. La otra la guarda su sobrino Francisco Gallardo Azabarte, con una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío»."
     },
     {
      "k": "p",
@@ -4871,6 +4879,26 @@
     },
     {
      "k": "h",
+     "x": "La casa del horno"
+    },
+    {
+     "k": "p",
+     "x": "En la rama de Venus no se cree que lo que llegó a tener le viniera del oro de su tío Juan, el de la carta. Allí se dice sin dudarlo que el abuelo era muy trabajador, y de una fuerza que todavía se recuerda: «podía más que una borrica», se oía contar en casa. Con lo que fue ganando compró casas. A la condesa, como se la sigue nombrando en el pueblo, le compró una que tenía horno, arrendado un tiempo a otra familia. Compró también la que llamaban «la fragua», donde nacieron después varios de sus nietos, y una era en lo alto del pueblo con la idea de hacer en ella una casa para cada hijo. Al abrir la calle que iba al pozo nuevo le cortaron un trozo enorme, y en lo que quedó solo llegó a edificar Paco."
+    },
+    {
+     "k": "pull",
+     "x": "Lo que llegó a tener salió de sus brazos, y no de las bolsas del Polaco."
+    },
+    {
+     "k": "p",
+     "x": "La casa propia la partió en dos, una parte arriba y otra abajo: la mitad para Emiliano, el pequeño, que vivió en ella con Adela, y la otra mitad para el hijo mayor de Eugenia, el nieto que había criado. Él pasó sus últimos años, viudo ya, en la casa del horno, con Julián, que todavía estaba soltero, y Julián se quedó con la casa y con el horno cuando se casó. Así se entienden dos papeles que no tenían dónde ponerse: el acta de la muerte de Julián, en 1958, lo llama industrial, y una guía de comercios de 1933 trae entre las panaderías del pueblo dos nombres mal escritos que se parecen al apellido. Falta el papel que diga quién amasaba aquel pan."
+    },
+    {
+     "k": "p",
+     "x": "Para la carretera de Las Mesas, cuando dejó de ser un camino de tierra, Venus y su cuñado, con toda probabilidad Juan López, el de los Higuerillas, acarrearon toda la piedra que se echó en ella. Para aquel trabajo se hizo él mismo un volquete: medio carro, con la mula enganchada, que se descargaba solo al quitarle una aguja de delante. Le tocó a su hija Vicenta, y en su casa lo guardan todavía."
+    },
+    {
+     "k": "h",
      "x": "Los Venus"
     },
     {
@@ -4894,8 +4922,8 @@
      "x": "Encarnación murió en 1943, con algo más de sesenta años, y Venus tres años después, el 25 de mayo de 1946, en su casa de la calle Fray Luis de León, de una obstrucción intestinal. Fue a declararlo su yerno Rafael Picazo Díaz, y el acta nombra a los siete hijos que le vivían. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "6b2dbcbda924c7dcd6d9bdfb700c8055825408eaf3a9a1c1f317612e0823709f",
-   "chars": 16964
+   "huella": "21cb306c7c0a758e900754f4a2676f3ce257fa9c916932a32f55b210f282c21e",
+   "chars": 19673
   },
   {
    "clave": "lib:guerra",
@@ -5052,7 +5080,7 @@
     },
     {
      "k": "p",
-     "x": "A Paco, el mayor de los varones, la posguerra se lo llevó lejos. En la casa de Emiliano se recuerda que estuvo en un campo de trabajos forzados, quizá en Ceuta, y un papel dice lo mismo por su cuenta. Una base de datos reunida por historiadores recoge a un Francisco Azabarte Galindo, labrador, natural de Las Pedroñeras y nacido hacia 1915, en el Batallón Disciplinario de Soldados Trabajadores número 13. La familia no conocía esa ficha, ni la ficha a la familia, y por eso vale tanto que coincidan."
+     "x": "A Paco, el mayor de los varones, la posguerra se lo llevó lejos. En la casa de Emiliano se recuerda que estuvo en un campo de trabajos forzados, quizá en Ceuta. En la de su hermana Vicenta, donde se guarda su fotografía, se recuerda igual: estuvo en la guerra y después preso en un campo de concentración, muy joven todavía. Y un papel dice lo mismo por su cuenta. Una base de datos reunida por historiadores recoge a un Francisco Azabarte Galindo, labrador, natural de Las Pedroñeras y nacido hacia 1915, en el Batallón Disciplinario de Soldados Trabajadores número 13. La familia no conocía esa ficha, ni la ficha a la familia, y por eso vale tanto que coincidan."
     },
     {
      "k": "p",
@@ -5099,8 +5127,8 @@
      "x": "Cuando acabó la guerra, en la casa de la calle Fray Luis de León seguía el pequeño, el muchacho que a los catorce años había ido con su padre en el carro hasta el frente. En el papel se llamaba Juan de Mata; en la vida, Emiliano. Iba a ser el abuelo de quien, muchos años después, se puso a preguntar."
     }
    ],
-   "huella": "295ee9867edef3d9227a6ab32178819b9b0718e7c15484c242209e183a5a54b8",
-   "chars": 18338
+   "huella": "511900b5769a810dbf63c7e902be1cc003a474b0d210eeb05f7826925aabe9fc",
+   "chars": 18502
   },
   {
    "clave": "lib:emiliano",
@@ -5233,7 +5261,7 @@
     },
     {
      "k": "p",
-     "x": "A Adela la enterraron en Las Pedroñeras, en el mismo panteón adonde su marido y sus cuñados habían llevado los restos de los abuelos Francisco y Vicenta. Allí descansan también los Delgado, parientes suyos por parte de padre. Su padre, Eladio, no está con ellos: cuando se cerró el cementerio viejo, su rama no pagó el traslado, y se quedó en el antiguo solar, bajo lo que hoy es el parque. Así lo recuerda la familia."
+     "x": "A Adela la enterraron en Las Pedroñeras, en el mismo panteón adonde su marido y sus cuñados habían llevado los restos de los abuelos Francisco y Vicenta. Allí descansan también los Delgado, parientes suyos por parte de padre. Su padre, Eladio, no está con ellos. Cuando se cerró el cementerio viejo, los Delgado se llevaron a los suyos, pero a él no pudieron sacarlo: encima habían enterrado a otro hombre, y estaba ya muy hondo. Se quedó en el antiguo solar, bajo lo que hoy es el parque. Así lo recuerda la familia."
     },
     {
      "k": "pull",
@@ -5244,8 +5272,8 @@
      "x": "De la casa de Emiliano y Adela salieron los recuerdos del abuelo Venus y de aquella calle de parientes que dieron pie a todo, y de ella salió también una pregunta. Su nieto Francisco Javier, que había crecido oyendo a su madre, Pilar, hablar de aquella calle, quiso saber de dónde venía un apellido que casi nadie lleva. Lo que queda de este libro no es ya la vida de los antepasados, sino la historia de cómo se supo, quién la contó y qué falta todavía por saber."
     }
    ],
-   "huella": "e8296d834bb962ddc059303ff3ed8038d6c9dd2540fb72bdb469801e6b51413e",
-   "chars": 9674
+   "huella": "7af3ab6fb1354f5762e282e46de57e22cf57e1edea033024bb0ca53c8d2e8eea",
+   "chars": 9773
   },
   {
    "clave": "lib:hallazgos",
@@ -5338,11 +5366,27 @@
     },
     {
      "k": "h",
+     "x": "El horno de la casa de Venus"
+    },
+    {
+     "k": "p",
+     "x": "A Venus se le recuerda muy trabajador y muy fuerte, y en su rama no se cree que lo que llegó a tener le viniera del oro de su tío Juan, el de las dos bolsas. Con su trabajo compró casas. A la condesa, como se la nombra todavía en el pueblo, le compró una con horno, que estuvo un tiempo arrendado; en ella pasó sus últimos años, viudo ya, con su hijo Julián, todavía soltero, y Julián se quedó con la casa y el horno al casarse. Compró además la casa que llamaban «la fragua» y una era en lo alto del pueblo para hacer una casa a cada hijo, y partió la suya en dos, para Emiliano y para el nieto que había criado, el hijo mayor de Eugenia."
+    },
+    {
+     "k": "pull",
+     "x": "Lo que tuvo Venus salió de su trabajo, casa a casa."
+    },
+    {
+     "k": "p",
+     "x": "El horno pone en su sitio dos papeles sueltos. El acta de Julián, de 1958, lo llama industrial, y una guía de comercios de 1933 y 1934 trae entre las panaderías del pueblo dos nombres mal escritos que se parecen al apellido. Falta todavía el papel que diga quién amasaba. Se sabe también que, para la carretera de Las Mesas, Venus y su cuñado acarrearon toda la piedra, y que para eso se hizo él mismo un volquete, un medio carro que se descargaba solo. Lo conserva la familia."
+    },
+    {
+     "k": "h",
      "x": "Once hijos en casa de Venus"
     },
     {
      "k": "p",
-     "x": "En casa de Venus y Encarnación se recordaban ocho hijos, los que llegaron a mayores. Las actas del Registro Civil añaden otros tres, muertos de pequeños en los primeros años del matrimonio: Alejandro, con ocho días, en abril de 1900; una primera Eugenia, con cuatro meses, en marzo de 1902, y, con toda probabilidad, un Francisco, en agosto de 1903. La Eugenia que se crió, la mayor de los ocho, llevó el nombre de la hermana muerta, como se hacía entonces, y murió joven, probablemente en mayo de 1932."
+     "x": "En casa de Venus y Encarnación se recordaban ocho hijos, los que llegaron a mayores. Las actas del Registro Civil añaden otros tres, muertos de pequeños en los primeros años del matrimonio: Alejandro, con ocho días, en abril de 1900; una primera Eugenia, con cuatro meses, en marzo de 1902, y, con toda probabilidad, un Francisco, en agosto de 1903. La Eugenia que se crió, la mayor de los ocho, llevó el nombre de la hermana muerta, como se hacía entonces, y murió joven, de parto, según se recuerda en la familia, probablemente en mayo de 1932."
     },
     {
      "k": "pull",
@@ -5358,15 +5402,31 @@
     },
     {
      "k": "p",
-     "x": "De aquella casa vienen también los últimos recuerdos. Los mellizos se fueron a la guerra con diecisiete años: pasó por el pueblo un camión recogiendo voluntarios, se subieron sin decir nada, y cuando sus padres se enteraron ya iban camino del frente. A Paco, el mayor de los varones, no le tocó elegir: lo llamaron a filas. Los dos recuerdos casan con los papeles que se conocen, y los expedientes que esperan en los archivos dirán el resto."
+     "x": "De aquella casa vienen también los últimos recuerdos. Los mellizos se fueron a la guerra con diecisiete años: pasó por el pueblo un camión recogiendo voluntarios, se subieron sin decir nada, y cuando sus padres se enteraron ya iban camino del frente. A Paco, el mayor de los varones, no le tocó elegir: lo llamaron a filas, y después de la guerra estuvo preso en un campo de concentración, como se recuerda en dos ramas de la familia. Los dos recuerdos casan con los papeles que se conocen, y los expedientes que esperan en los archivos dirán el resto."
+    },
+    {
+     "k": "h",
+     "x": "Los que descansan bajo la piedra"
     },
     {
      "k": "p",
-     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco y la de Venus con Encarnación, los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides y el acta completa de Isidora. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
+     "x": "La piedra de Francisco y Vicenta la labró Venus él solo, con sus manos, y cuando sus hermanas se enteraron ya estaba hecha. Venus se enterró con sus padres en el cementerio viejo, y con ellos pasó al nuevo, después de 1958, porque ese año todavía se enterró en el viejo a Julián, en otra sepultura. De sacar los restos se ocupaba un hombre que cobraba por ello, y los llevó en el carro de la casa un nieto de Venus. En la fosa de la piedra descansan, además de Francisco y Vicenta y del propio Venus, con toda probabilidad Encarnación y una nieta, Encarnita, la hija de Paco, que murió muy joven."
+    },
+    {
+     "k": "pull",
+     "x": "Bajo la misma piedra descansan juntos los padres, el hijo que la labró y una bisnieta."
+    },
+    {
+     "k": "p",
+     "x": "Lo que se contaba del padre de Adela se ha precisado. Eladio no se quedó bajo el parque por falta de dinero: cuando los Delgado fueron a sacar a los suyos, a él no pudieron llevárselo, porque encima habían enterrado a otro hombre y estaba ya muy hondo. Una piedra como la de Venus es casi un caso único en el cementerio del pueblo, y la siguen cuidando sus nietas."
+    },
+    {
+     "k": "p",
+     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco y la de Venus con Encarnación, los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "6044e0063ebe7253aefeea434296be9d6295f78c82e66a2576b30e05218ff361",
-   "chars": 9040
+   "huella": "748f5843983d271851c5834b0f0b56c172c98610e86919e7a1cef2974ca173dd",
+   "chars": 11505
   },
   {
    "clave": "lib:epilogo",
@@ -5706,11 +5766,15 @@
     },
     {
      "k": "p",
-     "x": "Murió el 25 de mayo de 1946, a las dos de la madrugada, en su casa de la calle de Fray Luis de León, de una obstrucción intestinal, viudo desde hacía tres años. Fue a declarar la muerte su yerno Rafael Picazo Díaz, y el acta nombra a los siete hijos que le vivían: Vicenta, Francisca, Florencia, Francisco, Venus, Julián y Emiliano. Cuando se cerró el cementerio viejo él ya no estaba, y, según se recuerda en casa, fueron sus hijos quienes pagaron el traslado de los restos de sus padres al nuevo, con aquella misma piedra a cuestas; les ayudó su nieto Francisco Gallardo Azabarte. No todas las familias lo costearon, y los cuerpos por los que nadie pagó siguen bajo lo que hoy es el parque. Los de Francisco y Vicenta no: descansan bajo la piedra que talló su hijo, con los dos nombres que él mismo grabó."
+     "x": "Se le recuerda muy trabajador y de mucha fuerza, y en su rama no se cree que lo que llegó a tener le viniera del oro de su tío Juan «el Polaco». Compró a la condesa, como se la nombra en el pueblo, una casa con horno, donde pasó sus últimos años, ya viudo, con su hijo Julián, todavía soltero. Compró también la casa que llamaban «la fragua» y una era para hacer una casa a cada hijo, y partió la suya en dos, para Emiliano y para el nieto mayor, el hijo de Eugenia, al que crió. Con su cuñado acarreó la piedra de la carretera de Las Mesas, en un volquete que él mismo se hizo y que conserva la familia. Así lo recuerda su nieto Francisco Gallardo Azabarte."
+    },
+    {
+     "k": "p",
+     "x": "Murió el 25 de mayo de 1946, a las dos de la madrugada, en su casa de la calle de Fray Luis de León, de una obstrucción intestinal, viudo desde hacía tres años. Fue a declarar la muerte su yerno Rafael Picazo Díaz, y el acta nombra a los siete hijos que le vivían: Vicenta, Francisca, Florencia, Francisco, Venus, Julián y Emiliano. Cuando se cerró el cementerio viejo él ya no estaba, y, según se recuerda en casa, fueron sus hijos quienes pagaron el traslado de los restos de sus padres al nuevo, y de los suyos, que descansaban con ellos, con aquella misma piedra a cuestas; los llevó en el carro de la casa su nieto Francisco Gallardo Azabarte. No todas las familias lo costearon, y los cuerpos por los que nadie pagó siguen bajo lo que hoy es el parque. Los de Francisco y Vicenta no: descansan bajo la piedra que talló su hijo, con los dos nombres que él mismo grabó."
     }
    ],
-   "huella": "97e5a5d52d9e87ed426bda00decca4af885b7b80daa9f92235d9b544486a12d9",
-   "chars": 7719
+   "huella": "6e9242cd65e2be965380b3480ac783c51de22c3446fc2632006381194090a740",
+   "chars": 8443
   },
   {
    "clave": "pj:P094",
@@ -6342,15 +6406,15 @@
     },
     {
      "k": "p",
-     "x": "Murió el 12 de octubre de 2013 en San Clemente, a pocos kilómetros de su pueblo, con noventa años, y la enterraron en Las Pedroñeras, en el mismo panteón adonde su marido y sus cuñados habían llevado los restos de los abuelos Francisco y Vicenta. Allí descansan también los Delgado, parientes suyos por parte de padre. Su padre, Eladio, no está con ellos: cuando se cerró el cementerio viejo, su rama no pagó el traslado, y se quedó en el antiguo solar, bajo lo que hoy es el parque. Así lo recuerda la familia."
+     "x": "Murió el 12 de octubre de 2013 en San Clemente, a pocos kilómetros de su pueblo, con noventa años, y la enterraron en Las Pedroñeras, en el mismo panteón adonde su marido y sus cuñados habían llevado los restos de los abuelos Francisco y Vicenta. Allí descansan también los Delgado, parientes suyos por parte de padre. Su padre, Eladio, no está con ellos. Cuando se cerró el cementerio viejo, los Delgado se llevaron a los suyos, pero a él no pudieron sacarlo: encima habían enterrado a otro hombre, y estaba ya muy hondo. Se quedó en el antiguo solar, bajo lo que hoy es el parque. Así lo recuerda la familia."
     },
     {
      "k": "p",
      "x": "Es la abuela materna del investigador. No llevaba el apellido Azabarte, pero descansa con ellos, y de ella vienen los que preguntaron."
     }
    ],
-   "huella": "ca0638b9c09a3e24676ee62365a0c126eec24692d8fccc5bf42cf7d65b78b5bc",
-   "chars": 2439
+   "huella": "e6c437a6208ac5ad946b632bc40b63debae8b82543177626289701fca069a6d5",
+   "chars": 2538
   },
   {
    "clave": "pj:P133",
@@ -6507,10 +6571,14 @@
     {
      "k": "p",
      "x": "Su sobrino Ubaldo la nombró la primera cuando recitó de memoria a los hijos de su abuelo, y la recordó como madre de Julián Salcedo. Murió joven: el índice de defunciones del Registro Civil trae a una Eugenia Azabarte Galindo muerta el 15 de mayo de 1932, que con toda probabilidad es ella, con unos veinticinco años, y en 1946, cuando murió su padre, ya no estaba entre los hijos vivos que nombra el acta. Su sitio en la casa nadie lo discute: fue la primera de los ocho y la que vio crecer a todos los demás."
+    },
+    {
+     "k": "p",
+     "x": "Su sobrino Francisco Gallardo Azabarte recuerda que murió de parto, y que a su hijo mayor lo crió el abuelo Venus, que le dejó la mitad de su casa."
     }
    ],
-   "huella": "13b35ab9d3d62fcb14415424c46b5cf35cf9bd4f1fc094e637456501e9638d24",
-   "chars": 2182
+   "huella": "7aaf0198604e33110d777e170621fecb49419e8ed1f56dc6414333834ddf768a",
+   "chars": 2329
   },
   {
    "clave": "pj:P134",
@@ -6584,6 +6652,10 @@
     },
     {
      "k": "p",
+     "x": "Su sobrino Francisco Gallardo Azabarte guarda su fotografía y lo recuerda como el que estuvo en la guerra y luego preso en el campo de concentración, muy joven: lo mismo que se recordaba en casa de Emiliano y que dice la ficha del batallón. Era guapo, de pelo ondulado, y edificó su casa en la era que había comprado su padre. Perdió muy joven a una hija, Encarnita, que descansa con sus abuelos bajo la piedra de la familia, y también a un hijo jovencito."
+    },
+    {
+     "k": "p",
      "x": "Lo que contaba Paco ha llegado a través de su sobrina Pilar. Aquello era tan miserable que no había dónde echarse: el suelo era todo barro, y dormían subidos a los árboles. Salió de allí con vida, pero volvió con unos picores tremendos, un mal de la piel que ya no lo dejó en toda su vida, hasta que murió de viejo."
     },
     {
@@ -6599,8 +6671,8 @@
      "x": "Su nombre y sus dos apellidos son los mismos que los de su abuelo, así que cada papel que los lleva hay que leerlo con cuidado para saber de cuál de los dos habla. El de esta página es Paco, el de la boda doble, al que, según Juan Ortiz, se parece el nieto de su hermano pequeño."
     }
    ],
-   "huella": "3ffe63120d6642a10d7694b0a50e86769f661db1704b8bf7eae0c0e7b888c647",
-   "chars": 4296
+   "huella": "fd35aef2311b55706d74dddbe2721b8f25a17963a702e4cd4193ebee0f13540d",
+   "chars": 4752
   },
   {
    "clave": "pj:P136",
@@ -6642,7 +6714,7 @@
     },
     {
      "k": "lede",
-     "x": "Hermano de Emiliano y mellizo de Venus, nacido en noviembre de 1918. Se fue voluntario a la guerra con diecisiete años, murió joven, en 1958, y de él queda una sola fotografía."
+     "x": "Hermano de Emiliano y mellizo de Venus, nacido en noviembre de 1918. Se fue voluntario a la guerra con diecisiete años, murió joven, en 1958, y de él se guardan dos fotografías."
     },
     {
      "k": "p",
@@ -6667,10 +6739,14 @@
     {
      "k": "p",
      "x": "En el Archivo General Militar de Guadalajara hay además un expediente a su nombre, en una serie de la posguerra que reúne a soldados trabajadores, a los soldados que los custodiaban y a prisioneros, y que por eso no dice en qué condición estuvo. Si es suyo, Julián seguía vivo cuando se abrió, y eso ya no extraña: su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026, dice que murió el 2 de junio de 1958, casado, industrial de oficio, con treinta y nueve años. Murió joven, como recordaba la familia, pero mucho después de la guerra. Y queda su cara, que es mucho más de lo que ha quedado de casi todos los que aparecen en esta historia."
+    },
+    {
+     "k": "p",
+     "x": "Se quedó con la casa del horno que su padre había comprado a la condesa, y en ella vivió con él Venus, ya viudo, cuando Julián todavía estaba soltero; eso explica, con toda probabilidad, que su acta lo llame industrial. Su sobrino Francisco Gallardo Azabarte guarda otra fotografía suya, con una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío». Al morir, en 1958, se le enterró todavía en el cementerio viejo, en otra sepultura que la de sus abuelos."
     }
    ],
-   "huella": "db40d994dc4420bcfad159dde10db4bbfd62d1fac1c7965fd19e055eebf43920",
-   "chars": 3443
+   "huella": "d116f14aa866d647703d8303ec9bb89935a6915e695ce7d39709482d6ec2457f",
+   "chars": 3923
   },
   {
    "clave": "pj:P098",
@@ -6732,7 +6808,7 @@
     },
     {
      "k": "p",
-     "x": "Es la memoria viva del barrio. Recuerda la casa del abuelo Venus, quién era quién en aquella calle y en qué casa vivía cada pariente, y buena parte de lo que después se ha podido contrastar con documentos salió antes de su boca. Es también la puerta por la que entra casi todo: a ella le llegó, en septiembre de 2026, la carta manuscrita de su primo Francisco Gallardo Azabarte, y fue ella quien aportó la única fotografía que se conserva de su tío Julián."
+     "x": "Es la memoria viva del barrio. Recuerda la casa del abuelo Venus, quién era quién en aquella calle y en qué casa vivía cada pariente, y buena parte de lo que después se ha podido contrastar con documentos salió antes de su boca. Es también la puerta por la que entra casi todo: a ella le llegó, en septiembre de 2026, la carta manuscrita de su primo Francisco Gallardo Azabarte, y fue ella quien aportó la primera fotografía que se conoció de su tío Julián."
     },
     {
      "k": "p",
@@ -6743,8 +6819,8 @@
      "x": "Esta historia empezó en sus conversaciones con su hijo sobre el abuelo Francisco y sobre de dónde venían los Azabarte. A finales de agosto de 2026 se sentaron los dos delante de las actas fotografiadas de los bisabuelos, y de aquellas tardes salieron preguntas que acabaron llevando a otras ramas de la familia. Su historia completa está en «Quiénes lo hacen posible». Aquí basta decir que sin sus conversaciones no habría habido historia que contar."
     }
    ],
-   "huella": "92867033e8a82e15c80dba3d1427a20b235b67d3398243ee758d617929ec3295",
-   "chars": 2258
+   "huella": "3f3633e9eb3ed393c1dcc3cea421cbcdc10f009301cd2fee7945708b437cae4d",
+   "chars": 2259
   },
   {
    "clave": "pj:P033",
