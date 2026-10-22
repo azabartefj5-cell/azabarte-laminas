@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 555517,
+ "total_caracteres": 556792,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -1383,7 +1383,7 @@
     },
     {
      "k": "p",
-     "x": "Según recuerda la familia, los mellizos de la casa de Venus, Julián y Venus, se fueron voluntarios a defender la República con diecisiete años: habían nacido en noviembre de 1918, el día 30 según los papeles de la guerra y el 3 según el acta de defunción de Julián. Se fueron sin decir nada en casa: Pilar cuenta que por el pueblo pasó un camión recogiendo voluntarios, que los dos se subieron a él y que, cuando sus padres se enteraron, ya iban camino del frente, sin que pudieran hacer nada por impedirlo. Paco, el mayor de los varones, no fue voluntario: a él lo llamaron a filas. Que los mellizos fueron voluntarios lo confirman los papeles. Las fichas que el régimen de Franco hizo con los papeles incautados a la República dicen que Julián, campesino, de la UGT desde 1935 y de las Juventudes Socialistas Unificadas, fue «voluntario en la cuarta Brigada Mixta», y que Venus, hijo de Venus y Encarnación, era sargento y estaba afiliado a la UGT y al Partido Comunista. En noviembre de 1938 el periódico de su brigada, la 44, lo contaba entre los defensores de Madrid: «Venus Azabarte, hoy sargento»."
+     "x": "Según recuerda la familia, los mellizos de la casa de Venus, Julián y Venus, se fueron voluntarios a defender la República con diecisiete años: habían nacido en noviembre de 1918, el día 30 según los papeles de la guerra y el 3 según el acta de defunción de Julián. Se fueron sin decir nada en casa: Pilar cuenta que por el pueblo pasó un camión recogiendo voluntarios, que los dos se subieron a él y que, cuando sus padres se enteraron, ya iban camino del frente, sin que pudieran hacer nada por impedirlo. Paco, el mayor de los varones, no fue voluntario: a él lo llamaron a filas, y fue al frente obligado. Que los mellizos fueron voluntarios lo confirman los papeles. Las fichas que el régimen de Franco hizo con los papeles incautados a la República dicen que Julián, campesino, de la UGT desde 1935 y de las Juventudes Socialistas Unificadas, fue «voluntario en la cuarta Brigada Mixta», y que Venus, hijo de Venus y Encarnación, era sargento y estaba afiliado a la UGT y al Partido Comunista. En noviembre de 1938 el periódico de su brigada, la 44, lo contaba entre los defensores de Madrid: «Venus Azabarte, hoy sargento»."
     },
     {
      "k": "p",
@@ -1438,8 +1438,8 @@
      "x": "Ese papel resolvió además una cuenta que no salía. La lápida de Isidora López Azabarte, en el cementerio del pueblo, dice que murió en 1986 con setenta y ocho años: nació, por tanto, en 1907 o en 1908. Como la familia recuerda a Vicenta como la mayor de las hijas de la casa, se la había hecho nacer hacia 1860, y una mujer de esa edad difícilmente daba a luz en 1908. El acta le da treinta y ocho años al morir: nació hacia 1873 y tenía unos treinta y cuatro cuando nació Isidora. Pudo ser la mayor de las hijas que llegaron a mayores, y antes de ella pudo haber hermanos que murieron pequeños. Faltan todavía sus dos bodas y el nacimiento de Camila, que dirían cuándo murió Domingo Lorente."
     }
    ],
-   "huella": "80b19c2b10c932cc607045c584eabcb8bbbf283fef67fbf33a721005d1c1f23e",
-   "chars": 20830
+   "huella": "9d0fe16505afc60a83c40a12e8757d84b02302eef0742f19642386c3acc22b96",
+   "chars": 20856
   },
   {
    "clave": "cap:actas",
@@ -4839,7 +4839,7 @@
     },
     {
      "k": "p",
-     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe, aunque el acta de defunción de Julián dice el 3, y solo la inscripción de su nacimiento lo resolverá. Juan Ortiz Pacheco añadió que Julián murió muy joven, y acertó: murió el 2 de junio de 1958, con treinta y nueve años, de un colapso del corazón, según su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026. De él se conservan por lo menos dos fotografías. Una es una cartulina pequeña de estudio, sin nada escrito, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura, la chaqueta echada por encima y una mano en el bolsillo."
+     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe, aunque el acta de defunción de Julián dice el 3, y solo la inscripción de su nacimiento lo resolverá. Juan Ortiz Pacheco añadió que Julián murió muy joven, y acertó: murió el 2 de junio de 1958, con treinta y nueve años, de un colapso del corazón, según su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026. De él se conservan por lo menos tres fotografías. Una es una cartulina pequeña de estudio, sin nada escrito, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura, la chaqueta echada por encima y una mano en el bolsillo."
     },
     {
      "k": "pull",
@@ -4847,7 +4847,7 @@
     },
     {
      "k": "p",
-     "x": "Quién es lo dice la familia, que la ha guardado, y se calcula que es de los años treinta. La aportó a esta investigación su sobrina Pilar, en septiembre de 2026. La otra la guarda su sobrino Francisco Gallardo Azabarte, con una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío»."
+     "x": "Quién es lo dice la familia, que la ha guardado, y se calcula que es de los años treinta. La aportó a esta investigación su sobrina Pilar, en septiembre de 2026. Las otras dos las guarda su sobrino Francisco Gallardo Azabarte. En una es todavía un muchacho, sentado en el estudio de un fotógrafo, en mangas de camisa; en la otra, ya un hombre de bigote fino, y al pie lleva una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío»."
     },
     {
      "k": "p",
@@ -4922,8 +4922,8 @@
      "x": "Encarnación murió en 1943, con algo más de sesenta años, y Venus tres años después, el 25 de mayo de 1946, en su casa de la calle Fray Luis de León, de una obstrucción intestinal. Fue a declararlo su yerno Rafael Picazo Díaz, y el acta nombra a los siete hijos que le vivían. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "21cb306c7c0a758e900754f4a2676f3ce257fa9c916932a32f55b210f282c21e",
-   "chars": 19673
+   "huella": "12836d4ff61659590686a98412b953e892db8e5b51507c9aaa0803c1949cfcf4",
+   "chars": 19824
   },
   {
    "clave": "lib:guerra",
@@ -4968,7 +4968,7 @@
     },
     {
      "k": "p",
-     "x": "Los mellizos, Julián y Venus, habían nacido en noviembre de 1918, el día 30 según una ficha de Julián y el 3 según su acta de defunción, y cuando empezó la guerra tenían diecisiete años. Los dos se fueron voluntarios a defender la República, y se fueron sin decir nada en casa. Según cuenta Pilar, por el pueblo pasó un camión recogiendo voluntarios y los dos se subieron a él; cuando sus padres se enteraron, ya iban camino del frente, y no pudieron hacer nada por impedirlo. Que fueron voluntarios lo ha contado siempre la familia, y ahora lo dice también un papel: esa ficha de Julián lo llama con estas palabras «voluntario en la cuarta Brigada Mixta». Pilar recuerda que volvieron con veinte años, y las cuentas salen: veinte tenían en marzo de 1939. Paco, el mayor de los varones, no fue voluntario: a él lo llamaron a filas, y fue a la guerra obligado."
+     "x": "Los mellizos, Julián y Venus, habían nacido en noviembre de 1918, el día 30 según una ficha de Julián y el 3 según su acta de defunción, y cuando empezó la guerra tenían diecisiete años. Los dos se fueron voluntarios a defender la República, y se fueron sin decir nada en casa. Según cuenta Pilar, por el pueblo pasó un camión recogiendo voluntarios y los dos se subieron a él; cuando sus padres se enteraron, ya iban camino del frente, y no pudieron hacer nada por impedirlo. Que fueron voluntarios lo ha contado siempre la familia, y ahora lo dice también un papel: esa ficha de Julián lo llama con estas palabras «voluntario en la cuarta Brigada Mixta». Pilar recuerda que volvieron con veinte años, y las cuentas salen: veinte tenían en marzo de 1939. Paco, el mayor de los varones, no fue voluntario: a él lo llamaron a filas, y estuvo en el frente obligado."
     },
     {
      "k": "pull",
@@ -5096,7 +5096,7 @@
     },
     {
      "k": "p",
-     "x": "Del mismo nombre hay además un expediente en el Archivo General Militar de Guadalajara, que está por pedir, y un soldado llamado Francisco, con el apellido mal escrito, «Azbarte», figura en los papeles de una brigada de la República que combatió en el frente de Córdoba en el último invierno de la guerra. Puede ser Paco, porque la familia recuerda que él no fue voluntario, como los mellizos, sino que lo llamaron a filas. Como llevaba el mismo nombre y los mismos apellidos que su abuelo el jornalero, cada papel que los nombra hay que leerlo con cuidado."
+     "x": "Del mismo nombre hay además un expediente en el Archivo General Militar de Guadalajara, que está por pedir, y un soldado llamado Francisco, con el apellido mal escrito, «Azbarte», figura en los papeles de una brigada de la República que combatió en el frente de Córdoba en el último invierno de la guerra. Puede ser Paco, porque la familia recuerda que él no fue voluntario, como los mellizos: lo alistaron a la fuerza y estuvo en el frente con el ejército de la República. Como llevaba el mismo nombre y los mismos apellidos que su abuelo el jornalero, cada papel que los nombra hay que leerlo con cuidado."
     },
     {
      "k": "ct",
@@ -5127,8 +5127,8 @@
      "x": "Cuando acabó la guerra, en la casa de la calle Fray Luis de León seguía el pequeño, el muchacho que a los catorce años había ido con su padre en el carro hasta el frente. En el papel se llamaba Juan de Mata; en la vida, Emiliano. Iba a ser el abuelo de quien, muchos años después, se puso a preguntar."
     }
    ],
-   "huella": "511900b5769a810dbf63c7e902be1cc003a474b0d210eeb05f7826925aabe9fc",
-   "chars": 18502
+   "huella": "c47cd7bf43e95fe67b8d692fa538600ffa417e975ac4e7cb56905ec585c9d45d",
+   "chars": 18556
   },
   {
    "clave": "lib:emiliano",
@@ -5402,7 +5402,19 @@
     },
     {
      "k": "p",
-     "x": "De aquella casa vienen también los últimos recuerdos. Los mellizos se fueron a la guerra con diecisiete años: pasó por el pueblo un camión recogiendo voluntarios, se subieron sin decir nada, y cuando sus padres se enteraron ya iban camino del frente. A Paco, el mayor de los varones, no le tocó elegir: lo llamaron a filas, y después de la guerra estuvo preso en un campo de concentración, como se recuerda en dos ramas de la familia. Los dos recuerdos casan con los papeles que se conocen, y los expedientes que esperan en los archivos dirán el resto."
+     "x": "De aquella casa vienen también los últimos recuerdos. Los mellizos se fueron a la guerra con diecisiete años: pasó por el pueblo un camión recogiendo voluntarios, se subieron sin decir nada, y cuando sus padres se enteraron ya iban camino del frente. A Paco, el mayor de los varones, no le tocó elegir: lo alistaron a la fuerza en el ejército de la República, estuvo en el frente, y después de la guerra estuvo preso en un campo de concentración, como se recuerda en dos ramas de la familia. Los dos recuerdos casan con los papeles que se conocen, y los expedientes que esperan en los archivos dirán el resto."
+    },
+    {
+     "k": "h",
+     "x": "Las caras de Paco y de Julián"
+    },
+    {
+     "k": "p",
+     "x": "De los hijos de Venus que fueron a la guerra solo se conocía una cartulina de estudio, sin nada escrito, que la familia tiene por Julián. Su sobrino Francisco Gallardo Azabarte guarda otras tres fotografías, y con ellas los dos hermanos tienen ya rostro."
+    },
+    {
+     "k": "p",
+     "x": "La de Paco es de juventud: un mozo de pelo ondulado, con dos insignias en la solapa. Las de Julián son dos. En una es todavía un muchacho, sentado en el estudio de un fotógrafo, en mangas de camisa y con una correa cruzada al pecho. En la otra es ya un hombre, de bigote fino, y al pie lleva una dedicatoria de su puño a su sobrino Paquito, que es quien la conserva. De Julián se guardan así tres."
     },
     {
      "k": "h",
@@ -5425,8 +5437,8 @@
      "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco y la de Venus con Encarnación, los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "748f5843983d271851c5834b0f0b56c172c98610e86919e7a1cef2974ca173dd",
-   "chars": 11505
+   "huella": "ee6534241b54d1315fa349ec0ef8fe63f2bdd4a2faaf4bc1af93d48d0d5571d8",
+   "chars": 12242
   },
   {
    "clave": "lib:epilogo",
@@ -6652,7 +6664,7 @@
     },
     {
      "k": "p",
-     "x": "Su sobrino Francisco Gallardo Azabarte guarda su fotografía y lo recuerda como el que estuvo en la guerra y luego preso en el campo de concentración, muy joven: lo mismo que se recordaba en casa de Emiliano y que dice la ficha del batallón. Era guapo, de pelo ondulado, y edificó su casa en la era que había comprado su padre. Perdió muy joven a una hija, Encarnita, que descansa con sus abuelos bajo la piedra de la familia, y también a un hijo jovencito."
+     "x": "Su sobrino Francisco Gallardo Azabarte guarda una fotografía suya de joven, sobre la que está dibujado el retrato de esta página, y lo recuerda como el que fue a la guerra a la fuerza y luego estuvo preso en el campo de concentración, muy joven: lo mismo que se recordaba en casa de Emiliano y que dice la ficha del batallón. Era guapo, de pelo ondulado, y edificó su casa en la era que había comprado su padre. Perdió muy joven a una hija, Encarnita, que descansa con sus abuelos bajo la piedra de la familia, y también a un hijo jovencito."
     },
     {
      "k": "p",
@@ -6660,7 +6672,7 @@
     },
     {
      "k": "p",
-     "x": "Del mismo nombre hay además un expediente en el Archivo General Militar de Guadalajara, que está por pedir, y un soldado con su nombre y el apellido mal escrito, «Azbarte», figura en los papeles de una brigada del ejército de la República que combatió en el frente de Córdoba en el último invierno de la guerra. Puede ser él, porque la familia recuerda que Paco no fue voluntario, como los mellizos, sino que lo llamaron a filas; pero de ese papel solo se ha visto el índice."
+     "x": "Del mismo nombre hay además un expediente en el Archivo General Militar de Guadalajara, que está por pedir, y un soldado con su nombre y el apellido mal escrito, «Azbarte», figura en los papeles de una brigada del ejército de la República que combatió en el frente de Córdoba en el último invierno de la guerra. Puede ser él, porque la familia recuerda que Paco no fue voluntario, como los mellizos: lo alistaron a la fuerza y estuvo en el frente con el ejército de la República. Pero de ese papel solo se ha visto el índice."
     },
     {
      "k": "p",
@@ -6671,8 +6683,8 @@
      "x": "Su nombre y sus dos apellidos son los mismos que los de su abuelo, así que cada papel que los lleva hay que leerlo con cuidado para saber de cuál de los dos habla. El de esta página es Paco, el de la boda doble, al que, según Juan Ortiz, se parece el nieto de su hermano pequeño."
     }
    ],
-   "huella": "fd35aef2311b55706d74dddbe2721b8f25a17963a702e4cd4193ebee0f13540d",
-   "chars": 4752
+   "huella": "35ff8d093619f8ec8b16a2d39071746f9f4c0a1a4fd799a7bf2254197a97c757",
+   "chars": 4887
   },
   {
    "clave": "pj:P136",
@@ -6714,7 +6726,7 @@
     },
     {
      "k": "lede",
-     "x": "Hermano de Emiliano y mellizo de Venus, nacido en noviembre de 1918. Se fue voluntario a la guerra con diecisiete años, murió joven, en 1958, y de él se guardan dos fotografías."
+     "x": "Hermano de Emiliano y mellizo de Venus, nacido en noviembre de 1918. Se fue voluntario a la guerra con diecisiete años, murió joven, en 1958, y de él se guardan tres fotografías."
     },
     {
      "k": "p",
@@ -6722,11 +6734,11 @@
     },
     {
      "k": "p",
-     "x": "De él queda una fotografía, y solo una. Es una cartulina pequeña, de estudio, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura y la chaqueta echada por encima, con una mano en el bolsillo. Mira de frente, muy serio. En aquellos años retratarse en un estudio era cosa de pocas veces en la vida, y se iba con la mejor ropa que se tenía."
+     "x": "De él se guardan tres fotografías. La primera que se conoció es una cartulina pequeña, de estudio, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura y la chaqueta echada por encima, con una mano en el bolsillo. Mira de frente, muy serio. En aquellos años retratarse en un estudio era cosa de pocas veces en la vida, y se iba con la mejor ropa que se tenía."
     },
     {
      "k": "p",
-     "x": "La cartulina no lleva nada escrito: quién es lo dice la familia, que la ha conservado. Se calcula que es de los años treinta, y encaja con lo que se recuerda de él, que no llegó a hacerse mayor. La aportó su sobrina Pilar en septiembre de 2026, y sobre ella está hecho el retrato de esta página."
+     "x": "La cartulina no lleva nada escrito: quién es lo dice la familia, que la ha conservado. Se calcula que es de los años treinta, y encaja con lo que se recuerda de él, que no llegó a hacerse mayor. La aportó su sobrina Pilar en septiembre de 2026."
     },
     {
      "k": "p",
@@ -6742,11 +6754,11 @@
     },
     {
      "k": "p",
-     "x": "Se quedó con la casa del horno que su padre había comprado a la condesa, y en ella vivió con él Venus, ya viudo, cuando Julián todavía estaba soltero; eso explica, con toda probabilidad, que su acta lo llame industrial. Su sobrino Francisco Gallardo Azabarte guarda otra fotografía suya, con una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío». Al morir, en 1958, se le enterró todavía en el cementerio viejo, en otra sepultura que la de sus abuelos."
+     "x": "Se quedó con la casa del horno que su padre había comprado a la condesa, y en ella vivió con él Venus, ya viudo, cuando Julián todavía estaba soltero; eso explica, con toda probabilidad, que su acta lo llame industrial. Su sobrino Francisco Gallardo Azabarte guarda las otras dos. En una, Julián es todavía un muchacho, sentado en el estudio de un fotógrafo, en mangas de camisa, y sobre ella está dibujado el retrato de esta página; en la otra es ya un hombre, de bigote fino, y al pie lleva una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío». Al morir, en 1958, se le enterró todavía en el cementerio viejo, en otra sepultura que la de sus abuelos."
     }
    ],
-   "huella": "d116f14aa866d647703d8303ec9bb89935a6915e695ce7d39709482d6ec2457f",
-   "chars": 3923
+   "huella": "7ec36700d8b2b497da4eb7380382983b47d9ccc5bf4f88e02e195d6c7dfaabdc",
+   "chars": 4095
   },
   {
    "clave": "pj:P098",
