@@ -1,6 +1,6 @@
 {
  "esquema": "4.6",
- "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@d8622c9f1f7066f7ab71e5b50af6d499dd1b3c36/voz/narrativa",
+ "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@92acc02204cce1452f3095e24a961b5da5d7d8d3/voz/narrativa",
  "voz": {
   "motor": "Google Gemini TTS",
   "modelo": "gemini-3.8-flash-tts",
@@ -2843,7 +2843,7 @@
   },
   "lib:hallazgos": {
    "src": "mp3/lib-hallazgos.mp3",
-   "huella": "748f5843983d271851c5834b0f0b56c172c98610e86919e7a1cef2974ca173dd",
+   "huella": "ee6534241b54d1315fa349ec0ef8fe63f2bdd4a2faaf4bc1af93d48d0d5571d8",
    "marcas": [
     0.35,
     6.09,
@@ -2876,18 +2876,21 @@
     727.69,
     759.46,
     810.95,
-    853.46,
-    855.93,
-    899.5,
-    907.34,
-    939.06
+    861.94,
+    864.59,
+    882.88,
+    915.96,
+    920.77,
+    978.23,
+    986.33,
+    1014.42
    ],
-   "dur": 983.51,
-   "bytes": 7869094,
+   "dur": 1061.43,
+   "bytes": 8492518,
    "titulo": "Capítulo abierto · Últimos hallazgos de la investigación",
    "firma": "gemini-3.8-flash-tts|Charon|b1e9d4be8c|tramos1500|es-ES|1798",
-   "generado": "2026-10-22T12:11:14Z",
-   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@3661a9970b94ed47cb9b1375939d1fe1f6b2c077/voz/narrativa"
+   "generado": "2026-10-23T00:41:41Z",
+   "base": "https://cdn.jsdelivr.net/gh/azabartefj5-cell/azabarte-laminas@92acc02204cce1452f3095e24a961b5da5d7d8d3/voz/narrativa"
   }
  }
 }
