@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 556792,
+ "total_caracteres": 556451,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -4815,15 +4815,15 @@
     },
     {
      "k": "p",
-     "x": "El mayor de los varones, según su sobrino Ubaldo, fue Francisco, al que todos llamaban Paco. Por la costumbre, tan extendida, de poner a un nieto el nombre del abuelo, llevaba el nombre y los dos apellidos del jornalero Francisco Azabarte Galindo, aunque su Galindo le venía de otra casa. Antes que él hubo, con toda probabilidad, otro Francisco, el niño que se les murió en 1903, y era costumbre dar a un hijo el nombre de un hermano muerto. En la familia se recuerda a aquel primer Francisco de otra manera, ya mocito, de quince años o más, y se cuenta que a la niña que vino después la llamaron Francisca por él. Las fechas de los papeles no dejan sitio a un mozo así, y se guardan las dos versiones. Se casó con una mujer de San Clemente el mismo día que su primo hermano Juan Vicente, el hijo de la Boni. Según el índice de defunciones del juzgado, murió con toda probabilidad el 7 de mayo de 1986."
+     "x": "El mayor de los varones, según su sobrino Ubaldo, fue Francisco, al que todos llamaban Paco. Por la costumbre, tan extendida, de poner a un nieto el nombre del abuelo, llevaba el nombre y los dos apellidos del jornalero Francisco Azabarte Galindo, aunque su Galindo le venía de otra casa. Antes que él hubo, con toda probabilidad, otro Francisco, el niño que se les murió en 1903, y era costumbre dar a un hijo el nombre de un hermano muerto. En la familia se recuerda a aquel primer Francisco de otra manera, ya mocito, de quince años o más, y se cuenta que a la niña que vino después la llamaron Francisca por él. Las fechas de los papeles no dejan sitio a un mozo así, y se guardan las dos versiones. Según el índice de defunciones del juzgado, murió con toda probabilidad el 7 de mayo de 1986."
     },
     {
      "k": "pull",
-     "x": "Dos bodas de primos en una misma jornada."
+     "x": "El nombre del abuelo volvió a la casa dos veces: en un nieto y en una nieta."
     },
     {
      "k": "p",
-     "x": "Lo cuenta el hijo de aquel otro matrimonio, Juan Ortiz Pacheco. Cuando Juan conoció al investigador, nieto de Emiliano, en septiembre de 2026, le encontró nada más verlo el parecido con el tío Paco. Su sobrino Francisco Gallardo Azabarte guarda su fotografía: un hombre guapo, de pelo ondulado. Paco perdió muy joven a una hija, Encarnita, y también a un hijo jovencito."
+     "x": "Era mayor que su hermano Julián, y cuando este se casó, Paco tenía ya hijos. Juan Ortiz Pacheco, el nieto de la Boni, conoció al investigador, nieto de Emiliano, en septiembre de 2026, y nada más verlo le encontró el parecido con el tío Paco. Su sobrino Francisco Gallardo Azabarte guarda su fotografía: un hombre guapo, de pelo ondulado. Paco perdió muy joven a una hija, Encarnita, y también a un hijo jovencito."
     },
     {
      "k": "p",
@@ -4839,15 +4839,15 @@
     },
     {
      "k": "p",
-     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe, aunque el acta de defunción de Julián dice el 3, y solo la inscripción de su nacimiento lo resolverá. Juan Ortiz Pacheco añadió que Julián murió muy joven, y acertó: murió el 2 de junio de 1958, con treinta y nueve años, de un colapso del corazón, según su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026. De él se conservan por lo menos tres fotografías. Una es una cartulina pequeña de estudio, sin nada escrito, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura, la chaqueta echada por encima y una mano en el bolsillo."
+     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe, aunque el acta de defunción de Julián dice el 3, y solo la inscripción de su nacimiento lo resolverá. Juan Ortiz Pacheco añadió que Julián murió muy joven, y acertó: murió el 2 de junio de 1958, con treinta y nueve años, de un colapso del corazón, según su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026. Para entonces estaba casado con una mujer de San Clemente, y la boda había sido el mismo día que la de su primo hermano Juan Vicente, el hijo de la Boni, con Teresa Pacheco Calvo, los padres de Juan Ortiz: dos bodas de primos en una misma jornada. Juan fue a la escuela con Andrés, el hijo de Julián, un año mayor que él."
+    },
+    {
+     "k": "p",
+     "x": "De él se conservan por lo menos tres fotografías. Una es una cartulina pequeña de estudio, sin nada escrito, con un muchacho de unos veinte años de pie, la cara larga y enjuta, el pelo oscuro peinado hacia atrás, un pañuelo claro anudado al cuello sobre la camisa oscura, la chaqueta echada por encima y una mano en el bolsillo. Quién es lo dice la familia, que la ha guardado, y se calcula que es de los años treinta. La aportó a esta investigación su sobrina Pilar, en septiembre de 2026. Las otras dos las guarda su sobrino Francisco Gallardo Azabarte. En una es todavía un muchacho, sentado en el estudio de un fotógrafo, en mangas de camisa; en la otra, ya un hombre de bigote fino, y al pie lleva una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío»."
     },
     {
      "k": "pull",
      "x": "Mira de frente, muy serio."
-    },
-    {
-     "k": "p",
-     "x": "Quién es lo dice la familia, que la ha guardado, y se calcula que es de los años treinta. La aportó a esta investigación su sobrina Pilar, en septiembre de 2026. Las otras dos las guarda su sobrino Francisco Gallardo Azabarte. En una es todavía un muchacho, sentado en el estudio de un fotógrafo, en mangas de camisa; en la otra, ya un hombre de bigote fino, y al pie lleva una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío»."
     },
     {
      "k": "p",
@@ -4922,8 +4922,8 @@
      "x": "Encarnación murió en 1943, con algo más de sesenta años, y Venus tres años después, el 25 de mayo de 1946, en su casa de la calle Fray Luis de León, de una obstrucción intestinal. Fue a declararlo su yerno Rafael Picazo Díaz, y el acta nombra a los siete hijos que le vivían. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "12836d4ff61659590686a98412b953e892db8e5b51507c9aaa0803c1949cfcf4",
-   "chars": 19824
+   "huella": "c84e0df25a57746a566ed344f373657e8cc17329ab529a34b1136e0eaa434fe6",
+   "chars": 20119
   },
   {
    "clave": "lib:guerra",
@@ -5330,26 +5330,6 @@
     },
     {
      "k": "h",
-     "x": "La calle que cambió de nombre"
-    },
-    {
-     "k": "p",
-     "x": "Las actas escriben calle de Belmonte hasta abril de 1900, y calle de Fray Luis de León desde marzo de 1902. No fue una mudanza: son la misma calle, la que arranca de la plaza de la iglesia, y lo que cambió fue el nombre. El 27 de mayo de 1900, el Ayuntamiento acordó que la antigua calle de Belmonte se llamara en adelante de Fray Luis de León."
-    },
-    {
-     "k": "pull",
-     "x": "La familia no se movió de su calle. Fue la calle la que cambió de nombre."
-    },
-    {
-     "k": "p",
-     "x": "Con eso, las fechas se ordenan solas. En aquella calle vivían Francisco y Vicenta en 1880, cuando se les murió Ángel Mercedes, y Felipe, el hermano de Francisco, en 1883. En ella se le murió a Venus su hijo Alejandro, en abril de 1900, siete semanas antes del acuerdo, y la primera Eugenia en 1902, con la calle ya rebautizada. En ella murieron Vicenta, la hija mayor, en 1911, y su madre en 1914, y en ella siguió la casa de Venus hasta 1946. Son más de sesenta años de la familia en la misma calle, con dos nombres."
-    },
-    {
-     "k": "p",
-     "x": "El nombre nuevo tenía su razón. El acuerdo de 1900 daba al poeta por nacido «en este término municipal», en el paraje de San Blas. Las biografías lo hacen nacer en Belmonte, en 1527 o en 1528, y él mismo se declaró ante la Inquisición «natural de Belmonte»; no se conoce su partida de bautismo, y los libros de la parroquia de Belmonte empiezan en 1547. En Las Pedroñeras se sostiene desde hace más de un siglo que era del pueblo, y la cuestión sigue abierta. No toca a la familia, pero la calle de los Azabarte, que se llamó de Belmonte y se llama de Fray Luis, ata sin querer los dos pueblos que se disputan al poeta."
-    },
-    {
-     "k": "h",
      "x": "Las cuatro hijas"
     },
     {
@@ -5418,6 +5398,18 @@
     },
     {
      "k": "h",
+     "x": "La boda de Julián"
+    },
+    {
+     "k": "p",
+     "x": "La boda que se celebró el mismo día que la de Juan Vicente Ortiz Azabarte, el hijo de la Boni, con Teresa Pacheco Calvo fue la de Julián, el mellizo, y no la de su hermano Paco, que era mayor y por entonces ya tenía hijos. La novia de Julián era de San Clemente. Fueron dos bodas de primos hermanos en una misma jornada, y de ellas nacieron dos chicos casi de la misma edad: Andrés, el hijo de Julián, y Juan Ortiz Pacheco, que fue con él a la escuela."
+    },
+    {
+     "k": "p",
+     "x": "Julián se casó después de los años en que vivió soltero con su padre en la casa del horno. La fecha la dará la inscripción de su boda en el Registro Civil del pueblo, que servirá a la vez para las dos."
+    },
+    {
+     "k": "h",
      "x": "Los que descansan bajo la piedra"
     },
     {
@@ -5434,11 +5426,11 @@
     },
     {
      "k": "p",
-     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco y la de Venus con Encarnación, los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
+     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco, la de Venus con Encarnación y la de Julián, que pondrá fecha a las dos bodas de primos; los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "ee6534241b54d1315fa349ec0ef8fe63f2bdd4a2faaf4bc1af93d48d0d5571d8",
-   "chars": 12242
+   "huella": "eb1ba712829eed47e1a28b4f41ec0d7519c0db89f4eadaa27042666897bc7e63",
+   "chars": 11388
   },
   {
    "clave": "lib:epilogo",
@@ -6648,11 +6640,11 @@
     },
     {
      "k": "p",
-     "x": "Se casó con una mujer de San Clemente, y lo hizo el mismo día que su primo hermano Juan Vicente Ortiz Azabarte, el hijo de la Boni, se casaba con Teresa Pacheco Calvo: dos bodas de primos en una misma jornada. Lo cuenta el hijo de aquel otro matrimonio, Juan Ortiz Pacheco, que fue a la escuela con Andrés, el hijo de Paco, un año mayor que él."
+     "x": "Era mayor que su hermano Julián, y cuando Julián se casó, el mismo día que su primo hermano Juan Vicente Ortiz Azabarte, el hijo de la Boni, Paco tenía ya hijos."
     },
     {
      "k": "p",
-     "x": "Juan lo recuerda también en la matanza del cerdo en casa de Juan Vicente, adonde venía con sus hermanos Emiliano y Venus y con el primo Aurelio. Y cuando conoció al investigador, en septiembre de 2026, le encontró, nada más verlo, el parecido con el tío Paco."
+     "x": "Juan Ortiz Pacheco, el hijo de Juan Vicente, lo recuerda en la matanza del cerdo en casa de sus padres, adonde venía con sus hermanos Emiliano y Venus y con el primo Aurelio. Y cuando conoció al investigador, en septiembre de 2026, le encontró, nada más verlo, el parecido con el tío Paco."
     },
     {
      "k": "p",
@@ -6680,11 +6672,11 @@
     },
     {
      "k": "p",
-     "x": "Su nombre y sus dos apellidos son los mismos que los de su abuelo, así que cada papel que los lleva hay que leerlo con cuidado para saber de cuál de los dos habla. El de esta página es Paco, el de la boda doble, al que, según Juan Ortiz, se parece el nieto de su hermano pequeño."
+     "x": "Su nombre y sus dos apellidos son los mismos que los de su abuelo, así que cada papel que los lleva hay que leerlo con cuidado para saber de cuál de los dos habla. El de esta página es Paco, el mayor de los varones de Venus, al que, según Juan Ortiz, se parece el nieto de su hermano pequeño."
     }
    ],
-   "huella": "35ff8d093619f8ec8b16a2d39071746f9f4c0a1a4fd799a7bf2254197a97c757",
-   "chars": 4887
+   "huella": "d827a393b8cb5c57361c214fcf9565ef481a93cee95602a49582a154193a3264",
+   "chars": 4747
   },
   {
    "clave": "pj:P136",
@@ -6754,11 +6746,15 @@
     },
     {
      "k": "p",
-     "x": "Se quedó con la casa del horno que su padre había comprado a la condesa, y en ella vivió con él Venus, ya viudo, cuando Julián todavía estaba soltero; eso explica, con toda probabilidad, que su acta lo llame industrial. Su sobrino Francisco Gallardo Azabarte guarda las otras dos. En una, Julián es todavía un muchacho, sentado en el estudio de un fotógrafo, en mangas de camisa, y sobre ella está dibujado el retrato de esta página; en la otra es ya un hombre, de bigote fino, y al pie lleva una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío». Al morir, en 1958, se le enterró todavía en el cementerio viejo, en otra sepultura que la de sus abuelos."
+     "x": "Se quedó con la casa del horno que su padre había comprado a la condesa, y en ella vivió con él Venus, ya viudo, cuando Julián todavía estaba soltero; eso explica, con toda probabilidad, que su acta lo llame industrial. Se casó con una mujer de San Clemente, y lo hizo el mismo día que su primo hermano Juan Vicente Ortiz Azabarte, el hijo de la Boni, se casaba con Teresa Pacheco Calvo: dos bodas de primos en una misma jornada. Lo cuenta el hijo de aquel otro matrimonio, Juan Ortiz Pacheco, que fue a la escuela con Andrés, el hijo de Julián, un año mayor que él."
+    },
+    {
+     "k": "p",
+     "x": "Su sobrino Francisco Gallardo Azabarte guarda las otras dos fotografías. En una, Julián es todavía un muchacho, sentado en el estudio de un fotógrafo, en mangas de camisa, y sobre ella está dibujado el retrato de esta página; en la otra es ya un hombre, de bigote fino, y al pie lleva una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío». Al morir, en 1958, se le enterró todavía en el cementerio viejo, en otra sepultura que la de sus abuelos."
     }
    ],
-   "huella": "7ec36700d8b2b497da4eb7380382983b47d9ccc5bf4f88e02e195d6c7dfaabdc",
-   "chars": 4095
+   "huella": "c04f5c1124528c8daaca895176158f48395edb31ac110a4ce9b6c8093543c92a",
+   "chars": 4453
   },
   {
    "clave": "pj:P098",
