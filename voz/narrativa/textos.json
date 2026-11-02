@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 556451,
+ "total_caracteres": 562013,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -248,6 +248,18 @@
     },
     {
      "k": "h",
+     "x": "Reunidos junto a la piedra"
+    },
+    {
+     "k": "p",
+     "x": "El día de Todos los Santos de 2026 se juntaron ante la piedra blanca descendientes de Francisco y Vicenta de tres ramas de la casa de Venus. De la de Francisca vino su hija Eugenia Cano Azabarte, nieta de Venus y la mayor de todos, con su hijo, Paco Escudero Cano, y el hijo de este. De la de Venus, el mellizo, vinieron dos de sus nietos, Ricardo Angulo Azabarte y su primo Luis Miguel Calvo Azabarte, hijo de Luisa, una de las hijas de Venus. Y de la de Emiliano, su hija Pilar Azabarte Arellano con dos de sus hijos, José Luis y Francisco Javier García Azabarte, el que reúne esta historia."
+    },
+    {
+     "k": "p",
+     "x": "En las fotografías de aquellos días están tres generaciones de descendientes de los dos que la piedra recuerda: bisnietos, como Eugenia y Pilar; tataranietos, como Paco, Ricardo, Luis Miguel, José Luis y Francisco Javier; y, con el hijo de Paco, la generación siguiente. Más de un siglo después de que murieran Francisco y Vicenta, la piedra que les labró su hijo sigue reuniendo a los suyos."
+    },
+    {
+     "k": "h",
      "x": "Los curas que se olvidaban de escribir"
     },
     {
@@ -311,8 +323,8 @@
      "x": "La otra mitad de la historia transcurre en Álava y Gipuzkoa: la aldea de Ondategi con su iglesia de San Lorenzo y su lavadero, una casa-torre del tipo que poblaba los valles alaveses, y Vitoria, la ciudad del archivo donde se guardan los libros. Están dibujados con el mismo estilo, para que las dos orillas de la historia se parezcan, y se cuentan despacio en los dos capítulos dedicados a Álava."
     }
    ],
-   "huella": "86239c3ca0cfe27a777b22894d7142bcb742fb4f48f126b3db4ac3f15724f12b",
-   "chars": 10615
+   "huella": "e3f9f3c4e35ff63b0d8a7416c4cb7a8a5004b95da9e0ba8a0bdd2c47a8b2c0e1",
+   "chars": 11626
   },
   {
    "clave": "cap:hipotesis",
@@ -2672,7 +2684,7 @@
     },
     {
      "k": "p",
-     "x": "Lo que más cerraría ahora son los papeles que faltan de esa generación: el nacimiento de Camila, hacia 1891, con el nombre de su padre; el de Produana, hacia 1885, que dirá cómo se escribió su nombre; el de Bonifacia, hacia 1888; las dos bodas de Vicenta, con Domingo Lorente y con Juan López, y el acta de defunción de Isidora, de 1907, que daría su edad y su marido. Después vendrían los nacimientos de los hijos de Venus y su boda con Encarnación, hacia 1899. Y los dos testamentos de los abuelos, ante los notarios Zapata y Enrique Serrano Martí, que dirían qué quedaba de la casa y a quién fue."
+     "x": "Lo que más cerraría ahora son los papeles que faltan de esa generación: el nacimiento de Camila, entre 1892 y 1893, con el nombre de su padre; el de Produana, hacia 1885, que dirá cómo se escribió su nombre; el de Bonifacia, hacia 1888; las dos bodas de Vicenta, con Domingo Lorente y con Juan López, y el acta de defunción de Isidora, de 1907, que daría su edad y su marido. Después vendrían los nacimientos de los hijos de Venus y su boda con Encarnación, hacia 1899. Y los dos testamentos de los abuelos, ante los notarios Zapata y Enrique Serrano Martí, que dirían qué quedaba de la casa y a quién fue."
     },
     {
      "k": "h",
@@ -2747,8 +2759,8 @@
      "x": "A los más pequeños de la casa se les puede proponer un juego: preguntar a sus abuelos cómo se llamaban los abuelos de ellos, y apuntarlo en un papel con la fecha. Preguntas como esa, hechas a tiempo, son las que pusieron en marcha esta historia."
     }
    ],
-   "huella": "90508be8ee9cd2476528eb3b377269ae1d1fdd75b5881bf6b1ee7d9182a78810",
-   "chars": 10982
+   "huella": "497f2e0a715db26a7d93f7bf9830e1b9b9cb543646f40609edb1a23ce326a75b",
+   "chars": 10989
   },
   {
    "clave": "cap:glosario",
@@ -4425,11 +4437,11 @@
     },
     {
      "k": "p",
-     "x": "Camila se quedó sin padre ni madre. La recogieron sus abuelos, Francisco y Vicenta, y cuando murieron ellos, en 1912 y 1914, pasó a vivir a la casa de su tío Venus, con sus primos. Allí estuvo hasta casarse con Juan Haro, según se recuerda; tuvo cinco hijos y vivió en un callejón de la misma calle Fray Luis de León. De ella vienen «los Habichuelos», que llevan todavía el mote de su abuela, «la Habichuela». En el pueblo la llamaban «la hermana Camila», que no era un parentesco sino un tratamiento corriente entonces, como «la hermana Boli» o «la hermana Podruana»."
+     "x": "Camila se quedó sin padre ni madre. La recogieron sus abuelos, Francisco y Vicenta, y cuando murieron ellos, en 1912 y 1914, pasó a vivir a la casa de su tío Venus, con sus primos. Allí estuvo hasta casarse con Juan Haro, según se recuerda; tuvo cinco hijos y vivió en un callejón de la misma calle Fray Luis de León. De ella vienen «los Habichuelos», que llevan todavía el mote de su abuela, «la Habichuela». En el pueblo la llamaban «la hermana Camila», que no era un parentesco sino un tratamiento corriente entonces, como «la hermana Boli» o «la hermana Podruana». Murió el 30 de junio de 1972, con setenta y nueve años, y en su lápida del cementerio del pueblo, la que le pusieron sus hijos, se conserva una fotografía suya, ya mayor: sobre ella está hecho su retrato."
     },
     {
      "k": "p",
-     "x": "Las fechas, que antes no casaban, casan ahora. Mientras se la tuvo por nacida hacia 1860 no se entendía que diera a luz en 1908 y muriera pocos años después. El acta le da treinta y ocho años en 1911, así que nació hacia 1873, tres años antes que Venus. Tenía unos dieciocho años cuando nació Camila, hacia 1891, y unos treinta y cuatro cuando nació Isidora, que es con toda probabilidad la Isidora López Azabarte enterrada en el cementerio del pueblo, muerta en 1986 con setenta y ocho años."
+     "x": "Las fechas, que antes no casaban, casan ahora. Mientras se la tuvo por nacida hacia 1860 no se entendía que diera a luz en 1908 y muriera pocos años después. El acta le da treinta y ocho años en 1911, así que nació hacia 1873, tres años antes que Venus. Tenía unos diecinueve años cuando nació Camila, entre 1892 y 1893, como dice su lápida, y unos treinta y cuatro cuando nació Isidora, que es con toda probabilidad la Isidora López Azabarte enterrada en el cementerio del pueblo, muerta en 1986 con setenta y ocho años."
     },
     {
      "k": "ct",
@@ -4520,8 +4532,8 @@
      "x": "En agosto de 1912, un secretario del juzgado iba a escribir en una hoja impresa los nombres de los hijos que le quedaban a Francisco, y año y medio después, en otra, los que le quedaban a Vicenta. Las dos mayores no estarían en ninguna, y la del medio saldría cada vez con un nombre distinto."
     }
    ],
-   "huella": "c10b903111f07e06ac8c358bcb17f518daad33bb99d7e49eb0904cb128634717",
-   "chars": 11026
+   "huella": "9511d96a09399a7b40c55769befcb4cde03b931afff042640d18e6c007dfea6f",
+   "chars": 11260
   },
   {
    "clave": "lib:actas",
@@ -4827,7 +4839,7 @@
     },
     {
      "k": "p",
-     "x": "Detrás vino Francisca, que según las fechas que guarda la familia nació en 1916 y llevó en femenino el nombre del mismo abuelo. Es la que menos rastro ha dejado de los ocho. Su sobrino Ubaldo la nombró, como se hacía en el pueblo con las casadas, por la casa de su marido, pero aquel nombre no llegó a quedar claro. Dos árboles de la familia hechos por otras ramas, en MyHeritage, dicen quién era: Juan Cano Olmo. Según ellos, Francisca murió en 1992 y dejó descendencia. El índice de defunciones del juzgado trae a una Francisca María Azabarte Galindo muerta el 15 de octubre de 1990, que con toda probabilidad es ella, dos años antes de lo que dan los árboles; falta el acta, que nombrará también al marido. En esta familia, como observa Juan Ortiz Pacheco, los Franciscos y las Vicentas se repiten en cada generación."
+     "x": "Detrás vino Francisca, que según las fechas que guarda la familia nació en 1916 y llevó en femenino el nombre del mismo abuelo. Es la que menos rastro ha dejado de los ocho. Su sobrino Ubaldo la nombró, como se hacía en el pueblo con las casadas, por la casa de su marido, pero aquel nombre no llegó a quedar claro. Dos árboles de la familia hechos por otras ramas, en MyHeritage, dicen quién era: Juan Cano Olmo. Según ellos, Francisca murió en 1992 y dejó descendencia. El índice de defunciones del juzgado trae a una Francisca María Azabarte Galindo muerta el 15 de octubre de 1990, que con toda probabilidad es ella, dos años antes de lo que dan los árboles; falta el acta, que nombrará también al marido. En esta familia, como observa Juan Ortiz Pacheco, los Franciscos y las Vicentas se repiten en cada generación. Y su descendencia está a la vista: su hija Eugenia Cano Azabarte, que lleva de primer apellido el de su padre, estuvo el día de Todos los Santos de 2026 junto a la piedra de sus bisabuelos, con su hijo y su nieto. Ese apellido confirma lo que decían los árboles: Francisca se casó con un Cano."
     },
     {
      "k": "h",
@@ -4839,7 +4851,7 @@
     },
     {
      "k": "p",
-     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe, aunque el acta de defunción de Julián dice el 3, y solo la inscripción de su nacimiento lo resolverá. Juan Ortiz Pacheco añadió que Julián murió muy joven, y acertó: murió el 2 de junio de 1958, con treinta y nueve años, de un colapso del corazón, según su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026. Para entonces estaba casado con una mujer de San Clemente, y la boda había sido el mismo día que la de su primo hermano Juan Vicente, el hijo de la Boni, con Teresa Pacheco Calvo, los padres de Juan Ortiz: dos bodas de primos en una misma jornada. Juan fue a la escuela con Andrés, el hijo de Julián, un año mayor que él."
+     "x": "Entre ellos hubo dos del mismo parto. Ubaldo contó en septiembre de 2026 que Julián y Venus eran mellizos, y una ficha de los años de la guerra ha dado después el día: nacieron el 30 de noviembre de 1918, el otoño de aquella gripe, aunque el acta de defunción de Julián dice el 3, y solo la inscripción de su nacimiento lo resolverá. Juan Ortiz Pacheco añadió que Julián murió muy joven, y acertó: murió el 2 de junio de 1958, con treinta y nueve años, de un colapso del corazón, según su acta de defunción, vista en el Registro Civil del pueblo en octubre de 2026. Para entonces estaba casado con una mujer de San Clemente, y la boda había sido el mismo día que la de su primo hermano Juan Vicente, el hijo de la Boni, con Teresa Pacheco Calvo, los padres de Juan Ortiz: dos bodas de primos en una misma jornada. Juan fue a la escuela con Andrés, el hijo de Julián, un año mayor que él. Su losa sigue en el cementerio del pueblo, con la fecha y la edad del acta y la despedida de su mujer y sus hijos. En el mismo cementerio, una placa de bronce en una cruz de granito recuerda a otro Julián Azabarte Galindo, muerto el 28 de enero de 1974 con veinticuatro años, al que despiden «tu madre y hermanos». Nació hacia 1949, cuando Julián ya estaba casado, y lleva su nombre y sus dos apellidos: con toda probabilidad era su hijo, y murió todavía más joven que su padre."
     },
     {
      "k": "p",
@@ -4922,8 +4934,8 @@
      "x": "Encarnación murió en 1943, con algo más de sesenta años, y Venus tres años después, el 25 de mayo de 1946, en su casa de la calle Fray Luis de León, de una obstrucción intestinal. Fue a declararlo su yerno Rafael Picazo Díaz, y el acta nombra a los siete hijos que le vivían. La memoria de la casa lo tiene por un hombre trabajador, bueno y respetado en todo el pueblo, el primer Venus de la familia y el patriarca de la rama de hoy. Pero antes de aquellos dos entierros llegó la guerra, y a la casa de la calle Fray Luis de León le tocó de lleno."
     }
    ],
-   "huella": "c84e0df25a57746a566ed344f373657e8cc17329ab529a34b1136e0eaa434fe6",
-   "chars": 20119
+   "huella": "1ebf788039dea163b7db86d6e081e8ff043980fff173bbe773d2ac47d8290c2e",
+   "chars": 20892
   },
   {
    "clave": "lib:guerra",
@@ -5253,7 +5265,7 @@
     },
     {
      "k": "p",
-     "x": "Emiliano murió en febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Su retrato está dibujado sobre una fotografía que guarda la familia. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de este libro: cuando se dibujó a Pedro, a Francisco o a Venus, se dibujó, en el fondo, el recuerdo de Emiliano y de los suyos."
+     "x": "Emiliano murió el 26 de febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Su retrato está dibujado sobre una fotografía que guarda la familia. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de este libro: cuando se dibujó a Pedro, a Francisco o a Venus, se dibujó, en el fondo, el recuerdo de Emiliano y de los suyos."
     },
     {
      "k": "p",
@@ -5272,8 +5284,8 @@
      "x": "De la casa de Emiliano y Adela salieron los recuerdos del abuelo Venus y de aquella calle de parientes que dieron pie a todo, y de ella salió también una pregunta. Su nieto Francisco Javier, que había crecido oyendo a su madre, Pilar, hablar de aquella calle, quiso saber de dónde venía un apellido que casi nadie lleva. Lo que queda de este libro no es ya la vida de los antepasados, sino la historia de cómo se supo, quién la contó y qué falta todavía por saber."
     }
    ],
-   "huella": "7af3ab6fb1354f5762e282e46de57e22cf57e1edea033024bb0ca53c8d2e8eea",
-   "chars": 9773
+   "huella": "0ba21a9c374cad063f920e8c0b0988f2824e5614e4e6ae7043e949f3e1acd1fa",
+   "chars": 9779
   },
   {
    "clave": "lib:hallazgos",
@@ -5425,12 +5437,56 @@
      "x": "Lo que se contaba del padre de Adela se ha precisado. Eladio no se quedó bajo el parque por falta de dinero: cuando los Delgado fueron a sacar a los suyos, a él no pudieron llevárselo, porque encima habían enterrado a otro hombre y estaba ya muy hondo. Una piedra como la de Venus es casi un caso único en el cementerio del pueblo, y la siguen cuidando sus nietas."
     },
     {
+     "k": "h",
+     "x": "La cara de Camila"
+    },
+    {
      "k": "p",
-     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco, la de Venus con Encarnación y la de Julián, que pondrá fecha a las dos bodas de primos; los nacimientos de las hijas y el de Encarnación, la muerte de María Galindo Fides, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
+     "x": "Camila tiene ya fechas y cara. Su lápida, en el cementerio del pueblo, la llama con sus dos apellidos, Camila Lorente Azabarte, y dice que murió el 30 de junio de 1972 con setenta y nueve años. Nació, por tanto, entre el verano de 1892 y el de 1893: unos quince años antes que su media hermana Isidora, como se recordaba, y no hacia 1883, ni de la edad de sus primos."
+    },
+    {
+     "k": "p",
+     "x": "La lápida, que cierran sus hijos con «tus hijos no te olvidan», lleva además una fotografía ovalada de Camila ya mayor: una mujer recia, de cara redonda y pelo oscuro recogido. Es la única cara suya que se conoce, y sobre ella se ha vuelto a hacer su retrato, que hasta ahora era imaginado."
+    },
+    {
+     "k": "h",
+     "x": "Los dos Julián"
+    },
+    {
+     "k": "p",
+     "x": "La losa de Julián, el mellizo, sigue en el cementerio del pueblo, con la fecha de 1958, los treinta y nueve años del acta y la despedida de «tu esposa e hijos». En el mismo cementerio, una placa de bronce recuerda a otro Julián Azabarte Galindo, muerto el 28 de enero de 1974 con veinticuatro años, al que despiden «tu madre y hermanos»."
+    },
+    {
+     "k": "p",
+     "x": "Nació hacia 1949, cuando Julián ya estaba casado; lleva su nombre y sus dos apellidos, y en 1974 ya no tenía padre. Con toda probabilidad era su hijo, y entonces la mujer de San Clemente con la que se casó Julián se apellidaba también Galindo. Su acta de defunción lo dirá."
+    },
+    {
+     "k": "h",
+     "x": "El día en que murió Emiliano"
+    },
+    {
+     "k": "p",
+     "x": "La sepultura de Emiliano y Adela da el día que faltaba: Emiliano murió el 26 de febrero de 2009, a los ochenta y siete años. Al lado, la placa de Adela repite la fecha que se conocía, el 12 de octubre de 2013, a los noventa. Las dos llevan su fotografía."
+    },
+    {
+     "k": "h",
+     "x": "Reunidos junto a la piedra"
+    },
+    {
+     "k": "p",
+     "x": "El día de Todos los Santos de 2026 se reunieron ante la piedra de Francisco y Vicenta descendientes de tres ramas de la casa de Venus: Eugenia Cano Azabarte, hija de Francisca, con su hijo y su nieto; Ricardo Angulo Azabarte y Luis Miguel Calvo Azabarte, nietos de Venus el mellizo; y Pilar Azabarte Arellano, la hija de Emiliano, con sus hijos."
+    },
+    {
+     "k": "p",
+     "x": "El apellido de Eugenia confirma lo que hasta ahora solo decían dos árboles de otras ramas: Francisca se casó con un Cano. Y Luis Miguel es hijo de Luisa, una hija de Venus el mellizo y de Luisa Araque, que pone nombre a la mujer de Venus."
+    },
+    {
+     "k": "p",
+     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco, la de Venus con Encarnación y la de Julián, que pondrá fecha a las dos bodas de primos y dirá cómo se apellidaba su mujer; los nacimientos de las hijas, el de Camila, entre 1892 y 1893, y el de Encarnación; la muerte de María Galindo Fides, la del Julián de 1974, que nombrará a sus padres, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "eb1ba712829eed47e1a28b4f41ec0d7519c0db89f4eadaa27042666897bc7e63",
-   "chars": 11388
+   "huella": "8cda34a05614bdd1926a8ba0a03d1164e30f5d6e1db87b0870ff16775c05c2d1",
+   "chars": 13696
   },
   {
    "clave": "lib:epilogo",
@@ -5527,7 +5583,7 @@
     },
     {
      "k": "p",
-     "x": "No se conoce ninguna fotografía de ninguna persona de esta historia anterior al siglo veinte, y del siglo veinte solo unas pocas. Son grabados hechos a propósito para estas páginas e iluminados a mano, con un pueblo al fondo que sí es el suyo, y los rasgos de los Azabarte siguen, como se ha dicho, lo que la familia recuerda de Emiliano y de sus hermanos: un recuerdo de casa, no un dato de acta. Cuando un retrato parte de una fotografía real, como el de Julián, se dice al pie."
+     "x": "No se conoce ninguna fotografía de ninguna persona de esta historia anterior al siglo veinte, y del siglo veinte solo unas pocas. Son grabados hechos a propósito para estas páginas e iluminados a mano, con un pueblo al fondo que sí es el suyo, y los rasgos de los Azabarte siguen, como se ha dicho, lo que la familia recuerda de Emiliano y de sus hermanos: un recuerdo de casa, no un dato de acta. Cuando un retrato parte de una fotografía real, como los de Julián o de Camila, se dice al pie."
     },
     {
      "k": "h",
@@ -5582,12 +5638,24 @@
      "x": "Un recuerdo vale más con tres datos: quién lo cuenta, a quién se lo oyó y cuándo. «Me lo contaba mi abuela, que lo había vivido» no es lo mismo que «lo leí en internet», aunque las dos cosas puedan ser verdad. Apuntarlo así, con los nombres, es lo que permite a esta historia guardar cada recuerdo sin confundirlo con un documento, y es lo que ha permitido, en estas páginas, contar dos versiones de una misma historia sin borrar ninguna."
     },
     {
+     "k": "h",
+     "x": "Junto a la piedra"
+    },
+    {
      "k": "p",
-     "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en octubre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
+     "x": "El día de Todos los Santos de 2026 se juntaron ante la piedra de Francisco y Vicenta descendientes suyos de tres ramas de la casa de Venus. Eugenia Cano Azabarte, la nieta de Venus por su hija Francisca, vino con su hijo, Paco Escudero Cano, y con el hijo de este. Ricardo Angulo Azabarte y Luis Miguel Calvo Azabarte son nietos de Venus el mellizo. Pilar Azabarte Arellano, la hija de Emiliano, estuvo con sus hijos José Luis y Francisco Javier."
+    },
+    {
+     "k": "p",
+     "x": "Tres generaciones de descendientes delante de la piedra que Venus labró para sus padres, más de un siglo después de que murieran. Las fotografías de aquel día son también documentos de esta historia, y los más recientes."
+    },
+    {
+     "k": "p",
+     "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en noviembre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
     }
    ],
-   "huella": "ccedbf8806c4557cb32ed20b7ddfa37af750b8c20509944ed2c12422660cff4e",
-   "chars": 13130
+   "huella": "6dab54bfedd17517d70ca4f0cb17d7d46c15071b833a8a801b18f762b725404f",
+   "chars": 13828
   },
   {
    "clave": "pj:P001",
@@ -5951,7 +6019,7 @@
     },
     {
      "k": "p",
-     "x": "Camila era hija de Vicenta, la mayor de las hijas de la casa, y de Domingo Lorente, al que mataron por cuestiones de política cuando ella era muy pequeña; aquel día, según recuerda la familia, él iba con su cuñado Venus, y el pueblo andaba partido en dos bandos. El acta de defunción de su madre, de diciembre de 1911, vista en el Registro Civil del pueblo en octubre de 2026, lo confirma: la nombra a ella, Camila, como hija del primer matrimonio, con Domingo Lorente, así que su nombre completo era Camila Lorente Azabarte. Su madre volvió a casarse con Juan López, de «los Higuerillas», tuvo con él a Isidora y a Francisco, y murió el 10 de diciembre de 1911, con treinta y ocho años, de una enfermedad del corazón, cuando Isidora tenía cuatro. Camila se quedó sin padre y sin madre, con dos medio hermanos pequeños; a Isidora le llevaba dieciséis años, así que había nacido hacia 1891 o 1892."
+     "x": "Camila era hija de Vicenta, la mayor de las hijas de la casa, y de Domingo Lorente, al que mataron por cuestiones de política cuando ella era muy pequeña; aquel día, según recuerda la familia, él iba con su cuñado Venus, y el pueblo andaba partido en dos bandos. El acta de defunción de su madre, de diciembre de 1911, vista en el Registro Civil del pueblo en octubre de 2026, lo confirma: la nombra a ella, Camila, como hija del primer matrimonio, con Domingo Lorente, así que su nombre completo era Camila Lorente Azabarte. Su madre volvió a casarse con Juan López, de «los Higuerillas», tuvo con él a Isidora y a Francisco, y murió el 10 de diciembre de 1911, con treinta y ocho años, de una enfermedad del corazón, cuando Isidora tenía cuatro. Camila se quedó sin padre y sin madre, con dos medio hermanos pequeños; a Isidora le llevaba unos quince años: según su lápida, había nacido entre el verano de 1892 y el de 1893."
     },
     {
      "k": "p",
@@ -5972,10 +6040,14 @@
     {
      "k": "p",
      "x": "De Camila descienden «los Habichuelos», que llevan todavía el mote de su abuela Vicenta, «la Habichuela»."
+    },
+    {
+     "k": "p",
+     "x": "Murió el 30 de junio de 1972, con setenta y nueve años. Sus hijos le pusieron en el cementerio del pueblo una lápida con su nombre entero y una fotografía suya, ya mayor, que es la única cara de Camila que ha llegado hasta hoy."
     }
    ],
-   "huella": "67e1e5fc165a045b2a822060b947aa018b58916006f00867fafba97b8503ab2c",
-   "chars": 2739
+   "huella": "3ffeff9377c2191b4cbcd035a32b4caba281c4c59080c89e7e4cd13515496cff",
+   "chars": 2996
   },
   {
    "clave": "pj:P101",
@@ -6201,7 +6273,7 @@
     },
     {
      "k": "p",
-     "x": "Las fechas, que antes no casaban, casan ahora. Mientras se la tuvo por la mayor de todos los hermanos se la hacía nacer hacia 1860, y no se entendía que diera a luz en 1908 y muriera cuatro años después. El acta le da treinta y ocho años en 1911, así que nació hacia 1873, tres años antes que Venus: tenía unos treinta y cuatro cuando nació Isidora y unos dieciocho cuando nació Camila, que le llevaba dieciséis años a su media hermana y debió de nacer hacia 1891 o 1892. Pudo ser la mayor de los que llegaron a mayores; antes que ella pudo haber otros hijos que murieron pequeños, como murieron después varios de sus hermanos."
+     "x": "Las fechas, que antes no casaban, casan ahora. Mientras se la tuvo por la mayor de todos los hermanos se la hacía nacer hacia 1860, y no se entendía que diera a luz en 1908 y muriera cuatro años después. El acta le da treinta y ocho años en 1911, así que nació hacia 1873, tres años antes que Venus: tenía unos treinta y cuatro cuando nació Isidora y unos diecinueve cuando nació Camila, que le llevaba unos quince años a su media hermana y nació, según su lápida, entre 1892 y 1893. Pudo ser la mayor de los que llegaron a mayores; antes que ella pudo haber otros hijos que murieron pequeños, como murieron después varios de sus hermanos."
     },
     {
      "k": "p",
@@ -6212,8 +6284,8 @@
      "x": "Murió antes que sus padres, y por eso las actas de 1912 y de 1914, que solo nombran a los hijos vivos, la dejan fuera. Su propia acta, en cambio, nombra a los dos: a Francisco, al que llama propietario, y a Vicenta, vivos los dos en diciembre de 1911."
     }
    ],
-   "huella": "b62cb0e827d37f933092597da1f24f14c3a0c5908ebd9e6a7fe5d837cbac8b57",
-   "chars": 3792
+   "huella": "032b33a993c4fcfbaf4952f2644aacde4a472342dd8d180d405caceb5282758c",
+   "chars": 3804
   },
   {
    "clave": "pj:P109",
@@ -6373,11 +6445,11 @@
     },
     {
      "k": "p",
-     "x": "Murió en febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de esta galería, y el suyo está hecho sobre una fotografía que guarda la familia. Es el abuelo del investigador y el punto exacto donde la memoria viva se encuentra con los papeles: de su casa salieron los recuerdos del abuelo Venus y de aquella calle que dieron pie a todo esto."
+     "x": "Murió el 26 de febrero de 2009 en Villarrobledo, ya en tierras de Albacete, con ochenta y siete años, y lo enterraron en Las Pedroñeras. Sus ojos azules y su tez clara, y los de sus hermanos, son los rasgos que la familia ha querido para los retratos de todos los Azabarte de esta galería, y el suyo está hecho sobre una fotografía que guarda la familia. Es el abuelo del investigador y el punto exacto donde la memoria viva se encuentra con los papeles: de su casa salieron los recuerdos del abuelo Venus y de aquella calle que dieron pie a todo esto."
     }
    ],
-   "huella": "67d2152fdcb6b1a67012e74cf4555d39545d399e0e541c42dffd52c2e0aa2f9d",
-   "chars": 4671
+   "huella": "c06577e0fd5033de33d4b1ba5fdd6ba3dd06a039d5d1ee554c822cb3863e1772",
+   "chars": 4677
   },
   {
    "clave": "pj:P127",
@@ -6751,10 +6823,14 @@
     {
      "k": "p",
      "x": "Su sobrino Francisco Gallardo Azabarte guarda las otras dos fotografías. En una, Julián es todavía un muchacho, sentado en el estudio de un fotógrafo, en mangas de camisa, y sobre ella está dibujado el retrato de esta página; en la otra es ya un hombre, de bigote fino, y al pie lleva una dedicatoria de su puño: «A mi sobrino Paquito, con todo el cariño de su tío». Al morir, en 1958, se le enterró todavía en el cementerio viejo, en otra sepultura que la de sus abuelos."
+    },
+    {
+     "k": "p",
+     "x": "Su losa, con la fecha de 1958 y la despedida de su mujer y sus hijos, sigue en el cementerio del pueblo. Muy cerca de su memoria queda otra: la de un Julián Azabarte Galindo muerto en 1974 con veinticuatro años, que con toda probabilidad era su hijo."
     }
    ],
-   "huella": "c04f5c1124528c8daaca895176158f48395edb31ac110a4ce9b6c8093543c92a",
-   "chars": 4453
+   "huella": "7be50ef8f419447a7806414bc077da5159367798820c266a6736727995f7aa45",
+   "chars": 4703
   },
   {
    "clave": "pj:P098",
