@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 562177,
+ "total_caracteres": 563944,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -353,6 +353,10 @@
     },
     {
      "k": "cl",
+     "x": "El ADN no lleva a Francia, pero mira al norte: la primera prueba de la familia no da nada francés que no tenga cualquier español, y sí un parentesco lejano con familias vascas y navarras que todavía no se sabe por qué rama llega."
+    },
+    {
+     "k": "cl",
      "x": "Los Navarro y los Fides eran del pueblo, según sus propias actas de defunción."
     },
     {
@@ -421,6 +425,30 @@
     },
     {
      "k": "h",
+     "x": "Lo que dice la sangre"
+    },
+    {
+     "k": "p",
+     "x": "En noviembre de 2026 llegaron los resultados de la primera prueba de ADN hecha en la familia, la de Francisco Javier, hijo de Pilar y autor de esta investigación. Del apellido dice poco, y conviene saber por qué. El ADN que leen estas pruebas se reparte por mitades en cada generación, y de un antepasado de hace nueve o quince generaciones apenas queda nada que se pueda medir: los porcentajes hablan de toda la ascendencia junta, la de la madre y la del padre."
+    },
+    {
+     "k": "p",
+     "x": "Esos porcentajes dan una población peninsular casi entera. Las pequeñas partes francesa y bretona, como la del sur de Italia, la de Cerdeña o la de Marruecos, son las que aparecen en casi todos los españoles del interior, porque los pueblos de los dos lados de los Pirineos llevan milenios mezclándose, y no señalan a ningún antepasado. La idea de Francia no gana nada con ellas. Tampoco la de Cataluña: lo que la prueba llama «español, catalán y vasco» es un solo nombre para toda la población de España."
+    },
+    {
+     "k": "p",
+     "x": "Lo que sí aparece es una señal del norte. La prueba lo coloca, con la confianza más alta, entre los vascos de Vizcaya y de Gipuzkoa, y entre sus parientes lejanos por ADN hay una veintena de familias vascas y navarras. Es el primer indicio que no sale de un papel ni de un recuerdo y que coincide con los dos: con la casa de Zabarte del valle del Deba y con lo que se decía en casa. Pero no dice por qué rama llega, y tiene que venir de antepasados de los últimos dos o tres siglos, no de los Zabarte que ya estaban en Cuenca en 1535. Si llegara por los Azabarte, encajaría con un primer Azabarte venido directamente del norte."
+    },
+    {
+     "k": "ct",
+     "x": "Lo que lo resolvería"
+    },
+    {
+     "k": "cp",
+     "x": "El apellido pasa de padre a hijo varón, y con él un trozo de ADN que no se mezcla: el cromosoma Y. Una prueba de ese cromosoma hecha a un varón que lleve el apellido Azabarte por su padre diría de dónde venía el primero de Las Pedroñeras, y si su linaje es el de algún Zabarte del País Vasco. Es la única prueba de ADN que habla del apellido."
+    },
+    {
+     "k": "h",
      "x": "«Navarro porque venían de Navarra; Fides, de valenciano»"
     },
     {
@@ -460,8 +488,8 @@
      "x": "La única vez que un libro de Álava escribe la A con seguridad es en un bautizo de Vitoria de 1725, y allí no nace de ninguna suma: el escribiente se la puso a la madre del niño y también a su abuelo, que no tenía nada de Azedo, y quien firmaba aquel libro había escrito Zabarte, sin A, en la boda de los padres. La A aparece y desaparece según quién tenga la pluma. Lo que se sabe de la A de Las Pedroñeras se cuenta, paso a paso, en el capítulo «Un camino a medio andar»."
     }
    ],
-   "huella": "97d722ccae16e82878e7c2a911c997d5596fdab552fc485cb3839a4b2b814f01",
-   "chars": 10119
+   "huella": "ffc9957ca93a86f78f338db954bc46f4fb1b00019842cc1b6dc9da4c460b3a9f",
+   "chars": 12325
   },
   {
    "clave": "cap:genesis",
@@ -2748,6 +2776,10 @@
     },
     {
      "k": "li",
+     "x": "Una prueba de ADN también puede ayudar: la de Pilar separaría a los parientes por ADN de cada rama, y una del cromosoma Y, hecha a un varón que lleve el apellido Azabarte por su padre, es la única que puede decir de dónde vino el apellido."
+    },
+    {
+     "k": "li",
      "x": "Una fotografía hecha con el teléfono basta, y los originales se quedan siempre en su casa."
     },
     {
@@ -2759,8 +2791,8 @@
      "x": "A los más pequeños de la casa se les puede proponer un juego: preguntar a sus abuelos cómo se llamaban los abuelos de ellos, y apuntarlo en un papel con la fecha. Preguntas como esa, hechas a tiempo, son las que pusieron en marcha esta historia."
     }
    ],
-   "huella": "497f2e0a715db26a7d93f7bf9830e1b9b9cb543646f40609edb1a23ce326a75b",
-   "chars": 10989
+   "huella": "538166416ab58674a3f257800dcc29a65ce86f687c6ea6b02d09f323529ae12f",
+   "chars": 11228
   },
   {
    "clave": "cap:glosario",
@@ -3611,11 +3643,15 @@
     },
     {
      "k": "p",
+     "x": "En noviembre de 2026 llegó otra clase de prueba, la primera de ADN hecha en la familia. Sus pequeños porcentajes francés y bretón son los que da casi cualquier español del interior, porque los pueblos de los dos lados de los Pirineos llevan milenios mezclándose, y no señalan a ningún antepasado: la sangre tampoco lleva a Francia. Lo que sí deja ver es un parentesco lejano con familias vascas y navarras, que mira al mismo norte que los papeles del nombre."
+    },
+    {
+     "k": "p",
      "x": "Con el mapa a la vista y el trozo sin papel bien señalado, la historia puede por fin llegar a Las Pedroñeras. Allí, en la iglesia de la Asunción, en enero de 1798, con la parroquia sin cura propio, un teniente de cura iba a casar a un hombre llamado Pedro, y la A iba a quedar escrita desde el primer día."
     }
    ],
-   "huella": "28295d5ea5fd9f21f9bcdb9a3f85d47e13dc5a9c119776402cbb7e21f26c66ec",
-   "chars": 7478
+   "huella": "a5f9224f2d1ee833eea1dd77cc1f0801cc3bb96f2e7d1cbac4c206fb4e05bb51",
+   "chars": 7936
   },
   {
    "clave": "lib:boda",
@@ -5382,30 +5418,6 @@
     },
     {
      "k": "h",
-     "x": "Once hijos en casa de Venus"
-    },
-    {
-     "k": "p",
-     "x": "En casa de Venus y Encarnación se recordaban ocho hijos, los que llegaron a mayores. Las actas del Registro Civil añaden otros tres, muertos de pequeños en los primeros años del matrimonio: Alejandro, con ocho días, en abril de 1900; una primera Eugenia, con cuatro meses, en marzo de 1902, y, con toda probabilidad, un Francisco, en agosto de 1903. La Eugenia que se crió, la mayor de los ocho, llevó el nombre de la hermana muerta, como se hacía entonces, y murió joven, de parto, según se recuerda en la familia, probablemente en mayo de 1932."
-    },
-    {
-     "k": "pull",
-     "x": "Ocho hijos se criaron en la casa de Venus; antes que ellos, otros tres no llegaron a crecer."
-    },
-    {
-     "k": "p",
-     "x": "Con esos hijos se mueve también la fecha de la madre. Las actas de Alejandro y de la primera Eugenia le dan veintitrés años en 1900 y veintidós en 1902, dos cifras que no casan entre sí pero que bastan para saber que Encarnación nació entre 1876 y 1880, y no en 1890, como recogía el árbol de la familia. Era, por tanto, casi de la edad de su marido."
-    },
-    {
-     "k": "p",
-     "x": "Venus murió el 25 de mayo de 1946 en su casa, viudo ya de Encarnación, y su acta nombra a los siete hijos que le vivían. El índice pone fecha a la muerte de varios de ellos. Paco murió en mayo de 1986 y Florencia, en noviembre del mismo año; Francisca, en octubre de 1990, y no en 1992, como daban los árboles de la familia. Julián murió el 2 de junio de 1958, con treinta y nueve años; murió joven, como se recordaba. Su acta lo hace nacer el 3 de noviembre de 1918, y la ficha que le hicieron después de la guerra, el 30: el día lo dirá la inscripción de su nacimiento."
-    },
-    {
-     "k": "p",
-     "x": "De aquella casa vienen también los últimos recuerdos. Los mellizos se fueron a la guerra con diecisiete años: pasó por el pueblo un camión recogiendo voluntarios, se subieron sin decir nada, y cuando sus padres se enteraron ya iban camino del frente. A Paco, el mayor de los varones, no le tocó elegir: lo alistaron a la fuerza en el ejército de la República, estuvo en el frente, y después de la guerra estuvo preso en un campo de concentración, como se recuerda en dos ramas de la familia. Los dos recuerdos casan con los papeles que se conocen, y los expedientes que esperan en los archivos dirán el resto."
-    },
-    {
-     "k": "h",
      "x": "Las caras de Paco y de Julián"
     },
     {
@@ -5489,12 +5501,24 @@
      "x": "El apellido de Eugenia confirma lo que hasta ahora solo decían dos árboles de otras ramas: Francisca se casó con un Cano. Y Luis Miguel es hijo de Luisa, una hija de Venus el mellizo y de Luisa Araque, que pone nombre a la mujer de Venus."
     },
     {
+     "k": "h",
+     "x": "Lo que dice la sangre"
+    },
+    {
      "k": "p",
-     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco, la de Venus con Encarnación y la de Julián, que pondrá fecha a las dos bodas de primos y dirá cómo se apellidaba su mujer; los nacimientos de las hijas, el de Camila, entre 1892 y 1893, y el de Encarnación; la muerte de María Galindo Fides, la del Julián de 1974, que nombrará a sus padres, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
+     "x": "En noviembre de 2026 llegaron los resultados de la primera prueba de ADN de la familia, la de un bisnieto de Venus por su madre. Del apellido dicen poco, porque la sangre se reparte por mitades en cada generación y de un antepasado de hace nueve o diez apenas queda nada que medir. Los pequeños porcentajes franceses, bretones o italianos son los que da casi cualquier español, y no devuelven a Francia la idea de un origen de allí."
+    },
+    {
+     "k": "p",
+     "x": "Lo que sí asoma es el norte. La prueba lo coloca, con la confianza más alta, entre los vascos de Vizcaya y de Gipuzkoa, y entre sus parientes lejanos hay una veintena de familias vascas y navarras, del valle de Aezkoa, del Bearne y de Bayona. Es lo mismo que se decía en casa, que el primero vino del norte, aunque la sangre no dice todavía por qué rama llega. Lo diría la prueba de un varón que lleve el apellido por su padre: su cromosoma Y es el mismo que trajo a Las Pedroñeras el primer Azabarte."
+    },
+    {
+     "k": "p",
+     "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco, la de Venus con Encarnación y la de Julián, que pondrá fecha a las dos bodas de primos y dirá cómo se apellidaba su mujer; los nacimientos de las hijas, el de Camila, entre 1892 y 1893, y el de Encarnación; la muerte de María Galindo Fides, la del Julián de 1974, que nombrará a sus padres, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. La prueba de ADN de un varón que lleve el apellido por su padre diría, además, de dónde vino el primero. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "8cda34a05614bdd1926a8ba0a03d1164e30f5d6e1db87b0870ff16775c05c2d1",
-   "chars": 13696
+   "huella": "ce247dd157114d268b0bc1d784c2fc1d97c2ea302a2ca7c8543853864a567b73",
+   "chars": 12560
   },
   {
    "clave": "lib:epilogo",
