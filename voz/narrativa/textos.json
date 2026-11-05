@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 563944,
+ "total_caracteres": 564272,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -433,7 +433,7 @@
     },
     {
      "k": "p",
-     "x": "Esos porcentajes dan una población peninsular casi entera. Las pequeñas partes francesa y bretona, como la del sur de Italia, la de Cerdeña o la de Marruecos, son las que aparecen en casi todos los españoles del interior, porque los pueblos de los dos lados de los Pirineos llevan milenios mezclándose, y no señalan a ningún antepasado. La idea de Francia no gana nada con ellas. Tampoco la de Cataluña: lo que la prueba llama «español, catalán y vasco» es un solo nombre para toda la población de España."
+     "x": "Esos porcentajes dan una población peninsular casi entera. Las pequeñas partes francesa y bretona, como la del sur de Italia, la de Cerdeña o la de Marruecos, son las que aparecen en casi todos los españoles del interior, porque los pueblos de los dos lados de los Pirineos llevan milenios mezclándose, y no señalan a ningún antepasado. La idea de Francia no gana nada con ellas. Tampoco la de Cataluña: lo que la prueba llama «español, catalán y vasco» es un solo nombre para toda la población de España. Y la porción parecida a la de Portugal, casi una décima parte y la mayor después de la española, tampoco habla de un antepasado portugués: el oeste y el centro de la península se parecen tanto que la prueba reparte entre las dos etiquetas un mismo fondo, y entre los parientes por ADN apenas hay portugueses, todos muy lejanos."
     },
     {
      "k": "p",
@@ -488,8 +488,8 @@
      "x": "La única vez que un libro de Álava escribe la A con seguridad es en un bautizo de Vitoria de 1725, y allí no nace de ninguna suma: el escribiente se la puso a la madre del niño y también a su abuelo, que no tenía nada de Azedo, y quien firmaba aquel libro había escrito Zabarte, sin A, en la boda de los padres. La A aparece y desaparece según quién tenga la pluma. Lo que se sabe de la A de Las Pedroñeras se cuenta, paso a paso, en el capítulo «Un camino a medio andar»."
     }
    ],
-   "huella": "ffc9957ca93a86f78f338db954bc46f4fb1b00019842cc1b6dc9da4c460b3a9f",
-   "chars": 12325
+   "huella": "7949147f4a11c1740c0d11de7758b34026d99f8eca20801522dd40b908a8c1a1",
+   "chars": 12653
   },
   {
    "clave": "cap:genesis",
