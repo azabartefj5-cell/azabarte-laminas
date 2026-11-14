@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 564272,
+ "total_caracteres": 565985,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -143,7 +143,7 @@
     },
     {
      "k": "p",
-     "x": "Faltaban dos cosas, y las dos eran grandes. La primera, el eslabón entre Pedro y Francisco Azabarte Galindo, ya tiene su papel: el acta de nacimiento de Venus, de 1876, llama Cardoz a su abuelo Pablo, con el apellido de la madre del Pablo de 1809. La que queda es el origen del otro Francisco, el padre de Pedro. Si su familia venía del norte, entre Elgeta y él hay un camino en tres tramos. El primero, de Elgeta a Barchín, está documentado. Los otros dos, de Barchín a Cañada Juncosa y de Cañada Juncosa a la casa de Pedro, esperan todavía su papel. El capítulo «Un camino a medio andar» los recorre uno a uno."
+     "x": "Faltaban dos cosas, y las dos eran grandes. La primera, el eslabón entre Pedro y Francisco Azabarte Galindo, ya tiene su papel: el acta de nacimiento de Venus, de 1876, llama Cardoz a su abuelo Pablo, con el apellido de la madre del Pablo de 1809. La que queda es el origen del otro Francisco, el padre de Pedro. Si su familia venía del norte, entre Elgeta y él hay un camino en tres tramos. El primero, de Elgeta a Barchín, está documentado. Los otros dos, de Barchín a Cañada Juncosa y de Cañada Juncosa a la casa de Pedro, esperan todavía su papel. La primera prueba de ADN de la familia ha dejado además una señal del norte, un parentesco lejano con familias vascas y navarras, aunque todavía no se sabe por qué rama llega. El capítulo «Un camino a medio andar» los recorre uno a uno."
     },
     {
      "k": "p",
@@ -158,8 +158,8 @@
      "x": "Un nombre repetido en un papel viejo no convierte a nadie en pariente."
     }
    ],
-   "huella": "d78fddba1af73f5010041d949e999f8e614e74f084508d41b4e5efae84b01991",
-   "chars": 10757
+   "huella": "4c18c9f38115cc452f23639596fb2f80787183933c302679541a8493ee5ff7a5",
+   "chars": 10933
   },
   {
    "clave": "cap:pueblo",
@@ -2474,11 +2474,15 @@
     },
     {
      "k": "p",
+     "x": "Hay también un camino que no pasa por los archivos. La primera prueba de ADN de la familia, en noviembre de 2026, dejó una señal del norte: un parentesco lejano con familias vascas y navarras, de los últimos dos o tres siglos, que todavía no se sabe por qué rama llega. Si llegara por los Azabarte, no podría venir de los Zabarte que ya vivían en tierra de Cuenca en 1535, y encajaría mejor con alguien llegado del norte en el siglo dieciocho o poco antes. Además, el apellido viaja de padre a hijo varón con un trozo de ADN que no se mezcla, el cromosoma Y: la prueba de un varón que lleve el apellido Azabarte por su padre, comparada con la de algún Zabarte por línea de varón, diría si los tramos se unen como se cree."
+    },
+    {
+     "k": "p",
      "x": "Quinientos años después el caserío sigue en su sitio, y la calle Fray Luis de León también. Entre uno y otra quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro."
     }
    ],
-   "huella": "6e8d97850bc655998576757fcad43e170d91d585f32cdee7b7e2d196c3478ce9",
-   "chars": 9652
+   "huella": "0bc9ded8784b68a054738a43dd6fc0d3239a7aac5f0fcaf85d92b5c9249dc88b",
+   "chars": 10373
   },
   {
    "clave": "cap:marcharon",
@@ -3643,15 +3647,15 @@
     },
     {
      "k": "p",
-     "x": "En noviembre de 2026 llegó otra clase de prueba, la primera de ADN hecha en la familia. Sus pequeños porcentajes francés y bretón son los que da casi cualquier español del interior, porque los pueblos de los dos lados de los Pirineos llevan milenios mezclándose, y no señalan a ningún antepasado: la sangre tampoco lleva a Francia. Lo que sí deja ver es un parentesco lejano con familias vascas y navarras, que mira al mismo norte que los papeles del nombre."
+     "x": "En noviembre de 2026 llegó otra clase de prueba, la primera de ADN hecha en la familia. Sus pequeños porcentajes francés y bretón son los que da casi cualquier español del interior, porque los pueblos de los dos lados de los Pirineos llevan milenios mezclándose, y no señalan a ningún antepasado: la sangre tampoco lleva a Francia. Lo que sí deja ver es un parentesco lejano con familias vascas y navarras, que mira al mismo norte que los papeles del nombre. Si ese parentesco llega por los Azabarte, tiene que venir de alguien que bajó del norte en los últimos dos o tres siglos, y no de los Zabarte que ya vivían en tierra de Cuenca en 1535."
     },
     {
      "k": "p",
      "x": "Con el mapa a la vista y el trozo sin papel bien señalado, la historia puede por fin llegar a Las Pedroñeras. Allí, en la iglesia de la Asunción, en enero de 1798, con la parroquia sin cura propio, un teniente de cura iba a casar a un hombre llamado Pedro, y la A iba a quedar escrita desde el primer día."
     }
    ],
-   "huella": "a5f9224f2d1ee833eea1dd77cc1f0801cc3bb96f2e7d1cbac4c206fb4e05bb51",
-   "chars": 7936
+   "huella": "41fd110b2b903d79b5bc2f90cccc12abd246be85e0d2482a58d7628f28c0bf80",
+   "chars": 8121
   },
   {
    "clave": "lib:boda",
@@ -5506,19 +5510,19 @@
     },
     {
      "k": "p",
-     "x": "En noviembre de 2026 llegaron los resultados de la primera prueba de ADN de la familia, la de un bisnieto de Venus por su madre. Del apellido dicen poco, porque la sangre se reparte por mitades en cada generación y de un antepasado de hace nueve o diez apenas queda nada que medir. Los pequeños porcentajes franceses, bretones o italianos son los que da casi cualquier español, y no devuelven a Francia la idea de un origen de allí."
+     "x": "En noviembre de 2026 llegaron los resultados de la primera prueba de ADN de la familia, la de un bisnieto de Venus por su madre. Del apellido dicen poco, porque la sangre se reparte por mitades en cada generación y de un antepasado de hace nueve o diez apenas queda nada que medir. Los pequeños porcentajes franceses, bretones o italianos son los que da casi cualquier español, y no devuelven a Francia la idea de un origen de allí. Tampoco señalan a Cataluña ni a Portugal: lo que la prueba llama «español, catalán y vasco» es un solo nombre para toda España, y la parte parecida a la de Portugal, casi una décima, es la que comparten el centro y el oeste de la península."
     },
     {
      "k": "p",
-     "x": "Lo que sí asoma es el norte. La prueba lo coloca, con la confianza más alta, entre los vascos de Vizcaya y de Gipuzkoa, y entre sus parientes lejanos hay una veintena de familias vascas y navarras, del valle de Aezkoa, del Bearne y de Bayona. Es lo mismo que se decía en casa, que el primero vino del norte, aunque la sangre no dice todavía por qué rama llega. Lo diría la prueba de un varón que lleve el apellido por su padre: su cromosoma Y es el mismo que trajo a Las Pedroñeras el primer Azabarte."
+     "x": "Lo que sí asoma es el norte. La prueba lo coloca, con la confianza más alta, entre los vascos de Vizcaya y de Gipuzkoa, y entre sus parientes lejanos hay una veintena de familias vascas y navarras, del valle de Aezkoa, del Bearne y de Bayona. Es lo mismo que se decía en casa, que el primero vino del norte, aunque la sangre no dice todavía por qué rama llega. Si fuera por los Azabarte, habría que buscar a alguien llegado del norte mucho después de 1535, cuando ya había Zabarte en tierra de Cuenca. Lo diría la prueba de un varón que lleve el apellido por su padre: su cromosoma Y es el mismo que trajo a Las Pedroñeras el primer Azabarte."
     },
     {
      "k": "p",
      "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco, la de Venus con Encarnación y la de Julián, que pondrá fecha a las dos bodas de primos y dirá cómo se apellidaba su mujer; los nacimientos de las hijas, el de Camila, entre 1892 y 1893, y el de Encarnación; la muerte de María Galindo Fides, la del Julián de 1974, que nombrará a sus padres, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. La prueba de ADN de un varón que lleve el apellido por su padre diría, además, de dónde vino el primero. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "ce247dd157114d268b0bc1d784c2fc1d97c2ea302a2ca7c8543853864a567b73",
-   "chars": 12560
+   "huella": "2309d31cccbb6e4510d367c50ea8504ff0feaa47d0f9a6ff81161fa021c45b1d",
+   "chars": 12942
   },
   {
    "clave": "lib:epilogo",
@@ -5631,6 +5635,10 @@
     },
     {
      "k": "p",
+     "x": "Fuera de los archivos queda otra vía: la prueba de ADN de un varón que lleve el apellido Azabarte por su padre. Si su cromosoma Y coincidiera con el de algún Zabarte por línea de varón, de la comarca o del norte, diría de qué linaje venía Francisco."
+    },
+    {
+     "k": "p",
      "x": "Más cerca de casa, el papel que unía al Pablo nacido en 1809 con el padre de Francisco ya ha aparecido, y otros esperan en los mismos libros. Los hijos de Francisco y Vicenta que nacieron después de 1871, Vicenta, Isidora, Produana y la Boni, deben de estar en los libros de nacimientos del juzgado, y con ellos Camila, la nieta. Allí mismo esperan el acta de defunción de Isidora, de 1907, la de María Galindo Fides, que murió entre 1888 y 1910, y las bodas de Vicenta, la hija, y de Venus con Encarnación. La boda de Pablo y María puede estar en los libros de matrimonios de la parroquia que nadie ha revisado todavía, y la muerte de Pablo, anterior a agosto de 1871, en los de entierros o en los primeros del juzgado. Y los dos testamentos de los abuelos, que pueden nombrar de una vez a todos los hijos y a los nietos, esperan en el Archivo Histórico Provincial de Cuenca."
     },
     {
@@ -5690,8 +5698,8 @@
      "x": "Más de quinientos años después, el caserío de Zabarte sigue en su sitio, en el barrio de Partegoitia de Angiozar, con la casita de Zabarte al lado. La calle Fray Luis de León sigue arrancando de la plaza de la iglesia de Las Pedroñeras, y en el cementerio del pueblo sigue la piedra clara que, según se recuerda en casa, labró Venus para sus padres. Entre el caserío y la calle quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro. Esta historia está contada tal como se sabía en noviembre de 2026, y seguirá. Mientras tanto, los dos nombres están en la piedra, para quien quiera ir a leerlos."
     }
    ],
-   "huella": "e9d68d9ce7d65c3c07727102733df1ffa7ce8ccc2f38bcee5c89bddfbf8ad1ac",
-   "chars": 13994
+   "huella": "a1d73fd5804d78fc9d2d46394f818d3ca06fc7b2464d2d9eae2c7b8a7eed047f",
+   "chars": 14243
   },
   {
    "clave": "pj:P001",
