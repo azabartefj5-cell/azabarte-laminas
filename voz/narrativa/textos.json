@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 568138,
+ "total_caracteres": 568432,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -4517,7 +4517,7 @@
     },
     {
      "k": "p",
-     "x": "En noviembre de 2026 la sangre ha dado con su rama. La prueba de ADN de un bisnieto de Venus ha encontrado entre sus parientes a una bisnieta de Isidora, nieta de una de sus hijas, y los dos comparten un trozo de ADN largo, de los que deja un antepasado no muy lejano: son primos terceros, tataranietos los dos de Francisco y Vicenta. El árbol que guarda esa rama le da marido e hijos, y el acta de 1907 dirá si son los que recuerda."
+     "x": "En noviembre de 2026 la sangre ha dado con su rama. La prueba de ADN de un bisnieto de Venus ha encontrado entre sus parientes a una bisnieta de Isidora, nieta de una de sus hijas, y los dos comparten un trozo de ADN largo, de los que deja un antepasado no muy lejano: son primos terceros, tataranietos los dos de Francisco y Vicenta. El árbol que guarda esa rama le da por marido a Rufino Araque Monedero, y el acta de 1907, que nombrará al viudo, dirá si es así."
     },
     {
      "k": "h",
@@ -4576,8 +4576,8 @@
      "x": "En agosto de 1912, un secretario del juzgado iba a escribir en una hoja impresa los nombres de los hijos que le quedaban a Francisco, y año y medio después, en otra, los que le quedaban a Vicenta. Las dos mayores no estarían en ninguna, y la del medio saldría cada vez con un nombre distinto."
     }
    ],
-   "huella": "f753a77c971b40735d1f9aa8eaa9029dc169a3fc731b1eee63b58711275004c4",
-   "chars": 11693
+   "huella": "392e6c03f9858606a8ea54ab382be1806fc75dd31c9a86d335773e8c6399c5b8",
+   "chars": 11724
   },
   {
    "clave": "lib:actas",
@@ -4706,7 +4706,7 @@
     },
     {
      "k": "p",
-     "x": "Venus, según se recuerda en su casa, tenía pistola y tenía genio, y la violencia de aquellos años ya le había pasado cerca: iba con su cuñado Lorente el día en que lo mataron, como se ha contado. Este otro cuñado, el del entierro, era según Ubaldo el marido de la otra hija mayor, Isidora, de la que vienen «los Cabreros», viudo desde 1907. Desde aquel día las dos casas no volvieron a tratarse, y los nietos de una y otra crecieron sin conocerse. Así se explica, en parte, que cada rama de la familia recuerde cosas que la otra olvidó, y que hiciera falta juntar sus memorias, un siglo después, para entender la historia entera."
+     "x": "Venus, según se recuerda en su casa, tenía pistola y tenía genio, y la violencia de aquellos años ya le había pasado cerca: iba con su cuñado Lorente el día en que lo mataron, como se ha contado. Este otro cuñado, el del entierro, era según Ubaldo el marido de la otra hija mayor, Isidora, de la que vienen «los Cabreros», viudo desde 1907. Un árbol que guarda hoy la rama de Isidora le pone nombre: Rufino Araque Monedero. Desde aquel día las dos casas no volvieron a tratarse, y los nietos de una y otra crecieron sin conocerse. Así se explica, en parte, que cada rama de la familia recuerde cosas que la otra olvidó, y que hiciera falta juntar sus memorias, un siglo después, para entender la historia entera."
     },
     {
      "k": "h",
@@ -4741,8 +4741,8 @@
      "x": "Muertos Francisco y Vicenta, la casa vieja fue de la Boni. Pero la historia que llega hasta hoy siguió en otra casa de la misma calle, la del hijo que había tallado la piedra. Era la de Venus, el labrador, y en ella iban a crecer ocho hijos."
     }
    ],
-   "huella": "e0d6c68422473a012d11261d10590e2f2e12851ba28fe0ae3f567adf8e21ffcc",
-   "chars": 11122
+   "huella": "8f81acf9e0723c3845fc8c7b7e50df53271159cabfe052e835ab45758798573b",
+   "chars": 11205
   },
   {
    "clave": "lib:venus",
@@ -5530,15 +5530,15 @@
     },
     {
      "k": "p",
-     "x": "El árbol de esa rama le da a Isidora marido e hijos, que habrá que ver en el Registro Civil, empezando por el acta de 1907, que nombrará al viudo. Y hay que leerlo con una cautela: en un pueblo donde las familias llevan siglos casándose entre sí, dos primos pueden serlo por más de un camino, y la madre del bisnieto de Venus desciende también de otras casas del pueblo. El parentesco por Isidora no depende de eso, pero para saber si el trozo compartido es de los Azabarte hará falta la prueba de otro descendiente de Venus que no lleve esas otras casas."
+     "x": "El árbol de esa rama le da a Isidora por marido a Rufino Araque Monedero; si acierta, «los Cabreros» llevaban el apellido Araque y él fue el cuñado del entierro de 1914. Habrá que verlo en el Registro Civil, empezando por el acta de 1907, que nombrará al viudo. Y hay que leerlo con una cautela: en un pueblo donde las familias llevan siglos casándose entre sí, dos primos pueden serlo por más de un camino, y la madre del bisnieto de Venus desciende también de otras casas del pueblo. El parentesco por Isidora no depende de eso, pero para saber si el trozo compartido es de los Azabarte hará falta la prueba de otro descendiente de Venus que no lleve esas otras casas."
     },
     {
      "k": "p",
      "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco, la de Venus con Encarnación y la de Julián, que pondrá fecha a las dos bodas de primos y dirá cómo se apellidaba su mujer; los nacimientos de las hijas, el de Camila, entre 1892 y 1893, y el de Encarnación; la muerte de María Galindo Fides, la del Julián de 1974, que nombrará a sus padres, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. La prueba de ADN de un varón que lleve el apellido por su padre diría, además, de dónde vino el primero. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "074ccef92055afb2110cf2543452f7c020d2821dd89386d21ce4f38b571976a7",
-   "chars": 14100
+   "huella": "0bcd9751e352501aa0064b8197d3303e79191c0ef0c3c3dc6a8e63b0d4df1797",
+   "chars": 14215
   },
   {
    "clave": "lib:epilogo",
@@ -6382,11 +6382,11 @@
     },
     {
      "k": "p",
-     "x": "En noviembre de 2026 la sangre ató otro lazo. La prueba de ADN de un bisnieto de Venus encontró entre sus parientes lejanos a una bisnieta de Isidora, nieta de una de sus hijas. Comparten un trozo de ADN largo, como corresponde a primos terceros, tataranietos los dos de Francisco y Vicenta. El árbol de esa rama le da marido e hijos, que el Registro Civil tendrá que confirmar."
+     "x": "En noviembre de 2026 la sangre ató otro lazo. La prueba de ADN de un bisnieto de Venus encontró entre sus parientes lejanos a una bisnieta de Isidora, nieta de una de sus hijas. Comparten un trozo de ADN largo, como corresponde a primos terceros, tataranietos los dos de Francisco y Vicenta. El árbol de esa rama le da por marido a Rufino Araque Monedero, que sería así el cuñado de aquel día de 1914; el Registro Civil tendrá que confirmarlo."
     }
    ],
-   "huella": "937ede3d2e9d5a35f58aa801fe3bbd2c58b5af35e7a87de3db41c668951bd822",
-   "chars": 3113
+   "huella": "6f4ce94a2a016d70b9ac76e795663080e9edc2504514d82a1852f792762a89f8",
+   "chars": 3178
   },
   {
    "clave": "pj:P089",
