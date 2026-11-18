@@ -2,7 +2,7 @@
  "origen": "https://azabarte.com/",
  "edicion": "narrativa",
  "total_pistas": 95,
- "total_caracteres": 565985,
+ "total_caracteres": 568138,
  "pistas": [
   {
    "clave": "cap:sabemos",
@@ -2474,15 +2474,15 @@
     },
     {
      "k": "p",
-     "x": "Hay también un camino que no pasa por los archivos. La primera prueba de ADN de la familia, en noviembre de 2026, dejó una señal del norte: un parentesco lejano con familias vascas y navarras, de los últimos dos o tres siglos, que todavía no se sabe por qué rama llega. Si llegara por los Azabarte, no podría venir de los Zabarte que ya vivían en tierra de Cuenca en 1535, y encajaría mejor con alguien llegado del norte en el siglo dieciocho o poco antes. Además, el apellido viaja de padre a hijo varón con un trozo de ADN que no se mezcla, el cromosoma Y: la prueba de un varón que lleve el apellido Azabarte por su padre, comparada con la de algún Zabarte por línea de varón, diría si los tramos se unen como se cree."
+     "x": "Hay también un camino que no pasa por los archivos. La primera prueba de ADN de la familia, en noviembre de 2026, dejó una señal del norte: un parentesco lejano con familias vascas y navarras, de los últimos dos o tres siglos, que todavía no se sabe por qué rama llega. Si llegara por los Azabarte, no podría venir de los Zabarte que ya vivían en tierra de Cuenca en 1535, y encajaría mejor con alguien llegado del norte en el siglo dieciocho o poco antes. Además, el apellido viaja de padre a hijo varón con un trozo de ADN que no se mezcla, el cromosoma Y: la prueba de un varón que lleve el apellido Azabarte por su padre, comparada con la de algún Zabarte por línea de varón, diría si los tramos se unen como se cree. Y ha dado ya con una rama de la casa: entre los parientes por ADN ha aparecido una bisnieta de Isidora, la hermana de Venus, prima tercera del bisnieto de Venus que se hizo la prueba."
     },
     {
      "k": "p",
      "x": "Quinientos años después el caserío sigue en su sitio, y la calle Fray Luis de León también. Entre uno y otra quedan dos tramos sin papel, y cada documento que llegue puede andar uno de ellos o demostrar que el camino era otro."
     }
    ],
-   "huella": "0bc9ded8784b68a054738a43dd6fc0d3239a7aac5f0fcaf85d92b5c9249dc88b",
-   "chars": 10373
+   "huella": "525f0e16211ad7c8d43de9b6378c200780ece22062a90451b874e586a9172878",
+   "chars": 10557
   },
   {
    "clave": "cap:marcharon",
@@ -4516,6 +4516,10 @@
      "x": "Su marido, según recuerda Ubaldo, fue el cuñado con el que Venus tuvo en 1914 el disgusto que partió a la familia, y que se contará en el capítulo siguiente. El tiempo acabó juntando lo que aquel día se rompió. Una bisnieta suya, de los Cabreros, se casó con un nieto de Venus, y el padre de la novia y el novio resultaron ser primos segundos. Su acta de defunción, de 1907, que todavía no se ha visto, dirá su edad y los nombres de su marido y de sus hijos."
     },
     {
+     "k": "p",
+     "x": "En noviembre de 2026 la sangre ha dado con su rama. La prueba de ADN de un bisnieto de Venus ha encontrado entre sus parientes a una bisnieta de Isidora, nieta de una de sus hijas, y los dos comparten un trozo de ADN largo, de los que deja un antepasado no muy lejano: son primos terceros, tataranietos los dos de Francisco y Vicenta. El árbol que guarda esa rama le da marido e hijos, y el acta de 1907 dirá si son los que recuerda."
+    },
+    {
      "k": "h",
      "x": "La Podruana"
     },
@@ -4572,8 +4576,8 @@
      "x": "En agosto de 1912, un secretario del juzgado iba a escribir en una hoja impresa los nombres de los hijos que le quedaban a Francisco, y año y medio después, en otra, los que le quedaban a Vicenta. Las dos mayores no estarían en ninguna, y la del medio saldría cada vez con un nombre distinto."
     }
    ],
-   "huella": "9511d96a09399a7b40c55769befcb4cde03b931afff042640d18e6c007dfea6f",
-   "chars": 11260
+   "huella": "f753a77c971b40735d1f9aa8eaa9029dc169a3fc731b1eee63b58711275004c4",
+   "chars": 11693
   },
   {
    "clave": "lib:actas",
@@ -5517,12 +5521,24 @@
      "x": "Lo que sí asoma es el norte. La prueba lo coloca, con la confianza más alta, entre los vascos de Vizcaya y de Gipuzkoa, y entre sus parientes lejanos hay una veintena de familias vascas y navarras, del valle de Aezkoa, del Bearne y de Bayona. Es lo mismo que se decía en casa, que el primero vino del norte, aunque la sangre no dice todavía por qué rama llega. Si fuera por los Azabarte, habría que buscar a alguien llegado del norte mucho después de 1535, cuando ya había Zabarte en tierra de Cuenca. Lo diría la prueba de un varón que lleve el apellido por su padre: su cromosoma Y es el mismo que trajo a Las Pedroñeras el primer Azabarte."
     },
     {
+     "k": "h",
+     "x": "Una prima por la sangre"
+    },
+    {
+     "k": "p",
+     "x": "A mediados de noviembre apareció entre los parientes por ADN del bisnieto de Venus una mujer cuyo árbol sube hasta una Isidora Azabarte. Es su bisabuela por la línea de su madre, y no puede ser otra que Isidora, la hermana de Venus muerta en 1907, la madre de «los Cabreros»: en el pueblo no se conoce otra Isidora Azabarte con hijos de esa edad. Los dos son, por tanto, tataranietos de Francisco y Vicenta, primos terceros, y comparten un trozo de ADN largo, de los que solo deja un antepasado no muy lejano. Es la primera vez que la sangre pone a alguien en el árbol de la casa."
+    },
+    {
+     "k": "p",
+     "x": "El árbol de esa rama le da a Isidora marido e hijos, que habrá que ver en el Registro Civil, empezando por el acta de 1907, que nombrará al viudo. Y hay que leerlo con una cautela: en un pueblo donde las familias llevan siglos casándose entre sí, dos primos pueden serlo por más de un camino, y la madre del bisnieto de Venus desciende también de otras casas del pueblo. El parentesco por Isidora no depende de eso, pero para saber si el trozo compartido es de los Azabarte hará falta la prueba de otro descendiente de Venus que no lleve esas otras casas."
+    },
+    {
      "k": "p",
      "x": "Lo que falta está a la vista, y casi todo en el Registro Civil del pueblo: las bodas de los hermanos de Francisco, la de Venus con Encarnación y la de Julián, que pondrá fecha a las dos bodas de primos y dirá cómo se apellidaba su mujer; los nacimientos de las hijas, el de Camila, entre 1892 y 1893, y el de Encarnación; la muerte de María Galindo Fides, la del Julián de 1974, que nombrará a sus padres, el acta completa de Isidora y la de Eugenia, que dirá de qué murió. En el archivo municipal espera el acuerdo de 1900 que cambió el nombre de la calle, y en Cuenca, los testamentos de los abuelos. La prueba de ADN de un varón que lleve el apellido por su padre diría, además, de dónde vino el primero. Cuando lleguen, este capítulo se escribirá de nuevo, y lo que traigan pasará a los capítulos donde cae."
     }
    ],
-   "huella": "2309d31cccbb6e4510d367c50ea8504ff0feaa47d0f9a6ff81161fa021c45b1d",
-   "chars": 12942
+   "huella": "074ccef92055afb2110cf2543452f7c020d2821dd89386d21ce4f38b571976a7",
+   "chars": 14100
   },
   {
    "clave": "lib:epilogo",
@@ -6363,10 +6379,14 @@
     {
      "k": "p",
      "x": "El tiempo acabó juntando lo que aquel día se rompió. Una bisnieta suya, de los Cabreros, se casó con un nieto de Venus, y el suegro y el yerno resultaron ser primos segundos. Su acta de defunción, de 1907, que todavía no se ha visto, dirá su edad, el nombre de su marido y el de sus hijos. Mientras tanto, de ella quedan una rama numerosa, un nombre que la memoria guardó bien y ese lazo que volvió a atarse."
+    },
+    {
+     "k": "p",
+     "x": "En noviembre de 2026 la sangre ató otro lazo. La prueba de ADN de un bisnieto de Venus encontró entre sus parientes lejanos a una bisnieta de Isidora, nieta de una de sus hijas. Comparten un trozo de ADN largo, como corresponde a primos terceros, tataranietos los dos de Francisco y Vicenta. El árbol de esa rama le da marido e hijos, que el Registro Civil tendrá que confirmar."
     }
    ],
-   "huella": "e9a3400c870833e8856d277d257620f0637d028b2267458dd5ce757d1e68e62c",
-   "chars": 2735
+   "huella": "937ede3d2e9d5a35f58aa801fe3bbd2c58b5af35e7a87de3db41c668951bd822",
+   "chars": 3113
   },
   {
    "clave": "pj:P089",
