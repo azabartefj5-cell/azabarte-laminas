@@ -14,7 +14,7 @@ static class Program
     static readonly TimeZoneInfo Ny = Zona("Eastern Standard Time", "America/New_York");
     static readonly TimeZoneInfo Madrid = Zona("Romance Standard Time", "Europe/Madrid");
     static int fallos;
-    static List<(DateTime Inicio, DateTime Fin)> sesiones5, sesiones1;
+    static readonly Dictionary<int, List<(DateTime Inicio, DateTime Fin)>> sesiones = new();
 
     static TimeZoneInfo Zona(params string[] ids)
     {
@@ -26,24 +26,27 @@ static class Program
 
     static int Main()
     {
-        var datos5 = Generar(semilla: 7, minutos: 5, desde: new DateTime(2022, 1, 3), hasta: new DateTime(2024, 3, 29), out sesiones5);
-        var datos1 = Generar(semilla: 11, minutos: 1, desde: new DateTime(2023, 1, 3), hasta: new DateTime(2023, 12, 29), out sesiones1);
-        Console.WriteLine($"Datos 5 min: {datos5.Count} barras; datos 1 min: {datos1.Count} barras");
+        var datos5 = Generar(semilla: 7, minutos: 5, desde: new DateTime(2022, 1, 3), hasta: new DateTime(2024, 3, 29), out var s5);
+        var datos1 = Generar(semilla: 11, minutos: 1, desde: new DateTime(2023, 1, 3), hasta: new DateTime(2023, 12, 29), out var s1);
+        var datos2 = Generar(semilla: 13, minutos: 2, desde: new DateTime(2022, 1, 3), hasta: new DateTime(2024, 3, 29), out var s2);
+        sesiones[5] = s5; sesiones[1] = s1; sesiones[2] = s2;
+        Console.WriteLine($"Datos 5 min: {datos5.Count} barras; 1 min: {datos1.Count}; 2 min: {datos2.Count}");
+        Action<SistemaCombinadoES> clasico = s => { s.MomActivo = true; s.RevActivo = false; };
 
         // A) Configuración por defecto (momentum + RSI2), plataforma en hora de Madrid
-        var a = Ejecutar("A: por defecto, NinjaTrader en hora de Madrid", datos5, Madrid, 5, null);
+        var a = Ejecutar("A: momentum + RSI2, NinjaTrader en hora de Madrid", datos5, Madrid, 5, clasico);
         // B) Igual con la plataforma en hora de Nueva York: mismas operaciones
-        var b = Ejecutar("B: por defecto, NinjaTrader en hora de Nueva York", datos5, Ny, 5, null);
+        var b = Ejecutar("B: momentum + RSI2, NinjaTrader en hora de Nueva York", datos5, Ny, 5, clasico);
         Comparar("A vs B (zona horaria de la plataforma)", a, b);
         // C) Stops con FromEntrySignal vacío (comportamiento visto en algunas versiones de NT8)
-        var c = Ejecutar("C: por defecto, stops sin FromEntrySignal", datos5, Madrid, 5, null, stopsSinSenal: true);
+        var c = Ejecutar("C: momentum + RSI2, stops sin FromEntrySignal", datos5, Madrid, 5, clasico, stopsSinSenal: true);
         Comparar("A vs C (stops sin señal)", a, c);
 
         // D) Todo activado, tamaño dinámico, límite diario y fechas excluidas
         var excluidas = new[] { "2023-03-22", "2023-05-03", "2023-06-14" };
-        var d = Ejecutar("D: tres módulos, tamaño dinámico, límites", datos5, Madrid, 5, s =>
+        var d = Ejecutar("D: cuatro módulos, tamaño dinámico, límites", datos5, Madrid, 5, s =>
         {
-            s.OrbActivo = true; s.ModoTamano = ModoTamanoPosicion.Dinamico; s.CapitalCuenta = 2_000_000;
+            s.MomActivo = true; s.OrbActivo = true; s.ModoTamano = ModoTamanoPosicion.Dinamico; s.CapitalCuenta = 2_000_000;
             s.MaxContratos = 6; s.MaxPerdidaDiaria = 15000; s.FechasExcluidas = string.Join(";", excluidas);
             s.SwingCortos = true; s.FiltroTendenciaIntradia = true;
         });
@@ -52,15 +55,41 @@ static class Program
         Verificar(entradasExcluidas == 0, $"sin entradas en fechas excluidas ({entradasExcluidas})");
 
         // E) Sólo el swing RSI2: comparar con una simulación independiente de las reglas de Connors
-        var e = Ejecutar("E: sólo swing RSI(2)", datos5, Madrid, 5, s => { s.MomActivo = false; });
+        var e = Ejecutar("E: sólo swing RSI(2)", datos5, Madrid, 5, s => { s.MomActivo = false; s.RevActivo = false; });
         ComprobarSwingCompleto(e);
 
         // F) Barras de 1 minuto con todos los módulos
-        var f = Ejecutar("F: barras de 1 minuto, tres módulos", datos1, Madrid, 1, s => { s.OrbActivo = true; s.MaxContratos = 3; });
+        var f = Ejecutar("F: barras de 1 minuto, cuatro módulos", datos1, Madrid, 1, s => { s.MomActivo = true; s.OrbActivo = true; s.MaxContratos = 3; });
 
         // G) ORB solo, para validar sus reglas una a una
-        var g = Ejecutar("G: sólo ORB", datos5, Madrid, 5, s => { s.MomActivo = false; s.SwingActivo = false; s.OrbActivo = true; });
+        var g = Ejecutar("G: sólo ORB", datos5, Madrid, 5, s => { s.MomActivo = false; s.SwingActivo = false; s.RevActivo = false; s.OrbActivo = true; });
         ComprobarOrb(g);
+
+        // H) Configuración por defecto nueva: velas de 2 minutos, reversión VWAP + RSI(2)
+        var h = Ejecutar("H: velas de 2 min, configuración por defecto (reversión VWAP + RSI2)", datos2, Madrid, 2, null);
+        ComprobarReversion(h);
+        // I) Velas de 2 minutos con los cuatro módulos (ORB de 5 min -> rango de 6 min)
+        var i2 = Ejecutar("I: velas de 2 min, cuatro módulos", datos2, Madrid, 2, s => { s.MomActivo = true; s.OrbActivo = true; s.MaxContratos = 4; });
+        ComprobarOrb(i2);
+        ComprobarReversion(i2);
+        // J) Sólo reversión con stop más ancho y objetivo más corto: más aciertos
+        var j = Ejecutar("J: velas de 2 min, sólo reversión, objetivo 0,5 y stop 4", datos2, Madrid, 2, s =>
+            { s.SwingActivo = false; s.RevObjetivoFraccion = 0.5; s.RevStopSigma = 4; });
+        ComprobarReversion(j);
+        double aciertoH = Acierto(h, "REV"), aciertoJ = Acierto(j, "REV");
+        Verificar(aciertoJ > aciertoH, $"objetivo más corto + stop más ancho sube la tasa de acierto ({aciertoH:P1} -> {aciertoJ:P1}, datos sintéticos)");
+
+        // Función de ajuste para el optimizador
+        var fit = new NinjaTrader.NinjaScript.OptimizationFitnesses.MaxBeneficioConAcierto80();
+        Verificar(NinjaTrader.NinjaScript.OptimizationFitnesses.MaxBeneficioConAcierto80.Puntuacion(200, 0.85, 1234) == 1234, "ajuste: con 85 % de aciertos puntúa el beneficio neto");
+        Verificar(NinjaTrader.NinjaScript.OptimizationFitnesses.MaxBeneficioConAcierto80.Puntuacion(200, 85, 1234) == 1234, "ajuste: acepta el porcentaje como 85");
+        Verificar(NinjaTrader.NinjaScript.OptimizationFitnesses.MaxBeneficioConAcierto80.Puntuacion(200, 0.79, 99999) < -1e6, "ajuste: con 79 % queda por detrás de cualquiera que llegue al 80 %");
+        Verificar(NinjaTrader.NinjaScript.OptimizationFitnesses.MaxBeneficioConAcierto80.Puntuacion(200, 0.79, 0) > NinjaTrader.NinjaScript.OptimizationFitnesses.MaxBeneficioConAcierto80.Puntuacion(200, 0.60, 0), "ajuste: 79 % puntúa mejor que 60 %");
+        Verificar(NinjaTrader.NinjaScript.OptimizationFitnesses.MaxBeneficioConAcierto80.Puntuacion(10, 1.0, 5000) < -1e9, "ajuste: con menos de 50 operaciones se descarta");
+        double v = fit.SimCalcular(j.Est);
+        var tpj = j.Est.SystemPerformance.AllTrades;
+        Verificar(Math.Abs(v - NinjaTrader.NinjaScript.OptimizationFitnesses.MaxBeneficioConAcierto80.Puntuacion(tpj.TradesCount, tpj.TradesPerformance.PercentProfitable, tpj.TradesPerformance.NetProfit)) < 1e-9,
+                  $"ajuste calculado sobre una ejecución ({tpj.TradesCount} operaciones, {tpj.TradesPerformance.PercentProfitable:P1} ganadoras)");
 
         Console.WriteLine();
         Console.WriteLine(fallos == 0 ? "RESULTADO: todas las comprobaciones correctas" : $"RESULTADO: {fallos} comprobaciones FALLIDAS");
@@ -88,7 +117,7 @@ static class Program
 
         var s = new SistemaCombinadoES();
         s.BarsPeriod.Value = minutos;
-        s.Bars.SimSesiones = (minutos == 5 ? sesiones5 : sesiones1)
+        s.Bars.SimSesiones = sesiones[minutos]
             .Select(x => (TimeZoneInfo.ConvertTime(x.Inicio, Ny, zonaPlataforma), TimeZoneInfo.ConvertTime(x.Fin, Ny, zonaPlataforma))).ToList();
         s.SimStopsSinSenal = stopsSinSenal;
         s.SimConfigurar(x => parametros?.Invoke((SistemaCombinadoES)x));
@@ -120,7 +149,7 @@ static class Program
     static void ComprobarIntradia(Ejecucion ej)
     {
         int malas = 0;
-        foreach (var op in ej.Est.SimOperaciones.Where(o => o.Senal.StartsWith("MOM") || o.Senal.StartsWith("ORB")))
+        foreach (var op in ej.Est.SimOperaciones.Where(o => o.Senal.StartsWith("MOM") || o.Senal.StartsWith("ORB") || o.Senal.StartsWith("REV")))
         {
             var ent = ej.Datos[op.BarraEntrada].Ny; var sal = ej.Datos[op.BarraSalida].Ny;
             bool mismoDia = ent.Date == sal.Date;
@@ -128,7 +157,7 @@ static class Program
             if (!mismoDia || !antesDeCierre) { malas++; if (malas <= 3) Console.WriteLine($"      intradía fuera de hora: {op.Senal} {ent} -> {sal}"); }
             if (ent.TimeOfDay <= new TimeSpan(9, 30, 0)) malas++;
         }
-        Verificar(malas == 0, $"[{ej.Titulo}] momentum/ORB entran en sesión regular y cierran el mismo día antes de las 16:00 NY ({malas})");
+        Verificar(malas == 0, $"[{ej.Titulo}] momentum/ORB/reversión entran en sesión regular y cierran el mismo día antes de las 16:00 NY ({malas})");
     }
 
     static void ComprobarMomentum(Ejecucion ej)
@@ -176,11 +205,14 @@ static class Program
         foreach (var op in ej.Est.SimOperaciones.Where(o => o.Senal.StartsWith("ORB")))
         {
             n++;
-            var barraOr = ej.Datos[op.BarraEnvioEntrada];
-            if (barraOr.Ny.TimeOfDay != new TimeSpan(9, 35, 0)) malas++;
-            int dir = barraOr.C > barraOr.O ? 1 : -1;
+            var fin = ej.Datos[op.BarraEnvioEntrada];
+            int finOr = 570 + 5, tFin = fin.Ny.Hour * 60 + fin.Ny.Minute;
+            if (tFin < finOr || tFin >= finOr + ej.Minutos) malas++;   // primera barra que completa los 5 min
+            var rango = ej.Datos.Where(x => x.Ny.Date == fin.Ny.Date && x.Ny.Hour * 60 + x.Ny.Minute > 570 && x.Ny <= fin.Ny).ToList();
+            double oR = rango[0].O, cR = rango[^1].C, hR = rango.Max(x => x.H), lR = rango.Min(x => x.L);
+            int dir = cR > oR ? 1 : -1;
             if (dir != op.Lado) malas++;
-            double stop = dir > 0 ? barraOr.L : barraOr.H;
+            double stop = dir > 0 ? lR : hR;
             if (op.NombreSalida == "Stop loss" && Math.Abs(op.PrecioSalida - stop) > 1.0 &&
                 (dir > 0 ? op.PrecioSalida > stop : op.PrecioSalida < stop)) malas++;
         }
@@ -216,6 +248,48 @@ static class Program
             Console.WriteLine("      reales:    " + string.Join(" ", reales.Take(8).Select(x => x.ToString("yyyy-MM-dd"))));
             Console.WriteLine("      esperadas: " + string.Join(" ", esperadasEntradas.Take(8).Select(x => x.ToString("yyyy-MM-dd"))));
         }
+    }
+
+    static double Acierto(Ejecucion e, string prefijo)
+    {
+        var ops = e.Est.SimOperaciones.Where(o => o.Senal.StartsWith(prefijo)).ToList();
+        return ops.Count == 0 ? 0 : ops.Count(o => o.Resultado > 0) / (double)ops.Count;
+    }
+
+    /// <summary>Recalcula VWAP, desviación y RSI(2) de las barras para cada entrada de reversión.</summary>
+    static void ComprobarReversion(Ejecucion ej)
+    {
+        var d = ej.Datos;
+        // RSI(2) de Wilder sobre todos los cierres de barra
+        var rsi = new double[d.Count]; double g = 0, l = 0; const int p = 2;
+        for (int i = 1; i < d.Count; i++)
+        {
+            double x = d[i].C - d[i - 1].C, up = Math.Max(x, 0), dn = Math.Max(-x, 0);
+            if (i <= p) { g += up; l += dn; if (i < p) { rsi[i] = double.NaN; continue; } g /= p; l /= p; }
+            else { g = (g * (p - 1) + up) / p; l = (l * (p - 1) + dn) / p; }
+            rsi[i] = l <= 0 ? (g <= 0 ? 50 : 100) : 100 - 100 / (1 + g / l);
+        }
+        int n = 0, malas = 0;
+        var plots = ej.Est.Values;
+        foreach (var o in ej.Est.SimOrdenes.Where(o => EsEntrada(o) && o.Name.StartsWith("REV")))
+        {
+            n++;
+            var b = d[o.BarraEnvio]; int t = b.Ny.Hour * 60 + b.Ny.Minute;
+            double pv = 0, pv2 = 0, vv = 0;
+            foreach (var x in d.Where(x => x.Ny.Date == b.Ny.Date && x.Ny.Hour * 60 + x.Ny.Minute > 570 && x.Ny <= b.Ny))
+            { double tp = (x.H + x.L + x.C) / 3; pv += tp * x.V; pv2 += tp * tp * x.V; vv += x.V; }
+            double vwap = pv / vv, desv = Math.Sqrt(Math.Max(0, pv2 / vv - vwap * vwap));
+            bool larga = o.OrderAction == OrderAction.Buy;
+            bool ok = t >= 600 && t <= 900
+                   && (larga ? b.C < vwap - 2 * desv && rsi[o.BarraEnvio] < 10 : b.C > vwap + 2 * desv && rsi[o.BarraEnvio] > 90)
+                   && plots[0].TieneValor(o.BarraEnvio)
+                   && (larga ? b.C >= plots[1].ValorEn(o.BarraEnvio) : b.C <= plots[0].ValorEn(o.BarraEnvio));
+            if (!ok) { malas++; if (malas <= 3) Console.WriteLine($"      reversión dudosa {o.Name} {b.Ny} c={b.C} vwap={vwap:0.00} desv={desv:0.00} rsi={rsi[o.BarraEnvio]:0.0}"); }
+        }
+        var porDia = ej.Est.SimOrdenes.Where(o => EsEntrada(o) && o.Name.StartsWith("REV")).GroupBy(o => d[o.BarraEnvio].Ny.Date).Max(x => x.Count());
+        Verificar(n > 0 && malas == 0, $"[{ej.Titulo}] {n} entradas de reversión con precio a 2 desviaciones del VWAP recalculado, RSI(2) extremo y dentro del noise area ({malas} incorrectas)");
+        Verificar(porDia <= ej.Est.RevMaxOperacionesDia, $"[{ej.Titulo}] máximo de operaciones de reversión al día respetado ({porDia})");
+        Console.WriteLine($"      tasa de acierto de la reversión en datos sintéticos: {Acierto(ej, "REV"):P1} (no predice la real)");
     }
 
     static double RsiReferencia(List<double> c, int p)

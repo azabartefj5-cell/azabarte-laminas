@@ -172,9 +172,38 @@ namespace NinjaTrader.NinjaScript
     }
 
     public class CurrencyPerf { public double CumProfit { get; internal set; } }
-    public class TradesPerformance { public CurrencyPerf Currency { get; } = new CurrencyPerf(); }
-    public class TradeCollection { public TradesPerformance TradesPerformance { get; } = new TradesPerformance(); }
+    public class TradesPerformance
+    {
+        public CurrencyPerf Currency { get; } = new CurrencyPerf();
+        public double NetProfit { get; internal set; }
+        public double PercentProfitable { get; internal set; }   // fracción 0..1, como NinjaTrader
+    }
+    public class TradeCollection
+    {
+        public TradesPerformance TradesPerformance { get; } = new TradesPerformance();
+        public int TradesCount { get; internal set; }
+    }
     public class SystemPerformance { public TradeCollection AllTrades { get; } = new TradeCollection(); }
+
+    public abstract class StrategyBase
+    {
+        public SystemPerformance SystemPerformance { get; } = new SystemPerformance();
+    }
+
+    public abstract class OptimizationFitness
+    {
+        public string Name { get; set; } = "";
+        public double Value { get; set; }
+        public State State { get; private set; }
+        protected virtual void OnStateChange() { }
+        protected virtual void OnCalculatePerformanceValue(StrategyBase strategy) { }
+        public double SimCalcular(StrategyBase s)
+        {
+            State = State.SetDefaults; OnStateChange();
+            OnCalculatePerformanceValue(s);
+            return Value;
+        }
+    }
 }
 
 namespace NinjaTrader.NinjaScript.Strategies
@@ -211,7 +240,7 @@ namespace NinjaTrader.NinjaScript.Strategies
         public bool SalidaPendiente;
     }
 
-    public abstract class Strategy
+    public abstract class Strategy : NinjaTrader.NinjaScript.StrategyBase
     {
         // ---- Propiedades de configuración ----
         public string Description { get; set; } = "";
@@ -243,7 +272,6 @@ namespace NinjaTrader.NinjaScript.Strategies
         public Instrument Instrument { get; } = new Instrument();
         public double TickSize => Instrument.MasterInstrument.TickSize;
         public Position Position { get; } = new Position();
-        public SystemPerformance SystemPerformance { get; } = new SystemPerformance();
         public ISeries<DateTime> Time { get; }
         public ISeries<double> Open { get; }
         public ISeries<double> High { get; }
@@ -361,7 +389,7 @@ namespace NinjaTrader.NinjaScript.Strategies
                 var lote = new Lote { Senal = o.Name, Lado = lado, Cantidad = o.Quantity, Precio = precio, Barra = CurrentBar, BarraEnvio = o.BarraEnvio };
                 lotes.Add(lote);
                 SimMaxContratosAbiertos = Math.Max(SimMaxContratosAbiertos, lotes.Sum(l => l.Cantidad));
-                SystemPerformance.AllTrades.TradesPerformance.Currency.CumProfit -= SimComisionPorLado * o.Quantity;
+                this.SystemPerformance.AllTrades.TradesPerformance.Currency.CumProfit -= SimComisionPorLado * o.Quantity;
                 OnExecutionUpdate(new Execution { Order = o, Price = precio, Quantity = o.Quantity, Time = barras[CurrentBar].Tiempo }, Guid.NewGuid().ToString(), precio, o.Quantity, Position.MarketPosition, Guid.NewGuid().ToString(), barras[CurrentBar].Tiempo);
                 // Stop y objetivo por ejecución de entrada (StopTargetHandling.PerEntryExecution)
                 if (stopsCfg.TryGetValue(lote.Senal, out var sc))
@@ -382,7 +410,11 @@ namespace NinjaTrader.NinjaScript.Strategies
                 var lote = lotes.First(l => l.Senal == o.SenalReal);
                 lotes.Remove(lote);
                 double resultado = lote.Lado * (precio - lote.Precio) * lote.Cantidad * pv - 2 * SimComisionPorLado * lote.Cantidad;
-                SystemPerformance.AllTrades.TradesPerformance.Currency.CumProfit += lote.Lado * (precio - lote.Precio) * lote.Cantidad * pv - SimComisionPorLado * lote.Cantidad;
+                this.SystemPerformance.AllTrades.TradesPerformance.Currency.CumProfit += lote.Lado * (precio - lote.Precio) * lote.Cantidad * pv - SimComisionPorLado * lote.Cantidad;
+                var tp = this.SystemPerformance.AllTrades.TradesPerformance;
+                this.SystemPerformance.AllTrades.TradesCount++;
+                tp.NetProfit += resultado;
+                tp.PercentProfitable = (SimOperaciones.Count(x => x.Resultado > 0) + (resultado > 0 ? 1 : 0)) / (double)this.SystemPerformance.AllTrades.TradesCount;
                 SimOperaciones.Add(new OperacionSim { Senal = lote.Senal, Lado = lote.Lado, Cantidad = lote.Cantidad, PrecioEntrada = lote.Precio, PrecioSalida = precio, BarraEntrada = lote.Barra, BarraSalida = CurrentBar, BarraEnvioEntrada = lote.BarraEnvio, NombreSalida = o.Name, Resultado = resultado });
                 OnExecutionUpdate(new Execution { Order = o, Price = precio, Quantity = o.Quantity, Time = barras[CurrentBar].Tiempo }, Guid.NewGuid().ToString(), precio, o.Quantity, Position.MarketPosition, Guid.NewGuid().ToString(), barras[CurrentBar].Tiempo);
                 foreach (var otra in new[] { lote.Stop, lote.Objetivo })

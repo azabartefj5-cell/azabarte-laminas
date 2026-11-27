@@ -22,13 +22,26 @@
 //      media de 200 días y el RSI de 2 periodos es < 10; vende cuando cierra por encima de
 //      la media de 5 días. Mantiene posición varios días (swing).
 //
-//  Los tres módulos se pueden activar o desactivar por separado. Comparten la gestión de
+//   4) REVERSIÓN INTRADÍA AL VWAP (módulo de alta tasa de acierto, pensado para velas de
+//      2 minutos). Compra cuando el precio se aleja k desviaciones por debajo del VWAP con el
+//      RSI(2) de las velas sobrevendido, siempre que siga dentro del "noise area" (no es un día
+//      de tendencia); objetivo corto (vuelta al VWAP) y stop más amplio. Esa asimetría es la que
+//      da muchos aciertos: el precio de cada acierto es que las pérdidas son mayores que las
+//      ganancias, así que la tasa de acierto por sí sola no garantiza beneficio.
+//
+//  Configuración por defecto (perfil de alta tasa de acierto): reversión VWAP + RSI(2) swing
+//  activados; momentum (≈36 % de aciertos, muchas ganancias pequeñas perdidas y pocas grandes)
+//  y ORB desactivados. Para buscar los parámetros con más beneficio que mantengan >= 80 % de
+//  aciertos usa el optimizador de Strategy Analyzer con la función de ajuste
+//  "MaxBeneficioConAcierto80" (archivo SistemaCombinadoESAjuste.cs).
+//
+//  Los cuatro módulos se pueden activar o desactivar por separado. Comparten la gestión de
 //  riesgo: tamaño fijo o dinámico, máximo de contratos, pérdida diaria máxima, fechas
 //  excluidas (FOMC, IPC, etc.) y bloqueo de señales opuestas (nunca se invierte la
 //  posición de otro módulo).
 //
 //  REQUISITOS DE USO
-//   - Gráfico de minutos (recomendado 5 min) de ES o MES, plantilla de horario
+//   - Gráfico de minutos (recomendado 2 min; también 1 o 5) de ES o MES, plantilla de horario
 //     "CME US Index Futures ETH" y al menos 300 días cargados (la media de 200 días del
 //     módulo RSI(2) necesita ese histórico).
 //   - Las horas de los parámetros están en HORA DE NUEVA YORK, sea cual sea la zona horaria
@@ -210,8 +223,10 @@ namespace NinjaTrader.NinjaScript.Strategies
         private const string OrbS = "ORB_S";
         private const string SwL = "RSI2_L";
         private const string SwS = "RSI2_S";
-        private static readonly string[] Senales = { MomL, MomS, OrbL, OrbS, SwL, SwS };
-        private static readonly string[] SenalesIntradia = { MomL, MomS, OrbL, OrbS };
+        private const string RevL = "REV_L";
+        private const string RevS = "REV_S";
+        private static readonly string[] Senales = { MomL, MomS, OrbL, OrbS, SwL, SwS, RevL, RevS };
+        private static readonly string[] SenalesIntradia = { MomL, MomS, OrbL, OrbS, RevL, RevS };
 
         private const int MaxDiasHistorial = 400;
         private const int BarrasCaducidadOrden = 3;
@@ -226,7 +241,7 @@ namespace NinjaTrader.NinjaScript.Strategies
         private int minutoFinSesionNy;
 
         // ---- Horas en minutos desde medianoche (NY) ----
-        private int iniRth, finRth, cierreIntradia, momPrimera, momUltima, swingDecision;
+        private int iniRth, finRth, cierreIntradia, momPrimera, momUltima, swingDecision;  // minutos NY
 
         // ---- Datos diarios ----
         private List<DiaRth> historial;
@@ -234,7 +249,16 @@ namespace NinjaTrader.NinjaScript.Strategies
         private bool hoyFinalizado;
         private DateTime fechaActual = DateTime.MinValue;
         private int diasCompletados;
-        private double vwapPV, vwapV;
+        private double vwapPV, vwapV, vwapPV2;
+
+        // ---- Bandas de ruido del día (compartidas por momentum y reversión) ----
+        private bool bandasValidas;
+        private double bandaSupHoy, bandaInfHoy;
+
+        // ---- Reversión al VWAP ----
+        private int revDesde, revHasta, revOperacionesHoy;
+        private double rsiGan, rsiPer, rsiBarra = double.NaN;
+        private int rsiN;
 
         // ---- Estado de los módulos ----
         private double orApertura, orMaximo, orMinimo, orCierre;
@@ -301,7 +325,7 @@ namespace NinjaTrader.NinjaScript.Strategies
                 Depurar = false;
 
                 // 1. Momentum intradía
-                MomActivo = true;
+                MomActivo = false;   // perfil de alta tasa de acierto: ver cabecera
                 MomDias = 14;
                 MomMultiplicador = 1.0;
                 MomPrimeraHora = 1000;
@@ -335,6 +359,23 @@ namespace NinjaTrader.NinjaScript.Strategies
                 SwingRiesgoPct = 1.0;
                 SwingApalancamientoMax = 1.0;
 
+                // 4. Reversión al VWAP (alta tasa de acierto)
+                RevActivo = true;
+                RevDesde = 1000;
+                RevHasta = 1500;
+                RevBandaSigma = 2.0;
+                RevRsiPeriodo = 2;
+                RevRsiUmbral = 10;
+                RevObjetivoFraccion = 1.0;
+                RevStopSigma = 3.0;
+                RevSalidaVwap = true;
+                RevCortos = true;
+                RevSoloDentroRuido = true;
+                RevMaxOperacionesDia = 3;
+                RevContratos = 1;
+                RevRiesgoPct = 0.5;
+                RevApalancamientoMax = 2.0;
+
                 AddPlot(Brushes.DodgerBlue, "BandaSuperior");
                 AddPlot(Brushes.OrangeRed, "BandaInferior");
                 AddPlot(Brushes.Gold, "VWAP");
@@ -366,6 +407,9 @@ namespace NinjaTrader.NinjaScript.Strategies
                 momPrimera = Calculos.HhmmAMinutos(MomPrimeraHora);
                 momUltima = Math.Min(Calculos.HhmmAMinutos(MomUltimaEntrada), cierreIntradia);
                 swingDecision = Math.Min(Calculos.HhmmAMinutos(SwingHoraDecision), finRth);
+                revDesde = Calculos.HhmmAMinutos(RevDesde);
+                revHasta = Math.Min(Calculos.HhmmAMinutos(RevHasta), cierreIntradia);
+                rsiGan = 0; rsiPer = 0; rsiN = 0; rsiBarra = double.NaN;
 
                 tzPlataforma = Core.Globals.GeneralOptions.TimeZoneInfo;
                 if (tzPlataforma == null)
@@ -383,7 +427,9 @@ namespace NinjaTrader.NinjaScript.Strategies
                     if (MomFrecuenciaMin % BarsPeriod.Value != 0 || 30 % BarsPeriod.Value != 0)
                         Print(Name + " AVISO: el periodo de barra (" + BarsPeriod.Value + " min) debería dividir 30 y la frecuencia del momentum.");
                     if (OrbActivo && OrbMinutos % BarsPeriod.Value != 0)
-                        Print(Name + " AVISO: OrbMinutos (" + OrbMinutos + ") debe ser múltiplo del periodo de barra (" + BarsPeriod.Value + ").");
+                        Print(Name + " AVISO: con barras de " + BarsPeriod.Value + " min el rango de apertura de " + OrbMinutos +
+                              " min se amplía hasta la primera barra que lo completa (" +
+                              ((OrbMinutos + BarsPeriod.Value - 1) / BarsPeriod.Value * BarsPeriod.Value) + " min).");
                 }
                 if (Calculate != Calculate.OnBarClose)
                     Print(Name + " AVISO: la estrategia está diseñada para Calculate = On bar close.");
@@ -405,6 +451,7 @@ namespace NinjaTrader.NinjaScript.Strategies
             int t = ny.Hour * 60 + ny.Minute;
             DateTime fecha = ny.Date;
 
+            ActualizarRsiBarra();
             CaducarOrdenesPendientes();
             Reconciliar();
 
@@ -424,8 +471,10 @@ namespace NinjaTrader.NinjaScript.Strategies
 
             if (enRth && !hoyFinalizado)
             {
+                CalcularBandasRuido(t);
                 ModuloOrb(t);
                 ModuloMomentum(t);
+                ModuloReversion(t);
                 Values[2][0] = Vwap();
             }
 
@@ -445,6 +494,9 @@ namespace NinjaTrader.NinjaScript.Strategies
             hoy.Fecha = fecha;
             hoyFinalizado = false;
             vwapPV = 0;
+            vwapPV2 = 0;
+            revOperacionesHoy = 0;
+            bandasValidas = false;
             vwapV = 0;
             orTieneDatos = false;
             orbDecididoHoy = false;
@@ -477,7 +529,9 @@ namespace NinjaTrader.NinjaScript.Strategies
             double volumen = Volume[0];
             if (volumen <= 0)
                 volumen = 1;
-            vwapPV += (High[0] + Low[0] + Close[0]) / 3.0 * volumen;
+            double tipico = (High[0] + Low[0] + Close[0]) / 3.0;
+            vwapPV += tipico * volumen;
+            vwapPV2 += tipico * tipico * volumen;
             vwapV += volumen;
         }
 
@@ -535,23 +589,32 @@ namespace NinjaTrader.NinjaScript.Strategies
             return c;
         }
 
+        /// <summary>Bandas del "noise area" para la barra actual (las usan momentum y reversión).</summary>
+        private void CalcularBandasRuido(int t)
+        {
+            bandasValidas = false;
+            if (historial.Count < MomDias)
+                return;
+            double sigma = Calculos.SigmaRuido(historial, t, MomDias, Math.Max(3, MomDias / 2));
+            double cierrePrevio = CierrePrevio();
+            if (double.IsNaN(sigma) || double.IsNaN(cierrePrevio))
+                return;
+            bandaSupHoy = Math.Max(hoy.Apertura, cierrePrevio) * (1 + MomMultiplicador * sigma);
+            bandaInfHoy = Math.Min(hoy.Apertura, cierrePrevio) * (1 - MomMultiplicador * sigma);
+            bandasValidas = true;
+            Values[0][0] = bandaSupHoy;
+            Values[1][0] = bandaInfHoy;
+        }
+
         // =============================================================================
         //  MÓDULO 1: MOMENTUM INTRADÍA (NOISE AREA + VWAP)
         // =============================================================================
         private void ModuloMomentum(int t)
         {
-            if (!MomActivo || historial.Count < MomDias)
+            if (!MomActivo || !bandasValidas)
                 return;
-
-            double sigma = Calculos.SigmaRuido(historial, t, MomDias, Math.Max(3, MomDias / 2));
-            double cierrePrevio = CierrePrevio();
-            if (double.IsNaN(sigma) || double.IsNaN(cierrePrevio))
-                return;
-
-            double bandaSup = Math.Max(hoy.Apertura, cierrePrevio) * (1 + MomMultiplicador * sigma);
-            double bandaInf = Math.Min(hoy.Apertura, cierrePrevio) * (1 - MomMultiplicador * sigma);
-            Values[0][0] = bandaSup;
-            Values[1][0] = bandaInf;
+            double bandaSup = bandaSupHoy;
+            double bandaInf = bandaInfHoy;
 
             int pos = PosicionModulo(MomL, MomS);
             bool esRevision = t >= momPrimera && (t - iniRth) % MomFrecuenciaMin == 0;
@@ -636,32 +699,36 @@ namespace NinjaTrader.NinjaScript.Strategies
         {
             if (!OrbActivo)
                 return;
-            int finOr = iniRth + OrbMinutos;
-
-            if (t <= finOr)
-            {
-                if (!orTieneDatos)
-                {
-                    orTieneDatos = true;
-                    orApertura = Open[0];
-                    orMaximo = High[0];
-                    orMinimo = Low[0];
-                }
-                else
-                {
-                    orMaximo = Math.Max(orMaximo, High[0]);
-                    orMinimo = Math.Min(orMinimo, Low[0]);
-                }
-                orCierre = Close[0];
-                if (t < finOr)
-                    return;
-            }
-
             if (orbDecididoHoy)
                 return;
+            int finOr = iniRth + OrbMinutos;
+            int periodo = Math.Max(1, BarsPeriod.Value);
+            if (t >= finOr + periodo)
+            {
+                orbDecididoHoy = true;   // la barra que completa el rango no existe (faltan datos)
+                return;
+            }
+
+            // El rango termina con la primera barra que llega a iniRth + OrbMinutos
+            // (con velas de 2 min y OrbMinutos = 5, el rango real es de 6 min).
+            if (!orTieneDatos)
+            {
+                orTieneDatos = true;
+                orApertura = Open[0];
+                orMaximo = High[0];
+                orMinimo = Low[0];
+            }
+            else
+            {
+                orMaximo = Math.Max(orMaximo, High[0]);
+                orMinimo = Math.Min(orMinimo, Low[0]);
+            }
+            orCierre = Close[0];
+            if (t < finOr)
+                return;
             orbDecididoHoy = true;
-            if (t != finOr || !orTieneDatos || t >= LimiteIntradia())
-                return;   // falta la barra que completa el rango: no se opera hoy
+            if (t >= LimiteIntradia())
+                return;
 
             int dir = orCierre > orApertura ? 1 : (orCierre < orApertura ? -1 : 0);
             if (dir == 0)
@@ -687,6 +754,108 @@ namespace NinjaTrader.NinjaScript.Strategies
             double objetivoTicks = OrbObjetivoR > 0 ? Math.Max(1, Math.Round(OrbObjetivoR * riesgo / TickSize)) : double.NaN;
             Entrar(dir, cantidad, dir > 0 ? OrbL : OrbS, stop, objetivoTicks,
                    "ORB " + OrbMinutos + " min, rango " + Fmt(orMinimo) + "-" + Fmt(orMaximo));
+        }
+
+        // =============================================================================
+        //  MÓDULO 4: REVERSIÓN INTRADÍA AL VWAP (ALTA TASA DE ACIERTO)
+        // =============================================================================
+        private void ModuloReversion(int t)
+        {
+            if (!RevActivo)
+                return;
+            int pos = PosicionModulo(RevL, RevS);
+            double vwap = Vwap();
+            double desv = DesvVwap();
+            double c = Close[0];
+
+            // Salida en cuanto el precio vuelve al VWAP (además del objetivo fijo).
+            if (pos > 0 && RevSalidaVwap && c >= vwap)
+            {
+                Salir(RevL, "vuelta al VWAP " + Fmt(vwap));
+                return;
+            }
+            if (pos < 0 && RevSalidaVwap && c <= vwap)
+            {
+                Salir(RevS, "vuelta al VWAP " + Fmt(vwap));
+                return;
+            }
+            if (pos != 0 || HayPendiente(RevL) || HayPendiente(RevS))
+                return;
+            if (t < revDesde || t > Math.Min(revHasta, LimiteIntradia() - 1) || revOperacionesHoy >= RevMaxOperacionesDia)
+                return;
+            if (double.IsNaN(desv) || desv < 2 * TickSize || double.IsNaN(rsiBarra))
+                return;
+
+            int dir = 0;
+            if (c < vwap - RevBandaSigma * desv && rsiBarra < RevRsiUmbral)
+                dir = 1;
+            else if (RevCortos && c > vwap + RevBandaSigma * desv && rsiBarra > 100 - RevRsiUmbral)
+                dir = -1;
+            if (dir == 0)
+                return;
+            // Sólo dentro del noise area: si el precio ya rompió la banda es un día de tendencia
+            // y la reversión suele fallar.
+            if (RevSoloDentroRuido && (!bandasValidas || (dir > 0 ? c < bandaInfHoy : c > bandaSupHoy)))
+                return;
+            if (FiltroTendenciaIntradia && !TendenciaPermite(dir))
+                return;
+            if (!PuedeAbrir(dir))
+                return;
+
+            double stop = c - dir * RevStopSigma * desv;
+            double riesgo = Math.Abs(c - stop);
+            double objetivoTicks = Math.Max(1, Math.Round(Math.Abs(vwap - c) * RevObjetivoFraccion / TickSize));
+
+            int cantidad;
+            if (ModoTamano == ModoTamanoPosicion.Dinamico)
+            {
+                int porRiesgo = (int)Math.Floor(Capital() * RevRiesgoPct / 100.0 / (riesgo * ValorPunto()));
+                int porApalancamiento = (int)Math.Floor(Capital() * RevApalancamientoMax / Nocional());
+                cantidad = Math.Min(porRiesgo, porApalancamiento);
+            }
+            else
+                cantidad = RevContratos;
+
+            string senal = dir > 0 ? RevL : RevS;
+            Entrar(dir, cantidad, senal, stop, objetivoTicks,
+                   "reversión: precio " + Fmt(c) + ", VWAP " + Fmt(vwap) + ", desv " + Fmt(desv) +
+                   ", RSI(" + RevRsiPeriodo + ") barra " + rsiBarra.ToString("0.0", CultureInfo.InvariantCulture));
+            if (HayPendiente(senal))
+                revOperacionesHoy++;
+        }
+
+        /// <summary>Desviación típica del precio respecto al VWAP, ponderada por volumen.</summary>
+        private double DesvVwap()
+        {
+            if (vwapV <= 0)
+                return double.NaN;
+            double vwap = vwapPV / vwapV;
+            return Math.Sqrt(Math.Max(0, vwapPV2 / vwapV - vwap * vwap));
+        }
+
+        /// <summary>RSI de Wilder sobre los cierres de las barras del gráfico, actualizado barra a barra.</summary>
+        private void ActualizarRsiBarra()
+        {
+            int p = Math.Max(1, RevRsiPeriodo);
+            double d = Close[0] - Close[1];
+            double sube = d > 0 ? d : 0;
+            double baja = d < 0 ? -d : 0;
+            if (rsiN < p)
+            {
+                rsiGan += sube;
+                rsiPer += baja;
+                rsiN++;
+                if (rsiN < p)
+                    return;
+                rsiGan /= p;
+                rsiPer /= p;
+            }
+            else
+            {
+                rsiGan = (rsiGan * (p - 1) + sube) / p;
+                rsiPer = (rsiPer * (p - 1) + baja) / p;
+            }
+            rsiBarra = rsiPer <= 0 ? (rsiGan <= 0 ? 50 : 100) : 100 - 100 / (1 + rsiGan / rsiPer);
         }
 
         // =============================================================================
@@ -1325,6 +1494,78 @@ namespace NinjaTrader.NinjaScript.Strategies
         [Range(0.1, 20)]
         [Display(Name = "Apalancamiento máximo", Description = "Modo dinámico.", Order = 12, GroupName = "3. Swing RSI(2) Connors")]
         public double SwingApalancamientoMax { get; set; }
+
+        // ---------- 4. Reversión al VWAP ----------
+        [NinjaScriptProperty]
+        [Display(Name = "Activar reversión al VWAP", Description = "Módulo de alta tasa de acierto (pensado para velas de 2 min).", Order = 1, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public bool RevActivo { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0, 2359)]
+        [Display(Name = "Primera entrada (HHMM NY)", Order = 2, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevDesde { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0, 2359)]
+        [Display(Name = "Última entrada (HHMM NY)", Order = 3, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevHasta { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.5, 6)]
+        [Display(Name = "Distancia de entrada (desviaciones)", Description = "Entra cuando el precio está a k desviaciones del VWAP. Más alto = menos operaciones y más aciertos.", Order = 4, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevBandaSigma { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(2, 50)]
+        [Display(Name = "Periodo RSI de las barras", Order = 5, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevRsiPeriodo { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(1, 50)]
+        [Display(Name = "Umbral RSI", Description = "Largos si RSI < umbral; cortos si RSI > 100 - umbral.", Order = 6, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevRsiUmbral { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.1, 2)]
+        [Display(Name = "Objetivo (fracción del camino al VWAP)", Description = "1 = el VWAP. Menos = objetivo más corto y más aciertos, pero menos ganancia por acierto.", Order = 7, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevObjetivoFraccion { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.5, 10)]
+        [Display(Name = "Stop (desviaciones desde la entrada)", Description = "Más amplio = más aciertos, pero pérdidas mayores cuando falla.", Order = 8, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevStopSigma { get; set; }
+
+        [NinjaScriptProperty]
+        [Display(Name = "Salir al tocar el VWAP", Order = 9, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public bool RevSalidaVwap { get; set; }
+
+        [NinjaScriptProperty]
+        [Display(Name = "Permitir cortos", Order = 10, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public bool RevCortos { get; set; }
+
+        [NinjaScriptProperty]
+        [Display(Name = "Sólo dentro del noise area", Description = "No opera contra un día de tendencia (precio fuera de las bandas de ruido).", Order = 11, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public bool RevSoloDentroRuido { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(1, 50)]
+        [Display(Name = "Máximo de operaciones al día", Order = 12, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevMaxOperacionesDia { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(1, 100)]
+        [Display(Name = "Contratos (modo fijo)", Order = 13, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevContratos { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.05, 10)]
+        [Display(Name = "Riesgo por operación (%)", Description = "Modo dinámico: riesgo hasta el stop.", Order = 14, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevRiesgoPct { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.1, 20)]
+        [Display(Name = "Apalancamiento máximo", Description = "Modo dinámico.", Order = 15, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevApalancamientoMax { get; set; }
 
         #endregion
     }

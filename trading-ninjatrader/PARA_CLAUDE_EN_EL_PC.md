@@ -6,26 +6,40 @@
 >
 > **Para ti, Claude del PC:** este documento lo escribió otra sesión de Claude en la nube, que no
 > tenía acceso a este PC ni a NinjaTrader. Contiene todo lo necesario: contexto, tareas, reglas de
-> seguridad y el código completo (sección 8). Trabaja en español con el usuario.
+> seguridad y el código completo de los dos archivos (sección 8). Trabaja en español con el usuario.
 
 ---
 
 ## 1. Contexto
 
-- **Lo que pidió el usuario:** un sistema de trading automático para NinjaTrader 8, sobre los
-  futuros del S&P 500, que combine en uno los mejores sistemas automáticos públicos.
-- **Lo que se construyó:** `SistemaCombinadoES.cs`, una estrategia NinjaScript (C#) para **ES** o
-  **MES**, que reúne tres módulos:
-  1. **Momentum intradía "Noise Area" + VWAP** (Zarattini, Aziz y Barbon, 2024). Activado.
-  2. **Opening Range Breakout de 5 minutos** (Zarattini y Aziz, 2023). Desactivado por defecto,
-     porque las réplicas indican que no sobrevive a los costes.
-  3. **Swing RSI(2) de Connors**. Activado.
+- **Lo que pidió el usuario:**
+  1. un sistema de trading automático para NinjaTrader 8, sobre los futuros del S&P 500, que
+     combine en uno los mejores sistemas automáticos públicos;
+  2. después, que funcione con **velas de 2 minutos**, que **gane el 80 % de las veces** y que
+     **maximice la rentabilidad**.
+- **Lo que se le explicó sobre el 80 %:** ningún sistema lo garantiza. La tasa de acierto se fabrica
+  con objetivos cortos y stops amplios, a costa de pérdidas mayores. Con un 80 % de aciertos sólo se
+  gana si la pérdida media es menor que 4 veces la ganancia media. Por eso se le dieron los mandos y
+  una función de ajuste, para buscar con sus datos reales el máximo beneficio entre las
+  combinaciones con al menos un 80 % de aciertos. **No le prometas el 80 %.**
+- **Lo que se construyó:**
+  - `SistemaCombinadoES.cs`, una estrategia NinjaScript (C#) para **ES** o **MES**, con cuatro
+    módulos:
+    1. **Momentum intradía "Noise Area" + VWAP** (Zarattini, Aziz y Barbon, 2024). Desactivado en
+       el perfil actual, porque acierta un ≈36 %.
+    2. **Opening Range Breakout de 5 minutos** (Zarattini y Aziz, 2023). Desactivado, porque las
+       réplicas indican que no sobrevive a los costes.
+    3. **Swing RSI(2) de Connors**. Activado.
+    4. **Reversión intradía al VWAP**, el módulo de alta tasa de acierto para velas de 2 minutos.
+       Activado.
+  - `SistemaCombinadoESAjuste.cs`, la función de ajuste `MaxBeneficioConAcierto80` para el
+    optimizador de Strategy Analyzer.
 - **Dónde está:** repositorio público `azabartefj5-cell/azabarte-laminas`, carpeta
   `trading-ninjatrader/`, en la rama `claude/kind-hypatia-y1q8gz`. Hay un PR en borrador:
   https://github.com/azabartefj5-cell/azabarte-laminas/pull/9. Cuando se fusione, estará en `main`.
 - **Estado:**
-  - Compila con C# 5 contra una imitación de la API de NinjaTrader 8.
-  - La lógica se verificó con datos sintéticos, y pasan las 7 pruebas.
+  - Los dos archivos compilan con C# 5 contra una imitación de la API de NinjaTrader 8.
+  - La lógica se verificó con datos sintéticos de 1, 2 y 5 minutos, y pasan los 10 escenarios.
   - **Nunca se ha compilado en un NinjaTrader real**, ni se ha probado con datos reales del ES.
   - Tu trabajo es dar esos dos pasos con el usuario.
 
@@ -65,7 +79,7 @@ Si `Test-Path` devuelve `False`, búscala:
 Get-ChildItem -Path $env:USERPROFILE -Directory -Recurse -Depth 4 -Filter 'NinjaTrader 8' -ErrorAction SilentlyContinue | Select-Object FullName
 ```
 
-### Tarea 2. Instalar el archivo
+### Tarea 2. Instalar los archivos
 
 **Opción A, recomendada:** descargarlo de GitHub tal cual, con su BOM UTF-8 incluido.
 
@@ -74,18 +88,32 @@ $archivo = Join-Path $dest 'SistemaCombinadoES.cs'
 if (Test-Path $archivo) { Copy-Item $archivo "$archivo.bak" -Force }
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/azabartefj5-cell/azabarte-laminas/claude/kind-hypatia-y1q8gz/trading-ninjatrader/SistemaCombinadoES.cs' -OutFile $archivo
 (Get-FileHash $archivo -Algorithm SHA256).Hash
+
+$destAjuste = Join-Path $docs 'NinjaTrader 8\bin\Custom\OptimizationFitnesses'
+New-Item -ItemType Directory -Force -Path $destAjuste | Out-Null
+$ajuste = Join-Path $destAjuste 'SistemaCombinadoESAjuste.cs'
+if (Test-Path $ajuste) { Copy-Item $ajuste "$ajuste.bak" -Force }
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/azabartefj5-cell/azabarte-laminas/claude/kind-hypatia-y1q8gz/trading-ninjatrader/SistemaCombinadoESAjuste.cs' -OutFile $ajuste
+(Get-FileHash $ajuste -Algorithm SHA256).Hash
 ```
 
-El hash esperado es
-`EFD1AB14B106134A467D272461E0257C95F56FB3EA764FB21EE12B2813571AAC`. Si la rama ya no existe porque
+Hashes esperados:
+- `SistemaCombinadoES.cs`: `66238B74CC41B38119408FF06CC3FF26EEC1C8BA32F75E1F0E646B86CAB2F530`
+- `SistemaCombinadoESAjuste.cs`: `2C77555AB770645E91A44F33E4EF26E9A86CFCB7E30AB2DA7CFC75E458DA16A2`
+
+Si la descarga da otro hash, puede que la rama tenga una versión más nueva que este documento. En ese
+caso, usa la de GitHub. Si la rama ya no existe porque
 el PR se fusionó, cambia `claude/kind-hypatia-y1q8gz` por `main` en la URL.
 
-**Opción B, sin internet:** copia el bloque de código de la sección 8 en `$archivo`. Después vuelve a
+**Opción B, sin internet:** copia los dos bloques de código de la sección 8 en `$archivo` y
+`$ajuste`. Después vuelve a
 guardarlo en UTF-8 con BOM, para que las tildes de los textos se lean bien:
 
 ```powershell
-$t = [IO.File]::ReadAllText($archivo)
-[IO.File]::WriteAllText($archivo, $t, (New-Object System.Text.UTF8Encoding $true))
+foreach ($f in @($archivo, $ajuste)) {
+  $t = [IO.File]::ReadAllText($f)
+  [IO.File]::WriteAllText($f, $t, (New-Object System.Text.UTF8Encoding $true))
+}
 ```
 
 Con la opción B el hash puede variar por los saltos de línea, y no pasa nada.
@@ -93,7 +121,8 @@ Con la opción B el hash puede variar por los saltos de línea, y no pasa nada.
 ### Tarea 3. Compilar
 
 1. Pide al usuario que abra NinjaTrader, si no está abierto, y después **New → NinjaScript Editor**.
-2. En el panel derecho: **Strategies → SistemaCombinadoES**, doble clic, y **Compile (F5)**.
+2. En el panel derecho: **Strategies → SistemaCombinadoES**, doble clic, y **Compile (F5)**. Una
+   compilación compila todos los scripts, incluida la función de ajuste.
 3. Si aparecen errores, pide al usuario el **texto exacto** de la lista de errores: archivo, línea y
    mensaje. Una captura de pantalla también sirve.
 4. **Un error en otro archivo** de `bin\Custom` también impide compilar, porque NinjaTrader compila
@@ -108,10 +137,11 @@ Estos son los puntos con más riesgo, con un arreglo para cada uno:
 |---|---|
 | Error en `IsOverlay = true;` | Borra esa línea: las líneas dibujadas pueden quedar en otro panel, pero la lógica no cambia |
 | Error en `Core.Globals.GeneralOptions.TimeZoneInfo` | Sustitúyelo por `TimeZoneInfo.Local`. Es válido mientras la zona de NinjaTrader (Tools → Options → General) sea la de Windows |
-| Error en `SessionIterator`, `GetNextSession`, `ActualSessionEnd` o `Bars.IsFirstBarOfSession` | Son de `NinjaTrader.Data`. Comprueba que el `using NinjaTrader.Data;` está presente. Si no se puede resolver, quita el campo `sesiones`, la línea `sesiones = new SessionIterator(Bars);` y la llamada `ActualizarSesion();` con su método. Así sólo se pierde el ajuste de los días de cierre anticipado |
+| Error en `SessionIterator`, `GetNextSession`, `ActualSessionEnd` o `Bars.IsFirstBarOfSession` | Son de `NinjaTrader.Data`. Comprueba que el `using NinjaTrader.Data;` está presente. Si no se puede resolver, elimina `ActualizarSesion()` y haz que `LimiteIntradia()` devuelva `cierreIntradia`. Así sólo se pierde el ajuste de los días de cierre anticipado |
 | Error en `Instrument.MasterInstrument.RoundToTickSize` | Usa `Math.Round(precio / TickSize) * TickSize` |
 | Error en `SystemPerformance.AllTrades.TradesPerformance.Currency.CumProfit` | Es la ruta estándar de NinjaTrader 8. Revisa la ortografía antes de tocar la lógica |
 | Errores de firma en `OnOrderUpdate` u `OnExecutionUpdate` | Copia la firma exacta de la ayuda de NinjaTrader 8 de tu versión, sin cambiar el cuerpo |
+| Error en `OptimizationFitness`, `OnCalculatePerformanceValue`, `PercentProfitable`, `NetProfit` o `TradesCount` (archivo de ajuste) | Compáralo con una función de ajuste de serie de tu instalación, por ejemplo `MaxNetProfit` o `MaxPercentProfitable` en *OptimizationFitnesses*. Copia de ahí la firma y las rutas exactas |
 | `The type or namespace ... already contains a definition` | Otro script define un tipo con el mismo nombre. Renombra el espacio de nombres `SistemaCombinadoESComun` a uno único |
 
 Después de cada cambio, vuelve a compilar. No cambies la lógica de trading para quitar un error de
@@ -125,7 +155,7 @@ Pide al usuario que abra **New → Strategy Analyzer** con esta configuración:
 |---|---|
 | Strategy | `SistemaCombinadoES` |
 | Instrument | `MES 12-26` (o `MES 03-27` tras el roll de diciembre). Para varios años usa el continuo `ES ##-##` con Tools → Options → Data → *Merge policy* = "Merge back adjusted" |
-| Data series | Minute, 5 |
+| Data series | **Minute, 2** |
 | Trading hours | **CME US Index Futures ETH** |
 | Start date | Al menos 1 año antes del periodo a evaluar: el RSI(2) necesita 200 sesiones y el momentum 14 |
 | Include commission | **Sí**, con la plantilla de comisiones de su bróker |
@@ -133,10 +163,14 @@ Pide al usuario que abra **New → Strategy Analyzer** con esta configuración:
 | Exit on session close | **false**. Si se activa, cierra cada día la posición del RSI(2) |
 | Calculate | On bar close |
 
+Antes del plan de pruebas, una cuenta que debes explicar al usuario: con un 80 % de aciertos, el
+sistema gana dinero sólo si la pérdida media es menor que 4 veces la ganancia media, comisiones
+incluidas.
+
 Plan de pruebas que conviene seguir:
 
-1. **Cada módulo por separado**: sólo momentum (RSI2 apagado), sólo RSI2 (momentum apagado) y sólo
-   ORB. Después los activados por defecto juntos.
+1. **Cada módulo por separado**: sólo reversión VWAP, sólo RSI2, sólo momentum y sólo ORB. Después,
+   la configuración por defecto (reversión + RSI2).
 2. Para cada prueba, apunta: beneficio neto, **máxima caída (drawdown)**, número de operaciones,
    % de aciertos, beneficio medio por operación, factor de beneficio y la curva de capital.
 3. Divide el histórico en dos mitades. Si una mitad gana y la otra pierde mucho, no es robusto.
@@ -145,9 +179,38 @@ Plan de pruebas que conviene seguir:
 
 Si el usuario puede exportar los resultados (clic derecho en *Trades* → Export), analízalos con él.
 
+### Tarea 5 bis. Optimizar: el máximo beneficio con al menos un 80 % de aciertos
+
+1. En Strategy Analyzer:
+   - *Backtest type* = **Optimization**;
+   - *Optimize on* = **MaxBeneficioConAcierto80**;
+   - *Optimizer* = **Genetic**.
+2. Optimiza sólo los mandos del módulo 4:
+
+   | Parámetro | Mínimo | Máximo | Paso |
+   |---|---|---|---|
+   | Distancia de entrada | 1,5 | 3,0 | 0,25 |
+   | Umbral RSI | 5 | 20 | 5 |
+   | Objetivo | 0,3 | 1,0 | 0,1 |
+   | Stop | 2 | 6 | 0,5 |
+
+3. Cómo leer el resultado:
+   - la función pone primero, ordenadas por **beneficio neto**, las combinaciones con al menos un
+     80 % de ganadoras y 50 operaciones;
+   - si la mejor puntuación es negativa y enorme (por debajo de −1.000.000), **ninguna combinación
+     llegó al 80 %**. Díselo al usuario tal cual, sin forzarlo.
+4. Valídalo con **Walk Forward Optimization**, por ejemplo con 180 días de optimización y 60 de
+   prueba. Sólo cuentan los periodos de prueba.
+5. Revisa con el usuario:
+   - beneficio medio / pérdida media;
+   - mayor pérdida;
+   - pérdidas consecutivas;
+   - máxima caída.
+6. No pruebes cientos de rangos distintos hasta que salga algo bonito: eso es sobreajuste.
+
 ### Tarea 6. Simulación en tiempo real
 
-1. Gráfico de 5 minutos de **MES** (contrato vigente), plantilla ETH y **Days to load = 365** en
+1. Gráfico de **2 minutos** de **MES** (contrato vigente), plantilla ETH y **Days to load = 365** en
    *Data Series*.
 2. Clic derecho → **Strategies** → añadir `SistemaCombinadoES` → cuenta **Sim101** → marcar
    **Enabled**.
@@ -179,6 +242,9 @@ zona configurada en NinjaTrader, así que funciona igual en hora de España. En 
 
 ### Módulo 1 · Momentum intradía (activado)
 
+Ahora viene **desactivado**; sus bandas se calculan igualmente, porque el módulo 4 las usa como
+filtro.
+
 1. Para cada hora del día *t*: `σ(t)` = media, en los últimos 14 días, de
    `|precio a la hora t / apertura del día − 1|`.
 2. Bandas: `superior = max(apertura, cierre de ayer) × (1 + σ(t))` e
@@ -205,6 +271,20 @@ zona configurada en NinjaTrader, así que funciona igual en hora de España. En 
 2. Sale cuando `cierre > media de 5 días`, o como máximo a los 10 días.
 3. Stop de catástrofe a 3 × el ATR diario (0 = sin stop, como el original).
 4. Cortos opcionales, desactivados.
+
+### Módulo 4 · Reversión intradía al VWAP (activado)
+
+1. Calcula el VWAP del día y la desviación típica del precio respecto a él, ponderada por volumen.
+2. Entre las 10:00 y las 15:00:
+   - compra si el precio está más de 2 desviaciones por debajo del VWAP y el RSI(2) de las velas es
+     menor que 10;
+   - vende en corto en el caso simétrico.
+3. Sólo opera si el precio sigue dentro del noise area del módulo 1.
+4. Objetivo: el VWAP (fracción 1). También sale si una vela cierra en el VWAP.
+5. Stop a 3 desviaciones más allá de la entrada.
+6. Como máximo 3 operaciones al día, y cierre a las 15:55.
+
+Para subir la tasa de acierto: acorta el objetivo o ensancha el stop. Con eso cada fallo cuesta más.
 
 ### Reglas comunes
 
@@ -233,7 +313,7 @@ zona configurada en NinjaTrader, así que funciona igual en hora de España. En 
 | | Filtro de tendencia intradía / SMA | false / 200 |
 | | ATR diario (días) | 14 |
 | | Depurar | false |
-| 1. Momentum | Activar / días / multiplicador | true / 14 / 1,0 |
+| 1. Momentum | Activar / días / multiplicador | **false** / 14 / 1,0 |
 | | Primera revisión / frecuencia / última entrada | 1000 / 30 min / 1530 |
 | | Stop con VWAP | true |
 | | Contratos / vol. objetivo / apal. máx. | 1 / 2 % / 4 |
@@ -245,6 +325,11 @@ zona configurada en NinjaTrader, así que funciona igual en hora de España. En 
 | | Stop (× ATR) / cortos | 3,0 / false |
 | | Hora de decisión | 1600 (con la plantilla RTH: 1555, y cierre intradía 1550) |
 | | Contratos / riesgo % / apal. máx. | 1 / 1 % / 1 |
+| 4. Reversión VWAP | Activar / primera / última entrada | true / 1000 / 1500 |
+| | Distancia de entrada / periodo RSI / umbral | 2 desviaciones / 2 / 10 |
+| | Objetivo / stop | 1,0 (el VWAP) / 3 desviaciones |
+| | Salir al tocar el VWAP / cortos / sólo dentro del noise area | true / true / true |
+| | Máx. operaciones al día / contratos / riesgo % / apal. máx. | 3 / 1 / 0,5 % / 2 |
 
 Tamaño de los contratos: un **ES vale 50 $ por punto** y un **MES 5 $ por punto**. Con cuentas de
 menos de 100.000 $, usa MES.
@@ -257,11 +342,15 @@ menos de 100.000 $, usa MES.
   construye cada sesión regular (apertura, máximo, mínimo, cierre y el movimiento a cada minuto) y
   guarda las últimas 400 en `historial`.
 - **Señales por módulo.** Cada módulo tiene sus nombres de señal: `MOM_L`, `MOM_S`, `ORB_L`,
-  `ORB_S`, `RSI2_L` y `RSI2_S`. Usa el enfoque gestionado de NinjaTrader con
+  `ORB_S`, `RSI2_L`, `RSI2_S`, `REV_L` y `REV_S`. Usa el enfoque gestionado de NinjaTrader con
   `EntryHandling.UniqueEntries`, y salidas `ExitLong` / `ExitShort` con nombre `<señal>_X`.
 - **Posición por señal.** Se sigue en `OnExecutionUpdate`. Si un stop llega sin `FromEntrySignal`,
   la señal se deduce del orden de las entradas o del lado. Cada barra se compara con
   `Position`, y si la posición real es plana se pone todo a cero.
+- **Cálculos intradía.** `CalcularBandasRuido()` calcula las bandas del noise area de cada barra.
+  `DesvVwap()` y `ActualizarRsiBarra()` dan la desviación respecto al VWAP y el RSI de las barras.
+- **Rango de apertura.** El ORB termina en la primera barra que alcanza los 5 minutos: con velas de
+  2 minutos son 6.
 - **Fin de sesión.** `SessionIterator` da el fin real de la sesión según la plantilla de horario.
 - **Conversión horaria.** `ANuevaYork()` pasa la hora de la barra (zona de NinjaTrader) a UTC y de
   ahí a Nueva York.
@@ -276,6 +365,7 @@ menos de 100.000 $, usa MES.
 | Momentum intradía | SPY 2007–2024: +1.985 % neto, 19,6 % anual, Sharpe 1,33 (paper). Réplicas en futuros: Sharpe ≈0,7–0,9, ≈8 % anual, 36 % de aciertos |
 | ORB 5 min | QQQ 2016–2023: 33,2 % anual sin deslizamiento. Réplicas: el objetivo de 10R se alcanza en el 2–3 % de las operaciones, y la ventaja neta de costes es casi nula |
 | RSI(2) | SPY 1993–2026: factor de beneficio 2,5–3,5. Gana el 71 % de las veces, pero rinde menos que comprar y mantener porque está poco tiempo en el mercado |
+| Reversión VWAP | Sin paper propio: es un módulo construido para esta petición. En datos sintéticos, pasar de objetivo 1 y stop 3 a objetivo 0,5 y stop 4 subió los aciertos del 57 % al 72 % sin que hubiera ventaja real, lo que demuestra que el % de aciertos por sí solo no indica rentabilidad |
 
 Fuentes:
 - https://www.sfi.ch/fr/publications/n-24-97-beat-the-market-an-effective-intraday-momentum-strategy-for-s-p500-etf-spy
@@ -294,7 +384,10 @@ Se verificó, con una imitación de NinjaTrader y datos sintéticos (carpeta
 `trading-ninjatrader/verificacion/` del repositorio):
 
 - la compilación con C# 5, sin avisos;
-- que en más de 2.000 operaciones no hay órdenes ignoradas, duplicadas ni inversiones de posición;
+- que en más de 6.000 operaciones, con barras de 1, 2 y 5 minutos, no hay órdenes ignoradas,
+  duplicadas ni inversiones de posición;
+- que las entradas de reversión cumplen sus condiciones, recalculadas de forma independiente;
+- que la función de ajuste ordena bien las combinaciones;
 - que las bandas de momentum coinciden con un cálculo independiente;
 - que las entradas del RSI(2) coinciden con una simulación independiente;
 - que el ORB respeta su vela y su stop;
@@ -308,10 +401,12 @@ Se verificó, con una imitación de NinjaTrader y datos sintéticos (carpeta
 
 ---
 
-## 8. Código completo: `SistemaCombinadoES.cs`
+## 8. Código completo
 
-Guárdalo como `SistemaCombinadoES.cs` en `Documentos\NinjaTrader 8\bin\Custom\Strategies\`
-(opción B de la tarea 2).
+### 8.1 `SistemaCombinadoES.cs`
+
+Guárdalo en `Documentos\NinjaTrader 8\bin\Custom\Strategies\` (opción B de la tarea 2).
+
 
 ```csharp
 // =====================================================================================
@@ -338,13 +433,26 @@ Guárdalo como `SistemaCombinadoES.cs` en `Documentos\NinjaTrader 8\bin\Custom\S
 //      media de 200 días y el RSI de 2 periodos es < 10; vende cuando cierra por encima de
 //      la media de 5 días. Mantiene posición varios días (swing).
 //
-//  Los tres módulos se pueden activar o desactivar por separado. Comparten la gestión de
+//   4) REVERSIÓN INTRADÍA AL VWAP (módulo de alta tasa de acierto, pensado para velas de
+//      2 minutos). Compra cuando el precio se aleja k desviaciones por debajo del VWAP con el
+//      RSI(2) de las velas sobrevendido, siempre que siga dentro del "noise area" (no es un día
+//      de tendencia); objetivo corto (vuelta al VWAP) y stop más amplio. Esa asimetría es la que
+//      da muchos aciertos: el precio de cada acierto es que las pérdidas son mayores que las
+//      ganancias, así que la tasa de acierto por sí sola no garantiza beneficio.
+//
+//  Configuración por defecto (perfil de alta tasa de acierto): reversión VWAP + RSI(2) swing
+//  activados; momentum (≈36 % de aciertos, muchas ganancias pequeñas perdidas y pocas grandes)
+//  y ORB desactivados. Para buscar los parámetros con más beneficio que mantengan >= 80 % de
+//  aciertos usa el optimizador de Strategy Analyzer con la función de ajuste
+//  "MaxBeneficioConAcierto80" (archivo SistemaCombinadoESAjuste.cs).
+//
+//  Los cuatro módulos se pueden activar o desactivar por separado. Comparten la gestión de
 //  riesgo: tamaño fijo o dinámico, máximo de contratos, pérdida diaria máxima, fechas
 //  excluidas (FOMC, IPC, etc.) y bloqueo de señales opuestas (nunca se invierte la
 //  posición de otro módulo).
 //
 //  REQUISITOS DE USO
-//   - Gráfico de minutos (recomendado 5 min) de ES o MES, plantilla de horario
+//   - Gráfico de minutos (recomendado 2 min; también 1 o 5) de ES o MES, plantilla de horario
 //     "CME US Index Futures ETH" y al menos 300 días cargados (la media de 200 días del
 //     módulo RSI(2) necesita ese histórico).
 //   - Las horas de los parámetros están en HORA DE NUEVA YORK, sea cual sea la zona horaria
@@ -526,8 +634,10 @@ namespace NinjaTrader.NinjaScript.Strategies
         private const string OrbS = "ORB_S";
         private const string SwL = "RSI2_L";
         private const string SwS = "RSI2_S";
-        private static readonly string[] Senales = { MomL, MomS, OrbL, OrbS, SwL, SwS };
-        private static readonly string[] SenalesIntradia = { MomL, MomS, OrbL, OrbS };
+        private const string RevL = "REV_L";
+        private const string RevS = "REV_S";
+        private static readonly string[] Senales = { MomL, MomS, OrbL, OrbS, SwL, SwS, RevL, RevS };
+        private static readonly string[] SenalesIntradia = { MomL, MomS, OrbL, OrbS, RevL, RevS };
 
         private const int MaxDiasHistorial = 400;
         private const int BarrasCaducidadOrden = 3;
@@ -542,7 +652,7 @@ namespace NinjaTrader.NinjaScript.Strategies
         private int minutoFinSesionNy;
 
         // ---- Horas en minutos desde medianoche (NY) ----
-        private int iniRth, finRth, cierreIntradia, momPrimera, momUltima, swingDecision;
+        private int iniRth, finRth, cierreIntradia, momPrimera, momUltima, swingDecision;  // minutos NY
 
         // ---- Datos diarios ----
         private List<DiaRth> historial;
@@ -550,7 +660,16 @@ namespace NinjaTrader.NinjaScript.Strategies
         private bool hoyFinalizado;
         private DateTime fechaActual = DateTime.MinValue;
         private int diasCompletados;
-        private double vwapPV, vwapV;
+        private double vwapPV, vwapV, vwapPV2;
+
+        // ---- Bandas de ruido del día (compartidas por momentum y reversión) ----
+        private bool bandasValidas;
+        private double bandaSupHoy, bandaInfHoy;
+
+        // ---- Reversión al VWAP ----
+        private int revDesde, revHasta, revOperacionesHoy;
+        private double rsiGan, rsiPer, rsiBarra = double.NaN;
+        private int rsiN;
 
         // ---- Estado de los módulos ----
         private double orApertura, orMaximo, orMinimo, orCierre;
@@ -617,7 +736,7 @@ namespace NinjaTrader.NinjaScript.Strategies
                 Depurar = false;
 
                 // 1. Momentum intradía
-                MomActivo = true;
+                MomActivo = false;   // perfil de alta tasa de acierto: ver cabecera
                 MomDias = 14;
                 MomMultiplicador = 1.0;
                 MomPrimeraHora = 1000;
@@ -651,6 +770,23 @@ namespace NinjaTrader.NinjaScript.Strategies
                 SwingRiesgoPct = 1.0;
                 SwingApalancamientoMax = 1.0;
 
+                // 4. Reversión al VWAP (alta tasa de acierto)
+                RevActivo = true;
+                RevDesde = 1000;
+                RevHasta = 1500;
+                RevBandaSigma = 2.0;
+                RevRsiPeriodo = 2;
+                RevRsiUmbral = 10;
+                RevObjetivoFraccion = 1.0;
+                RevStopSigma = 3.0;
+                RevSalidaVwap = true;
+                RevCortos = true;
+                RevSoloDentroRuido = true;
+                RevMaxOperacionesDia = 3;
+                RevContratos = 1;
+                RevRiesgoPct = 0.5;
+                RevApalancamientoMax = 2.0;
+
                 AddPlot(Brushes.DodgerBlue, "BandaSuperior");
                 AddPlot(Brushes.OrangeRed, "BandaInferior");
                 AddPlot(Brushes.Gold, "VWAP");
@@ -682,6 +818,9 @@ namespace NinjaTrader.NinjaScript.Strategies
                 momPrimera = Calculos.HhmmAMinutos(MomPrimeraHora);
                 momUltima = Math.Min(Calculos.HhmmAMinutos(MomUltimaEntrada), cierreIntradia);
                 swingDecision = Math.Min(Calculos.HhmmAMinutos(SwingHoraDecision), finRth);
+                revDesde = Calculos.HhmmAMinutos(RevDesde);
+                revHasta = Math.Min(Calculos.HhmmAMinutos(RevHasta), cierreIntradia);
+                rsiGan = 0; rsiPer = 0; rsiN = 0; rsiBarra = double.NaN;
 
                 tzPlataforma = Core.Globals.GeneralOptions.TimeZoneInfo;
                 if (tzPlataforma == null)
@@ -699,7 +838,9 @@ namespace NinjaTrader.NinjaScript.Strategies
                     if (MomFrecuenciaMin % BarsPeriod.Value != 0 || 30 % BarsPeriod.Value != 0)
                         Print(Name + " AVISO: el periodo de barra (" + BarsPeriod.Value + " min) debería dividir 30 y la frecuencia del momentum.");
                     if (OrbActivo && OrbMinutos % BarsPeriod.Value != 0)
-                        Print(Name + " AVISO: OrbMinutos (" + OrbMinutos + ") debe ser múltiplo del periodo de barra (" + BarsPeriod.Value + ").");
+                        Print(Name + " AVISO: con barras de " + BarsPeriod.Value + " min el rango de apertura de " + OrbMinutos +
+                              " min se amplía hasta la primera barra que lo completa (" +
+                              ((OrbMinutos + BarsPeriod.Value - 1) / BarsPeriod.Value * BarsPeriod.Value) + " min).");
                 }
                 if (Calculate != Calculate.OnBarClose)
                     Print(Name + " AVISO: la estrategia está diseñada para Calculate = On bar close.");
@@ -721,6 +862,7 @@ namespace NinjaTrader.NinjaScript.Strategies
             int t = ny.Hour * 60 + ny.Minute;
             DateTime fecha = ny.Date;
 
+            ActualizarRsiBarra();
             CaducarOrdenesPendientes();
             Reconciliar();
 
@@ -740,8 +882,10 @@ namespace NinjaTrader.NinjaScript.Strategies
 
             if (enRth && !hoyFinalizado)
             {
+                CalcularBandasRuido(t);
                 ModuloOrb(t);
                 ModuloMomentum(t);
+                ModuloReversion(t);
                 Values[2][0] = Vwap();
             }
 
@@ -761,6 +905,9 @@ namespace NinjaTrader.NinjaScript.Strategies
             hoy.Fecha = fecha;
             hoyFinalizado = false;
             vwapPV = 0;
+            vwapPV2 = 0;
+            revOperacionesHoy = 0;
+            bandasValidas = false;
             vwapV = 0;
             orTieneDatos = false;
             orbDecididoHoy = false;
@@ -793,7 +940,9 @@ namespace NinjaTrader.NinjaScript.Strategies
             double volumen = Volume[0];
             if (volumen <= 0)
                 volumen = 1;
-            vwapPV += (High[0] + Low[0] + Close[0]) / 3.0 * volumen;
+            double tipico = (High[0] + Low[0] + Close[0]) / 3.0;
+            vwapPV += tipico * volumen;
+            vwapPV2 += tipico * tipico * volumen;
             vwapV += volumen;
         }
 
@@ -851,23 +1000,32 @@ namespace NinjaTrader.NinjaScript.Strategies
             return c;
         }
 
+        /// <summary>Bandas del "noise area" para la barra actual (las usan momentum y reversión).</summary>
+        private void CalcularBandasRuido(int t)
+        {
+            bandasValidas = false;
+            if (historial.Count < MomDias)
+                return;
+            double sigma = Calculos.SigmaRuido(historial, t, MomDias, Math.Max(3, MomDias / 2));
+            double cierrePrevio = CierrePrevio();
+            if (double.IsNaN(sigma) || double.IsNaN(cierrePrevio))
+                return;
+            bandaSupHoy = Math.Max(hoy.Apertura, cierrePrevio) * (1 + MomMultiplicador * sigma);
+            bandaInfHoy = Math.Min(hoy.Apertura, cierrePrevio) * (1 - MomMultiplicador * sigma);
+            bandasValidas = true;
+            Values[0][0] = bandaSupHoy;
+            Values[1][0] = bandaInfHoy;
+        }
+
         // =============================================================================
         //  MÓDULO 1: MOMENTUM INTRADÍA (NOISE AREA + VWAP)
         // =============================================================================
         private void ModuloMomentum(int t)
         {
-            if (!MomActivo || historial.Count < MomDias)
+            if (!MomActivo || !bandasValidas)
                 return;
-
-            double sigma = Calculos.SigmaRuido(historial, t, MomDias, Math.Max(3, MomDias / 2));
-            double cierrePrevio = CierrePrevio();
-            if (double.IsNaN(sigma) || double.IsNaN(cierrePrevio))
-                return;
-
-            double bandaSup = Math.Max(hoy.Apertura, cierrePrevio) * (1 + MomMultiplicador * sigma);
-            double bandaInf = Math.Min(hoy.Apertura, cierrePrevio) * (1 - MomMultiplicador * sigma);
-            Values[0][0] = bandaSup;
-            Values[1][0] = bandaInf;
+            double bandaSup = bandaSupHoy;
+            double bandaInf = bandaInfHoy;
 
             int pos = PosicionModulo(MomL, MomS);
             bool esRevision = t >= momPrimera && (t - iniRth) % MomFrecuenciaMin == 0;
@@ -952,32 +1110,36 @@ namespace NinjaTrader.NinjaScript.Strategies
         {
             if (!OrbActivo)
                 return;
-            int finOr = iniRth + OrbMinutos;
-
-            if (t <= finOr)
-            {
-                if (!orTieneDatos)
-                {
-                    orTieneDatos = true;
-                    orApertura = Open[0];
-                    orMaximo = High[0];
-                    orMinimo = Low[0];
-                }
-                else
-                {
-                    orMaximo = Math.Max(orMaximo, High[0]);
-                    orMinimo = Math.Min(orMinimo, Low[0]);
-                }
-                orCierre = Close[0];
-                if (t < finOr)
-                    return;
-            }
-
             if (orbDecididoHoy)
                 return;
+            int finOr = iniRth + OrbMinutos;
+            int periodo = Math.Max(1, BarsPeriod.Value);
+            if (t >= finOr + periodo)
+            {
+                orbDecididoHoy = true;   // la barra que completa el rango no existe (faltan datos)
+                return;
+            }
+
+            // El rango termina con la primera barra que llega a iniRth + OrbMinutos
+            // (con velas de 2 min y OrbMinutos = 5, el rango real es de 6 min).
+            if (!orTieneDatos)
+            {
+                orTieneDatos = true;
+                orApertura = Open[0];
+                orMaximo = High[0];
+                orMinimo = Low[0];
+            }
+            else
+            {
+                orMaximo = Math.Max(orMaximo, High[0]);
+                orMinimo = Math.Min(orMinimo, Low[0]);
+            }
+            orCierre = Close[0];
+            if (t < finOr)
+                return;
             orbDecididoHoy = true;
-            if (t != finOr || !orTieneDatos || t >= LimiteIntradia())
-                return;   // falta la barra que completa el rango: no se opera hoy
+            if (t >= LimiteIntradia())
+                return;
 
             int dir = orCierre > orApertura ? 1 : (orCierre < orApertura ? -1 : 0);
             if (dir == 0)
@@ -1003,6 +1165,108 @@ namespace NinjaTrader.NinjaScript.Strategies
             double objetivoTicks = OrbObjetivoR > 0 ? Math.Max(1, Math.Round(OrbObjetivoR * riesgo / TickSize)) : double.NaN;
             Entrar(dir, cantidad, dir > 0 ? OrbL : OrbS, stop, objetivoTicks,
                    "ORB " + OrbMinutos + " min, rango " + Fmt(orMinimo) + "-" + Fmt(orMaximo));
+        }
+
+        // =============================================================================
+        //  MÓDULO 4: REVERSIÓN INTRADÍA AL VWAP (ALTA TASA DE ACIERTO)
+        // =============================================================================
+        private void ModuloReversion(int t)
+        {
+            if (!RevActivo)
+                return;
+            int pos = PosicionModulo(RevL, RevS);
+            double vwap = Vwap();
+            double desv = DesvVwap();
+            double c = Close[0];
+
+            // Salida en cuanto el precio vuelve al VWAP (además del objetivo fijo).
+            if (pos > 0 && RevSalidaVwap && c >= vwap)
+            {
+                Salir(RevL, "vuelta al VWAP " + Fmt(vwap));
+                return;
+            }
+            if (pos < 0 && RevSalidaVwap && c <= vwap)
+            {
+                Salir(RevS, "vuelta al VWAP " + Fmt(vwap));
+                return;
+            }
+            if (pos != 0 || HayPendiente(RevL) || HayPendiente(RevS))
+                return;
+            if (t < revDesde || t > Math.Min(revHasta, LimiteIntradia() - 1) || revOperacionesHoy >= RevMaxOperacionesDia)
+                return;
+            if (double.IsNaN(desv) || desv < 2 * TickSize || double.IsNaN(rsiBarra))
+                return;
+
+            int dir = 0;
+            if (c < vwap - RevBandaSigma * desv && rsiBarra < RevRsiUmbral)
+                dir = 1;
+            else if (RevCortos && c > vwap + RevBandaSigma * desv && rsiBarra > 100 - RevRsiUmbral)
+                dir = -1;
+            if (dir == 0)
+                return;
+            // Sólo dentro del noise area: si el precio ya rompió la banda es un día de tendencia
+            // y la reversión suele fallar.
+            if (RevSoloDentroRuido && (!bandasValidas || (dir > 0 ? c < bandaInfHoy : c > bandaSupHoy)))
+                return;
+            if (FiltroTendenciaIntradia && !TendenciaPermite(dir))
+                return;
+            if (!PuedeAbrir(dir))
+                return;
+
+            double stop = c - dir * RevStopSigma * desv;
+            double riesgo = Math.Abs(c - stop);
+            double objetivoTicks = Math.Max(1, Math.Round(Math.Abs(vwap - c) * RevObjetivoFraccion / TickSize));
+
+            int cantidad;
+            if (ModoTamano == ModoTamanoPosicion.Dinamico)
+            {
+                int porRiesgo = (int)Math.Floor(Capital() * RevRiesgoPct / 100.0 / (riesgo * ValorPunto()));
+                int porApalancamiento = (int)Math.Floor(Capital() * RevApalancamientoMax / Nocional());
+                cantidad = Math.Min(porRiesgo, porApalancamiento);
+            }
+            else
+                cantidad = RevContratos;
+
+            string senal = dir > 0 ? RevL : RevS;
+            Entrar(dir, cantidad, senal, stop, objetivoTicks,
+                   "reversión: precio " + Fmt(c) + ", VWAP " + Fmt(vwap) + ", desv " + Fmt(desv) +
+                   ", RSI(" + RevRsiPeriodo + ") barra " + rsiBarra.ToString("0.0", CultureInfo.InvariantCulture));
+            if (HayPendiente(senal))
+                revOperacionesHoy++;
+        }
+
+        /// <summary>Desviación típica del precio respecto al VWAP, ponderada por volumen.</summary>
+        private double DesvVwap()
+        {
+            if (vwapV <= 0)
+                return double.NaN;
+            double vwap = vwapPV / vwapV;
+            return Math.Sqrt(Math.Max(0, vwapPV2 / vwapV - vwap * vwap));
+        }
+
+        /// <summary>RSI de Wilder sobre los cierres de las barras del gráfico, actualizado barra a barra.</summary>
+        private void ActualizarRsiBarra()
+        {
+            int p = Math.Max(1, RevRsiPeriodo);
+            double d = Close[0] - Close[1];
+            double sube = d > 0 ? d : 0;
+            double baja = d < 0 ? -d : 0;
+            if (rsiN < p)
+            {
+                rsiGan += sube;
+                rsiPer += baja;
+                rsiN++;
+                if (rsiN < p)
+                    return;
+                rsiGan /= p;
+                rsiPer /= p;
+            }
+            else
+            {
+                rsiGan = (rsiGan * (p - 1) + sube) / p;
+                rsiPer = (rsiPer * (p - 1) + baja) / p;
+            }
+            rsiBarra = rsiPer <= 0 ? (rsiGan <= 0 ? 50 : 100) : 100 - 100 / (1 + rsiGan / rsiPer);
         }
 
         // =============================================================================
@@ -1642,11 +1906,163 @@ namespace NinjaTrader.NinjaScript.Strategies
         [Display(Name = "Apalancamiento máximo", Description = "Modo dinámico.", Order = 12, GroupName = "3. Swing RSI(2) Connors")]
         public double SwingApalancamientoMax { get; set; }
 
+        // ---------- 4. Reversión al VWAP ----------
+        [NinjaScriptProperty]
+        [Display(Name = "Activar reversión al VWAP", Description = "Módulo de alta tasa de acierto (pensado para velas de 2 min).", Order = 1, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public bool RevActivo { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0, 2359)]
+        [Display(Name = "Primera entrada (HHMM NY)", Order = 2, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevDesde { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0, 2359)]
+        [Display(Name = "Última entrada (HHMM NY)", Order = 3, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevHasta { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.5, 6)]
+        [Display(Name = "Distancia de entrada (desviaciones)", Description = "Entra cuando el precio está a k desviaciones del VWAP. Más alto = menos operaciones y más aciertos.", Order = 4, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevBandaSigma { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(2, 50)]
+        [Display(Name = "Periodo RSI de las barras", Order = 5, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevRsiPeriodo { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(1, 50)]
+        [Display(Name = "Umbral RSI", Description = "Largos si RSI < umbral; cortos si RSI > 100 - umbral.", Order = 6, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevRsiUmbral { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.1, 2)]
+        [Display(Name = "Objetivo (fracción del camino al VWAP)", Description = "1 = el VWAP. Menos = objetivo más corto y más aciertos, pero menos ganancia por acierto.", Order = 7, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevObjetivoFraccion { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.5, 10)]
+        [Display(Name = "Stop (desviaciones desde la entrada)", Description = "Más amplio = más aciertos, pero pérdidas mayores cuando falla.", Order = 8, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevStopSigma { get; set; }
+
+        [NinjaScriptProperty]
+        [Display(Name = "Salir al tocar el VWAP", Order = 9, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public bool RevSalidaVwap { get; set; }
+
+        [NinjaScriptProperty]
+        [Display(Name = "Permitir cortos", Order = 10, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public bool RevCortos { get; set; }
+
+        [NinjaScriptProperty]
+        [Display(Name = "Sólo dentro del noise area", Description = "No opera contra un día de tendencia (precio fuera de las bandas de ruido).", Order = 11, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public bool RevSoloDentroRuido { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(1, 50)]
+        [Display(Name = "Máximo de operaciones al día", Order = 12, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevMaxOperacionesDia { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(1, 100)]
+        [Display(Name = "Contratos (modo fijo)", Order = 13, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public int RevContratos { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.05, 10)]
+        [Display(Name = "Riesgo por operación (%)", Description = "Modo dinámico: riesgo hasta el stop.", Order = 14, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevRiesgoPct { get; set; }
+
+        [NinjaScriptProperty]
+        [Range(0.1, 20)]
+        [Display(Name = "Apalancamiento máximo", Description = "Modo dinámico.", Order = 15, GroupName = "4. Reversión VWAP (alta tasa de acierto)")]
+        public double RevApalancamientoMax { get; set; }
+
         #endregion
+    }
+}
+```
+
+### 8.2 `SistemaCombinadoESAjuste.cs`
+
+Guárdalo en `Documentos\NinjaTrader 8\bin\Custom\OptimizationFitnesses\`.
+
+```csharp
+// =====================================================================================
+//  MaxBeneficioConAcierto80  -  Función de ajuste (Optimization Fitness) para NinjaTrader 8
+// -------------------------------------------------------------------------------------
+//  Úsala en Strategy Analyzer -> Optimization -> "Optimize on": MaxBeneficioConAcierto80.
+//  Ordena las combinaciones de parámetros así:
+//    1) las que tienen al menos un 80 % de operaciones ganadoras y suficientes operaciones,
+//       por BENEFICIO NETO (mayor es mejor);
+//    2) detrás, las que no llegan al 80 %, por cercanía a ese 80 %.
+//  Así el optimizador busca "la máxima rentabilidad con al menos un 80 % de aciertos".
+//
+//  Instalación: copia este archivo en
+//    Documentos\NinjaTrader 8\bin\Custom\OptimizationFitnesses\
+//  y compila (F5) en el NinjaScript Editor.
+//
+//  AVISO: optimizar sobre el pasado encuentra siempre algo que parece bueno. Valida el
+//  resultado con Walk Forward Optimization o en un periodo que no hayas usado para optimizar.
+// =====================================================================================
+
+#region Using declarations
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Xml.Serialization;
+using NinjaTrader.Cbi;
+using NinjaTrader.Gui;
+using NinjaTrader.Gui.Chart;
+using NinjaTrader.Data;
+using NinjaTrader.NinjaScript;
+using NinjaTrader.Core.FloatingPoint;
+#endregion
+
+namespace NinjaTrader.NinjaScript.OptimizationFitnesses
+{
+    public class MaxBeneficioConAcierto80 : OptimizationFitness
+    {
+        // Cambia estos valores si quieres otro objetivo.
+        private const double AciertoMinimo = 0.80;   // 80 % de operaciones ganadoras
+        private const int OperacionesMinimas = 50;    // menos operaciones no son estadística
+
+        protected override void OnStateChange()
+        {
+            if (State == State.SetDefaults)
+                Name = "MaxBeneficioConAcierto80";
+        }
+
+        protected override void OnCalculatePerformanceValue(StrategyBase strategy)
+        {
+            Value = Puntuacion(
+                strategy.SystemPerformance.AllTrades.TradesCount,
+                strategy.SystemPerformance.AllTrades.TradesPerformance.PercentProfitable,
+                strategy.SystemPerformance.AllTrades.TradesPerformance.NetProfit);
+        }
+
+        /// <summary>Puntuación: beneficio neto si cumple los mínimos; si no, una penalización.</summary>
+        public static double Puntuacion(int operaciones, double porcentajeGanadoras, double beneficioNeto)
+        {
+            // NinjaTrader da el porcentaje como fracción (0,80); se acepta también 80.
+            double acierto = porcentajeGanadoras > 1.0 ? porcentajeGanadoras / 100.0 : porcentajeGanadoras;
+            if (operaciones < OperacionesMinimas)
+                return -2e9 + operaciones;
+            if (acierto < AciertoMinimo)
+                return -1e9 * (AciertoMinimo - acierto);
+            return beneficioNeto;
+        }
     }
 }
 ```
 
 ---
 
-*Fin del documento. El código de la sección 8 es idéntico al del repositorio en la fecha de este traspaso (SHA-256 del archivo original con BOM: `EFD1AB14B106134A467D272461E0257C95F56FB3EA764FB21EE12B2813571AAC`).*
+*Fin del documento. Los bloques de la sección 8 son idénticos a los archivos del repositorio en la fecha de este traspaso (SHA-256 de los originales con BOM: `66238B74CC41B38119408FF06CC3FF26EEC1C8BA32F75E1F0E646B86CAB2F530` y `2C77555AB770645E91A44F33E4EF26E9A86CFCB7E30AB2DA7CFC75E458DA16A2`).*

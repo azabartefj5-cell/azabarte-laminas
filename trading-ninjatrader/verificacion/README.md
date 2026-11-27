@@ -8,10 +8,10 @@ ejercitar su lógica en Linux, macOS o Windows con el SDK de .NET 8.
   siguiente con 1 tick de deslizamiento, y los stops y objetivos se comparan con el máximo y el
   mínimo de la barra, contando primero el stop. **No es NinjaTrader**: sus resultados en dólares no
   predicen los de Strategy Analyzer.
-- `Estrategia/`: compila `../SistemaCombinadoES.cs` con **C# 5**, con los avisos tratados como
+- `Estrategia/`: compila `../SistemaCombinadoES.cs` y `../SistemaCombinadoESAjuste.cs` con **C# 5**, con los avisos tratados como
   errores.
 - `Pruebas/`: genera barras sintéticas (paseo aleatorio con días de tendencia, festivos, días de
-  cierre anticipado y cambios de horario de EE. UU. y Europa). Ejecuta siete escenarios y comprueba
+  cierre anticipado y cambios de horario de EE. UU. y Europa). Ejecuta diez escenarios (barras de 1, 2 y 5 minutos) y comprueba
   las reglas con cálculos independientes.
 
 ```bash

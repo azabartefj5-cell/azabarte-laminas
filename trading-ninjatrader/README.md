@@ -2,8 +2,18 @@
 
 `SistemaCombinadoES.cs` es una estrategia automática de NinjaScript para los futuros del S&P 500:
 **ES**, el contrato grande, o **MES**, el micro, que es 10 veces más pequeño. Reúne en un solo
-archivo tres de los sistemas automáticos públicos mejor documentados. Cada uno se activa o
-desactiva por separado, y los tres comparten la misma gestión de riesgo.
+archivo tres de los sistemas automáticos públicos mejor documentados y un cuarto módulo de
+reversión al VWAP pensado para **velas de 2 minutos** y una **tasa de acierto alta**. Cada uno se
+activa o desactiva por separado, y todos comparten la misma gestión de riesgo.
+
+> **Sobre el 80 % de aciertos.** Ningún sistema puede garantizar ganar el 80 % de las veces y además
+> ganar lo máximo. La tasa de acierto se fabrica con la forma de las salidas: un objetivo corto y un
+> stop amplio aciertan mucho, pero cada fallo cuesta varias ganancias. Con un 80 % de aciertos sólo
+> ganas dinero si la pérdida media es **menor que 4 veces la ganancia media**, después de comisiones.
+> Lo que hace este sistema es darte los mandos (objetivo, stop, distancia de entrada) y una función
+> de ajuste, `MaxBeneficioConAcierto80`, para que el optimizador de NinjaTrader busque **con tus datos
+> reales** la combinación con más beneficio entre las que aciertan al menos un 80 %. La guía está en
+> la [sección 5](#5-cómo-buscar-el-80--de-aciertos-con-la-máxima-rentabilidad).
 
 > **Aviso importante.** Esto es software educativo, no asesoramiento financiero. Los futuros están
 > apalancados: puedes perder más de lo que tienes depositado. Ningún sistema de esta carpeta se ha
@@ -18,9 +28,10 @@ desactiva por separado, y los tres comparten la misma gestión de riesgo.
 
 | Módulo | Origen | Idea | Evidencia publicada | Estado por defecto |
 |---|---|---|---|---|
-| **1. Momentum intradía "Noise Area"** | Zarattini, Aziz y Barbon, *Beat the Market: An Effective Intraday Momentum Strategy for S&P500 ETF (SPY)*, 2024 | Cuando el precio sale de su "zona de ruido" habitual para esa hora del día, tiende a seguir en esa dirección hasta el cierre | SPY 2007–2024: +1.985 % total neto de costes, 19,6 % anual, Sharpe 1,33 (SFI). Las réplicas independientes en futuros ES/NQ salen más modestas: ≈8 % anual, Sharpe ≈0,9, 36 % de aciertos con ganancia media 2× la pérdida media (Quantitativo); Sharpe ≈0,7–0,8 en un foro de QuantConnect | **Activado**: es el sistema con mejor respaldo |
+| **1. Momentum intradía "Noise Area"** | Zarattini, Aziz y Barbon, *Beat the Market: An Effective Intraday Momentum Strategy for S&P500 ETF (SPY)*, 2024 | Cuando el precio sale de su "zona de ruido" habitual para esa hora del día, tiende a seguir en esa dirección hasta el cierre | SPY 2007–2024: +1.985 % total neto de costes, 19,6 % anual, Sharpe 1,33 (SFI). Las réplicas independientes en futuros ES/NQ salen más modestas: ≈8 % anual, Sharpe ≈0,9, 36 % de aciertos con ganancia media 2× la pérdida media (Quantitativo); Sharpe ≈0,7–0,8 en un foro de QuantConnect | **Desactivado** en el perfil de alta tasa de acierto, porque acierta sólo un ≈36 % de las veces. Es el sistema con mejor respaldo: actívalo si te importa más la rentabilidad que el % de aciertos |
 | **2. Opening Range Breakout (ORB) de 5 min** | Zarattini y Aziz, *Can Day Trading Really Be Profitable?*, 2023 (idea original de Toby Crabel) | La dirección de la primera vela de 5 minutos anticipa la del día | QQQ 2016–2023: 33,2 % anual frente a 14,9 % de comprar y mantener, **sin deslizamiento** (CXO). Las réplicas indican que la ventaja bruta existe pero **desaparece con los costes**: el objetivo de 10R sólo se alcanza en un 2–3 % de las operaciones, y un estudio en futuros con 16 años de datos concluye que no sobrevive a los costes | **Desactivado**: actívalo sólo si tu backtest con comisiones lo justifica |
-| **3. Swing RSI(2) de Connors** | Larry Connors y Cesar Alvarez, *Short Term Trading Strategies That Work*, 2008 | En tendencia alcista, las caídas bruscas de 2–3 días tienden a rebotar | SPY 1993–2026: factor de beneficio 2,5–3,5 según el umbral (Quantified Strategies). Con un 71 % de aciertos rinde menos que comprar y mantener porque está poco tiempo en el mercado (Backtrex) | **Activado**: aporta operaciones distintas a las del momentum |
+| **3. Swing RSI(2) de Connors** | Larry Connors y Cesar Alvarez, *Short Term Trading Strategies That Work*, 2008 | En tendencia alcista, las caídas bruscas de 2–3 días tienden a rebotar | SPY 1993–2026: factor de beneficio 2,5–3,5 según el umbral (Quantified Strategies). Con un 71 % de aciertos rinde menos que comprar y mantener porque está poco tiempo en el mercado (Backtrex) | **Activado**: acierta mucho y aporta operaciones distintas a las intradía |
+| **4. Reversión intradía al VWAP** | Idea clásica de *mean reversion* intradía, combinada aquí con el *noise area* del módulo 1 como filtro | Dentro de un día sin tendencia, cuando el precio se aleja mucho del VWAP tiende a volver a él | Sin un paper de referencia: es un módulo construido para esta petición y **sin evidencia publicada propia**. Su tasa de acierto depende sobre todo de la relación objetivo/stop | **Activado**: es el módulo de alta tasa de acierto para velas de 2 min |
 
 **Por qué combinarlos.** El momentum intradía gana en los días de tendencia y en las caídas fuertes,
 porque también opera en corto, y siempre termina el día sin posición. El RSI(2) gana justo en los
@@ -77,6 +88,29 @@ las semanas del año en que los cambios de horario no coinciden.
    parámetro a 0, se comporta como el original.
 5. Variante en corto opcional, desactivada porque históricamente es débil en el S&P 500.
 
+### Módulo 4 · Reversión intradía al VWAP (alta tasa de acierto)
+
+1. Calcula el **VWAP** del día y la **desviación típica** del precio respecto a él, ponderada por
+   volumen.
+2. Entre las 10:00 y las 15:00 **compra** si el precio está a más de 2 desviaciones por debajo del
+   VWAP y el RSI(2) de las velas de 2 minutos es menor que 10. **Vende en corto** en el caso
+   simétrico.
+3. Sólo opera si el precio sigue **dentro del noise area** del módulo 1. Si ya lo ha roto, es un día
+   de tendencia, y ahí la reversión suele fallar.
+4. **Objetivo**: la vuelta al VWAP (parámetro *Objetivo* = 1; con 0,5, la mitad del camino). Además,
+   sale en cuanto una vela cierra en el VWAP.
+5. **Stop**: 3 desviaciones más allá de la entrada, más amplio que el objetivo. Esa asimetría es la
+   que da muchos aciertos, y también la que hace que cada fallo cueste más que un acierto.
+6. Como máximo 3 operaciones al día, y cierre obligatorio a las 15:55.
+
+**Los mandos de la tasa de acierto:**
+- objetivo más corto o stop más ancho: **más aciertos**, pero pérdidas más grandes cuando falla;
+- más distancia de entrada o RSI más extremo: **menos operaciones** y, normalmente, mejores.
+
+En los datos sintéticos de las pruebas, pasar de objetivo 1 y stop 3 a objetivo 0,5 y stop 4 subió
+los aciertos del 57 % al 72 %. Unos datos sin ventaja real también "aciertan" más así: el % de
+aciertos no dice nada sin el beneficio.
+
 ### Reglas comunes de riesgo
 
 - **Sin señales contrarias.** Si un módulo está en largo, ningún otro puede abrir un corto, y al
@@ -101,7 +135,9 @@ las semanas del año en que los cambios de horario no coinciden.
    `Documentos\NinjaTrader 8\bin\Custom\Strategies\`.
 2. En NinjaTrader abre **New → NinjaScript Editor**, despliega *Strategies*, abre
    `SistemaCombinadoES` y pulsa **Compile (F5)**. Debe terminar sin errores.
-3. Si se queja de otro archivo de tu carpeta *Custom*, ese error no es de esta estrategia: arregla o
+3. Para optimizar buscando el 80 % de aciertos, copia también `SistemaCombinadoESAjuste.cs` en
+   `Documentos\NinjaTrader 8\bin\Custom\OptimizationFitnesses\` (sección 5).
+4. Si se queja de otro archivo de tu carpeta *Custom*, ese error no es de esta estrategia: arregla o
    quita ese archivo, porque NinjaTrader compila todo junto.
 
 ### Backtest en Strategy Analyzer (primer paso obligatorio)
@@ -112,7 +148,7 @@ las semanas del año en que los cambios de horario no coinciden.
 |---|---|
 | Strategy | `SistemaCombinadoES` |
 | Instrument | El contrato vigente, p. ej. `MES 12-26` (o `MES 03-27` tras el roll de diciembre). Para años de historia usa el continuo `ES ##-##` con *Merge policy* "Merge back adjusted" (Tools → Options → Data) |
-| Type / Value | **Minute / 5** |
+| Type / Value | **Minute / 2** (el momentum original se publicó con barras de 1 minuto; 1, 2 y 5 funcionan) |
 | Trading hours | **CME US Index Futures ETH** |
 | Start date | Al menos 1 año antes del periodo que quieras evaluar: el RSI(2) necesita 200 sesiones para arrancar y el momentum 14 |
 | Include commission | Sí, con tu plantilla de comisiones. Sin comisiones, el resultado no sirve |
@@ -125,7 +161,7 @@ que el beneficio total. Prueba cada módulo por separado y luego juntos.
 
 ### Cuenta simulada y después real
 
-1. Abre un gráfico de 5 minutos de **MES** (contrato vigente) con la plantilla ETH y al menos
+1. Abre un gráfico de 2 minutos de **MES** (contrato vigente) con la plantilla ETH y al menos
    **365 días cargados**. En la pestaña *Data Series* del gráfico, pon *Days to load* a 365.
 2. Clic derecho → **Strategies** → añade `SistemaCombinadoES` → cuenta **Sim101** → *Enabled*.
 3. Verás tres líneas: la **banda superior** en azul, la **inferior** en rojo y el **VWAP** en
@@ -161,7 +197,7 @@ Grupo **0. General**
 | Modo de tamaño | ContratosFijos | `ContratosFijos` o `Dinamico` |
 | Capital de la cuenta (USD) | 50.000 | Base del tamaño dinámico |
 | Reinvertir beneficios | false | Suma al capital el resultado cerrado. Pensado para backtests: en tiempo real incluiría las operaciones históricas simuladas |
-| Máximo de contratos | 3 | Límite total entre los tres módulos |
+| Máximo de contratos | 3 | Límite total entre todos los módulos |
 | Pérdida diaria máxima (USD) | 0 (desactivado) | Cierra todo y bloquea el día |
 | Inicio / fin sesión regular | 930 / 1600 | Horas en formato HHMM de Nueva York |
 | Cierre posiciones intradía | 1555 | Hora de salida de momentum y ORB |
@@ -171,7 +207,7 @@ Grupo **0. General**
 | ATR diario | 14 | Para los stops de emergencia y el tamaño |
 | Depurar | false | Escribe cada decisión en la ventana Output |
 
-Grupo **1. Momentum**: activar, 14 días, multiplicador 1, primera revisión 1000, cada 30 min,
+Grupo **1. Momentum**: activar (**false**), 14 días, multiplicador 1, primera revisión 1000, cada 30 min,
 última entrada 1530, stop con VWAP, 1 contrato, volatilidad objetivo 2 %, apalancamiento máximo 4
 y stop de emergencia 0,5 × ATR.
 
@@ -182,31 +218,76 @@ Grupo **3. RSI(2)**: activar, periodo 2, entrada con RSI < 10, media de 200 día
 media de 5 días, máximo 10 días, stop 3 × ATR, cortos (false), decisión a las 1600, 1 contrato,
 riesgo 1 % y apalancamiento máximo 1.
 
+Grupo **4. Reversión VWAP**: activar (true), primera entrada 1000, última 1500, distancia de
+entrada 2 desviaciones, RSI de 2 barras con umbral 10, objetivo 1 (el VWAP), stop 3 desviaciones,
+salir al tocar el VWAP (true), cortos (true), sólo dentro del noise area (true), máximo 3 al día,
+1 contrato, riesgo 0,5 % y apalancamiento máximo 2.
+
 > Con la plantilla de horario **RTH** en lugar de ETH, pon *Hora de decisión* del RSI(2) a 1555 y
 > *Cierre intradía* a 1550. Así las órdenes se ejecutan antes de que acabe la sesión, y no a la
 > apertura del día siguiente.
 
-**Sobre la optimización.** Resiste la tentación de optimizar los parámetros hasta que el backtest
-quede perfecto, porque eso fabrica resultados que no se repiten. Los valores por defecto son los de
-los papers originales. Si cambias algo, compruébalo en un periodo que no hayas usado para elegirlo.
+---
+
+## 5. Cómo buscar el 80 % de aciertos con la máxima rentabilidad
+
+1. **Instala la función de ajuste.** Copia `SistemaCombinadoESAjuste.cs` en
+   `Documentos\NinjaTrader 8\bin\Custom\OptimizationFitnesses\` y compila (F5).
+2. **Strategy Analyzer**, con la configuración de la sección 3, en velas de 2 minutos:
+   - *Backtest type*: **Optimization**;
+   - *Optimize on*: **MaxBeneficioConAcierto80**;
+   - *Optimizer*: **Genetic** si hay muchas combinaciones, o *Default* si son pocas.
+3. Marca para optimizar sólo los mandos del módulo 4, con rangos razonables:
+
+   | Parámetro | Mínimo | Máximo | Paso |
+   |---|---|---|---|
+   | Distancia de entrada (desviaciones) | 1,5 | 3,0 | 0,25 |
+   | Umbral RSI | 5 | 20 | 5 |
+   | Objetivo (fracción del camino al VWAP) | 0,3 | 1,0 | 0,1 |
+   | Stop (desviaciones desde la entrada) | 2 | 6 | 0,5 |
+
+4. La función ordena los resultados así:
+   - primero, por **beneficio neto**, las combinaciones con al menos un **80 % de ganadoras** y al
+     menos 50 operaciones;
+   - detrás, las demás, por cercanía al 80 %.
+
+   Si ninguna llega al 80 % con beneficio, el resultado es ese: con estos datos no existe, y forzarlo
+   sólo sobreajusta.
+5. **Valida fuera de la muestra, siempre.** Repite con *Backtest type* = **Walk Forward
+   Optimization**, por ejemplo con 180 días de optimización y 60 de prueba. Sólo cuenta el resultado
+   de los periodos de prueba.
+6. Además del % de aciertos, mira:
+   - el **beneficio medio / pérdida media**, que con un 80 % de aciertos debe ser mejor que 1:4;
+   - la **mayor pérdida**, las **pérdidas consecutivas** y la **máxima caída**.
+
+   Un 80 % de aciertos con una pérdida de vez en cuando que se lleva un mes de ganancias no es un
+   buen sistema.
+
+**Cuidado con optimizar.** Probar cientos de combinaciones sobre el pasado siempre encuentra alguna
+que parece excelente por casualidad. Por eso hay que validar con Walk Forward y en cuenta Sim antes de
+creerse el resultado.
 
 ---
 
-## 5. Cómo se ha comprobado el código
+## 6. Cómo se ha comprobado el código
 
 La carpeta [`verificacion/`](verificacion/) contiene una imitación mínima de la API de
 NinjaTrader 8 y un banco de pruebas con datos **sintéticos**. Lo que verifica:
 
 - que la estrategia **compila con C# 5**, el nivel más conservador de NinjaTrader 8, sin errores ni
   avisos;
-- que en más de 2.000 operaciones simuladas, con barras de 5 y de 1 minuto, no hay órdenes
+- que en más de 6.000 operaciones simuladas, con barras de 1, 2 y 5 minutos, no hay órdenes
   ignoradas, duplicadas ni inversiones de posición entre módulos, y que el seguimiento interno de
   posiciones coincide con la posición real;
 - que cada entrada de momentum ocurre en una hora de revisión y fuera de las bandas, recalculadas de
   forma independiente;
 - que las entradas del RSI(2) coinciden fecha por fecha con una simulación independiente de las
   reglas de Connors;
-- que el ORB respeta la dirección y el stop de la primera vela;
+- que el ORB respeta la dirección y el stop de su rango de apertura, también con velas de 2 min, en
+  las que el rango de 5 minutos pasa a ser de 6;
+- que cada entrada de reversión está a 2 desviaciones del VWAP, recalculado de forma independiente,
+  con el RSI(2) de las barras en extremo y dentro del noise area, sin pasar del máximo diario;
+- que la función de ajuste ordena bien: más del 80 % por beneficio, y el resto detrás;
 - que nada intradía pasa la noche, incluidos los días de cierre anticipado (esto destapó un fallo
   que ya está corregido);
 - que se obtienen **las mismas operaciones** con NinjaTrader en hora de Madrid y en hora de Nueva
@@ -218,7 +299,7 @@ Lo que **no** verifica: la rentabilidad con datos reales, ni el comportamiento e
 
 ---
 
-## 6. Fuentes
+## 7. Fuentes
 
 - Zarattini, Aziz y Barbon, *Beat the Market: An Effective Intraday Momentum Strategy for S&P500 ETF (SPY)*:
   [SFI](https://www.sfi.ch/fr/publications/n-24-97-beat-the-market-an-effective-intraday-momentum-strategy-for-s-p500-etf-spy),
